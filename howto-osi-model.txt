@@ -1,0 +1,15 @@
+
+* 7 - Application:	xxx
+
+* 6 - Presentation:	xxx
+
+* 5 - Session:		xxx
+
+* 4 - Transport:	TCP/UDP
+
+* 3 - Réseau:		IP, ARP
+
+* 2 - Liaison:		Ethernet, @ MAC
+
+* 1 - Physique:		câbles, bits
+

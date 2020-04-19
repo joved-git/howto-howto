@@ -1,0 +1,84 @@
+
+Usual commands:
+
+$ nmap scanme.nmap.org
+Teste légalement les ports.
+
+$ nmap <hostname>
+Scanne les ports (1000 premiers) de hostname.
+	> ICMP ping | ARP ping (local)
+	> TCP SYN sur 443 (HTTPS)
+	> TCP ACK sur 80 (serveur web)
+	> ICMP timestamp
+
+$ nmap 10.0.2.0/24
+Scanne 10.0.2.0 à 10.0.2.255
+
+$ nmap -iL <file>
+On fournit un nom de fichier contenant des adresses IP.
+
+$ nmap 10.0.2.0/24 --exclude 10.0.2.1,10.0.2.2,10.0.2.20-30 
+On exclut des adresses ou plages.
+
+$nmap -v ...
+nmap devient lus verbeux.
+
+$ nmap -sL 10.0.2.0/24
+nmap découvre les hosts.
+
+$ nmap -sn ...
+nmap n'effectue qu'un Ping scan (pas de scan de ports).
+
+$ nmap <hosts> -PS80,443,1000 -sn
+nmap essaye de découvrir des hotes en envoyant une requête TCP SYN sur plusieurs ports.
+
+$ nmap -sS <hostname>
+Effectue une tentative de connexion TCP SYN sur la machine.
+
+$ nmap -sN|sF|sX: TCP Null, FIN, and Xmas scans>
+	> sN: TCP null: toutes les options du messages TCP sont à 0. Normalement pas possible tentative de perturbation.
+	> sF: FIN à 1 seulement. On propose une fermeture de session: tentative de perturbation.
+	> sX: URG, PUSH et FIN à 1: tentative de perturbation.
+
+$ nmap --scanflags <flags>
+	>liste d'options: SYN ou SYNRST ou SYNPUSH etc...
+
+$nmap -sO <hostname>
+Revoie les numéros de protocoles trouvés dans l'entête IP.
+
+$ nmap -p<nm>
+$ nmap -p U:53,T:80 ... Pour UDP, précisez -sU pour scan UDP
+$ nmap -p T:http,https
+Scan de ports. Pour UDP, précisez -sU pour scan UDP
+
+$ nmap -F ...
+Scan moins de ports.
+
+$ nmap --top-ports <n>
+Scanne les <n> ports les plus populaires.
+
+$ nmap --top-ratio <n>
+Scanne les ports ayant un ratio sup à <n>. Voir le fichier /usr/share/nmap/nmap-services
+
+$ nmap -sV ...
+Scanne et affiche les versions des services.
+
+$ nmap --version-intensity <n, def 7>
+Modifie l'intensité des sondes.
+
+$ nmap -O -v ...
+Detection d'OS en mode verbeux.
+
+$ nmap -sC -v <host>
+Effectue un scan avec les scrits par défaut (non intrusifs, discrets). Liste des scripts, ici: https://nmap.org/nsedoc
+
+$ nmap --script defaut,dos ...
+Lance deux types de scipts.
+
+$ nmap --script "http-*" ...
+Lance plusieurs scipts.
+
+$ sudo nmap --script-update
+Mise à jour de la database locale de scripts.
+
+
