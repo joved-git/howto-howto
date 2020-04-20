@@ -1,0 +1,46 @@
+
+* Fichiers portsentry:
+/etc/default/portsentry				-> options générales.
+/etc/portsentry/portsentry.conf			-> optionsdu logiciel. 
+/etc/portsentry/portesentry.ignore.static:	-> hôtes/interfaces à ignorer.
+
+* Dans /etc/default/portsentry, modifier les lignes (a pour advanced).
+TCP_MODE="atcp"
+UDP="audp"
+
+* Dans le fichier de config (/etc/portsentry/portsentry.conf), on voit des choses intéressantes:
+ADVANCED_PORTS_TCP="1024"			-> limite des ports surveillés.
+ADVANCED_PORTS_UDP="1024"
+
+ADVANCED_EXCLUDE_TCP="113,139"			-> limite des ports surveillés.
+ADVANCED_EXCLUDE_UDP="520, ..."
+
+IGNORE_FILE=/etc/portsentry/portsentry.ignore	-> hosts to ignore (will never block).
+HISTORY_FILE=/etc/portsentry/portsentry.history	-> history.
+BLOCKED_FILE=/etc/portsentry/portsentry.blocked	-> blocked list (dynamic).
+
+TCP_BLOCK="1"					-> blocks UPD/TCP scans
+UDP_BLOCK="1"
+
+						-> Ajoute une ligne dans iptables en cas d'intrusion.
+KILL_ROUTE="/sbin/iptables -I INPUT $TARGET$ -j DROP
+
+KILL_HOSTS_DENY="ALL: $TARGET$ : DENY"		-> Deny par fichier hosts.
+
+* Redemarrge du service:
+service portsentry restart
+cat /var/log/syslog | tail -n 100
+
+* Après un scan de ports (nmap), on voit des lignes attackalert dans /var/log/syslog
+>>> on voit des lignes attackalert dans /var/log/syslog.
+
+>>> iptables a bloqué l'adresse ip de l'attaquant.
+Chain INPUT (policy ACCEPT)
+target	prot	opt	source		destination
+DROP	all	--	10.0.2.5	anywhere	
+	
+>>> ligne deny dans /etc/hosts.deny:
+ALL: 10.0.2.5 : DENY
+ 
+
+

@@ -1,0 +1,40 @@
+
+$ sudo iptables -L
+Liste les règles.
+
+4 tables:
+Filter: parefeu en lui-même.
+Mangle:	modification des paquets.
+Nat:	joue sur les adresses IP source et destination
+Raw:	évalue les paquets comme un ensembme
+Security:
+
+$ sudo iptables -t <table> ...
+On s'adresse à la table <table>. Defaut: <filter>
+
+Plusieurs chaines:
+INPUT:		paquets entrants
+OUTPUT:		paquets sortants
+FORWARD:	paquets en transfert sur la amchine
+PREROUTING:	modification avant ou après routage
+POSTROUTING:	
+
+$ sudo iptables -F | sudo iptables -t <table> -F
+>>> Efface une table.
+
+$ sudo iptables -P <chain> <action>
+$ sudo iptables -P INPUT DROP | ACCEPT
+
+$ sudo iptables -A INPUT -p tcp -i eth0 --dport ssh -j ACCEPT
+>>> Autorise l'entrée en ssh sur la machine.
+
+$ sudo iptables -A INPUT -p icmp -j ACCEPT
+$ sudo iptables -A OUTPUT -p icmp -j ACCEPT
+>>> Autorise les paquets ICMP (ping) en entrée.
+
+$ sudo iptables -I ...
+>>> Insert une règle en haut dasn la liste.
+
+$ sudo iptables -save ...
+>>> Sauvegarde les règles.
+

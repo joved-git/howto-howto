@@ -81,4 +81,23 @@ Lance plusieurs scipts.
 $ sudo nmap --script-update
 Mise à jour de la database locale de scripts.
 
+$ nmap -T<0..5> ...
+Configure l'aggressivité de nmap. 0: discret et lent. 5: aggressif.
 
+$ nmap -f -mtu <value> ...
+Rend nmap plus discret avec la fragmentation de paquets.
+
+$ nmap -D <decoy1, decaoy2 ...> ...
+Rend nmap discret en faisant croire que les paquets viennent de différentes machines.
+
+$ nmap -S <ip> ...
+Effectue une IP spoofing en remplaçant sa propre adresse par <ip>.
+
+$ nmap -oN <filename> ...
+Extrait le résultat dans le fichier.
+
+$ nmap --reason ...
+Affiche la raison de la découverte (syn-ack par exemple).
+
+$ nmap -A ...
+La boite à outils: OS detection, version detection, script scanning et traceroute.
