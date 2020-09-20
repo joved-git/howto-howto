@@ -1,0 +1,6 @@
+# wlan0 en mode monitor
+$ sudo airmon-ng check kill
+$ sudo airmon start wlan0
+
+# scanner des réseaux wifi
+$ sudo airodump-ng wlan0mon -_channel 1

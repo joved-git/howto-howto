@@ -9,7 +9,7 @@ Nat:	joue sur les adresses IP source et destination
 Raw:	évalue les paquets comme un ensembme
 Security:
 
-$ sudo iptables -t <table> ...
+$ sudo iptables -L -t <table> ...
 On s'adresse à la table <table>. Defaut: <filter>
 
 Plusieurs chaines:
