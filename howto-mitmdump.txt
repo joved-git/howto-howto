@@ -13,5 +13,5 @@ def response(flow: http.HTTPFlow):
 
 3- On lance la commande d'interception:
 $ sudo mitmdump -s simplereponse.py --mode transparent --listen-host <ip_kali> --anticache
->>> kali intercete les requêtes de la victime et exécute le programme python en tant que réponse.
+>>> kali intercepte les requêtes de la victime et exécute le programme python en tant que réponse.
 
