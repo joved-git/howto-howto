@@ -15,6 +15,8 @@ $ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to
 # echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
 >>> on empèche certaines redirections icmp.
 
+>>> Bettercap pour mettre en place un ARP spoofing
+
 $ sudo mitmproxy --mode transparent --listen-host <ip de kali> [--listen-port <port>]
 >>> lance le mitmproxy.
 
@@ -32,3 +34,29 @@ Commande "i" pour intercept:
 >>> tapez "a" pour accepter la requête et continuer.
 >>> la réponse est envoyée à la cible, le texte change...
 
+>@
+>@###############################################################################################
+>@
+>@* Preparation:
+>@$ sudo iptables -t nat -F
+>@$ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+>@$ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8080
+>@# echo "1" > /proc/sys/net/ipv4/ip_forward
+>@# echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
+>@# echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
+>@
+>@* Bettercap pour mettre en place un ARP spoofing
+>@
+>@* Lancement de mitmproxy
+>@$ sudo mitmproxy --mode transparent --listen-host <ip de kali> [--listen-port <port>]
+>@
+>@* Interception requete
+>@: set intercept=~q
+>@>>> interception de toutes les requètes. Faire une requête dans la cible.
+>@>>> la requète apparaît en rouge. Cliquez dessus puis "e" pour éditer la réponse.
+>@>>> choisir response-body et tapez du texte. Sortez du vi.
+>@>>> tapez "a" pour accepter la requête et continuer.
+>@>>> la réponse est envoyée à la cible, le texte change...
+>@
+>@###############################################################################################
+>@

