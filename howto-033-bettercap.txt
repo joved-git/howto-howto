@@ -1,6 +1,6 @@
 
 $ sudo bettercap
->>> lancement.
+>>> lancement. Bettercap donne son prompt.
 
 10.0.2.0/24 > 10.0.2.5 » help
 >>> help generique.
@@ -28,3 +28,32 @@ $ sudo bettercap
 10.0.2.0/24 > 10.0.2.5 » arp.ban on
 >>> active le ARP spoofing ban.
 
+>@
+>@#########################################################
+>@
+>@$ sudo bettercap
+>@>>> prompt bettercap
+>@
+>@» help
+>@>>> help générale
+>@
+>@» help <module>
+>@>>> help sur <module>
+>@
+>@» net.show
+>@>>> table ARP
+>@
+>@» net.recon on|off
+>@>>> demarre et stoppe le host discovery
+>@
+>@» set arp.spoof.fullduplex true
+>@» set arp.spoof.target <victime>
+>@
+>@» arp.spoof on
+>@>>> demarre le arp spoofing sur <victime>
+>@
+>@» arp.ban on
+>@>>> demarre le arpspoofing en mode ban sur <victime>
+>@
+>@#########################################################
+>@

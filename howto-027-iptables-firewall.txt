@@ -38,7 +38,9 @@ $ sudo iptables -I ...
 $ sudo iptables-save ...
 >>> Sauvegarde les règles.
 
+>@
 >@#################################################################
+>@
 >@Some simple command
 >@
 >@$ sudo iptables -L -t <table> ...
@@ -63,4 +65,6 @@ $ sudo iptables-save ...
 >@
 >@$ sudo iptables-save ...
 >@>>> Sauvegarde les règles.
+>@
 >@#################################################################
+>@

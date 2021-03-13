@@ -14,6 +14,8 @@
 * 1 - Physique:		Câbles, bits			[     Bits    ]
 
 >@
+>@#################################################################################
+>@
 >@* 7 - Application:	Utilisateur (HTTP, DNS, FTP)	[   Données   ]
 >@* 6 - Presentation:	Chiffrement/déchiffrement (SSH)	[   Données   ]
 >@* 5 - Session:		Sessions entre applis		[   Données   ]
@@ -21,4 +23,6 @@
 >@* 3 - Réseau:		IP, ARP				[   Paquets   ]
 >@* 2 - Liaison:		Ethernet, address MAC		[    Trames   ]
 >@* 1 - Physique:		Câbles, bits			[     Bits    ]
+>@
+>@#################################################################################
 >@

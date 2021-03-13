@@ -10,7 +10,8 @@ $ sudo airodump-ng --bssid <MAC> -w capture wlan0mon
 $ sudo airdcap-ng -e <ESSID> -w|-k <key> <capture .cap file>
 
 >@
->@##############################################################
+>@#################################################################################
+>@
 >@# Wifi observation
 >@$ sudo airodump-ng wlan0mon
 >@
@@ -21,4 +22,5 @@ $ sudo airdcap-ng -e <ESSID> -w|-k <key> <capture .cap file>
 >@# Wifi decode packets (better lisibility for wireshark)
 >@$ sudo airdcap-ng -e <ESSID> -w|-k <key> <capture .cap file>
 >@
->@##############################################################
+>@#################################################################################
+>@

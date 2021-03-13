@@ -104,7 +104,9 @@ Affiche la raison de la découverte (syn-ack par exemple).
 $ nmap -A ...
 La boite à outils: OS detection, version detection, script scanning et traceroute.
 
+>@
 >@###########################################################################################
+>@
 >@Some simple example (see file for more)
 >@
 >@$ nmap <hostname>
@@ -140,4 +142,6 @@ La boite à outils: OS detection, version detection, script scanning et tracerou
 >@
 >@$ nmap -A ...
 >@La boite à outils: OS detection, version detection, script scanning et traceroute.
+>@
 >@###########################################################################################
+>@
