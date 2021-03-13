@@ -42,5 +42,8 @@ DROP	all	--	10.0.2.5	anywhere
 >>> ligne deny dans /etc/hosts.deny:
 ALL: 10.0.2.5 : DENY
  
-
+>@###########################################################
+>@Hey, that's to big for me !!
+>@Please, cat the file howto-028-portsentry.txt for details.
+>@###########################################################
 

@@ -1,4 +1,3 @@
-
 Usual commands:
 
 $ nmap scanme.nmap.org
@@ -35,13 +34,16 @@ nmap essaye de découvrir des hotes en envoyant une requête TCP SYN sur plusieu
 $ nmap -sS <hostname>
 Effectue une tentative de connexion TCP SYN sur la machine.
 
-$ nmap -sN|sF|sX: TCP Null, FIN, and Xmas scans>
+	$ nmap -sN|sF|sX: TCP Null, FIN, and Xmas scans>
 	> sN: TCP null: toutes les options du messages TCP sont à 0. Normalement pas possible tentative de perturbation.
 	> sF: FIN à 1 seulement. On propose une fermeture de session: tentative de perturbation.
 	> sX: URG, PUSH et FIN à 1: tentative de perturbation.
 
+$ nmap <hosts> --traceroute -sn -Pn
+Effectue un traceroute
+
 $ nmap --scanflags <flags>
-	>liste d'options: SYN ou SYNRST ou SYNPUSH etc...
+	> liste d'options: SYN ou SYNRST ou SYNPUSH etc...
 
 $nmap -sO <hostname>
 Revoie les numéros de protocoles trouvés dans l'entête IP.
@@ -52,7 +54,7 @@ $ nmap -p T:http,https
 Scan de ports. Pour UDP, précisez -sU pour scan UDP
 
 $ nmap -F ...
-Scan moins de ports.
+Fast mode. Scan moins de ports.
 
 $ nmap --top-ports <n>
 Scanne les <n> ports les plus populaires.
@@ -101,3 +103,41 @@ Affiche la raison de la découverte (syn-ack par exemple).
 
 $ nmap -A ...
 La boite à outils: OS detection, version detection, script scanning et traceroute.
+
+>@###########################################################################################
+>@Some simple example (see file for more)
+>@
+>@$ nmap <hostname>
+>@Scanne les ports (1000 premiers) de hostname.
+>@	> ICMP ping | ARP ping (local)
+>@	> TCP SYN sur 443 (HTTPS)
+>@	> TCP ACK sur 80 (serveur web)
+>@	> ICMP timestamp
+>@
+>@$ nmap 10.0.2.0/24
+>@Scanne 10.0.2.0 à 10.0.2.255
+>@
+>@$nmap -v ...
+>@nmap devient lus verbeux.
+>@
+>@$ nmap -sn ...
+>@nmap n'effectue qu'un Ping scan (pas de scan de ports).
+>@
+>@$ nmap -F ...
+>@Fast mode. Scan moins de ports.
+>@
+>@$ nmap --top-ports <n>
+>@Scanne les <n> ports les plus populaires.
+>@
+>@$ nmap -O -v ...
+>@Detection d'OS en mode verbeux.
+>@
+>@$ nmap -D <decoy1, decaoy2 ...> ...
+>l@Rend nmap discret en faisant croire que les paquets viennent de différentes machines.
+>@
+>@$ nmap -S <ip> ...
+>@Effectue une IP spoofing en remplaçant sa propre adresse par <ip>.
+>@
+>@$ nmap -A ...
+>@La boite à outils: OS detection, version detection, script scanning et traceroute.
+>@###########################################################################################

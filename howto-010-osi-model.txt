@@ -15,7 +15,7 @@
 
 >@
 >@* 7 - Application:	Utilisateur (HTTP, DNS, FTP)	[   Données   ]
->@* 6 - Presentation:	Chiffrement/déchiffrement(SSH)	[   Données   ]
+>@* 6 - Presentation:	Chiffrement/déchiffrement (SSH)	[   Données   ]
 >@* 5 - Session:		Sessions entre applis		[   Données   ]
 >@* 4 - Transport:	TCP/UDP				[ Datagrammes ]
 >@* 3 - Réseau:		IP, ARP				[   Paquets   ]

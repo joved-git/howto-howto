@@ -29,5 +29,7 @@ $ sudo ip link set wlan0 up
 >@
 >@$ airmon-ng stop waln0mon
 >@>>> stop the monitor mode on wlan0 or wlan0mon.
+>@
+>@ $ iwconfig
 >@#######################################################
 >@

