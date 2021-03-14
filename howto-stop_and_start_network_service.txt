@@ -4,8 +4,10 @@ $ sudo /etc/init.d/networking restart
 
 >@
 >@###########################################
+>@
 >@$ sudo /etc/init.d/networking stop
 >@
 >@$ sudo /etc/init.d/networking restart
+>@
 >@###########################################
 >@

