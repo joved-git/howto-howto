@@ -1,0 +1,50 @@
+
+1- monitor off
+
+2- ifconfig wlan0 down
+
+3- Affiche MAC addr
+$ sudo macchanger -s wlan0
+
+4- Modification
+$ sudo macchanger -a wlan0
+>>> meme type de péripherique (USB sans fil, ...)
+
+$ sudo macchanger -A wlan0
+>>> addresse coherente mais de n'importe quel type
+
+$ sudo macchanger -r wlan0
+>>> random
+
+$ sudo macchanger -m <MAC> wlan0
+
+$ sudo macchanger -p wlan0
+>>> revient a la MAC addr permanente
+
+5- Redemarrage service (si besoin)
+$ sudo NetworkManager restart
+
+>@
+>@#############################################
+>@
+>@* monitor off
+>@
+>@* Affiche MAC
+>@$ sudo macchanger -s wlan0
+>@
+>@* Mofification
+>@$ sudo macchanger -A wlan0
+>@>>> MAC coherente
+>@
+>@$ sudo macchanger -r wlan0
+>@>>> random
+>@
+>@$ sudo macchanger -m <MAC> wlan0
+>@>>> set adresse <MAC>
+>@
+>@$ sudo macchanger -p wlan0
+>@>>> retour arriere
+>@
+>@#############################################
+>@
+
