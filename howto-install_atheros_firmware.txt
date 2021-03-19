@@ -1,15 +1,3 @@
-[  107.071208] usb 1-2: new high-speed USB device number 3 using xhci_hcd                                                                                                                                                                  
-[  107.096251] usb 1-2: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08                                                                                                                                               
-[  107.096254] usb 1-2: New USB device strings: Mfr=16, Product=32, SerialNumber=48                                                                                                                                                        
-[  107.096255] usb 1-2: Product: UB91C                                                                                                                                                                                                     
-[  107.096256] usb 1-2: Manufacturer: ATHEROS                                                                                                                                                                                              
-[  107.096257] usb 1-2: SerialNumber: 12345                                                                                                                                                                                                
-[  107.451804] usb 1-2: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested                                                                                                                                                          
-[  107.452082] usbcore: registered new interface driver ath9k_htc
-[  107.461855] usb 1-2: firmware: failed to load ath9k_htc/htc_9271-1.4.0.fw (-2)
-[  107.461861] firmware_class: See https://wiki.debian.org/Firmware for information about missing firmware
-[  107.461865] usb 1-2: Direct firmware load for ath9k_htc/htc_9271-1.4.0.fw failed with error -2
-[  107.461872] usb 1-2: ath9k_htc: Firmware htc_9271.fw requested
 [  107.461884] usb 1-2: firmware: failed to load htc_9271.fw (-2)
 [  107.461886] usb 1-2: Direct firmware load for htc_9271.fw failed with error -2
 [  107.461888] usb 1-2: no suitable firmware found!
@@ -17,3 +5,12 @@
 
 sudo apt update
 sudo apt-get install firmware-atheros
+
+>@
+>@##########################################
+>@
+>@sudo apt update
+>@sudo apt install firmware-atheros
+>@
+>@##########################################
+>@
