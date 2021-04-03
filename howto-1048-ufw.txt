@@ -1,0 +1,23 @@
+$ ufw enable
+>>> mise en route de ufw
+
+$ ufw status
+>>> info sur ufw
+
+$ ufw allow ssh/tcp
+>>> ajoute une permission pour ssh/tcp
+
+>@
+>@########################################
+>@
+>@$ ufw enable
+>@Mise en route de ufw
+>@
+>@$ ufw status
+>@Info sur ufw
+>@
+>@$ ufw allow ssh/tcp
+>@Ajoute une permission pour ssh/tcp
+>@
+>@########################################
+>@

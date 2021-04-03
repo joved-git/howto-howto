@@ -1,0 +1,113 @@
+
+Repertoire: /usr/share/metasploit-framework
+>>> homedir de metasploit
+
+$ sudo apt install metasploit-framework
+>>> mise a jour
+
+$ msfconsole
+>>> lancement framework
+
+msf6 > help
+>>> donne de l'aide (si si !)
+
+msf6 > search <what>
+>>> recherche sur <what>
+
+msf6 > use /exploit/.../<exploit>
+>>> charge l'exploit
+
+msf6 exploit(.../<exploit>) > info
+>>> affiche des informations
+
+msf6 exploit(.../<exploit>) > show options
+>>> affiche les options de l'exploit
+
+msf6 exploit (.../<exploit>) > set <OPTION> <value>
+>>> definit la valeur de <OPTION>
+
+msf6 exploit (.../<exploit>) > check
+>>> verifie que l'exploit est possible
+
+msf6 exploit (.../<exploit>) > exploit | run
+>>> lance l'exploit
+ 
+msf6 exploit (.../<exploit>) > back
+>>> quitte l'exploit
+
+>@###########################################################
+------------------------- Exemple ---------------------------
+
+msf6 > use /auxiliary/scanner/.../<scanner>
+>>> utilise le scanner <scanner>
+
+msf6 > use /auxiliary/scanner/smb/smb_version
+>>> exemple: utilise le scanner smb_version
+
+msf6 auxiliary (scanner/smb/smb_version) > show options
+msf6 auxiliary (scanner/smb/smb_version) > set RHOSTS ...
+msf6 auxiliary (scanner/smb/smb_version) > run
+>>> execute le scanner, trouve <version>
+
+Recherche Google: <version>
+>>> trouve username_map_script
+
+msf6 exploit (multi/samba/usermap_scrit) > show + set + run
+>>> bingo
+
+>@
+>@#############################################################
+>@
+>@Voir ici: /usr/share/metasploit-framework
+>@
+>@$ sudo apt install metasploit-framework
+>@Mise a jour
+>@
+>@$ msfconsole
+>@Lancement framework
+>@
+>@msf6 > help
+>@Donne de l'aide (si si !)
+>@
+>@msf6 > search <what>
+>@Recherche sur <what>
+>@
+>@msf6 > use /exploit/.../<exploit>
+>@Charge l'exploit
+>@
+>@msf6 exploit(.../<exploit>) > info
+>@Affiche des informations
+>@
+>@msf6 exploit (.../<exploit>)  > show options
+>@Affiche les options de l'exploit
+>@
+>@msf6 exploit (.../<exploit>) > set <OPTION> <value>
+>@Definit la valeur de <OPTION>
+>@
+>@msf6 exploit (.../<exploit>) > check
+>@Verifie que l'exploit est possible
+>@
+>@msf6 exploit (.../<exploit>) > exploit | run
+>@Lance l'exploit
+>@
+>@msf6 exploit (.../<exploit>) > back
+>@Quitte l'exploit
+>@
+>@------------------------- Exemple ---------------------------
+>@
+>@msf6 > use /auxiliary/scanner/smb/smb_version
+>@Utilise le scanner smb_version
+>@
+>@msf6 auxiliary (scanner/smb/smb_version) > show options
+>@msf6 auxiliary (scanner/smb/smb_version) > set RHOSTS ...
+>@msf6 auxiliary (scanner/smb/smb_version) > run
+>@Execute le scanner, trouve <version>
+>@
+>@Recherche Google: <version>
+>@Trouve username_map_script
+>@
+>@msf6 exploit (multi/samba/usermap_scrit) > show + set + run
+>@Bingo
+>@
+>@#############################################################
+>@

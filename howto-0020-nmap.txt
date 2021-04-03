@@ -19,13 +19,13 @@ On fournit un nom de fichier contenant des adresses IP.
 $ nmap 10.0.2.0/24 --exclude 10.0.2.1,10.0.2.2,10.0.2.20-30 
 On exclut des adresses ou plages.
 
-$nmap -v ...
+$ nmap -v ...
 nmap devient lus verbeux.
 
 $ nmap -sL 10.0.2.0/24
 nmap découvre les hosts.
 
-$ nmap -sn ...
+$ nmap -sn ... | nmap -sP ...
 nmap n'effectue qu'un Ping scan (pas de scan de ports).
 
 $ nmap <hosts> -PS80,443,1000 -sn
@@ -34,10 +34,10 @@ nmap essaye de découvrir des hotes en envoyant une requête TCP SYN sur plusieu
 $ nmap -sS <hostname>
 Effectue une tentative de connexion TCP SYN sur la machine.
 
-	$ nmap -sN|sF|sX: TCP Null, FIN, and Xmas scans>
-	> sN: TCP null: toutes les options du messages TCP sont à 0. Normalement pas possible tentative de perturbation.
-	> sF: FIN à 1 seulement. On propose une fermeture de session: tentative de perturbation.
-	> sX: URG, PUSH et FIN à 1: tentative de perturbation.
+$ nmap -sN|sF|sX: TCP Null, FIN, and Xmas scans>
+> sN: TCP null: toutes les options du messages TCP sont à 0. Normalement pas possible tentative de perturbation.
+> sF: FIN à 1 seulement. On propose une fermeture de session: tentative de perturbation.
+> sX: URG, PUSH et FIN à 1: tentative de perturbation.
 
 $ nmap <hosts> --traceroute -sn -Pn
 Effectue un traceroute
@@ -122,8 +122,20 @@ La boite à outils: OS detection, version detection, script scanning et tracerou
 >@$nmap -v ...
 >@nmap devient lus verbeux.
 >@
->@$ nmap -sn ...
->@nmap n'effectue qu'un Ping scan (pas de scan de ports).
+>@$ nmap -sn ... | nmap -sP ...
+>@Ping scan (pas de scan de ports).
+>@
+>@$ nmap -sS <hostname>
+>@TCP SYN sur la machine (scan furtif).
+>@
+>@$ nmap -sV ...
+>@Scanne et affiche les versions des services.
+>@
+>@$ nmap -sL 10.0.2.0/24
+>@Liste les hosts.
+>@
+>@$ nmap -p<port>,<port> <ip>
+>@Scanne les <port>.
 >@
 >@$ nmap -F ...
 >@Fast mode. Scan moins de ports.
@@ -141,7 +153,10 @@ La boite à outils: OS detection, version detection, script scanning et tracerou
 >@Effectue une IP spoofing en remplaçant sa propre adresse par <ip>.
 >@
 >@$ nmap -A ...
->@La boite à outils: OS detection, version detection, script scanning et traceroute.
+>@Scan agressif: OS detection, version detection, script scanning et traceroute.
+>@
+>@$ nmap -sC -v <host>
+>@Scan avec les scrits par défaut (non intrusifs, discrets). Liste des scripts: https://nmap.org/nsedoc
 >@
 >@###########################################################################################
 >@

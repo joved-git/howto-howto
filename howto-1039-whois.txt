@@ -1,0 +1,55 @@
+https://whois.domaintools.com
+>>> whois en ligne
+
+
+$ nslookup -type=mx <host>
+>>> serveurs mail
+
+$ nslookup -type=soa <host>
+>>> authoritative serveur = <soa>
+
+$ nslookup <host> <soa>
+>>> authoritative response
+
+$ dig <host>
+>>> commande de base
+
+$ dig <host> soa
+>>> authoritative serveur = <soa>
+
+$ dig <host> txt
+>>> reponse de "texte"
+
+>@
+>@#########################################
+>@
+>@$ nslookup <host>
+>@Commande de base
+>@
+>@$ nslookup -type=mx <host>
+>@Donne serveurs mail
+>@
+>@$ nslookup -type=soa <host>
+>@Affcihe authoritative serveur = <soa>
+>@
+>@$ nslookup <host> <soa>
+>@Effectue une authoritative request
+>@
+>@             --------------
+>@
+>@$ dig <host>
+>@Commande de base
+>@
+>@$ dig <host> soa
+>@Authoritative serveur = <soa>
+>@ 
+>@$ dig <host> txt
+>@>>> reponse de "texte"
+>@
+>@             --------------
+>@
+>@https://toolbox.googleapps.com
+>@Outil en ligne
+>@
+>@#########################################
+>@

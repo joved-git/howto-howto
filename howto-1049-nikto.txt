@@ -1,0 +1,13 @@
+
+$ nikto -h <host>
+>>> scanne le serveur web <host>.
+
+>@
+>@########################################
+>@
+>@$ ufw enable
+>@$ nikto -h <host>
+>@Scanne le serveur web <host>.
+>@
+>@########################################
+>@
