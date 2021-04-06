@@ -38,7 +38,7 @@ pwd:  pass
 > Wait few seconds for Backdoor injection (on port 6200).
 Ctrl-C
 
-$ nmap -p6200 10.2.2.4
+$ nmap -p6200 10.0.2.4
 PORT     STATE  SERVICE
 6200/tcp closed lm-x
 

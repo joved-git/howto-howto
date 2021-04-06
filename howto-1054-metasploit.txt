@@ -35,8 +35,17 @@ msf6 exploit (.../<exploit>) > exploit | run
 msf6 exploit (.../<exploit>) > back
 >>> quitte l'exploit
 
->@###########################################################
-------------------------- Exemple ---------------------------
+msf6 > reload_all
+>>> recharge tous les modules
+>>> nouveaux modules perso à mettre dans ~/.msf4/modules/exploits/...
+
+msf6 > show payloads
+>>> affiche les payloads
+
+msf6 > set payload <n>
+>>> utilise le payload <n>
+
+--------------------------- Exemple -----------------------------
 
 msf6 > use /auxiliary/scanner/.../<scanner>
 >>> utilise le scanner <scanner>
@@ -56,7 +65,7 @@ msf6 exploit (multi/samba/usermap_scrit) > show + set + run
 >>> bingo
 
 >@
->@#############################################################
+>@#################################################################
 >@
 >@Voir ici: /usr/share/metasploit-framework
 >@
@@ -93,7 +102,17 @@ msf6 exploit (multi/samba/usermap_scrit) > show + set + run
 >@msf6 exploit (.../<exploit>) > back
 >@Quitte l'exploit
 >@
->@------------------------- Exemple ---------------------------
+>@msf6 > reload_all
+>@Recharge tous les modules
+>@Nouveaux modules perso à mettre dans ~/.msf4/modules/exploits/...
+>@
+>@msf6 > show payloads
+>@Affiche les payloads
+>@
+>@msf6 > set payload <n>
+>@Utilise le payload <n>
+>@
+>@--------------------------- Exemple -----------------------------
 >@
 >@msf6 > use /auxiliary/scanner/smb/smb_version
 >@Utilise le scanner smb_version
@@ -109,5 +128,5 @@ msf6 exploit (multi/samba/usermap_scrit) > show + set + run
 >@msf6 exploit (multi/samba/usermap_scrit) > show + set + run
 >@Bingo
 >@
->@#############################################################
+>@#################################################################
 >@
