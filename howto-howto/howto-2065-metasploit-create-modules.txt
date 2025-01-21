@@ -1,0 +1,105 @@
+You can create your own modules and integrate them directly into Metasploit.
+
+Resource:
+  File with vulnerability: contact.php
+  File Exploit: php_cmd_inj.rb
+
+Here are steps to create and use modules
+-> On Metasploitable
+1. Copy the file contact.txt to Metasploitable in /var/www
+  $ sudo wget http://<kali machine>/contact.txt
+
+2. Rename the file to contact.php
+  $ cd /var/www
+  $ mv contact.txt contact.php
+
+3. Start the web server on Metasploitable:
+  sudo /etc/init.d/apache2 start
+
+-> On Kali
+1. Copy the exploit into Metasploit.
+  cd ~/.msf4/Modules
+  mkdir -r exploits/php
+  cd exploits/php
+  cp <...>/php_cmd_inj.rb .
+
+2. Reload modules under Metasploit.
+  msf6> reload_all
+
+3. Get module info.
+  If you have utf-8 problem, add "# encoding: utf8" in the beginning of the .rb file.
+
+4. Get and set options.
+  msf6> show options
+  msf6> set RHOSTS <ip Metasploitable>
+
+5. Start the exploit
+  msf6> exploit
+
+6. Gain access !!
+
+7. Payload choice.
+By default, the payload is choosen in function of the Arch (ARCH_CMD) present into the exploit .rb file.
+If you want to change the payload, you can do that:
+  wfs6> show payloads
+  wfs6> se payload 4
+
+>@############################################################################################################################
+>@#                                                                                                                          #
+>@# [ Metasploit ]                                                                                                           #
+>@# Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.                   #
+>@#                                                                                                                          #
+>@# See official site: https://metasploit.com / https://metasploit.help.rapid7.com/                                          #
+>@# See documentation: https://docs.metasploit.com/                                                                          #
+>@#                                                                                                                          #
+>@.--------------------------------------------------------------------------------------------------------------------------.
+>@
+>@You can create your own modules and integrate them directly into Metasploit.
+>@
+>@Resource:
+>@  File with vulnerability: contact.php
+>@  File Exploit: php_cmd_inj.rb
+>@
+>@Here are steps to create and use modules
+>@-> On Metasploitable
+>@1. Copy the file contact.txt to Metasploitable in /var/www
+>@  $ sudo wget http://<kali machine>/contact.txt
+>@
+>@2. Rename the file to contact.php
+>@  $ cd /var/www
+>@  $ mv contact.txt contact.php
+>@
+>@3. Start the web server on Metasploitable:
+>@  sudo /etc/init.d/apache2 start
+>@
+>@-> On Kali
+>@1. Copy the exploit into Metasploit.
+>@  cd ~/.msf4/Modules
+>@  mkdir -r exploits/php
+>@  cd exploits/php
+>@  cp <...>/php_cmd_inj.rb .
+>@
+>@2. Reload modules under Metasploit.
+>@  msf6> reload_all
+>@
+>@3. Get module info.
+>@  If you have utf-8 problem, add "# encoding: utf8" in the beginning of the .rb file.
+>@
+>@4. Get and set options.
+>@  msf6> show options
+>@  msf6> set RHOSTS <ip Metasploitable>
+>@
+>@5. Start the exploit
+>@  msf6> exploit
+>@
+>@6. Gain access !!
+>@
+>@7. Payload choice.
+>@By default, the payload is choosen in function of the Arch (ARCH_CMD) present into the exploit .rb file.
+>@If you want to change the payload, you can do that:
+>@  wfs6> show payloads
+>@  wfs6> se payload 4
+>@
+>@############################################################################################################################
+>@
+

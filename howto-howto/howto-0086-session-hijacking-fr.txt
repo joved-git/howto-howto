@@ -1,0 +1,32 @@
+Le détournement de session (parfois appelé détournement de cookies, détournement de session TCP ou 
+reniflage de paquets) se produit lorsqu’un pirate informatique prend le contrôle de votre session 
+Internet. Une telle situation peut se produire lorsque vous effectuez des achats en ligne, payez 
+une facture ou vérifiez votre solde bancaire. Les pirates de session ciblent généralement les 
+navigateurs ou les applications Internet, et leur objectif est de contrôler votre session de 
+navigation pour accéder à vos informations personnelles ainsi qu’à vos mots de passe.
+
+Les pirates de session se font passer pour vous auprès des sites Web. Ce type d’attaque peut avoir 
+de graves conséquences pour la sécurité des applications, car il permet aux pirates informatiques 
+d’obtenir un accès non autorisé à des comptes protégés (et aux données qu’ils contiennent) en se 
+faisant passer pour un utilisateur légitime. 
+
+########################################################################################################
+#                                                                                                      #
+# [ Vol de session | Session hijacking ]                                                               #
+#                                                                                                      #
+# Le détournement de session (parfois appelé détournement de cookies, détournement de session TCP ou   #
+# reniflage de paquets) se produit lorsqu’un pirate informatique prend le contrôle de votre session    #
+# Internet. Une telle situation peut se produire lorsque vous effectuez des achats en ligne, payez     #
+# une facture ou vérifiez votre solde bancaire. Les pirates de session ciblent généralement les        #
+# navigateurs ou les applications Internet, et leur objectif est de contrôler votre session de         #
+# navigation pour accéder à vos informations personnelles ainsi qu’à vos mots de passe.                #
+#                                                                                                      #
+# Les pirates de session se font passer pour vous auprès des sites Web. Ce type d’attaque peut avoir   #
+# de graves conséquences pour la sécurité des applications, car il permet aux pirates informatiques    #
+# d’obtenir un accès non autorisé à des comptes protégés (et aux données qu’ils contiennent) en se     #
+# faisant passer pour un utilisateur légitime.                                                         #
+#                                                                                                      #
+# Voir: howto-0085-session-highjacking.txt                                                             #
+#                                                                                                      #
+#------------------------------------------------------------------------------------------------------#
+

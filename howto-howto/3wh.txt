@@ -1,0 +1,7 @@
+
+client   --------- SYN (Seq : A, Ack : /) -------->   serveur
+
+client   <----- (Seq : B , Ack A+1) SYN-ACK -------   serveur
+
+client   ------- ACK (Seq : A+1, Ack : B+1) ------>   serveur
+

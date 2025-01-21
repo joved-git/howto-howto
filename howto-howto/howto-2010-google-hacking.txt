@@ -1,0 +1,55 @@
+Some very useful "Dork" commands to use in the google search bar:
+
+"key": search for that exact key or string.
+
+-<word>: the "-" is used to remove a result with <word> inside.
+
+site:<site>: the search is only done on <site>.
+
+intitle:<key>: the search is done with key present onto the title. 
+               example: [ site:site.fr intitle:index of ] could give interesting results
+
+allinurl:<key>: gives result with key into the URL.
+
+<number #1>..<number #2> <unity>: search for number #1 and number #2 in the given <unity>.
+                                  example: [ 10..35 kilos ] [ 300.500 USD ]
+
+ext:<file type>: only gives result as a file of the <file type> extension.
+                 example ext:log OR ext:txt
+
+!!! https://www.google.fr/advanced_search: gives access to advanced search.
+
+!!! https://images.google.fr is used to find images onto some web sites and links between them.
+
+!!! https://www.exploit-db.com/google-hacking-database gives all the Dorks.
+
+>@
+>@################################################################################################
+>@
+>@Some very useful "Dork" commands to use in the google search bar:
+>@
+>@"key": search for that exact key or string.
+>@
+>@-<word>: the "-" is used to remove a result with <word> inside.
+>@
+>@site:<site>: the search is only done on <site>.
+>@
+>@intitle:<key>: the search is done with key present onto the title. 
+>@               example: [ site:site.fr intitle:index of ] could give interesting results
+>@
+>@allinurl:<key>: gives result with key into the URL.
+>@
+>@<number #1>..<number #2> <unity>: search for number #1 and number #2 in the given <unity>.
+>@                                  example: [ 10..35 kilos ] [ 300.500 USD ]
+>@
+>@ext:<file type>: only gives result as a file of the <file type> extension.
+>@                 example ext:log OR ext:txt
+>@
+>@!!! https://www.google.fr/advanced_search: gives access to advanced search.
+>@
+>@!!! https://images.google.fr is used to find images onto some web sites and links between them.
+>@
+>@!!! https://www.exploit-db.com/google-hacking-database gives all the Dorks.
+>@
+>@################################################################################################
+>@

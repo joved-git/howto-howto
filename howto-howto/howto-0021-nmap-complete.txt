@@ -1,0 +1,250 @@
+Offical documentation: https://nmap.org/man/fr/man-briefoptions.html
+
+Usual commands:
+
+$ nmap scanme.nmap.org
+Uses this site to test ports legally.
+
+$ nmap <hostname>
+Scans the first 1000 ports of hostname.
+	> ICMP ping | ARP ping (local)
+	> TCP SYN on 443 (HTTPS)
+	> TCP ACK on 80 (web serveur)
+	> ICMP timestamp
+
+$ nmap 10.0.2.0/24
+$ nmap 10.0.2.0-255
+$ nmap 10.0.2.*
+Scans from 10.0.2.0 to 10.0.2.255
+
+$ nmap 10.0.2.0/24 --exclude 10.0.2.1,10.0.2.2,10.0.2.20-30 
+Used to exlude some addresses or ranges.
+
+$ nmap -iL <file>
+We give a <file> containing IP addresses.
+
+$ nmap -p <nm>
+$ nmap -p U:53,T:80 ... 
+$ nmap -p T:http,https
+Used to specify a specific port or ports range. For UDP scan, let's give -sU.
+
+$ nmap <hosts> -PS80,443,1000 ...
+Used to specify special port(s). Here, ports 80, 443 and 1000 for a TCP SYN (-PS).
+
+$ nmap -PS|PA|PU|PR ... 
+nmap performs a TCP SYN, TCP ACK, UDP or ARP scan on specific ports.
+
+$ nmap -v|vv|vvv ...
+nmap becomes more (and more and more) verbose.
+
+$ nmap -sP ... or nmap -sn ...
+nmap only does a ping scan (does not try to scan ports).
+
+$ nmap -sS <hostname>
+nmap is going to try a TCP SYN connection on <hostname>.
+
+$ nmap -Pn <hostname>
+Treat all hosts as online -- skip host discovery (no ping session).
+
+$ nmap -sV ...
+nmap performs a TCP SYN scan and display services' version.
+
+$ nmap -sL 10.0.2.0/24
+nmap tries to discover hostnames.
+
+$ nmap -sN|sF|sX: TCP Null, FIN, and Xmas scans>
+> sN: TCP null: all TCP options of the message are set to 0. Normally, could not be possible. This is a disruption try.
+> sF: FIN at 1 only. nmap asks for a closing session. This is a disruption try.
+> sX: URG, PUSH and FIN are at 1. This is a disruption try.
+
+$ nmap <hosts> --traceroute -sn -Pn
+nmap performs a traceroute.
+
+$ nmap --scanflags <flags>
+used to personnalise flags of TCP scans (SYN, SYNRST or SYNPUSH ...))
+
+$nmap -sO <hostname>
+Returns protocol number(s) found in the IP header.
+
+$ nmap -F ...
+Fast mode. Scan less ports.
+
+$ nmap --top-ports <n>
+nmap will scan the first <n> most popular ports.
+
+$ nmap --top-ratio <n>
+nmap will scan ports with ratio greater than <n>. See /usr/share/nmap/nmap-services file.
+
+$ nmap --version-intensity <n, def 7>
+Used to modifisy probe(s) intensity.
+
+$ nmap -O -v ...
+nmap will perform an OS detection in verbose mode.
+
+$ nmap -sC -v <host>
+nmap will perform a scan with default scripts (non intrusive and discrete ohes). List of script is here: https://nmap.org/nsedoc
+
+$ nmap --script default,dos ...
+nmap will try two specific scripts (here default and dos).
+
+$ nmap --script "http-*" ...
+nmap will use more than one scripts.
+
+$ sudo nmap --script-update
+nmap will make an update of the local scripts database.
+
+$ nmap -T<0..5> ...
+Configure nmap aggressivity. 0: discrete and slow. 5: aggressive.
+
+$ nmap -A ...
+Means Aggressive too. The toolbox: OS detection, version detection, script scanning and traceroute.
+
+$ nmap -f -mtu <value> ...
+nmap becomes more discrete using packet fragmentation.
+
+$ nmap -D <decoy1, decoy2 ...> ...
+nmap becomes more dicrete by making it appear that the packets come from several machines.
+
+$ nmap -S <ip> ...
+nmap will perform an IP spoofing by replacing its own address by <ip>.
+
+$ nmap -oN <filename> ...
+Extract the result into <filename>.
+
+$ nmap --reason ...
+Display the reason of the discovery (syn-ack for example).
+
+$ nmap -A ...
+Means Aggressive. The toolbox: OS detection, version detection, script scanning and traceroute.
+
+$ nmap -6 ...
+nmap performs an IP v6 scan.
+
+>@
+>@############################################################################################################################
+>@
+>@Offical documentation: https://nmap.org/man/fr/man-briefoptions.html
+>@
+>@Usual commands:
+>@
+>@$ nmap scanme.nmap.org
+>@Uses this site to test ports legally.
+>@
+>@$ nmap <hostname>
+>@Scans the first 1000 ports of hostname.
+>@	> ICMP ping | ARP ping (local)
+>@	> TCP SYN on 443 (HTTPS)
+>@	> TCP ACK on 80 (web serveur)
+>@	> ICMP timestamp
+>@
+>@$ nmap 10.0.2.0/24
+>@$ nmap 10.0.2.0-255
+>@$ nmap 10.0.2.*
+>@Scans from 10.0.2.0 to 10.0.2.255
+>@
+>@$ nmap 10.0.2.0/24 --exclude 10.0.2.1,10.0.2.2,10.0.2.20-30 
+>@Used to exlude some addresses or ranges.
+>@
+>@$ nmap -iL <file>
+>@We give a <file> containing IP addresses.
+>@
+>@$ nmap -p <nm>
+>@$ nmap -p U:53,T:80 ... 
+>@$ nmap -p T:http,https
+>@Used to specify a specific port or ports range. For UDP scan, let's give -sU.
+>@
+>@$ nmap <hosts> -PS80,443,1000 ...
+>@Used to specify special port(s). Here, ports 80, 443 and 1000 for a TCP SYN (-PS).
+>@
+>@$ nmap -PS|PA|PU|PR ... 
+>@nmap performs a TCP SYN, TCP ACK, UDP or ARP scan on specific ports.
+>@
+>@$ nmap -v|vv|vvv ...
+>@nmap becomes more (and more and more) verbose.
+>@
+>@$ nmap -sP ... or nmap -sn ...
+>@>@nmap only does a ping scan (does not try to scan ports).
+>@
+>@$ nmap -sS <hostname>
+>@nmap is going to try a TCP SYN connection on <hostname>.
+>@
+>@$ nmap -Pn <hostname>
+>@Treat all hosts as online -- skip host discovery (no ping session).
+>@
+>@$ nmap -sV ...
+>@nmap performs a TCP SYN scan and display services' version.
+>@
+>@$ nmap -sL 10.0.2.0/24
+>@nmap tries to discover hostnames.
+>@
+>@$ nmap -sN|sF|sX: TCP Null, FIN, and Xmas scans>
+>@> sN: TCP null: all TCP options of the message are set to 0. Normally, could not be possible. This is a disruption try.
+>@> sF: FIN at 1 only. nmap asks for a closing session. This is a disruption try.
+>@> sX: URG, PUSH and FIN are at 1. This is a disruption try.
+>@
+>@$ nmap <hosts> --traceroute -sn -Pn
+>@nmap performs a traceroute.
+>@
+>@$ nmap --scanflags <flags>
+>@used to personnalise flags of TCP scans (SYN, SYNRST or SYNPUSH ...))
+>@
+>@$nmap -sO <hostname>
+>@Returns protocol number(s) found in the IP header.
+>@
+>@$ nmap -F ...
+>@Fast mode. Scan less ports.
+>@
+>@$ nmap --top-ports <n>
+>@nmap will scan the first <n> most popular ports.
+>@
+>@$ nmap --top-ratio <n>
+>@nmap will scan ports with ratio greater than <n>. See /usr/share/nmap/nmap-services file.
+>@
+>@$ nmap --version-intensity <n, def 7>
+>@Used to modifisy probe(s) intensity.
+>@
+>@$ nmap -O -v ...
+>@nmap will perform an OS detection in verbose mode.
+>@
+>@$ nmap -sC -v <host>
+>@nmap will perform a scan with default scripts (non intrusive and discrete ohes). 
+>@  List of script is here: https://nmap.org/nsedoc
+>@
+>@$ nmap --script default,dos ...
+>@nmap will try two specific scripts (here default and dos).
+>@
+>@$ nmap --script "http-*" ...
+>@nmap will use more than one scripts.
+>@
+>@$ sudo nmap --script-update
+>@nmap will make an update of the local scripts database.
+>@
+>@$ nmap -T<0..5> ...
+>@Configure nmap aggressivity. 0: discrete and slow. 5: aggressive.
+>@
+>@$ nmap -A ...
+>@Means Aggressive too. The toolbox: OS detection, version detection, script scanning and traceroute.
+>@
+>@$ nmap -f -mtu <value> ...
+>@nmap becomes more discrete using packet fragmentation.
+>@
+>@$ nmap -D <decoy1, decoy2 ...> ...
+>@nmap becomes more dicrete by making it appear that the packets come from several machines.
+>@
+>@$ nmap -S <ip> ...
+>@nmap will perform an IP spoofing by replacing its own address by <ip>.
+>@
+>@$ nmap -oN <filename> ...
+>@Extract the result into <filename>.
+>@
+>@$ nmap --reason ...
+>@Display the reason of the discovery (syn-ack for example).
+>@
+>@$ nmap -A ...
+>@Means Aggressive. The toolbox: OS detection, version detection, script scanning and traceroute.
+>@
+>@$ nmap -6 ...
+>@nmap performs an IP v6 scan.
+>@
+>@############################################################################################################################
+>@

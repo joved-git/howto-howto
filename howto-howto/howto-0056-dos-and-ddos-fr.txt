@@ -1,0 +1,53 @@
+Une attaque par déni de service (abr. DoS attack pour Denial of Service attack en anglais) est une attaque 
+informatique ayant pour but de rendre indisponible un service, d'empêcher les utilisateurs légitimes d'un 
+service de l'utiliser. À l’heure actuelle la grande majorité de ces attaques se font à partir de plusieurs 
+sources, on parle alors d'attaque par déni de service distribuée (abr. DDoS attack pour Distributed Denial 
+of Service attack).
+
+Il peut s'agir de :
+    -L’inondation d’un réseau afin d'empêcher son fonctionnement.
+    -La perturbation des connexions entre deux machines, empêchant l'accès à un service particulier.
+    -L'obstruction d'accès à un service pour une personne en particulier.
+    -Le fait d'envoyer des milliards d'octets à une box internet.
+
+L'attaque par déni de service peut ainsi bloquer un serveur de fichiers, rendre impossible l'accès à un 
+serveur web ou empêcher la distribution de courriel dans une entreprise.
+
+L'attaquant n'a pas forcément besoin de matériel sophistiqué. Ainsi, certaines attaques DoS peuvent être 
+exécutées avec des ressources limitées contre un réseau de taille plus importante et plus moderne. On 
+appelle parfois ce type d'attaque « attaque asymétrique » en raison de la différence de ressources entre 
+les protagonistes. 
+
+>@
+>@###############################################################################################################
+>@#                                                                                                             #
+>@# [ DoS and DDoS | Deny of Service and Distributed Deny of Service ]                                          #
+>@#                                                                                                             #
+>@# Une attaque par déni de service (abr. DoS attack pour Denial of Service attack en anglais) est une attaque  #
+>@# informatique ayant pour but de rendre indisponible un service, d'empêcher les utilisateurs légitimes d'un   #
+>@# service de l'utiliser. À l’heure actuelle la grande majorité de ces attaques se font à partir de plusieurs  #
+>@# sources, on parle alors d'attaque par déni de service distribuée (abr. DDoS attack pour Distributed Denial  #
+>@# of Service attack).                                                                                         #
+>@#                                                                                                             #
+>@# Il peut s'agir de :                                                                                         #
+>@#     -L’inondation d’un réseau afin d'empêcher son fonctionnement.                                           #
+>@#     -La perturbation des connexions entre deux machines, empêchant l'accès à un service particulier.        #
+>@#     -L'obstruction d'accès à un service pour une personne en particulier.                                   #
+>@#     -Le fait d'envoyer des milliards d'octets à une box internet.                                           #
+>@#                                                                                                             #
+>@# L'attaque par déni de service peut ainsi bloquer un serveur de fichiers, rendre impossible l'accès à un     #
+>@# serveur web ou empêcher la distribution de courriel dans une entreprise.                                    #
+>@#                                                                                                             #
+>@# L'attaquant n'a pas forcément besoin de matériel sophistiqué. Ainsi, certaines attaques DoS peuvent être    #
+>@# exécutées avec des ressources limitées contre un réseau de taille plus importante et plus moderne. On       #
+>@# appelle parfois ce type d'attaque « attaque asymétrique » en raison de la différence de ressources entre    #
+>@# les protagonistes.                                                                                          #
+>@#                                                                                                             #
+>@# Voir: https://www.digitalattackmap.com/                                                                     #
+>@# Voir: howto-0055-dos-and-ddos.txt                                                                           #
+>@# Voir: howto-0057-tcp-three-way-handshake.txt                                                                #
+>@# Voir: howto-0058-tcp-three-way-handshake-fr.txt                                                             #
+>@#                                                                                                             #
+>@#-------------------------------------------------------------------------------------------------------------#
+>@
+

@@ -1,0 +1,117 @@
+Fail2ban
+
+Fail2Ban scans log files like /var/log/auth.log and bans IP addresses conducting too many failed 
+login attempts. It does this by updating system firewall rules to reject new connections from 
+those IP addresses, for a configurable amount of time. Fail2Ban comes out-of-the-box ready to 
+read many standard log files, such as those for sshd and Apache, and is easily configured to 
+read any log file of your choosing, for any error you wish.
+
+Though Fail2Ban is able to reduce the rate of incorrect authentication attempts, it cannot 
+eliminate the risk presented by weak authentication. Set up services to use only two factor, or 
+public/private authentication mechanisms if you really want to protect services.
+
+-> Install Fail2ban
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo apt install fail2ban
+
+_> Stop and start Fail2ban
+$ sudo systemctl stop fail2ban
+$ sudo systemctl start fail2ban
+
+-> Fail2ban scans for log files to find intrusion.
+Example:
+  /var/log/apache2/error.log
+  /var/log/auth/log
+
+-> Fail2ban configuration
+Fail2ban uses filters ans jails to perform some tests and put bad guy into jails.
+The main conf file is here: /etc/fail2ban/fail2ban.conf
+---
+loglevel = INFO
+---
+Alternate conf files:
+  jail.conf (dont' touch it, prefere to create a local file).
+  jail.local (use this file to modify default values and overwrite jail.conf file).
+---
+[apache-noscript]
+enable = true
+maxretry = 3
+ 
+[sshd]
+enable = true
+maxretry = 3
+---
+
+-> Fail2ban status
+You can use fail2ban-client to show the ban status.
+  $ sudo fail2ban-client status
+  $ sudo fail2ban-client status <service>
+  $ sudo fail2ban-client status sshd
+
+You can check the rules with fail2ban-regex.
+  $ sudo fail2ban-regex -v <log file> </etc/fail2ban/filter.d/<fileet conf file>
+  $ sudo fail2ban-regex -v /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-noscript.conf
+
+>@####################################################################################################
+>@#                                                                                                  #
+>@# [ Fail2ban ]                                                                                     #
+>@# Fail2Ban scans log files like /var/log/auth.log and bans IP addresses conducting too many failed #
+>@# login attempts. It does this by updating system firewall rules to reject new connections from    #
+>@# those IP addresses, for a configurable amount of time. Fail2Ban comes out-of-the-box ready to    #
+>@# read many standard log files, such as those for sshd and Apache, and is easily configured to     #
+>@# read any log file of your choosing, for any error you wish.                                      #
+>@#                                                                                                  #
+>@# Though Fail2Ban is able to reduce the rate of incorrect authentication attempts, it cannot       #
+>@# eliminate the risk presented by weak authentication. Set up services to use only two factor, or  #
+>@# public/private authentication mechanisms if you really want to protect services.                 #
+>@#                                                                                                  #
+>@#--------------------------------------------------------------------------------------------------#
+
+
+>@-> Install Fail2ban
+>@$ sudo apt update
+>@$ sudo apt upgrade
+>@$ sudo apt install fail2ban
+>@
+>@_> Stop and start Fail2ban
+>@$ sudo systemctl stop fail2ban
+>@$ sudo systemctl start fail2ban
+>@
+>@-> Fail2ban scans for log files to find intrusion.
+>@Example:
+>@  /var/log/apache2/error.log
+>@  /var/log/auth/log
+>@
+>@-> Fail2ban configuration
+>@Fail2ban uses filters ans jails to perform some tests and put bad guy into jails.
+>@The main conf file is here: /etc/fail2ban/fail2ban.conf
+>@---
+>@loglevel = INFO
+>@---
+>@Alternate conf files:
+>@  jail.conf (dont' touch it, prefere to create a local file).
+>@  jail.local (use this file to modify default values and overwrite jail.conf file).
+>@---
+>@[apache-noscript]
+>@enable = true
+>@maxretry = 3
+>@ 
+>@[sshd]
+>@enable = true
+>@maxretry = 3
+>@---
+>@
+>@-> Fail2ban status
+>@You can use fail2ban-client to show the ban status.
+>@  $ sudo fail2ban-client status
+>@  $ sudo fail2ban-client status <service>
+>@  $ sudo fail2ban-client status sshd
+>@
+>@You can check the rules with fail2ban-regex.
+>@  $ sudo fail2ban-regex -v <log file> </etc/fail2ban/filter.d/<fileet conf file>
+>@  $ sudo fail2ban-regex -v /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-noscript.conf
+>@
+>@####################################################################################################
+>@
+

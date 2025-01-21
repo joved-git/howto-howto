@@ -1,0 +1,50 @@
+Some things to do to prevent google hacking
+
+Use .htpasswd file to prevent everybody to see "index of" file on your server.
+    https://www.web2generators.com/apache-tools/htpasswd-generator could be used to generate file content.
+    example of .htccess (between "---")
+    ---
+    AuthType Basic
+    AuthName "Mo de passe resuis"
+    AuthUserFile /monsite/interdit/.htpasswd
+    Require valid-user
+    
+    Options All Indexes
+    ---
+
+Use a robot.txt file. See robots.txt.com
+    
+Use the <meta name="robot" content="noindex, nofollow"> markup in sensible web pages.
+        
+Clear all EXIF data in your images.
+
+>@
+>@###############################################################################################################
+>@
+>@Some things to do to prevent google hacking
+>@
+>@Use .htpasswd file to prevent everybody to see "index of" file on your server.
+>@    https://www.web2generators.com/apache-tools/htpasswd-generator could be used to generate file content.
+>@    example of .htccess (between "---")
+>@    ---
+>@    AuthType Basic
+>@    AuthName "Mo de passe resuis"
+>@    AuthUserFile /monsite/interdit/.htpasswd
+>@    Require valid-user
+>@    
+>@    Options All Indexes
+>@    ---
+>@
+>@Use a robot.txt file. See robots.txt.com
+>@    
+>@Use the <meta name="robot" content="noindex, nofollow"> markup in sensible web pages.
+>@        
+>@Clear all EXIF data in your images.
+>@
+>@###############################################################################################################
+>@
+
+
+    
+
+

@@ -1,0 +1,22 @@
+
+* 7 - Application 	User (HTTP, DNS, FTP)		[     Data    ]
+* 6 - Presentation 	Encryption/Decryption (SSH)	[     Data    ]
+* 5 - Session 		Sessions between applis		[     Data    ]
+* 4 - Transport 	TCP/UDP				[  Datagrams  ]
+* 3 - Network 		IP, ARP				[   Paquets   ]
+* 2 - Link 		Ethernet, MAC address		[    Frames   ]
+* 1 - Physical 		Cable, bits			[     Bits    ]
+
+>@
+>@#################################################################################
+>@
+>@* 7 - Application   |  User (HTTP, DNS, FTP)		[     Data    ]
+>@* 6 - Presentation  |  Encryption/Decryption (SSH)	[     Data    ]
+>@* 5 - Session       |  Sessions between applis		[     Data    ]
+>@* 4 - Transport     |  TCP/UDP				[  Datagrams  ]
+>@* 3 - Network       |  IP, ARP				[   Packets   ]
+>@* 2 - Link          |  Ethernet, MAC address		[    Frames   ]
+>@* 1 - Physical      |  Cable, bits			[     Bits    ]
+>@
+>@#################################################################################
+>@

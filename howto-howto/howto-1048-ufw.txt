@@ -1,0 +1,60 @@
+-- This tool is used to manage the Linux firewall NetFilter 	--
+-- by editing and changing content with iptables command.	--
+
+Some usefull commands:
+
+$ sudo ufw enable/disable
+>>> Used to start/stop ufW.
+
+$ sudo ufw status
+>>> Gives the status of ufw.
+
+$ sudo ufw allow <port>
+>>> Allows the port <port> and the type of protocol. Example: 1234, 80/tcp.
+
+$ sudo ufw allow <port name>
+>>> Allows the port <port name>. Examples: https | ssh.
+
+$ sudo ufw deny <port | port name>
+>>> Denies acces for the port or port name.
+
+File /etc/ufw/ufw.conf
+>>> Used to edit ufw configuration.
+
+$ cat /var/log/ufw.log
+>>> Displays logs.
+
+>@
+>@##############################################################################
+>@#                                                                            #
+>@# [ ufw ]                                                                    #
+>@# This tool is used to manage the Linux firewall NetFilter by # editing and  #
+>@# changing content with iptables commands.                                   #
+>@#                                                                            #
+>@#----------------------------------------------------------------------------#
+>@
+>@Some usefull commands:
+>@
+>@$ sudo ufw enable/disable
+>@>>> Used to start/stop ufW.
+>@
+>@$ sudo ufw status
+>@>>> Gives the status of ufw.
+>@
+>@$ sudo ufw allow <port>
+>@>>> Allows the port <port> and the type of protocol. Example: 1234, 80/tcp.
+>@
+>@$ sudo ufw allow <port name>
+>@>>> Allows the port <port name>. Examples: https | ssh.
+>@
+>@$ sudo ufw deny <port | port name>
+>@>>> Denies acces for the port or port name.
+>@
+>@File /etc/ufw/ufw.conf
+>@>>> Used to edit ufw configuration.
+>@
+>@$ cat /var/log/ufw.log
+>@>>> Displays logs.
+>@
+>@##############################################################################
+>@

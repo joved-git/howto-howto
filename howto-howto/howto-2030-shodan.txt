@@ -1,0 +1,31 @@
+Shodan is a big site that collect and present information about conencted objets.
+
+[ product:minecraft ] or Explore/Video Games gives information about popular video game servers.
+        example: Minecraft
+
+[ ip webcam ] find connected webcam. !!! Shodan is able to detect honeypot and shows them [honeypot].
+
+[ country:fr ] filter by country.
+
+!!! https://github.com/JavierOlmedo/shodan-filters gives all the possible filters.
+
+
+>@
+>@######################################################################################################
+>@#                                                                                                    #
+>@# [ Shodan ]                                                                                         #
+>@# Shodan is a big site that collect and present information about conencted objets.                  #
+>@#                                                                                                    #
+>@.----------------------------------------------------------------------------------------------------.
+>@
+>@[ product:minecraft ] or Explore/Video Games gives information about popular video game servers.
+>@        example: Minecraft
+>@
+>@[ ip webcam ] find connected webcam. !!! Shodan is able to detect honeypot and shows them [honeypot].
+>@
+>@[ country:fr ] filter by country.
+>@
+>@!!! https://github.com/JavierOlmedo/shodan-filters gives all the possible filters.
+>@
+>@######################################################################################################
+>@

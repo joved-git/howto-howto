@@ -1,0 +1,55 @@
+DNS stands for Domain Name System
+
+It is used to convert domain name to an ip address.
+DNS uses the port #53 (UDP).
+DNS is hierarchized from right to left: com -> facebook -> www
+
+Some DNS fields:
+    A		used to retrieve ip v4
+    AAAA	used to retrieve ip v6
+    PTR		used to invert the search (hostname from ip address)
+    MX		used to define the mail server
+
+DNS mechanism:
+    A machine asks the DNS for the ip address of a domain.
+    The DNS gives immediately the ip (info already in cache) or search for it then give it.
+
+DNS problems:
+    Flood: the DNS should not be able to answer. Too much requests.
+    Cache poisoning: information are changed.
+    Sensible information: DNS must protect its information.
+
+DNS protection:
+   Refuse connection to port #53.
+   Use DNSSEC (signed DNS).
+
+>@
+>@###############################################################################################
+>@
+>@DNS stands for Domain Name System
+>@
+>@It is used to convert domain name to an ip address.
+>@DNS uses the port #53 (UDP).
+>@DNS is hierarchized from right to left: com -> facebook -> www
+>@
+>@Some DNS fields:
+>@    A		used to retrieve ip v4
+>@    AAAA	used to retrieve ip v6
+>@    PTR		used to invert the search (hostname from ip address)
+>@    MX		used to define the mail server
+>@
+>@DNS mechanism:
+>@    A machine asks the DNS for the ip address of a domain.
+>@    The DNS gives immediately the ip (info already in cache) or search for it then give it.
+>@
+>@DNS problems:
+>@    Flood: the DNS should not be able to answer. Too much requests.
+>@    Cache poisoning: information are changed.
+>@    Sensible information: DNS must protect its information.
+>@
+>@DNS protection:
+>@   Refuse connection to port #53.
+>@   Use DNSSEC (signed DNS).
+>@
+>@###############################################################################################
+>@

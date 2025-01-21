@@ -1,0 +1,26 @@
+<?php //ce fichier doit être renommé en "contact.php" et placé à la racine du site Metasploitable (/var/www/)
+
+$notreMail = "contact_notre_site1@notresite12345.com"; //adresse de contact fictive
+
+if (isset($_POST['mail']) and isset($_POST['message']) ) { //si le formulaire a été soumis
+
+	$emailEmetteur = $_POST['mail']; //récupère le mail de l'émetteur du message
+
+	$messageEmetteur = $_POST['message']; //...et son message...
+
+	exec("echo '$messageEmetteur' | /usr/sbin/sendmail -f".$emailEmetteur . " " . $notreMail); //envoie un email
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h1>Contactez nous !</h1>
+<form id="formulaire" method="post">
+<input id="mail" name="mail" placeholder="Votre e-mail..."/><br>
+<input id="message" name="message" placeholder="Votre message..." size="35"/>
+<input type="submit" name="submit" value="Envoyer"/>
+</form>
+</body>
+</html>

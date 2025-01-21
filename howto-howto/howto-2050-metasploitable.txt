@@ -1,0 +1,34 @@
+Some useful commands to be used on this machine:
+
+->Enables/Disables the firewall.
+$ sudo ufw enable|disable
+
+-> Starts/Stops the http Apache web server.
+$ sudo /etc/init.d/apache2 start|stop
+
+-> Used to copy file <file> present on the root architecture of the web server located on <ip address>.
+$ sudo wget http://<ip address>/<file>
+    The root directory is /var/www/html
+    To start/stop the Apache server on <ip address>, do:
+       $ sudo systemctl start apache2
+       $ sudo systemctl stop apache2
+>@
+>@#########################################################################################################
+>@
+>@Some useful commands to be used on this machine:
+>@
+>@$ sudo ufw enable|disable
+>@>>> Enables/Disables the firewall.
+>@
+>@$ sudo /etc/init.d/apache2 start|stop
+>@>>> Starts/Stops the http Apache web server.
+>@
+>@$ sudo wget http://<ip address>/<file>
+>@>>> Used to copy file <file> present on the root architecture of the web server locted on <ip address>.
+>@    The root directory is /var/www/html
+>@    To start/stop the Apache server on <ip address>, do:
+>@       $ sudo systemctl start apache2
+>@       $ sudo systemctl stop apache2
+>@
+>@#########################################################################################################
+>@

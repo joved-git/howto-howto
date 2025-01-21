@@ -1,0 +1,44 @@
+Basic use of the SET (Social Engineer Toolkit)
+
+SET is a tool for automating social engineering techniques. We will see how to use it.
+First of all, you can launch it by going to Kali, in the “Applications -> Operations Tools -> Social Engineer Toolkit” menu.
+
+Simply type the number in question to access a menu, or “99” to exit.
+For example, you can select “1” to go to “Social-Engineering Attacks” then “2” to select “Website Attack Vectors”.
+You will find several attacks that we saw in the videos:
+
+selecting for example "1" ("Java Applet Attack Method"), SET will create a site (either a copy of an existing site, or a 
+predefined template) and add the malicious applet to take control of the target.
+The site will be located in the ~.set/web_clone folder, and the Java warning will launch when launching the site:
+
+Of course, you will then need to configure various parameters, such as the IP address which will receive the connections 
+(handler)…etc.
+
+The idea here is to observe that it is easy to create tailor-made attacks. All the more reason to protect yourself from 
+social engineering attacks, because the hacker will not necessarily need to be a technical expert.
+
+>@################################################################################################################################
+>@#                                                                                                                              #
+>@# [ SET | Social Engineering Toolkit ]                                                                                         #
+>@# SET is a tool for automating social engineering techniques. We will see how to use it.                                       #
+>@# First of all, you can launch it by going to Kali, in the “Applications -> Operations Tools -> Social Engineer Toolkit” menu. #
+>@#                                                                                                                              #
+>@#------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Basic use of the SET (Social Engineer Toolkit)
+>@Simply type the number in question to access a menu, or “99” to exit.
+>@For example, you can select “1” to go to “Social-Engineering Attacks” then “2” to select “Website Attack Vectors”.
+>@You will find several attacks that we saw in the videos:
+>@
+>@Selecting for example "1" ("Java Applet Attack Method"), SET will create a site (either a copy of an existing site, or a 
+>@predefined template) and add the malicious applet to take control of the target.
+>@The site will be located in the ~.set/web_clone folder, and the Java warning will launch when launching the site:
+>@
+>@Of course, you will then need to configure various parameters, such as the IP address which will receive the connections 
+>@(handler)…etc.
+>@
+>@The idea here is to observe that it is easy to create tailor-made attacks. All the more reason to protect yourself from 
+>@social engineering attacks, because the hacker will not necessarily need to be a technical expert.
+>@
+>@################################################################################################################################
+>@

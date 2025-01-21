@@ -1,0 +1,80 @@
+John is a powerful tool that is used to crack passwords.
+
+-> Used directory
+John is installed here: /usr/share/john 
+By default, John creates a working directory into <home>/.john
+You can find rules here: /usr/share/john/rules
+Example: rockyou-30000.rule contains most popular rules.
+
+-> Different modes
+  --single: default test. Use immediate rules.
+  --worldlist: read words from files.
+    Example: /usr/share/john/password.lst or ~/Documents/John/rockyou.txt
+  --incremental: incremental mode.
+  --wordlist=<file>: gives to John a list of words.
+  --rules: add some rules. Example: "add a birthdate at the end of the password".
+
+-> How to use
+1. Get passwd and shadow files.
+
+2. Merge those files.
+$ unshadow passwd.txt shadow.txt > password.txt
+
+3. Launch John
+$ john password.txt
+
+-> John as a super decoder
+John can decode so many type of data.
+1. Ask John to give all formats he knows.
+$ john --list=formats
+$ john --list=formats | grep -i <what you want>
+Example:
+  $ cat <a MD5 hash> > hash.txt
+  $ john --format=raw-md5 hash.txt
+
+>@
+>@####################################################################################
+>@#                                                                                  #
+>@# [ John | John the Ripper ]                                                       #
+>@# John is a powerful tool that is used to crack passwords.                         #
+>@#                                                                                  #
+>@# Worldlist rockyou could be find with google: [ rockyou filetype:txt ]            #
+>@#                                                                                  #
+>@#----------------------------------------------------------------------------------#
+>@
+>@John is a powerful tool that is used to crack passwords.
+>@
+>@-> Used directory
+>@John is installed here: /usr/share/john 
+>@By default, John creates a working directory into <home>/.john
+>@You can find rules here: /usr/share/john/rules
+>@Example: rockyou-30000.rule contains most popular rules.
+>@
+>@-> Different modes
+>@  --single: default test. Use immediate rules.
+>@  --worldlist: read words from files.
+>@    Example: /usr/share/john/password.lst or ~/Documents/John/rockyou.txt
+>@  --incremental: incremental mode.
+>@  --wordlist=<file>: gives to John a list of words.
+>@  --rules: add some rules. Example: "add a birthdate at the end of the password".
+>@
+>@-> How to use
+>@1. Get passwd and shadow files.
+>@
+>@2. Merge those files.
+>@$ unshadow passwd.txt shadow.txt > password.txt
+>@
+>@3. Launch John
+>@$ john password.txt
+>@
+>@-> John as a super decoder
+>@John can decode so many type of data.
+>@1. Ask John to give all formats he knows.
+>@$ john --list=formats
+>@$ john --list=formats | grep -i <what you want>
+>@Example:
+>@  $ cat <a MD5 hash> > hash.txt
+>@  $ john --format=raw-md5 hash.txt
+>@
+>@####################################################################################
+>@

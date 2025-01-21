@@ -1,0 +1,130 @@
+Basics:
+-> Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.
+-> It is declined in many version, hence the famous free Metasploit Framework version.
+-> It uses some exploits (pieces of code) use to gain access and payloads (pieces of code) launched after the intrusion.
+To summarize:
+  exploits = codes used to gain access.
+  paylaods = codes used to perform some operations (example: create backdoor, clean footsteps, ...).
+
+-> Metasploit is used to test the vulnerability of systemq.
+/!\ Do not use as a tool to obtain access. This is NOT LEGAL !!
+
+Architecture:
+-> Metasploit is built around 3 bases.
+  Rex: it manages current tasks (protocoles, coding, ...).
+  Msf::Core: framework and APIs.
+  Msf::Base: simplified APIs, (modules, ...).
+
+Interfaces:
+-> Metasploit offers many interfaces.
+  MsfConsole: gives acces to the Framework using command lines.
+  Web interface: only on paid version.
+  
+On the disk:
+-> Some directory and files:
+  Find Metasploit here: /usr/share/metasploit-framework/
+  ./config : Framework configuration.
+  ./data: data used by exploits.
+  ./data/eicar.com: standard file for testing antivirus.
+  ./data/wordlists: contains many lists of words (password cracking, id, ...).
+  ./db: the database of Metasploit. Do not touch !
+  ./documentation: yeah !
+  ./lib: libraries used to run Metasploit. The heart of the system.
+  ./modules: codes (in Ruby) used to make exploits.
+  ./scripts: equivalent to modules. Maybe not yet used today.
+  ./tools: modules that can be used without Metasploit.
+
+Local directory:
+-> It is here: /home/kali/.msf4
+
+Update Metasploit:
+$ sudo apt update
+$ sudo apt install metasploit-framework
+$ cd /usr/share/metasploit-framework
+$ sudo gem install bundler
+
+Time to try it:
+-> Start Metasploit
+$ msfconsole
+
+-> Use a module
+msf6> use <exploit>
+msf6> use exploit/windows/http/apache_modjk_overflow
+
+-> Look at modules information.
+msf6 exploit(<name without 'exploit'>)> show options
+
+-> Quit the software.
+$ msf6> quit
+
+>@############################################################################################################################
+>@#                                                                                                                          #
+>@# [ Metasploit ]                                                                                                           #
+>@# Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.                   #
+>@#                                                                                                                          #
+>@# See official site: https://metaspoit.com / https://metasploit.help.rapid7.com/                                           #
+>@# See documentation: https://docs.metasploit.com/                                                                          #
+>@#                                                                                                                          #
+>@----------------------------------------------------------------------------------------------------------------------------
+>@
+>@Basics:
+>@-> Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.
+>@-> It is declined in many version, hence the famous free Metasploit Framework version.
+>@-> It uses some exploits (pieces of code) use to gain access and payloads (pieces of code) launched after the intrusion.
+>@To summarize:
+>@  exploits = codes used to gain access.
+>@  paylaods = codes used to perform some operations (example: create backdoor, clean footsteps, ...).
+>@
+>@-> Metasploit is used to test the vulnerability of systemq.
+>@/!\ Do not use as a tool to obtain access. This is NOT LEGAL !!
+>@
+>@Architecture:
+>@-> Metasploit is built around 3 bases.
+>@  Rex: it manages current tasks (protocoles, coding, ...).
+>@  Msf::Core: framework and APIs.
+>@  Msf::Base: simplified APIs, (modules, ...).
+>@
+>@Interfaces:
+>@-> Metasploit offers many interfaces.
+>@  MsfConsole: gives acces to the Framework using command lines.
+>@  Web interface: only on paid version.
+>@  
+>@On the disk:
+>@-> Some directory and files:
+>@  Find Metasploit here: /usr/share/metasploit-framework/
+>@  ./config : Framework configuration.
+>@  ./data: data used by exploits.
+>@  ./data/eicar.com: standard file for testing antivirus.
+>@  ./data/wordlists: contains many lists of words (password cracking, id, ...).
+>@  ./db: the database of Metasploit. Do not touch !
+>@  ./documentation: yeah !
+>@  ./lib: libraries used to run Metasploit. The heart of the system.
+>@  ./modules: codes (in Ruby) used to make exploits.
+>@  ./scripts: equivalent to modules. Maybe not yet used today.
+>@  ./tools: modules that can be used without Metasploit.
+>@
+>@Local directory:
+>@-> It is here: /home/kali/.msf4
+>@
+>@Update Metasploit:
+>@$ sudo apt update
+>@$ sudo apt install metasploit-framework
+>@$ cd /usr/share/metasploit-framework
+>@$ sudo gem install bundler
+>@
+>@Time to try it:
+>@-> Start Metasploit
+>@$ msfconsole
+>@
+>@-> Use a module
+>@msf6> use <exploit>
+>@msf6> use exploit/windows/http/apache_modjk_overflow
+>@
+>@-> Look at modules information.
+>@msf6 [module]> show info
+>@
+>@-> Quit the software.
+>@$ msf6> quit
+>@
+>@############################################################################################################################
+>@

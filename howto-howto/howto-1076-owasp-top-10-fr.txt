@@ -1,0 +1,145 @@
+OWASP Top 10 représente la liste officielle des 10 risks les plus importants dans le monde de la sécurité Web.
+La liste est utilisée pour sécuriser les application.
+
+Site officiel: https://owasp.org/Top10/
+
+A01:2021-Contrôle d'accès défaillants (Broken Access Control)
+Cette categorie passe de la cinquième position à la catégorie présentant le risque de sécurité des applications Web le plus 
+grave ; les données fournies indiquent qu'en moyenne, 3,81 % des applications testées présentaient une ou plusieurs 
+énumérations de faiblesses communes (CWE) avec plus de 318 000 occurrences de CWE dans cette catégorie de risque. Les 34 CWE 
+mappés à Broken Access Control avaient plus d’occurrences dans les applications que dans toute autre catégorie.
+
+A02:2021-Défaillances cryptographiques (Cryptographic Failure)
+Cette catégorie passe d'une position à la deuxième position, auparavant connue sous le nom de A3 : 2017 - Exposition de données 
+sensibles, qui était un symptôme général plutôt qu'une cause profonde. Le nom renouvelé se concentre sur les échecs liés à la 
+cryptographie, comme cela était implicitement le cas auparavant. Cette catégorie conduit souvent à une exposition de données 
+sensibles ou à une compromission du système.
+
+A03:2021-L’injection (Injection)
+La catégorie glisse jusqu’à la troisième position. 94 % des applications ont été testées pour une forme d'injection avec un 
+taux d'incidence maximum de 19 %, un taux d'incidence moyen de 3,37 %, et les 33 CWE cartographiés dans cette catégorie ont le 
+deuxième plus grand nombre d'occurrences dans les applications avec 274 000 occurrences. Le Cross-site Scripting fait désormais 
+partie de cette catégorie dans cette édition.>@
+
+A04:2021-Conception non sécurisée (Insecure Design)
+Il s'agit d'une nouvelle catégorie pour 2021, axée sur les risques liés aux défauts de conception. Si nous voulons véritablement 
+« aller à gauche » en tant qu’industrie, nous avons besoin de davantage de modélisation des menaces, de modèles et principes de 
+conception sécurisés et d’architectures de référence. Une conception non sécurisée ne peut pas être corrigée par une mise en 
+œuvre parfaite car, par définition, les contrôles de sécurité nécessaires n'ont jamais été créés pour se défendre contre des 
+attaques spécifiques.
+
+A05:2025-Mauvaise configuration de sécurité (Security Misconfiguration)
+La catégorie passe du numéro 6 dans l'édition précédente ; 90 % des applications ont été testées pour détecter une certaine 
+forme de mauvaise configuration, avec un taux d'incidence moyen de 4,5 % et plus de 208 000 occurrences de CWE mappées à cette 
+catégorie de risque. Avec l'évolution croissante vers des logiciels hautement configurables, il n'est pas surprenant de voir 
+cette catégorie progresser. L'ancienne catégorie pour les entités externes A4:2017-XML (XXE) fait désormais partie de cette 
+catégorie de risque.
+
+A06:2021–Composants vulnérables et obsolètes (Vulnerable and Outdated Components)
+La catégorie était auparavant intitulé Utilisation de composants avec des vulnérabilités connues et se classe n°2 dans 
+l'enquête communautaire du Top 10, mais disposait également de suffisamment de données pour figurer dans le Top 10 via 
+l'analyse des données. Cette catégorie passe de la 9e place en 2017 et constitue un problème connu pour lequel nous avons 
+du mal à tester et à évaluer les risques. Il s'agit de la seule catégorie à ne pas avoir de vulnérabilités et d'expositions 
+communes (CVE) mappées aux CWE inclus, donc un exploit par défaut et des pondérations d'impact de 5,0 sont pris en compte dans 
+leurs scores.
+
+A07:2021-Les échecs d'identification et d'authentification (Identification and Authentication Failures)
+Ils étaient auparavant une authentification rompue et descendent de la deuxième position, et incluent désormais les CWE qui 
+sont davantage liés aux échecs d'identification. Cette catégorie fait toujours partie intégrante du Top 10, mais la 
+disponibilité accrue de cadres standardisés semble y contribuer.
+
+A08:2021-Les défaillances d'intégrité des logiciels et des données  (Software and Data Integrity Failures)
+Il s'agit d'une nouvelle catégorie pour 2021, qui se concentre sur l'élaboration d'hypothèses liées aux mises à jour 
+logicielles, aux données critiques et aux pipelines CI/CD sans vérifier l'intégrité. L’un des impacts les plus pondérés des 
+données CVE/CVSS (Common Vulnerability and Exposures/Common Vulnerability Scoring System) mappées sur les 10 CWE de cette 
+catégorie. A8:2017-La désérialisation non sécurisée fait désormais partie de cette catégorie plus large.
+
+A09:2021-Échecs de journalisation et de surveillance de la sécurité (Security Logging and Monitoring Failures)
+La catégorie était auparavant A10 : 2017 - Journalisation et surveillance insuffisantes et est ajouté à partir de l'enquête 
+communautaire Top 10 (#3), passant du #10 précédemment. Cette catégorie est élargie pour inclure davantage de types de pannes, 
+est difficile à tester et n'est pas bien représentée dans les données CVE/CVSS. Cependant, les défaillances de cette catégorie 
+peuvent avoir un impact direct sur la visibilité, les alertes d'incident et les analyses judiciaires.
+
+A10:2021-Server-Side Request Forgery (Server-Side Request Forgery)
+La catégorie est ajouté à partir de l’enquête communautaire Top 10 (#1). Les données montrent un taux d'incidence relativement 
+faible avec une couverture de tests supérieure à la moyenne, ainsi que des notes supérieures à la moyenne pour le potentiel 
+d'exploitation et d'impact. Cette catégorie représente le scénario dans lequel les membres de la communauté de la sécurité 
+nous disent que c'est important, même si cela n'est pas illustré dans les données pour le moment.
+
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# [ OWASP Top 10 ]                                                                                                              #
+>@#                                                                                                                               #
+>@# OWASP Top 10 représente la liste officielle des 10 risks les plus importants dans le monde de la sécurité Web.                #
+>@# La liste est utilisée pour sécuriser les application.                                                                         #
+>@#                                                                                                                               #
+>@# Site officiel: https://owasp.org/Top10/                                                                                       #
+>@#                                                                                                                               #
+>@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+
+>@A01:2021-Contrôle d'accès défaillants (Broken Access Control)
+>@Cette categorie passe de la cinquième position à la catégorie présentant le risque de sécurité des applications Web le plus 
+>@grave ; les données fournies indiquent qu'en moyenne, 3,81 % des applications testées présentaient une ou plusieurs 
+>@énumérations de faiblesses communes (CWE) avec plus de 318 000 occurrences de CWE dans cette catégorie de risque. Les 34 CWE 
+>@mappés à Broken Access Control avaient plus d’occurrences dans les applications que dans toute autre catégorie.
+>@
+>@A02:2021-Défaillances cryptographiques (Cryptographic Failure)
+>@Cette catégorie passe d'une position à la deuxième position, auparavant connue sous le nom de A3 : 2017 - Exposition de données 
+>@sensibles, qui était un symptôme général plutôt qu'une cause profonde. Le nom renouvelé se concentre sur les échecs liés à la 
+>@cryptographie, comme cela était implicitement le cas auparavant. Cette catégorie conduit souvent à une exposition de données 
+>@sensibles ou à une compromission du système.
+>@
+>@A03:2021-L’injection (Injection)
+>@La catégorie glisse jusqu’à la troisième position. 94 % des applications ont été testées pour une forme d'injection avec un 
+>@taux d'incidence maximum de 19 %, un taux d'incidence moyen de 3,37 %, et les 33 CWE cartographiés dans cette catégorie ont le 
+>@deuxième plus grand nombre d'occurrences dans les applications avec 274 000 occurrences. Le Cross-site Scripting fait désormais 
+>@partie de cette catégorie dans cette édition.>@
+>@
+>@A04:2021-Conception non sécurisée (Insecure Design)
+>@Il s'agit d'une nouvelle catégorie pour 2021, axée sur les risques liés aux défauts de conception. Si nous voulons véritablement 
+>@« aller à gauche » en tant qu’industrie, nous avons besoin de davantage de modélisation des menaces, de modèles et principes de 
+>@conception sécurisés et d’architectures de référence. Une conception non sécurisée ne peut pas être corrigée par une mise en 
+>@œuvre parfaite car, par définition, les contrôles de sécurité nécessaires n'ont jamais été créés pour se défendre contre des 
+>@attaques spécifiques.
+>@
+>@A05:2025-Mauvaise configuration de sécurité (Security Misconfiguration)
+>@La catégorie passe du numéro 6 dans l'édition précédente ; 90 % des applications ont été testées pour détecter une certaine 
+>@forme de mauvaise configuration, avec un taux d'incidence moyen de 4,5 % et plus de 208 000 occurrences de CWE mappées à cette 
+>@catégorie de risque. Avec l'évolution croissante vers des logiciels hautement configurables, il n'est pas surprenant de voir 
+>@cette catégorie progresser. L'ancienne catégorie pour les entités externes A4:2017-XML (XXE) fait désormais partie de cette 
+>@catégorie de risque.
+>@
+>@A06:2021–Composants vulnérables et obsolètes (Vulnerable and Outdated Components)
+>@La catégorie était auparavant intitulé Utilisation de composants avec des vulnérabilités connues et se classe n°2 dans 
+>@l'enquête communautaire du Top 10, mais disposait également de suffisamment de données pour figurer dans le Top 10 via 
+>@l'analyse des données. Cette catégorie passe de la 9e place en 2017 et constitue un problème connu pour lequel nous avons 
+>@du mal à tester et à évaluer les risques. Il s'agit de la seule catégorie à ne pas avoir de vulnérabilités et d'expositions 
+>@communes (CVE) mappées aux CWE inclus, donc un exploit par défaut et des pondérations d'impact de 5,0 sont pris en compte dans 
+>@leurs scores.
+>@
+>@A07:2021-Les échecs d'identification et d'authentification (Identification and Authentication Failures)
+>@Ils étaient auparavant une authentification rompue et descendent de la deuxième position, et incluent désormais les CWE qui 
+>@sont davantage liés aux échecs d'identification. Cette catégorie fait toujours partie intégrante du Top 10, mais la 
+>@disponibilité accrue de cadres standardisés semble y contribuer.
+>@
+>@A08:2021-Les défaillances d'intégrité des logiciels et des données  (Software and Data Integrity Failures)
+>@Il s'agit d'une nouvelle catégorie pour 2021, qui se concentre sur l'élaboration d'hypothèses liées aux mises à jour 
+>@logicielles, aux données critiques et aux pipelines CI/CD sans vérifier l'intégrité. L’un des impacts les plus pondérés des 
+>@données CVE/CVSS (Common Vulnerability and Exposures/Common Vulnerability Scoring System) mappées sur les 10 CWE de cette 
+>@catégorie. A8:2017-La désérialisation non sécurisée fait désormais partie de cette catégorie plus large.
+>@
+>@A09:2021-Échecs de journalisation et de surveillance de la sécurité (Security Logging and Monitoring Failures)
+>@La catégorie était auparavant A10 : 2017 - Journalisation et surveillance insuffisantes et est ajouté à partir de l'enquête 
+>@communautaire Top 10 (#3), passant du #10 précédemment. Cette catégorie est élargie pour inclure davantage de types de pannes, 
+>@est difficile à tester et n'est pas bien représentée dans les données CVE/CVSS. Cependant, les défaillances de cette catégorie 
+>@peuvent avoir un impact direct sur la visibilité, les alertes d'incident et les analyses judiciaires.
+>@
+>@A10:2021-Server-Side Request Forgery (Server-Side Request Forgery)
+>@La catégorie est ajouté à partir de l’enquête communautaire Top 10 (#1). Les données montrent un taux d'incidence relativement 
+>@faible avec une couverture de tests supérieure à la moyenne, ainsi que des notes supérieures à la moyenne pour le potentiel 
+>@d'exploitation et d'impact. Cette catégorie représente le scénario dans lequel les membres de la communauté de la sécurité 
+>@nous disent que c'est important, même si cela n'est pas illustré dans les données pour le moment.
+>@
+>@#################################################################################################################################
+>@

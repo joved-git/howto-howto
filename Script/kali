@@ -1,0 +1,50 @@
+#!/bin/bash
+# Monkey - 2021 / 2025
+
+SRC_DIR=~/Documents/Docs
+
+if [ x$1 = x ]; then
+	echo
+	echo "Please give me something to do !!"
+	echo "!!! kali list should be a good idea :)"
+	echo
+	exit 0
+fi
+
+if [ x$1 = xlist ]; then
+	echo
+	echo '########################################'
+	echo
+	ls $SRC_DIR | grep 'howto-'
+	echo
+	echo '########################################'
+	echo
+	exit 0
+fi
+
+RESULT=$(ls $SRC_DIR | grep $1 | wc -l)
+
+if [ $RESULT -gt 1 ]; then
+	echo
+	echo '########################################'
+	echo
+	ls $SRC_DIR | grep $1
+	echo
+	echo '########################################'
+	echo
+	exit 0
+fi
+
+if [ $RESULT -eq 0 ];
+then
+	echo
+	echo "Sorry, nothing to display. Try kali list..."
+	echo
+else
+	FILENAME=$(ls $SRC_DIR/*$1*)
+	FN=`echo $FILENAME | awk -F'/' '{ print $NF }'`
+	
+	grep '>@' $FILENAME | awk -F'@' '{ print $2 }'
+	echo "[" $FN "]"
+	echo
+fi

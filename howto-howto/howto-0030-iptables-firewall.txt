@@ -1,0 +1,91 @@
+Some simple commands:
+
+$ sudo iptables -L
+Show all rules for a table (default = filter).
+
+iptables has 4 tables:
+Filter	: firewall itself.
+Mangle	: packets modification.
+Nat	: plays on source and/or destination IP addresses.
+Raw	: evaluates packets as évalue les paquets comme un ensemble
+
+$ sudo iptables -L -t <table> 
+Lists the content of <the table <table>. Default is filter.
+
+Example, for filter, We see 3 chains:
+INPUT		: inpjut chain.
+OUTPUT		: output chain.
+FORWARD		: used to redirect packets.
+
+Other existing chains:
+PREROUTING	: modification before the routing.
+POSTROUTING	: modification after the routing.
+
+$ sudo iptables -F | sudo iptables -t <table> -F
+>>> Commande used to Clear a table.
+
+$ sudo iptables -P <chain> <action>
+$ sudo iptables -P INPUT DROP | ACCEPT
+>>> used to change the policies.
+
+$ sudo iptables -A INPUT -p tcp -i eth0 --dport ssh -j ACCEPT
+>>> Command to autorise the SSH (in input) on the machine.
+
+$ sudo iptables -A INPUT -p icmp -j ACCEPT
+$ sudo iptables -A OUTPUT -p icmp -j ACCEPT
+>>> Commands that autorise ICMP packets (ping) in unput.
+
+$ sudo iptables -I ...
+>>> Used to insert  a rule in the top of the list.
+
+$ sudo iptables-save ...
+>>> Command used to save rules.
+
+>@
+>@#################################################################
+>@
+>@Some simple commands:
+>@
+>@$ sudo iptables -L
+>@Show all rules for a table (default = filter).
+>@
+>@iptables has 4 tables:
+>@Filter	: firewall itself.
+>@Mangle	: packets modification.
+>@Nat	: plays on source and/or destination IP addresses.
+>@Raw	: evaluates packets as évalue les paquets comme un ensemble
+>@
+>@$ sudo iptables -L -t <table> 
+>@Lists the content of <the table <table>. Default is filter.
+>@
+>@Example, for filter, We see 3 chains:
+>@INPUT		: inpjut chain.
+>@OUTPUT		: output chain.
+>@FORWARD		: used to redirect packets.
+>@
+>@Other existing chains:
+>@PREROUTING	: modification before the routing.
+>@POSTROUTING	: modification after the routing.
+>@
+>@$ sudo iptables -F | sudo iptables -t <table> -F
+>@>>> Commande used to Clear a table.
+>@
+>@$ sudo iptables -P <chain> <action>
+>@$ sudo iptables -P INPUT DROP | ACCEPT
+>@>>> used to change the policies.
+>@
+>@$ sudo iptables -A INPUT -p tcp -i eth0 --dport ssh -j ACCEPT
+>@>>> Command to autorise the SSH (in input) on the machine.
+>@
+>@$ sudo iptables -A INPUT -p icmp -j ACCEPT
+>@$ sudo iptables -A OUTPUT -p icmp -j ACCEPT
+>@>>> Commands that autorise ICMP packets (ping) in unput.
+>@
+>@$ sudo iptables -I ...
+>@>>> Used to insert  a rule in the top of the list.
+>@
+>@$ sudo iptables-save ...
+>@>>> Command used to save rules.
+>@
+>@#################################################################
+>@

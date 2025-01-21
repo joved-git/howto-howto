@@ -1,0 +1,119 @@
+$ recon-ng
+>>> Gives the prompt.
+
+> help <cmd>
+>>> Gives information on <cmd>.
+
+> marketplace install all
+>>> Install all modules.
+
+> modules search
+>>> Displays modules by categories.
+    Discovery, Exploitation, Import, Recon and Reporting.
+    
+> modules load <module>
+>>> load <module> (!!! Give complet path, example: discovery/info_disclosure/cache_snoop)
+
+> options list
+>>> Displays options for the current module.
+
+> info
+>>> Displays complete information on the loaded module.
+
+> options set <option> <value>
+>>> Set a <value> for an <option>.
+
+> run
+>>> Starts module
+
+> back
+>>> Quits/unloads the module.
+
+> exit
+>>> Quits recon-ng.
+
+Some examples:
+-> discovery/info_disclosure/cache_snoop: gives info from DNS cache.
+-> discovery/info_disclosure/interesting_files: used to retrieve interesting files.
+    Try with: > options set PORT 443
+              > options set PROTOCOL https
+              > options set SOURCE www.leblogduhacker.fr
+              > run
+-> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains li ked to an IP address).
+    Go to https://www.virustotal.com/gui/
+    Create account (Signed up) then go to your Account/API keys and copy the key.
+    Try with: > keys add virustotal_api <the copied key>
+              > options set SOURCE <ip>
+              > run
+>@
+>@##############################################################################################
+>@
+>@$ recon-ng
+>@>>> Gives the prompt
+>@
+>@> help <cmd>
+Some examples:
+-> discovery/info_disclosure/cache_snoop: gives info from DNS cache.
+-> discovery/info_disclosure/interesting_files: used to retrieve interesting files.
+    Try with: > options set PORT 443
+              > options set PROTOCOL https
+              > options set SOURCE www.leblogduhacker.fr
+              > run
+-> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains li ked to an IP address).
+    Go to https://www.virustotal.com/gui/
+    Create account (Signed up) then go to your Account/API keys and copy the key.
+    Try with: > keys add virustotal_api <the copied key>
+              > options set SOURCE <ip>
+              > run
+>@
+>@##############################################################################################
+>@
+>@$ recon-ng
+>@>>> Gives the prompt
+>@
+>@> help <cmd>
+>@>>> Gives information on <cmd>.
+>@
+>@> marketplace install all
+>@>>> Install all modules.
+>@
+>@> modules search
+>@>>> Displays modules by categories: Discovery, Exploitation, Import, Recon and Reporting.
+>@
+>@> modules load <module>
+>@>>> load <module> (!!! Give complet path, example: discovery/info_disclosure/cache_snoop)
+>@
+>@> options list
+>@>>> Displays options for the current module.
+>@
+>@> info
+>@>>> Displays complete information on the loaded module.
+>@
+>@> options set <option> <value>
+>@>>> Set a <value> for an <option>.
+>@
+>@> run
+>@>>> Starts module
+>@
+>@> back
+>@>>> Quits/unloads the module.
+>@
+>@> exit
+>@>>> Quits recon-ng.
+>@
+>@Some examples:
+>@-> discovery/info_disclosure/cache_snoop: gives info from DNS cache.
+>@-> discovery/info_disclosure/interesting_files: used to retrieve interesting files.
+>@    Try with: > options set PORT 443
+>@              > options set PROTOCOL https
+>@              > options set SOURCE www.leblogduhacker.fr
+>@              > run
+>@-> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains li ked to an IP address).
+>@    Go to https://www.virustotal.com/gui/
+>@    Create account (Signed up) then go to your Account/API keys and copy the key.
+>@    Try with: > keys add virustotal_api <the copied key>
+>@              > options set SOURCE <ip>
+>@              > run
+>@
+>@##############################################################################################
+>@

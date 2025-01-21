@@ -1,0 +1,107 @@
+-> Install Kali
+On the host, extract Kali into ~/VirtualBox VM then double-click on the .vbox file.
+Configure Kali:
+   6144 MB RAM
+   4 CPU
+   Network "Bridged Adapter" and name to "wl..."
+   	Advanced /Promiscious Mode to "Allow all"
+
+-> Keyboard configuration
+Once Kali is started, the keyboard is in english.
+Login kali/kali (so kqli/klqi)
+
+$ sudo dpkg-reconfigure locales pour installer FR-FR-UTF8
+$ sudo nano /etc/default/keyboard
+---
+XKBLAYOUT = "fr"
+---
+
+-> Install VB Additions (not needed)
+Installing Linux headers
+$ sudo apt update
+$ sudo apt upgrade (if you want, not necessary)
+$ sudo apt install linux-headers-$(uname -r)
+
+-> Install some softwares
+* nslookup, dig
+ $ sudo apt install dnsutils
+
+* traceroute
+  $ sudo apt install traceroute
+
+* atom
+  Go to https://github.com/atom/atom/releases/tag/v1.60.0  
+  Download and install it.
+
+* Beef
+  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive 
+    the Ruby 3.1.1 tar.gz file.
+  Extract it (that creates ruby-3.1.1 directory).
+  Compile and install Ruby:
+    $ cd ruby-3.1.1
+    $ ./configure
+    $ make
+    $ sudo make install
+  Go to https://github.com/beefproject/beef.
+  Clone the repository:
+    $ git clone https://github.com/beefproject/beef.git
+  Go to into the directory (now beef).
+  $ sudo ./install
+  Change the password into the config.yaml file.
+
+>@
+>@#######################################################################################
+>@
+>@-> Install Kali
+>@On the host, extract Kali into ~/VirtualBox VM then double-click on the .vbox file.
+>@Configure Kali:
+>@   6144 MB RAM
+>@   4 CPU
+>@   Network "Bridged Adapter" and name to "wl..."
+>@   	Advanced /Promiscious Mode to "Allow all"
+>@
+>@-> Keyboard configuration
+>@Once Kali is started, the keyboard is in english.
+>@Login kali/kali (so kqli/klqi)
+>@
+>@$ sudo dpkg-reconfigure locales pour installer FR-FR-UTF8
+>@$ sudo nano /etc/default/keyboard
+>@---
+>@XKBLAYOUT = "fr"
+>@---
+>@
+>@-> Install VB Additions (not needed)
+>@Installing Linux headers
+>@$ sudo apt update
+>@$ sudo apt upgrade (if you want, not necessary)
+>@$ sudo apt install linux-headers-$(uname -r)
+>@
+>@-> Install some softwares
+>@* nslookup, dig
+>@ $ sudo apt install dnsutils
+>@
+>@* traceroute
+>@  $ sudo apt install traceroute
+>@
+>@* atom
+>@  Go to https://github.com/atom/atom/releases/tag/v1.60.0  
+>@  Download and install it.
+>@
+>@* Beef
+>@  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive 
+>@    the Ruby 3.1.1 tar.gz file.
+>@  Extract it (that creates ruby-3.1.1 directory).
+>@  Compile and install Ruby:
+>@    $ cd ruby-3.1.1
+>@    $ ./configure
+>@    $ make
+>@    $ sudo make install
+>@  Go to https://github.com/beefproject/beef.
+>@  Clone the repository:
+>@    $ git clone https://github.com/beefproject/beef.git
+>@  Go to into the directory (now beef).
+>@  $ sudo ./install
+>@  Change the password into the config.yaml file.
+>@
+>@#######################################################################################
+>@

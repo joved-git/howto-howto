@@ -1,0 +1,25 @@
+How to start and stop Apache on different amchines.
+
+-> Starts/Stops Apache on Metasploitable.
+$ sudo /etc/init.d/apache2 start
+$ sudo /etc/init.d/apache2 stop
+
+-> Starts/Stops Apache on Kali.
+$ sudo systemctl start apache2
+$ sudo systemctl stop apache2
+
+>@
+>@#########################################################################################################
+>@
+>@How to start and stop Apache on different amchines.
+>@
+>@-> Starts/Stops Apache on Metasploitable.
+>@$ sudo /etc/init.d/apache2 start
+>@$ sudo /etc/init.d/apache2 stop
+>@
+>@-> Starts/Stops Apache on Kali.
+>@$ sudo systemctl start apache2
+>@$ sudo systemctl stop apache2
+>@
+>@#########################################################################################################
+>@

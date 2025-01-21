@@ -1,0 +1,65 @@
+As its name suggests, the three-way handshake takes place in three steps:
+
+1. SYN: The client who wishes to establish a connection with a server will send a first SYN 
+  (synchronized) packet to the server. The sequence number of this packet is a random number A.
+
+2.SYN-ACK: The server will respond to the client using a SYN-ACK (synchronize, acknowledge) 
+  packet. The ACK number is equal to the sequence number of the previous packet (SYN) incremented 
+  by one (A + 1) while the sequence number of the SYN-ACK packet is a random number B.
+
+3. ACK: Finally, the client will send an ACK packet to the server which will serve as 
+  acknowledgment of receipt. The sequence number of this packet is increased by 1 compared to the 
+  last one it sent (i.e. A + 1), and the number of the ACK is equal to the sequence number of the 
+  previous packet (SYN-ACK) incremented by one (B + 1).
+
+Once the three-way handshake has been completed, the client and server have received an 
+  acknowledgment of the connection. Steps 1 and 2 define the sequence number for communication 
+  from client to server and steps 2 and 3 define the sequence number for communication in the 
+  other direction. Full-duplex communication is now established between the client and the server.
+
+      client   --------- SYN (Seq : A, Ack : /) -------->   server
+     
+      client   <----- (Seq : B , Ack A+1) SYN-ACK -------   server
+
+      client   ------- ACK (Seq : A+1, Ack : B+1) ------>   server
+
+>@
+>@######################################################################################################
+>@#                                                                                                    #
+>@# [ The Three-way Handshake ]                                                                        #
+>@#                                                                                                    #
+>@# As its name suggests, the three-way handshake takes place in three steps:                          #
+>@#                                                                                                    #
+>@# 1. SYN: The client who wishes to establish a connection with a server will send a first SYN        #
+>@#   (synchronized) packet to the server. The sequence number of this packet is a random number A.    #
+>@#                                                                                                    #
+>@# 2.SYN-ACK: The server will respond to the client using a SYN-ACK (synchronize, acknowledge)        #
+>@#   packet. The ACK number is equal to the sequence number of the previous packet (SYN) incremented  #
+>@#   by one (A + 1) while the sequence number of the SYN-ACK packet is a random number B.             #
+>@#                                                                                                    #
+>@# 3. ACK: Finally, the client will send an ACK packet to the server which will serve as              #
+>@#   acknowledgment of receipt. The sequence number of this packet is increased by 1 compared to the  #
+>@#   last one it sent (i.e. A + 1), and the number of the ACK is equal to the sequence number of the  #
+>@#   previous packet (SYN-ACK) incremented by one (B + 1).                                            #
+>@#                                                                                                    #
+>@# Once the three-way handshake has been completed, the client and server have received an            #
+>@#   acknowledgment of the connection. Steps 1 and 2 define the sequence number for communication     #
+>@#   from client to server and steps 2 and 3 define the sequence number for communication in the      #
+>@#  other direction. Full-duplex communication is now established between the client and the server.  #
+>@#                                                                                                    #
+>@# See: howto-0055-dos-and-ddos.txt                                                                   #
+>@# See: howto-0056-dos-and-ddos-fr.txt                                                                #
+>@# See: howto-0058-tcp-three-way-handshake-fr.txt                                                     #
+>@#                                                                                                    #
+>@#----------------------------------------------------------------------------------------------------#
+>@
+>@
+>@      client   --------- SYN (Seq : A, Ack : /) -------->   server
+>@ 
+>@      client   <----- (Seq : B , Ack A+1) SYN-ACK -------   server
+>@ 
+>@      client   ------- ACK (Seq : A+1, Ack : B+1) ------>   server
+>@
+>@
+>@######################################################################################################
+>@#                                                                                                    #

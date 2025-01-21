@@ -1,0 +1,61 @@
+$ nslookup <host>
+Basic command
+
+$ nslookup -type=mx <host>
+Gives mail server
+
+$ nslookup -type=soa <host>
+Gives the authoritative serveur for <host>
+
+$ nslookup <host> <soa>
+Executes an authoritative request using <soa>
+
+             --------------
+
+$ dig <host>
+Basic command
+
+$ dig <host> soa
+Gives the authoritative serveur for <host>
+ 
+$ dig <host> <soa>
+Executes an authoritative request using <soa>
+
+             --------------
+
+Online tool
+https://toolbox.googleapps.com
+
+>@
+>@#########################################
+>@
+>@$ nslookup <host>
+>@Basic command
+>@
+>@$ nslookup -type=mx <host>
+>@Gives mail server
+>@
+>@$ nslookup -type=soa <host>
+>@Gives the authoritative serveur for <host>
+>@
+>@$ nslookup <host> <soa>
+>@Executes an authoritative request using <soa>
+>@
+>@             --------------
+>@
+>@$ dig <host>
+>@Basic command
+>@
+>@$ dig <host> soa
+>@Gives the authoritative serveur for <host>
+>@ 
+>@$ dig <host> <soa>
+>@Executes an authoritative request using <soa>
+>@
+>@             --------------
+>@
+>@Online tool
+>@https://toolbox.googleapps.com
+>@
+>@#########################################
+>@

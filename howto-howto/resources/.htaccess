@@ -1,0 +1,46 @@
+## Exemple de fichier .htaccess (ne pas oublier de retirer l'extension ".txt"
+## Ne pas oublier de passer AllowOverride à "All" dans /etc/apache2/apache2.conf
+## Et d'activer les modules de réécriture et d'entêtes : a2enmod headers, a2enmod rewrite
+
+# Anti Clickjacking 
+
+Header always append X-Frame-Options SAMEORIGIN
+
+
+
+# Bloque l'affichage du contenu des répertoires
+
+Options All -Indexes
+
+
+
+# Sécurise le fichier .htaccess
+
+<Files .htaccess>
+		order allow,deny
+		deny from all
+</Files>
+
+
+
+# Empêche l'affichage public de la version du serveur 
+
+ServerSignature Off
+
+
+
+# Passe le site en HTTPS (si configuration appropriée)
+
+# RewriteEngine On
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301]
+
+
+
+# Bloque d'éventuels scanners de vulnérabilités
+
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} acunetix\-referrer\.com [NC]
+RewriteRule .* - [F]
+
+
+

@@ -1,0 +1,144 @@
+A denial of service attack (abbreviated as DoS attack) is a computer attack aimed at making a service 
+unavailable and preventing legitimate users of a service from using it. Currently the vast majority of 
+these attacks are carried out from several sources, we then speak of a distributed denial of service 
+attack (abbr. DDoS attack for Distributed Denial of Service attack).
+
+This could be:
+    -Flooding a network to prevent it from functioning.
+    -The disruption of connections between two machines, preventing access to a particular service.
+    -Obstructing access to a service for a particular person.
+    -The fact of sending billions of bytes to an internet box.
+
+A denial of service attack can block a file server, make access to a web server impossible or prevent 
+the distribution of email within a company.
+
+The attacker does not necessarily need sophisticated equipment. Thus, some DoS attacks can be executed 
+with limited resources against a larger, more modern network. This type of attack is sometimes called 
+an “asymmetric attack” because of the difference in resources between the protagonists.
+
+-> Types of DoS
+There are 2 types of denies:
+  -DoS: simple DoS: only one source for the attack.
+  -DDoS for Distributed DoS: attack made by several soruces.
+
+-> Ways to execute a DoS
+There are 2 ways of denies:
+  -On line: via the wen site.
+  -Off line: via ransomwares.
+
+-> Attack by amplifaction
+The attacker makes a big request (ie a big file) to a server but redirect response to the victim.
+The victim will be busy processing the large file.
+
+-> Network attack
+  -TCP SYN flood. Based on the 3-way handshake (see howto-0057-three-way-handshake.txt).
+  -Smurf (ICMP) flood.
+  -UDP flood.
+  -ARP flood.
+  -DNS reflexion.
+  -Wireless network.
+
+-> An example with HPing
+1. Launch a Windows machine and the Task manager.
+
+2 Go to Kali and use hping:
+  $ hping3 <win10 ip> --flood -S -p 445 -d 1200
+    --flood: sent packets as fast as possible. Don't show replies.
+    -S: for TCP SYN
+    -p <port>
+    -d <size of data>
+
+  You will see the CPU grows to 35% (initally, it was at 5%) and the Ethernet grows to 100%.
+
+-> How to prevent
+Some ways:
+  -This is not easy but not impossible.
+  -Try to reduce the impact with design: filtering, priority managing, blocking.
+  -Try to reduce the impact with operational: check ip address, malicious traffic detection.
+  -Use mitigation service: Cloudfare, OVH, ...
+ 
+-> Visit
+Some interesting sites:
+  -Cloudfare: https://cloudfare.com/fr/ddos/
+  -OVH:       https://www.ovh.com/fr/a2367.goutte-ddos-n-a-pas-fait-deborder-l-vac
+  -Google:    https://projectshield.withgoogle.com/public
+
+>@
+>@##########################################################################################################
+>@#                                                                                                        #
+>@# [ DoS and DDoS | Deny of Service and Distributed Deny of Service ]                                     #
+>@#                                                                                                        #
+>@# A denial of service attack (abbreviated as DoS attack) is a computer attack aimed at making a service  #
+>@# unavailable and preventing legitimate users of a service from using it. Currently the vast majority of #
+>@# these attacks are carried out from several sources, we then speak of a distributed denial of service   #
+>@# attack (abbr. DDoS attack for Distributed Denial of Service attack).                                   #
+>@#                                                                                                        #
+>@# This could be:                                                                                         #
+>@#     -Flooding a network to prevent it from functioning.                                                #
+>@#     -The disruption of connections between two machines, preventing access to a particular service.    #
+>@#     -Obstructing access to a service for a particular person.                                          #
+>@#     -The fact of sending billions of bytes to an internet box.                                         #
+>@#                                                                                                        #
+>@# A denial of service attack can block a file server, make access to a web server impossible or prevent  #
+>@# the distribution of email within a company.                                                            #
+>@#                                                                                                        #
+>@# The attacker does not necessarily need sophisticated equipment. Thus, some DoS attacks can be executed #
+>@# with limited resources against a larger, more modern network. This type of attack is sometimes called  #
+>@# an “asymmetric attack” because of the difference in resources between the protagonists.                #
+>@#                                                                                                        #
+>@# See: https://www.digitalattackmap.com/                                                                 # 
+>@# See: howto-0056-dos-and-ddos-fr.txt                                                                    #
+>@# See: howto-0057-tcp-three-way-handshake.txt                                                            #
+>@# See: howto-0058-tcp-three-way-handshake-fr.txt                                                         #
+>@#                                                                                                        #
+>@#--------------------------------------------------------------------------------------------------------#
+>@
+>@-> Types of DoS
+>@There are 2 types of denies:
+>@  -DoS: simple DoS: only one source for the attack.
+>@  -DDoS for Distributed DoS: attack made by several soruces.
+>@
+>@-> Ways to execute a DoS
+>@There are 2 ways of denies:
+>@  -On line: via the wen site.
+>@  -Off line: via ransomwares.
+>@
+>@-> Attack by amplifaction
+>@The attacker makes a big request (ie a big file) to a server but redirect response to the victim.
+>@The victim will be busy processing the large file.
+>@
+>@-> Network attack
+>@  -TCP SYN flood. Based on the 3-way handshake (see howto-0057-three-way-handshake.txt).
+>@  -Smurf (ICMP) flood.
+>@  -UDP flood.
+>@  -ARP flood.
+>@  -DNS reflexion.
+>@  -Wireless network.
+>@
+>@-> An example with HPing
+>@1. Launch a Windows machine and the Task manager.
+>@
+>@2 Go to Kali and use hping:
+>@  $ hping3 <win10 ip> --flood -S -p 445 -d 1200
+>@    --flood: sent packets as fast as possible. Don't show replies.
+>@    -S: for TCP SYN
+>@    -p <port>
+>@    -d <size of data>
+>@
+>@  You will see the CPU grows to 35% (initally, it was at 5%) and the Ethernet grows to 100%.
+>@
+>@-> How to prevent
+>@Some ways:
+>@  -This is not easy but not impossible.
+>@  -Try to reduce the impact with design: filtering, priority managing, blocking.
+>@  -Try to reduce the impact with operational: check ip address, malicious traffic detection.
+>@  -Use mitigation service: Cloudfare, OVH, ...
+>@ 
+>@-> Visit
+>@Some interesting sites:
+>@  -Cloudfare: https://cloudfare.com/fr/ddos/
+>@  -OVH:       https://www.ovh.com/fr/a2367.goutte-ddos-n-a-pas-fait-deborder-l-vac
+>@  -Google:    https://projectshield.withgoogle.com/public
+>@
+>@##########################################################################################################
+>@

@@ -1,0 +1,50 @@
+Session hijacking (sometimes called cookie hijacking, TCP session hijacking, or packet sniffing) 
+occurs when a hacker takes control of your Internet session. Such a situation can happen when you 
+are shopping online, paying a bill or checking your bank balance. Session hijackers usually target 
+browsers or Internet applications, and their aim is to control your browsing session to access 
+your personal information as well as passwords.
+
+Session hijackers pretend to be you to websites. This type of attack can have serious consequences 
+for application security because it allows hackers to gain unauthorized access to protected 
+accounts (and the data they contain) by pretending to be a legitimate user .
+
+-> Goal
+Take control of the session between machine.
+Allow access to a service without any authentification.
+Use protocole vulnerabilities.
+
+-> How to make a session jacking
+1. Connect the 2 machines with ettercap (see howto-0053-ettercap.txt).
+
+2. Retreive and install Shijack
+Go to https://packetstorm.news/files/id/24657/ and download Shijack.
+
+3. Find the source port used by the machine.
+Launch Wireshark, open a session then filter by "telnet".
+Make some traffic between Win-10 and Metasploitable by making some "ls" into the telnet session.
+You will find the source port (on Win-10). For example: 49776
+3. Use Shijack
+
+
+########################################################################################################
+#                                                                                                      #
+# [ Session hijacking ]                                                                                #
+#                                                                                                      #
+# Session hijacking (sometimes called cookie hijacking, TCP session hijacking, or packet sniffing)     #
+# occurs when a hacker takes control of your Internet session. Such a situation can happen when you    #
+# are shopping online, paying a bill or checking your bank balance. Session hijackers usually target   #
+# browsers or Internet applications, and their aim is to control your browsing session to access       #
+# your personal information as well as passwords.                                                      #
+#                                                                                                      #
+# Session hijackers pretend to be you to websites. This type of attack can have serious consequences   #
+# for application security because it allows hackers to gain unauthorized access to protected          #
+# accounts (and the data they contain) by pretending to be a legitimate user .                         #
+#                                                                                                      #
+# See: howto-0086-session-hijacking-fr.txt                                                             #
+# See: howto-0053-ettercap.txt                                                                         #
+#                                                                                                      #
+#------------------------------------------------------------------------------------------------------#
+
+
+########################################################################################################
+

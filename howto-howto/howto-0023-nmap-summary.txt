@@ -1,0 +1,135 @@
+Usual commands:
+
+<no option>: scans the first 1000 ports with: 
+  ICMP ping | ARP ping (local) 
+  TCP SYN on 443 (HTTPS)
+  TCP ACK on 80 (web serveur)
+  ICMP timestamp
+
+<hostname> = 10.0.2.0/24 | 10.0.2.0-255 | 10.0.2.*: scans from 10.0.2.0 to 10.0.2.255
+
+--exclude: exlude some addresses or ranges.
+
+-iL <file>: use a <file> containing IP addresses.
+
+-p <port> | -p U:53,T:80 | -p T:http,https: specify a specific port or ports range. 
+
+-sU: for UDP scan.
+
+-PS80,443,1000: specify special port(s). Here, ports 80, 443 and 1000 for a TCP SYN (-PS). 
+
+-PS: performs a TCP-SYN on specific ports.
+
+-PA: performs a TCK-ACK on specifics ports.
+
+-PU: performs an UDP scan on specific ports.
+
+-PR: performs an ARP scan on specific ports.
+
+-v|vv|vvv: increase verbosity.
+
+-sP | -sn: does a ping scan (does not try to scan ports).
+
+-sS: tries a TCP-SYN.
+
+-Pn: treats all hosts as online -- skip host discovery (no ping session).
+
+-sV: performs a TCP SYN scan and display services' version.
+
+-sL: tries to discover hostnames.
+
+-sN: performs a TCP null. All TCP options of the message are set to 0. Normally, could not be possible. This is a disruption try.
+
+-sF: puts only FIN at 1. nmap asks for a closing session. This is a disruption try.
+
+-sX: puts URG, PUSH and FIN at 1. This is a disruption try.
+
+--traceroute -sn -Pn: performs a traceroute.
+
+--scanflags <flags>: used to personnalise flags of TCP scans (SYN, SYNRST or SYNPUSH ...))
+
+-sO: returns protocol number(s) found in the IP header.
+
+-F: fast mode. Scans less ports.
+
+--top-ports <n>: scans the first <n> most popular ports.
+
+--top-ratio <n>: scans ports with ratio greater than <n>. See /usr/share/nmap/nmap-services file.
+
+--version-intensity <n, def 7>: used to modify probe(s) intensity.
+
+-O: performs an OS detection in verbose mode.
+
+-sC: performs a scan with default scripts (non intrusive and discrete ohes). List of script is here: https://nmap.org/nsedoc
+
+--script default,dos: tres two specific scripts (here default and dos).
+
+--script "http-*": uses more than one scripts.
+
+--script-update: executes an update of the local scripts database.
+
+-T<0..5>: configures nmap aggressivity. 0: discrete and slow. 5: aggressive.
+
+-A: executes the toolbox (OS detection, version detection, script scanning and traceroute). Means more aggressive.
+
+-f -mtu <value>: becomes more discrete using packet fragmentation.
+
+-D <decoy1, decoy2,...>: becomes more dicrete by making it appear that packets come from several machines.
+
+-S <ip>: performs an IP spoofing by replacing its own address by <ip>.
+
+-oN <filename>: extracts the result into <filename>.
+
+--reason: displays the reason of the discovery (syn-ack for example).
+
+-6: performs an IP v6 scan.
+
+>@
+>@###############################################################################################################################################################################################
+>@
+>@<no option>: scans the first 1000 ports with: ICMP ping | ARP ping (local)          |  <hostname> = 10.0.2.0/24 | 10.0.2.0-255 | 10.0.2.*: scans from 10.0.2.0 to 10.0.2.255
+>@                                              TCP SYN on 443 (HTTPS)                |
+>@                                              TCP ACK on 80 (web serveur)           |  --exclude: excludes some addresses or ranges
+>@                                              ICMP timestamp                        |  
+>@                                                                                    |  -iL <file>: use a <file> containing IP addresses
+>@-p <port> | -p U:53,T:80 | -p T:http,https: specify a specific port or ports range  |  
+>@                                                                                    |  -sU: for UDP scan
+>@-PS80,443,1000: specify special ports (here, 80, 443 and 1000 for a TCP SYN (-PS)   |  
+>@                                                                                    |  -PS: performs a TCP-SYN on specific ports
+>@-PA: performs a TCK-ACK on specifics ports                                          |  
+>@                                                                                    |  -PU: performs an UDP scan on specific ports
+>@-PR: performs an ARP scan on specific ports                                         |  
+>@                                                                                    |  -v|vv|vvv: increase verbosity
+>@-sP | -sn: does a ping scan (does not try to scan ports)                            |  
+>@                                                                                    |  -sS: tries a TCP-SYN
+>@-Pn: treats all hosts as online -- skip host discovery (no ping session)            |  
+>@                                                                                    |  -sV: performs a TCP SYN scan and display services' version
+>@-sL: tries to discover hostnames                                                    |  
+>@                                                                                    |  -sN: performs a TCP null. All TCP options are set to 0. Normally, impossible. This is a disruption try
+>@-sF: puts only FIN at 1. nmap asks for a closing session. This is a disruption try  |
+>@                                                                                    |  -sX: puts URG, PUSH and FIN at 1. This is a disruption try
+>@--traceroute -sn -Pn: performs a traceroute                                         |  
+>@                                                                                    |  --scanflags <flags>: used to personnalise flags of TCP scans (SYN, SYNRST or SYNPUSH ...))
+>@-sO: returns protocol number(s) found in the IP header                              |  
+>@                                                                                    |  -F: fast mode. Scans less ports.
+>@--top-ports <n>: scans the first <n> most popular ports                             |  
+>@                                                                                    |  --top-ratio <n>: scans ports with ratio greater than <n>. See /usr/share/nmap/nmap-services file
+>@--version-intensity <n, def 7>: used to modify probe(s) intensity                   |  
+>@                                                                                    |  -O: performs an OS detection in verbose mode
+>@-sC: use default scripts (non intrusive and discrete). See https://nmap.org/nsedoc  |  
+>@                                                                                    |  --script default,dos: tres two specific scripts (here default and dos)
+>@--script default,dos: tres two specific scripts (here default and dos)              |  
+>@                                                                                    |  --script "http-*": uses more than one scripts
+>@--script-update: executes an update of the local scripts database                   |  
+>@                                                                                    |  -T<0..5>: configures nmap aggressivity. 0: discrete and slow. 5: aggressive
+>@-A: the toolbox (OS detection, version detection, script scanning                   |  
+>@    and traceroute). Means more aggressive                                          |  -f -mtu <value>: becomes more discrete using packet fragmentation
+>@                                                                                    |
+>@-f -mtu <value>: becomes more discrete using packet fragmentation                   |  -D <decoy1, decoy2,...>: becomes more dicrete. Packets seem to come from several machines
+>@                                                                                    |
+>@-S <ip>: performs an IP spoofing by replacing its own address by <ip>               |  -oN <filename>: extracts the result into <filename>.
+>@                                                                                    |
+>@--reason: displays the reason of the discovery (syn-ack for example)                |  -6: performs an IP v6 scan.
+>@                                                                                    |
+>@###############################################################################################################################################################################################
+>@

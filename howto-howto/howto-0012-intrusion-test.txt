@@ -1,0 +1,32 @@
+Here are the 5 steps during an intrusion test:
+
+1. Discovery: collect information on the target. As known as Reconnaissance.
+2. Enumeration: network cartography (service and open ports, ...).
+3. Exploit: enter the system, profit the vulnerability.
+4. Maintain future access: hide our traces (footsteps), prepare easier access, privilege elevation.
+5. Report and consequence: make a report and propose solution. 
+
+>@
+>@######################################################################################################
+>@#                                                                                                    #
+>@# Intrusion - All steps                                                                              #
+>@#                                                                                                    #
+>@#----------------------------------------------------------------------------------------------------#
+>@
+>@Here are the 5 steps during an intrusion test:
+>@
+>@1. Discovery: collect information on the target. As known as Reconnaissance.
+>@2. Enumeration: network cartography (service and open ports, ...).
+>@3. Exploit: enter the system, profit the vulnerability.
+>@4. Maintain future access: hide our traces (footsteps), prepare easier access, privilege elevation.
+>@5. Report and consequence: make a report and propose solution. 
+>@
+>@Some details on each steps here:
+>@  howto-1012-intrusion-1-discovery.txt
+>@  howto-1013-intrusion-2-scanning.txt
+>@  howto-1014-intrusion-3-exploit.txt
+>@  howto-1015-intrusion-4-maintain.txt
+>@  howto-1016-intrusion-5-report.txt
+>@
+>@######################################################################################################
+>@

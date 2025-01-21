@@ -1,0 +1,48 @@
+Basics:
+-> Based on the reconnaissance phase.
+-> Try to establish precise technical informations.
+-> Try to find opened ports, who can I scan ? Which service are present ?
+-> Try to study the OS.
+-> Used to find actuel defenses and vulnerabilities.
+-> The enumeration is the result of the network scanning.
+-> !!! Network scanning is NOT LEGAL !!!
+
+Types of network scanning:
+-> ping sweep: identify machines that answer on the network.
+-> port scanning: to establish which services are present.
+-> network mapping: to cartograph the network.
+-> OS fingerprinting: to find OS and infos.
+  
+How to prevent network scanning:
+-> use a firewall.
+-> desactive useless ports.
+-> use IDS (Intrusion Detection System).
+
+>@
+>@##########################################################################
+>@#                                                                        #
+>@# Intrusion - Step 2 - Network scanning                                  #
+>@#                                                                        #
+>@#------------------------------------------------------------------------#
+>@Basics:
+>@-> Based on the reconnaissance phase.
+>@-> Try to establish precise technical informations.
+>@-> Try to find opened ports, who can I scan ? Which service are present ?
+>@-> Try to study the OS.
+>@-> Used to find actuel defenses and vulnerabilities.
+>@-> The enumeration is the result of the network scanning.
+>@-> !!! Network scanning is NOT LEGAL !!!
+>@
+>@Types of network scanning:
+>@-> ping sweep: identify machines that answer on the network.
+>@-> port scanning: to establish which services are present.
+>@-> network mapping: to cartograph the network.
+>@-> OS fingerprinting: to find OS and infos.
+>@  
+>@How to prevent network scanning:
+>@-> use a firewall.
+>@-> desactive useless ports.
+>@-> use IDS (Intrusion Detection System).
+>@
+>@##########################################################################
+>@

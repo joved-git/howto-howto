@@ -1,0 +1,124 @@
+Social engineering is a manipulation technique that exploits human error in order to obtain 
+confidential information, access or valuable assets. In the realm of cybercrime, these 
+“human hacking” scams tend to trick unsuspecting users into leaking data, spreading malware, 
+or granting access to controlled systems. These attacks can take place online, in person, 
+or through other interactions.
+
+Scams that incorporate social engineering exploit the way humans think and act. Attacks that 
+rely on this technique are therefore particularly useful for manipulating a user's behavior. 
+Once the attacker has identified what motivates a user to act, he is able to deceive and 
+manipulate the user effectively.
+
+Additionally, hackers also try to exploit user ignorance. Given the speed at which technology 
+evolves, some consumers or employees are unaware of certain threats, such as stealth downloads. 
+It is also possible that users are not fully aware of the value of their personal data such as 
+telephone numbers. As a result, many users don't know how to get the best protection for 
+themselves and their data.
+
+##################################################################################################
+
+-> How does that work ?
+  -Manipulate people to obtain information.
+  -Based on uman interactions and influence.
+  -Human is weak: this is the key.
+  -Difficult to technically detect.
+  -Many forms: by phone, by email, dumpser diving, shoulder surfing.
+
+-> how to successfully obtain information
+  -Propose gifts.
+  -exceptional price.
+  -gains.
+  -Threats
+  -Need help.
+  -Use imposture and ignorance.
+  -Make him uncomfortable.
+
+-> What abilities to have ?
+  -Be a liar.
+  -Be able to ask directly.
+  -Be a good narator.
+  -Be able to change identity.
+  -Can communicate non-verbally.
+  -Can have a partner.
+
+-> How to recognize such an attack
+  -Be careful for the unexpected.
+  -Be careful on what is urgent.
+  -Be careful to the threats.
+  -Be aware of pirates' technics.
+  -Verify identidies and information.
+
+-> How to avoid attacks
+  -Limit global access or/and information.
+  -To record and check access.
+  -Be conscious of security policies.
+  -Be careful of equipments.
+  -Don't trust too easily.
+  -Observe suspicious behaviors and signal it.
+  -Don't leave too many traces.
+
+>@
+>@###################################################################################################
+>@#                                                                                                 #
+>@# [ Social engineering ]                                                                          # 
+>@# Social engineering is a manipulation technique that exploits human error in order to obtain     #
+>@# confidential information, access or valuable assets. In the realm of cybercrime, these          #
+>@# “human hacking” scams tend to trick unsuspecting users into leaking data, spreading malware,    #
+>@# or granting access to controlled systems. These attacks can take place online, in person,       #
+>@# or through other interactions.                                                                  #
+>@#                                                                                                 #
+>@# Scams that incorporate social engineering exploit the way humans think and act. Attacks that    #
+>@# rely on this technique are therefore particularly useful for manipulating a user's behavior.    #
+>@# Once the attacker has identified what motivates a user to act, he is able to deceive and        #
+>@# manipulate the user effectively.                                                                #
+>@#                                                                                                 #
+>@# Additionally, hackers also try to exploit user ignorance. Given the speed at which technology   #
+>@# evolves, some consumers or employees are unaware of certain threats, such as stealth downloads. # 
+>@# It is also possible that users are not fully aware of the value of their personal data such as  #
+>@# telephone numbers. As a result, many users don't know how to get the best protection for        #
+>@# themselves and their data.                                                                      #
+>@#                                                                                                 #
+>@#-------------------------------------------------------------------------------------------------#
+>@
+>@-> How does that work ?
+>@  -Manipulate people to obtain information.
+>@  -Based on uman interactions and influence.
+>@  -Human is weak: this is the key.
+>@  -Difficult to technically detect.
+>@  -Many forms: by phone, by email, dumpser diving, shoulder surfing.
+>@
+>@-> how to successfully obtain information
+>@  -Propose gifts.
+>@  -exceptional price.
+>@  -gains.
+>@  -Threats
+>@  -Need help.
+>@  -Use imposture and ignorance.
+>@ -Make him uncomfortable.
+>@
+>@-> What abilities to have ?
+>@  -Be a liar.
+>@  -Be able to ask directly.
+>@  -Be a good narator.
+>@  -Be able to change identity.
+>@  -Can communicate non-verbally.
+>@  -Can have a partner.
+>@
+>@-> How to recognize such an attack
+>@  -Be careful for the unexpected.
+>@  -Be careful on what is urgent.
+>@  -Be careful to the threats.
+>@  -Be aware of pirates' technics.
+>@  -Verify identidies and information.
+>@
+>@-> How to avoid attacks
+>@>@  -Limit global access or/and information.
+>@  -To record and check access.
+>@  -Be conscious of security policies.
+>@  -Be careful of equipments.
+>@  -Don't trust too easily.
+>@  -Observe suspicious behaviors and signal it.
+>@  -Don't leave too many traces.
+>@
+>@###################################################################################################
+>@

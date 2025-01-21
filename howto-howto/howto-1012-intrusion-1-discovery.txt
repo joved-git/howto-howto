@@ -1,0 +1,57 @@
+Basics:
+-> Use to learn everything about the target (who, what, where, when and how ?).
+-> To establish an ID of the target.
+-> It uses active identification (onto the place) or passive one (via internet).
+
+About techniques (large sens):
+-> Internet (whois, legal mentions, ...)
+-> Internet but more technical (IP address, used technicals, ...)
+-> Off line (catalogues, documents, ...) 
+-> Off line but more direct (dumpster diving, trash and bin, shoulder surfing, eaves dropping, ...)
+
+Techniques and tools (pratically):
+-> Google hacking: find informations very thin.
+-> Shodan: to finf connected equipenents.
+-> TinEye: to find sites from images/photos..
+-> nslookup/dig: to retrieve informations from a host name.
+-> Use one email to find accesses to multiple sites.  
+-> whois records: to retrieve public informations concerning a web site.
+-> traceroute and ping tools: localisation and path to reach a machine.
+-> Use of https://www.iplocation.net: IP address localisation.
+-> Use of https://web.archive.org: archive all sites before very long time (go back).
+-> Maltego: collect and analyse data and construct links between entities (graphical tool).
+-> recon-ng: outil (command prompt tool) used to automate identification tasks.
+
+>@
+>@###################################################################################################
+>@#                                                                                                 #
+>@# Intrusion - Step 1 - Discovery (Reconnaissance)                                                 #
+>@#                                                                                                 #
+>@#-------------------------------------------------------------------------------------------------#
+>@
+>@Basics:
+>@-> Use to learn everything about the target (who, what, where, when and how ?).
+>@-> To establish an ID of the target.
+>@-> It uses active identification (onto the place) or passive one (via internet).
+>@
+>@About techniques (large sens):
+>@-> Internet (whois, legal mentions, ...)
+>@-> Internet but more technical (IP address, used technicals, ...)
+>@-> Off line (catalogues, documents, ...) 
+>@-> Off line but more direct (dumpster diving, trash and bin, shoulder surfing, eaves dropping, ...)
+>@
+>@Techniques and tools (pratically):
+>@-> Google hacking: find informations very thin.
+>@-> Shodan: to finf connected equipenents.
+>@-> TinEye: to find sites from images/photos..
+>@-> nslookup/dig: to retrieve informations from a host name.
+>@-> Use one email to find accesses to multiple sites.  
+>@-> whois records: to retrieve public informations concerning a web site.
+>@-> traceroute and ping tools: localisation and path to reach a machine.
+>@-> Use of https://www.iplocation.net: IP address localisation.
+>@-> Use of https://web.archive.org: archive all sites before very long time (go back).
+>@-> Maltego: collect and analyse data and construct links between entities (graphical tool).
+>@-> recon-ng: outil (command prompt tool) used to automate identification tasks.
+>@
+>@###################################################################################################
+>@

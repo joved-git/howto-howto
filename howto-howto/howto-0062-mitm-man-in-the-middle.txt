@@ -1,0 +1,134 @@
+Man-in-the-middle attack (MITM), sometimes called monster-in-the-middle attack1,2 or man-in-the-middle attack, 
+Intermediary attack is an attack aimed at intercepting communications between two parties, without either 
+party being able to suspect that the communication channel between them has been hijacked.
+
+The most common channel is a connection to the Internet of the average Internet user. The attacker must first 
+be able to observe and intercept messages from one victim to another. The “man in the middle” attack is found 
+more particularly in the context of the Diffie-Hellman key exchange method, when this exchange is used without 
+authentication. With authentication, Diffie-Hellman, on the other hand, is invulnerable to eavesdropping on 
+the channel, and is also designed for this.
+
+-> Goal
+Here are some explanations:
+  -Intercepte communication between 2 parties.
+  -The attacker is in the middle of the conversation.
+  -The attacker intercepte traffic then resend it.
+
+-> The way of working
+  -The attacker must use the ARP spoofing.
+  -The tool for that is ettercap.
+
+-> How to do a Man In the Middle Attack
+1. Active the ip_forwarding on Kali.
+  $ sudo bash -c "echo '1' > /proc/sys/net/ipv4/ip_forward"
+
+2. Configure Ettercap.
+Change the ec_uid and the ec_gid to avoid permission problems.
+  $ sudo vi /etc/ethercap/etter.conf
+  ---
+  ec_uid 0 # 65534                     # nobody is the default
+  ec_gid 0 # 65534                     # nobody is the default
+  ---
+
+3. Launch the graphical interface of Ettercap.
+  $ sudo ettercap -G
+
+4. Use Ettercap.
+Click on Accept on the up right (the little V).
+On the left, you will find the Host list icon. Click on it to see local machine.
+To see all machines, click on the 3 vertical dots icons on the right, then "Hosts" and "Scan for hosts".
+You should see new machines (Metasploitable and Win10).
+Define the 2 targets machines (Metasploitable and Win10).
+On the right, click on the World (MITM Menu) then choose "ARP poisoning".
+Check that "Sniff remote connections" is checked then click OK.
+Go to the 3-dot menu then choose "Logging" then "Logging all packets and info". Choose a file name (logmitm) 
+  on the Kali's Desktop (you should go to /home/kali/Desktop).
+
+5. Install Putty on the Windows machine.
+On Windows, download and install Putty.
+
+6. Execute a connection between Win-10 and Metasploitable.
+Use Putty, choose Telnet and put the ip address of Metasploitable.
+Log to Metasploitable with msfadmin/msfadmin.
+
+7. Check the logs.
+Launch another Term.
+See the logs by:
+  $ sudo etterlog ~/Desktop/logmitm.eci			-> Generic data
+  $ sudo etterlog ~/Desktop/logmitm.ecp			-> Data exchanged between the 2 machines.
+
+
+
+
+
+>@
+>@###################################################################################################################
+>@#                                                                                                                 #
+>@# [ Man In The Middle attack ]                                                                                    #
+>@#                                                                                                                 #
+>@# Man-in-the-middle attack (MITM), sometimes called monster-in-the-middle attack1,2 or man-in-the-middle attack,  #
+>@# Intermediary attack is an attack aimed at intercepting communications between two parties, without either       #
+>@# party being able to suspect that the communication channel between them has been hijacked.                      #
+>@#                                                                                                                 #
+>@# The most common channel is a connection to the Internet of the average Internet user. The attacker must first   #
+>@# be able to observe and intercept messages from one victim to another. The “man in the middle” attack is found   #
+>@# more particularly in the context of the Diffie-Hellman key exchange method, when this exchange is used without  #
+>@# authentication. With authentication, Diffie-Hellman, on the other hand, is invulnerable to eavesdropping on     #
+>@# the channel, and is also designed for this.                                                                     #
+>@#                                                                                                                 #
+>@# See: howto-0063-mitm-man-in-the-middle-fr.txt                                                                   #
+>@#                                                                                                                 #
+>@#-----------------------------------------------------------------------------------------------------------------#
+>@
+>@
+>@-> Goal
+>@Here are some explanations:
+>@  -Intercepte communication between 2 parties.
+>@  -The attacker is in the middle of the conversation.
+>@  -The attacker intercepte traffic then resend it.
+>@
+>@-> The way of working
+>@  -The attacker must use the ARP spoofing.
+>@  -The tool for that is ettercap.
+>@
+>@-> How to do a Man In the Middle Attack
+>@1. Active the ip_forwarding on Kali.
+>@  $ sudo bash -c "echo '1' > /proc/sys/net/ipv4/ip_forward"
+>@
+>@2. Configure Ettercap.
+>@Change the ec_uid and the ec_gid to avoid permission problems.
+>@  $ sudo vi /etc/ethercap/etter.conf
+>@  ---
+>@  ec_uid 0 # 65534                     # nobody is the default
+>@  ec_gid 0 # 65534                     # nobody is the default
+>@  ---
+>@
+>@3. Launch the graphical interface of Ettercap.
+>@  $ sudo ettercap -G
+>@
+>@4. Use Ettercap.
+>@Click on Accept on the up right (the little V).
+>@On the left, you will find the Host list icon. Click on it to see local machine.
+>@To see all machines, click on the 3 vertical dots icons on the right, then "Hosts" and "Scan for hosts".
+>@You should see new machines (Metasploitable and Win10).
+>@Define the 2 targets machines (Metasploitable and Win10).
+>@On the right, click on the World (MITM Menu) then choose "ARP poisoning".
+>@Check that "Sniff remote connections" is checked then click OK.
+>@Go to the 3-dot menu then choose "Logging" then "Logging all packets and info". Choose a file name (logmitm) 
+>@  on the Kali's Desktop (you should go to /home/kali/Desktop).
+>@
+>@5. Install Putty on the Windows machine.
+>@On Windows, download and install Putty.
+>@
+>@6. Execute a connection between Win-10 and Metasploitable.
+>@Use Putty, choose Telnet and put the ip address of Metasploitable.
+>@Log to Metasploitable with msfadmin/msfadmin.
+>@
+>@7. Check the logs.
+>@Launch another Term.
+>@See the logs by:
+>@  $ sudo etterlog ~/Desktop/logmitm.eci			-> Generic data
+>@  $ sudo etterlog ~/Desktop/logmitm.ecp			-> Data exchanged between the 2 machines.
+>@
+>@###################################################################################################################
+>@
