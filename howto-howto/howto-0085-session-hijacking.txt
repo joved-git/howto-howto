@@ -23,28 +23,78 @@ Go to https://packetstorm.news/files/id/24657/ and download Shijack.
 Launch Wireshark, open a session then filter by "telnet".
 Make some traffic between Win-10 and Metasploitable by making some "ls" into the telnet session.
 You will find the source port (on Win-10). For example: 49776
-3. Use Shijack
 
+4. Use Shijack to hijack the session.
+$ sudo ./shijack-lnx eth0 <win10 ip> <win10 port = 49776> <Metasploitable ip> <telnet port = 23>
+Wait for connexion: Waiting for SEQ/ACK  to arrive from the srcip to the dstip
+Make some traffic ("ls") from Win-10 machine via telnet.
+Look for "Got packet message" and Starting hijack session, Please use ^C to terminate messages on shikack.
 
-########################################################################################################
-#                                                                                                      #
-# [ Session hijacking ]                                                                                #
-#                                                                                                      #
-# Session hijacking (sometimes called cookie hijacking, TCP session hijacking, or packet sniffing)     #
-# occurs when a hacker takes control of your Internet session. Such a situation can happen when you    #
-# are shopping online, paying a bill or checking your bank balance. Session hijackers usually target   #
-# browsers or Internet applications, and their aim is to control your browsing session to access       #
-# your personal information as well as passwords.                                                      #
-#                                                                                                      #
-# Session hijackers pretend to be you to websites. This type of attack can have serious consequences   #
-# for application security because it allows hackers to gain unauthorized access to protected          #
-# accounts (and the data they contain) by pretending to be a legitimate user .                         #
-#                                                                                                      #
-# See: howto-0086-session-hijacking-fr.txt                                                             #
-# See: howto-0053-ettercap.txt                                                                         #
-#                                                                                                      #
-#------------------------------------------------------------------------------------------------------#
+Now, all what you type into te shijack window will be executed on the Metasploitable machine.
+Try:
+ mkdir pirate
 
+The directory should be created on the Metasploitable machine under /home/msfadmin.
 
-########################################################################################################
+-> How to prevent
+1. Make cookies expire faster.
+2. Use HTTPS/SSL.
+3. Avoid multiple snd simultaneous sessions.
+4. Avoid session numbers easy to devine.
 
+>@
+>@##############################################################################################################
+>@#                                                                                                            #
+>@# [ Session hijacking ]                                                                                      #
+>@#                                                                                                            #
+>@# Session hijacking (sometimes called cookie hijacking, TCP session hijacking, or packet sniffing) occurs    #
+>@# when a hacker takes control of your Internet session. Such a situation can happen when you are shopping    #
+>@# online, paying a bill or checking your bank balance. Session hijackers usually target browsers or Internet #
+>@# applications, and their aim is to control your browsing session to access  your personal information as    #
+>@# well as passwords.                                                                                         #
+>@#                                                                                                            #
+>@# Session hijackers pretend to be you to websites. This type of attack can have serious consequences  for    #
+>@# application security because it allows hackers to gain unauthorized access to protected  accounts (and the #
+>@# data they contain) by pretending to be a legitimate user .                                                 #
+>@#                                                                                                            #
+>@# See: howto-0086-session-hijacking-fr.txt                                                                   #
+>@# See: howto-0053-ettercap.txt                                                                               #
+>@#                                                                                                            #
+>@#------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Goal
+>@Take control of the session between machine.
+>@Allow access to a service without any authentification.
+>@Use protocole vulnerabilities.
+>@
+>@-> How to make a session jacking
+>@1. Connect the 2 machines with ettercap (see howto-0053-ettercap.txt).
+>@
+>@2. Retreive and install Shijack
+>@Go to https://packetstorm.news/files/id/24657/ and download Shijack.
+>@
+>@3. Find the source port used by the machine.
+>@Launch Wireshark, open a session then filter by "telnet".
+>@Make some traffic between Win-10 and Metasploitable by making some "ls" into the telnet session.
+>@You will find the source port (on Win-10). For example: 49776
+>@
+>@4. Use Shijack to hijack the session.
+>@$ sudo ./shijack-lnx eth0 <win10 ip> <win10 port = 49776> <Metasploitable ip> <telnet port = 23>
+>@Wait for connexion: Waiting for SEQ/ACK  to arrive from the srcip to the dstip
+>@Make some traffic ("ls") from Win-10 machine via telnet.
+>@Look for "Got packet message" and Starting hijack session, Please use ^C to terminate messages on shikack.
+>@
+>@Now, all what you type into te shijack window will be executed on the Metasploitable machine.
+>@Try:
+>@ mkdir pirate
+>@
+>@The directory should be created on the Metasploitable machine under /home/msfadmin.
+>@
+>@-> How to prevent
+>@1. Make cookies expire faster.
+>@2. Use HTTPS/SSL.
+>@3. Avoid multiple snd simultaneous sessions.
+>@4. Avoid session numbers easy to devine.
+>@
+>@##############################################################################################################
+>@
