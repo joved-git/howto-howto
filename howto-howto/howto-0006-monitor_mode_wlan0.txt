@@ -24,6 +24,12 @@ $ sudo ip link set wlan0 up
 >@
 >@#######################################################
 >@
+>@Method #1:
+>@$ sudo iwconfig wlan0 down
+>@$ sudo iwconfig wlan0 mode monitor
+>@$ sudo iwconfig wlan0 up
+>@
+>@Method #2:
 >@$ sudo airmon-ng check kill
 >@$ sudo airmon-ng start wlan0
 >@>>> start wlan0 in Monitor mode.
@@ -31,7 +37,16 @@ $ sudo ip link set wlan0 up
 >@$ airmon-ng stop waln0mon
 >@>>> stop the monitor mode on wlan0 or wlan0mon.
 >@
->@ $ iwconfig
+>@Method #3:
+>@1 – Desactivate wlan0
+>@$ sudo ip link set wlan0 down
+>@
+>@2 – Activate monitor mode
+>@$ sudo iwconfig wlan0 mode monitor
+>@
+>@3 – Reactivate the card
+>@$ sudo ip link set wlan0 up
+>@
 >@
 >@#######################################################
 >@

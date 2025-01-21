@@ -8,6 +8,7 @@ To have info about embedded data: steghide info stg.jpg
 >@##########################################################################
 >@#                                                                        #
 >@# [ steghide ]                                                           #
+>@#                                                                        #
 >@# Usefull tool to hide and retrieve text file into image.                #
 >@#                                                                        #
 >@.------------------------------------------------------------------------.

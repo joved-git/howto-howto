@@ -14,6 +14,7 @@ $ ufw allow ssh/tcp
 >@################################################################
 >@#                                                              #
 >@#  [ Nikto ]                                                   #
+>@#                                                              #
 >@#  Tool that automically scans vulnerabilities onto web server #
 >@#  and gives reports.                                          #
 >@#   /!\ This is illegal, try it on Metasploitable.             #

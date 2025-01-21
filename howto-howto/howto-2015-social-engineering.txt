@@ -15,8 +15,6 @@ It is also possible that users are not fully aware of the value of their persona
 telephone numbers. As a result, many users don't know how to get the best protection for 
 themselves and their data.
 
-##################################################################################################
-
 -> How does that work ?
   -Manipulate people to obtain information.
   -Based on uman interactions and influence.
@@ -61,6 +59,7 @@ themselves and their data.
 >@###################################################################################################
 >@#                                                                                                 #
 >@# [ Social engineering ]                                                                          # 
+>@#                                                                                                 #
 >@# Social engineering is a manipulation technique that exploits human error in order to obtain     #
 >@# confidential information, access or valuable assets. In the realm of cybercrime, these          #
 >@# “human hacking” scams tend to trick unsuspecting users into leaking data, spreading malware,    #
