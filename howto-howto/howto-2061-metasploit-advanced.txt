@@ -76,6 +76,7 @@ $ msf6> quit
 >@############################################################################################################################
 >@#                                                                                                                          #
 >@# [ Metasploit ]                                                                                                           #
+>@#                                                                                                                          #
 >@# Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.                   #
 >@#                                                                                                                          #
 >@# See official site: https://metasploit.com / https://metasploit.help.rapid7.com/                                          #

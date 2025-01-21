@@ -1,0 +1,88 @@
+Weplab is a tool designed to teach how WEP works, what different vulnerabilities it has and how 
+they can be used in practice to break a WEP protected wireless network. 
+
+So far, Weplab more than a Wep Key Cracker, is a Wep Security Analyzer designed from an educational 
+point of view. The author has tried to leave the source code as clear as possible, running away 
+from optimizations that would obfuscate it.
+
+-> All options 
+--debug     <debuglevel>    prints debug information
+-v, --verbose       print more information
+-y, --dictionary <file>     uses words (from stdin) as wep keys
+-k, --key [64|128]  specifies 128 or 64 bits (default) key
+-b, --bruteforce <file>     brute forces wep keys
+-c, --capture       capture encrypted data packets
+-i, --interface     for capturing packets with --capture 
+-r, --heuristics file       uses weak keys and intelligent bruteforce
+-a, --analysis      analyze file and get lite statistics
+-m, --multiprocess <number> Assume <number> of processes. Number must be between 1-64. Default 1.
+--caplen <length>   maximum length of captured packets with --capture (default 80) 
+--fcs       assume all captured frames has the FCS field
+--keyid <id>        just analyze specific id Wep packets. Only for 64 bits keys. (default 0)
+--prismheader       assume all captured frames has the Prism header
+--allow_dups        do not control packets with duplicated IVs
+--perc <number>     uses this minimum percentage of succeed when using FMS cracking
+--wordfile <file>   instead of reading words from stdin it uses this text file as wordfile for 
+                    the dictionary attack
+--ascii     just use bytes 0x00-0x7F for bruteforce wep key with --bruteforce
+--alpha     just use bytes 0x41-0x7A for bruteforce wep key with --bruteforce
+--alnum     just use bytes 0x30-0x7A for bruteforce wep key with --bruteforce
+--stability selects level of stability. Another way to specify which attacks, depending on their 
+            stability level, will be launched
+--debugkey <key>    Gives the real wep key to weplab to gather information about a crack. 
+                    <key> must be in the form of AA:BB:CC:DD... and may be incomplete.
+--attacks <number1,number2,...>     allows you to select which attacks will be used for heuristic mode.
+--bssid <MAC>       does only process those packets that belongs to specified BSSID
+-V, --version       output version information and exit
+
+-> An example:
+$ weplab -b <.pcap file>
+
+>@
+>@###########################################################################################################
+>@#                                                                                                         #
+>@# [ Weplab ]                                                                                              #
+>@#                                                                                                         #
+>@# Weplab is a tool designed to teach how WEP works, what different vulnerabilities it has and how they    #
+>@# can be used in practice to break a WEP protected wireless network.                                      # 
+>@#                                                                                                         #
+>@# So far, Weplab more than a Wep Key Cracker, is a Wep Security Analyzer designed from an educational     #
+>@# point of view. The author has tried to leave the source code as clear as possible, running away from    #
+>@# optimizations that would obfuscate it.                                                                  # 
+>@#                                                                                                         #
+>@
+>@-> All options 
+>@--debug     <debuglevel>    prints debug information
+>@-v, --verbose       print more information
+>@-y, --dictionary <file>     uses words (from stdin) as wep keys
+>@-k, --key [64|128]  specifies 128 or 64 bits (default) key
+>@-b, --bruteforce <file>     brute forces wep keys
+>@-c, --capture       capture encrypted data packets
+>@-i, --interface     for capturing packets with --capture 
+>@-r, --heuristics file       uses weak keys and intelligent bruteforce
+>@-a, --analysis      analyze file and get lite statistics
+>@-m, --multiprocess <number> Assume <number> of processes. Number must be between 1-64. Default 1.
+>@--caplen <length>   maximum length of captured packets with --capture (default 80) 
+>@--fcs       assume all captured frames has the FCS field
+>@--keyid <id>        just analyze specific id Wep packets. Only for 64 bits keys. (default 0)
+>@--prismheader       assume all captured frames has the Prism header
+>@--allow_dups        do not control packets with duplicated IVs
+>@--perc <number>     uses this minimum percentage of succeed when using FMS cracking
+>@--wordfile <file>   instead of reading words from stdin it uses this text file as wordfile for 
+>@                    the dictionary attack
+>@--ascii     just use bytes 0x00-0x7F for bruteforce wep key with --bruteforce
+>@--alpha     just use bytes 0x41-0x7A for bruteforce wep key with --bruteforce
+>@--alnum     just use bytes 0x30-0x7A for bruteforce wep key with --bruteforce
+>@--stability selects level of stability. Another way to specify which attacks, depending on their 
+>@            stability level, will be launched
+>@--debugkey <key>    Gives the real wep key to weplab to gather information about a crack. 
+>@                    <key> must be in the form of AA:BB:CC:DD... and may be incomplete.
+>@--attacks <number1,number2,...>     allows you to select which attacks will be used for heuristic mode.
+>@--bssid <MAC>       does only process those packets that belongs to specified BSSID
+>@-V, --version       output version information and exit
+>@
+>@-> An example:
+>@$ weplab -b <.pcap file>
+>@
+>@###########################################################################################################
+>@

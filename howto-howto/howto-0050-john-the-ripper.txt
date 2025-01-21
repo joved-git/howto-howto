@@ -36,6 +36,7 @@ Example:
 >@####################################################################################
 >@#                                                                                  #
 >@# [ John | John the Ripper ]                                                       #
+>@#                                                                                  #
 >@# John is a powerful tool that is used to crack passwords.                         #
 >@#                                                                                  #
 >@# Worldlist rockyou could be find with google: [ rockyou filetype:txt ]            #

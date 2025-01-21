@@ -5,6 +5,7 @@ See: https://www.snort.org
 >@##########################################################################################
 >@#                                                                                        #
 >@# [ Snort ]                                                                              #
+>@#                                                                                        #
 >@# Snort is a complete system used to detect intrusion on a machine. It was originally    #
 >@# a network sniffer but has been improved to become an IDS (Intrusion Detection System). #
 >@# Today this is the most popular one, it is free and maintain by an active community.    #

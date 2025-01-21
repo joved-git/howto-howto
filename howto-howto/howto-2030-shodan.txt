@@ -14,9 +14,10 @@ Shodan is a big site that collect and present information about conencted objets
 >@######################################################################################################
 >@#                                                                                                    #
 >@# [ Shodan ]                                                                                         #
+>@#                                                                                                    #
 >@# Shodan is a big site that collect and present information about conencted objets.                  #
 >@#                                                                                                    #
->@.----------------------------------------------------------------------------------------------------.
+>@-----------------------------------------------------------------------------------------------------#
 >@
 >@[ product:minecraft ] or Explore/Video Games gives information about popular video game servers.
 >@        example: Minecraft
