@@ -1,13 +1,21 @@
-Nous trouverons dans ce fichier plusieurs définitions et notions importantes pour bien comprendre le notion de 
-PGP.                                                                                                    
-                                                                                                      
+Pretty Good Privacy (qu'on pourrait traduire en français par "assez bon niveau de confidentialité"), plus connu 
+sous le sigle PGP, est un algorithme cryptographique hybride permettant entre autres de chiffrer et signer des 
+données. Il a été développé et diffusé aux États-Unis par Philip Zimmermann en 1991.
+
+PGP se propose de garantir la confidentialité et l'authentification pour la communication des données. Il est 
+souvent utilisé pour la signature électronique de données, le chiffrement et le déchiffrement de textes, 
+courriels, fichiers, répertoires et partitions de disque entier pour accroître la sécurité des communications. 
+
+Utilisant la cryptographie asymétrique mais également la cryptographie symétrique, il fait partie des algorithmes 
+de cryptographie hybride. 
+
 Voir: howto-0115-cryptograpy.txt
 Voir: howto-0116-cryptograpy-fr.txt
 Voir: howto-0117-pgp-pretty-good-privacy.txt
 
 Voici quelques définitions et concepts:
 
-*PGP s'ignifie Pretty Good Privacy. Il s'agit d'un programme de chiffrement qui a été développé par 
+* PGP signifie Pretty Good Privacy. Il s'agit d'un programme de chiffrement qui a été développé par 
      Paul Zimmerman en 1991. 
 
 * PGP fournit toutes les caractéristiques d'un chiffrement asymétrique (échange de clés, chiffrement,
@@ -55,9 +63,18 @@ http://www.gpg4win.org
 >@
 >@###########################################################################################################################
 >@#                                                                                                                         #
->@# [ PGP | Pretty Good Privacy ]	                                                                                          #
+>@# [ PGP | Pretty Good Privacy ]	                                                                                    #
 >@#                                                                                                                         #
->@# Nous trouverons dans ce fichier plusieurs définitions et notions importantes pour bien comprendre le notion de PGP.     #
+>@# Pretty Good Privacy (qu'on pourrait traduire en français par "assez bon niveau de confidentialité"), plus connu         #
+>@# sous le sigle PGP, est un algorithme cryptographique hybride permettant entre autres de chiffrer et signer des          #
+>@# données. Il a été développé et diffusé aux États-Unis par Philip Zimmermann en 1991.                                    #
+>@#                                                                                                                         #
+>@# PGP se propose de garantir la confidentialité et l'authentification pour la communication des données. Il est           #
+>@# souvent utilisé pour la signature électronique de données, le chiffrement et le déchiffrement de textes,                #
+>@# courriels, fichiers, répertoires et partitions de disque entier pour accroître la sécurité des communications.          #
+>@#                                                                                                                         #
+>@# Utilisant la cryptographie asymétrique mais également la cryptographie symétrique, il fait partie des algorithmes       #
+>@# de cryptographie hybride.                                                                                               #
 >@#                                                                                                                         #
 >@# Voir: howto-0115-cryptograpy.txt                                                                                        #
 >@# Voir: howto-0116-cryptograpy-fr.txt                                                                                     #
@@ -67,7 +84,7 @@ http://www.gpg4win.org
 >@
 >@Voici quelques définitions et concepts:
 >@
->@*PGP s'ignifie Pretty Good Privacy. Il s'agit d'un programme de chiffrement qui a été développé par 
+>@*PGP signifie Pretty Good Privacy. Il s'agit d'un programme de chiffrement qui a été développé par 
 >@     Paul Zimmerman en 1991. 
 >@
 >@* PGP fournit toutes les caractéristiques d'un chiffrement asymétrique (échange de clés, chiffrement,

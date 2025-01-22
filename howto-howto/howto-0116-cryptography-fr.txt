@@ -1,7 +1,10 @@
-Nous trouverons dans ce fichier plusieurs définitions et notions importantes pour bien comprendre les notions de
-cryptographie.
+La cryptographie est une des disciplines de la cryptologie s'attachant à protéger des messages (assurant 
+confidentialité, authenticité et intégrité) en s'aidant souvent de secrets ou clés. Elle se distingue de 
+la stéganographie qui fait passer inaperçu un message dans un autre message alors que la cryptographie 
+rend un message supposément inintelligible à autre que qui de droit.
 
-Plusieurs definitions:
+Elle est utilisée depuis l'Antiquité, mais certaines de ses méthodes les plus modernes, comme la 
+cryptographie asymétrique, datent de la fin du XXe siècle. Plusieurs definitions:
 
 * Chiffrement:  c'est transformer un "texte clair" en sa version "texte chiffré".
 
@@ -15,7 +18,7 @@ MESSAGE + clé-#1 = MESSAGE_CHIFFRE -> envoi du message -> MESSAGE_CHIFFRE + cl�
 
 
 * Chiffrement asymétrique: on utilise une clé différente pour chiffrer et déchiffrer un message.
-On l'appelle également chifrement à clé publique.
+On l'appelle également chiffrement à clé publique.
 
                      Alice                            |                          Bob
                                                       |
@@ -35,7 +38,7 @@ Les deux personnages A(lice) et B(ob) permettent de créer des scenarios de cryp
 Il existe également Eve (pour Eaves dropping, l'écoute malveillante) et Mallory (pour Malicious, malicieux).
 
 * Tiers de confiance: tiers nécessaire pour échanger des clés. On utilise des certificats.
-Exemple: Verisign, DigiCert, ...).
+Exemple: Verisign, DigiCert, ...
 
 * Infrastructure à clés publiques: infrastructure permettant de créer, gérer, délivrer et révoquer des
   certificats.
@@ -52,8 +55,16 @@ http://www.dcode.fr
 >@#                                                                                                                   #
 >@# [ Cryptographie ]                                                                                                 #
 >@#                                                                                                                   #
+>@# La cryptographie est une des disciplines de la cryptologie s'attachant à protéger des messages (assurant          #
+>@# confidentialité, authenticité et intégrité) en s'aidant souvent de secrets ou clés. Elle se distingue de          #
+>@# la stéganographie qui fait passer inaperçu un message dans un autre message alors que la cryptographie            #
+>@# rend un message supposément inintelligible à autre que qui de droit.                                              #
+>@#                                                                                                                   #
+>@# Elle est utilisée depuis l'Antiquité, mais certaines de ses méthodes les plus modernes, comme la cryptographie    #
+>@# asymétrique, datent de la fin du XXe siècle.                                                                      #
+>@#                                                                                                                   #
 >@# Nous trouverons dans ce fichier plusieurs définitions et notions importantes pour bien comprendre les notions de  #
->@# cryptographie.                                                                                                    # 
+>@# cryptographie moderne.                                                                                            # 
 >@#                                                                                                                   #
 >@# Voir: howto-0115-cryptography.txt                                                                                 # 
 >@#                                                                                                                   #
@@ -73,7 +84,7 @@ http://www.dcode.fr
 >@
 >@
 >@* Chiffrement asymétrique: on utilise une clé différente pour chiffrer et déchiffrer un message.
->@On l'appelle également chifrement à clé publique.
+>@On l'appelle également chiffrement à clé publique.
 >@
 >@                     Alice                            |                          Bob
 >@                                                      |
@@ -93,7 +104,7 @@ http://www.dcode.fr
 >@Il existe également Eve (pour Eaves dropping, l'écoute malveillante) et Mallory (pour Malicious, malicieux).
 >@
 >@* Tiers de confiance: tiers nécessaire pour échanger des clés. On utilise des certificats.
->@Exemple: Verisign, DigiCert, ...).
+>@Exemple: Verisign, DigiCert, ...
 >@
 >@* Infrastructure à clés publiques: infrastructure permettant de créer, gérer, délivrer et révoquer des
 >@  certificats.

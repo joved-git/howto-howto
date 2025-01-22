@@ -1,0 +1,127 @@
+Pretty Good Privacy (which could be translated into French as “fairly good level of confidentiality”), better 
+known under the acronym PGP, is a hybrid cryptographic algorithm allowing, among other things, to encrypt and sign 
+data. It was developed and released in the United States by Philip Zimmermann in 1991.
+
+PGP aims to guarantee confidentiality and authentication for data communication. He is often used for electronic 
+signature of data, encryption and decryption of texts, emails, files, directories and entire disk partitions to 
+increase communications security. 
+
+Using asymmetric cryptography but also symmetric cryptography, it is part of the algorithms 
+hybrid cryptography.
+
+Here some definitions an concepts:
+
+* PGP means Pretty Good Privacy. This is a encryption complete software that was developped by Paul Zimmerman
+      in 1991.
+
+* PGP embeds all characteristics of an asymetric encryption (exchange of keys, encryption, digital signs).
+
+* PGP uses a "PGP key".
+
+* How PGP is functionning ?
+PGP stores several keys:
+  -a private key secured by a password;
+  -a public key in clear an sharable.
+
+PGP stores certificats (public keys protected by an authority).
+
+Message sending with random key (from Alice to Bob):
+---
+1. Encryption.
+MESSAGE + random-key = ENCRYPTED_MESSAGE        |
+                                                |->  ENCRYPTED_MESSAGE + encrypted-key = ENCRYPTED_MESSAGE_WITH_ENCRYPTED_KEY
+random-key + public-keyBob = encrypted-key      |
+
+2. The message ENCRYPTED_MESSAGE_WITH_ENCRYPTED_KEY is sent.
+
+3. Decryption.
+ENCRYPTED_MESSAGE_WITH_ENRCYPTED_KEY = ENCRYPTED_MESSAGE_CHIFFRE + encrypted-key
+
+encrypted-key + private-key-Bob = random-key
+
+ENCRYPTED_MESSAGE + random-key = MESSAGE
+---
+
+Message sending with sign (from Alice to Bob):
+---
+1. Encryption.
+MESSAGE + private-key-Alice = ENCRYPTED_AND_SIGNED_MESSAGE
+
+2. The message ENCRYPTED_AND_SIGNED_MESSAGE is sent.
+
+3. Decryption.
+ENCRYPTED_AND_SIGNED_MESSAGE + public-key-Alice = MESSAGE
+
+* Somes interesting sites to visit
+http://www.gpg4win.org
+
+>@
+>@###########################################################################################################################
+>@#                                                                                                                         #
+>@# [ PGP | Pretty Good Privacy ]	                                                                                    #
+>@#                                                                                                                         #
+>@# Pretty Good Privacy (which could be translated into French as “fairly good level of confidentiality”), better           #
+>@# known under the acronym PGP, is a hybrid cryptographic algorithm allowing, among other things, to encrypt and sign      #
+>@# data. It was developed and released in the United States by Philip Zimmermann in 1991.                                  #
+>@#                                                                                                                         #
+>@# PGP aims to guarantee confidentiality and authentication for data communication. He is often used for electronic        #
+>@# signature of data, encryption and decryption of texts, emails, files, directories and entire disk partitions to         #
+>@# increase communications security.                                                                                       #
+>@#                                                                                                                         #
+>@# Using asymmetric cryptography but also symmetric cryptography, it is part of the algorithms                             #
+>@# hybrid cryptography.                                                                                                    #
+>@#                                                                                                                         #
+>@# See: howto-0115-cryptograpy.txt                                                                                         #
+>@# See: howto-0116-cryptograpy-fr.txt                                                                                      #
+>@# See: howto-0118-pgp-pretty-good-privacy-fr.txt                                                                          #
+>@#                                                                                                                         #
+>@#-------------------------------------------------------------------------------------------------------------------------#
+>@
+>@Here some definitions an concepts:
+>@
+>@* PGP means Pretty Good Privacy. This is a encryption complete software that was developped by Paul Zimmerman
+>@      in 1991.
+>@
+>@* PGP embeds all characteristics of an asymetric encryption (exchange of keys, encryption, digital signs).
+>@
+>@* PGP uses a "PGP key".
+>@
+>@* How PGP is functionning ?
+>@PGP stores several keys:
+>@  -a private key secured by a password;
+>@  -a public key in clear an sharable.
+>@
+>@PGP stores certificats (public keys protected by an authority).
+>@
+>@Message sending with random key (from Alice to Bob):
+>@---
+>@1. Encryption.
+>@MESSAGE + random-key = ENCRYPTED_MESSAGE        |
+>@                                                |->  ENCRYPTED_MESSAGE + encrypted-key = ENCRYPTED_MESSAGE_WITH_ENCRYPTED_KEY
+>@random-key + public-keyBob = encrypted-key      |
+>@
+>@2. The message ENCRYPTED_MESSAGE_WITH_ENCRYPTED_KEY is sent.
+>@
+>@3. Decryption.
+>@ENCRYPTED_MESSAGE_WITH_ENRCYPTED_KEY = ENCRYPTED_MESSAGE_CHIFFRE + encrypted-key
+>@
+>@encrypted-key + private-key-Bob = random-key
+>@
+>@ENCRYPTED_MESSAGE + random-key = MESSAGE
+>@---
+>@
+>@Message sending with sign (from Alice to Bob):
+>@---
+>@1. Encryption.
+>@MESSAGE + private-key-Alice = ENCRYPTED_AND_SIGNED_MESSAGE
+>@
+>@2. The message ENCRYPTED_AND_SIGNED_MESSAGE is sent.
+>@
+>@3. Decryption.
+>@ENCRYPTED_AND_SIGNED_MESSAGE + public-key-Alice = MESSAGE
+>@
+>@* Somes interesting sites to visit
+>@http://www.gpg4win.org
+>@
+>@###########################################################################################################################
+>@

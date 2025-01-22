@@ -1,0 +1,111 @@
+Steganography is the technique of hiding sensitive information in seemingly innocuous covering 
+media (typically a signal such as text, sound, image, video, etc.), which will not arouse 
+suspicion even if it is in plain sight: only a legitimate recipient will know that there is 
+information there for them. It is a word from the ancient Greek στεγανός / steganós (“watertight, 
+hermetic”) and γραφή / graphế (“writing”). Examples of steganography include The Purloined 
+Letter, microdot, invisible ink, digital tattooing or, more innocuously, the coded exchanges of 
+banal sentences by couples of artists like Myr and Myroska.
+
+It is distinguished from cryptography which seeks to make content unintelligible to anyone other 
+than the person concerned, the two techniques being often combined to eliminate the disadvantage 
+of cryptography: a coded text is visibly suspicious and the recipient like the transmitter are 
+suspicious.
+
+To take a metaphor, steganography would consist of hiding your money in a statue in your garden 
+where cryptography would consist of locking it in a safe, and the combination of the two, hiding 
+the safe in a statue.
+
+-> what is possible to do
+In steganography, you can hide what you want like: video, audio, image and document. 
+
+-> Some tools to do steganography
+* MP3stego: hide into audio.
+* S-Tools: hide images into .wav or .bmp.
+* Openpuff: hide evrything into everything.
+
+-> An example with COPY
+You can use the COPY command of Windows to embed texte into BMP.
+Hide:
+C:> copy /b littledog.bmp + secret.txt secret.bmp
+
+Retreive:
+Open the secret.bmp file with Notepad and go to the end.
+
+-> An example with S-Tools
+Here: http://www.cs.vu.nl/~ast/books/mos2/zebras.html
+
+Hide:
+Launch the tool and just drag an drop image then the txt file.
+You can add a password.
+Save as the new image.
+
+Reveal:
+Open the file the click on Reveal.
+
+-> How to detect a steganography
+Some ways:
+  -Try to compare original image an those with hidden stuff.
+  -Look for visual artefacts and/or blur.
+  -Use special tool like Stego-Suite (http://wetstonetech.com/product/stego-suite)
+
+
+>@#####################################################################################################
+>@#                                                                                                   #
+>@# [ Steganography ]                                                                                 #
+>@#                                                                                                   #
+>@# Steganography is the technique of hiding sensitive information in seemingly innocuous covering    #
+>@# media (typically a signal such as text, sound, image, video, etc.), which will not arouse         #
+>@# suspicion even if it is in plain sight: only a legitimate recipient will know that there is       #
+>@# information there for them. It is a word from the ancient Greek στεγανός / steganós (“watertight, #
+>@# hermetic”) and γραφή / graphế (“writing”). Examples of steganography include The Purloined        #
+>@# Letter, microdot, invisible ink, digital tattooing or, more innocuously, the coded exchanges of   #
+>@# banal sentences by couples of artists like Myr and Myroska.                                       #
+>@#                                                                                                   #
+>@# It is distinguished from cryptography which seeks to make content unintelligible to anyone other  #
+>@# than the person concerned, the two techniques being often combined to eliminate the disadvantage  #
+>@# of cryptography: a coded text is visibly suspicious and the recipient like the transmitter are    #
+>@# suspicious.                                                                                       #
+>@#                                                                                                   #
+>@# To take a metaphor, steganography would consist of hiding your money in a statue in your garden   #
+>@# where cryptography would consist of locking it in a safe, and the combination of the two, hiding  #
+>@# the safe in a statue.                                                                             #
+>@#                                                                                                   #
+>@# See: howto-2020-steghide.txt                                                                      #
+>@#                                                                                                   #
+>@#---------------------------------------------------------------------------------------------------#
+>@
+>@-> what it is possible to do ?
+>@In steganography, you can hide what you want like: video, audio, image and document. 
+>@
+>@-> Some tools to do steganography
+>@* MP3stego: hide into audio.
+>@* S-Tools: hide images into .wav or .bmp.
+>@* Openpuff: hide evrything into everything.
+>@
+>@-> An example with COPY
+>@You can use the COPY command of Windows to embed texte into BMP.
+>@Hide:
+>@C:> copy /b littledog.bmp + secret.txt secret.bmp
+>@
+>@Retreive:
+>@Open the secret.bmp file with Notepad and go to the end.
+>@
+>@-> An example with S-Tools
+>@Here: http://www.cs.vu.nl/~ast/books/mos2/zebras.html
+>@
+>@Hide:
+>@Launch the tool and just drag an drop image then the txt file.
+>@You can add a password.
+>@Save as the new image.
+>@
+>@Reveal:
+>@Open the file the click on Reveal.
+>@
+>@-> How to detect a steganography
+>@Some ways:
+>@  -Try to compare original image an those with hidden stuff.
+>@  -Look for visual artefacts and/or blur.
+>@  -Use special tool like Stego-Suite (http://wetstonetech.com/product/stego-suite)
+>@
+>@#####################################################################################################
+>@

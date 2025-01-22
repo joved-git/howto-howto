@@ -11,10 +11,14 @@ To have info about embedded data: steghide info stg.jpg
 >@#                                                                        #
 >@# Usefull tool to hide and retrieve text file into image.                #
 >@#                                                                        #
->@.------------------------------------------------------------------------.
+>@# See: howto-2025-steganography.txt                                      #
+>@#                                                                        #
+>@#------------------------------------------------------------------------#
 >@
 >@To include emb.txt into cvr.jpg : steghide embed -cf cvr.jpg -ef emb.txt
+>@
 >@To extract data contained into stg.jpg: steghide extract -sf stg.jpg
+>@
 >@To have info about embedded data: steghide info stg.jpg
 >@
 >@##########################################################################
