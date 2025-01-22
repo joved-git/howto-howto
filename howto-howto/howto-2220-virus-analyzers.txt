@@ -22,11 +22,11 @@ Hybrid-Analysis: analyze all types of file on all types of OS.
 >@  https://virustotal.com
 >@
 >@-> Malware: analyze all types of file on all types of OS (Android, 
->@            Windows, ...).
+>@            Windows, ...) and web sites.
 >@  https://malwr.com
 >@
 >@-> Hybrid-Analysis: analyze all types of file on all types of OS
->@                    (Android, Windows, ...).
+>@                    (Android, Windows, ...) and web sites.
 >@  https://hybrid-analysis.com
 >@
 >@####################################################################
