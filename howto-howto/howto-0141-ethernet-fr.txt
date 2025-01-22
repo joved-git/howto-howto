@@ -68,7 +68,7 @@ prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui 
 >@                      |             |              |                   |                     |
 >@ Couche 1 / Physique  |  Préambule  |  Delimiteur  |  Donnée Ethernet  |  Vide entre paquet  |
 >@                      |  7 octets   |   1 octet    | 64 / 1522 octets  |   en ms ou nano s   |
->@                      |_____________|________________________________________________________|
+>@                      |_____________|______________|___________________|_____________________|
 >@                                                  /                    \
 >@                          ______________________ /                      \_______________________
 >@                         /                                                                       \
