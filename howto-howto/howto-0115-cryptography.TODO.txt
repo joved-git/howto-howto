@@ -1,0 +1,109 @@
+Nous trouverons dans ce fichier plusieurs définitions et notions importantes pour bien comprendre les notions de
+cryptographie.
+
+Plusieurs definitions:
+
+* Chiffrement:  c'est transformer un "texte clair" en sa version "texte chiffré".
+
+* Déchiffrement: c'est transformer un "texte chiffrÉ" en sa version "texte clair".
+
+* Chiffrement symétrique: on utilise la même clé pour chiffrer et déchiffrer un message.
+
+                   Alice                    |                   Bob
+                                            |
+MESSAGE + clé-#1 = MESSAGE_CHIFFRE -> envoi du message -> MESSAGE_CHIFFRE + clé-#1 = MESSAGE
+
+
+* Chiffrement asymétrique: on utilise une clé différente pour chiffrer et déchiffrer un message.
+On l'appelle également chifrement à clé publique.
+
+                     Alice                            |                          Bob
+                                                      |
+MESSAGE + clé-publique-Bob = MESSAGE_CHIFFRE -> envoi du message -> MESSAGE_CHIFFRE + clé-privée-Bob = MESSAGE
+
+* Chiffrement par décallage: ROT13 ou algorithme de César.
+http://rot13.com
+
+* Clé: information permettant de réaliser le chiffrement ou le déchiffrement.
+
+* Encodage: change la représentation d'un texte.
+
+* Hachage: génère une empreinte d'une donnée. Opération à sens unique.
+
+* Bob et Alice.
+Les deux personnages A(lice) et B(ob) permettent de créer des scenarios de cryptographie.
+Il existe également Eve (pour Eaves dropping, l'écoute malveillante) et Mallory (pour Malicious, malicieux).
+
+* Tiers de confiance: tiers nécessaire pour échanger des clés. On utilise des certificats.
+Exemple: Verisign, DigiCert, ...).
+
+* Infrastructure à clés publiques: infrastructure permettant de créer, gérer, délivrer et révoquer des
+  certificats.
+To create a Certificat, the authority takes a public key, generate a hash and sign that hash with its own 
+private key.
+
+* Listes de sites utiles:
+http://rot13.com
+http://crypo.pw
+http://www.dcode.fr
+
+>@
+>@#####################################################################################################################
+>@#                                                                                                                   #
+>@# [ Cryptographie ]                                                                                                 #
+>@#                                                                                                                   #
+>@# Nous trouverons dans ce fichier plusieurs définitions et notions importantes pour bien comprendre les notions de  #
+>@# cryptographie.                                                                                                    # 
+>@#                                                                                                                   #
+>@# Voir: howto-0115-cryptography.txt                                                                                 # 
+>@#                                                                                                                   #
+>@#-------------------------------------------------------------------------------------------------------------------#
+>@
+>@Plusieurs definitions:
+>@
+>@* Chiffrement:  c'est transformer un "texte clair" en sa version "texte chiffré".
+>@
+>@* Déchiffrement: c'est transformer un "texte chiffrÉ" en sa version "texte clair".
+>@
+>@* Chiffrement symétrique: on utilise la même clé pour chiffrer et déchiffrer un message.
+>@
+>@                   Alice                    |                   Bob
+>@                                            |
+>@MESSAGE + clé-#1 = MESSAGE_CHIFFRE -> envoi du message -> MESSAGE_CHIFFRE + clé-#1 = MESSAGE
+>@
+>@
+>@* Chiffrement asymétrique: on utilise une clé différente pour chiffrer et déchiffrer un message.
+>@On l'appelle également chifrement à clé publique.
+>@
+>@                     Alice                            |                          Bob
+>@                                                      |
+>@MESSAGE + clé-publique-Bob = MESSAGE_CHIFFRE -> envoi du message -> MESSAGE_CHIFFRE + clé-privée-Bob = MESSAGE
+>@
+>@* Chiffrement par décallage: ROT13 ou algorithme de César.
+>@http://rot13.com
+>@
+>@* Clé: information permettant de réaliser le chiffrement ou le déchiffrement.
+>@
+>@* Encodage: change la représentation d'un texte.
+>@
+>@* Hachage: génère une empreinte d'une donnée. Opération à sens unique.
+>@
+>@* Bob et Alice.
+>@Les deux personnages A(lice) et B(ob) permettent de créer des scenarios de cryptographie.
+>@Il existe également Eve (pour Eaves dropping, l'écoute malveillante) et Mallory (pour Malicious, malicieux).
+>@
+>@* Tiers de confiance: tiers nécessaire pour échanger des clés. On utilise des certificats.
+>@Exemple: Verisign, DigiCert, ...).
+>@
+>@* Infrastructure à clés publiques: infrastructure permettant de créer, gérer, délivrer et révoquer des
+>@  certificats.
+>@To create a Certificat, the authority takes a public key, generate a hash and sign that hash with its own 
+>@private key.
+>@
+>@* Listes de sites utiles:
+>@http://rot13.com
+>@http://crypo.pw
+>@http://www.dcode.fr
+>@
+>@#####################################################################################################################
+>@

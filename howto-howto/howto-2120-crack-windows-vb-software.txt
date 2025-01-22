@@ -1,0 +1,117 @@
+Into this file, you will see that is not very difficul to crack a .exe VB soft by retreiving
+the original code using a tool that is named a Refector.
+
+Here are differents steps:
+
+1. Install a Reflector
+Into Win10, install Redgat Reflector (red-gate.com/products/reflector/).
+Install it and launch it.
+
+2. A little clening.
+In the left box, remove all entries with Del.
+
+3. Open the .exe file.
+Open the crackme.exe file by clicking on "File/Open Assembly".
+
+4. Search for interesting things.
+Wait one minute and when you see mscorlib, click on it.
+Click on the Search tool (little white square) on the upper-right.
+On [ Search box ], type "Mot de passe" then double-click on the line with "Button1_Click".
+
+At this step, into the lower box, you will see the treatment of the right user and password.
+
+---
+If Not (Operators.CompareString(Me.TextBox1.Text, "admin", False) Is 0) Then
+    Interaction.MsgBox("Utilisateur inconnu !", 0, Nothing)
+ElseIf (Operators.CompareString(Convert.ToBase64String(encoding.GetBytes(Me.ESAB46_Encode(Me.TextBox2.Text))), 
+                  "TG0wVnZUQmQ3bndWdlRCVU15MGl2NEJSOG5OVjZ6NWdNS05rNno1ZzhtVmQ4c2hW", False) Is 0) Then
+    Interaction.MsgBox("Vous êtes bien loggué, bienvenue", 0, Nothing)
+Else
+    Interaction.MsgBox("Mauvais mot de passe", 0, Nothing)
+End If
+---
+
+5. Decode the password.
+Now you have found the encoding pasword, you have to reverse the encoding but this is not so easy.
+In the code, you see that the proposed password is encoded within 2 engines:
+  -First a ESAB46 encoder.
+  -Second a Base 64 encoder.
+
+... then compare to the big string "TG0wVnZUQmQ3b...o1ZzhtVmQ4c2hW".
+
+So, you just have to do the same work in reverse:
+
+  -First decode TG0wVnZUQmQ3bndWdlRCVU15MGl2NEJSOG5OVjZ6NWdNS05rNno1ZzhtVmQ4c2hW with BAse-64 engine. 
+    Here: https://www.base64decode.org/ and that gives: Lm0VvTBd7nwVvTBUMy0iv4BR8nNV6z5gMKNk6z5g8mVd8shV
+
+  -Second decode Lm0VvTBd7nwVvTBUMy0iv4BR8nNV6z5gMKNk6z5g8mVd8shV with ESAB46 engine.
+    Here: https://www.base64decode.org/ and that gives: ce mot de passe est simple
+
+This is the initial password !!!
+
+Base-64 encoder/decoder: https://www.base64decode.org/
+ESAB46 encoder/decoder:  http://qbarbe.free.fr/crypto/eng_esab46c.php
+
+>@
+>@####################################################################################################################
+>@#                                                                                                                  #
+>@# [ How to crack a VB file | Reflector ]                                                                           #
+>@#                                                                                                                  #
+>@# Into this file, you will see that is not very difficul to crack a .exe VB soft by retreiving the original code   #
+>@# using a tool that is named a Refector.                                                                           #
+>@#                                                                                                                  #
+>@#------------------------------------------------------------------------------------------------------------------#
+>@
+>@Here are different steps:
+>@
+>@1. Install a Reflector
+>@Into Win10, install Redgat Reflector (red-gate.com/products/reflector/).
+>@Install it and launch it.
+>@
+>@2. A little clening.
+>@In the left box, remove all entries with Del.
+>@
+>@3. Open the .exe file.
+>@Open the crackme.exe file by clicking on "File/Open Assembly".
+>@
+>@4. Search for interesting things.
+>@Wait one minute and when you see mscorlib, click on it.
+>@Click on the Search tool (little white square) on the upper-right.
+>@On [ Search box ], type "Mot de passe" then double-click on the line with "Button1_Click".
+>@
+>@At this step, into the lower box, you will see the treatment of the right user and password.
+>@
+>@---
+>@If Not (Operators.CompareString(Me.TextBox1.Text, "admin", False) Is 0) Then
+>@    Interaction.MsgBox("Utilisateur inconnu !", 0, Nothing)
+>@ElseIf (Operators.CompareString(Convert.ToBase64String(encoding.GetBytes(Me.ESAB46_Encode(Me.TextBox2.Text))), 
+>@                  "TG0wVnZUQmQ3bndWdlRCVU15MGl2NEJSOG5OVjZ6NWdNS05rNno1ZzhtVmQ4c2hW", False) Is 0) Then
+>@    Interaction.MsgBox("Vous êtes bien loggué, bienvenue", 0, Nothing)
+>@Else
+>@    Interaction.MsgBox("Mauvais mot de passe", 0, Nothing)
+>@End If
+>@---
+>@
+>@5. Decode the password.
+>@Now you have found the encoding pasword, you have to reverse the encoding but this is not so easy.
+>@In the code, you see that the proposed password is encoded within 2 engines:
+>@  -First a ESAB46 encoder.
+>@  -Second a Base 64 encoder.
+>@
+>@... then compare to the big string "TG0wVnZUQmQ3b...o1ZzhtVmQ4c2hW".
+>@
+>@So, you just have to do the same work in reverse:
+>@
+>@  -First decode TG0wVnZUQmQ3bndWdlRCVU15MGl2NEJSOG5OVjZ6NWdNS05rNno1ZzhtVmQ4c2hW with BAse-64 engine. 
+>@    Here: https://www.base64decode.org/ and that gives: Lm0VvTBd7nwVvTBUMy0iv4BR8nNV6z5gMKNk6z5g8mVd8shV
+>@
+>@  -Second decode Lm0VvTBd7nwVvTBUMy0iv4BR8nNV6z5gMKNk6z5g8mVd8shV with ESAB46 engine.
+>@    Here: https://www.base64decode.org/ and that gives: ce mot de passe est simple
+>@
+>@This is the initial password !!!
+>@
+>@Base-64 encoder/decoder: https://www.base64decode.org/
+>@ESAB46 encoder/decoder:  http://qbarbe.free.fr/crypto/eng_esab46c.php
+>@
+>@####################################################################################################################
+>@
