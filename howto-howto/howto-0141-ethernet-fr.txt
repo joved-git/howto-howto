@@ -1,0 +1,82 @@
+Ethernet est un protocole de communication utilisé pour les réseaux informatiques, exploitant la commutation 
+de paquets. Il réalise les fonctions de la couche physique et de la couche liaison de données (couches 1 et 2) 
+du modèle OSI. C'est une norme internationale ISO/IEC/IEEE 8802-31.
+
+Il a été conçu au début des années 1970 pour faire communiquer des ordinateurs rattachés à un même « éther », 
+c'est-à-dire un milieu passif capable de transférer des données, comme un câble coaxial. Depuis les années 1990, 
+on utilise très fréquemment une transmission sur un câble de paires torsadées pour la connexion des postes 
+clients, et sur fibre optique pour le cœur du réseau. D'abord développé pour un débit binaire inférieur à 3 Mb/s, 
+Ethernet est maintenant standardisé jusqu'à 400 Gb/s4 et des débits plus rapides sont à l'étude. À l'origine 
+prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui utilisé sur tout type de réseau 
+(réseau étendu, dorsale Internet, automobile…) mais aussi pour des communications sur circuit imprimé. 
+
+* Ethernet a vu le jour dans les années 70/80.
+
+* Ethernet doit pouvoir assurer la communication de plusieurs machines en même temps.
+
+* Ethernet utilise le protocole CSMA/CD permettant d'écouter avant de communiquer.
+
+* Description d'un paquet ethernet:
+
+                       ______________________________________________________________________
+                      |             |              |                   |                     |
+ Couche 1 / Physique  |  Préambule  |  Delimiteur  |  Donnée Ethernet  |  Vide entre paquet  |
+                      |  7 octets   |   1 octet    | 64 / 1522 octets  |   en ms ou nano s   |
+                      |_____________|________________________________________________________|
+                                                  /                    \
+                          ______________________ /                      \_______________________
+                         /                                                                       \
+                        /_________________________________________________________________________\
+                        |            |              |             |                  |            |
+ Couche 2 / Liaison     |  MAC Dest  |  MAC Source  |  Ethertype  |      Données     |     FCS    |
+                        |  6 octets  |   6 octets   |   2 octets  | 46 / 1500 octets |  4 octets  |
+                        |____________|______________|_____________|__________________|____________|
+
+
+>@
+>@#####################################################################################################################
+>@#                                                                                                                   #
+>@# [ Ethernet ]                                                                                                      #
+>@#                                                                                                                   #
+>@# Ethernet est un protocole de communication utilisé pour les réseaux informatiques, exploitant la commutation      #
+>@# de paquets. Il réalise les fonctions de la couche physique et de la couche liaison de données (couches 1 et 2)    #
+>@# du modèle OSI. C'est une norme internationale ISO/IEC/IEEE 8802-31.                                               #
+>@#                                                                                                                   #
+>@# Il a été conçu au début des années 1970 pour faire communiquer des ordinateurs rattachés à un même « éther »,     #
+>@# c'est-à-dire un milieu passif capable de transférer des données, comme un câble coaxial. Depuis les années 1990,  #
+>@# on utilise très fréquemment une transmission sur un câble de paires torsadées pour la connexion des postes        #
+>@# clients, et sur fibre optique pour le cœur du réseau.                                                             #
+>@#                                                                                                                   #
+>@# D'abord développé pour un débit binaire inférieur à 3 Mb/s,                                                       #
+>@# Ethernet est maintenant standardisé jusqu'à 400 Gb/s4 et des débits plus rapides sont à l'étude. À l'origine      #
+>@# prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui utilisé sur tout type de réseau     #
+>@# (réseau étendu, dorsale Internet, automobile…) mais aussi pour des communications sur circuit imprimé.            #
+>@#                                                                                                                   #
+>@# Voir: howto-0140-ethernet.txt                                                                                     #
+>@#                                                                                                                   #
+>@#--------------------------------------------------------------------------------------------------------------------
+>@
+>@* Ethernet a vu le jour dans les années 70/80.
+>@
+>@* Ethernet doit pouvoir assurer la communication de plusieurs machines en même temps.
+>@
+>@* Ethernet utilise le protocole CSMA/CD permettant d'écouter avant de communiquer.
+>@
+>@* Description d'un paquet ethernet:
+>@
+>@                       ______________________________________________________________________
+>@                      |             |              |                   |                     |
+>@ Couche 1 / Physique  |  Préambule  |  Delimiteur  |  Donnée Ethernet  |  Vide entre paquet  |
+>@                      |  7 octets   |   1 octet    | 64 / 1522 octets  |   en ms ou nano s   |
+>@                      |_____________|________________________________________________________|
+>@                                                  /                    \
+>@                          ______________________ /                      \_______________________
+>@                         /                                                                       \
+>@                        /_________________________________________________________________________\
+>@                        |            |              |             |                  |            |
+>@ Couche 2 / Liaison     |  MAC Dest  |  MAC Source  |  Ethertype  |      Données     |     FCS    |
+>@                        |  6 octets  |   6 octets   |   2 octets  | 46 / 1500 octets |  4 octets  |
+>@                        |____________|______________|_____________|__________________|____________|
+>@
+>@#####################################################################################################################
+>@
