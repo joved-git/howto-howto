@@ -29,7 +29,6 @@ Here are some definitions and concepts:
   -Integrity.
 
 * How TLS is functionning ?
-* Fonctionnement de TLS:
 1. Negotiation.
 Two actors are going to negociate to know which algorithme they will use.
 Echanged messages are tagged "Client Hello" and "Server hello". This is clearly visible
@@ -80,7 +79,6 @@ Public keys are exchanged then symetrical message exchange after.
 >@  -Integrity.
 >@
 >@* How TLS is functionning ?
->@* Fonctionnement de TLS:
 >@1. Negotiation.
 >@Two actors are going to negociate to know which algorithme they will use.
 >@Echanged messages are tagged "Client Hello" and "Server hello". This is clearly visible
