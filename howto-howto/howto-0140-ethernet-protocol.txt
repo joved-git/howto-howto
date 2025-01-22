@@ -1,14 +1,14 @@
-Ethernet est un protocole de communication utilisé pour les réseaux informatiques, exploitant la commutation 
-de paquets. Il réalise les fonctions de la couche physique et de la couche liaison de données (couches 1 et 2) 
-du modèle OSI. C'est une norme internationale ISO/IEC/IEEE 8802-31.
+Ethernet is a communications protocol used for computer networks, leveraging switching 
+of packages. It performs the functions of the physical layer and the data link layer (layers 1 and 2) 
+of the OSI model. It is an international standard ISO/IEC/IEEE 8802-31.
 
-Il a été conçu au début des années 1970 pour faire communiquer des ordinateurs rattachés à un même « éther », 
-c'est-à-dire un milieu passif capable de transférer des données, comme un câble coaxial. Depuis les années 1990, 
-on utilise très fréquemment une transmission sur un câble de paires torsadées pour la connexion des postes 
-clients, et sur fibre optique pour le cœur du réseau. D'abord développé pour un débit binaire inférieur à 3 Mb/s, 
-Ethernet est maintenant standardisé jusqu'à 400 Gb/s4 et des débits plus rapides sont à l'étude. À l'origine 
-prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui utilisé sur tout type de réseau 
-(réseau étendu, dorsale Internet, automobile…) mais aussi pour des communications sur circuit imprimé. 
+It was designed in the early 1970s to communicate between computers attached to the same “ether”, 
+that is to say a passive medium capable of transferring data, such as a coaxial cable. Since the 1990s, 
+transmission on a twisted pair cable is very frequently used for connecting stations 
+customers, and on optical fiber for the core of the network. First developed for a bit rate below 3 Mb/s, 
+Ethernet is now standardized at up to 400 Gb/s4 and faster speeds are being explored. Originally 
+designed for transmissions on local networks, Ethernet is today used on all types of networks 
+(extended network, Internet backbone, automobile, etc.) but also for communications on printed circuit boards.
 
 * Ethernet is born in the 1970th / 80th.
 
@@ -38,10 +38,43 @@ prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui 
 >@#                                                                                                                   #
 >@# [ Ethernet ]                                                                                                      #
 >@#                                                                                                                   #
+>@# Ethernet is a communications protocol used for computer networks, leveraging switching of packages. It performs   #
+>@# the functions of the physical layer and the data link layer (layers 1 and 2) of the OSI model. It is an           #
+>@# international standard ISO/IEC/IEEE 8802-31.                                                                      #
 >@#                                                                                                                   #
->@# See: howto-0141-ethernet-fr.txt                                                                                   #
+>@# It was designed in the early 1970s to communicate between computers attached to the same “ether”, that is to      #
+>@# say a passive medium capable of transferring data, such as a coaxial cable. Since the 1990s,  transmission on a   #
+>@# twisted pair cable is very frequently used for connecting stations customers, and on optical fiber for the core   #
+>@# of the network. First developed for a bit rate below 3 Mb/s, Ethernet is now standardized at up to 400 Gb/s4 and  #
+>@# faster speeds are being explored. Originally designed for transmissions on local networks, Ethernet is today      #
+>@# used on all types of networks (extended network, Internet backbone, automobile, etc.) but also for                #
+>@# communications on printed circuit boards.                                                                         #
+>@#                                                                                                                   #
+>@# See: howto-0141-ethernet-protocol-fr.txt                                                                          #
 >@#                                                                                                                   #
 >@#--------------------------------------------------------------------------------------------------------------------
+>@
+>@* Ethernet is born in the 1970th / 80th.
+>@
+>@* Ethernet must be able to ensure the communication between several machines inthe same time.
+>@
+>@* Ethernet uses CSMA/CD protocol that allow to listen before communicate.
+>@
+>@* Description of an ethernet packet:
+>@
+>@                       ________________________________________________________________________
+>@                      |             |              |                   |                       |
+>@ Layer 1 / Physical   |  Preamble   |  Delimiter   |   Ethernet Data   |  Void between packet  |
+>@                      |  7 bytes    |    1 byte    |  64 / 1522 bytes  |   (in ms or nano s)   |
+>@                      |_____________|______________|___________________|_______________________|
+>@                                                  /                    \
+>@                          ______________________ /                      \_______________________
+>@                         /                                                                       \
+>@                        /_________________________________________________________________________\
+>@                        |            |              |             |                  |            |
+>@ Layer 2 / Link         |  MAC Dest  |  MAC Source  |  Ethertype  |        Data      |     FCS    |
+>@                        |   6 bytes  |    6 bytes   |    2 bytes  |  46 / 1500 bytes |   4 bytes  |
+>@                        |____________|______________|_____________|__________________|____________|
 >@
 >@
 >@#####################################################################################################################

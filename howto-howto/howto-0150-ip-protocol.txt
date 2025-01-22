@@ -1,0 +1,48 @@
+Ethernet est un protocole de communication utilisé pour les réseaux informatiques, exploitant la commutation 
+de paquets. Il réalise les fonctions de la couche physique et de la couche liaison de données (couches 1 et 2) 
+du modèle OSI. C'est une norme internationale ISO/IEC/IEEE 8802-31.
+
+Il a été conçu au début des années 1970 pour faire communiquer des ordinateurs rattachés à un même « éther », 
+c'est-à-dire un milieu passif capable de transférer des données, comme un câble coaxial. Depuis les années 1990, 
+on utilise très fréquemment une transmission sur un câble de paires torsadées pour la connexion des postes 
+clients, et sur fibre optique pour le cœur du réseau. D'abord développé pour un débit binaire inférieur à 3 Mb/s, 
+Ethernet est maintenant standardisé jusqu'à 400 Gb/s4 et des débits plus rapides sont à l'étude. À l'origine 
+prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui utilisé sur tout type de réseau 
+(réseau étendu, dorsale Internet, automobile…) mais aussi pour des communications sur circuit imprimé. 
+
+* Ethernet is born in the 1970th / 80th.
+
+* Ethernet must be able to ensure the communication between several machines inthe same time.
+
+* Ethernet uses CSMA/CD protocol that allow to listen before communicate.
+
+* Description of an ethernet packet:
+
+                       ________________________________________________________________________
+                      |             |              |                   |                       |
+ Layer 1 / Physical   |  Preamble   |  Delimiter   |   Ethernet Data   |  Void between packet  |
+                      |  7 bytes    |    1 byte    |  64 / 1522 bytes  |   (in ms or nano s)   |
+                      |_____________|______________|___________________|_______________________|
+                                                  /                    \
+                          ______________________ /                      \_______________________
+                         /                                                                       \
+                        /_________________________________________________________________________\
+                        |            |              |             |                  |            |
+ Layer 2 / Link         |  MAC Dest  |  MAC Source  |  Ethertype  |        Data      |     FCS    |
+                        |   6 bytes  |    6 bytes   |    2 bytes  |  46 / 1500 bytes |   4 bytes  |
+                        |____________|______________|_____________|__________________|____________|
+
+
+>@
+>@#####################################################################################################################
+>@#                                                                                                                   #
+>@# [ Ethernet ]                                                                                                      #
+>@#                                                                                                                   #
+>@#                                                                                                                   #
+>@# See: howto-0141-ethernet-fr.txt                                                                                   #
+>@#                                                                                                                   #
+>@#--------------------------------------------------------------------------------------------------------------------
+>@
+>@
+>@#####################################################################################################################
+>@
