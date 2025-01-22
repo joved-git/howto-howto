@@ -1,0 +1,63 @@
+A backdoor is a tool that allows pirates to access discreetly and permanently to 
+a system. Pirates can return to that system where they want. A backdoor is often 
+used after a hacking but may be the goal of the attack too.
+
+The backdoor could be used with a trojan that is going to install the backdoor.
+Backdoors are relatiely easy to detect but they could be very discrete.
+
+-> Different types of backdoor
+-Web's Backdoor web: a plugin could be a backdoor.
+-System's backdoor: hidden paramaters, hidden account, opened ports,...
+
+-> Example of a backdoor
+Tini (tini.exe) was a weel-known backdoor but seems to be detected by all antivurus now.
+It was used to open the port (7777) on a Windows machine.
+On Kali, you can try to connect to the machine:
+  $ telnet <Win10 ip> 7777
+  C:\Users\<user>\Desktop>       -> You are connected to the machine.
+
+-> How to prevent
+Some technics to detect backdoor.
+  -On Windows, use 'netstat' to detect opend ports (search for 7777).
+  -On Windows, you can use TCPView to see all system's processus, their connections
+    and their activities.
+  -Make a scan with the anti-virus.
+  -Observe the network activity.
+  -Keep vigilant (scan before use, don't trust anything).
+
+>@
+>@#####################################################################################
+>@#                                                                                   #
+>@# [ Backdoor ]                                                                      #
+>@#                                                                                   #
+>@# A backdoor is a tool that allows pirates to access discreetly and permanently to  #
+>@# a system. Pirates can return to that system where they want. A backdoor is often  #
+>@# used after a hacking but may be the goal of the attack too.                       #
+>@#                                                                                   #
+>@# The backdoor could be used with a trojan that is going to install the backdoor.   #
+>@# Backdoors are relatiely easy to detect but they could be very discrete.           #
+>@#                                                                                   #
+>@#-----------------------------------------------------------------------------------#
+>@
+>@-> Different types of backdoor
+>@-Web's Backdoor web: a plugin could be a backdoor.
+>@-System's backdoor: hidden paramaters, hidden account, opened ports,...
+>@
+>@-> Example of a backdoor
+>@Tini (tini.exe) was a weel-known backdoor but seems to be detected by all antivurus now.
+>@It was used to open the port (7777) on a Windows machine.
+>@On Kali, you can try to connect to the machine:
+>@  $ telnet <Win10 ip> 7777
+>@  C:\Users\<user>\Desktop>       -> You are connected to the machine.
+>@
+>@-> How to prevent backdoors
+>@Some technics to detect backdoor.
+>@  -On Windows, use 'netstat' to detect opend ports (search for 7777).
+>@  -On Windows, you can use TCPView to see all system's processus, their connections
+>@    and their activities.
+>@  -Make a scan with the anti-virus.
+>@  -Observe the network activity.
+>@  -Keep vigilant (scan before use, don't trust anything).
+>@
+>@#####################################################################################
+>@

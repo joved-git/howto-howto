@@ -1,0 +1,33 @@
+If you want to analyze some files, you could use that sites:
+
+Virustotal: analyze a file by so many antivirus.
+  https://virustotal.com
+
+Malware: analyze all types of file on all types of OS.
+  https://malwr.com
+
+Hybrid-Analysis: analyze all types of file on all types of OS.
+  https://hybrid-analysis.com
+
+>@####################################################################
+>@#                                                                  #
+>@# [ Virus analysers ]                                              #
+>@#                                                                  #
+>@# If you want to analyze some files, here is a list of the best    #
+>@# analysers.                                                       #
+>@#                                                                  #
+>@#------------------------------------------------------------------#
+>@
+>@-> Virustotal: analyze a file by so many antivirus.
+>@  https://virustotal.com
+>@
+>@-> Malware: analyze all types of file on all types of OS (Android, 
+>@            Windows, ...).
+>@  https://malwr.com
+>@
+>@-> Hybrid-Analysis: analyze all types of file on all types of OS
+>@                    (Android, Windows, ...).
+>@  https://hybrid-analysis.com
+>@
+>@####################################################################
+>@

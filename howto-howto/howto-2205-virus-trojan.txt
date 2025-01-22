@@ -1,11 +1,11 @@
-A Trojan is a software that is used to hide another software. The inner software
+A trojan is a software that is used to hide another software. The inner software
 is called "payload". This payload could be a backdoor, a virus, a keylogger or
 a RAT (Remote Administration Tool). All is possible.
 
-The Trojan is just a transporter for the malicious soft and is often seen as
+The trojan is just a transporter for the malicious soft and is often seen as
 proper and fair.
 
--> Different types of Trojan
+-> Different types of trojan
 -in IRC: a infected machine open a chanel, share it with the victim and pilot it.
 -in http: the payload is just a tiny web server that just open a mini web site.
           The hacker could launch some commands using this website.
@@ -15,33 +15,35 @@ proper and fair.
          that automatically creates the safe soft with malicious others inside.
          When you starts the "safe" soft, the malicieous also starts.
 
--> Easy to create a Keylogger
-By using a Binder, you could create a Trojan very easily.
+-> Easy to create a trojan
+By using a Binder, you could create a trojan very easily.
 
 -> How to prevent
-Some technics to detect Trojans.
+Some technics to detect trojans.
   -Make a scan with the anti-virus.
   -Observe the network activity.
   -Compare the hash of safe softwares.  Virustotal (www.virustotal.com) could do 
    that for you.
-  -Keep aware (scan before use, don't trust anything).
+  -Keep vigilant (scan before use, don't trust anything).
 
 
 >@
 >@#####################################################################################
 >@#                                                                                   #
->@# [ Trojan ]                                                                        #
+>@# [ Trojan | Binder ]                                                               #
 >@#                                                                                   #
->@# A Trojan is a software that is used to hide another software. The inner software  #
+>@# A trojan is a software that is used to hide another software. The inner software  #
 >@# is called "payload". This payload could be a backdoor, a virus, a keylogger or    #
 >@# a RAT (Remote Administration Tool). All is possible.                              #
 >@#                                                                                   #
->@# The Trojan is just a transporter for the malicious soft and is often seen as      #
+>@# The trojan is just a transporter for the malicious soft and is often seen as      #
 >@# proper and fair.                                                                  #
+>@#                                                                                   #
+>@# The binder is used to attach a malicious soft into another one (the trojan).      #
 >@#                                                                                   #
 >@#-----------------------------------------------------------------------------------#
 >@
->@-> Different types of Trojan
+>@-> Different types of trojan
 >@ You could find troyans in different domains:
 >@  -in IRC: a infected machine open a chanel, share it with the victim and pilot it.
 >@  -in http: the payload is just a tiny web server that just open a mini web site.
@@ -52,16 +54,16 @@ Some technics to detect Trojans.
 >@           that automatically creates the safe soft with malicious others inside.
 >@           When you starts the "safe" soft, the malicieous also starts.
 >@
->@-> Easy to create a Keylogger
->@By using a Binder, you could create a Trojan very easily.
+>@-> Easy to create a trojan
+>@By using a Binder, you could create a trojan very easily.
 >@
->@-> How to prevent
->@Some technics to detect Trojans.
+>@-> How to prevent trojans
+>@Some technics to detect trojans.
 >@  -Make a scan with the anti-virus.
 >@  -Observe the network activity.
 >@  -Compare the hash of safe softwares.  Virustotal (www.virustotal.com) could do 
 >@   that for you.
->@  -Keep aware (scan before use, don't trust anything).
+>@  -Keep vigilant (scan before use, don't trust anything).
 >@
 >@#####################################################################################
 >@
