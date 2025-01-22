@@ -1,0 +1,125 @@
+Cryptography is one of the disciplines of cryptology focused on protecting messages (ensuring 
+confidentiality, authenticity and integrity) often using secrets or keys. It is distinguished from 
+steganography which causes a message to pass unnoticed within another message while cryptography 
+makes a message supposedly unintelligible to anyone other than the appropriate person.
+
+It has been used since ancient times, but some of its most modern methods, such as asymmetric 
+cryptography, date from the late 20th century.
+
+We will find in this file several definitions and important concepts to fully understand the notion of
+modern cryptography.
+
+Here are some definitions:
+
+* Encryption: it is the action of transforming "clear text" into "encrypted text".
+
+* Decryption: it is the action of transforming "encrypted text" into "clear text".
+
+* Asymetric encryption: we use the same key to encrypt and to decrypt messages.
+
+                     Alice                      |                        Bob
+                                                |
+MESSAGE + key-#1 = ENCRYPTED_MESSAGEE -> message is sent -> ENCRYPTED_MESSAGE + key-#1 = MESSAGE
+
+
+* Asymetric encryption: we use differents keys to encrypt and decrypt messages.
+We also call it public key encryption.
+
+
+                            Alice                            |                          Bob
+                                                             |
+MESSAGE + public-key-Bob = ENCRYPTED_MESSAGE_CHIFFRE -> message is sent -> ENCRYPTED_MESSAGE + privet-key-Bob = MESSAGE
+
+* Encryption by shifting: ROT13 or Caesar algorithm.
+http://rot13.com
+
+* Key: this is information used to realize encryption or decryption.
+
+* Encoding: the way to change the representation of a texte.
+
+* Hash: generate print of a data. This operation is a one-way operation.
+
+* Bob and Alice.
+This two characters A(lice) qnd B(ob) are used to create simple scenarios of cryptography.
+There are two other characters: Eve for Eaves dropping and Mallory for Malicious.
+
+* trusted third party: third party needed to exchange keys. We use certificats.
+Example: Verisign, DigiCert, ...
+
+* Public key infrastructure: infrastructure that coulkd create, manage, deliver and destroy certificats.
+To create a certificat, the authority take a public key, generate a new hash and sign it with its own
+private key.
+
+* Usefull sites to visit:
+http://rot13.com
+http://crypo.pw
+http://www.dcode.fr
+
+>@
+>@#####################################################################################################################
+>@#                                                                                                                   #
+>@# [ Cryptographie ]                                                                                                 #
+>@#                                                                                                                   #
+>@# Cryptography is one of the disciplines of cryptology focused on protecting messages (ensuring  confidentiality,   #
+>@# authenticity and integrity) often using secrets or keys. It is distinguished from steganography which causes a    #
+>@# message to pass unnoticed within another message while cryptography makes a message supposedly unintelligible to  #
+>@# anyone other than the appropriate person.                                                                         #
+>@#                                                                                                                   #
+>@# It has been used since ancient times, but some of its most modern methods, such as asymmetric cryptography, date  #
+>@# from the late 20th century.                                                                                       #
+>@#                                                                                                                   #
+>@# We will find in this file several definitions and important concepts to fully understand the notion of modern     #
+>@# cryptography.                                                                                                     #
+>@#                                                                                                                   #
+>@# Voir: howto-0116-cryptography-fr.txt                                                                              # 
+>@#                                                                                                                   #
+>@#-------------------------------------------------------------------------------------------------------------------#
+>@
+>@Here are some definitions:
+>@
+>@* Encryption: it is the action of transforming "clear text" into "encrypted text".
+>@
+>@* Decryption: it is the action of transforming "encrypted text" into "clear text".
+>@
+>@* Asymetric encryption: we use the same key to encrypt and to decrypt messages.
+>@
+>@                     Alice                      |                        Bob
+>@                                                |
+>@MESSAGE + key-#1 = ENCRYPTED_MESSAGEE -> message is sent -> ENCRYPTED_MESSAGE + key-#1 = MESSAGE
+>@
+>@
+>@* Asymetric encryption: we use differents keys to encrypt and decrypt messages.
+>@We also call it public key encryption.
+>@
+>@
+>@                            Alice                            |                          Bob
+>@                                                             |
+>@MESSAGE + public-key-Bob = ENCRYPTED_MESSAGE_CHIFFRE -> message is sent -> ENCRYPTED_MESSAGE + privet-key-Bob = MESSAGE
+>@
+>@* Encryption by shifting: ROT13 or Caesar algorithm.
+>@http://rot13.com
+>@
+>@* Key: this is information used to realize encryption or decryption.
+>@
+>@* Encoding: the way to change the representation of a texte.
+>@
+>@* Hash: generate print of a data. This operation is a one-way operation.
+>@
+>@* Bob and Alice.
+>@This two characters A(lice) qnd B(ob) are used to create simple scenarios of cryptography.
+>@There are two other characters: Eve for Eaves dropping and Mallory for Malicious.
+>@
+>@* trusted third party: third party needed to exchange keys. We use certificats.
+>@Example: Verisign, DigiCert, ...
+>@
+>@* Public key infrastructure: infrastructure that coulkd create, manage, deliver and destroy certificats.
+>@To create a certificat, the authority take a public key, generate a new hash and sign it with its own
+>@private key.
+>@
+>@* Usefull sites to visit:
+>@http://rot13.com
+>@http://crypo.pw
+>@http://www.dcode.fr
+>@
+>@#####################################################################################################################
+>@

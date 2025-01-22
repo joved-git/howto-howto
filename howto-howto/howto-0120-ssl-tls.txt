@@ -1,0 +1,96 @@
+Transport Layer Security (TLS) or “Transport Layer Security”, and its 
+predecessor the Secure Sockets Layer (SSL), are 
+protocols for securing exchanges via computer network, in particular by 
+Internet. 
+
+The SSL protocol was originally developed by Netscape Communications 
+Corporation for its web browser. The Internet Engineering standards body 
+Task Force (IETF) continued its development by renaming it Transport Layer 
+Security (TLS). We sometimes speak of SSL/TLS to designate SSL or TLS interchangeably. 
+
+We will see in this file explanations and important concepts to know
+to understand SSL and TLS protocols.
+
+Here are some definitions and concepts:
+
+* SSL means Secure Sockets Layer.
+
+* TLS means Transport Layer Security.
+
+* They are designed to use TCP as a complete secured service.
+
+* SSL and TLS are the same protocols but with different algorithms.
+
+* TLS is a version of SSL because TLS is the successor of SSL.
+
+* TLS allows:
+  -Authentification.
+  -Confidentiality.
+  -Integrity.
+
+* How TLS is functionning ?
+* Fonctionnement de TLS:
+1. Negotiation.
+Two actors are going to negociate to know which algorithme they will use.
+Echanged messages are tagged "Client Hello" and "Server hello". This is clearly visible
+  into Wireshark.
+
+2. Keys exchange
+Actors share their keys and we can authentificate the server.
+
+3. Symetrical encryption.
+Public keys are exchanged then symetrical message exchange after.
+
+>@
+>@##########################################################################################
+>@#                                                                                        #
+>@# [ TLS et SSL ]                                                                         #
+>@#                                                                                        #
+>@# Transport Layer Security (TLS) or “Transport Layer Security”, and its predecessor the  #
+>@# Secure Sockets Layer (SSL), are protocols for securing exchanges via computer network, #
+>@# in particular by Internet.                                                             #
+>@#                                                                                        #
+>@# The SSL protocol was originally developed by Netscape Communications                   #
+>@# Corporation for its web browser. The Internet Engineering standards body               #
+>@# Task Force (IETF) continued its development by renaming it Transport Layer             #
+>@# Security (TLS). We sometimes speak of SSL/TLS to designate SSL or TLS interchangeably. #
+>@#                                                                                        #
+>@# We will see in this file explanations and important concepts to knowto understand SSL  #
+>@# and TLS protocols.                                                                     #
+>@#                                                                                        #
+>@# See: howto-0121-ssl-tls-fr.txt                                                         #
+>@#                                                                                        #
+>@#----------------------------------------------------------------------------------------#
+>@
+>@Here are some definitions and concepts:
+>@
+>@* SSL means Secure Sockets Layer.
+>@
+>@* TLS means Transport Layer Security.
+>@
+>@* They are designed to use TCP as a complete secured service.
+>@
+>@* SSL and TLS are the same protocols but with different algorithms.
+>@
+>@* TLS is a version of SSL because TLS is the successor of SSL.
+>@
+>@* TLS allows:
+>@  -Authentification.
+>@  -Confidentiality.
+>@  -Integrity.
+>@
+>@* How TLS is functionning ?
+>@* Fonctionnement de TLS:
+>@1. Negotiation.
+>@Two actors are going to negociate to know which algorithme they will use.
+>@Echanged messages are tagged "Client Hello" and "Server hello". This is clearly visible
+>@  into Wireshark.
+>@
+>@2. Keys exchange
+>@Actors share their keys and we can authentificate the server.
+>@
+>@3. Symetrical encryption.
+>@Public keys are exchanged then symetrical message exchange after.
+>@
+>@##########################################################################################
+>@

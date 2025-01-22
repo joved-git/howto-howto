@@ -1,0 +1,93 @@
+Le Transport Layer Security (TLS) ou « Sécurité de la couche de transport », et son 
+prédécesseur la Secure Sockets Layer (SSL) ou « Couche de sockets sécurisée », sont 
+des protocoles de sécurisation des échanges par réseau informatique, notamment par 
+Internet. 
+
+Le protocole SSL a été développé à l'origine par Netscape Communications 
+Corporation pour son navigateur Web. L'organisme de normalisation Internet Engineering 
+Task Force (IETF) en a poursuivi le développement en le rebaptisant Transport Layer 
+Security (TLS). On parle parfois de SSL/TLS pour désigner indifféremment SSL ou TLS. 
+
+Nous allons voir dans ce fichiers des explications et notions importantes à connaitre
+pour comprendre les protocoles SSL et TLS.
+
+Voici quelques définitions et concepts:
+
+* SSL signifie Secure Sockets Layer.
+
+* TLS signifie Transport Layer Security.
+
+* Ils sont prévus pour utiliser TCP en tant que service bout-en-bout sécurisé.
+
+* SSL et TLS sont les memes protocoles avec différents algorithmes.
+
+* TLS est une version de SSL car TLS est le successeur de SSL.
+
+* TLS permet:
+  -l'authentifiction.
+  -la confidentialité.
+  -l'intégrité.
+
+* Fonctionnement de TLS:
+1. Négociation.
+Les acteurs vont négicier pour savoir quel algorithme va être utilisé.
+Les messages échangés sont taggés "Client Hello" et "Server Hello". Cela est visible 
+  sous Wireshark.
+
+2. Échange des clés
+Les acteurs échangent des clés et on authentifie le serveur.
+
+3. Chiffrement symétrique.
+Échange de clés publiques puis échange de message en clé symétrique.
+
+>@
+>@##########################################################################################
+>@#                                                                                        #
+>@# [ TLS et SSL ]                                                                         #
+>@#                                                                                        #
+>@# Le Transport Layer Security (TLS) ou « Sécurité de la couche de transport », et son    #
+>@# prédécesseur la Secure Sockets Layer (SSL) ou « Couche de sockets sécurisée », sont    #
+>@# des protocoles de sécurisation des échanges par réseau informatique, notamment par     #
+>@# Internet.                                                                              #
+>@#                                                                                        #
+>@# Le protocole SSL a été développé à l'origine par Netscape Communications Corporation   #
+i>@# pour son navigateur Web. L'organisme de normalisation Internet Engineering Task Force #
+>@# (IETF) en a poursuivi le développement en le rebaptisant Transport Layer Security      #
+>@# (TLS). On parle parfois de SSL/TLS pour désigner indifféremment SSL ou TLS.            #
+>@#                                                                                        #
+>@# Nous allons voir dans ce fichiers des explications et notions importantes à connaitre  #
+>@# pour comprendre les protocoles SSL et TLS.                                             # 
+>@#                                                                                        #
+>@#----------------------------------------------------------------------------------------#
+>@
+>@Voici quelques définitions et concepts:
+>@
+>@* SSL signifie Secure Sockets Layer.
+>@
+>@* TLS signifie Transport Layer Security.
+>@
+>@* Ils sont prévus pour utiliser TCP en tant que service bout-en-bout sécurisé.
+>@
+>@* SSL et TLS sont les memes protocoles avec différents algorithmes.
+>@
+>@* TLS est une version de SSL car TLS est le successeur de SSL.
+>@
+>@* TLS permet:
+>@  -l'authentifiction.
+>@  -la confidentialité.
+>@  -l'intégrité.
+>@
+>@* Fonctionnement de TLS:
+>@1. Négociation.
+>@Les acteurs vont négicier pour savoir quel algorithme va être utilisé.
+>@Les messages échangés sont taggés "Client Hello" et "Server Hello". Cela est visible 
+>@  sous Wireshark.
+>@
+>@2. Échange des clés
+>@Les acteurs échangent des clés et on authentifie le serveur.
+>@
+>@3. Chiffrement symétrique.
+>@Échange de clés publiques puis échange de message en clé symétrique.
+>@
+>@##########################################################################################
+>@
