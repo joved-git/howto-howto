@@ -52,7 +52,7 @@ prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui 
 >@# prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui utilisé sur tout type de réseau     #
 >@# (réseau étendu, dorsale Internet, automobile…) mais aussi pour des communications sur circuit imprimé.            #
 >@#                                                                                                                   #
->@# Voir: howto-0140-ethernet.txt                                                                                     #
+>@# Voir: howto-0140-ethernet-protocol.txt                                                                            #
 >@#                                                                                                                   #
 >@#--------------------------------------------------------------------------------------------------------------------
 >@
