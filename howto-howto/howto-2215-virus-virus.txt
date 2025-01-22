@@ -1,0 +1,85 @@
+Today, the term virus is generally used to describe a malicious software of any 
+sort. At the origin, virus described software with the capacity of auto 
+replication from one system to another. Tthe analogy with biology was clear.
+
+Virus are very often inside another software named host software.
+
+Virus is different from worm because the latter is autonomous (no need of host).
+
+-> Different types of virus
+-Polymorphic virus: change of signature, comportment, internal structure.
+-Batch virus (a .bat file).
+-Macro virus (inside Excel, for example).
+-Stealer: virus that is used to steal very precises data.
+-Crypter: tool that is used to crypt others malicious softwares to avoid
+  antivirus detection.
+
+-> Example of a batch virus
+This is a .bat file with commands to be executed one by one.
+Batch virus is easy to detect (strange icon, extention is .bat).
+For example, Virus Canibal is a creator of batch virus. It is written in VB.
+
+-> Example os stealer
+Some stealers are written to retrieve password for many applications (web browsers,
+games, ...).
+
+-> Example of crypter
+An automatic crypter is used to crypt malicious and transform it as indetectable.
+
+-> How to prevent virus
+Some technics to detect backdoor.
+  -Avoid to use password saver (browser) and use master password.
+  -Verify the integrity of all files (hash verification).
+  -Make a scan with the anti-virus.
+  -Use Virustotal.
+  -Use tendencious softwares into sandbox (execution environment):
+     https://malwr.com or https://cuckoosandbox.org
+  -Keep vigilant (scan before use, don't trust anything).
+
+>@
+>@#####################################################################################
+>@#                                                                                   #
+>@# [ Virus | Stealer | Crypter ]                                                     #
+>@#                                                                                   #
+>@# Today, the term virus is generally used to describe a malicious software of any   #
+>@# sort. At the origin, virus described software with the capacity of auto           #
+>@# replication from one system to another. Tthe analogy with biology was clear.      #
+>@#                                                                                   #
+>@# Virus are very often inside another software named host software.                 #
+>@#                                                                                   #
+>@# Virus is different from worm because the latter is autonomous (no need of host).  #
+>@#                                                                                   #
+>@#-----------------------------------------------------------------------------------#
+>@
+>@-> Different types of virus
+>@-Polymorphic virus: change of signature, comportment, internal structure.
+>@-Batch virus (a .bat file).
+>@-Macro virus (inside Excel, for example).
+>@-Stealer: virus that is used to steal very precises data.
+>@-Crypter: tool that is used to crypt others malicious softwares to avoid
+>@  antivirus detection.
+>@
+>@-> Example of a batch virus
+>@This is a .bat file with commands to be executed one by one.
+>@Batch virus is easy to detect (strange icon, extention is .bat).
+>@For example, Virus Canibal is a creator of batch virus. It is written in VB.
+>@
+>@-> Example os stealer
+>@Some stealers are written to retrieve password for many applications (web browsers,
+>@games, ...).
+>@
+>@-> Example of crypter
+>@An automatic crypter is used to crypt malicious and transform it as indetectable.
+>@
+>@-> How to prevent virus
+>@Some technics to detect backdoor.
+>@  -Avoid to use password saver (browser) and use master password.
+>@  -Verify the integrity of all files (hash verification).
+>@  -Make a scan with the anti-virus.
+>@  -Use Virustotal.
+>@  -Use tendencious softwares into sandbox (execution environment):
+>@     https://malwr.com or https://cuckoosandbox.org
+>@  -Keep vigilant (scan before use, don't trust anything).
+>@
+>@#####################################################################################
+>@

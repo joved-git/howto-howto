@@ -1,9 +1,9 @@
 A keylogger is a discrete software that capture the keys hitten on the keyboard
 and put that keys into a file.
-Keyloggers are in the family of spywares and must be launched at boot, often by
+keyloggers are in the family of spywares and must be launched at boot, often by
 the Registry.
 
--> Easy to create a Keylogger
+-> Easy to create a keylogger
 By using Internet, it is very easy to ceate your own keylogger.
 
 -> How to prevent
@@ -22,15 +22,15 @@ Some technics to detect keyloggers:
 >@#                                                                                  #
 >@# A keylogger is a discrete software that capture the keys hitten on the keyboard  #
 >@# and put that keys into a file.                                                   #
->@# Keyloggers are in the family of spywares and must be launched at boot, often by  #
+>@# keyloggers are in the family of spywares and must be launched at boot, often by  #
 >@# the Registry.                                                                    #
 >@#                                                                                  #
 >@#----------------------------------------------------------------------------------# 
 >@
->@-> Easy to create a Keylogger
+>@-> Easy to create a keylogger
 >@By using Internet, it is very easy to ceate your own keylogger.
 >@
->@-> How to prevent
+>@-> How to prevent keyloggers
 >@Some technics to detect keyloggers:
 >@  -Make a scan with the anti-virus.
 >@  -Search for software that is launched at startup (Registry).
