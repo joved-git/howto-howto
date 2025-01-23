@@ -1,0 +1,138 @@
+L’HyperText Transfer Protocol, généralement abrégé HTTP, littéralement « protocole de transfert hypertexte », est un protocole de 
+communication client-serveur développé pour le World Wide Web. HTTPS (avec S pour secure, soit « sécurisé ») est la variante 
+sécurisée par le chiffrement et l'authentification.
+
+HTTP est, avec HTML et les URL, une des trois inventions fondamentales de Tim Berners-Lee pour créer le World Wide Web.
+
+Les clients HTTP les plus connus sont les navigateurs Web. HTTP est aussi utilisé hors du Web pour mettre en œuvre les interfaces 
+de programmation distribuée fondées sur SOAP et REST. 
+
+* HTTP est un protocole utilisé pour transmettre des informations sur le Web.
+
+* HTTP est un protocole non étatique. Cela signifie qu’il ne connaît pas les demandes précédentes.
+
+* Les sessions doivent être enregistrées dans des petits fichiers nommés cookies (sur le client) ou sur le serveur (les sessions 
+sont conservées).
+
+* HTTP fonctionne avec les requêtes et les réponses.
+
+* Différents types de requêtes:
+-GET : récupérer les données du serveur.
+-POST : le serveur donne les données.
+-HEAD:
+-DELETE:
+
+* Différents types de réponses:
+-commençant par 200 : signifie Succès.
+-commençant par 300 : signifie des redirections.
+-commençant par 400 : signifie des erreurs client.
+-commençant par 500 : signifie des erreurs de serveur.
+
+                          _____________________________________________________________________________  
+                         |                                                                             |
+                         |                      Request header HTTP (example)                          |
+                         |                                                                             |
+                         |                          GET | POST / HTTP/1.1                              |
+                         |                            HOST:  google.fr                                 |
+                         |         User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT           | | -> optionel
+                         |                        Accept-Language: fr-fr                               | |
+                         |                        Referer:  cyberini.com                               | |
+                         |_____________________________________________________________________________|    
+                         |                                                                             |
+                         |                nom_utilisateur=joel¹mode_de_passe=12345six                  | | -> Données préentes si POST
+                         |_____________________________________________________________________________|    
+                         |                                                                             |
+ Couche 5 / Applicatin   |                       Response header HTTP (example)                        |
+                         |                                                                             |
+                         |                              HTTP/1.1 200 OK                                |
+                         |                    Date: Mon, 27 Jul 2020 12:28:53 GMTT                     |
+                         |                        Server: Apache/2.2.14 (Win32)                        |
+                         |                Last modified: Wed, 22 Jul 2020 19:15:56 GMT                 |
+                         |                             Content-Length: 88                              |
+                         |                          Content-Type:  text/html                           |
+                         |_____________________________________________________________________________| 
+                         |                                                                             | 
+                         |                               <DOCTYPE html>)                               | | -> contenu
+                         |                                   <html>                                    | |
+                         |                                   <head>                                    | |
+                         |                            <title>Google</title>                            | |
+                         |                                  </head>                                    | |
+                         |                             <body> ... </body>                              | |
+                         |                                  </html>                                    | |
+                         |_____________________________________________________________________________| |
+
+>@
+>@#########################################################################################################################################
+>@#                                                                                                                                       #
+>@# [ HTTP ]                                                                                                                              #
+>@#                                                                                                                                       #
+>@# L’HyperText Transfer Protocol, généralement abrégé HTTP, littéralement « protocole de transfert hypertexte », est un protocole de     #
+>@# communication client-serveur développé pour le World Wide Web. HTTPS (avec S pour secure, soit « sécurisé ») est la variante          #
+>@# sécurisée par le chiffrement et l'authentification.                                                                                   #
+>@#                                                                                                                                       #
+>@# HTTP est, avec HTML et les URL, une des trois inventions fondamentales de Tim Berners-Lee pour créer le World Wide Web.               #
+>@#                                                                                                                                       #
+>@# Les clients HTTP les plus connus sont les navigateurs Web. HTTP est aussi utilisé hors du Web pour mettre en œuvre les interfaces     #
+>@# de programmation distribuée fondées sur SOAP et REST.                                                                                 #
+>@#                                                                                                                                       #
+>@# Voir: howto-0165-http-protocol.txt                                                                                                    #
+>@#                                                                                                                                       #
+>@#---------------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@* HTTP est un protocole utilisé pour transmettre des informations sur le Web.
+>@
+>@* HTTP est un protocole non étatique. Cela signifie qu’il ne connaît pas les demandes précédentes.
+>@
+>@* Les sessions doivent être enregistrées dans des petits fichiers nommés cookies (sur le client) ou sur le serveur (les sessions 
+>@sont conservées).
+>@
+>@* HTTP fonctionne avec les requêtes et les réponses.
+>@
+>@* Différents types de requêtes:
+>@-GET : récupérer les données du serveur.
+>@-POST : le serveur donne les données.
+>@-HEAD:
+>@-DELETE:
+>@
+>@* Différents types de réponses:
+>@-commençant par 200 : signifie Succès.
+>@-commençant par 300 : signifie des redirections.
+>@-commençant par 400 : signifie des erreurs client.
+>@-commençant par 500 : signifie des erreurs de serveur.
+>@
+>@                          _____________________________________________________________________________  
+>@                         |                                                                             |
+>@                         |                      Request header HTTP (example)                          |
+>@                         |                                                                             |
+>@                         |                          GET | POST / HTTP/1.1                              |
+>@                         |                            HOST:  google.fr                                 |
+>@                         |         User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT           | | -> optionel
+>@                         |                        Accept-Language: fr-fr                               | |
+>@                         |                        Referer:  cyberini.com                               | |
+>@                         |_____________________________________________________________________________|    
+>@                         |                                                                             |
+>@                         |                nom_utilisateur=joel¹mode_de_passe=12345six                  | | -> Données préentes si POST
+>@                         |_____________________________________________________________________________|    
+>@                         |                                                                             |
+>@ Couche 5 / Applicatin   |                       Response header HTTP (example)                        |
+>@                         |                                                                             |
+>@                         |                              HTTP/1.1 200 OK                                |
+>@                         |                    Date: Mon, 27 Jul 2020 12:28:53 GMTT                     |
+>@                         |                        Server: Apache/2.2.14 (Win32)                        |
+>@                         |                Last modified: Wed, 22 Jul 2020 19:15:56 GMT                 |
+>@                         |                             Content-Length: 88                              |
+>@                         |                          Content-Type:  text/html                           |
+>@                         |_____________________________________________________________________________| 
+>@                         |                                                                             | 
+>@                         |                               <DOCTYPE html>)                               | | -> contenu
+>@                         |                                   <html>                                    | |
+>@                         |                                   <head>                                    | |
+>@                         |                            <title>Google</title>                            | |
+>@                         |                                  </head>                                    | |
+>@                         |                             <body> ... </body>                              | |
+>@                         |                                  </html>                                    | |
+>@                         |_____________________________________________________________________________| |
+>@
+>@
+>@#########################################################################################################################################
+>@

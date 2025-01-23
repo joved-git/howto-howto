@@ -1,22 +1,29 @@
+                       ___________________
+                      |                   |
+* 5 - Application --> |  7. Application   |              [     Data    ]
+                      |  6. Presentation  |
+                      |  5. Session       |
+                      |___________________|
 
-* 4 - Application       7. Application                  [     Data   ]
-                        6. Presentation
-                        5. Session
-* 3 - Transport         4. Transport                    [  Datagrams  ]
-* 2 - Internet          3. Network                      [   Packets   ]
-* 1 - Host to network   2. Link                         [    Frames   ]
-                        1. Physical                     [     Bits    ]
+* 4 - Transport          4. Transport                    [  Datagrams  ]
+* 3 - Internet           3. Network                      [   Packets   ]
+* 2 - Link               2. Link                         [    Frames   ]
+* 1 - Physical           1. Physical                     [     Bits    ]
 
 >@
 >@###############################################################################
 >@
->@* 4 - Application       7. Application                  [     Data   ]
->@                        6. Presentation
->@                        5. Session
->@* 3 - Transport         4. Transport                    [  Datagrams  ]
->@* 2 - Internet          3. Network                      [   Packets   ]
->@* 1 - Host to network   2. Link                         [    Frames   ]
->@                        1. Physical                     [     Bits    ]
+>@                          ___________________
+>@                         |                   |
+>@   * 5 - Application --> |  7. Application   |              [     Data    ]
+>@                         |  6. Presentation  |
+>@                         |  5. Session       |
+>@                         |___________________|
+>@
+>@   * 4 - Transport          4. Transport                    [  Datagrams  ]
+>@   * 3 - Internet           3. Network                      [   Packets   ]
+>@   * 2 - Link               2. Link                         [    Frames   ]
+>@   * 1 - Physical           1. Physical                     [     Bits    ]
 >@
 >@###############################################################################
 >@
