@@ -60,7 +60,7 @@ Avec:
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ IP | IPv4 ]                                                                                                     #
+>@# [ Le protocole IP | Le protocole IPv4 ]                                                                           #
 >@#                                                                                                                   #
 >@# Internet Protocol (protocole internet, abrégé en IP) est une famille de protocoles de communication de réseaux    #
 >@# informatiques conçus pour être utilisés sur Internet. Les protocoles IP sont au niveau 3 dans le modèle OSI.      #
@@ -70,7 +70,7 @@ Avec:
 >@#                                                                                                                   #
 >@# Voir: howto-0150-ip-protocol.txt                                                                                  #
 >@# Voir: howto-0152-ipv4-protocol.txt                                                                                #
->@# Voir: howto-0153-ipv4-protocol-fr.txt                                                                            #
+>@# Voir: howto-0153-ipv4-protocol-fr.txt                                                                             #
 >@# Voir: howto-0154-ipv6-protocol.txt                                                                                #
 >@# Voir: howto-0155-ipv6-protocol-fr.txt                                                                             #
 >@#                                                                                                                   #

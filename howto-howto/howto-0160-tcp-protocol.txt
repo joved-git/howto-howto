@@ -1,0 +1,94 @@
+Transmission Control Protocol (literally, “transmission control protocol”), abbreviated TCP, is a transport protocol   
+reliable, in connected mode, documented in IETF RFC 92932.                                                                      
+                                                                                                                                     
+In the Internet model, also called the TCP/IP model, TCP is located above IP. In the OSI model, it corresponds to the layer      
+transport, intermediate of the network layer and the session layer. Applications transmit data streams over a        
+network connection. TCP divides the byte stream into segments whose size depends on the MTU of the underlying network (link layer       
+data).
+
+TCP was developed in 1973 and then adopted for Arpanet in 1983, replacing NCP (RFC 8013).
+
+>> TO DO <<
+
+* TCP fonctionne en mode connecté.
+
+* TCP permet de contrôler le flux de données et les congestions.
+
+* TCP permet de garantir le bon acheminement des donénes à travers le réseau (correctement, rapidement, sans erreur, sans perte 
+de paquets.
+
+* TCP établie une connexion grâce au procédé de la poingnée de main en 3 temps (3-way handhake).
+
+* Example d'échanges de données et gestion des Seq et des Ack:
+
+           SYN ->                 (Seq A,           Ack /)                         SYN ->                 (Seq 0,           Ack 0)
+           <- SYN-ACK             (Seq B,           Ack A+1)                       <- SYN-ACK             (Seq 0,           Ack 1)
+           ACK ->                 (Seq A'=A+1,      Ack B+1)                       ACK ->                 (Seq 1,           Ack 1)
+           PSH Data (len 400) ->  (Seq A',          Ack B+1)                       PSH Data (len 400) ->  (Seq 1 ,          Ack 1)
+           <- ACK (len 500)       (Seq B'=B+1,      Ack A'+400)                    <- ACK (len 500)       (Seq 1,           Ack 401)
+           ACK ->                 (Seq A''=A'+400 , Ack B'+500)                    ACK ->                 (Seq 401 ,        Ack 501)
+   
+
+                         ________________________________________________________________________________________________________
+                        |                                                   |                                                    |
+ Couche 4 / Transport   |                     Source Port                   |                 Destination port                   |
+                        |                      16  bits                     |                      16 bits                       |
+                        |___________________________________________________|____________________________________________________|
+                        |                                                                                                        |
+                        |                                            Sequence number                                             |
+                        |                                                32 bits                                                 |
+                        |________________________________________________________________________________________________________|
+                        |                                                                                                        |
+                        |                                          Acknowledgment number                                         |
+                        |                                                32 bits                                                 |
+                        |________________________________________________________________________________________________________|
+                        |        |          |   |   |   |   |   |   |   |   |                                                    |   
+                        |  Data  | Reserved | NS|CWR|ECE|URG|ACK|PSH|SYN|FIN|                    Windows size                    |
+                        | Offset |  3 bits  | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |                      16 bits                       |
+                        | 4 bits |          |   |   |   |   |   |   |   |   |                                                    |
+                        |________|__________|___|___|___|___|___|___|___|___|____________________________________________________|
+                        |                                                   |                                                    |
+                        |                      Checksum                     |                URG pointer (if URG)                |
+                        |                      16  bits                     |                      16 bits                       |
+                        |___________________________________________________|____________________________________________________|
+                        |                                                                                                        |
+                        |                                                Options                                                 |
+                        |                                                32 bits                                                 |
+                        |________________________________________________________________________________________________________|
+                        |                                                                                                        |
+                        |                                                  Data                                                  |
+                        |                                                [ ... ]                                                 |
+                        |________________________________________________________________________________________________________|
+                        
+
+Avec:
+
+   Source port: le port sur la Source                     |   Destination port: le port sur la destination
+   Sequence number: numéro de la séquence                 |   Acknowledgment number: numéro d'acquittement
+   Data offset: taille del'entête avec options            |   Reserver: champ réservé
+                                                          | 
+   Flags                                                  |   Flags
+     NS:                                                  |     CWR:
+     ECE:                                                 |     URG: la donnée est urgente
+     ACK: il s'agit d'un ACK                              |     PSH: (pour PUSH) c'est l'envoi de données
+     RST: il y a eu une rupture de connexion              |     SYN: il s'agit d'un SYN
+     FIN: c'est la fin de la connexion                    |
+                                                          |
+   Windows size: Taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
+                 avant acquittement (calcul auto)         |   URG pointer: pointeur vers données urgentes (si URG=1)
+  Options: options                                        |   Data: les données brutes
+
+>@
+>@##########################################################################################################################################
+>@#                                                                                                                                        # 
+>@# [ Le prococole TCP ]                                                                                                                   #
+>@#                                                                                                                                        #
+>@# Voir: howto-0057-tcp-three-way-handshake.txt                                                                                           #
+>@# Voir: howto-0058-tcp-three-way-handshake-fr.txt                                                                                        #
+>@# Voir: howto-0160-tcp-protocol.txt                                                                                                      #
+>@#                                                                                                                                        #
+>@#----------------------------------------------------------------------------------------------------------------------------------------# 
+>@
+>@
+>@##########################################################################################################################################
+>@

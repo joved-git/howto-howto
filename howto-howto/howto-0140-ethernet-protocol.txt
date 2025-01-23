@@ -36,7 +36,7 @@ designed for transmissions on local networks, Ethernet is today used on all type
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ Ethernet ]                                                                                                      #
+>@# [ Ethernet protocol ]                                                                                             #
 >@#                                                                                                                   #
 >@# Ethernet is a communications protocol used for computer networks, leveraging switching of packages. It performs   #
 >@# the functions of the physical layer and the data link layer (layers 1 and 2) of the OSI model. It is an           #

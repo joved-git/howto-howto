@@ -55,12 +55,12 @@ With:
    Protocol: what will be into the Data (Example TCP)    |   Header Checksum: checksum
                                                          | 
    Source IP address: IP Source address                  |   Destination IP address: IP destination address
-   Options: sending options                              |   Data: the raw data
+   Options: sending options                              |   Data: raw data
 
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ IP ]                                                                                                            #
+>@# [ IP protocol | IPv4 protocol ]                                                                                   #
 >@#                                                                                                                   #
 >@# Internet Protocol (internet protocol, abbreviated as IP) is a family of network communication protocols computers #
 >@# designed for use on the Internet. IP protocols are at level 3 in the OSI model.                                   #
@@ -130,7 +130,7 @@ With:
 >@   Protocol: what will be into the Data (Example TCP)    |   Header Checksum: checksum
 >@                                                         | 
 >@   Source IP address: IP Source address                  |   Destination IP address: IP destination address
->@   Options: sending options                              |   Data: the raw data
+>@   Options: sending options                              |   Data: raw data
 >@
 >@#####################################################################################################################
 >@

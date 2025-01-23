@@ -36,7 +36,7 @@ prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui 
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ Ethernet ]                                                                                                      #
+>@# [ Le protocole Ethernet ]                                                                                         #
 >@#                                                                                                                   #
 >@# Ethernet est un protocole de communication utilisé pour les réseaux informatiques, exploitant la commutation      #
 >@# de paquets. Il réalise les fonctions de la couche physique et de la couche liaison de données (couches 1 et 2)    #

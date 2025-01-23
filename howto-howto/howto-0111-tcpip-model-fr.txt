@@ -1,22 +1,22 @@
 
-* 4 - Application 	7. Application			[   Données   ]
-			6. Presentation
-			5. Session
-* 3 - Transport 	4. Transport			[ Datagrammes ]
-* 2 - Internet		3. Réseau			[   Paquets   ]
-* 1 - Accès au réseau   2. Liaison 			[    Trames   ]
-			1. Physique 			[     Bits    ]
+* 4 - Application       7. Application                  [   Données   ]
+                        6. Presentation
+                        5. Session
+* 3 - Transport         4. Transport                    [ Datagrammes ]
+* 2 - Internet          3. Réseau                       [   Paquets   ]
+* 1 - Accès au réseau   2. Liaison                      [    Trames   ]
+                        1. Physique                     [     Bits    ]
 
 >@
 >@###############################################################################
 >@
->@* 4 - Application      |  7. Application		[   Données   ]
->@		       |  6. Presentation
->@		       |  5. Session
->@* 3 - Transport        |  4. Transport			[ Datagrammes ]
->@* 2 - Internet         |  3. Réseau			[   Paquets   ]
->@* 1 - Accès au réseau  |  2. Liaison 			[    Trames   ]
->@		       |  1. Physique 			[     Bits    ]
+>@* 4 - Application       7. Application                  [   Données   ]
+>@                        6. Presentation
+>@                        5. Session
+>@* 3 - Transport         4. Transport                    [ Datagrammes ]
+>@* 2 - Internet          3. Réseau                       [   Paquets   ]
+>@* 1 - Accès au réseau   2. Liaison                      [    Trames   ]
+>@                        1. Physique                     [     Bits    ]
 >@
 >@###############################################################################
 >@
