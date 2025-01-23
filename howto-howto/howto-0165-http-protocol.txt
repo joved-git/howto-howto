@@ -1,4 +1,4 @@
-Hypertext Transfer Protocol, generally abbreviated HTTP, is a client-server communication protocol developed for the World 
+HyperText Transfer Protocol, generally abbreviated HTTP, is a client-server communication protocol developed for the World 
 Wide Web. HTTPS (with S for secure) is the variant secured by encryption and authentication.
 
 HTTP is, along with HTML and URLs, one of Tim Berners-Lee's three fundamental inventions to create the World Wide Web.
