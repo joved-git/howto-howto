@@ -1,0 +1,121 @@
+L'HyperText Transfer Protocol Secure (HTTPS, littéralement « protocole de transfert hypertextuel 
+sécurisé ») est la combinaison du HTTP avec une couche de chiffrement TLS3.
+
+HTTPS permet au visiteur de vérifier l'identité du site web auquel il accède, grâce à un certificat 
+d'authentification émis par une autorité tierce, réputée fiable (et faisant généralement partie de 
+la liste blanche des navigateurs internet et des systèmes d'exploitation) . Il garantit théoriquement 
+la confidentialité et l'intégrité des données envoyées par l'utilisateur (notamment des informations 
+saisies dans les formulaires) et reçues du serveur. Il peut permettre de valider l'identité du 
+visiteur, si celui-ci utilise également un certificat d'authentification client émis par une autorité 
+fiable.
+
+* HTTPS est la version sécurisée de HTTP.
+
+* HTTPS utilise HTTP et TLS  pour sécuriser les données et les échanges.
+
+* Le but est de vérifier l'authenticité du site et de chiffrer les données.
+
+* Voyons comment cela fonctionne:
+
+                 CLIENT                                           SERVER
+                   |      ---------------- SYN --------------->      |          
+                   |      <------------- SYN-ACK --------------      |
+                   |      ---------------- ACK --------------->      |          
+                   |                                                 | 
+                   |      ------------ CLIENT HELLO ----------->     |          
+                   |      <----------- SERVER HELLO ------------     |
+                   |                                                 |
+                   |                                                 |
+     CLIENT vérifie le certificat                                    |
+                   |                                                 |
+                   |                                                 |
+  CLIENT génère la clé premaster secret                              |
+        puis l'envoie au server        ------------->   SERVER decrypt the premaster secret
+ (chiffré avec la clé publique du SERVER)                            |
+                   |                                                 |
+                   |                                                 |
+    CLIENT génère une clé de session                  SERVER génère une clé de session
+                 avec                                               avec
+            client random                                      client random
+            server random                                      server random
+           premaster secret                                   premaster secret
+                   |                                                 |
+                   |                                                 |
+        CLIENT et SERVER échangent maintenant des données avec un algorithme à clé symétrique
+                                (la clé est la clé de session)
+
+
+CLIENT HELLO: le client démarre une connexion sécurisés. Il donne au serveur la liste de ses algorithmes connus
+              puis envoie une suite aléatoire d'octets (le client random).
+
+SERVER HELLO: Le server donnes sont certificat, sa clé publique et choisit l'algorithme parmi ceux proposés.
+              (exemple: TLS_RSA_AES256_SHA128). Le server calcule également une suite d'octets (le server 
+              random) puis l'envoie au client.
+
+
+>@##########################################################################################################
+>@#                                                                                                        #
+>@# [ Protocole HTTPS ]                                                                                    #
+>@#                                                                                                        #
+>@# L'HyperText Transfer Protocol Secure (HTTPS, littéralement « protocole de transfert hypertextuel       #
+>@# sécurisé ») est la combinaison du HTTP avec une couche de chiffrement TLS3.                            #
+>@#                                                                                                        #
+>@# HTTPS permet au visiteur de vérifier l'identité du site web auquel il accède, grâce à un certificat    #
+>@# d'authentification émis par une autorité tierce, réputée fiable (et faisant généralement partie de     #
+>@# la liste blanche des navigateurs internet et des systèmes d'exploitation) . Il garantit théoriquement  #
+>@# la confidentialité et l'intégrité des données envoyées par l'utilisateur (notamment des informations   #
+>@# saisies dans les formulaires) et reçues du serveur. Il peut permettre de valider l'identité du         #
+>@# visiteur, si celui-ci utilise également un certificat d'authentification client émis par une autorité  #
+>@# fiable.                                                                                                #
+>@#                                                                                                        #
+>@# See: howto-0165-http-protocol.txt                                                                      #
+>@# See: howto-0166-http-protocol-fr.txt                                                                   #
+>@#                                                                                                        #
+>@#--------------------------------------------------------------------------------------------------------#
+>@
+>@* HTTPS est la version sécurisée de HTTP.
+>@
+>@* HTTPS utilise HTTP et TLS  pour sécuriser les données et les échanges.
+>@
+>@* Le but est de vérifier l'authenticité du site et de chiffrer les données.
+>@
+>@* Voyons comment cela fonctionne:
+>@
+>@                 CLIENT                                           SERVER
+>@                   |      ---------------- SYN --------------->      |          
+>@                   |      <------------- SYN-ACK --------------      |
+>@                   |      ---------------- ACK --------------->      |          
+>@                   |                                                 | 
+>@                   |      ------------ CLIENT HELLO ----------->     |          
+>@                   |      <----------- SERVER HELLO ------------     |
+>@                   |                                                 |
+>@                   |                                                 |
+>@     CLIENT vérifie le certificat                                    |
+>@                   |                                                 |
+>@                   |                                                 |
+>@  CLIENT génère la clé premaster secret                              |
+>@        puis l'envoie au server        ------------->   SERVER decrypt the premaster secret
+>@ (chiffré avec la clé publique du SERVER)                            |
+>@                   |                                                 |
+>@                   |                                                 |
+>@    CLIENT génère une clé de session                  SERVER génère une clé de session
+>@                 avec                                               avec
+>@            client random                                      client random
+>@            server random                                      server random
+>@           premaster secret                                   premaster secret
+>@                   |                                                 |
+>@                   |                                                 |
+>@   CLIENT et SERVER échangent maintenant des données avec un algorithme à clé symétrique
+>@                              (la clé est la clé de session)
+>@
+>@
+>@CLIENT HELLO: le client démarre une connexion sécurisés. Il donne au serveur la liste de ses algorithmes 
+>@              connus puis envoie une suite aléatoire d'octets (le client random).
+>@
+>@SERVER HELLO: Le server donnes sont certificat, sa clé publique et choisit l'algorithme parmi ceux 
+>@              proposés (exemple: TLS_RSA_AES256_SHA128). Le server calcule également une suite d'octets 
+>@              (le server random) puis l'envoie au client.
+>@
+>@
+>@##########################################################################################################
+>@

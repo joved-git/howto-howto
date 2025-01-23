@@ -1,7 +1,7 @@
 Method #1:
-$ sudo iwconfig wlan0 down
+$ sudo ifconfig wlan0 down
 $ sudo iwconfig wlan0 mode monitor
-$ sudo iwconfig wlan0 up
+$ sudo ifconfig wlan0 up
 
 Method #2:
 $ sudo airmon-ng check kill
@@ -25,9 +25,9 @@ $ sudo ip link set wlan0 up
 >@#######################################################
 >@
 >@Method #1:
->@$ sudo iwconfig wlan0 down
+>@$ sudo ifconfig wlan0 down
 >@$ sudo iwconfig wlan0 mode monitor
->@$ sudo iwconfig wlan0 up
+>@$ sudo ifconfig wlan0 up
 >@
 >@Method #2:
 >@$ sudo airmon-ng check kill
