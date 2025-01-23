@@ -1,26 +1,71 @@
+Airodump-ng is used for packet capture, capturing raw 802.11 frames. It is particularly suitable 
+for collecting WEP IVs (Initialization Vector) or WPA handshakes for the intent of using them 
+with aircrack-ng. If you have a GPS receiver connected to the computer, airodump-ng is capable 
+of logging the coordinates of the found access points.
+
+Additionally, airodump-ng writes out several files containing the details of all access points 
+and clients seen, which can be used for scripting, or creating custom tools
+
+# Find your interface name.
+$ iwconfig
+
 # Wifi observation
-$ sudo airodump-ng wlan0mon
+$ sudo airodump-ng wlan0
 
 # Wifi capture
 $ sudo airodump-ng --bssid <MAC> -w capture wlan0mon
 
-# Packets observation into Wireshark (Edit/Preferences/Protocol/IEEE 802.11)
+That create a capture-nn.cap file.
 
-# Wifi decode packets (better lisibility for wireshark)
-$ sudo airdcap-ng -e <ESSID> -w|-k <key> <capture .cap file>
+# Use Wireshark to observe Packets
+   -Edit/Preferences/Protocol/IEEE 802.11
+   -You could click on "Enable Encryption" then "Decryption keys" to give a wpa-mwd key.
+   -File/Open the capture-nn.cap file.
+
+If you want to prepare packets for a better decryption by Wireshark, use airdcap-ng:
+$ sudo airdecap-ng -e <ESSID> -p <password> <capturefile.cap>
+$ sudo airdecap-ng --help            (if nedded)
+
+You obtain a <capturefile-dec.cap> file. You can re-open it with Wireshark.
 
 >@
->@#################################################################################
+>@#####################################################################################################
+>@#                                                                                                   #
+>@# [ Airodump-ng ]                                                                                   #
+>@#                                                                                                   #
+>@# Airodump-ng is used for packet capture, capturing raw 802.11 frames. It is particularly suitable  #
+>@# for collecting WEP IVs (Initialization Vector) or WPA handshakes for the intent of using them     #
+>@# with aircrack-ng. If you have a GPS receiver connected to the computer, airodump-ng is capable    #
+>@# of logging the coordinates of the found access points.                                            #
+>@#                                                                                                   #
+>@# Additionally, airodump-ng writes out several files containing the details of all access points    #
+>@# and clients seen, which can be used for scripting, or creating custom tools                       #
+>@#                                                                                                   #
+>@# See: howto-0006-monitor_mode_wlan0.txt                                                            #
+>@#                                                                                                   #
+>@#---------------------------------------------------------------------------------------------------#
+>@
+>@# Find your interface name.
+>@$ iwconfig
 >@
 >@# Wifi observation
->@$ sudo airodump-ng wlan0mon
+>@$ sudo airodump-ng wlan0
 >@
 >@# Wifi capture
->@$ sudo airodump-ng --bssid <MAC> -w capture wlan0mon
+>@$ sudo airodump-ng --bssid <BSSID MAC> -w capture wlan0
 >@
->@# Packets observation into Wireshark (Edit/Preferences/Prootocol/IEEE 802.11)
->@# Wifi decode packets (better lisibility for wireshark)
->@$ sudo airdcap-ng -e <ESSID> -w|-k <key> <capture .cap file>
+>@ That create a capture-nn.cap file.
 >@
->@#################################################################################
+>@# Use Wireshark to observe Packets
+>@   -Edit/Preferences/Protocol/IEEE 802.11
+>@   -You could click on "Enable Encryption" then "Decryption keys" to give a wpa-mwd key.
+>@   -File/Open the capture-nn.cap file.
+>@
+>@If you want to prepare packets for a better decryption by Wireshark, use airdcap-ng:
+>@$ sudo airdecap-ng -e <ESSID> -p <password> <capturefile.cap>
+>@$ sudo airdecap-ng --help            (if nedded)
+>@
+>@You obtain a <capturefile-dec.cap> file. You can re-open it with Wireshark.
+>@
+>@#####################################################################################################
 >@
