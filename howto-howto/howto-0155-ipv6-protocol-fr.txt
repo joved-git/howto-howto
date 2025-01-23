@@ -1,0 +1,140 @@
+L'IPv6 (Internet Protocol version 6) est un protocole réseau sans connexion de la couche 3 du modèle OSI 
+(Open Systems Interconnection).
+
+IPv6 est l'aboutissement des travaux menés au sein de l'IETF au cours des années 1990 pour succéder à IPv4 
+et ses spécifications ont été finalisées dans la RFC 24601 en décembre 1998. IPv6 a été standardisé dans 
+la RFC 82002 en juillet 2017.
+
+Grâce à des adresses de 128 bits au lieu de 32 bits, IPv6 dispose d'un espace d'adressage bien plus 
+important qu'IPv4 (plus de 340 sextillions, ou 3,4 × 10^38, soit près de 7,9 × 1028 de fois plus que 
+le précédent). Cette quantité d'adresses considérable permet une plus grande flexibilité dans l'attribution 
+des adresses et une meilleure agrégation des routes dans la table de routage d'Internet. La traduction 
+d'adresse, qui a été rendue populaire par le manque d'adresses IPv4, n'est plus nécessaire. Pour avoir 
+une idée à l'échelle humaine, on pourrait adresser chaque grain de sable sur la Terre, plusieurs fois. 
+
+* IP permet d'assurer l'acheminement des paquets sur le réseau.
+
+* IP encpasule les données dans des paquets IP.
+
+* IP n'a pas pour but de garantir la récéption dans l'ordre des paquets, ni de gérer leurs pertes et
+corruptions.
+
+* Il existe 2 versions de IP: IPv4 et IPv6
+IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
+
+* Ipv6 en profite pour simplifier l'entête et apporter de nouvelles fonctionnalités: auto-configuration,
+  routage plus rapide, de la mobilité et de la sécurité (IPSEC).
+
+                       _______________________________________________________________________________________ 
+                      |          |               |                                                            |
+                      |  Version | Traffic class |                        Flow label                          |
+                      |  4  bits |   6+2  bits   |                         20  bits                           | 
+                      |__________|_______________|____________________________________________________________|
+                      |                                           |                     |                     |
+                      |               Payload length              |     Next header     |      Hop limit      |
+                      |                  16 bits                  |        8 bits       |       8  bits       |
+                      |___________________________________________|________|__________________________________|
+                      |                                                                                       |
+                      |                                   Source IP address                                   |
+ Couche 3 / Réseau    |                                        128 bits                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                 Destination IP address                                |
+                      |                                        128 bits                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                      [ Options ]                                      |
+                      |                                                                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                         Data                                          |
+                      |                                       [ ...  ]                                        |
+                      |_______________________________________________________________________________________| 
+
+Avec:
+
+   Version: version du protocole                         |   Traffic class: pour ajouter une priorité au paquet
+   Flow label: permet de noter le label pour traitement  |   Payload length: longueur des données uniquement
+               spécifique par les routeurs               |   Next header: contenu des données et/ou options
+   Hop limit: durée de vie du paquet                     |
+                                                         | 
+   Source IP address: adresse IP Source                  |   Destination IP address: adresse IP de destination
+   Options: options d'envoi                              |   Data: les données brutes
+
+>@
+>@#####################################################################################################################
+>@#                                                                                                                   #
+>@# [ IPv6 ]                                                                                                          #
+>@#                                                                                                                   #
+>@# L'IPv6 (Internet Protocol version 6) est un protocole réseau sans connexion de la couche 3 du modèle OSI          #
+>@# (Open Systems Interconnection).                                                                                   #
+>@#                                                                                                                   #
+>@# IPv6 est l'aboutissement des travaux menés au sein de l'IETF au cours des années 1990 pour succéder à IPv4 et ses #
+>@# spécifications ont été finalisées dans la RFC 24601 en décembre 1998. IPv6 a été standardisé dans la RFC 82002    #
+>@# en juillet 2017.                                                                                                  #
+>@#                                                                                                                   #
+>@# Grâce à des adresses de 128 bits au lieu de 32 bits, IPv6 dispose d'un espace d'adressage bien plus important     #
+>@# que IPv4 (plus de 340 sextillions, ou 3,4 × 10^38, soit près de 7,9 × 1028 de fois plus que le précédent). Cette  #
+>@# quantité d'adresses considérable permet une plus grande flexibilité dans l'attribution des adresses et une        #
+>@# meilleure agrégation des routes dans la table de routage d'Internet. La traduction d'adresse, qui a été rendue    #
+>@# populaire par le manque d'adresses IPv4, n'est plus nécessaire. Pour avoir une idée à l'échelle humaine, on       #
+>@# pourrait adresser chaque grain de sable sur la Terre, plusieurs fois.                                             #
+>@#                                                                                                                   #
+>@# Voir: howto-0150-ip-protocol.txt                                                                                  #
+>@# Voir: howto-0152-ipv4-protocol.txt                                                                                #
+>@# Voir: howto-0153-ipv4-protocol-fr.txt                                                                             #
+>@# Voir: howto-0154-ipv6-protocol.txt                                                                                #
+>@#                                                                                                                   #
+>@#-------------------------------------------------------------------------------------------------------------------#
+>@
+>@* IP permet d'assurer l'acheminement des paquets sur le réseau.
+>@
+>@* IP encpasule les données dans des paquets IP.
+>@
+>@* IP n'a pas pour but de garantir la récéption dans l'ordre des paquets, ni de gérer leurs pertes et
+>@corruptions.
+>@
+>@* Il existe 2 versions de IP: IPv4 et IPv6
+>@IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
+>@
+>@* Ipv6 en profite pour simplifier l'entête et apporter de nouvelles fonctionnalités: auto-configuration,
+>@  routage plus rapide, de la mobilité et de la sécurité (IPSEC).
+>@
+>@                       _______________________________________________________________________________________ 
+>@                      |          |               |                                                            |
+>@                      |  Version | Traffic class |                        Flow label                          |
+>@                      |  4  bits |   6+2  bits   |                         20  bits                           | 
+>@                      |__________|_______________|____________________________________________________________|
+>@                      |                                           |                     |                     |
+>@                      |               Payload length              |     Next header     |      Hop limit      |
+>@                      |                  16 bits                  |        8 bits       |       8  bits       |
+>@                      |___________________________________________|________|__________________________________|
+>@                      |                                                                                       |
+>@                      |                                   Source IP address                                   |
+>@ Couche 3 / Réseau    |                                        128 bits                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                 DestinationIP address                                 |
+>@                      |                                        128 bits                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                      [ Options ]                                      |
+>@                      |                                                                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                         Data                                          |
+>@                      |                                       [ ...  ]                                        |
+>@                      |_______________________________________________________________________________________| 
+>@
+>@Avec:
+>@
+>@   Version: version du protocole                         |   Traffic class: pour ajouter une priorité au paquet
+>@   Flow label: permet de noter le label pour traitement  |   Payload length: longueur des données uniquement
+>@               spécifique par les routeurs               |   Next header: contenu des données et/ou options
+>@   Hop limit: durée de vie du paquet                     |
+>@                                                         | 
+>@   Source IP address: adresse IP Source                  |   Destination IP address: adresse IP de destination
+>@   Options: options d'envoi                              |   Data: les données brutes
+>@
+>@#####################################################################################################################
+>@

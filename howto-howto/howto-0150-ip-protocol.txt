@@ -1,48 +1,136 @@
-Ethernet est un protocole de communication utilisé pour les réseaux informatiques, exploitant la commutation 
-de paquets. Il réalise les fonctions de la couche physique et de la couche liaison de données (couches 1 et 2) 
-du modèle OSI. C'est une norme internationale ISO/IEC/IEEE 8802-31.
+Internet Protocol (internet protocol, abbreviated as IP) is a family of network communication protocols 
+computers designed for use on the Internet. IP protocols are at level 3 in the OSI model. 
 
-Il a été conçu au début des années 1970 pour faire communiquer des ordinateurs rattachés à un même « éther », 
-c'est-à-dire un milieu passif capable de transférer des données, comme un câble coaxial. Depuis les années 1990, 
-on utilise très fréquemment une transmission sur un câble de paires torsadées pour la connexion des postes 
-clients, et sur fibre optique pour le cœur du réseau. D'abord développé pour un débit binaire inférieur à 3 Mb/s, 
-Ethernet est maintenant standardisé jusqu'à 400 Gb/s4 et des débits plus rapides sont à l'étude. À l'origine 
-prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui utilisé sur tout type de réseau 
-(réseau étendu, dorsale Internet, automobile…) mais aussi pour des communications sur circuit imprimé. 
+IP protocols integrate into the Internet protocol suite and enable a unique addressing service for all 
+connected terminals. 
 
-* Ethernet is born in the 1970th / 80th.
+* IP ensures the routing of packets on the network.
 
-* Ethernet must be able to ensure the communication between several machines inthe same time.
+* IP encpasulates data in IP packets.
 
-* Ethernet uses CSMA/CD protocol that allow to listen before communicate.
+* IP does not aim to guarantee the reception of packets in order, nor to manage their losses and
+corruption.
 
-* Description of an ethernet packet:
+* There are 2 versions of IP: IPv4 and IPv6:
+IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
 
-                       ________________________________________________________________________
-                      |             |              |                   |                       |
- Layer 1 / Physical   |  Preamble   |  Delimiter   |   Ethernet Data   |  Void between packet  |
-                      |  7 bytes    |    1 byte    |  64 / 1522 bytes  |   (in ms or nano s)   |
-                      |_____________|______________|___________________|_______________________|
-                                                  /                    \
-                          ______________________ /                      \_______________________
-                         /                                                                       \
-                        /_________________________________________________________________________\
-                        |            |              |             |                  |            |
- Layer 2 / Link         |  MAC Dest  |  MAC Source  |  Ethertype  |        Data      |     FCS    |
-                        |   6 bytes  |    6 bytes   |    2 bytes  |  46 / 1500 bytes |   4 bytes  |
-                        |____________|______________|_____________|__________________|____________|
+                       _______________________________________________________________________________________ 
+                      |          |          |            |        |                                           |
+                      |  Version |   IHL    |    DSCP    |  ECN   |               Total length                |
+                      |  4  bits | 4  bits  |   6 bits   | 2 bits |                 16  bits                  |
+                      |__________|__________|____________|________|___________________________________________|
+                      |                                           |        |                                  |
+                      |               Identification              | Flags  |         Fragment offset          |
+                      |                  16 bits                  | 3 bits |             13 bits              |
+                      |___________________________________________|________|__________________________________|
+                      |                     |                     |                                           | 
+                      |     Time to live    |      Protocol       |              Header Checksum              |
+                      |        8 bits       |       8 bits        |                  16 bits                  |
+                      |_____________________|_____________________|___________________________________________|
+                      |                                                                                       |
+                      |                                   Source IP address                                   |
+ Layer 3 / Network    |                                        32 bits                                        |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                 DestinationIP address                                 |
+                      |                                        32 bits                                        |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                        Options                                        |
+                      |                                       128  bits                                       |
+                      |                                                                                       |
+                      |                                                                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                         Data                                          |
+                      |                                       [ ...  ]                                        |
+                      |_______________________________________________________________________________________| 
 
+With:
+
+   Version: version of the protocole                     |   IHL (Internet Header Length): manage packet size
+   DSCP et ECN: used to notify problems                  |   Total length: longueur total: header + data
+   Identification: no more used                          |   Flags: used to fragment data in packets
+   Fragment offset: number of the fragment               |   Time to live: time to live of the packet
+   Protocol: what will be into the Data (Example TCP)    |   Header Checksum: checksum
+                                                         | 
+   Source IP address: IP Source address                  |   Destination IP address: IP destination address
+   Options: sending options                              |   Data: the raw data
 
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ Ethernet ]                                                                                                      #
+>@# [ IP ]                                                                                                            #
 >@#                                                                                                                   #
+>@# Internet Protocol (internet protocol, abbreviated as IP) is a family of network communication protocols computers #
+>@# designed for use on the Internet. IP protocols are at level 3 in the OSI model.                                   #
 >@#                                                                                                                   #
->@# See: howto-0141-ethernet-fr.txt                                                                                   #
+>@# IP protocols integrate into the Internet protocol suite and enable a unique addressing service for all connected  #
+>@# terminals.                                                                                                        #
 >@#                                                                                                                   #
->@#--------------------------------------------------------------------------------------------------------------------
+>@# See: howto-0151-ip-protocol-fr.txt                                                                                #
+>@# See: howto-0152-ipv4-protocol.txt                                                                                 #
+>@# See: howto-0153-ipv4-protocol-fr.txt                                                                              #
+>@# See: howto-0154-ipv6-protocol.txt                                                                                 #
+>@# See: howto-0155-ipv6-protocol-fr.txt                                                                              #
+>@#                                                                                                                   #
+>@#-------------------------------------------------------------------------------------------------------------------#
 >@
+>@IP protocols integrate into the Internet protocol suite and enable a unique addressing service for all 
+>@connected terminals. 
+>@
+>@* IP ensures the routing of packets on the network.
+>@
+>@* IP encpasulates data in IP packets.
+>@
+>@* IP does not aim to guarantee the reception of packets in order, nor to manage their losses and
+>@corruption.
+>@
+>@* There are 2 versions of IP: IPv4 and IPv6:
+>@IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
+>@
+>@                       _______________________________________________________________________________________ 
+>@                      |          |          |            |        |                                           |
+>@                      |  Version |   IHL    |    DSCP    |  ECN   |               Total length                |
+>@                      |  4  bits | 4  bits  |   6 bits   | 2 bits |                 16  bits                  |
+>@                      |__________|__________|____________|________|___________________________________________|
+>@                      |                                           |        |                                  |
+>@                      |               Identification              | Flags  |         Fragment offset          |
+>@                      |                  16 bits                  | 3 bits |             13 bits              |
+>@                      |___________________________________________|________|__________________________________|
+>@                      |                     |                     |                                           | 
+>@                      |     Time to live    |      Protocol       |              Header Checksum              |
+>@                      |        8 bits       |       8 bits        |                  16 bits                  |
+>@                      |_____________________|_____________________|___________________________________________|
+>@                      |                                                                                       |
+>@                      |                                   Source IP address                                   |
+>@ Layer 3 / Network    |                                        32 bits                                        |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                 DestinationIP address                                 |
+>@                      |                                        32 bits                                        |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                        Options                                        |
+>@                      |                                       128  bits                                       |
+>@                      |                                                                                       |
+>@                      |                                                                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                         Data                                          |
+>@                      |                                       [ ...  ]                                        |
+>@                      |_______________________________________________________________________________________| 
+>@
+>@With:
+>@
+>@   Version: version of the protocole                     |   IHL (Internet Header Length): manage packet size
+>@   DSCP et ECN: used to notify problems                  |   Total length: longueur total: header + data
+>@   Identification: no more used                          |   Flags: used to fragment data in packets
+>@   Fragment offset: number of the fragment               |   Time to live: time to live of the packet
+>@   Protocol: what will be into the Data (Example TCP)    |   Header Checksum: checksum
+>@                                                         | 
+>@   Source IP address: IP Source address                  |   Destination IP address: IP destination address
+>@   Options: sending options                              |   Data: the raw data
 >@
 >@#####################################################################################################################
 >@

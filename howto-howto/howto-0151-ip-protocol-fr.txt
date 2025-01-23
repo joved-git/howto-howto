@@ -4,74 +4,131 @@ informatiques conçus pour être utilisés sur Internet. Les protocoles IP sont 
 Les protocoles IP s'intègrent dans la suite des protocoles Internet et permettent un service d'adressage unique 
 pour l'ensemble des terminaux connectés. 
 
-* IP permet l'acheminement des paquets sur le réseau
+* IP permet d'assurer l'acheminement des paquets sur le réseau.
 
+* IP encpasule les données dans des paquets IP.
 
-* Ethernet doit pouvoir assurer la communication de plusieurs machines en même temps.
+* IP n'a pas pour but de garantir la récéption dans l'ordre des paquets, ni de gérer leurs pertes et
+corruptions.
 
-* Ethernet utilise le protocole CSMA/CD permettant d'écouter avant de communiquer.
+* Il existe 2 versions de IP: IPv4 et IPv6
+IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
 
-* Description d'un paquet ethernet:
+                       _______________________________________________________________________________________ 
+                      |          |          |            |        |                                           |
+Couche 3 / Réseau     |  Version |   IHL    |    DSCP    |  ECN   |               Total length                |
+                      |  4  bits | 4  bits  |   6 bits   | 2 bits |                 16  bits                  |
+                      |__________|__________|____________|________|___________________________________________|
+                      |                                           |        |                                  |
+                      |               Identification              | Flags  |         Fragment offset          |
+                      |                  16 bits                  | 3 bits |             13 bits              |
+                      |___________________________________________|________|__________________________________|
+                      |                     |                     |                                           | 
+                      |     Time to live    |      Protocol       |              Header Checksum              |
+                      |        8 bits       |       8 bits        |                  16 bits                  |
+                      |_____________________|_____________________|___________________________________________|
+                      |                                                                                       |
+                      |                                   Source IP address                                   |
+                      |                                        32 bits                                        |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                 DestinationIP address                                 |
+                      |                                        32 bits                                        |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                        Options                                        |
+                      |                                       128  bits                                       |
+                      |                                                                                       |
+                      |                                                                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                         Data                                          |
+                      |                                       [ ...  ]                                        |
+                      |_______________________________________________________________________________________| 
 
-                       ______________________________________________________________________
-                      |             |              |                   |                     |
- Couche 1 / Physique  |  Préambule  |  Delimiteur  |  Donnée Ethernet  |  Vide entre paquet  |
-                      |  7 octets   |   1 octet    | 64 / 1522 octets  |   en ms ou nano s   |
-                      |_____________|______________|___________________|_____________________|
-                                                  /                    \
-                          ______________________ /                      \_______________________
-                         /                                                                       \
-                        /_________________________________________________________________________\
-                        |            |              |             |                  |            |
- Couche 2 / Liaison     |  MAC Dest  |  MAC Source  |  Ethertype  |      Données     |     FCS    |
-                        |  6 octets  |   6 octets   |   2 octets  | 46 / 1500 octets |  4 octets  |
-                        |____________|______________|_____________|__________________|____________|
+Avec:
 
+   Version: version du protocole                         |   IHL (Internet Header Length): gère la taille du paquet
+   DSCP et ECN: utilisés pour notifier des problèmes     |   Total length: longueur total: entête + données
+   Identification: plus utilisé                          |   Flags: utilisé pour fragmenté les données en paquets
+   Fragment offset: numéro du fragment                   |   Time to live: durée de vie du paquet
+   Protocol: contenu des données (Exemple TCP)           |   Header Checksum: checksum
+                                                         | 
+   Source IP address: adresse IP Source                  |   Destination IP address: adresse IP de destination
+   Options: options d'envoi                              |   Data: les données brutes
 
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ Ethernet ]                                                                                                      #
+>@# [ IP | IPv4 ]                                                                                                     #
 >@#                                                                                                                   #
->@# Ethernet est un protocole de communication utilisé pour les réseaux informatiques, exploitant la commutation      #
->@# de paquets. Il réalise les fonctions de la couche physique et de la couche liaison de données (couches 1 et 2)    #
->@# du modèle OSI. C'est une norme internationale ISO/IEC/IEEE 8802-31.                                               #
+>@# Internet Protocol (protocole internet, abrégé en IP) est une famille de protocoles de communication de réseaux    #
+>@# informatiques conçus pour être utilisés sur Internet. Les protocoles IP sont au niveau 3 dans le modèle OSI.      #
 >@#                                                                                                                   #
->@# Il a été conçu au début des années 1970 pour faire communiquer des ordinateurs rattachés à un même « éther »,     #
->@# c'est-à-dire un milieu passif capable de transférer des données, comme un câble coaxial. Depuis les années 1990,  #
->@# on utilise très fréquemment une transmission sur un câble de paires torsadées pour la connexion des postes        #
->@# clients, et sur fibre optique pour le cœur du réseau.                                                             #
+>@# Les protocoles IP s'intègrent dans la suite des protocoles Internet et permettent un service d'adressage unique   #
+>@# pour l'ensemble des terminaux connectés.                                                                          #
 >@#                                                                                                                   #
->@# D'abord développé pour un débit binaire inférieur à 3 Mb/s,                                                       #
->@# Ethernet est maintenant standardisé jusqu'à 400 Gb/s4 et des débits plus rapides sont à l'étude. À l'origine      #
->@# prévu pour des transmissions sur des réseaux locaux, Ethernet est aujourd'hui utilisé sur tout type de réseau     #
->@# (réseau étendu, dorsale Internet, automobile…) mais aussi pour des communications sur circuit imprimé.            #
+>@# Voir: howto-0150-ip-protocol.txt                                                                                  #
+>@# Voir: howto-0152-ipv4-protocol.txt                                                                                #
+>@# Voir: howto-0153-ipv4-protocol-fr.txt                                                                            #
+>@# Voir: howto-0154-ipv6-protocol.txt                                                                                #
+>@# Voir: howto-0155-ipv6-protocol-fr.txt                                                                             #
 >@#                                                                                                                   #
->@# Voir: howto-0140-ethernet.txt                                                                                     #
->@#                                                                                                                   #
->@#--------------------------------------------------------------------------------------------------------------------
+>@#-------------------------------------------------------------------------------------------------------------------#
+
+
+>@* IP permet d'assurer l'acheminement des paquets sur le réseau.
 >@
->@* Ethernet a vu le jour dans les années 70/80.
+>@* IP encpasule les données dans des paquets IP.
 >@
->@* Ethernet doit pouvoir assurer la communication de plusieurs machines en même temps.
+>@* IP n'a pas pour but de garantir la récéption dans l'ordre des paquets, ni de gérer leurs pertes et
+>@corruptions.
 >@
->@* Ethernet utilise le protocole CSMA/CD permettant d'écouter avant de communiquer.
+>@* Il existe 2 versions de IP: IPv4 et IPv6
+>@IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
 >@
->@* Description d'un paquet ethernet:
+>@                       _______________________________________________________________________________________ 
+>@                      |          |          |            |        |                                           |
+>@                      |  Version |   IHL    |    DSCP    |  ECN   |               Total length                |
+>@                      |  4  bits | 4  bits  |   6 bits   | 2 bits |                 16  bits                  |
+>@                      |__________|__________|____________|________|___________________________________________|
+>@                      |                                           |        |                                  |
+>@                      |               Identification              | Flags  |         Fragment offset          |
+>@                      |                  16 bits                  | 3 bits |             13 bits              |
+>@                      |___________________________________________|________|__________________________________|
+>@                      |                     |                     |                                           | 
+>@                      |     Time to live    |      Protocol       |              Header Checksum              |
+>@                      |        8 bits       |       8 bits        |                  16 bits                  |
+>@                      |_____________________|_____________________|___________________________________________|
+>@                      |                                                                                       |
+>@                      |                                   Source IP address                                   |
+>@ Couche 3 / Réseau    |                                        32 bits                                        |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                 DestinationIP address                                 |
+>@                      |                                        32 bits                                        |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                        Options                                        |
+>@                      |                                       128  bits                                       |
+>@                      |                                                                                       |
+>@                      |                                                                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                         Data                                          |
+>@                      |                                       [ ...  ]                                        |
+>@                      |_______________________________________________________________________________________| 
 >@
->@                       ______________________________________________________________________
->@                      |             |              |                   |                     |
->@ Couche 1 / Physique  |  Préambule  |  Delimiteur  |  Donnée Ethernet  |  Vide entre paquet  |
->@                      |  7 octets   |   1 octet    | 64 / 1522 octets  |   en ms ou nano s   |
->@                      |_____________|______________|___________________|_____________________|
->@                                                  /                    \
->@                          ______________________ /                      \_______________________
->@                         /                                                                       \
->@                        /_________________________________________________________________________\
->@                        |            |              |             |                  |            |
->@ Couche 2 / Liaison     |  MAC Dest  |  MAC Source  |  Ethertype  |      Données     |     FCS    |
->@                        |  6 octets  |   6 octets   |   2 octets  | 46 / 1500 octets |  4 octets  |
->@                        |____________|______________|_____________|__________________|____________|
+>@Avec:
+>@
+>@   Version: version du protocole                         |   IHL (Internet Header Length): gère la taille du paquet
+>@   DSCP et ECN: utilisés pour notifier des problèmes     |   Total length: longueur total: entête + données
+>@   Identification: plus utilisé                          |   Flags: utilisé pour fragmenté les données en paquets
+>@   Fragment offset: numéro du fragment                   |   Time to live: durée de vie du paquet
+>@   Protocol: contenu des données (Exemple TCP)           |   Header Checksum: checksum
+>@                                                         | 
+>@   Source IP address: adresse IP Source                  |   Destination IP address: adresse IP de destination
+>@   Options: options d'envoi                              |   Data: les données brutes
 >@
 >@#####################################################################################################################
 >@

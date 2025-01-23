@@ -1,0 +1,138 @@
+Internet Protocol version 6 (IPv6) is a connectionless Layer 3 networking protocol of the OSI model. 
+(Open Systems Interconnection).
+
+IPv6 is the culmination of work carried out within the IETF during the 1990s to succeed IPv4 
+and its specifications were finalized in RFC 24601 in December 1998. IPv6 was standardized in 
+RFC 82002 in July 2017.
+
+With 128-bit addresses instead of 32-bit, IPv6 has much more address space 
+larger than IPv4 (more than 340 sextillion, or 3.4 × 10^38, or almost 7.9 ×1028 times more than 
+the previous one). This considerable quantity of addresses allows greater flexibility in allocation 
+addresses and better route aggregation in the Internet routing table. Translation 
+address, which was made popular by the lack of IPv4 addresses, is no longer necessary. To have 
+an idea on a human scale, we could address each grain of sand on the Earth, several times.
+
+* IP ensures the routing of packets on the network.
+
+* IP encpasulates data in IP packets.
+
+* IP does not aim to guarantee the reception of packets in order, nor to manage their losses and
+corruption.
+
+* There are 2 versions of IP: IPv4 and IPv6
+IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
+
+* Ipv6 takes advantage of this to simplify the header and provide new features: auto-configuration,
+  Faster Routing, Mobility and Security (IPSEC).
+
+                       _______________________________________________________________________________________ 
+                      |          |               |                                                            |
+                      |  Version | Traffic class |                        Flow label                          |
+                      |  4  bits |   6+2  bits   |                         20  bits                           | 
+                      |__________|_______________|____________________________________________________________|
+                      |                                           |                     |                     |
+                      |               Payload length              |     Next header     |      Hop limit      |
+                      |                  16 bits                  |        8 bits       |       8  bits       |
+                      |___________________________________________|________|__________________________________|
+                      |                                                                                       |
+                      |                                   Source IP address                                   |
+ Layer 3 / Network    |                                        128 bits                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                 Destination IP address                                |
+                      |                                        128 bits                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                      [ Options ]                                      |
+                      |                                                                                       |
+                      |_______________________________________________________________________________________| 
+                      |                                                                                       |
+                      |                                         Data                                          |
+                      |                                       [ ...  ]                                        |
+                      |_______________________________________________________________________________________| 
+
+Avec:
+
+   Version: protocol version                             |   Traffic class: to add priority to the packet
+   Flow label: used to note the packet needed by the nt  |   Payload length: length of the data only
+               for soecific treatementeurs               |   Next header: content of data and/or options
+   Hop limit: time to live of the packet                 |
+                                                         | 
+   Source IP address: IP address of the Source           |   Destination IP address: IP address of the  de destination
+   Options: options d'envoi                              |   Data: raw data
+
+>@
+>@#####################################################################################################################
+>@#                                                                                                                   #
+>@# [ IPv6 ]                                                                                                          #
+>@#                                                                                                                   #
+>@# Internet Protocol version 6 (IPv6) is a connectionless Layer 3 networking protocol of the OSI model.              #
+>@# (Open Systems Interconnection).                                                                                   #
+>@#                                                                                                                   #
+>@# IPv6 is the culmination of work carried out within the IETF during the 1990s to succeed IPv4 and its              #
+>@# specifications were finalized in RFC 24601 in December 1998. IPv6 was standardized in RFC 82002 in July 2017.     #
+>@#                                                                                                                   #
+>@# With 128-bit addresses instead of 32-bit, IPv6 has much more address space larger than IPv4 (more than            #
+>@# 340 sextillion, or 3.4 × 10^38, or almost 7.9 ×1028 times more than the previous one). This considerable quantity # 
+>@# of addresses allows greater flexibility in allocation addresses and better route aggregation in the Internet      #
+i>@# routing table. Translation address, which was made popular by the lack of IPv4 addresses, is no longer           #
+>@# necessary. To have an idea on a human scale, we could address each grain of sand on the Earth, several times.     #
+>@#                                                                                                                   #
+>@# Voir: howto-0150-ip-protocol.txt                                                                                  #
+>@# Voir: howto-0152-ipv4-protocol.txt                                                                                #
+>@# Voir: howto-0153-ipv4-protocol-fr.txt                                                                             #
+>@# Voir: howto-0155-ipv6-protocol-fr.txt                                                                             #
+>@#                                                                                                                   #
+>@#-------------------------------------------------------------------------------------------------------------------#
+>@
+>@* IP ensures the routing of packets on the network.
+>@
+>@* IP encpasulates data in IP packets.
+>@
+>@* IP does not aim to guarantee the reception of packets in order, nor to manage their losses and
+>@corruption.
+>@
+>@* There are 2 versions of IP: IPv4 and IPv6
+>@IPv4: 192.168.8.224 / IPv6: 4AfB:4578:0000:1478:AB12:66CD:DDDD:6648
+>@
+>@* Ipv6 takes advantage of this to simplify the header and provide new features: auto-configuration,
+>@  Faster Routing, Mobility and Security (IPSEC).
+>@
+>@                       _______________________________________________________________________________________ 
+>@                      |          |               |                                                            |
+>@                      |  Version | Traffic class |                        Flow label                          |
+>@                      |  4  bits |   6+2  bits   |                         20  bits                           | 
+>@                      |__________|_______________|____________________________________________________________|
+>@                      |                                           |                     |                     |
+>@                      |               Payload length              |     Next header     |      Hop limit      |
+>@                      |                  16 bits                  |        8 bits       |       8  bits       |
+>@                      |___________________________________________|________|__________________________________|
+>@                      |                                                                                       |
+>@                      |                                   Source IP address                                   |
+>@ Layer 3 / Network    |                                        128 bits                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                 Destination IP address                                |
+>@                      |                                        128 bits                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                      [ Options ]                                      |
+>@                      |                                                                                       |
+>@                      |_______________________________________________________________________________________| 
+>@                      |                                                                                       |
+>@                      |                                         Data                                          |
+>@                      |                                       [ ...  ]                                        |
+>@                      |_______________________________________________________________________________________| 
+>@
+>@Avec:
+>@
+>@   Version: protocol version                            |   Traffic class: to add priority to the packet
+>@   Flow label: used to note the packet needed by the    |   Payload length: length of the data only
+>@               routers for specific treatements         |   Next header: content of data and/or options
+>@   Hop limit: time to live of the packet                |
+>@                                                        | 
+>@   Source IP address: IP address of the Source          |   Destination IP address: IP address of the de destination
+>@   Options: options d'envoi                             |   Data: raw data
+>@
+>@#####################################################################################################################
+>@
