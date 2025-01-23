@@ -16,8 +16,8 @@ Voir: howto-0160-tcp-protocol.txt
 
 * TCP permet de contrôler le flux de données et les congestions.
 
-* TCP permet de garantir le bon acheminement des donénes à travers le réseau (correctement, rapidement, sans erreur, sans perte 
-de paquets.
+* TCP permet de garantir le bon acheminement des données à travers le réseau (correctement, rapidement, sans erreur, sans perte 
+de paquets).
 
 * TCP établie une connexion grâce au procédé de la poingnée de main en 3 temps (3-way handhake).
 
@@ -26,7 +26,7 @@ de paquets.
            SYN ->                 (Seq A,           Ack /)                         SYN ->                 (Seq 0,           Ack 0)
            <- SYN-ACK             (Seq B,           Ack A+1)                       <- SYN-ACK             (Seq 0,           Ack 1)
            ACK ->                 (Seq A'=A+1,      Ack B+1)                       ACK ->                 (Seq 1,           Ack 1)
-           PSH Data (len 400) ->  (Seq A',          Ack B+1)                       PSH Data (len 400) ->  (Seq 1 ,          Ack 1)
+           Data (len 400) ->      (Seq A',          Ack B+1)                       Data (len 400) ->      (Seq 1 ,          Ack 1)
            <- ACK (len 500)       (Seq B'=B+1,      Ack A'+400)                    <- ACK (len 500)       (Seq 1,           Ack 401)
            ACK ->                 (Seq A''=A'+400 , Ack B'+500)                    ACK ->                 (Seq 401 ,        Ack 501)
    
@@ -67,16 +67,16 @@ Avec:
 
    Source port: le port sur la Source                     |   Destination port: le port sur la destination
    Sequence number: numéro de la séquence                 |   Acknowledgment number: numéro d'acquittement
-   Data offset: taille del'entête avec options            |   Reserver: champ réservé
+   Data offset: taille de l'entête avec options           |   Reserver: champ réservé
                                                           | 
    Flags                                                  |   Flags
      NS:                                                  |     CWR:
      ECE:                                                 |     URG: la donnée est urgente
-     ACK: il s'agit d'un ACK                              |     PSH: (pour PUSH) c'est l'envoi de données
+     ACK: il s'agit d'un ACK                              |     PSH: (PUSH) pour envoi de données sans délai
      RST: il y a eu une rupture de connexion              |     SYN: il s'agit d'un SYN
      FIN: c'est la fin de la connexion                    |
                                                           |
-   Windows size: Taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
+   Windows size: taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
                  avant acquittement (calcul auto)         |   URG pointer: pointeur vers données urgentes (si URG=1)
   Options: options                                        |   Data: les données brutes
 
@@ -105,8 +105,8 @@ Avec:
 >@
 >@* TCP permet de contrôler le flux de données et les congestions.
 >@
->@* TCP permet de garantir le bon acheminement des donénes à travers le réseau (correctement, rapidement, sans erreur, sans perte 
->@de paquets.
+>@* TCP permet de garantir le bon acheminement des données à travers le réseau (correctement, rapidement, sans erreur, sans perte 
+>@de paquets).
 >@
 >@* TCP établie une connexion grâce au procédé de la poingnée de main en 3 temps (3-way handhake).
 >@
@@ -115,7 +115,7 @@ Avec:
 >@           SYN ->                 (Seq A,           Ack /)                         SYN ->                 (Seq 0,           Ack 0)
 >@           <- SYN-ACK             (Seq B,           Ack A+1)                       <- SYN-ACK             (Seq 0,           Ack 1)
 >@           ACK ->                 (Seq A'=A+1,      Ack B+1)                       ACK ->                 (Seq 1,           Ack 1)
->@           PSH Data (len 400) ->  (Seq A',          Ack B+1)                       PSH Data (len 400) ->  (Seq 1 ,          Ack 1)
+>@           Data (len 400) ->      (Seq A',          Ack B+1)                       Data (len 400) ->      (Seq 1 ,          Ack 1)
 >@           <- ACK (len 500)       (Seq B'=B+1,      Ack A'+400)                    <- ACK (len 500)       (Seq 1,           Ack 401)
 >@           ACK ->                 (Seq A''=A'+400 , Ack B'+500)                    ACK ->                 (Seq 401 ,        Ack 501)
 >@   
@@ -156,16 +156,16 @@ Avec:
 >@
 >@   Source port: le port sur la Source                     |   Destination port: le port sur la destination
 >@   Sequence number: numéro de la séquence                 |   Acknowledgment number: numéro d'acquittement
->@   Data offset: taille del'entête avec options            |   Reserver: champ réservé
+>@   Data offset: taille de l'entête avec options           |   Reserver: champ réservé
 >@                                                          | 
 >@   Flags                                                  |   Flags
 >@     NS:                                                  |     CWR:
 >@     ECE:                                                 |     URG: la donnée est urgente
->@     ACK: il s'agit d'un ACK                              |     PSH: (pour PUSH) c'est l'envoi de données
+>@     ACK: il s'agit d'un ACK                              |     PSH: (PUSH) pour l'envoi de données sans délai
 >@     RST: il y a eu une rupture de connexion              |     SYN: il s'agit d'un SYN
 >@     FIN: c'est la fin de la connexion                    |
 >@                                                          |
->@   Windows size: Taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
+>@   Windows size: taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
 >@                 avant acquittement (calcul auto)         |   URG pointer: pointeur vers données urgentes (si URG=1)
 >@  Options: options                                        |   Data: les données brutes
 >@
