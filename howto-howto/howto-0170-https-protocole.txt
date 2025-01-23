@@ -1,0 +1,44 @@
+
+* HTTPS is the secured version of HTTP.
+
+* HTTPS uses HTTP and TLS to securize data.
+
+* The goal is to verify the authenticity of the site and encrypt data.
+
+* How does that work ?
+
+                 CLIENT                                           SERVER
+                   |      ---------------- SYN --------------->      |          
+                   |      <------------- SYN-ACK --------------      |
+                   |      ---------------- ACK --------------->      |          
+                   |                                                 | 
+                   |      ------------ CLIENT HELLO ----------->     |          
+                   |      <----------- SERVER HELLO ------------     |
+                   |                                                 |
+                   |                                                 |
+     CLIENT checks the certificat                                    |
+                   |                                                 |
+                   |                                                 |
+  CLIENT generate a premaster secret   
+   then sent it to the client        ------------->   SERVER decrypt the premaster secret
+ (encrypt with SERVER public key)                                    |
+                   |                                                 |
+                   |                                                 |
+    CLIENT generates a session key                      SERVER generates a session key
+                 with                                               with
+            client random                                      client random
+            server random                                      server random
+           premaster secret                                   premaster secret
+                   |                                                 |
+                   |                                                 |
+        CLIENT and SERVER now exchenge data with a symetricla key (the session key)
+
+
+CLIENT HELLO: the client asks for a secured connection. It gives the list of known algorithms 
+              then send a random number (the client random).
+
+SERVER HELLO: the server gives its certificatts public key and the choosen algorithm 
+              (example: TLS_RSA_AES256_SHA128). He also calcs a random number 
+              (the server random) then send it to the client.
+
+
