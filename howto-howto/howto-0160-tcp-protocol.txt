@@ -62,18 +62,18 @@ With:
 
    Source port: the port in the Source server             |   Destination port: the port in the Destination server
    Sequence number: the number of the sequence            |   Acknowledgment number: the number of acknowledgment
-   Data offset: size of the header with options           |   Reserver: reserver field
+   Data offset: size of the header with options           |   Reserved: reserver field
                                                           | 
    Flags                                                  |   Flags
-     NS:                                                  |     CWR:
-     ECE:                                                 |     URG: for urgent data
-     ACK: This is a ACK                                   |     PSH: (PUSH) used to send data without delay
-     RST: there was a disconnection                       |     SYN: this is a SYN
+     NS (Nonce):                                          |     CWR (Congestion Window Rediced):
+     ECE (ECN-Echo):                                      |     URG (Urent): for urgent data
+     ACK: This is a ACK                                   |     PSH (Push): used to send data without delay
+     RST (Reset): there was a disconnection               |     SYN: this is a SYN
      FIN: this is the end of the connection               |
                                                           |
    Windows size: size of the data TCP window (in bytes)   |   Checksum: control hecksum
                  before acknowledgment (auto calc)        |   URG pointer: pointer to urgent datas (if URG = 1)
-  Options: options                                        |   Data: raw data
+   Options: options                                       |   Data: raw data
 
 >@
 >@##########################################################################################################################################
@@ -149,13 +149,13 @@ With:
 >@
 >@   Source port: the port in the Source server             |   Destination port: the port in the Destination server
 >@   Sequence number: the number of the sequence            |   Acknowledgment number: the number of acknowledgment
->@   Data offset: size of the header with options           |   Reserver: reserved field
+>@   Data offset: size of the header with options           |   Reserved: reserved field
 >@                                                          | 
 >@   Flags                                                  |   Flags
->@     NS:                                                  |     CWR:
->@     ECE:                                                 |     URG: for urgent data
->@     ACK: This is a ACK                                   |     PSH: (PUSH) used to send data without delay
->@     RST: there was a disconnection                       |     SYN: this is a SYN
+>@     NS (Nonce):                                          |     CWR (Congestion Window Rediced):
+>@     ECE (ECN-Echo):                                      |     URG (Urent): for urgent data
+>@     ACK: This is a ACK                                   |     PSH (Push): used to send data without delay
+>@     RST (Reset): there was a disconnection               |     SYN: this is a SYN
 >@     FIN: this is the end of the connection               |
 >@                                                          |
 >@   Windows size: size of the data TCP window (in bytes)   |   Checksum: control hecksum

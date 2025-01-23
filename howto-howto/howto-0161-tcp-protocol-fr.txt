@@ -67,18 +67,18 @@ Avec:
 
    Source port: le port sur la Source                     |   Destination port: le port sur la destination
    Sequence number: numéro de la séquence                 |   Acknowledgment number: numéro d'acquittement
-   Data offset: taille de l'entête avec options           |   Reserver: champ réservé
+   Data offset: taille de l'entête avec options           |   Reserved: champ réservé
                                                           | 
    Flags                                                  |   Flags
-     NS:                                                  |     CWR:
-     ECE:                                                 |     URG: la donnée est urgente
-     ACK: il s'agit d'un ACK                              |     PSH: (PUSH) pour envoi de données sans délai
-     RST: il y a eu une rupture de connexion              |     SYN: il s'agit d'un SYN
+     NS (Nonce):                                          |     CWR (oOngestion Window Reduced):
+     ECE (ECN-Echo):                                      |     URG (Urgent): la donnée est urgente
+     ACK: il s'agit d'un ACK                              |     PSH (Push): pour l'envoi de données sans délai
+     RST (Reset): il y a eu une rupture de connexion      |     SYN: il s'agit d'un SYN
      FIN: c'est la fin de la connexion                    |
                                                           |
    Windows size: taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
                  avant acquittement (calcul auto)         |   URG pointer: pointeur vers données urgentes (si URG=1)
-  Options: options                                        |   Data: les données brutes
+   Options: options                                       |   Data: les données brutes
 
 >@
 >@##########################################################################################################################################
@@ -156,13 +156,13 @@ Avec:
 >@
 >@   Source port: le port sur la Source                     |   Destination port: le port sur la destination
 >@   Sequence number: numéro de la séquence                 |   Acknowledgment number: numéro d'acquittement
->@   Data offset: taille de l'entête avec options           |   Reserver: champ réservé
+>@   Data offset: taille de l'entête avec options           |   Reserved: champ réservé
 >@                                                          | 
 >@   Flags                                                  |   Flags
->@     NS:                                                  |     CWR:
->@     ECE:                                                 |     URG: la donnée est urgente
->@     ACK: il s'agit d'un ACK                              |     PSH: (PUSH) pour l'envoi de données sans délai
->@     RST: il y a eu une rupture de connexion              |     SYN: il s'agit d'un SYN
+>@     NS (Nonce):                                          |     CWR (oOngestion Window Reduced):
+>@     ECE (ECN-Echo):                                      |     URG (Urgent): la donnée est urgente
+>@     ACK: il s'agit d'un ACK                              |     PSH (Push): pour l'envoi de données sans délai
+>@     RST (Reset): il y a eu une rupture de connexion      |     SYN: il s'agit d'un SYN
 >@     FIN: c'est la fin de la connexion                    |
 >@                                                          |
 >@   Windows size: taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
