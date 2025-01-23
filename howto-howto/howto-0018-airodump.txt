@@ -54,7 +54,7 @@ You obtain a <capturefile-dec.cap> file. You can re-open it with Wireshark.
 >@# Wifi capture
 >@$ sudo airodump-ng --bssid <BSSID MAC> -w capture wlan0
 >@
->@ That create a capture-nn.cap file.
+>@That create a capture-nn.cap file.
 >@
 >@# Use Wireshark to observe Packets
 >@   -Edit/Preferences/Protocol/IEEE 802.11
