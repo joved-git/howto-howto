@@ -1,0 +1,106 @@
+Nmap Scripting Engine (NSE)
+
+The Nmap Scripting Engine (NSE) is one of Nmap's most powerful and flexible features. It allows users to write 
+(and share) simple scripts (using the Lua programming language ) to automate a wide variety of networking tasks. 
+Those scripts are executed in parallel with the speed and efficiency you expect from Nmap. Users can rely on the 
+growing and diverse set of scripts distributed with Nmap, or write their own to meet custom needs.
+
+Tasks we had in mind when creating the system include network discovery, more sophisticated version detection, 
+vulnerability detection. NSE can even be used for vulnerability exploitation.
+
+To reflect those different uses and to simplify the choice of which scripts to run, each script contains a field 
+associating it with one or more categories. Currently defined categories are auth, broadcast, default. discovery, 
+dos, exploit, external, fuzzer, intrusive, malware, safe, version, and vuln. These are all described in the 
+section called “Script Categories”.
+
+Scripts are not run in a sandbox and thus could accidentally or maliciously damage your system or invade your 
+privacy. Never run scripts from third parties unless you trust the authors or have carefully audited the scripts 
+yourself. * Nmap script are written in LUA language.
+
+* With scripts, you can find services more precicely, detect vulnerabilities, discover backdoor, 
+  make dos and crack pws for example.
+
+* Go the https://nmap.org/nsedoc/scripts.
+
+* Launch a script (example).
+$ sudo nmap --script ftp-vsftp-backdoor -p 21 <host>
+
+* Nmap script are written in LUA language
+
+* With scripts, you can find services more precicely, detect vulnerabilities, discover backdoor, 
+  make dos and crack pws for example.
+
+* Go the https://nmap.org/nsedoc/scripts
+
+* Launch a script (example)
+$ sudo nmap --script ftp-vsftp-backdoor -p 21 <host>           -> a particular script
+$ sudo nmap --script "http-*"  -p 80 <host>                    -> a list of scriptq (here, all those begin with http-)
+$ sudo nmap --script "not dos" <host>                          -> all script except those with dos
+
+                                                               -> add args to the script
+$ sudo nmap --script http-virustotal --script-args='http-virustoatl.apikey="KEY", http-virustotal.filename="file"'
+
+# Update the script database
+$ sudo nmap --scrpt-updatedb
+
+# Example - Find vulnerabilities on Metasploitable
+See: howto-0022-nmap-backdoor-example.txt
+ 
+
+>@#########################################################################################################################
+>@#                                                                                                                       # 
+>@# [ NSE | Nmap Scripting Engine ]                                                                                       #
+>@#                                                                                                                       # 
+>@# The Nmap Scripting Engine (NSE) is one of Nmap's most powerful and flexible features. It allows users to write        #
+>@# (and share) simple scripts (using the Lua programming language ) to automate a wide variety of networking tasks.      #
+>@# Those scripts are executed in parallel with the speed and efficiency you expect from Nmap. Users can rely on the      #
+>@# growing and diverse set of scripts distributed with Nmap, or write their own to meet custom needs.                    #
+>@#                                                                                                                       # 
+>@# Tasks we had in mind when creating the system include network discovery, more sophisticated version detection,        #
+>@# vulnerability detection. NSE can even be used for vulnerability exploitation.                                         #
+>@#                                                                                                                       # 
+>@# To reflect those different uses and to simplify the choice of which scripts to run, each script contains a field      #
+>@# associating it with one or more categories. Currently defined categories are auth, broadcast, default. discovery,     #
+>@# dos, exploit, external, fuzzer, intrusive, malware, safe, version, and vuln. These are all described in the           #
+>@# section called “Script Categories”.                                                                                   #
+>@#                                                                                                                       # 
+>@# Scripts are not run in a sandbox and thus could accidentally or maliciously damage your system or invade your         #
+>@# privacy. Never run scripts from third parties unless you trust the authors or have carefully audited the scripts      #
+>@# yourself.                                                                                                             #
+>@#                                                                                                                       # 
+>@# See: howto-0022-nmap-backdoor-example.txt                                                                             #
+>@#                                                                                                                       # 
+>@#-----------------------------------------------------------------------------------------------------------------------# 
+>@
+>@* Nmap script are written in LUA language.                                          
+>@* With scripts, you can find services more precicely, detect vulnerabilities, discover backdoor, 
+>@  make dos and crack pws for example.
+>@
+>@* Go the https://nmap.org/nsedoc/scripts.
+>@
+>@* Launch a script (example).
+>@$ sudo nmap --script ftp-vsftp-backdoor -p 21 <host>
+>@
+>@* Nmap script are written in LUA language
+>@
+>@* With scripts, you can find services more precicely, detect vulnerabilities, discover backdoor, 
+>@  make dos and crack pws for example.
+>@
+>@* Go the https://nmap.org/nsedoc/scripts
+>@
+>@* Launch a script (example)
+>@$ sudo nmap --script ftp-vsftp-backdoor -p 21 <host>           -> a particular script
+>@$ sudo nmap --script "http-*"  -p 80 <host>                    -> a list of scriptq (here, all those begin with http-)
+>@$ sudo nmap --script "not dos" <host>                          -> all script except those with dos
+>@
+>@                                                               -> add args to the script
+>@$ sudo nmap --script http-virustotal --script-args='http-virustoatl.apikey="KEY", http-virustotal.filename="file"'
+>@
+>@# Update the script database
+>@$ sudo nmap --scrpt-updatedb
+>@
+>@# Example - Find vulnerabilities on Metasploitable
+>@See: howto-0022-nmap-backdoor-example.txt
+>@
+>@#########################################################################################################################
+>@

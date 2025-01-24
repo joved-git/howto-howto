@@ -12,7 +12,7 @@ Usual commands:
 
 -iL <file>: use a <file> containing IP addresses.
 
--p <port> | -p U:53,T:80 | -p T:http,https: specify a specific port or ports range. 
+-p <port> | -p U:53,T:80 | -p T:http,https: specific port or range (add -sU if UDP)  
 
 -sU: for UDP scan.
 
@@ -62,7 +62,7 @@ Usual commands:
 
 -O: performs an OS detection in verbose mode.
 
--sC: performs a scan with default scripts (non intrusive and discrete ohes). List of script is here: https://nmap.org/nsedoc
+-sC: performs a scan with default scripts (non intrusive and discrete ohes). List of script is here: https://nmap.org/nsedoc/scripts
 
 --script default,dos: tries two specific scripts (here default and dos).
 
@@ -94,7 +94,7 @@ Usual commands:
 >@                                              TCP ACK on 80 (web serveur)           |  --exclude: excludes some addresses or ranges
 >@                                              ICMP timestamp                        |  
 >@                                                                                    |  -iL <file>: use a <file> containing IP addresses
->@-p <port> | -p U:53,T:80 | -p T:http,https: specify a specific port or ports range  |  
+>@-p <port> | -p U:53,T:80 | -p T:http,https: specific port or range (-sU if UDP)     |  
 >@                                                                                    |  -sU: for UDP scan
 >@-PS80,443,1000: specify special ports (here, 80, 443 and 1000 for a TCP SYN (-PS)   |  
 >@                                                                                    |  -PS: performs a TCP-SYN on specific ports
@@ -105,7 +105,7 @@ Usual commands:
 >@-sP | -sn: does a ping scan (does not try to scan ports)                            |  
 >@                                                                                    |  -sS: tries a TCP-SYN
 >@-Pn: treats all hosts as online -- skip host discovery (no ping session)            |  
->@                                                                                    |  -sV: performs a TCP SYN scan and display services' version
+>@                                                                                    |  -sV: performs a TCP SYN scan and display services' version (see --version-intensity, --version-light)
 >@-sL: tries to discover hostnames                                                    |  
 >@                                                                                    |  -sN: performs a TCP null. All TCP options are set to 0. Normally, impossible. This is a disruption try
 >@-sF: puts only FIN at 1. nmap asks for a closing session. This is a disruption try  |
@@ -117,7 +117,7 @@ Usual commands:
 >@--top-ports <n>: scans the first <n> most popular ports                             |  
 >@                                                                                    |  --top-ratio <n>: scans ports with ratio greater than <n>. See /usr/share/nmap/nmap-services file
 >@--version-intensity <n, def 7>: used to modify probe(s) intensity                   |  
->@                                                                                    |  -O: performs an OS detection in verbose mode
+>@                                                                                    |  -O: performs an OS detection in verbose mode (see --osscan-limit, --osscanguess = more agressive)
 >@-sC: use default scripts (non intrusive and discrete). See https://nmap.org/nsedoc  |  
 >@                                                                                    |  --script default,dos: tries two specific scripts (here default and dos)
 >@--script default,dos: tries two specific scripts (here default and dos)             |  
@@ -133,6 +133,6 @@ Usual commands:
 >@--reason: displays the reason of the discovery (syn-ack for example)                |  
 >@                                                                                    |  -6: performs an IP v6 scan.
 >@-PO: use a specific protocol (field "Protocol" into IP packets (6 = TCP)            |  
->@                                                                                    |
+>@                                                                                    |  -sO: Performs an IP protocol scan (see -PO).
 >@###############################################################################################################################################################################################
 >@
