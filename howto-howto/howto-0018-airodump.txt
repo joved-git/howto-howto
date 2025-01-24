@@ -12,8 +12,28 @@ $ iwconfig
 # Wifi observation
 $ sudo airodump-ng wlan0
 
+The result:
+
+CH  5 ][ Elapsed: 7 mins ][ 2025-01-24 04:13 ][ interface wlan0 down                                                                                                                                             
+                                                                                                                                                                                                                  
+ BSSID              PWR  Beacons    #Data, #/s  CH   MB   ENC CIPHER  AUTH ESSID                                                                                                                                  
+                                                                                                                                                                                                                  
+ 80:CC:DD:AA:A7:A8  -95        1        3    0   1  130   WPA2 CCMP   PSK  Livebox-A820
+ CD:98:12:DE:92:B0  -78       95        0    0  11  195   WPA2 CCMP   MGT  FreeWifi_secure
+
+With:
+
+BSSID: MAC of acces points                    |   PWR: power of the signal (-78 is better than -95)
+Beacons: number of identification broadcast   |   #Data: quantity of data
+         packets                              |   #/s: quantity of data per second
+CH (channel): the wifi channel                |   MB: max speed
+ENC: type of encryption                       |   CIPHER/AUTH: info on encryption algorithm
+ESSID: name of the access point               |
 # Wifi capture
-$ sudo airodump-ng --bssid <MAC> -w capture wlan0mon
+$ sudo airodump-ng --bssid <MAC> -w capture wlan0
+
+You could add a channel to optimize capture.
+$ sudo airodump-ng --bssid <MAC> c <channel #> -w capture wlan0
 
 That create a capture-nn.cap file.
 
@@ -51,8 +71,31 @@ You obtain a <capturefile-dec.cap> file. You can re-open it with Wireshark.
 >@# Wifi observation
 >@$ sudo airodump-ng wlan0
 >@
+>@The result:
+>@---
+>@CH  5 ][ Elapsed: 7 mins ][ 2025-01-24 04:13 ][ interface wlan0 down                                                                                                                                             
+>@                                                                                                                                                                                                                  
+>@ BSSID              PWR  Beacons    #Data, #/s  CH   MB   ENC CIPHER  AUTH ESSID                                                                                                                                  
+>@                                                                                                                                                                                                                  
+>@ 80:CC:DD:AA:A7:A8  -95        1        3    0   1  130   WPA2 CCMP   PSK  Livebox-A820
+>@ CD:98:12:DE:92:B0  -78       95        0    0  11  195   WPA2 CCMP   MGT  FreeWifi_secure
+>@---
+>@
+>@With:
+>@
+>@BSSID: MAC of acces points                    |   PWR: power of the signal (-78 is better than -95)
+>@Beacons: number of identification broadcast   |   #Data: quantity of data
+>@         packets                              |   #/s: quantity of data per second
+>@CH (channel): the wifi channel                |   MB: max speed
+>@ENC: type of encryption                       |   CIPHER/AUTH: info on encryption algorithm
+>@ESSID: name of the access point               |
+>@
+>@
 >@# Wifi capture
 >@$ sudo airodump-ng --bssid <BSSID MAC> -w capture wlan0
+>@
+>@ You could add a channel to optimize capture.
+>@ $ sudo airodump-ng --bssid <MAC> c <channel #> -w capture wlan0
 >@
 >@That create a capture-nn.cap file.
 >@

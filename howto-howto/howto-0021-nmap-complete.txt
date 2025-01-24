@@ -34,6 +34,9 @@ Used to specify special port(s). Here, ports 80, 443 and 1000 for a TCP SYN (-PS
 $ nmap -PS|PA|PU|PR ... 
 nmap performs a TCP SYN, TCP ACK, UDP or ARP scan on specific ports.
 
+$ nmap -PO ... 
+nmap will use a special protocol (field Protocol into ipv4 packet).
+
 $ nmap -v|vv|vvv ...
 nmap becomes more (and more and more) verbose.
 
@@ -158,6 +161,9 @@ nmap performs an IP v6 scan.
 >@
 >@$ nmap -PS|PA|PU|PR ... 
 >@nmap performs a TCP SYN, TCP ACK, UDP or ARP scan on specific ports.
+>@
+>@$ nmap -PO ... 
+>@nmap will use a special protocol (field Protocol into ipv4 packet).
 >@
 >@$ nmap -v|vv|vvv ...
 >@nmap becomes more (and more and more) verbose.
