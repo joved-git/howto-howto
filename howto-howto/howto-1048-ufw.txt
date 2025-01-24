@@ -29,7 +29,7 @@ $ cat /var/log/ufw.log
 >@#                                                                            #
 >@# [ ufw ]                                                                    #
 >@#                                                                            #
->@# This tool is used to manage the Linux firewall NetFilter by # editing and  #
+>@# This tool is used to manage the Linux firewall NetFilter by editing and    #
 >@# changing content with iptables commands.                                   #
 >@#                                                                            #
 >@#----------------------------------------------------------------------------#
