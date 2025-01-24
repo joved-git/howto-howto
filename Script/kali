@@ -58,5 +58,4 @@ else
 	
 	grep '>@' $FILENAME | awk -F'@' '{ print $2 }'
 	echo "[" $FN "]"
-	echo
 fi

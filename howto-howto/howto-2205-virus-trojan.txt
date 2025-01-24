@@ -6,7 +6,7 @@ The trojan is just a transporter for the malicious soft and is often seen as
 proper and fair.
 
 -> Different types of trojan
--in IRC: a infected machine open a chanel, share it with the victim and pilot it.
+-in IRC: a infected machine open a channel, share it with the victim and pilot it.
 -in http: the payload is just a tiny web server that just open a mini web site.
           The hacker could launch some commands using this website.
 -mobile's trojan.
@@ -45,7 +45,7 @@ Some technics to detect trojans.
 >@
 >@-> Different types of trojan
 >@ You could find troyans in different domains:
->@  -in IRC: a infected machine open a chanel, share it with the victim and pilot it.
+>@  -in IRC: a infected machine open a channel, share it with the victim and pilot it.
 >@  -in http: the payload is just a tiny web server that just open a mini web site.
 >@          The hacker could launch some commands using this website.
 >@  -mobile's trojan.
