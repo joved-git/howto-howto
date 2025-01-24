@@ -1,53 +1,141 @@
+Portsentry is a "port scan" detection and blocking program. "Port scan" is a program that scans your 
+machine for open ports, usually in preparation for an attack.
 
-* Fichiers portsentry:
-/etc/default/portsentry				-> options générales.
-/etc/portsentry/portsentry.conf			-> optionsdu logiciel. 
-/etc/portsentry/portesentry.ignore.static:	-> hôtes/interfaces à ignorer.
+* Installation.
+$ sudo apt update
+$ sudo apt install portsentry
 
-* Dans /etc/default/portsentry, modifier les lignes (a pour advanced).
+* Portsentry files.
+/etc/default/portsentry				     -> general options.
+/etc/portsentry/portsentry.conf			     -> Portsentry options. 
+/etc/portsentry/portesentry.ignore.static:	     -> hosts/interfaces to be ignored.
+
+* In /etc/default/portsentry, modify entries below and add 'a' for advanced. Portse,try will create
+fictive service on non-used ports among default 1024.
 TCP_MODE="atcp"
-UDP="audp"
+UDP_MODE="audp"
 
-* Dans le fichier de config (/etc/portsentry/portsentry.conf), on voit des choses intéressantes:
-ADVANCED_PORTS_TCP="1024"			-> limite des ports surveillés.
+* In the file /etc/portsentry/portsentry.conf, we see very interesting things:
+ADVANCED_PORTS_TCP="1024"			     -> Limit of the monitored ports.
 ADVANCED_PORTS_UDP="1024"
 
-ADVANCED_EXCLUDE_TCP="113,139"			-> limite des ports surveillés.
+ADVANCED_EXCLUDE_TCP="113,139"			     -> Exclude some ports.
 ADVANCED_EXCLUDE_UDP="520, ..."
 
-IGNORE_FILE=/etc/portsentry/portsentry.ignore	-> hosts to ignore (will never block).
-HISTORY_FILE=/etc/portsentry/portsentry.history	-> history.
-BLOCKED_FILE=/etc/portsentry/portsentry.blocked	-> blocked list (dynamic).
+IGNORE_FILE=/etc/portsentry/portsentry.ignore	     -> hosts to ignore (will never block).
+HISTORY_FILE=/etc/portsentry/portsentry.history	     -> history.
+BLOCKED_FILE=/etc/portsentry/portsentry.blocked	     -> blocked list (dynamic).
 
-TCP_BLOCK="1"					-> blocks UPD/TCP scans
+TCP_BLOCK="1"					     -> blocks UPD and TCP scans
 UDP_BLOCK="1"
 
-						-> Ajoute une ligne dans iptables en cas d'intrusion.
-KILL_ROUTE="/sbin/iptables -I INPUT $TARGET$ -j DROP
+                                                     
+#KILL_ROUTE="/sbin/route add -host $TARGET$ reject"  -> Comment that line then ...
+KILL_ROUTE="/sbin/iptables -I INPUT $TARGET$ -j DROP -> ... uncomment the line with iptables.
 
-KILL_HOSTS_DENY="ALL: $TARGET$ : DENY"		-> Deny par fichier hosts.
+KILL_HOSTS_DENY="ALL: $TARGET$ : DENY"		     -> Deny by hosts file.
 
-* Redemarrge du service:
+* Service restarting:
 service portsentry restart
 cat /var/log/syslog | tail -n 100
 
-* Après un scan de ports (nmap), on voit des lignes attackalert dans /var/log/syslog
->>> on voit des lignes attackalert dans /var/log/syslog.
+* Perform a nmap scan on the machine (here Ubuntu server):
+After a scan ports (by nmap), we could see 'attackalert' line in the /var/log/syslog file.
 
->>> iptables a bloqué l'adresse ip de l'attaquant.
+iptables has automatycally blocked the IP address of the attacking guy.
+It has added a new DROP rule.
+$ sudo iptables -L
+---
 Chain INPUT (policy ACCEPT)
 target	prot	opt	source		destination
 DROP	all	--	10.0.2.5	anywhere	
+---
+or
+$ sudo iptables -S
+---
+-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-A INPUT -s 10.0.2.5/32 -j DROP
+---
 	
->>> ligne deny dans /etc/hosts.deny:
+And we have a new DENY line into the file /etc/hosts.deny.
+---
 ALL: 10.0.2.5 : DENY
+---
  
 >@
->@###########################################################
+>@##########################################################################################################
+>@#                                                                                                        #
+>@# [ Portsentry ]                                                                                         #
+>@#                                                                                                        #
+>@# Portsentry is a "port scan" detection and blocking program. "Port scan" is a program that scans your   #
+>@# machine for open ports, usually in preparation for an attack.                                          #
+>@#                                                                                                        #
+>@#--------------------------------------------------------------------------------------------------------#
 >@
->@Hey, that's to big for me !!
->@Please, cat the file howto-028-portsentry.txt for details.
+>@* Installation.
+>@$ sudo apt update
+>@$ sudo apt install portsentry
 >@
->@###########################################################
+>@* Portsentry files.
+>@/etc/default/portsentry				     -> general options.
+>@/etc/portsentry/portsentry.conf			     -> Portsentry options. 
+>@/etc/portsentry/portesentry.ignore.static:	     -> hosts/interfaces to be ignored.
+>@
+>@* In /etc/default/portsentry, modify entries below and add 'a' for advanced. Portse,try will create
+>@fictive service on non-used ports among default 1024.
+>@TCP_MODE="atcp"
+>@UDP_MODE="audp"
+>@
+>@* In the file /etc/portsentry/portsentry.conf, we see very interesting things:
+>@ADVANCED_PORTS_TCP="1024"			     -> Limit of the monitored ports.
+>@ADVANCED_PORTS_UDP="1024"
+>@
+>@ADVANCED_EXCLUDE_TCP="113,139"			     -> Exclude some ports.
+>@ADVANCED_EXCLUDE_UDP="520, ..."
+>@
+>@IGNORE_FILE=/etc/portsentry/portsentry.ignore	     -> hosts to ignore (will never block).
+>@HISTORY_FILE=/etc/portsentry/portsentry.history	     -> history.
+>@BLOCKED_FILE=/etc/portsentry/portsentry.blocked	     -> blocked list (dynamic).
+>@
+>@TCP_BLOCK="1"					     -> blocks UPD and TCP scans
+>@UDP_BLOCK="1"
+>@
+>@#KILL_ROUTE="/sbin/route add -host $TARGET$ reject"  -> Comment that line then ...
+>@>@KILL_ROUTE="/sbin/iptables -I INPUT $TARGET$ -j DROP -> ... uncomment the line with iptables.
+>@
+>@KILL_HOSTS_DENY="ALL: $TARGET$ : DENY"		     -> Deny by hosts file.
+>@
+>@* Service restarting:
+>@service portsentry restart
+>@cat /var/log/syslog | tail -n 100
+>@
+>@* Perform a nmap scan on the machine (here Ubuntu server):
+>@After a scan ports (by nmap), we could see 'attackalert' line in the /var/log/syslog file.
+>@
+>@iptables has automatycally blocked the IP address of the attacking guy.
+>@It has added a new DROP rule.
+>@$ sudo iptables -L
+>@>@---
+>@Chain INPUT (policy ACCEPT)
+>@target	prot	opt	source		destination
+>@DROP	all	--	10.0.2.5	anywhere	
+>@---
+>@or
+>@$ sudo iptables -S
+>@---
+>@-P INPUT ACCEPT
+>@-P FORWARD ACCEPT
+>@-P OUTPUT ACCEPT
+>@-A INPUT -s 10.0.2.5/32 -j DROP
+>@---
+>@	
+>@And we have a new DENY line into the file /etc/hosts.deny.
+>@---
+>@ALL: 10.0.2.5 : DENY
+>@---
+>@
+>@##########################################################################################################
 >@
 
