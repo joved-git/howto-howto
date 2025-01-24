@@ -55,57 +55,40 @@ $ git push origin --delete <tag>            -> delete remote tag
 $ git tag <tag> <tag>^{} -f -a              -> change previous tag message
 
 >@
->@#####################################################################################################################
+>@#######################################################################################################################################
 >@
 >@# Config file                                                          
->@$ git config --global user.name <username>                             | $ git config --global user.email <email>
->@$ git config --global --unset <entry>                                  | $ git config --global -- list
->@
->@# Alias
+>@$ git config --global user.name <username>                             |   $ git config --global user.email <email>
+>@$ git config --global --unset <entry>                                  |   $ git config --global -- list
+>@                                                                       |
+>@# Alias                                                                |
 >@$ git config --global alias.logp "log --pretty=oneline"
 >@$ git config --global alias.logg "log --graph --oneline --decorate --all --pretty=format:'%Cred%h%Creset 
 >@  -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
 >@
->@# Change commit message
->@$ git commit --amend
->@$ git rebase -i <sha>^
->@
->@# Cancel last commit
->@$ git reset ~HEAD
->@
->@# Remove file from staging area
->@$ git restore --staged <file or dir>
->@
->@# Remove file that has been commited
->@$ git rm [-r] --cached <file or dir>
->@
->@# Delete local branch
->@$ git branch -d <branch>
->@
->@# Delete remote branch
->@$ git push origin --delete <branch>
->@
->@# Create remote branch
->@# git checkout -b <branch>
->@$ git push --set-upstream <remote name | origin> <branch>
->@
->@# Move branch to specific commit
->@$ git branch -f <branch> <sha>
->@
->@# Move branch to specific tag
->@$ git branch -f <branch> <tag>
->@
->@# Annul the last 'git pull'
->@$ git reset --keep HEAD@{1}
->@
->@# Annul the last 'git merge'
->@$ git merge - abort
->@
->@# Annul the last 'git rebase'
->@$ git reflog              -> find commit you want to return to (ie HEAD@{N})
->@$ git reset HEAD@{N}
->@
->@# Play with tag
+>@# Change commit message                                                |   # Cancel last commit
+>@$ git commit --amend                                                   |   $ git rebase -i <sha>^
+>@                                                                       |
+>@# Cancel last commit                                                   |   # Remove file from staging area
+>@$ git reset ~HEAD                                                      |   $ git restore --staged <file or dir>
+>@                                                                       |
+>@# Remove file that has been commited                                   |   # Delete local branch
+>@$ git rm [-r] --cached <file or dir>                                   |   $ git branch -d <branch>
+>@                                                                       |
+>@# Delete remote branch                                                 |   # Create remote branch
+>@$ git push origin --delete <branch>                                    |   $ git checkout -b <branch>
+>@                                                                       |   $ git push --set-upstream <remote name | origin> <branch>
+>@# Move branch to specific commit                                       |   
+>@$ git branch -f <branch> <sha>                                         |   # Move branch to specific tag
+>@                                                                       |   $ git branch -f <branch> <tag>
+>@# Annul the last 'git pull'                                            |   
+>@$ git reset --keep HEAD&{1}                            /!\ & = arobase |   # Annul the last 'git merge'
+>@                                                                       |   $ git merge - abort
+>@# Annul the last 'git rebase'                                          |
+>@$ git reflog                     -> find commit you want (ie HEAD&{N}) |
+>@$ git reset HEAD&{N}                                                   |
+>@                                                                       |
+>@# Play with tag                                                        |
 >@$ git tag -a <tag> -m "<message>"           -> create tag
 >@$ git push --tag <tag>                      -> push specific tag
 >@$ git push --tags                           -> push all tags (not recommended)
@@ -113,5 +96,5 @@ $ git tag <tag> <tag>^{} -f -a              -> change previous tag message
 >@$ git push origin --delete <tag>            -> delete remote tag
 >@$ git tag <tag> <tag>^{} -f -a              -> change previous tag message
 >@
->@#####################################################################################################################
+>@#######################################################################################################################################
 >@

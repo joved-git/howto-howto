@@ -115,7 +115,7 @@ $ nmap -oN <filename> ...
 Extract the result into <filename>.
 
 $ nmap --reason ...
-Display the reason of the discovery (syn-ack for example).
+Display the reason of the detection (syn-ack for example).
 
 $ nmap -A ...
 Means Aggressive. The toolbox: OS detection, version detection, script scanning and traceroute.
@@ -244,7 +244,7 @@ nmap performs an IP v6 scan.
 >@Extract the result into <filename>.
 >@
 >@$ nmap --reason ...
->@Display the reason of the discovery (syn-ack for example).
+>@Display the reason of the detection (syn-ack for example).
 >@
 >@$ nmap -A ...
 >@Means Aggressive. The toolbox: OS detection, version detection, script scanning and traceroute.

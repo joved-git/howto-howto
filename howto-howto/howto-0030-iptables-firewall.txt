@@ -1,4 +1,12 @@
-Some simple commands:
+iptables is a free Linux userspace software through which the administrator 
+system can configure chains and rules in the kernel space firewall (and which is 
+composed by Netfilter modules).
+
+Different programs are used depending on the protocol used: iptables is used to 
+the IPv4 protocol, Ip6tables for IPv6, Arptables for ARP (Address Resolution Protocol) 
+or even Ebtables, specific to Ethernet frames.
+
+Some useful commands:
 
 $ sudo iptables -L
 Show all rules for a table (default = filter).
@@ -10,18 +18,18 @@ Nat	: plays on source and/or destination IP addresses.
 Raw	: evaluates packets as évalue les paquets comme un ensemble
 
 $ sudo iptables -L -t <table> 
-Lists the content of <the table <table>. Default is filter.
+Lists the content of the table <table>. Default is filter.
 
 Example, for filter, We see 3 chains:
 INPUT		: inpjut chain.
 OUTPUT		: output chain.
 FORWARD		: used to redirect packets.
 
-Other existing chains:
+Other existing chains (into table nat):
 PREROUTING	: modification before the routing.
 POSTROUTING	: modification after the routing.
 
-$ sudo iptables -F | sudo iptables -t <table> -F
+$ sudo iptables -F | sudo iptables -F -t <table>
 >>> Commande used to Clear a table.
 
 $ sudo iptables -P <chain> <action>
@@ -33,41 +41,59 @@ $ sudo iptables -A INPUT -p tcp -i eth0 --dport ssh -j ACCEPT
 
 $ sudo iptables -A INPUT -p icmp -j ACCEPT
 $ sudo iptables -A OUTPUT -p icmp -j ACCEPT
->>> Commands that autorise ICMP packets (ping) in unput.
+>>> Commands that autorise ICMP packets (ping) in input.
+
+$ sudo iptables -D <rule>
+$ sudo iptables -D OUTPUT -p icmp -j ACCEPT
+>>> Used to delete a rule. Just specify the all line but without the command (-A for example).
 
 $ sudo iptables -I ...
->>> Used to insert  a rule in the top of the list.
+>>> Used to insert  a rule in the top of the list. /!\ rules are executed from top to bottom
+    with priority to the top ones. Example, if a rule accept something before reject the same
+    thing, the result will be an acceptation.
 
 $ sudo iptables-save ...
 >>> Command used to save rules.
 
 >@
->@#################################################################
+>@################################################################################################
+>@#                                                                                              #
+>@# [ iptables ]                                                                                 #
+>@#                                                                                              #
+>@# iptables is a free Linux userspace software through which the administrator system can       #
+>@# configure chains and rules in the kernel space firewall (and which is composed by Netfilter  #
+>@# modules).	                                                                                 #
+>@#                                                                                              #
+>@# Different programs are used depending on the protocol used: iptables is used to the IPv4     #
+>@# protocol, Ip6tables for IPv6, Arptables for ARP (Address Resolution Protocol) or even        #
+>@# Ebtables, specific to Ethernet frames.                                                       # 
+>@#                                                                                              #
+>@#----------------------------------------------------------------------------------------------#
 >@
->@Some simple commands:
+>@Some useful commands:
 >@
 >@$ sudo iptables -L
 >@Show all rules for a table (default = filter).
 >@
 >@iptables has 4 tables:
->@Filter	: firewall itself.
->@Mangle	: packets modification.
->@Nat	: plays on source and/or destination IP addresses.
->@Raw	: evaluates packets as évalue les paquets comme un ensemble
+>@Filter :    firewall itself.
+>@Mangle :    packets modification.
+>@Nat    :    plays on source and/or destination IP addresses.
+>@Raw    :    evaluates packets as évalue les paquets comme un ensemble
 >@
 >@$ sudo iptables -L -t <table> 
->@Lists the content of <the table <table>. Default is filter.
+>@Lists the content of the table <table>. Default is filter.
 >@
 >@Example, for filter, We see 3 chains:
->@INPUT		: inpjut chain.
->@OUTPUT		: output chain.
->@FORWARD		: used to redirect packets.
+>@INPUT   :    inpjut chain.
+>@OUTPUT  :    output chain.
+>@FORWARD :    used to redirect packets.
 >@
->@Other existing chains:
->@PREROUTING	: modification before the routing.
->@POSTROUTING	: modification after the routing.
+>@Other existing chains (into table nat):
+>@PREROUTING    : modification before the routing.
+>@POSTROUTING   : modification after the routing.
 >@
->@$ sudo iptables -F | sudo iptables -t <table> -F
+>@$ sudo iptables -F | sudo iptables -F -t <table> 
 >@>>> Commande used to Clear a table.
 >@
 >@$ sudo iptables -P <chain> <action>
@@ -79,13 +105,15 @@ $ sudo iptables-save ...
 >@
 >@$ sudo iptables -A INPUT -p icmp -j ACCEPT
 >@$ sudo iptables -A OUTPUT -p icmp -j ACCEPT
->@>>> Commands that autorise ICMP packets (ping) in unput.
+>@>>> Commands that autorises ICMP packets (ping) in input.
 >@
 >@$ sudo iptables -I ...
->@>>> Used to insert  a rule in the top of the list.
+>@>>> Used to insert  a rule in the top of the list. /!\ rules are executed from top to bottom
+>@    with priority to the top ones. Example, if a rule accept something before reject the same
+>@    thing, the result will be an acceptation.
 >@
 >@$ sudo iptables-save ...
 >@>>> Command used to save rules.
 >@
->@#################################################################
+>@################################################################################################
 >@

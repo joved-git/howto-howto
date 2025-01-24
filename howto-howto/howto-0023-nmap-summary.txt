@@ -82,7 +82,7 @@ Usual commands:
 
 -oN <filename>: extracts the result into <filename>.
 
---reason: displays the reason of the discovery (syn-ack for example).
+--reason: displays the reason of the detection (syn-ack for example).
 
 -6: performs an IP v6 scan.
 
@@ -123,14 +123,14 @@ Usual commands:
 >@--script default,dos: tries two specific scripts (here default and dos)             |  
 >@                                                                                    |  --script "http-*": uses more than one scripts
 >@--script-update: executes an update of the local scripts database                   |  
->@                                                                                    |  -T<0..5>: configures nmap aggressivity. 0: discrete and slow. 5: aggressive
+>@                                                                                    |  -T<0..5>: configures nmap aggressivity. 0: discrete and slow. 5: aggressive (default is 3)
 >@-A: the toolbox (OS & version detection, script scan, traceroute. More aggressive   |  
 >@                                                                                    |  -f -mtu <value>: becomes more discrete using packet fragmentation
 >@-f -mtu <value>: becomes more discrete using packet fragmentation                   |  
->@                                                                                    |  -D <decoy1, decoy2,...>: becomes more dicrete. Packets seem to come from several machines
+>@                                                                                    |  -D <decoy1, decoy2, [me]>: becomes more dicrete. Packets seem to come from several machines
 >@-S <ip>: performs an IP spoofing by replacing its own address by <ip>               |  
 >@                                                                                    |  -oN <filename>: extracts the result into <filename>.
->@--reason: displays the reason of the discovery (syn-ack for example)                |  
+>@--reason: displays the reason of the detection (syn-ack for example)                |  
 >@                                                                                    |  -6: performs an IP v6 scan.
 >@-PO: use a specific protocol (field "Protocol" into IP packets (6 = TCP)            |  
 >@                                                                                    |  -sO: Performs an IP protocol scan (see -PO).
