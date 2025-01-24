@@ -1,0 +1,109 @@
+Drapeaux TCP
+
+In a TCP connection, flags are used to indicate a particular state of the connection or to provide 
+additional useful information, for example for troubleshooting purposes or to manage control of a 
+particular connection. The most commonly used flags are "SYN", "ACK", and "FIN". 
+Each indicator corresponds to 1 bit information.
+
+
+Types of flags: 
+
+SYN (Synchronization) – It is used in the first step of the connection establishment phase or 
+three-way handshake process between the two hosts. Only the first packet from the sender and 
+receiver should have this flag set. This is used to synchronize the sequence number, i.e. to tell 
+the other end which sequence number it should accept.
+
+ACK (Acknowledgment) – It is used to acknowledge packets successfully received by the host. The flag 
+is set if the acknowledgment number field contains a valid acknowledgment number. 
+     
+FIN (Finish) – It is used to request the end of the connection, that is, when there is no more data 
+from the sender, it requests the end of the connection. This is the last packet sent by the sender. 
+It releases the reserved resources and terminates the connection gracefully.
+
+RST (Reset) – It is used to terminate the connection if the RST sender believes that something is 
+wrong with the TCP connection or that the conversation should not exist. It can be sent on the 
+receiver side when the packet is sent to a particular host which was not expecting it. 
+
+URG (Urgent) – It is used to indicate that the data contained in the packet should be prioritized 
+and processed urgently by the receiver. This flag is used in combination with the Urgent Pointer 
+field to identify the location of urgent data in the packet.
+
+PSH (Push) – It is used to request immediate delivery of data to the receiving host, without waiting 
+for additional data to be buffered on the sending side. This indicator is commonly used in 
+applications such as real-time audio or video streaming.
+
+WND (Window) – It is used to communicate the size of the receive window to the sender. The window 
+size is the amount of data the receiving host is capable of accepting at any given time. The sender 
+must limit the amount of data it sends based on the window size announced by the receiver.
+
+SEQ (Sequence Number) – This is a unique number assigned to each segment by the sender to identify the 
+order in which packets should be received by the receiver. The sequence number is used in conjunction 
+with the acknowledgment number to ensure reliable data transfer and avoid duplicate packets.
+
+ACK (Acknowledgment number) – It is used to acknowledge receipt of a TCP segment and to communicate 
+the next expected sequence number to the sender. The Acknowledgment Number field contains the sequence 
+number of the next expected segment, rather than the number of the last segment received.
+
+CHK (Checksum) – It is used to verify the integrity of the TCP segment during transmission. The 
+checksum is calculated over the entire segment, including header and data fields, and is recalculated 
+at each hop along the network path.
+
+>@
+>@#########################################################################################################
+>@#                                                                                                       #
+>@# [ TCP flags ]                                                                                         #
+>@#                                                                                                       #
+>@# In a TCP connection, flags are used to indicate a particular state of the connection or to provide    #
+>@# additional useful information, for example for troubleshooting purposes or to manage control of a     #
+>@# particular connection. The most commonly used flags are "SYN", "ACK", and "FIN".                      #
+>@# Each indicator corresponds to 1 bit information.                                                      #
+>@#                                                                                                       #
+>@# See: howto-0160-tcp-protocol.txt                                                                      #
+>@# See: howto-0161-tcp-protocol-fr.txt                                                                   #
+>@# See: howto-0168-tcp-flags-fr.txt                                                                      #
+>@#                                                                                                       #
+>@#-------------------------------------------------------------------------------------------------------# 
+>@
+>@Types of flags: 
+>@
+>@SYN (Synchronization) – It is used in the first step of the connection establishment phase or three-way 
+>@handshake process between the two hosts. Only the first packet from the sender and receiver should have 
+>@this flag set. This is used to synchronize the sequence number, i.e. to tell the other end which 
+>@sequence number it should accept.
+>@
+>@ACK (Acknowledgment) – It is used to acknowledge packets successfully received by the host. The flag is 
+>@set if the acknowledgment number field contains a valid acknowledgment number. 
+>@     
+>@FIN (Finish) – It is used to request the end of the connection, that is, when there is no more data from 
+>@the sender, it requests the end of the connection. This is the last packet sent by the sender. 
+>@It releases the reserved resources and terminates the connection gracefully.
+>@
+>@RST (Reset) – It is used to terminate the connection if the RST sender believes that something is wrong 
+>@with the TCP connection or that the conversation should not exist. It can be sent on the receiver side 
+>@when the packet is sent to a particular host which was not expecting it. 
+>@
+>@URG (Urgent) – It is used to indicate that the data contained in the packet should be prioritized and 
+>@processed urgently by the receiver. This flag is used in combination with the Urgent Pointer field to 
+>@identify the location of urgent data in the packet.
+>@
+>@PSH (Push) – It is used to request immediate delivery of data to the receiving host, without waiting for 
+>@additional data to be buffered on the sending side. This indicator is commonly used in applications 
+>@such as real-time audio or video streaming.
+>@
+>@WND (Window) – It is used to communicate the size of the receive window to the sender. The window size 
+>@is the amount of data the receiving host is capable of accepting at any given time. The sender must 
+>@limit the amount of data it sends based on the window size announced by the receiver.
+>@
+>@SEQ (Sequence Number) – This is a unique number assigned to each segment by the sender to identify the 
+>@order in which packets should be received by the receiver. The sequence number is used in conjunction 
+>@with the acknowledgment number to ensure reliable data transfer and avoid duplicate packets.
+>@
+>@ACK (Acknowledgment number) – It is used to acknowledge receipt of a TCP segment and to communicate the 
+>@next expected sequence number to the sender. The Acknowledgment Number field contains the sequence 
+>@number of the next expected segment, rather than the number of the last segment received.
+>@
+>@CHK (Checksum) – It is used to verify the integrity of the TCP segment during transmission. The checksum 
+>@is calculated over the entire segment, including header and data fields, and is recalculated 
+>@
+>@#########################################################################################################
+>@
