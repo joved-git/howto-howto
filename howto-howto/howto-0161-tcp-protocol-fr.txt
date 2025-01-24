@@ -70,11 +70,11 @@ Avec:
    Data offset: taille de l'entête avec options           |   Reserved: champ réservé
                                                           | 
    Flags                                                  |   Flags
-     NS (Nonce):                                          |     CWR (oOngestion Window Reduced):
+     NS (Nonce):                                          |     CWR (Congestion Window Reduced):
      ECE (ECN-Echo):                                      |     URG (Urgent): la donnée est urgente
      ACK: il s'agit d'un ACK                              |     PSH (Push): pour l'envoi de données sans délai
      RST (Reset): il y a eu une rupture de connexion      |     SYN: il s'agit d'un SYN
-     FIN: c'est la fin de la connexion                    |
+     FIN (Finish): c'est la fin de la connexion           |
                                                           |
    Windows size: taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
                  avant acquittement (calcul auto)         |   URG pointer: pointeur vers données urgentes (si URG=1)
@@ -159,11 +159,11 @@ Avec:
 >@   Data offset: taille de l'entête avec options           |   Reserved: champ réservé
 >@                                                          | 
 >@   Flags                                                  |   Flags
->@     NS (Nonce):                                          |     CWR (oOngestion Window Reduced):
+>@     NS (Nonce):                                          |     CWR (Congestion Window Reduced):
 >@     ECE (ECN-Echo):                                      |     URG (Urgent): la donnée est urgente
 >@     ACK: il s'agit d'un ACK                              |     PSH (Push): pour l'envoi de données sans délai
 >@     RST (Reset): il y a eu une rupture de connexion      |     SYN: il s'agit d'un SYN
->@     FIN: c'est la fin de la connexion                    |
+>@     FIN (Finish): c'est la fin de la connexion           |
 >@                                                          |
 >@   Windows size: taille de la fenêtre TCP (en octets)     |   Checksum: somme de contrôle
 >@                 avant acquittement (calcul auto)         |   URG pointer: pointeur vers données urgentes (si URG=1)

@@ -69,7 +69,7 @@ With:
      ECE (ECN-Echo):                                      |     URG (Urent): for urgent data
      ACK: This is a ACK                                   |     PSH (Push): used to send data without delay
      RST (Reset): there was a disconnection               |     SYN: this is a SYN
-     FIN: this is the end of the connection               |
+     FIN (Finish): this is the end of the connection      |
                                                           |
    Windows size: size of the data TCP window (in bytes)   |   Checksum: control hecksum
                  before acknowledgment (auto calc)        |   URG pointer: pointer to urgent datas (if URG = 1)
@@ -156,7 +156,7 @@ With:
 >@     ECE (ECN-Echo):                                      |     URG (Urent): for urgent data
 >@     ACK: This is a ACK                                   |     PSH (Push): used to send data without delay
 >@     RST (Reset): there was a disconnection               |     SYN: this is a SYN
->@     FIN: this is the end of the connection               |
+>@     FIN (Finish): this is the end of the connection      |
 >@                                                          |
 >@   Windows size: size of the data TCP window (in bytes)   |   Checksum: control hecksum
 >@                 before acknowledgment (auto calc)        |   URG pointer: pointer to urgent datas (if URG = 1)

@@ -1,0 +1,112 @@
+Drapeaux TCP
+
+Dans une connexion TCP, les indicateurs sont utilisés pour indiquer un état particulier de la connexion ou pour 
+fournir des informations utiles supplémentaires, par exemple à des fins de dépannage ou pour gérer le contrôle 
+d'une connexion particulière. Les indicateurs les plus couramment utilisés sont « SYN », « ACK » et « FIN » . 
+Chaque indicateur correspond à une information de 1 bit. 
+
+
+Types de drapeaux : 
+
+SYN (Synchronisation) – Elle est utilisée dans la première étape de la phase d'établissement de la connexion 
+ou du processus de négociation à trois entre les deux hôtes. Seul le premier paquet de l'expéditeur et du 
+récepteur doit avoir cet indicateur défini. Ceci est utilisé pour synchroniser le numéro de séquence, c'est-à-dire 
+pour indiquer à l'autre extrémité quel numéro de séquence elle doit accepter.
+
+ACK (Accusé de réception) – Il est utilisé pour accuser réception des paquets reçus avec succès par l'hôte. 
+L'indicateur est défini si le champ du numéro d'accusé de réception contient un numéro d'accusé de réception 
+valide. 
+     
+FIN (Finish) – Il est utilisé pour demander la fin de la connexion , c'est-à-dire que lorsqu'il n'y a plus de 
+données de l'expéditeur, il demande la fin de la connexion. Il s'agit du dernier paquet envoyé par l'expéditeur. 
+Il libère les ressources réservées et met fin à la connexion en douceur. 
+     
+RST (Réintialisation, Reset) – Elle est utilisée pour mettre fin à la connexion si l'expéditeur RST estime que 
+quelque chose ne va pas avec la connexion TCP ou que la conversation ne devrait pas exister. Elle peut être 
+envoyée du côté du récepteur lorsque le paquet est envoyé à un hôte particulier qui ne l'attendait pas. 
+
+URG (Urgent) – Il est utilisé pour indiquer que les données contenues dans le paquet doivent être traitées en 
+priorité et traitées de toute urgence par le récepteur. Cet indicateur est utilisé en combinaison avec le champ 
+Pointeur urgent pour identifier l'emplacement des données urgentes dans le paquet.
+
+PSH (Push) – Il est utilisé pour demander la livraison immédiate des données à l'hôte récepteur, sans attendre 
+que des données supplémentaires soient mises en mémoire tampon du côté de l'expéditeur. Cet indicateur est 
+couramment utilisé dans des applications telles que le streaming audio ou vidéo en temps réel.
+
+WND (Fenêtre, Window) – Elle est utilisée pour communiquer la taille de la fenêtre de réception à l'expéditeur. 
+La taille de la fenêtre correspond à la quantité de données que l'hôte récepteur est capable d'accepter à un 
+moment donné.  L'expéditeur doit limiter la quantité de données qu'il envoie en fonction de la taille de la 
+fenêtre annoncée par le récepteur.
+
+SEQ (Numéro de séquence) – Il s'agit d'un numéro unique attribué à chaque segment par l'expéditeur pour identifier 
+l'ordre dans lequel les paquets doivent être reçus par le récepteur. Le numéro de séquence est utilisé conjointement 
+avec le numéro d'accusé de réception pour garantir un transfert de données fiable et éviter les paquets en double.
+
+ACK (Numéro d'accusé de réception (ACK) – Il est utilisé pour accuser réception d'un segment TCP et pour communiquer 
+le prochain numéro de séquence attendu à l'expéditeur. Le champ Numéro d'accusé de réception contient le numéro de 
+séquence du prochain segment attendu, plutôt que le numéro du dernier segment reçu.
+
+CHK (Somme de contrôle) – Elle est utilisée pour vérifier l'intégrité du segment TCP pendant la transmission. 
+La somme de contrôle est calculée sur l'ensemble du segment, y compris les champs d'en-tête et de données, et est 
+recalculée à chaque saut le long du chemin réseau.
+
+>@########################################################################################################################
+>@#                                                                                                                      # 
+>@# [ Drapeaux TCP ]                                                                                                     #
+>@#                                                                                                                      # 
+>@# Dans une connexion TCP, les indicateurs sont utilisés pour indiquer un état particulier de la connexion ou pour      #
+>@# fournir des informations utiles supplémentaires, par exemple à des fins de dépannage ou pour gérer le contrôle       #
+>@# d'une connexion particulière. Les indicateurs les plus couramment utilisés sont « SYN », « ACK » et « FIN » .        #
+>@# Chaque indicateur correspond à une information de 1 bit.                                                             #
+>@#                                                                                                                      # 
+>@# Voir: howto-0160-tcp-protocol.txt                                                                                    #
+>@# Voir: howto-0161-tcp-protocol-fr.txt                                                                                 # 
+>@# Voir: howto-0167-tcp-flags.txt                                                                                       # 
+>@#                                                                                                                      # 
+>@#----------------------------------------------------------------------------------------------------------------------#
+>@
+>@Types de drapeaux : 
+>@
+>@SYN (Synchronisation) – Elle est utilisée dans la première étape de la phase d'établissement de la connexion 
+>@ou du processus de négociation à trois entre les deux hôtes. Seul le premier paquet de l'expéditeur et du récepteur 
+>@doit avoir cet indicateur défini. Ceci est utilisé pour synchroniser le numéro de séquence, c'est-à-dire pour 
+>@indiquer à l'autre extrémité quel numéro de séquence elle doit accepter.
+>@
+>@ACK (Accusé de réception) – Il est utilisé pour accuser réception des paquets reçus avec succès par l'hôte. 
+>@L'indicateur est défini si le champ du numéro d'accusé de réception contient un numéro d'accusé de réception valide. 
+>@     
+>@FIN (Finish) – Il est utilisé pour demander la fin de la connexion , c'est-à-dire que lorsqu'il n'y a plus de 
+>@données de l'expéditeur, il demande la fin de la connexion. Il s'agit du dernier paquet envoyé par l'expéditeur. 
+>@Il libère les ressources réservées et met fin à la connexion en douceur. 
+>@     
+>@RST (Réintialisation, Reset) – Elle est utilisée pour mettre fin à la connexion si l'expéditeur RST estime que quelque 
+>@chose ne va pas avec la connexion TCP ou que la conversation ne devrait pas exister. Elle peut être envoyée du côté du 
+>@récepteur lorsque le paquet est envoyé à un hôte particulier qui ne l'attendait pas. 
+>@
+>@URG (Urgent) – Il est utilisé pour indiquer que les données contenues dans le paquet doivent être traitées en priorité 
+>@et traitées de toute urgence par le récepteur. Cet indicateur est utilisé en combinaison avec le champ Pointeur urgent 
+>@pour identifier l'emplacement des données urgentes dans le paquet.
+>@
+>@PSH (Push) – Il est utilisé pour demander la livraison immédiate des données à l'hôte récepteur, sans attendre que des 
+>@données supplémentaires soient mises en mémoire tampon du côté de l'expéditeur. Cet indicateur est couramment utilisé 
+>@dans des applications telles que le streaming audio ou vidéo en temps réel.
+>@
+>@WND (Fenêtre, Window) – Elle est utilisée pour communiquer la taille de la fenêtre de réception à l'expéditeur. La 
+>@taille de la fenêtre correspond à la quantité de données que l'hôte récepteur est capable d'accepter à un moment 
+>@donné. L'expéditeur doit limiter la quantité de données qu'il envoie en fonction de la taille de la fenêtre annoncée 
+>@ par le récepteur.
+>@
+>@SEQ (Numéro de séquence) – Il s'agit d'un numéro unique attribué à chaque segment par l'expéditeur pour identifier 
+>@l'ordre dans lequel les paquets doivent être reçus par le récepteur. Le numéro de séquence est utilisé conjointement 
+>@avec le numéro d'accusé de réception pour garantir un transfert de données fiable et éviter les paquets en double.
+>@
+>@ACK (Numéro d'accusé de réception (ACK) – Il est utilisé pour accuser réception d'un segment TCP et pour communiquer 
+>@le prochain numéro de séquence attendu à l'expéditeur. Le champ Numéro d'accusé de réception contient le numéro de 
+>@séquence du prochain segment attendu, plutôt que le numéro du dernier segment reçu.
+>@
+>@CHK (Somme de contrôle) – Elle est utilisée pour vérifier l'intégrité du segment TCP pendant la transmission. 
+>@La somme de contrôle est calculée sur l'ensemble du segment, y compris les champs d'en-tête et de données, et est 
+>@recalculée à chaque saut le long du chemin réseau.
+>@
+>@########################################################################################################################
+>@
