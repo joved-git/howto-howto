@@ -1,9 +1,21 @@
 #!/bin/bash
 # Monkey - 2021 / 2025
 
-SRC_DIR=~/Documents/howto-howto/Docs
+WHERE=`echo $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`
+SRC_DIR=$WHERE/../Docs
 
-if [ x$1 = x ]; then
+if [ "x$1" = "x-v" -o "x$1" = "x--version" ];
+#if [ x$1 = x-v ];
+then
+	echo $WHERE
+	echo
+	echo "kali [ "`cat $WHERE/../version`" ]"
+	echo
+	exit 0
+fi
+
+if [ x$1 = x ]; 
+then
 	echo
 	echo "Please give me something to do !!"
 	echo "!!! kali list should be a good idea :)"
