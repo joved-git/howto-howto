@@ -1,59 +1,167 @@
+Bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security 
+researchers, red teamers and reverse engineers an easy to use, all-in-one solution with all the features they might 
+possibly need for performing reconnaissance and attacking WiFi networks, Bluetooth Low Energy devices, wireless HID 
+devices, CAN-bus and IPv4/IPv6 networks.
 
+Main Features
+
+    -WiFi networks scanning, deauthentication attack, clientless PMKID association attack and automatic WPA/WPA2 client 
+      handshakes capture.
+    -Bluetooth Low Energy devices scanning, characteristics enumeration, reading and writing.
+    -2.4Ghz wireless devices scanning and MouseJacking attacks with over-the-air HID frames injection (with DuckyScript 
+      support).
+    -Passive and active IP network hosts probing and recon.
+    -ARP, DNS, DHCPv6 and NDP spoofers for MITM attacks on IPv4 and IPv6 based networks.
+    -Proxies at packet level, TCP level and HTTP/HTTPS application level fully scriptable with easy to implement javascript 
+      plugins.
+    -A powerful network sniffer for credentials harvesting which can also be used as a network protocol 
+      fuzzer.
+    -A very fast port scanner.
+    -CAN-bus support for reading, injecting, fuzzing, loading custom DBC and builtin OBD2 PIDs parser.
+    -A powerful REST API with support for asynchronous events notification on websocket to orchestrate your attacks easily.
+    -An easy to use web user interface.
+    -and More !
+
+-> Install Bettercap
+$ sudo apt update
+$ sudo apt install bettercap
+
+-> How Bettercap works
+* Start Bettercap.
 $ sudo bettercap
->>> lancement. Bettercap donne son prompt.
+>>> Bettercap gives prompt.
 
+* Generic help.
 10.0.2.0/24 > 10.0.2.5 » help
->>> help generique.
 
+* Precise help.
 10.0.2.0/24 > 10.0.2.5 » help net.recon
->>> help précise.
+---
+net.recon (not running): Read periodically the ARP cache in order to monitor for new hosts on the network.
 
+                      net.recon on : Start network hosts discovery.
+                     net.recon off : Stop network hosts discovery.
+                         net.clear : Clear all endpoints collected by the hosts discovery module.
+                          net.show : Show cache hosts list (default sorting by ip).
+       net.show ADDRESS1, ADDRESS2 : Show information about a specific comma separated list of addresses (by IP or MAC).
+  net.show.meta ADDRESS1, ADDRESS2 : Show meta information about a specific comma separated list of addresses (by IP or MAC).
+---
+
+* Display APR table.
 10.0.2.0/24 > 10.0.2.5 » net.show
->>> affiche la table ARP.
+---
 
+┌───────────────┬───────────────────┬──────┬────────────────────────┬──────┬───────┬──────────┐
+│     IP ▴      │        MAC        │ Name │         Vendor         │ Sent │ Recvd │   Seen   │
+├───────────────┼───────────────────┼──────┼────────────────────────┼──────┼───────┼──────────┤
+│ 192.168.8.128 │ 08:00:27:6e:13:6e │ eth0 │ PCS Systemtechnik GmbH │ 0 B  │ 0 B   │ 11:50:54 │
+│               │                   │      │                        │      │       │          │
+└───────────────┴───────────────────┴──────┴────────────────────────┴──────┴───────┴──────────┘
+
+↑ 0 B / ↓ 122 kB / 345 pkts
+---
+
+* Start the host discovery.
 10.0.2.0/24 > 10.0.2.5 » net.recon on
->>> démarre le host discovery.
 
+* How to make a bidirectional APR spoofing.
 10.0.2.0/24 > 10.0.2.5 » help arp.spoof
-
 10.0.2.0/24 > 10.0.2.5 » set arp.spoof.fullduplex true
->>> faire du spoofing dans les deux sens.
-
-» set arp.spoof.targets <victime>
->>> faire du spoofing pour l'adresse <victime> donnée.
+>>> To do a bidirectional spoofing.
 
 10.0.2.0/24 > 10.0.2.5 » arp.spoof on
->>> active l'ARP spoofing. 
+>>> Activate the ARP spoofing.
 
 10.0.2.0/24 > 10.0.2.5 » arp.ban on
->>> active l'ARP spoofing ban.
+>>> Activate ARP spoofing ban.
 
+10.0.2.0/24 > 10.0.2.5 » arp.spoof off
+>>> Disable the ARP spoofing.
 >@
->@#########################################################
+>@################################################################################################################################
+>@#                                                                                                                              #
+>@# [Bettercap ]                                                                                                                 #
+>@#                                                                                                                              #
+>@# Bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, #
+>@# red teamers and reverse engineers an easy to use, all-in-one solution with all the features they might possibly need for     #
+>@# performing reconnaissance and attacking WiFi networks, Bluetooth Low Energy devices, wireless HID devices, CAN-bus and       #
+>@ IPv4/IPv6 networks.                                                                                                           #
+>@#                                                                                                                              #
+>@# Main Features                                                                                                                #
+>@#                                                                                                                              #
+>@#     -WiFi networks scanning, deauthentication attack, clientless PMKID association attack and automatic WPA/WPA2 client      #
+>@#       handshakes capture.                                                                                                    #
+>@#     -Bluetooth Low Energy devices scanning, characteristics enumeration, reading and writing.                                #
+>@#     -2.4Ghz wireless devices scanning and MouseJacking attacks with over-the-air HID frames injection (with DuckyScript      #
+>@#       support).                                                                                                              #
+>@#     -Passive and active IP network hosts probing and recon.                                                                  #
+>@#     -ARP, DNS, DHCPv6 and NDP spoofers for MITM attacks on IPv4 and IPv6 based networks.                                     #
+>@#     -Proxies at packet level, TCP level and HTTP/HTTPS application level fully scriptable with easy to implement javascript  #
+>@#       plugins.                                                                                                               #
+>@#     -A powerful network sniffer for credentials harvesting which can also be used as a network protocol fuzzer.              #
+>@#     -A very fast port scanner.                                                                                               #
+>@#     -CAN-bus support for reading, injecting, fuzzing, loading custom DBC and builtin OBD2 PIDs parser.                       #
+>@#     -A powerful REST API with support for asynchronous events notification on websocket to orchestrate your attacks easily.  #
+>@#     -An easy to use web user interface.                                                                                      #
+>@#     -and More !                                                                                                              #
+>@#                                                                                                                              #
+>@#------------------------------------------------------------------------------------------------------------------------------# 
 >@
+>@-> Install Bettercap
+>@$ sudo apt update
+>@$ sudo apt install bettercap
+>@
+>@-> How Bettercap works
+>@* Start Bettercap.
 >@$ sudo bettercap
->@>>> prompt bettercap
+>@>>> Bettercap gives prompt.
 >@
->@» help
->@>>> help générale
+>@* Generic help.
+>@10.0.2.0/24 > 10.0.2.5 » help
 >@
->@» help <module>
->@>>> help sur <module>
+>@* Precise help.
+>@10.0.2.0/24 > 10.0.2.5 » help net.recon
+>@---
+>@net.recon (not running): Read periodically the ARP cache in order to monitor for new hosts on the network.
 >@
->@» net.show
->@>>> table ARP
+>@                      net.recon on : Start network hosts discovery.
+>@                     net.recon off : Stop network hosts discovery.
+>@                         net.clear : Clear all endpoints collected by the hosts discovery module.
+>@                          net.show : Show cache hosts list (default sorting by ip).
+>@       net.show ADDRESS1, ADDRESS2 : Show information about a specific comma separated list of addresses (by IP or MAC).
+>@  net.show.meta ADDRESS1, ADDRESS2 : Show meta information about a specific comma separated list of addresses (by IP or MAC).
+>@---
 >@
->@» net.recon on|off
->@>>> demarre et stoppe le host discovery
+>@* Display APR table.
+>@10.0.2.0/24 > 10.0.2.5 » net.show
+>@---
 >@
->@» set arp.spoof.fullduplex true
->@» set arp.spoof.target <victime>
+>@┌───────────────┬───────────────────┬──────┬────────────────────────┬──────┬───────┬──────────┐
+>@│     IP ▴      │        MAC        │ Name │         Vendor         │ Sent │ Recvd │   Seen   │
+>@├───────────────┼───────────────────┼──────┼────────────────────────┼──────┼───────┼──────────┤
+>@│ 192.168.8.128 │ 08:00:27:6e:13:6e │ eth0 │ PCS Systemtechnik GmbH │ 0 B  │ 0 B   │ 11:50:54 │
+>@│               │                   │      │                        │      │       │          │
+>@└───────────────┴───────────────────┴──────┴────────────────────────┴──────┴───────┴──────────┘
 >@
->@» arp.spoof on
->@>>> demarre l'ARP spoofing sur <victime>
+>@↑ 0 B / ↓ 122 kB / 345 pkts
+>@---
 >@
->@» arp.ban on
->@>>> demarre l'ARP spoofing en mode ban sur <victime>
+>@* Start the host discovery.
+>@10.0.2.0/24 > 10.0.2.5 » net.recon on
 >@
->@#########################################################
+>@* How to make a bidirectional APR spoofing.
+>@10.0.2.0/24 > 10.0.2.5 » help arp.spoof
+>@10.0.2.0/24 > 10.0.2.5 » set arp.spoof.fullduplex true
+>@>>> To do a bidirectional spoofing.
+>@
+>@10.0.2.0/24 > 10.0.2.5 » arp.spoof on
+>@>>> Activate the ARP spoofing.
+>@
+>@10.0.2.0/24 > 10.0.2.5 » arp.ban on
+>@>>> Activate ARP spoofing ban.
+>@
+>@10.0.2.0/24 > 10.0.2.5 » arp.spoof off
+>@>>> Disable the ARP spoofing.
+>@
+>@################################################################################################################################
 >@
