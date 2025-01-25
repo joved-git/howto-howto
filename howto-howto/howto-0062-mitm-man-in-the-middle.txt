@@ -34,32 +34,28 @@ Change the ec_uid and the ec_gid to avoid permission problems.
   $ sudo ettercap -G
 
 4. Use Ettercap.
-Click on Accept on the up right (the little V).
-On the left, you will find the Host list icon. Click on it to see local machine.
-To see all machines, click on the 3 vertical dots icons on the right, then "Hosts" and "Scan for hosts".
-You should see new machines (Metasploitable and Win10).
-Define the 2 targets machines (Metasploitable and Win10).
-On the right, click on the World (MITM Menu) then choose "ARP poisoning".
-Check that "Sniff remote connections" is checked then click OK.
-Go to the 3-dot menu then choose "Logging" then "Logging all packets and info". Choose a file name (logmitm) 
-  on the Kali's Desktop (you should go to /home/kali/Desktop).
+  -Click on Accept on the up right (the little V).
+  -On the left, you will find the Host list icon. Click on it to see local machine.
+  -To see all machines, click on the 3 vertical dots icons on the right, then "Hosts" and "Scan for hosts".
+  -You should see new machines (Metasploitable and Win10).
+  -Define the 2 targets machines (Metasploitable and Win10).
+  -On the right, click on the World (MITM Menu) then choose "ARP poisoning".
+  -Check that "Sniff remote connections" is checked then click OK.
+  -Go to the 3-dot menu then choose "Logging" then "Logging all packets and info". Choose a file name (logmitm) 
+    on the Kali's Desktop (you should go to /home/kali/Desktop).
 
 5. Install Putty on the Windows machine.
 On Windows, download and install Putty.
 
 6. Execute a connection between Win-10 and Metasploitable.
-Use Putty, choose Telnet and put the ip address of Metasploitable.
-Log to Metasploitable with msfadmin/msfadmin.
+  -Use Putty, choose Telnet and put the ip address of Metasploitable.
+  -Log to Metasploitable with msfadmin/msfadmin.
 
 7. Check the logs.
-Launch another Term.
-See the logs by:
+  -Launch another Term.
+  -See the logs by:
   $ sudo etterlog ~/Desktop/logmitm.eci			-> Generic data
   $ sudo etterlog ~/Desktop/logmitm.ecp			-> Data exchanged between the 2 machines.
-
-
-
-
 
 >@
 >@###################################################################################################################
@@ -107,25 +103,25 @@ See the logs by:
 >@  $ sudo ettercap -G
 >@
 >@4. Use Ettercap.
->@Click on Accept on the up right (the little V).
->@On the left, you will find the Host list icon. Click on it to see local machine.
->@To see all machines, click on the 3 vertical dots icons on the right, then "Hosts" and "Scan for hosts".
->@You should see new machines (Metasploitable and Win10).
->@Define the 2 targets machines (Metasploitable and Win10).
->@On the right, click on the World (MITM Menu) then choose "ARP poisoning".
->@Check that "Sniff remote connections" is checked then click OK.
->@Go to the 3-dot menu then choose "Logging" then "Logging all packets and info". Choose a file name (logmitm) 
->@  on the Kali's Desktop (you should go to /home/kali/Desktop).
+>@  -Click on Accept on the up right (the little V).
+>@  -On the left, you will find the Host list icon. Click on it to see local machine.
+>@  -To see all machines, click on the 3 vertical dots icons on the right, then "Hosts" and "Scan for hosts".
+>@  -You should see new machines (Metasploitable and Win10).
+>@  -Define the 2 targets machines (Metasploitable and Win10).
+>@  -On the right, click on the World (MITM Menu) then choose "ARP poisoning".
+>@  -Check that "Sniff remote connections" is checked then click OK.
+>@  -Go to the 3-dot menu then choose "Logging" then "Logging all packets and info". Choose a file name (logmitm) 
+>@    on the Kali's Desktop (you should go to /home/kali/Desktop).
 >@
 >@5. Install Putty on the Windows machine.
 >@On Windows, download and install Putty.
 >@
 >@6. Execute a connection between Win-10 and Metasploitable.
->@Use Putty, choose Telnet and put the ip address of Metasploitable.
->@Log to Metasploitable with msfadmin/msfadmin.
+>@  -Use Putty, choose Telnet and put the ip address of Metasploitable.
+>@  -Log to Metasploitable with msfadmin/msfadmin.
 >@
 >@7. Check the logs.
->@Launch another Term.
+>@  -Launch another Term.
 >@See the logs by:
 >@  $ sudo etterlog ~/Desktop/logmitm.eci			-> Generic data
 >@  $ sudo etterlog ~/Desktop/logmitm.ecp			-> Data exchanged between the 2 machines.

