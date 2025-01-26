@@ -105,6 +105,8 @@ net.recon (not running): Read periodically the ARP cache in order to monitor for
 >@#     -An easy to use web user interface.                                                                                      #
 >@#     -and More !                                                                                                              #
 >@#                                                                                                                              #
+>@# See: howto-0034-mitmproxy.txt                                                                                                #
+>@#                                                                                                                              #
 >@#------------------------------------------------------------------------------------------------------------------------------# 
 >@
 >@-> Install Bettercap
