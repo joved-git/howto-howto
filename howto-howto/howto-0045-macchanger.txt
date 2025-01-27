@@ -1,50 +1,106 @@
+1. Put the wireless adaptor in Managed mode (Monitor is off).
+$ sudo ifconfig wlan0 down
+$ sudo iwconfig wlan0 mode managed
+$ sudo ifconfig wlan0 up
 
-1- monitor off
+2. Down the wlan0 adaptor
+$ sudo ifconfig wlan0 down
 
-2- ifconfig wlan0 down
-
-3- Affiche MAC addr
+3. Display the MAC address.
+'s' means show.
 $ sudo macchanger -s wlan0
+---
+Current MAC:   ce:5e:1f:f5:31:2b (unknown)
+Permanent MAC: 00:c0:ca:98:79:8a (ALFA, INC.)
+---
 
-4- Modification
+4a. Change the address with one of the same type (USB, wireless, ...)
 $ sudo macchanger -a wlan0
->>> meme type de péripherique (USB sans fil, ...)
+---
+Current MAC:   00:c0:ca:98:79:8a (ALFA, INC.)
+Permanent MAC: 00:c0:ca:98:79:8a (ALFA, INC.)
+New MAC:       00:19:98:f8:38:8f (SATO CORPORATION)
+---
+>>> The New will be affected once the adaptor will be put 'up'.
+$ sudo ifconfig wlan0 up
+$ macchanger -s wlan0
+---
+Current MAC:   00:19:98:f8:38:8f (SATO CORPORATION)
+Permanent MAC: 00:c0:ca:98:79:8a (ALFA, INC.)
+---
+>>> Now the current is the previous New.
 
+4b. Change the address with one of any type.
 $ sudo macchanger -A wlan0
->>> addresse coherente mais de n'importe quel type
 
+4d. Change the address with a random one.
 $ sudo macchanger -r wlan0
->>> random
 
+4d. Change the address with a fixed one.
 $ sudo macchanger -m <MAC> wlan0
 
+4e. return to the permanent one.
 $ sudo macchanger -p wlan0
->>> revient a la MAC addr permanente
 
-5- Redemarrage service (si besoin)
+5. Up the wlan0 adaptor
+$ sudo ifconfig wlan0 down
+ 
+6. Restart network service (not needed).
 $ sudo NetworkManager restart
 
 >@
->@#############################################
+>@###########################################################################
 >@
->@* monitor off
+>@1. Put the wireless adaptor in Managed mode (Monitor is off).
+>@$ sudo ifconfig wlan0 down
+>@$ sudo iwconfig wlan0 mode managed
+>@$ sudo ifconfig wlan0 up
 >@
->@* Affiche MAC
+>@2. Down the wlan0 adaptor
+>@$ sudo ifconfig wlan0 down
+>@
+>@3. Display the MAC address.
+>@'s' means show.
 >@$ sudo macchanger -s wlan0
+>@---
+>@Current MAC:   ce:5e:1f:f5:31:2b (unknown)
+>@Permanent MAC: 00:c0:ca:98:79:8a (ALFA, INC.)
+>@---
 >@
->@* Mofification
+>@4a. Change the address with one of the same type (USB, wireless, ...)
+>@$ sudo macchanger -a wlan0
+>@---
+>@Current MAC:   00:c0:ca:98:79:8a (ALFA, INC.)
+>@Permanent MAC: 00:c0:ca:98:79:8a (ALFA, INC.)
+>@New MAC:       00:19:98:f8:38:8f (SATO CORPORATION)
+>@---
+>@>>> The New will be affected once the adaptor will be put 'up'.
+>@$ sudo ifconfig wlan0 up
+>@$ macchanger -s wlan0
+>@---
+>@Current MAC:   00:19:98:f8:38:8f (SATO CORPORATION)
+>@Permanent MAC: 00:c0:ca:98:79:8a (ALFA, INC.)
+>@---
+>@>>> Now the current is the previous New.
+>@
+>@4b. Change the address with one of any type.
 >@$ sudo macchanger -A wlan0
->@>>> MAC coherente
 >@
+>@4d. Change the address with a random one.
 >@$ sudo macchanger -r wlan0
->@>>> random
 >@
+>@4d. Change the address with a fixed one.
 >@$ sudo macchanger -m <MAC> wlan0
->@>>> set adresse <MAC>
 >@
+>@4e. return to the permanent one.
 >@$ sudo macchanger -p wlan0
->@>>> retour arriere
 >@
->@#############################################
+>@5. Up the wlan0 adaptor
+>@$ sudo ifconfig wlan0 down
+>@
+>@6. Restart network service (not needed).
+>@$ sudo NetworkManager restart
+>@
+>@###########################################################################
 >@
 

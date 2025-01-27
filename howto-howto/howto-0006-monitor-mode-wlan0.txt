@@ -21,6 +21,11 @@ $ sudo iwconfig wlan0 mode monitor
 3 – Reactivate the card
 $ sudo ip link set wlan0 up
 
+To return in non-monitor mode:
+$ sudo ifconfig wlan0 down
+$ sudo iwconfig wlan0 mode managed
+$ sudo ifconfig wlan0 up
+
 >@
 >@#######################################################
 >@
@@ -47,6 +52,11 @@ $ sudo ip link set wlan0 up
 >@3 – Reactivate the card
 >@$ sudo ip link set wlan0 up
 >@
+>@
+>@To return in non-monitor mode:
+>@$ sudo ifconfig wlan0 down
+>@$ sudo iwconfig wlan0 mode managed
+>@$ sudo ifconfig wlan0 up
 >@
 >@#######################################################
 >@
