@@ -1,7 +1,12 @@
-DNS stands for Domain Name System
+The Domain Name System13, or DNS, is a distributed computing service that associates Internet 
+domain names with their IP addresses or other record types. By providing a distributed name 
+resolution service in the early years of the Internet, around 1985, DNS is an essential 
+component in the development of the computer network.DNS stands for Domain Name System
 
-It is used to convert domain name to an ip address.
+It is used to convert domain name to an IP address.
+
 DNS uses the port #53 (UDP).
+
 DNS is hierarchized from right to left: com -> facebook -> www
 
 Some DNS fields:
@@ -24,7 +29,16 @@ DNS protection:
    Use DNSSEC (signed DNS).
 
 >@
->@###############################################################################################
+>@###################################################################################################
+>@#                                                                                                 #
+>@# [ DNS | Domain Name System ]                                                                    #
+>@#                                                                                                 #
+>@# The Domain Name System, or DNS, is a distributed computing service that associates Internet     #
+>@# domain names with their IP addresses or other record types. By providing a distributed name     #
+>@# resolution service in the early years of the Internet, around 1985, DNS is an essential         #
+>@# component in the development of the computer network.DNS stands for Domain Name System          #
+>@#                                                                                                 #
+>@#-------------------------------------------------------------------------------------------------#
 >@
 >@DNS stands for Domain Name System
 >@

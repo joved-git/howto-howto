@@ -12,6 +12,7 @@ The attack can only be used on networks that use ARP, and requires that the atta
 to the local network segment to be attacked.
 
 -> About ARP protocol
+
 ARP protocol is used to transform IPv4 addresses to MAC Addresses.
 ARP works with request/response format.
 ARP is used on a LAN.
@@ -44,8 +45,8 @@ Destination     Passerelle      Genmask         Indic Metric Ref    Use Iface
 
 $ ip addr
 ---
----
 >>> The MAC addres of Kali is 08:00:27:6e:13:6e
+---
 
 3. Perform the attack.
 * Check the ARP table on the target:
@@ -81,6 +82,14 @@ $ sudo sh
 Ctrl-C in arpspoof to restore the initial ARP table.
 >>> Ouf, attack ended ;) !
 
+-> How to prevent ARP spoofing
+  -Use tools like ARP-Watch (Linux) or X-ARP (Win) to detect suspicious activity.
+  -Use Wireshark to view ARP spoofing and determine the machine.
+  -Use Cisco router that limits number of ARP packets per second (15 p/s).
+  -Use static association (arp -a).
+    netsh on Windows gives the name of the network interface (example "Local Area Connection 2".
+    netsh interface ip add neighbors "Local Area Connection 2" <ip> <mac>.
+
 >@
 >@###########################################################################################################
 >@#                                                                                                         #
@@ -102,6 +111,7 @@ Ctrl-C in arpspoof to restore the initial ARP table.
 >@#---------------------------------------------------------------------------------------------------------#
 >@
 >@-> About ARP protocol
+>@
 >@ARP protocol is used to transform IPv4 addresses to MAC Addresses.
 >@ARP works with request/response format.
 >@ARP is used on a LAN.
@@ -169,6 +179,15 @@ Ctrl-C in arpspoof to restore the initial ARP table.
 >@5. Stop the attack on Kali an restore ARP tables.
 >@Ctrl-C in arpspoof to restore the initial ARP table.
 >@>>> Ouf, attack ended ;) !
+>@
+>@-> How to prevent ARP spoofing
+>@  -Use tools like ARP-Watch (Linux) or X-ARP (Win) to detect suspicious activity.
+>@  -Use Wireshark to view ARP spoofing and determine the machine.
+>@  -Use Cisco router that limits number of ARP packets per second (15 p/s).
+>@  -Use static association (arp -a).
+>@    netsh on Windows gives the name of the network interface (example "Local Area Connection 2".
+>@    netsh interface ip add neighbors "Local Area Connection 2" <ip> <mac>.
+>@    netsh interface ip delete neighbors "Local Area Connection 2" <ip> <mac>.
 >@
 >@###########################################################################################################
 >@
