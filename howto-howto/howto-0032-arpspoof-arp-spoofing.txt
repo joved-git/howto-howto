@@ -27,7 +27,8 @@ The request is broadcasted and could be summarize by:
 0. Kali will be the MITM (Man In The Middle).
 
 1. Enable the IP forwarding on the Kali machine.
-$ sudo echo "1" > /proc/sys/net/ipv4/ip_forward
+$ sudo sh
+# echo "1" > /proc/sys/net/ipv4/ip_forward
 $ cat /proc/sys/net/ipv4/ip_forward
 >>> The IP forwarding is now enabled on Kali.
 
@@ -71,7 +72,8 @@ $ arp -a
 >>> The MAC addr of gw has changed for Kali's one.
 
 4. Perform a DoS attack on Kali
-$ sudo echo "0" > /proc/sys/net/ipv4/ip_forward
+$ sudo sh 
+# echo "0" > /proc/sys/net/ipv4/ip_forward
 >>> no ip forwarding anymore.
 >>> The distance machine now suffers a DoS attack. No internet connection at all.
 
@@ -115,7 +117,8 @@ Ctrl-C in arpspoof to restore the initial ARP table.
 >@0. Kali will be the MITM (Man In The Middle).
 >@
 >@1. Enable the IP forwarding on the Kali machine.
->@$ sudo echo "1" > /proc/sys/net/ipv4/ip_forward
+>@$ sudo sh
+>@# echo "1" > /proc/sys/net/ipv4/ip_forward
 >@$ cat /proc/sys/net/ipv4/ip_forward
 >@>>> The IP forwarding is now enabled on Kali.
 >@
@@ -158,7 +161,8 @@ Ctrl-C in arpspoof to restore the initial ARP table.
 >@>>> The MAC addr of gw has changed for Kali's one.
 >@
 >@4. Perform a DoS attack on Kali
->@$ sudo echo "0" > /proc/sys/net/ipv4/ip_forward
+>@$ sudo sh
+>@# echo "0" > /proc/sys/net/ipv4/ip_forward
 >@>>> no ip forwarding anymore.
 >@>>> The distance machine now suffers a DoS attack. No internet connection at all.
 >@

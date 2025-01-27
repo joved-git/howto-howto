@@ -20,7 +20,8 @@ Here are some explanations:
 
 -> How to do a Man In the Middle Attack
 1. Active the ip_forwarding on Kali.
-  $ sudo bash -c "echo '1' > /proc/sys/net/ipv4/ip_forward"
+  $ sudo sh
+  # echo '1' > /proc/sys/net/ipv4/ip_forward
 
 2. Configure Ettercap.
 Change the ec_uid and the ec_gid to avoid permission problems.
@@ -89,7 +90,8 @@ On Windows, download and install Putty.
 >@
 >@-> How to do a Man In the Middle Attack
 >@1. Active the ip_forwarding on Kali.
->@  $ sudo bash -c "echo '1' > /proc/sys/net/ipv4/ip_forward"
+>@  $ sudo sh
+>@  # echo '1' > /proc/sys/net/ipv4/ip_forward
 >@
 >@2. Configure Ettercap.
 >@Change the ec_uid and the ec_gid to avoid permission problems.
