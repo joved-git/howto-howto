@@ -89,7 +89,7 @@ In the win10 machine, execute the reload of example.com
 >@We accept ip forwarding on ipv4 and ipv6.
 >@$ sudo sh
 >@# echo "1" > /proc/sys/net/ipv4/ip_forward
->@# echo "1" > /proc/sys/net/ipv6/ip_forward
+>@# echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
 >@
 >@We avoid automatic ICP redirection.
 >@# echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects

