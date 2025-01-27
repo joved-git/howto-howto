@@ -92,7 +92,7 @@ You obtain a <capturefile-dec.cap> file. You can re-open it with Wireshark.
 >@
 >@
 >@# Wifi capture
->@$ sudo airodump-ng --bssid <BSSID MAC> -w capture wlan0
+>@$ sudo airodump-ng --bssid <BSSID> -w capture wlan0
 >@
 >@ You could add a channel to optimize capture.
 >@ $ sudo airodump-ng --bssid <MAC> c <channel #> -w capture wlan0

