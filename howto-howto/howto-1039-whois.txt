@@ -1,13 +1,55 @@
-Online tools
+Whois (contraction of English who is ?, meaning "Qui est ? ") is a protocol and the name of 
+search services, based on this protocol, provided by Internet registries, for example Regional 
+Internet Registries (RIR) or well the domain name registers allowing information on an IP 
+address or a domain name to be obtained. This information has very varied uses, whether it is 
+coordination between network engineers to resolve a technical problem, or searching for the 
+holder of a domain name by a company that would like to obtain it.
+
+-> Online tools
+https://whois.com
 https://www.ovhcloud.com/fr/domains/whois/
 https://whois.domaintools.com
 
+-> What is this for ?
+Whois allows to retreive public infoiamtion about a domai name or an IP address.
+
+-> Reverse Whois
+It is possible to perform an inverse whois request.
+Use: https://viewdns.info/ and choose 'Reverse Whois Lookup'.
+
+-> How to hide personal information
+There are domain name providers who guarantee a certain level of anonymity in the data provided (eg OVH).
+
 >@
->@############################################
+>@###################################################################################################
+>@#                                                                                                 #
+>@# [ Whois ]                                                                                       #
+>@#                                                                                                 #
+>@# Whois (contraction of English who is ?, meaning "Qui est ? ") is a protocol and the name of     #
+>@# search services, based on this protocol, provided by Internet registries, for example Regional  #
+>@# Internet Registries (RIR) or well the domain name registers allowing information on an IP       #
+>@# address or a domain name to be obtained. This information has very varied uses, whether it is   #
+>@# coordination between network engineers to resolve a technical problem, or searching for the     #
+>@# holder of a domain name by a company that would like to obtain it.                              #
+>@#                                                                                                 #
+>@#                                                                                                 #
+>@#-------------------------------------------------------------------------------------------------#
 >@
->@Online tools
+>@-> Online tools
+>@https://whois.com
 >@https://www.ovhcloud.com/fr/domains/whois/
 >@https://whois.domaintools.com
 >@
->@############################################
+>@-> What is this for ?
+>@Whois allows to retreive public infoiamtion about a domai name or an IP address.
+>@
+>@-> Reverse Whois
+>@It is possible to perform an inverse whois request.
+>@Use: https://viewdns.info/ and choose 'Reverse Whois Lookup'.
+>@
+>@-> How to hide personal information
+>@There are domain name providers who guarantee a certain level of anonymity in the data provided 
+>@(example OVH).
+>@
+>@###################################################################################################
 >@

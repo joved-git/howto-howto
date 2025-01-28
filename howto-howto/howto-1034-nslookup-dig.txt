@@ -1,4 +1,8 @@
-$ nslookup <host>
+Resolvers are programs that extract information from name servers in 
+response to client requests. Resolvers must be able to access at least 
+one name server and use that name server’s information to answer a query 
+directly, or pursue the query using referrals to other name servers.
+
 Basic command
 
 $ nslookup -type=mx <host>
@@ -27,7 +31,18 @@ Online tool
 https://toolbox.googleapps.com
 
 >@
->@#########################################
+>@#############################################################################
+>@#                                                                           #
+>@# [ DNS resolver | lslookup | dig ]                                         #
+>@#                                                                           #
+>@# Resolvers are programs that extract information from name servers in      #
+>@# response to client requests. Resolvers must be able to access at least    # 
+>@# one name server and use that name server’s information to answer a query  #
+>@# directly, or pursue the query using referrals to other name servers.      #
+>@#                                                                           #
+>@# See: howto-1035-dig-request-example.txt                                   #
+>@#                                                                           #
+>@#############################################################################
 >@
 >@$ nslookup <host>
 >@Basic command
@@ -57,5 +72,5 @@ https://toolbox.googleapps.com
 >@Online tool
 >@https://toolbox.googleapps.com
 >@
->@#########################################
+>@#############################################################################
 >@

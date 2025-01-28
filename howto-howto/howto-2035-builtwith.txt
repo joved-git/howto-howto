@@ -1,0 +1,37 @@
+This site aims to reference all technologies and relations for a web site.
+
+It could be used to find some related links and perform the discovery step
+of the intrusion process.
+
+See: howto-0012-intrusion-test.txt
+
+-> Visit
+https://builtwith.com
+
+You will find 2 intersting folders: one concerning technologies used on 
+the site, the other shows relationships link, other web sites and emails
+linked to the site.
+
+>@
+>@################################################################################
+>@#                                                                              #
+>@# [ Builtwith ]                                                                # 
+>@#                                                                              #
+>@# This site aims to reference all technologies and relations for a web site.   #
+>@#                                                                              #
+>@# It could be used to find some related links and perform the discovery step   #
+>@# of the intrusion process.                                                    #
+>@#                                                                              #
+>@# See: howto-0012-intrusion-test.txt                                           #
+>@#                                                                              #
+>@#------------------------------------------------------------------------------#
+>@
+>@-> Visit
+>@https://builtwith.com
+>@
+>@You will find 2 intersting folders: one concerning technologies used on 
+>@the site, the other shows relationships link, other web sites and emails
+>@linked to the site.
+>@
+>@################################################################################
+>@

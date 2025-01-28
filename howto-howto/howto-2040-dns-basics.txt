@@ -10,23 +10,42 @@ DNS uses the port #53 (UDP).
 DNS is hierarchized from right to left: com -> facebook -> www
 
 Some DNS fields:
-    A		used to retrieve ip v4
-    AAAA	used to retrieve ip v6
-    PTR		used to invert the search (hostname from ip address)
-    MX		used to define the mail server
+  A             used to retrieve ip v4
+  AAAA          used to retrieve ip v6
+  PTR           used to invert the search (hostname from ip address)
+  MX            used to define the mail server
 
 DNS mechanism:
-    A machine asks the DNS for the ip address of a domain.
-    The DNS gives immediately the ip (info already in cache) or search for it then give it.
+  A machine asks the DNS for the ip address of a domain.
+  The DNS gives immediately the ip (info already in cache) or search for it then give it.
 
 DNS problems:
-    Flood: the DNS should not be able to answer. Too much requests.
-    Cache poisoning: information are changed.
-    Sensible information: DNS must protect its information.
+  Flood: the DNS should not be able to answer. Too much requests.
+  Cache poisoning: information are changed.
+  Sensible information: DNS must protect its information.
 
 DNS protection:
-   Refuse connection to port #53.
-   Use DNSSEC (signed DNS).
+  Refuse connection to port #53.
+  Use DNSSEC (signed DNS).
+
+DNS root servers:
+  There are 13 DNS root servers in the world. Their names are:
+	[a...m].root-servers.net a.root-servers.net for aexample. 
+
+  A DNS root server is going to root the request to one of the first level ones. For example, if
+  your are searchig for google.fr, the request is going to be root to the first level DNS server
+  that manages '.fr'. This server gives the authoritative server for google.fr. The last server
+  gives the IP address of google.fr.:w
+
+DNS Prefetch
+  The DNS tries to find IP addresses of all links present on one web page.
+
+Cache DND in Chrome:
+  Type chrome://cache to see the file that are in the chrome cache.
+  Type chrome://net-internals/#dns to see the Chrome DNS cache.
+
+Display the Windows DNS cache:
+C:\> ipconfig /displaydns
 
 >@
 >@###################################################################################################
@@ -64,6 +83,24 @@ DNS protection:
 >@DNS protection:
 >@   Refuse connection to port #53.
 >@   Use DNSSEC (signed DNS).
+>@
+>@DNS root servers
+>@  There are 13 DNS root servers in the world. Their names are:
+>@	[a...m].root servers.net a.root.servers.net for aexample. 
+>@  A DNS root server is going to root the request to one of the first level ones. For example, if
+>@  your are searchig for google.fr, the request is going to be root to the first level DNS server
+>@  that manages '.fr'. This server gives the authoritative server for google.fr. The last server
+>@  gives the IP address of google.fr.:w
+>@
+>@DNS Prefetch
+>@  The DNS tries to find IP addresses of all links present on one web page.
+>@
+>@Cache DND into Chrome:
+>@  Type chrome://cache              to see the file that are in the chrome cache.
+>@  Type chrome://net-internals/#dns to see the Chrome DNS cache.
+>@
+>@Display the Windows DNS cache:
+>@C:\> ipconfig /displaydns
 >@
 >@###############################################################################################
 >@
