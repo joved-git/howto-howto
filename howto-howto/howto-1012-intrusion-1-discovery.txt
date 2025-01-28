@@ -10,7 +10,7 @@ About techniques (large sens):
 -> Off line but more direct (dumpster diving, trash and bin, shoulder surfing, eaves dropping, ...)
 
 Techniques and tools (pratically):
--> Google hacking: find informations very thin.
+-> Google hacking: find informations very thinly.
 -> Shodan: to finf connected equipenents.
 -> TinEye: to find sites from images/photos..
 -> nslookup/dig: to retrieve informations from a host name.
@@ -41,7 +41,7 @@ Techniques and tools (pratically):
 >@-> Off line but more direct (dumpster diving, trash and bin, shoulder surfing, eaves dropping, ...)
 >@
 >@Techniques and tools (pratically):
->@-> Google hacking: find informations very thin.
+>@-> Google hacking: find informations very thinly.
 >@-> Shodan: to finf connected equipenents.
 >@-> TinEye: to find sites from images/photos..
 >@-> nslookup/dig: to retrieve informations from a host name.

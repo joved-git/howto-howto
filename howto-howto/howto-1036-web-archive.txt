@@ -1,0 +1,29 @@
+Web Archive (aka Wayback Machine) is a web site that has 
+recorded all web site since 1996.
+
+It could be very useful to retrieve old information about 
+a site during the intrusion discovery process.
+
+-> Visit
+https://web.archive.org
+
+>@
+>@##############################################################
+>@#                                                            #
+>@# [ Web.archine | Wayback Machine ]                          #
+>@#                                                            #
+>@# Web Archive (aka Wayback Machine) is a web site that has   #
+>@# recorded all web site since 1996.                          #
+>@#                                                            #
+>@# See: howto-0012-intrusion-test.txt                         #
+>@#                                                            #
+>@#------------------------------------------------------------#
+>@
+>@It could be very useful to retrieve old information about a 
+>@a site during the intrusion discovery process.
+>@
+>@-> Visit
+>@https://web.archive.org
+>@
+>@##############################################################
+>@
