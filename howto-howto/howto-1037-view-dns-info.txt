@@ -20,9 +20,6 @@ ViewDNS.info is a web site that allows so many type of searches.
 [ Reverse IP Lookup ]
   Find domain for an IP address hosted by the same server.
 
-[
-
-
 It could be very useful to retrieve old information about 
 a site during the intrusion discovery process.
 
@@ -30,15 +27,41 @@ a site during the intrusion discovery process.
 https://viewdns.info
 
 >@
->@##############################################################
->@#                                                            #
->@# [ ViewDNS.info ]                                           #
->@#                                                            #
->@#                                                            #
->@# See: howto-0012-intrusion-test.txt                         #
->@#                                                            #
->@#------------------------------------------------------------#
+>@####################################################################
+>@#                                      .                           #
+>@# [ ViewDNS.info ]                                                 #
+>@#                                                                  #
+>@# ViewDNS.info is a web site that allows so many type of searches. #
+>@#                                                                  #
+>@# See: howto-0012-intrusion-test.txt                               #
+>@#                                                                  #
+>@#------------------------------------------------------------------#
 >@
+>@-> What it could do
 >@
->@##############################################################
+>@[ Domain / IP Whois ]
+>@  Whois request.
+>@
+>@[ DNS record lookup ]
+>@  DNS record request.
+>@
+>@[ Is my site down ]
+>@  Check if a site is down.
+>@
+>@[ Reverse MX Lookup ]
+>@  Search for domain that use a specific mail server.
+>@
+>@[ IP History ]
+>@  -See the historic of IP address for a site.
+>@
+>@[ Reverse IP Lookup ]
+>@  Find domain for an IP address hosted by the same server.
+>@
+>@It could be very useful to retrieve old information about 
+>@a site during the intrusion discovery process.
+>@
+>@-> Visit
+>@https://viewdns.info
+>@
+>@####################################################################
 >@

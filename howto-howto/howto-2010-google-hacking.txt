@@ -1,4 +1,13 @@
-Some very useful "Dork" commands to use in the google search bar:
+Google hacking is a technique consisting of using a search engine, usually Google, to look 
+for vulnerabilities or recover sensitive data. This technique is based on the results of 
+the exploration and indexing of websites by the Googlebot robot. It is generally used by 
+hackers or crackers. Thus, by entering appropriate requests, it is possible to access pages 
+that are not part of the website normally accessible to the public. Some websites contain 
+sensitive information such as username, password and other confidential data. A known case 
+of Google hacking is the case of passwords and usernames for access to the Wi-Fi network 
+which were exposed by malicious users on Google. This information was then used to access 
+wireless networks and steal confidential data.Some very useful "Dork" commands to use in 
+the google search bar:
 
 "key": search for that exact key or string.
 
@@ -25,6 +34,21 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 
 >@
 >@################################################################################################
+>@#                                                                                              #
+>@# [ Google Hacking ]                                                                           #
+>@#                                                                                              #
+>@# Google hacking is a technique consisting of using a search engine, usually Google, to look   #
+>@# for vulnerabilities or recover sensitive data. This technique is based on the results of     #
+>@# the exploration and indexing of websites by the Googlebot robot. It is generally used by     #
+>@# hackers or crackers. Thus, by entering appropriate requests, it is possible to access pages  #
+>@# that are not part of the website normally accessible to the public. Some websites contain    #
+>@# sensitive information such as username, password and other confidential data. A known case   #
+>@# of Google hacking is the case of passwords and usernames for access to the Wi-Fi network     #
+>@# which were exposed by malicious users on Google. This information was then used to access    #
+>@# wireless networks and steal confidential data.Some very useful "Dork" commands to use in     #
+>@# the google search bar.                                                                       #
+>@#                                                                                              #
+>@#----------------------------------------------------------------------------------------------#
 >@
 >@Some very useful "Dork" commands to use in the google search bar:
 >@
