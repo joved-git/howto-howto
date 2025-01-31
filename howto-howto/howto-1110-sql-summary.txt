@@ -1,0 +1,103 @@
+SQL (acronym for Structured Query Language) is a standardized computer language used to operate 
+relational databases. The data manipulation language part of SQL allows you to search, add, 
+modify, or delete data in relational databases.
+
+In addition to the data manipulation language:
+  -the data definition language allows you to create and modify the organization of data in the 
+   database,
+  -the transaction control language allows you to start and end transactions,
+  -the data control language allows you to authorize or prohibit access to certain data (base, 
+   table, record) to certain people.
+
+Created in 1974, standardized since 1986, the language is recognized by the vast majority of 
+relational database management systems (RDBMS) on the market.
+
+See: https://www.db-fiddle.com
+
+-> Example of table creation
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int unsigned NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) DEFAUT CHARSET=utf8;
+
+-> Insert data into table
+INSERT INTO `users` (`id`, `name`, `firstname`, `email`) VALUES
+  (1, 'Gates', 'Bill', 'bill@microsoft.com'),
+  (2, 'Jobs', 'Steve', 'steve@apple.com'),
+  (1, 'Page', 'Larry', 'larry@google.com'),
+
+-> Display a table
+SELECT * FROM `users`
+
+-> Extract/read data from a table
+SELECT `name`,`firstname` 
+FROM `users`
+WHERE `id`=1;
+
+-> Update a table
+UPDATE `users`
+SET `email`="boss@google.com"
+WHERE `id`=3;
+
+-> Train you here
+See: https://www.db-fiddle.com
+
+>@
+>@####################################################################################################
+>@#                                                                                                  #
+>@# [ SQL ]                                                                                          #
+>@#                                                                                                  #
+>@# SQL (acronym for Structured Query Language) is a standardized computer language used to operate  #
+>@# relational databases. The data manipulation language part of SQL allows you to search, add,      #
+>@# modify, or delete data in relational databases.                                                  #
+>@#                                                                                                  #
+>@# In addition to the data manipulation language:                                                   #
+>@#   -the data definition language allows you to create and modify the organization of data in the  #
+>@#    database.                                                                                     #
+>@#   -the transaction control language allows you to start and end transactions.                    #
+>@#   -the data control language allows you to authorize or prohibit access to certain data (base,   #
+>@#    table, record) to certain people.                                                             #
+>@#                                                                                                  #
+>@# Created in 1974, standardized since 1986, the language is recognized by the vast majority of     #
+>@# relational database management systems (RDBMS) on the market.                                    #
+>@#                                                                                                  #
+>@# See: https://www.db-fiddle.com                                                                   #
+>@#                                                                                                  #
+>@#--------------------------------------------------------------------------------------------------# 
+>@
+>@-> Example of table creation
+>@CREATE TABLE IF NOT EXISTS `users` (
+>@  `id` int unsigned NOT NULL,
+>@  `name` varchar(50) NOT NULL,
+>@  `firstname` varchar(50) NOT NULL,
+>@  `email` varchar(50) NOT NULL,
+>@  PRIMARY KEY (`id`)
+>@) DEFAUT CHARSET=utf8;
+>@
+>@-> Insert data into table
+>@INSERT INTO `users` (`id`, `name`, `firstname`, `email`) VALUES
+>@  (1, 'Gates', 'Bill', 'bill@microsoft.com'),
+>@  (2, 'Jobs', 'Steve', 'steve@apple.com'),
+>@  (1, 'Page', 'Larry', 'larry@google.com'),
+>@
+>@-> Display a table
+>@SELECT * FROM `users`
+>@
+>@-> Extract/read data from a table
+>@SELECT `name`,`firstname` 
+>@FROM `users`
+>@WHERE `id`=1;
+>@
+>@-> Update a table
+>@UPDATE `users`
+>@SET `email`="boss@google.com"
+>@WHERE `id`=3;
+>@
+>@-> Train you
+>@See: https://www.db-fiddle.com
+>@
+>@####################################################################################################
+>@

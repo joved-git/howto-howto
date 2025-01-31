@@ -50,7 +50,7 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@#                                                                                              #
 >@#----------------------------------------------------------------------------------------------#
 >@
->@Some very useful "Dork" commands to use in the google search bar:
+>@-> Some very useful "Dork" commands to use in the google search bar
 >@
 >@"key": search for that exact key or string.
 >@
@@ -66,12 +66,15 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@<number #1>..<number #2> <unity>: search for number #1 and number #2 in the given <unity>.
 >@                                  example: [ 10..35 kilos ] [ 300.500 USD ]
 >@
->@ext:<file type>: only gives result as a file of the <file type> extension.
->@                 example ext:log OR ext:txt
+>@filetype:<file type>: only gives result as a file of the <file type> extension.
+>@                      example filetype:log OR ext:txt
 >@
->@!!! https://www.google.fr/advanced_search: gives access to advanced search.
+>@-> Google advannced search
+>@Go to https://www.google.fr/advanced_search: gives access to advanced search.
+>@>>> select files, domain, type of file.
 >@
->@!!! https://images.google.fr is used to find images onto some web sites and links between them.
+>@-> Google images
+>@Go to https://images.google.fr to find images into some web sites and links between them.
 >@
 >@!!! https://www.exploit-db.com/google-hacking-database gives all the Dorks.
 >@
