@@ -35,7 +35,7 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@
 >@################################################################################################
 >@#                                                                                              #
->@# [ Google Hacking ]                                                                           #
+>@# [ Google Hacking | Dorks ]                                                                   #
 >@#                                                                                              #
 >@# Google hacking is a technique consisting of using a search engine, usually Google, to look   #
 >@# for vulnerabilities or recover sensitive data. This technique is based on the results of     #
@@ -69,11 +69,11 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@ext:<file type>: only gives result as a file of the <file type> extension.
 >@                 example ext:log OR ext:txt
 >@
->@!!! https://www.google.fr/advanced_search: gives access to advanced search.
->@
->@!!! https://images.google.fr is used to find images onto some web sites and links between them.
->@
->@!!! https://www.exploit-db.com/google-hacking-database gives all the Dorks.
+>@ See:
+>@  -https://www.google.fr/advanced_search: gives access to advanced search.
+>@  -https://images.google.fr is used to find images onto some web sites and links between them.
+>@  -https://www.exploit-db.com/google-hacking-database gives all the Dorks.
+>@     Use a dork, copy then past it in Google and find sites that are potentially vulnerable.
 >@
 >@################################################################################################
 >@
