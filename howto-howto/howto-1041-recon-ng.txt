@@ -1,3 +1,17 @@
+Among the tools designed to facilitate passive recognition, Recon-ng stands out as a powerful and flexible platform. 
+Developed in Python, Recon-ng provides a framework similar to that of Metasploit, offering an easy-to-use interface 
+for launching specific recognition modules.
+
+These modules allow users to automatically collect valuable data about domains, IP addresses, people, social media 
+accounts, and more, all without sending a single packet directly to the target.
+
+Recon-ng is designed to be modular, allowing the community to contribute new modules that extend its recognition 
+capabilities. From email collection to subdomain identification and beyond, Recon-ng automates the information 
+collection process and organizes the collected data into an internal database for easy analysis.
+
+This makes it a valuable tool for security professionals looking to perform comprehensive reconnaissance without 
+arousing suspicion.
+
 $ recon-ng
 >>> Gives the prompt.
 
@@ -46,27 +60,27 @@ Some examples:
               > options set SOURCE <ip>
               > run
 >@
->@##############################################################################################
+>@##########################################################################################################################
+>@#                                                                                                                        #
+>@# [ Recon-ng ]                                                                                                           #
+>@#                                                                                                                        #
+>@# Among the tools designed to facilitate passive recognition, Recon-ng stands out as a powerful and flexible platform.   #
+>@# Developed in Python, Recon-ng provides a framework similar to that of Metasploit, offering an easy-to-use interface    #
+>@# for launching specific recognition modules.                                                                            #
+>@#                                                                                                                        #
+>@# These modules allow users to automatically collect valuable data about domains, IP addresses, people, social media     #
+>@# accounts, and more, all without sending a single packet directly to the target.                                        #
+>@#                                                                                                                        #
+>@# Recon-ng is designed to be modular, allowing the community to contribute new modules that extend its recognition       #
+>@# capabilities. From email collection to subdomain identification and beyond, Recon-ng automates the information         #
+>@# collection process and organizes the collected data into an internal database for easy analysis.                       #
+>@#                                                                                                                        #
+>@#------------------------------------------------------------------------------------------------------------------------#
 >@
->@$ recon-ng
->@>>> Gives the prompt
->@
->@> help <cmd>
-Some examples:
--> discovery/info_disclosure/cache_snoop: gives info from DNS cache.
--> discovery/info_disclosure/interesting_files: used to retrieve interesting files.
-    Try with: > options set PORT 443
-              > options set PROTOCOL https
-              > options set SOURCE www.leblogduhacker.fr
-              > run
--> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains li ked to an IP address).
-    Go to https://www.virustotal.com/gui/
-    Create account (Signed up) then go to your Account/API keys and copy the key.
-    Try with: > keys add virustotal_api <the copied key>
-              > options set SOURCE <ip>
-              > run
->@
->@##############################################################################################
+>@ How it works
+>@1. Automate the process.
+>@2. Use database to store information gathered.
+>@3. Generate reports.
 >@
 >@$ recon-ng
 >@>>> Gives the prompt
@@ -108,6 +122,7 @@ Some examples:
 >@              > options set PROTOCOL https
 >@              > options set SOURCE www.leblogduhacker.fr
 >@              > run
+>@ 
 >@-> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains li ked to an IP address).
 >@    Go to https://www.virustotal.com/gui/
 >@    Create account (Signed up) then go to your Account/API keys and copy the key.
@@ -115,5 +130,5 @@ Some examples:
 >@              > options set SOURCE <ip>
 >@              > run
 >@
->@##############################################################################################
+>@##########################################################################################################################
 >@

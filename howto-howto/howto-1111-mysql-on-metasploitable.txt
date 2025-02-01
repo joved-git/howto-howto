@@ -1,0 +1,56 @@
+It is possible to use and test SQL directly on the metasploitable machine.
+
+See: howto-1110-sql-summary.txt
+
+-> Connextion to mySQL
+$ sudo mysql -uroot [-p]
+
+-> Show the databases
+mysql> show databases;
+>>> you will see so many databases: information_schema, dvwa, metasploit, ...
+
+-> Use a specific database
+mysql> use owasp10;
+
+-> Display tables
+mysql> show tables;
+>>> you will see a list of tables.
+
+-> Show table elem
+mysql> select * from accounts;
+
+-> Quit mysql
+mysql> exit;
+
+>@
+>@################################################################################
+>@#                                                                              #
+>@# [ mysql on Metasploitable ]                                                  #
+>@# It is possible to use and test SQL directly on the metasploitable machine.   #
+>@#                                                                              #
+>@#See: howto-1110-sql-summary.txt                                               #
+>@#                                                                              #
+>@#------------------------------------------------------------------------------#
+>@
+>@-> Connextion to mySQL
+>@$ sudo mysql -uroot [-p]
+>@
+>@-> Show the databases
+>@mysql> show databases;
+>@>>> you will see so many databases: information_schema, dvwa, metasploit, ...
+>@
+>@-> Use a specific database
+>@mysql> use owasp10;
+>@
+>@-> Display tables
+>@mysql> show tables;
+>@>>> you will see a list of tables.
+>@
+>@-> Show table elem
+>@mysql> select * from accounts;
+>@
+>@-> Quit mysql
+>@mysql> exit;
+>@
+>@################################################################################
+>@#                                                                              #
