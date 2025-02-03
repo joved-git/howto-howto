@@ -11,7 +11,7 @@ directed command modules and further attacks against the system from within the 
 context.
 
 -> Installation
-  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive 
+  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retrieve 
     the Ruby 3.1.1 tar.gz file.
   Extract it (that creates ruby-3.1.1 directory).
   Compile and install Ruby:
@@ -57,7 +57,7 @@ context.
 >@#-----------------------------------------------------------------------------------------------------------------------#
 >@
 >@-> Installation
->@  -Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive.
+>@  -Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retrieve.
 >@    the Ruby 3.1.1 tar.gz file.
 >@
 >@  -Extract it (that creates ruby-3.1.1 directory).

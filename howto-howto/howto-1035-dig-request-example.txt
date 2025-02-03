@@ -22,7 +22,7 @@ $ dig @ns1.google.com A google.fr
 >@$ dig @a.root-servers.net SOA FR
 >@>>> server gives authoritative server for FR.
 >@
->@* Retreive authoritative name servers.
+>@* Retrieve authoritative name servers.
 >@$ dig @d.nic.fr SOA google.fr
 >@>>> the server gives the 4 authoritative servers.
 >@

@@ -15,7 +15,7 @@ interfaces based on SOAP and REST.
 * HTTP works with requests and responses.
 
 * Different type of requests
--GET: retreive data from server.
+-GET: retrieve data from server.
 -POST: the server gives data.
 -HEAD:
 -DELETE:
@@ -85,7 +85,7 @@ interfaces based on SOAP and REST.
 >@* HTTP works with requests and responses.
 >@
 >@* Different type of requests
->@-GET: retreive data from server.
+>@-GET: retrieve data from server.
 >@-POST: the server gives data.
 >@-HEAD:
 >@-DELETE:

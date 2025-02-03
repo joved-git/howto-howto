@@ -1,3 +1,4 @@
+
 -> Install Kali
 On the host, extract Kali into ~/VirtualBox VM then double-click on the .vbox file.
 Configure Kali:
@@ -34,7 +35,7 @@ Go to https://github.com/atom/atom/releases/tag/v1.60.0
 Download and install it.
 
 * Beef
-Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive 
+Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retrieve 
   the Ruby 3.1.1 tar.gz file.
 Extract it (that creates ruby-3.1.1 directory).
 Compile and install Ruby:
@@ -53,7 +54,7 @@ Change the password into the config.yaml file.
   $ sudo apt install weplab
 
 >@
->@#######################################################################################
+>@#############################################################################################
 >@
 >@-> Install Kali
 >@On the host, extract Kali into ~/VirtualBox VM then double-click on the .vbox file.
@@ -91,7 +92,7 @@ Change the password into the config.yaml file.
 >@  Download and install it.
 >@
 >@* Beef
->@  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retreive 
+>@  Go to https://www.ruby-lang.org/fr/news/2022/02/18/ruby-3-1-1-released/ and retrieve 
 >@    the Ruby 3.1.1 tar.gz file.
 >@  Extract it (that creates ruby-3.1.1 directory).
 >@  Compile and install Ruby:
@@ -109,5 +110,5 @@ Change the password into the config.yaml file.
 >@* Weplab
 >@  $ sudo apt install weplab
 >@
->@#######################################################################################
+>@#############################################################################################
 >@

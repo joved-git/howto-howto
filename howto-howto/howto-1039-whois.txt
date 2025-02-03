@@ -11,7 +11,7 @@ https://www.ovhcloud.com/fr/domains/whois/
 https://whois.domaintools.com
 
 -> What is this for ?
-Whois allows to retreive public infoiamtion about a domai name or an IP address.
+Whois allows to retrieve public infoiamtion about a domai name or an IP address.
 
 -> Reverse Whois
 It is possible to perform an inverse whois request.
@@ -41,7 +41,7 @@ There are domain name providers who guarantee a certain level of anonymity in th
 >@https://whois.domaintools.com
 >@
 >@-> What is this for ?
->@Whois allows to retreive public infoiamtion about a domai name or an IP address.
+>@Whois allows to retrieve public infoiamtion about a domai name or an IP address.
 >@
 >@-> Reverse Whois
 >@It is possible to perform an inverse whois request.

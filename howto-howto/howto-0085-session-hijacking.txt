@@ -13,10 +13,10 @@ Take control of the session between machine.
 Allow access to a service without any authentification.
 Use protocole vulnerabilities.
 
--> How to make a session jacking
-1. Connect the 2 machines with ettercap (see howto-0053-ettercap.txt).
+-> How to make a session hijacking
+1. Establish a MITM connection between 2 machines with ettercap (see howto-0053-ettercap.txt).
 
-2. Retreive and install Shijack
+2. Retrieve and install Shijack
 Go to https://packetstorm.news/files/id/24657/ and download Shijack.
 
 3. Find the source port used by the machine.
@@ -37,10 +37,12 @@ Try:
 The directory should be created on the Metasploitable machine under /home/msfadmin.
 
 -> How to prevent
-1. Make cookies expire faster.
+1. Make cookies and session ID expire faster.
 2. Use HTTPS/SSL.
 3. Avoid multiple snd simultaneous sessions.
-4. Avoid session numbers easy to devine.
+4. Avoid session numbers too easy to find.
+5. Don(t put session ID into GET veriables.
+6. Use new session ID on each request.
 
 >@
 >@##############################################################################################################
@@ -68,9 +70,9 @@ The directory should be created on the Metasploitable machine under /home/msfadm
 >@Use protocole vulnerabilities.
 >@
 >@-> How to make a session jacking
->@1. Connect the 2 machines with ettercap (see howto-0053-ettercap.txt).
+>@1. Establish a MITM connection between 2 machines with ettercap (see howto-0053-ettercap.txt).
 >@
->@2. Retreive and install Shijack
+>@2. Retrieve and install Shijack
 >@Go to https://packetstorm.news/files/id/24657/ and download Shijack.
 >@
 >@3. Find the source port used by the machine.
@@ -91,10 +93,12 @@ The directory should be created on the Metasploitable machine under /home/msfadm
 >@The directory should be created on the Metasploitable machine under /home/msfadmin.
 >@
 >@-> How to prevent
->@1. Make cookies expire faster.
+>@1. Make cookies and session ID expire faster.
 >@2. Use HTTPS/SSL.
 >@3. Avoid multiple snd simultaneous sessions.
->@4. Avoid session numbers easy to devine.
+>@4. Avoid session numbers too easy to find.
+>@5. Don(t put session ID into GET veriables.
+>@6. Use new session ID on each request.
 >@
 >@##############################################################################################################
 >@

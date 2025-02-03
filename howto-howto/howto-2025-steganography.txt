@@ -28,7 +28,7 @@ You can use the COPY command of Windows to embed texte into BMP.
 Hide:
 C:> copy /b littledog.bmp + secret.txt secret.bmp
 
-Retreive:
+Retrieve:
 Open the secret.bmp file with Notepad and go to the end.
 
 -> An example with S-Tools
@@ -87,7 +87,7 @@ Some ways:
 >@Hide:
 >@C:> copy /b littledog.bmp + secret.txt secret.bmp
 >@
->@Retreive:
+>@Retrieve:
 >@Open the secret.bmp file with Notepad and go to the end.
 >@
 >@-> An example with S-Tools
