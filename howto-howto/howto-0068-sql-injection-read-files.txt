@@ -1,0 +1,49 @@
+SQL injection is used to directly inject code or SQL requests into the database using forms or URL.
+
+Attackers can use SQL injection on an application if it has dynamic database queries that use string concatenation and user supplied input. 
+To avoid SQL injection flaws, developers need to:
+
+See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html  
+
+-> How to read files with SQL injection
+The 
+-> How to prevent SQL injection
+  -Use real_escape_string() function in PHP.
+    Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+  -Stop writing dynamic queries with string concatenation.
+  -Prevent malicious SQL input from being included in executed queries.
+  -Do not display SQL errors to the client/user. Be blind !!
+
+>@################################################################################################################################################
+>@#                                                                                                                                              #
+>@# [ SQL injection ]                                                                                                                            #
+>@#                                                                                                                                              #
+>@# SQL injection is used to directly inject code and SQL requests into the database using forms or URL.                                         #
+>@#                                                                                                                                              #
+>@# Attackers can use SQL injection on an application if it has dynamic database queries that use string concatenation and user supplied input.  #
+>@# To avoid SQL injection flaws, developers need to:                                                                                            #
+>@#                                                                                                                                              #
+>@#   -Stop writing dynamic queries with string concatenation.                                                                                   #
+>@#   -Prevent malicious SQL input from being included in executed queries.                                                                      #
+>@#                                                                                                                                              #
+>@# See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html                                                #
+>@# See: howto-0060-sql-injection-web-vulnerability.txt                                                                                          #
+>@# See: howto-0061-sql-injection-advanced.txt                                                                                                   #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                                             #
+>@# See: howto-1075-owasp-top-10.txt                                                                                                             #
+>@# See: howto-1076-owasp-top-10-fr.txt                                                                                                          #
+>@#                                                                                                                                              #
+>@#----------------------------------------------------------------------------------------------------------------------------------------------- 
+>@
+>@-> How to read files with SQL injection
+>@
+>@
+>@-> How to prevent SQL injection
+>@  -Use real_escape_string() function in PHP.
+>@    Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+>@  -Stop writing dynamic queries with string concatenation.
+>@  -Prevent malicious SQL input from being included in executed queries.
+>@  -Do not display SQL error to the client/user. Be blind !!
+>@
+>@################################################################################################################################################
+>@
