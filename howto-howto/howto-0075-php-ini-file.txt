@@ -1,0 +1,131 @@
+The php.ini file
+
+The file php.ini is the configuration file for the PHP part of Apache 2. It is read when PHP 
+starts up. For the server module versions of PHP, this happens only once when the web server 
+is started. For the CGI and CLI versions, it happens on every invocation. 
+
+-> Where to find the php.ini file
+The file is located here: /etc/php<version>/apache2
+
+-> Some interesting parameters
+
+* disable_function  
+  This directive allows you to disable certain functions. It receives a 
+  comma-delimited list of function names. 
+  https://php.net/disable-functions
+  Examples of risked function: system(), exec(), passthru() or eval(), ...
+
+* expose_php = Off  
+  Decides whether PHP may expose the fact that it is installed on the server
+  (e.g. by adding its signature to the Web server header).  It is no security threat in any 
+  way, but it makes it possible to determine whether you use PHP on your server or not.
+  https://php.net/expose-php
+
+* error_reporting
+  Allows to choose which type of error are reported.
+  Example: error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+  Here: all error except deprecated oes and except strict ones.
+
+* display_errors = Off 
+  This directive controls whether or not and where PHP will output errors,
+  notices and warnings too. Error output is very useful during development, but it could be 
+  very dangerous in production environments. Depending on the code which is triggering the 
+  error, sensitive information could potentially leak out of your application such as database 
+  usernames and passwords or worse.
+  For production environments, we recommend logging errors rather than sending them to STDOUT.
+  Possible Values:
+    Off = Do not display any errors
+    stderr = Display errors to STDERR (affects only CGI/CLI binaries!)
+    On or stdout = Display errors to STDOUT
+  Default Value: On
+  Development Value: On
+  Production Value: Off
+  https://php.net/display-errors
+
+* log_errors = On  
+  Besides displaying errors, PHP can also log errors to locations such as a server-specific 
+  log, STDERR, or a location specified by the error_log directive found below. While errors 
+  should not be displayed on productions servers they should still be monitored and logging is 
+  a great way to do that.
+  Default Value: Off
+  Development Value: On
+  Production Value: On
+  https://php.net/log-errors
+
+* mysqli.default.port = 3306
+  Default port number for mysqli_connect().  If unset, mysqli_connect() will use the 
+  $MYSQL_TCP_PORT or the mysql-tcp entry in /etc/services or the compile-time value defined 
+  MYSQL_PORT (in that order).  Win32 will only look at MYSQL_PORT.
+  https://php.net/mysqli.default-port
+
+* And so many more
+
+>@
+>@#################################################################################################
+>@#                                                                                               #
+>@# [ The php.ini file ]                                                                          #
+>@#                                                                                               #
+>@# The file php.ini is the configuration file for the PHP part of Apache 2. It is read when PHP  #
+>@# starts up. For the server module versions of PHP, this happens only once when the web server  #
+>@# is started. For the CGI and CLI versions, it happens on every invocation.                     #
+>@#                                                                                               #
+>@#-----------------------------------------------------------------------------------------------#
+>@
+>@-> Where to find the php.ini file
+>@The file is located here: /etc/php<version>/apache2
+>@
+>@-> Some interesting parameters
+>@
+>@* disable_function  
+>@  This directive allows you to disable certain functions. It receives a 
+>@  comma-delimited list of function names. 
+>@  https://php.net/disable-functions
+>@  Examples of risked function: system(), exec(), passthru() or eval(), ...
+>@
+>@* expose_php = Off  
+>@  Decides whether PHP may expose the fact that it is installed on the server
+>@  (e.g. by adding its signature to the Web server header).  It is no security threat in any 
+>@  way, but it makes it possible to determine whether you use PHP on your server or not.
+>@  https://php.net/expose-php
+>@
+>@* error_reporting
+>@  Allows to choose which type of error are reported.
+>@  Example: error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+>@  Here: all error except deprecated oes and except strict ones.
+>@
+>@* display_errors = Off 
+>@  This directive controls whether or not and where PHP will output errors,
+>@  notices and warnings too. Error output is very useful during development, but it could be 
+>@  very dangerous in production environments. Depending on the code which is triggering the 
+>@  error, sensitive information could potentially leak out of your application such as database 
+>@  usernames and passwords or worse.
+>@  For production environments, we recommend logging errors rather than sending them to STDOUT.
+>@  Possible Values:
+>@    Off = Do not display any errors
+>@    stderr = Display errors to STDERR (affects only CGI/CLI binaries!)
+>@    On or stdout = Display errors to STDOUT
+>@  Default Value: On
+>@  Development Value: On
+>@  Production Value: Off
+>@  https://php.net/display-errors
+>@
+>@* log_errors = On  
+>@  Besides displaying errors, PHP can also log errors to locations such as a server-specific 
+>@  log, STDERR, or a location specified by the error_log directive found below. While errors 
+>@  should not be displayed on productions servers they should still be monitored and logging is 
+>@  a great way to do that.
+>@  Default Value: Off
+>@  Development Value: On
+>@  Production Value: On
+>@  https://php.net/log-errors
+>@
+>@* mysqli.default.port = 3306
+>@  Default port number for mysqli_connect().  If unset, mysqli_connect() will use the 
+>@  $MYSQL_TCP_PORT or the mysql-tcp entry in /etc/services or the compile-time value defined 
+>@  MYSQL_PORT (in that order).  Win32 will only look at MYSQL_PORT.
+>@  https://php.net/mysqli.default-port
+>@
+>@* And so many more
+>@
+>@#################################################################################################
+>@

@@ -16,7 +16,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
 -> Blind injection
   Sometime, the site gives no information if the SQL request is bad and only gives result if the request id good. That's why we speak about
     blind requests.
-  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) then put the DVWA Security to low.
+  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to low.
   Click on the "SQL Injection" menu and try [ pwd' OR 1=1 # ]
   Play with URL to find the number of column: http://ms/dvwa/vulnerabilities/sqli/?id=pwd' order by 2%23&Submit=Submit#
   Go to "SQL Injection (blind)" to  avoid having response except when the request is comprehensible by mySQL.
@@ -39,7 +39,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
   Finally, search for theses hash to find clear password. The first one gives "password" :) !
 
 -> Use escapment characters
-  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) then put the DVWA Security to medium.
+  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
   If you try to inject data as above, the system gives now an error:
     <ms IP>/dvwa/vulnerabilities/sqli/?id=pwd' OR 1=1 %23&Submit=Submit#
   Return on the login page and click on "View soruce" then find that line:
@@ -54,26 +54,29 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
 
 -> Use different encoding
   It is possible to encode special characters into the URL to bypass filters.
-  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) then put the DVWA Security to medium.
+  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
   Suppose you want to type that URL: 
     <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select column_name,2 from information_schema.columns 
       where table_schema='dvwa' %23&Submit=Submit#
-    Here, we have problem with the 'dvwa' string: impossible to let "'", impossible to use %23 (instead of "'"), impossible to use
-      another character ("`"). Nothing works !!
-    So, here, try to convert dvwa in binary using that site: https://www.rapidtables.com/convert/number/ascii-to-binary.html
-      then use 01100100 01110110 01110111 01100001 into the url:
-    That gives (with 0b before and without any space):
-      <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select column_name,2 from information_schema.columns 
-        where table_schema=0b01100100011101100111011101100001 %23&Submit=Submit#
-    That works !!!!
-    It will the same result with an hexa encoding (just place 0x before the hexa codes, example 0x64767761 for dvwa).
+  Here, we have problem with the 'dvwa' string: impossible to let "'", impossible to use %23 (instead of "'"), impossible to use
+    another character ("`"). Nothing works !!
+  So, here, try to convert dvwa in binary using that site: https://www.rapidtables.com/convert/number/ascii-to-binary.html
+    then use 01100100 01110110 01110111 01100001 into the url:
+  That gives (with 0b before and without any space):
+    <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select column_name,2 from information_schema.columns 
+      where table_schema=0b01100100011101100111011101100001 %23&Submit=Submit#
+  That works !!!!
+  It will the same result with an hexa encoding (just place 0x before the hexa codes, example 0x64767761 for dvwa).
 
 -> How to prevent SQL injection
-  -Use real_escape_string() function in PHP.
-    Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+  -Use real_escape_string() function in PHP code.
+     Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+  -Use stripslashes() function in PHP code.
+  -Use is_numeric() in PHP code to be sure the ID is numerical, not a string.
+  -Use "'" around variable name in PHP. Example: $getid = "SELECT first_name, last_name FROM users WHERE user_id = '$id'";  
   -Stop writing dynamic queries with string concatenation.
   -Prevent malicious SQL input from being included in executed queries.
-  -Do not display SQL errors to the client/user. Be blind !!
+  -Do not display SQL error to the client/user. Be blind !!
 
 >@################################################################################################################################################
 >@#                                                                                                                                              #
@@ -106,7 +109,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
 >@-> Blind injection
 >@  Sometime, the site gives no information if the SQL request is bad and only gives result if the request id good. That's why we speak about
 >@    blind requests.
->@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) then put the DVWA Security to low.
+>@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to low.
 >@  Click on the "SQL Injection" menu and try [ pwd' OR 1=1 # ]
 >@  Play with URL to find the number of column: http://ms/dvwa/vulnerabilities/sqli/?id=pwd' order by 2%23&Submit=Submit#
 >@  Go to "SQL Injection (blind)" to  avoid having response except when the request is comprehensible by mySQL.
@@ -129,7 +132,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
 >@  Finally, search for theses hash to find clear password. The first one gives "password" :) !
 >@
 >@-> Use escapment characters
->@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) then put the DVWA Security to medium.
+>@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
 >@  If you try to inject data as above, the system gives now an error:
 >@    <ms IP>/dvwa/vulnerabilities/sqli/?id=pwd' OR 1=1 %23&Submit=Submit#
 >@  Return on the login page and click on "View soruce" then find that line:
@@ -144,23 +147,27 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
 >@
 >@-> Use different encoding
 >@  It is possible to encode special characters into the URL to bypass filters.
->@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) then put the DVWA Security to medium.
+>@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
 >@  Suppose you want to type that URL: 
 >@    <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select column_name,2 from information_schema.columns 
 >@      where table_schema='dvwa' %23&Submit=Submit#
->@    Here, we have problem with the 'dvwa' string: impossible to let "'", impossible to use %23 (instead of "'"), impossible to use
->@      another character ("`"). Nothing works !!
->@    So, here, try to convert dvwa in binary using that site: https://www.rapidtables.com/convert/number/ascii-to-binary.html
->@      then use 01100100 01110110 01110111 01100001 into the url:
->@    That gives (with 0b before and without any space):
->@      <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select column_name,2 from information_schema.columns 
->@        where table_schema=0b01100100011101100111011101100001 %23&Submit=Submit#
->@    That works !!!!
->@    It will the same result with an hexa encoding (just place 0x before the hexa codes, example 0x64767761 for dvwa).
+>@  Here, we have problem with the 'dvwa' string: impossible to let "'", impossible to use %23 (instead of "'"), impossible to use
+>@    another character ("`"). Nothing works !!
+>@  So, here, try to convert dvwa in binary using that site: https://www.rapidtables.com/convert/number/ascii-to-binary.html
+>@    then use 01100100 01110110 01110111 01100001 into the url:
+>@  That gives (with 0b before and without any space):
+>@    <ms IP>/dvwa/vulnerabilities/sqli/?id=1 union select column_name,2 from information_schema.columns 
+>@      where table_schema=0b01100100011101100111011101100001 %23&Submit=Submit#
+>@  That works !!!!
+>@  It will the same result with an hexa encoding (just place 0x before the hexa codes, example 0x64767761 for dvwa).
 >@
 >@-> How to prevent SQL injection
->@  -Use real_escape_string() function in PHP.
->@    Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+>@-> How to prevent SQL injection
+>@  -Use real_escape_string() function in PHP code.
+>@     Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
+>@  -Use stripslashes() function in PHP code.
+>@  -Use is_numeric() in PHP code to be sure the ID is numerical, not a string.
+>@  -Use "'" around variable name in PHP. Example: $getid = "SELECT first_name, last_name FROM users WHERE user_id = '$id'";  
 >@  -Stop writing dynamic queries with string concatenation.
 >@  -Prevent malicious SQL input from being included in executed queries.
 >@  -Do not display SQL error to the client/user. Be blind !!
