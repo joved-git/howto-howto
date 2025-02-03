@@ -1,0 +1,103 @@
+OWASP Mutillidae II
+
+OWASP Mutillidae II is a free, open-source, deliberately vulnerable web application designed for web-security enthusiasts. 
+It serves as a target for learning and practicing web security skills. Mutillidae can be easily installed on Linux and 
+Windows systems using LAMP, WAMP, and XAMMP stacks. Additionally, it comes pre-installed on SamuraiWTF and OWASP BWA, and 
+the existing version can be updated on these platforms. With dozens of vulnerabilities and hints to guide the user, 
+Mutillidae provides an accessible web hacking environment suitable for labs, security enthusiasts, classrooms, CTFs, and 
+vulnerability assessment tool targets. It has been widely used in graduate security courses, corporate web security training,
+and as an assessment target for vulnerability assessment software. OWASP Mutillidae II provides a comprehensive platform for 
+learning and practicing web security techniques in a controlled environment.This is an easy to use integrated penetration 
+testing tool for finding vulnerabilities in web application.
+
+See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html 
+
+-> Open the vulnerable site
+Mutillidae should be installed in Metasploitable.
+On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae
+
+-> Look at primary information
+On the first line, you should see some interesting information:
+  -Version: 2.1.19                    : the version of the tool.
+  -Security Level: 0 (Hosed)          : the level of the security (0 means no secured at all).
+  -Hints: Disabled (0 - I try harder) : no hint available.
+  -Not Logged In                      : not yet connected or no account created.
+
+-> Toogle Hints and/or Security level
+Just below, you can find buttons (Toggle Hints / Toggle Security) used to change these parameters (try it).
+
+-> Try an injection
+1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Extract Data / User info
+2. Try admin/admin
+  If you have an error message "metasploit.account" table doesn't exist", do that:
+    On the Metasploitable machine:
+    $ sudo nano /var/www/mutillidae/config.inc then change the dbname:
+    ---
+    dbname='owasp10';
+    ---
+3. Put "admin" in Name and a "'" in Password. Click "View Account Details". You will see all that you shouldn't.
+  The Message used to find possible injection (Google)     |
+  The SQL request                                          |
+  Name of the tabme, name of a column                      | -> very useful information to be hacked /!\
+  The filename and the concerned line                      |
+
+4. Put "admin" in Name and "badpwd' OR 1=1 #" in Password. Click "View Account Details". You will see all account details !!!
+  The final request is: SELECT * FROM accounts WHERE username='admin' AND password='badpwd' OR 1=1'
+
+>@
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# [ OWASP Mutillidae II ]                                                                                                       #
+>@#                                                                                                                               #
+>@# OWASP Mutillidae II is a free, open-source, deliberately vulnerable web application designed for web-security enthusiasts.    # 
+>@# It serves as a target for learning and practicing web security skills. Mutillidae can be easily installed on Linux and        #
+>@# Windows systems using LAMP, WAMP, and XAMMP stacks. Additionally, it comes pre-installed on SamuraiWTF and OWASP BWA, and     #
+>@# the existing version can be updated on these platforms. With dozens of vulnerabilities and hints to guide the user,           #
+>@# Mutillidae provides an accessible web hacking environment suitable for labs, security enthusiasts, classrooms, CTFs, and      #
+>@# vulnerability assessment tool targets. It has been widely used in graduate security courses, corporate web security training, #
+>@# and as an assessment target for vulnerability assessment software. OWASP Mutillidae II provides a comprehensive platform for  #
+>@# learning and practicing web security techniques in a controlled environment.This is an easy to use integrated penetration     #
+>@# testing tool for finding vulnerabilities in web application.                                                                  #
+>@#                                                                                                                               #
+>@# See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html                                 #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
+>@# See: howto-1071-owasp-multillidae-fr.txt                                                                                      #
+>@# See: howto-1072-owasp-multillidae-sql.txt                                                                                     #
+>@#                                                                                                                               #
+>@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@
+>@-> Open the vulnerable site
+>@Mutillidae should be installed in Metasploitable.
+>@On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae
+>@
+>@-> Look at primary information
+>@On the first line, you should see some interesting information:
+>@  -Version: 2.1.19                    : the version of the tool.
+>@  -Security Level: 0 (Hosed)          : the level of the security (0 means no secured at all).
+>@  -Hints: Disabled (0 - I try harder) : no hint available.
+>@  -Not Logged In                      : not yet connected or no account created.
+>@
+>@-> Toogle Hints and/or Security level
+>@Just below, you can find buttons (Toggle Hints / Toggle Security) used to change these parameters (try it).
+>@
+>@-> Try an injection
+>@1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Extract Data / User info
+>@2. Try admin/admin
+>@  If you have an error message "metasploit.account" table doesn't exist", do that:
+>@    On the Metasploitable machine:
+>@    $ sudo nano /var/www/mutillidae/config.inc then change the dbname:
+>@    ---
+>@    dbname='owasp10';
+>@    ---
+>@3. Put "admin" in Name and a "'" in Password. Click "View Account Details". You will see all that you shouldn't.
+>@  The Message used to find possible injection (Google)     |
+>@  The SQL request                                          |
+>@  Name of the tabme, name of a column                      | -> very useful information to be hacked /!\
+>@  The filename and the concerned line                      |
+>@
+>@4. Put "admin" in Name and "badpwd' OR 1=1 #" in Password. Click "View Account Details". You will see all account details !!!
+>@  The final request is: SELECT * FROM accounts WHERE username='admin' AND password='badpwd' OR 1=1'
+>@
+>@#################################################################################################################################
+>@

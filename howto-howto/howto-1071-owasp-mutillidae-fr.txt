@@ -1,0 +1,40 @@
+OWASP Mutillidae II
+
+OWASP Mutillidae II est une application Web gratuite, open source et délibérément vulnérable, conçue pour les passionnés 
+de sécurité Web. Il sert de cible pour l'apprentissage et la pratique des compétences en sécurité Web. Mutillidae peut être 
+facilement installé sur Linux ou Windows utilisant les piles LAMP, WAMP et XAMMP. De plus, il est préinstallé sur SamuraiWTF 
+et OWASP BWA, et la version existante peut être mise à jour sur ces plateformes. Avec des dizaines de vulnérabilités et des 
+astuces pour guider l'utilisateur, Mutillidae fournit un environnement de piratage Web accessible adapté aux laboratoires, 
+aux passionnés de sécurité, aux salles de classe, aux CTF et cibles de l'outil d'évaluation de la vulnérabilité. Il a été 
+largement utilisé dans les cours de sécurité des cycles supérieurs, la formation à la sécurité Web en entreprise, et comme 
+cible d'évaluation pour les logiciels d'évaluation des vulnérabilités. OWASP Mutillidae II fournit une plateforme complète 
+pour apprendre et pratiquer les techniques de sécurité Web dans un environnement contrôlé. Il s'agit d'un outil tout-intégré
+de tests de pénétration, facile à utiliser pour trouver des vulnérabilités dans les applications Web.
+
+>@
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# [ OWASP Mutillidae II ]                                                                                                       #
+>@#                                                                                                                               #
+>@# OWASP Mutillidae II est une application Web gratuite, open source et délibérément vulnérable, conçue pour les passionnés      #
+>@# de sécurité Web. Il sert de cible pour l'apprentissage et la pratique des compétences en sécurité Web. Mutillidae peut être   #
+>@# facilement installé sur Linux ou Windows utilisant les piles LAMP, WAMP et XAMMP. De plus, il est préinstallé sur SamuraiWTF  #
+>@# et OWASP BWA, et la version existante peut être mise à jour sur ces plateformes. Avec des dizaines de vulnérabilités et des   #
+>@# astuces pour guider l'utilisateur, Mutillidae fournit un environnement de piratage Web accessible adapté aux laboratoires,    #
+>@# aux passionnés de sécurité, aux salles de classe, aux CTF et cibles de l'outil d'évaluation de la vulnérabilité. Il a été     #
+>@# largement utilisé dans les cours de sécurité des cycles supérieurs, la formation à la sécurité Web en entreprise, et comme    #
+>@# cible d'évaluation pour les logiciels d'évaluation des vulnérabilités. OWASP Mutillidae II fournit une plateforme complète    #
+>@# pour apprendre et pratiquer les techniques de sécurité Web dans un environnement contrôlé. Il s'agit d'un outil tout-intégré  #
+>@# de tests de pénétration, facile à utiliser pour trouver des vulnérabilités dans les applications Web.                         #
+>@#                                                                                                                               #
+>@# See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html                                 #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
+>@# See: howto-1070-owasp-multillidae.txt                                                                                         #
+>@# See: howto-1072-owasp-multillidae-sql.txt                                                                                     #
+>@#                                                                                                                               #
+>@#################################################################################################################################
+@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+@
+@#################################################################################################################################
+@
