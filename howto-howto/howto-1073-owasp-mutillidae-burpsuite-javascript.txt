@@ -39,6 +39,7 @@ Put Security level at 1 (Arrogent).
 -> Prevent that type of injection
   -The protection should be done on the server-side wherePHP should test if there are no special character (accent, SQL
    characters, ...).
+  -Study files in Metasploitable (into /var/www/mutillidae). Here: /var/www/mutillidae/process-login.attempt.php
 
 >@
 >@#################################################################################################################################
@@ -90,6 +91,7 @@ Put Security level at 1 (Arrogent).
 >@-> Prevent that type of injection
 >@  -The protection should be done on the server-side wherePHP should test if there are no special character (accent, SQL
 >@   characters, ...).
+>@  -Study files in Metasploitable (into /var/www/mutillidae). Here: /var/www/mutillidae/process-login.attempt.php
 >@
 >@#################################################################################################################################
 >@
