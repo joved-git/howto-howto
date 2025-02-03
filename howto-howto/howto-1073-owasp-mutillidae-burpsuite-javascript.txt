@@ -1,0 +1,95 @@
+Burp Suite
+
+Burp Suite is a Java application, developed by PortSwigger Ltd, which can be used for securing or performing penetration 
+testing on web2,3 applications. The suite is made up of different tools such as a proxy server (Burp Proxy), web crawler 
+(Burp Spider), an intrusion tool (Burp Intruder), a vulnerability scanner (Burp Scanner) and an HTTP repeater 
+(Burp Repeater).
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in Metasploitable.
+On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae
+Put Security level at 1 (Arrogent).
+
+-> Try an injection
+1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Bypass Authentication / Login
+    
+2. Put <what you want> in Name and "badpwd' OR 1=1 #" in Password. Click "Login". You are not logged as admin !!!
+  Message "Dangerous characters detected...".
+  /!\ BUT you see a dialogue bow that means Javascript (client side)!!! A great information as well: the verification is done
+  client-side.
+
+-> Using Burp Suite
+1. Launch the software and make update if asked.
+2. Create a temporary project (Next), keep default then "Start Burp".
+
+3. Prepare Burp Suite.
+  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+
+4. Interception
+  -Reload the Mutillidae page (user: toto, pwd: titi) and see the interception into Burp. On Burp, click "Forward to finish the
+   request.
+  -Retry the connection with admin/aaaa. 
+  -On Burp, click "Forward" until you see the muttillidae POST request. You should see "admin" and "aaaa".
+  -On the right of Burp, locate "Request Body parameters", open it (click on V) then double-click on "aaaa". Finally, insert 
+   here the SQL injection "pwd' OR 1=1 #" and click "Forward" as necessary.
+  -You should be connected as admin /!\ !!!
+
+-> Prevent that type of injection
+  -The protection should be done on the server-side wherePHP should test if there are no special character (accent, SQL
+   characters, ...).
+
+>@
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# [ Burp Suite ]                                                                                                                #
+>@#                                                                                                                               #
+>@# Burp Suite is a Java application, developed by PortSwigger Ltd, which can be used for securing or performing penetration      #
+>@# testing on web2,3 applications. The suite is made up of different tools such as a proxy server (Burp Proxy), web crawler      #
+>@# (Burp Spider), an intrusion tool (Burp Intruder), a vulnerability scanner (Burp Scanner) and an HTTP repeater                 #
+>@# (Burp Repeater).                                                                                                              #
+>@#                                                                                                                               #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
+>@# See: howto-1070-owasp-multillidae.txt                                                                                         #
+>@#                                                                                                                               #
+>@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in Metasploitable.
+>@On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae
+>@Put Security level at 1 (Arrogent).
+>@
+>@-> Try an injection
+>@1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Bypass Authentication / Login
+>@    
+>@2. Put <what you want> in Name and "badpwd' OR 1=1 #" in Password. Click "Login". You are not logged as admin !!!
+>@  Message "Dangerous characters detected...".
+>@  /!\ BUT you see a dialogue bow that means Javascript (client side)!!! A great information as well: the verification is done
+>@  client-side.
+>@
+>@-> Using Burp Suite
+>@1. Launch the software and make update if asked.
+>@2. Create a temporary project (Next), keep default then "Start Burp".
+>@
+>@3. Prepare Burp Suite.
+>@  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+>@  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+>@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+>@
+>@4. Interception
+>@  -Reload the Mutillidae page (user: toto, pwd: titi) and see the interception into Burp. On Burp, click "Forward to finish the
+>@   request.
+>@  -Retry the connection with admin/aaaa. 
+>@  -On Burp, click "Forward" until you see the muttillidae POST request. You should see "admin" and "aaaa".
+>@  -On the right of Burp, locate "Request Body parameters", open it (click on V) then double-click on "aaaa". Finally, insert 
+>@   here the SQL injection "pwd' OR 1=1 #" and click "Forward" as necessary.
+>@  -You should be connected as admin /!\ !!!
+>@
+>@-> Prevent that type of injection
+>@  -The protection should be done on the server-side wherePHP should test if there are no special character (accent, SQL
+>@   characters, ...).
+>@
+>@#################################################################################################################################
+>@

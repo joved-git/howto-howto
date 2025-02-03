@@ -31,6 +31,7 @@ de tests de pénétration, facile à utiliser pour trouver des vulnérabilités 
 >@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
 >@# See: howto-1070-owasp-multillidae.txt                                                                                         #
 >@# See: howto-1072-owasp-multillidae-sql.txt                                                                                     #
+>@# See: howto-1073-owasp-mutillidae-burpsuite-javascript.txt                                                                     #
 >@#                                                                                                                               #
 >@#################################################################################################################################
 @#-------------------------------------------------------------------------------------------------------------------------------#
