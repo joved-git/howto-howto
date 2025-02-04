@@ -1,0 +1,82 @@
+Directory browsing
+
+Directory Browsing or Listing is the act of giving visitors to a website the opportunity to see 
+and display the content of a directory in “raw”. Usually, web servers display web pages (HTML, 
+PHP, etc.), it is rarer to find a directory displayed as is when visiting a website. However, 
+this can be useful if you want to display a tree of files to download, for example.
+
+-> How to prevent
+Here are some advice:
+  -Use index.html on every directories to tell the browser to load that default page instead of
+   showing the arborescence.
+  -Authorize the use of .htaccess files. Edit /etc/apache2/apache2.conf the modify that part:
+  ---
+  <Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+  </Directory>  ---
+  ---
+  >>> Change "AllowOverride None" to "AllowOverride All.
+
+  -Use the .htaccess file and add an option line:
+   ---
+   Options -Indexes
+   ---
+
+  -To avoid error PHP messages to be displayed, change these 2 parameters into the 
+   /etc/php/<version>/apache2/php.ini file:
+  ---
+  ...
+  display_errors = Off
+  ...
+  display_startup_errors = Off
+  ...
+  ---
+
+>@
+>@####################################################################################################
+>@#                                                                                                  #
+>@# [ Directory browsing ]                                                                           #
+>@#                                                                                                  #
+>@# Directory Browsing or Listing is the act of giving visitors to a website the opportunity to see  #
+>@# and display the content of a directory in “raw”. Usually, web servers display web pages (HTML,   #
+>@# PHP, etc.), it is rarer to find a directory displayed as is when visiting a website. However,    #
+>@# this can be useful if you want to display a tree of files to download, for example.              #
+>@#                                                                                                  #
+>@# See: howto-1075-owasp-top-10.txt                                                                 #
+>@# See: howto-1076-owasp-top-10-fr.tx                                                               #
+>@#                                                                                                  #
+>@#--------------------------------------------------------------------------------------------------#
+>@
+>@-> How to prevent
+>@Here are some advice:
+>@  -Use index.html on every directories to tell the browser to load that default page instead of
+>@   showing the arborescence.
+>@  -Authorize the use of .htaccess files. Edit /etc/apache2/apache2.conf the modify that part:
+>@  ---
+>@  <Directory /var/www/>
+>@    Options Indexes FollowSymLinks
+>@    AllowOverride All
+>@    Require all granted
+>@  </Directory>  ---
+>@  ---
+>@  >>> Change "AllowOverride None" to "AllowOverride All.
+>@
+>@  -Use the .htaccess file and add an option line:
+>@   ---
+>@   Options -Indexes
+>@   ---
+>@
+>@  -To avoid error PHP messages to be displayed, change these 2 parameters into the 
+>@   /etc/php/<version>/apache2/php.ini file:
+>@  ---
+>@  ...
+>@  display_errors = Off
+>@  ...
+>@  display_startup_errors = Off
+>@  ...
+>@  ---
+>@
+>@####################################################################################################
+>@
