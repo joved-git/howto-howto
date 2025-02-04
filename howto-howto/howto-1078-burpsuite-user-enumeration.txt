@@ -1,0 +1,141 @@
+Burp Suite
+
+Burp Suite is a Java application, developed by PortSwigger Ltd, which can be used for securing or performing penetration 
+testing on web2,3 applications. The suite is made up of different tools such as a proxy server (Burp Proxy), web crawler 
+(Burp Spider), an intrusion tool (Burp Intruder), a vulnerability scanner (Burp Scanner) and an HTTP repeater 
+(Burp Repeater).
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 0 (Arrogent).
+Burp Suite Interception is Off.
+
+-> Try an intrusion
+1. Choose on the left OWASP 2017 / A2 - Broken Authentication and Session Management / Username Enumeration / Login
+    
+2. Try some users
+  Put "root" in Username and "password' Password. Click "Login". 
+  >>> you shoud see "Account does not exist".
+  Put "admin" in Username and "password' Password. Click "Login". 
+  >>> you shoud see "Password incorrect".
+  /!\ That method is used to determine if a user exists or not in the database. That is call an enumeration.
+
+3. Examine the code of the login page.
+  Type Ctrl-U then try to find the place where the code makes difference between users that exist or not.
+  Find the switch (line 1135).
+  ---
+  switch(lAuthenticationAttemptResultFlag) {  
+    ...
+  };
+  ---
+
+  Then search for the variable lAuthenticationAttemptResultFlag. Find it at line 919.
+  ---
+  var lAuthenticationAttemptResultFlag = 0;
+  ---
+
+  Copy that line "var lAuthenticationAttemptResultFlag = 0;" for Burp.
+
+-> Using Burp Suite
+1. Launch the software and make update if asked.
+2. Create a temporary project (Next), keep default then "Start Burp".
+
+3. Prepare Burp Suite.
+  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+
+4. Enumeration
+  -On the same login page, retry the connection with admin/pass. 
+  -On Burp, click "Forward" until you see the mutillidae POST request. You should see "admin" and "pass".
+  -On Burp, choose the "HTTP History" folder then click on the last POST request (on the bottom).
+  -On Burp, right-click on that request then choose "Send to Intruder". The "Intruder" folder must be highlighted.
+  -Click on it then click on "Clear §" to delete all positions on the request.
+  -Double-click on "admin" into the payload (username=admin&password=pass&login-php-submit-button=Login) then click "Add §".
+   >>> you should see that new payload: username=§admin§&password=pass&login-php-submit-button=Login
+  -On the right of Burp, locate "Payload" and under "Payload configuration", click on "Load" then locate the file:
+   /usr/share/worldlists/metasploit/http_default_users.txt    /!\ you can choose any other files.
+  -Completely to the right, click on "Setting" and locate "Grep Match". Type "Clear" to remove all <grep> then paste and add
+   two lines:
+     var lAuthenticationAttemptResultFlag = 0;
+     var lAuthenticationAttemptResultFlag = 1;
+  -On Burp, on the main screen, click on "Start attack" (in orange). 
+   >>> You should see the result of the 2 grep string "... = 0" and "...=1" and determine the result of the enumeration.
+   >>> in the "...=0" column, the user does not exist.
+   >>> in the "...=1" column, the user exist but the password is not valid.
+
+>@
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# [ Burp Suite ]                                                                                                                #
+>@#                                                                                                                               #
+>@# Burp Suite is a Java application, developed by PortSwigger Ltd, which can be used for securing or performing penetration      #
+>@# testing on web2,3 applications. The suite is made up of different tools such as a proxy server (Burp Proxy), web crawler      #
+>@# (Burp Spider), an intrusion tool (Burp Intruder), a vulnerability scanner (Burp Scanner) and an HTTP repeater                 #
+>@# (Burp Repeater).                                                                                                              #
+>@#                                                                                                                               #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
+>@# See: howto-1070-owasp-multillidae.txt                                                                                         #
+>@# See: howto-1074-burpsuite-sql-injection.txt                                                                                   #
+>@#                                                                                                                               #
+>@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in the Win10 machine.
+>@On Kali, open http://<Win10 IP>/mutillidae.
+>@Put Security level at 0 (Arrogent).
+>@Burp Suite Interception is Off.
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP 2017 / A2 - Broken Authentication and Session Management / Username Enumeration / Login
+>@    
+>@2. Try some users
+>@  Put "root" in Username and "password' Password. Click "Login". 
+>@  >>> you shoud see "Account does not exist".
+>@  Put "admin" in Username and "password' Password. Click "Login". 
+>@  >>> you shoud see "Password incorrect".
+>@  /!\ That method is used to determine if a user exists or not in the database. That is call an enumeration.
+>@
+>@3. Examine the code of the login page.
+>@  Type Ctrl-U then try to find the place where the code makes difference between users that exist or not.
+>@  Find the switch (line 1135).
+>@  ---
+>@  switch(lAuthenticationAttemptResultFlag) {  
+>@    ...
+>@  };
+>@  ---
+>@
+>@  Then search for the variable lAuthenticationAttemptResultFlag. Find it at line 919.
+>@  ---
+>@  var lAuthenticationAttemptResultFlag = 0;
+>@  ---
+>@
+>@  Copy that line "var lAuthenticationAttemptResultFlag = 0;" for Burp.
+>@
+>@-> Using Burp Suite
+>@1. Launch the software and make update if asked.
+>@2. Create a temporary project (Next), keep default then "Start Burp".
+>@
+>@3. Prepare Burp Suite.
+>@  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+>@  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+>@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+>@
+>@4. Enumeration
+>@  -On the same login page, retry the connection with admin/pass. 
+>@  -On Burp, click "Forward" until you see the mutillidae POST request. You should see "admin" and "pass".
+>@  -On Burp, choose the "HTTP History" folder then click on the last POST request (on the bottom).
+>@  -On Burp, right-click on that request then choose "Send to Intruder". The "Intruder" folder must be highlighted.
+>@  -Click on it then click on "Clear §" to delete all positions on the request.
+>@  -Double-click on "admin" into the payload (username=admin&password=pass&login-php-submit-button=Login) then click "Add §".
+>@   >>> you should see that new payload: username=§admin§&password=pass&login-php-submit-button=Login
+>@  -On the right of Burp, locate "Payload" and under "Payload configuration", click on "Load" then locate the file:
+>@   /usr/share/worldlists/metasploit/http_default_users.txt    /!\ you can choose any other files.
+>@  -Completely to the right, click on "Setting" and locate "Grep Match". Type "Clear" to remove all <grep> then paste and add
+>@   two lines:
+>@     var lAuthenticationAttemptResultFlag = 0;
+>@     var lAuthenticationAttemptResultFlag = 1;
+>@
+>@#################################################################################################################################
+>@

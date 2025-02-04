@@ -27,7 +27,7 @@ On the first line, you should see some interesting information:
 Just below, you can find buttons (Toggle Hints / Toggle Security) used to change these parameters (try it).
 
 -> Try an injection
-1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Extract Data / User info
+1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Extract Data / User info
 2. Try admin/admin
   If you have an error message "metasploit.account" table doesn't exist", do that:
     On the Metasploitable machine:
@@ -45,7 +45,7 @@ Just below, you can find buttons (Toggle Hints / Toggle Security) used to change
   The final request is: SELECT * FROM accounts WHERE username='admin' AND password='badpwd' OR 1=1'
 
 -> Another injection
-1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Bypass Authentication / Login
+1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Bypass Authentication / Login
 
 2. Put <what you want> in Name and "badpwd' OR 1=1 #" in Password. Click "Login". You are logged as admin !!!
 
@@ -88,7 +88,7 @@ Just below, you can find buttons (Toggle Hints / Toggle Security) used to change
 >@Just below, you can find buttons (Toggle Hints / Toggle Security) used to change these parameters (try it).
 >@
 >@-> Try an injection
->@1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Extract Data / User info
+>@1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Extract Data / User info
 >@2. Try admin/admin
 >@  If you have an error message "metasploit.account" table doesn't exist", do that:
 >@    On the Metasploitable machine:
@@ -106,7 +106,7 @@ Just below, you can find buttons (Toggle Hints / Toggle Security) used to change
 >@  The final request is: SELECT * FROM accounts WHERE username='admin' AND password='badpwd' OR 1=1'
 >@
 >@-> Another injection
->@1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Bypass Authentication / Login
+>@1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Bypass Authentication / Login
 >@
 >@2. Put <what you want> in Name and "badpwd' OR 1=1 #" in Password. Click "Login". You are logged as admin !!!
 >@

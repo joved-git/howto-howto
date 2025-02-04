@@ -7,11 +7,11 @@ testing on web2,3 applications. The suite is made up of different tools such as 
 
 -> Open the vulnerable Mutillidae site
 Mutillidae should be installed in Metasploitable.
-On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae
+On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae.
 Put Security level at 1 (Arrogent).
 
 -> Try an injection
-1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Bypass Authentication / Login
+1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Bypass Authentication / Login
     
 2. Put <what you want> in Name and "badpwd' OR 1=1 #" in Password. Click "Login". You are not logged as admin !!!
   Message "Dangerous characters detected...".
@@ -31,13 +31,13 @@ Put Security level at 1 (Arrogent).
   -Reload the Mutillidae page (user: toto, pwd: titi) and see the interception into Burp. On Burp, click "Forward to finish the
    request.
   -Retry the connection with admin/aaaa. 
-  -On Burp, click "Forward" until you see the muttillidae POST request. You should see "admin" and "aaaa".
+  -On Burp, click "Forward" until you see the mutillidae POST request. You should see "admin" and "aaaa".
   -On the right of Burp, locate "Request Body parameters", open it (click on V) then double-click on "aaaa". Finally, insert 
    here the SQL injection "pwd' OR 1=1 #" and click "Forward" as necessary.
   -You should be connected as admin /!\ !!!
 
 -> Prevent that type of injection
-  -The protection should be done on the server-side wherePHP should test if there are no special character (accent, SQL
+  -The protection should be done on the server-side where PHP should test if there are no special character (accent, SQL
    characters, ...).
   -Study files in Metasploitable (into /var/www/mutillidae). Here: /var/www/mutillidae/process-login.attempt.php
 
@@ -53,17 +53,18 @@ Put Security level at 1 (Arrogent).
 >@#                                                                                                                               #
 >@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
 >@# See: howto-1070-owasp-multillidae.txt                                                                                         #
+>@# See: howto-1078-burpsuite-user-enumeration.txt                                                                                #
 >@#                                                                                                                               #
 >@#-------------------------------------------------------------------------------------------------------------------------------#
 >@
 >@
 >@-> Open the vulnerable Mutillidae site
 >@Mutillidae should be installed in Metasploitable.
->@On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae
+>@On Kali, open http://<Metasploitable IP> then choose Mutillidae or directly open http://<Metasploitable IP>/mutillidae.
 >@Put Security level at 1 (Arrogent).
 >@
 >@-> Try an injection
->@1. Choose on the left OWASP Top 10/A1 - Injection / SQLi Bypass Authentication / Login
+>@1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Bypass Authentication / Login
 >@    
 >@2. Put <what you want> in Name and "badpwd' OR 1=1 #" in Password. Click "Login". You are not logged as admin !!!
 >@  Message "Dangerous characters detected...".
@@ -83,13 +84,13 @@ Put Security level at 1 (Arrogent).
 >@  -Reload the Mutillidae page (user: toto, pwd: titi) and see the interception into Burp. On Burp, click "Forward to finish the
 >@   request.
 >@  -Retry the connection with admin/aaaa. 
->@  -On Burp, click "Forward" until you see the muttillidae POST request. You should see "admin" and "aaaa".
+>@  -On Burp, click "Forward" until you see the mutillidae POST request. You should see "admin" and "aaaa".
 >@  -On the right of Burp, locate "Request Body parameters", open it (click on V) then double-click on "aaaa". Finally, insert 
 >@   here the SQL injection "pwd' OR 1=1 #" and click "Forward" as necessary.
 >@  -You should be connected as admin /!\ !!!
 >@
 >@-> Prevent that type of injection
->@  -The protection should be done on the server-side wherePHP should test if there are no special character (accent, SQL
+>@  -The protection should be done on the server-side where PHP should test if there are no special character (accent, SQL
 >@   characters, ...).
 >@  -Study files in Metasploitable (into /var/www/mutillidae). Here: /var/www/mutillidae/process-login.attempt.php
 >@
