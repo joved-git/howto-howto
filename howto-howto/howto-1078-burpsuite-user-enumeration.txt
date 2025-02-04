@@ -8,7 +8,7 @@ testing on web2,3 applications. The suite is made up of different tools such as 
 -> Open the vulnerable Mutillidae site
 Mutillidae should be installed in the Win10 machine.
 On Kali, open http://<Win10 IP>/mutillidae.
-Put Security level at 0 (Arrogent).
+Put Security level at 0 (Hosed).
 Burp Suite Interception is Off.
 
 -> Try an intrusion
@@ -84,7 +84,7 @@ Burp Suite Interception is Off.
 >@-> Open the vulnerable Mutillidae site
 >@Mutillidae should be installed in the Win10 machine.
 >@On Kali, open http://<Win10 IP>/mutillidae.
->@Put Security level at 0 (Arrogent).
+>@Put Security level at 0 (Hosed).
 >@Burp Suite Interception is Off.
 >@
 >@-> Try an intrusion
