@@ -33,6 +33,15 @@ Put Security level at 0 (Hosed).
   >>> That works again !! 
   /!\ By that way, it is possible to recover /etc/password !!!
 
+-> Prevent include vulnerabilities
+Here are some advice:
+  1. Modify the PHP.ini file
+     Put allow_url_fopen to Off. Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+     Put allow_url_include to Off. Whether to allow include/require to open URLs (like https:// or ftp://) as files.
+  2. Use the PHP preg_match() function that checks the name of the file to open.
+     Example: $lPageIsAllowed = (preg_match("/^[a-zA-Z0-9\.\-\/]+[\.php|\.html]$/", $lPage) == 1);
+  3. Use switch() function to prevent non intended file to be executed or loaded.
+
 >@
 >@##################################################################################################################################
 >@#                                                                                                                                #
@@ -74,6 +83,15 @@ Put Security level at 0 (Hosed).
 >@  Try http://<win10 IP>/mutillidae/index.php?page=robots.txt
 >@  >>> That works again !! 
 >@  /!\ By that way, it is possible to recover /etc/password !!!
+>@
+>@-> Prevent include vulnerabilities
+>@Here are some advice:
+>@  1. Modify the PHP.ini file
+>@     Put allow_url_fopen to Off. Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+>@     Put allow_url_include to Off. Whether to allow include/require to open URLs (like https:// or ftp://) as files.
+>@  2. Use the PHP preg_match() function that checks the name of the file to open.
+>@     Example: $lPageIsAllowed = (preg_match("/^[a-zA-Z0-9\.\-\/]+[\.php|\.html]$/", $lPage) == 1);
+>@  3. Use switch() function to prevent non intended file to be executed or loaded.
 >@
 >@##################################################################################################################################
 >@
