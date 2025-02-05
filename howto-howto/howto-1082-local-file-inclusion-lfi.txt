@@ -52,6 +52,7 @@ Here are some advice:
 >@#                                                                                                                                #
 >@# See: howto-1075-owasp-top-10.txt                                                                                               #
 >@# See: howto-1076-owasp-top-10-fr.tx                                                                                             #
+>@# See: howto-1084-local-file-inclusion-lfi-advanced.txt                                                                          #
 >@#                                                                                                                                #
 >@#--------------------------------------------------------------------------------------------------------------------------------#
 >@

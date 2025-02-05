@@ -15,7 +15,7 @@ Here are some advice:
     Options Indexes FollowSymLinks
     AllowOverride All
     Require all granted
-  </Directory>  ---
+  </Directory>
   ---
   >>> Change "AllowOverride None" to "AllowOverride All.
 
@@ -59,7 +59,7 @@ Here are some advice:
 >@    Options Indexes FollowSymLinks
 >@    AllowOverride All
 >@    Require all granted
->@  </Directory>  ---
+>@  </Directory>
 >@  ---
 >@  >>> Change "AllowOverride None" to "AllowOverride All.
 >@

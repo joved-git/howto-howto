@@ -22,13 +22,6 @@ $ ufw allow ssh/tcp
 >@#--------------------------------------------------------------#
 >@
 >@$ nikto -h <metasploitable>
->
->@
->@$ ufw status
->@Info sur ufw
->@
->@$ ufw allow ssh/tcp
->@Ajoute une permission pour ssh/tcp
 >@
 >@################################################################
 >@

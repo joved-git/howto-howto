@@ -1,0 +1,119 @@
+Local File Inclusion | LFI
+
+A Local File Include (LFI) vulnerability consists of including a local file from user input. In certain cases this 
+allows access to files not located in the webroot or even to execute code.
+
+-> Open the vulnerable DVWA site
+DVWA should be installed in the Metasploitable machine.
+On Kali, open http://<ms IP>/dvwa and use admin/password as credentials.
+Put Security level at Medium.
+
+-> Try an intrusion
+1. Choose on the left the "Upload" menu, "Browse" to locate backdoor.php then "Uplodad" it. 
+  >>> the backdoor.php file is in resources directory.
+  >>> that does net work (this is not an image file).
+  >>> Click on "View Source" to see the concerned filter: if (($uploaded_type == "image/jpeg") && ($uploaded_size < 100000)) ...   
+
+-> Using Burp Suite
+1. Launch the software and make update if asked.
+2. Create a temporary project (Next), keep default then "Start Burp".
+
+3. Prepare Burp Suite.
+  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+
+4. Copy backdoor.jpg to backdoor.jpg
+
+5. Browse again
+  Choose now the backdoor.jpg file.
+  In Burp, into the payload, search for filename="backdoor.jpg" and change to filename="backdoor.php"
+  Click "Forward.
+  >>> open the URP http://ms/dvwa/hackable/uploads/backdoor.php?commande=pwd to see the result of the pwd command.
+
+6. Security to High.
+  Place the DVWA Security to high and observe the code (click on "Upload" then "View Source").
+  ---
+  $uploaded_name = $_FILES['uploaded']['name'];
+  $uploaded_ext = substr($uploaded_name, strrpos($uploaded_name, '.') + 1);
+
+   if (($uploaded_ext == "jpg" || $uploaded_ext == "JPG" || $uploaded_ext == "jpeg" || $uploaded_ext == "JPEG") 
+                               && ($uploaded_size < 100000))
+   ---
+   >>> the file extension is checked as a string.
+
+-> Prevent LFI vulnerabilities
+Here are some advice:
+  1. Modify the PHP.ini file
+     Put allow_url_fopen to Off. Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+     Put allow_url_include to Off. Whether to allow include/require to open URLs (like https:// or ftp://) as files.
+  2. Use the PHP preg_match() function that checks the name of the file to open.
+     Example: $lPageIsAllowed = (preg_match("/^[a-zA-Z0-9\.\-\/]+[\.php|\.html]$/", $lPage) == 1);
+  3. Use switch() function to prevent non intended file to be executed or loaded.
+  4. Check file extentions as a string (see above 6.).
+
+>@
+>@##################################################################################################################################
+>@#                                                                                                                                #
+>@# [ Local File Inclusion | LFI ]                                                                                                 # 
+>@#                                                                                                                                #
+>@# A Local File Include (LFI) vulnerability consists of including a local file from user input. In certain cases this allows      #
+>@# access to files not located in the webroot or even to execute code.                                                            #
+>@#                                                                                                                                #
+>@# See: howto-1075-owasp-top-10.txt                                                                                               #
+>@# See: howto-1076-owasp-top-10-fr.tx                                                                                             #
+>@# See: howto-1082-local-file-inclusion-lfi.txt                                                                                   #
+>@#                                                                                                                                #
+>@#--------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Open the vulnerable DVWA site
+>@DVWA should be installed in the Metasploitable machine.
+>@On Kali, open http://<ms IP>/dvwa and use admin/password as credentials.
+>@Put Security level at Medium.
+>@
+>@-> Try an intrusion
+>@1. Choose on the left the "Upload" menu, "Browse" to locate backdoor.php then "Uplodad" it. 
+>@  >>> the backdoor.php file is in resources directory.
+>@  >>> that does net work (this is not an image file).
+>@  >>> Click on "View Source" to see the concerned filter: if (($uploaded_type == "image/jpeg") && ($uploaded_size < 100000)) ...   
+>@
+>@-> Using Burp Suite
+>@1. Launch the software and make update if asked.
+>@2. Create a temporary project (Next), keep default then "Start Burp".
+>@
+>@3. Prepare Burp Suite.
+>@  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+>@  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+>@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+>@
+>@4. Copy backdoor.jpg to backdoor.jpg
+>@
+>@5. Browse again
+>@  Choose now the backdoor.jpg file.
+>@  In Burp, into the payload, search for filename="backdoor.jpg" and change to filename="backdoor.php"
+>@  Click "Forward.
+>@  >>> open the URP http://ms/dvwa/hackable/uploads/backdoor.php?commande=pwd to see the result of the pwd command.
+>@
+>@6. Security to High.
+>@  Place the DVWA Security to high and observe the code (click on "Upload" then "View Source").
+>@  ---
+>@  $uploaded_name = $_FILES['uploaded']['name'];
+>@  $uploaded_ext = substr($uploaded_name, strrpos($uploaded_name, '.') + 1);
+>@
+>@   if (($uploaded_ext == "jpg" || $uploaded_ext == "JPG" || $uploaded_ext == "jpeg" || $uploaded_ext == "JPEG") 
+>@                               && ($uploaded_size < 100000))
+>@   ---
+>@   >>> the file extension is checked as a string.
+>@
+>@-> Prevent LFI vulnerabilities
+>@Here are some advice:
+>@  1. Modify the PHP.ini file
+>@     Put allow_url_fopen to Off. Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+>@     Put allow_url_include to Off. Whether to allow include/require to open URLs (like https:// or ftp://) as files.
+>@  2. Use the PHP preg_match() function that checks the name of the file to open.
+>@     Example: $lPageIsAllowed = (preg_match("/^[a-zA-Z0-9\.\-\/]+[\.php|\.html]$/", $lPage) == 1);
+>@  3. Use switch() function to prevent non intended file to be executed or loaded.
+>@  4. Check file extentions as a string (see above 6.).
+>@
+>@##################################################################################################################################
+>@

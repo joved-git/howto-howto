@@ -1,0 +1,80 @@
+Clickjacking
+
+Clickjacking is a malicious technique aimed at tricking an Internet user into providing confidential 
+information or taking control of their computer by forcing them to click on apparently safe pages.
+
+See: https://leblogduhacker.fr/sandbox/clickjack.php
+
+-> How that works
+No matter where you click on the page, you will automatically click on a button or underlying link.
+Click-Jacking is difficult to spot because it is possible to make it completely invisible.
+
+-> How to prevent
+Here are some advice:
+  -Authorize the use of .htaccess files. Edit /etc/apache2/apache2.conf the modify that part:
+  ---
+  <Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+  </Directory>
+  ---
+  >>> Change "AllowOverride None" to "AllowOverride All.
+
+  -To protect your own website from Click-Jacking and thus prevent someone from placing your site 
+   in an iframe to make you click and perform specific actions, you can define the X-Frame-Options 
+   option in Apache.
+   Rem: An iframe is an HTML element tht allows inclusion of a site in another one.
+  --- file .htaccess ---
+  ...
+  # Anti Clickjacking
+  Header always append X-Frame-Options SAMEORIGIN
+  ...
+  ---
+
+  -Examine a click jacking example here: ressources/javascript_click_jacking_example.txt
+
+>@######################################################################################################### 
+>@#                                                                                                       #
+>@# [ Clickjacking | Click Jacking ]                                                                      #
+>@#                                                                                                       #
+>@# Clickjacking is a malicious technique aimed at tricking an Internet user into providing confidential  #
+>@# information or taking control of their computer by forcing them to click on apparently safe pages.    #
+>@#                                                                                                       #
+>@# See: https://leblogduhacker.fr/sandbox/clickjack.php                                                  #
+>@# See: resources/javascript_click_jacking_example.txtp                                                  #
+>@#                                                                                                       #
+>@#-------------------------------------------------------------------------------------------------------#
+>@
+>@-> How that works
+>@No matter where you click on the page, you will automatically click on a button or underlying link.
+>@Click-Jacking is difficult to spot because it is possible to make it completely invisible.
+>@
+>@-> How to prevent
+>@Here are some advice:
+>@  -Authorize the use of .htaccess files. Edit /etc/apache2/apache2.conf the modify that part:
+>@  ---
+>@  <Directory /var/www/>
+>@    Options Indexes FollowSymLinks
+>@    AllowOverride All
+>@    Require all granted
+>@  </Directory>
+>@  ---
+>@  >>> Change "AllowOverride None" to "AllowOverride All.
+>@
+>@  -To protect your own website from Click-Jacking and thus prevent someone from placing your site 
+>@   in an iframe to make you click and perform specific actions, you can define the X-Frame-Options 
+>@   option in Apache.
+>@   Rem: An iframe is an HTML element tht allows inclusion of a site in another one.
+>@   
+>@  --- file .htaccess ---
+>@  ...
+>@  # Anti Clickjacking
+>@  Header always append X-Frame-Options SAMEORIGIN
+>@  ...
+>@  ---
+>@
+>@  -Examine a click jacking example here: ressources/javascript_click_jacking_example.txt
+>@
+>@######################################################################################################### 
+>@
