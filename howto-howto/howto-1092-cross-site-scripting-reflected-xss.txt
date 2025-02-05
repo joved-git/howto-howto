@@ -1,0 +1,121 @@
+Reflected XSS injection
+
+Cross-site scripting (XSS)[a] is a type of security vulnerability that can be found in some web applications. 
+XSS attacks enable attackers to inject client-side scripts into web pages viewed by other users. A cross-site 
+scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy.
+
+When the injection is named "reflected", that means that the command is sent directlty to the user.
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 1 (Client-side Security).
+
+-> Try an intrusion
+1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Reflected (First Order) / DNS Lookup
+    
+2. Try the service
+  Put "google.fr" than ckick on "Lookup DNS" and note the correct result.
+
+3. Try to insert some HTML tag.
+  Inspect (Q) the "Result for google.fr" string and place <b> and </b> around "google.fr.
+  >>> tags are excaped, you see "Results for <b>google.fr</b>
+
+4. Return to Security Level 0
+  In the box, enter Javascript data: [ <script>alert("xss");</script> ].
+  >>> the alert box is displayed.
+
+5. Return to Security Level 1
+  In the box, enter Javascript data: [ <script>alert("xss");</script> ].
+  >>> the space is limited to 20 characters, impossbile to add complet script.
+
+  Inspect (Q) the code and find the "maxlength=20" parameters. Put it at 200 then you can continue to enter the script 
+  beyond 20 chars.
+  >>> but this is not ok because the site check malicious characters and avoid to launch that script.
+
+  Let's continue. Inspect (Q) again then locate "onsubmit="return onSubmitOfForm(this);" function.
+  Replace the "return onSubmitOfForm();" by "return true;".
+  >>> That works !!
+
+-> Try another injection
+1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Reflected (First Order) / Text File Viewer
+
+2. Place the file scriptinject on Kali in /var/www/html.
+  --- scriptinject.txt file ---
+  <script>document.location="https://google.fr";</script>
+  ---
+  >>> the file could be found in resources/scriptinject.txt
+
+3. Inspect (Q) the "Text File Name" place.
+   On the first line, replace "http://www.textfiles.com/hacking/auditool.txt" by "http://<kali IP>/scriptinject.txt" 
+     then Enter and close [X].
+   Click "View File".
+   >>> you should be redirected to google.fr.
+
+-> How to prevent
+Some advice:
+  -nothing for now.
+
+>@
+>@#######################################################################################################################
+>@#                                                                                                                     #
+>@# [ Reflected XSS injection ]                                                                                         #
+>@#                                                                                                                     #
+>@# Cross-site scripting (XSS)[a] is a type of security vulnerability that can be found in some web applications.       #
+>@# XSS attacks enable attackers to inject client-side scripts into web pages viewed by other users. A cross-site       #
+>@# scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy.          #
+>@#                                                                                                                     #
+>@# When the injection is named "reflected", that means that the command is sent directlty to the user.                 #
+>@#                                                                                                                     #
+>@# See: howto-1075-owasp-top-10.txt                                                                                    #
+>@# See: howto-1076-owasp-top-10-fr.tx                                                                                  #
+>@# See: howto-1093-cross-site-scripting-persistent-xss.txt                                                             #
+>@#                                                                                                                     #
+>@#---------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Reflected (First Order) / DNS Lookup
+>@    
+>@2. Try the service
+>@  Put "google.fr" than ckick on "Lookup DNS" and note the correct result.
+>@
+>@3. Try to insert some HTML tag.
+>@  Inspect (Q) the "Result for google.fr" string and place <b> and </b> around "google.fr.
+>@  >>> tags are excaped, you see "Results for <b>google.fr</b>
+>@
+>@4. Return to Security Level 0
+>@  In the box, enter Javascript data: [ <script>alert("xss");</script> ].
+>@  >>> the alert box is displayed.
+>@
+>@5. Return to Security Level 1
+>@  In the box, enter Javascript data: [ <script>alert("xss");</script> ].
+>@  >>> the space is limited to 20 characters, impossbile to add complet script.
+>@
+>@  Inspect (Q) the code and find the "maxlength=20" parameters. Put it at 200 then you can continue to enter the script 
+>@  beyond 20 chars.
+>@  >>> but this is not ok because the site check malicious characters and avoid to launch that script.
+>@
+>@  Let's continue. Inspect (Q) again then locate "onsubmit="return onSubmitOfForm(this);" function.
+>@  Replace the "return onSubmitOfForm();" by "return true;".
+>@  >>> That works !!
+>@
+>@-> Try another injection
+>@1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Reflected (First Order) / Text File Viewer
+>@
+>@2. Place the file scriptinject on Kali in /var/www/html.
+>@  --- scriptinject.txt file ---
+>@  <script>document.location="https://google.fr";</script>
+>@  ---
+>@  >>> the file could be found in resources/scriptinject.txt
+>@
+>@3. Inspect (Q) the "Text File Name" place.
+>@   On the first line, replace "http://www.textfiles.com/hacking/auditool.txt" by "http://<kali IP>/scriptinject.txt" 
+>@     then Enter and close [X].
+>@   Click "View File".
+>@   >>> you should be redirected to google.fr.
+>@
+>@-> How to prevent
+>@Nothing for now (in progress).
+>@
+>@##################################################################################################################################
+>@

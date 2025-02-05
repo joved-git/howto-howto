@@ -31,7 +31,7 @@ In the "Hostname/IP" box, type [ & start notpad.exe & notepad.exe ... & notepad.
 >>> the Windows machine is going to be soon unusable.
 
 -> How to prevent
-SOme advice:
+Some advice:
   -In this example, check that the box really contains an IP address or a domain name.
   -Always check the entries of user (type of file, syntax verification, ...).
 
@@ -76,7 +76,7 @@ SOme advice:
 >@>>> the Windows machine is going to be soon unusable.
 >@
 >@-> How to prevent
->@SOme advice:
+>@Some advice:
 >@  -In this example, check that the box really contains an IP address or a domain name.
 >@  -Always check the entries of user (type of file, syntax verification, ...).
 >@

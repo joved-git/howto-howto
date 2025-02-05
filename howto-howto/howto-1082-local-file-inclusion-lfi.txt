@@ -15,7 +15,7 @@ Put Security level at 0 (Hosed).
 2. Try to view one file.
   Click on "View file" and note the file is displayed.
 
-3. Inspect the code.
+3. Inspect (Q) the code.
   Right-click on the Text File Name Box to display code.
   Into the first line, replace the URL by another file name, ie robots.txt then Enter and close the Inspect windows with [X].
   >>> before: <option value="http://www.textfiles.com/hacking/auditool.txt">Intrusion ... January 29, 1991)</option>
@@ -67,7 +67,7 @@ Here are some advice:
 >@2. Try to view one file.
 >@  Click on "View file" and note the file is displayed.
 >@
->@3. Inspect the code.
+>@3. Inspect (Q) the code.
 >@  Right-click on the Text File Name Box to display code.
 >@  Into the first line, replace the URL by another file name, ie robots.txt then Enter and close the Inspect windows with [X].
 >@  >>> before: <option value="http://www.textfiles.com/hacking/auditool.txt">Intrusion ... January 29, 1991)</option>

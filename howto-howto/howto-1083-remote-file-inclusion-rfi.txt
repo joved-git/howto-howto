@@ -30,7 +30,7 @@ Put Security level at 0 (Hosed).
   Copy the file intrus.txt (see resources/intrus.txt) into Kali to /var/www/tml).
   Start Apache2 (sudo systemctl start apache2).
 
-4. Inspect the code.
+4. Inspect (Q) the code.
   Right-click on the Text File Name Box to display code.
   Into the first line, replace the URL by another remote file name (ie intrus.txt on Kali) then Enter and close the 
     Inspect windows with [X].
@@ -124,7 +124,7 @@ Here are some advice:
 >@  Copy the file intrus.txt (see resources/intrus.txt) into Kali to /var/www/tml).
 >@  Start Apache2 (sudo systemctl start apache2).
 >@
->@4. Inspect the code.
+>@4. Inspect (Q) the code.
 >@  Right-click on the Text File Name Box to display code.
 >@  Into the first line, replace the URL by another remote file name (ie intrus.txt on Kali) then Enter and close the 
 >@    Inspect windows with [X].

