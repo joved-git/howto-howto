@@ -1,0 +1,69 @@
+HTTP headers XSS injection
+
+HTTP XSS injection is a method that use the HTTP headers to place some script and code using Burp.
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 1 (Client-Side Security).
+Burp Suite Interception is Off.
+
+-> Try an intrusion
+1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Via HTTP Headers / Browser Info
+    
+2. Try the service
+  >>> you shoud see Browser information.
+
+-> Using Burp Suite
+1. Launch the software and make update if asked.
+2. Create a temporary project (Next), keep default then "Start Burp".
+
+3. Prepare Burp Suite.
+  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+
+4. Refresh the page.
+  In Burp, locate the headers then for example, into User-Agent put the script: <script>alert("xss");</script>
+  >>> the box is displayed.
+
+>@
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# HTTP headers XSS injection                                                                                                    #
+>@#                                                                                                                               #
+>@# HTTP XSS injection is a method that use the HTTP headers to place some script and code using Burp.                            #
+>@#                                                                                                                               #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
+>@# See: howto-1070-owasp-multillidae.txt                                                                                         #
+>@# See: howto-1074-burpsuite-sql-injection.txt                                                                                   #
+>@#                                                                                                                               #
+>@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in the Win10 machine.
+>@On Kali, open http://<Win10 IP>/mutillidae.
+>@Put Security level at 1 (Client-Side Security).
+>@Burp Suite Interception is Off.
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP 2017 / A7 - Cross Site Scripting (XSS) / Via HTTP Headers / Browser Info
+>@    
+>@2. Try the service
+>@  >>> you shoud see Browser information.
+>@
+>@-> Using Burp Suite
+>@1. Launch the software and make update if asked.
+>@2. Create a temporary project (Next), keep default then "Start Burp".
+>@
+>@3. Prepare Burp Suite.
+>@  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+>@  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+>@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+>@
+>@4. Refresh the page.
+>@  In Burp, locate the headers then for example, into User-Agent put the script: <script>alert("xss");</script>
+>@  >>> the box is displayed.
+>@
+>@#################################################################################################################################
+>@

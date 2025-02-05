@@ -15,9 +15,9 @@ Burp Suite Interception is Off.
 1. Choose on the left OWASP 2017 / A2 - Broken Authentication and Session Management / Username Enumeration / Login
     
 2. Try some users
-  Put "root" in Username and "password' Password. Click "Login". 
+  Put "root" in Username and "password" in Password. Click "Login". 
   >>> you shoud see "Account does not exist".
-  Put "admin" in Username and "password' Password. Click "Login". 
+  Put "admin" in Username and "password" in Password. Click "Login". 
   >>> you shoud see "Password incorrect".
   /!\ That method is used to determine if a user exists or not in the database. That is call an enumeration.
 
@@ -91,9 +91,9 @@ Burp Suite Interception is Off.
 >@1. Choose on the left OWASP 2017 / A2 - Broken Authentication and Session Management / Username Enumeration / Login
 >@    
 >@2. Try some users
->@  Put "root" in Username and "password' Password. Click "Login". 
+>@  Put "root" in Username and "password" in Password. Click "Login". 
 >@  >>> you shoud see "Account does not exist".
->@  Put "admin" in Username and "password' Password. Click "Login". 
+>@  Put "admin" in Username and "password" in Password. Click "Login". 
 >@  >>> you shoud see "Password incorrect".
 >@  /!\ That method is used to determine if a user exists or not in the database. That is call an enumeration.
 >@
