@@ -1,0 +1,84 @@
+Code injection | Command injection
+
+Code injection is a computer security exploit where a program fails to correctly process external data, such as user input, 
+causing it to interpret the data as executable commands. An attacker using this method "injects" code into the program while 
+it is running. Successful exploitation of a code injection vulnerability can result in data breaches, access to restricted 
+or critical computer systems, and the spread of malware. 
+
+-> Open the vulnerable Mutillidae site
+Mutillidae should be installed in the Win10 machine.
+On Kali, open http://<Win10 IP>/mutillidae.
+Put Security level at 0 (Hosed).
+
+-> Try an intrusion
+1. Choose on the left OWASP 2017 / A1 - Injection (Other) / Command injection / DNS Lookup
+    
+2. Try the service
+  Put "google.fr" than ckick on "Lookup DNS" and note the correct result.
+
+3. Try to launch another command.
+  Under Windows the "&" character at the end of a command allows to launch another command.
+  Example, type "C\> dir & mkdir tmp & dir and note the result.
+
+  In the "Hostname/IP" box, type [ & dir ].
+  >>> you should see the result of the "dir" command.
+  In the "Hostname/IP" box, type [ & start notpad.exe ].
+  >>> you should see the result of the "dir" command.
+
+-> Make a Deny of Service
+Imagine you place 200 "& start notepad.exe " into that box, the Windows machine will become to be over charged.
+In the "Hostname/IP" box, type [ & start notpad.exe & notepad.exe ... & notepad.exe ].
+>>> the Windows machine is going to be soon unusable.
+
+-> How to prevent
+SOme advice:
+  -In this example, check that the box really contains an IP address or a domain name.
+  -Always check the entries of user (type of file, syntax verification, ...).
+
+>@
+>@##################################################################################################################################
+>@#                                                                                                                                #
+>@# [ Code injection | Command injection ]                                                                                         #
+>@#                                                                                                                                #
+>@# Code injection is a computer security exploit where a program fails to correctly process external data, such as user input,    #
+>@# causing it to interpret the data as executable commands. An attacker using this method "injects" code into the program while   # 
+>@# it is running. Successful exploitation of a code injection vulnerability can result in data breaches, access to restricted     #
+>@# or critical computer systems, and the spread of malware.                                                                       #
+>@#                                                                                                                                #
+>@# See: howto-1075-owasp-top-10.txt                                                                                               #
+>@# See: howto-1076-owasp-top-10-fr.tx                                                                                             #
+>@#                                                                                                                                #
+>@#--------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Open the vulnerable Mutillidae site
+>@Mutillidae should be installed in the Win10 machine.
+>@On Kali, open http://<Win10 IP>/mutillidae.
+>@Put Security level at 0 (Hosed).
+>@
+>@-> Try an intrusion
+>@1. Choose on the left OWASP 2017 / A1 - Injection (Other) / Command injection / DNS Lookup
+>@    
+>@2. Try the service
+>@  Put "google.fr" than ckick on "Lookup DNS" and note the correct result.
+>@
+>@3. Try to launch another command.
+>@  Under Windows the "&" character at the end of a command allows to launch another command.
+>@  Example, type "C\> dir & mkdir tmp & dir and note the result.
+>@
+>@  In the "Hostname/IP" box, type [ & dir ].
+>@  >>> you should see the result of the "dir" command.
+>@  In the "Hostname/IP" box, type [ & start notpad.exe ].
+>@  >>> you should see the result of the "dir" command.
+>@
+>@-> Make a Deny of Service
+>@Imagine you place 200 "& start notepad.exe " into that box, the Windows machine will become to be over charged.
+>@In the "Hostname/IP" box, type [ & start notpad.exe & notepad.exe ... & notepad.exe ].
+>@>>> the Windows machine is going to be soon unusable.
+>@
+>@-> How to prevent
+>@SOme advice:
+>@  -In this example, check that the box really contains an IP address or a domain name.
+>@  -Always check the entries of user (type of file, syntax verification, ...).
+>@
+>@##################################################################################################################################
+>@

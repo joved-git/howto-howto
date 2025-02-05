@@ -24,7 +24,7 @@ Put Security level at 0 (Hosed).
 1. Choose on the left OWASP 2017 / A5 - Broken Access Control / Insecure Direct Object References / Text File Viewer
     
 2. Try to view one file.
-  Click on "View file" and constate the file is displayed.
+  Click on "View file" and note the file is displayed.
 
 3. Prepare the Kali machine.
   Copy the file intrus.txt (see resources/intrus.txt) into Kali to /var/www/tml).
@@ -118,7 +118,7 @@ Here are some advice:
 >@1. Choose on the left OWASP 2017 / A5 - Broken Access Control / Insecure Direct Object References / Text File Viewer
 >@    
 >@2. Try to view one file.
->@  Click on "View file" and constate the file is displayed.
+>@  Click on "View file" and note the file is displayed.
 >@
 >@3. Prepare the Kali machine.
 >@  Copy the file intrus.txt (see resources/intrus.txt) into Kali to /var/www/tml).
