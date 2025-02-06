@@ -53,6 +53,7 @@ Burp Suite Interception is Off.
 >@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
 >@# See: howto-1070-owasp-multillidae.txt                                                                                         #
 >@# See: howto-1074-burpsuite-sql-injection.txt                                                                                   #
+>@# See: howto-1097-cross-site-scripting-http-xss-prevention.txt                                                                  #
 >@#                                                                                                                               #
 >@#-------------------------------------------------------------------------------------------------------------------------------#
 >@

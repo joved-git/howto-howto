@@ -30,13 +30,14 @@ Burp Suite Interception is Off.
 >@
 >@#################################################################################################################################
 >@#                                                                                                                               #
->@# HTTP headers XSS injection                                                                                                    #
+>@# [ HTTP headers XSS injection ]                                                                                                #
 >@#                                                                                                                               #
 >@# HTTP XSS injection is a method that use the HTTP headers to place some script and code using Burp.                            #
 >@#                                                                                                                               #
 >@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
 >@# See: howto-1070-owasp-multillidae.txt                                                                                         #
 >@# See: howto-1074-burpsuite-sql-injection.txt                                                                                   #
+>@# See: howto-1097-cross-site-scripting-http-xss-prevention.txt                                                                  #
 >@#                                                                                                                               #
 >@#-------------------------------------------------------------------------------------------------------------------------------#
 >@

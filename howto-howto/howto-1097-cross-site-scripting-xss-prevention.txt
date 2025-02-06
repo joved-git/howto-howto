@@ -1,0 +1,97 @@
+XSS injection prevention
+
+Cross-site scripting (abbreviated XSS) is a type of website security vulnerability that allows content to be injected into a 
+page, thereby causing actions on web browsers visiting the page. The possibilities of XSS are very wide since the attacker 
+can use all the languages supported by the browser (JavaScript, Java, etc.) and new possibilities are regularly discovered, 
+particularly with the arrival of new technologies such as HTML5. For example, it is possible to redirect to another site 
+for phishing or to steal the session by recovering cookies.
+
+Types of XSS injections are: -Reflected
+                             -Persistent
+                             -DOM (Document Object Model)
+                             -GET/POST
+                             -Headers
+
+See: howto-1092-cross-site-scripting-reflected-xss.txt      
+See: howto-1093-cross-site-scripting-persistent-xss.txt
+See: howto-1094-cross-site-scripting-dom-xss.txt
+See: howto-1095-cross-site-scripting-get-post-xss.txt
+See: howto-1096-cross-site-scripting-http-headers-xss.txt
+
+-> How do that works
+
+   Attacker                     Web client                   Web Server
+      |                             |                            |
+      |---------------- infect with malicious code ------------->| 
+      |                             |                            |
+      |                             |---- Visit the Website ---->|
+      |                             |                            |
+      |                             |<---- Inject the script ----|
+      |                             |                            |
+      |-- Access with privileges -->|                            |
+      |                             |                            |
+
+-> How to prevent
+Here are some advice:
+  -Use PHP filters like stripslashed(), sys_real_escape_string(), htmlspecialchars() and/or htmlentities().
+    See: ressources/xss-prevention.php for an example.
+  -Play with DVWA, change the security level, click on "View Source" and "Compare".
+  -Do not trust client-side entries and data.
+  -Make additionnal test in PHP (server-side).
+  -Do not display client data.
+  -Do not display erros (in production).
+
+>@
+>@#################################################################################################################
+>@#                                                                                                               #
+>@# [ XSS injection prevention ]                                                                                  #
+>@#                                                                                                               #
+>@# Cross-site scripting (abbreviated XSS) is a type of website security vulnerability that allows content        #
+>@# to be injected into a page, thereby causing actions on web browsers visiting the page. The possibilities      #
+>@# of XSS are very wide since the attacker can use all the languages supported by the browser (JavaScript,Java,  #
+>@# etc.) and new possibilities are regularly discovered, particularly with the arrival of new  technologies such #
+>@# as HTML5. For example, it is possible to redirect to another site for phishing or to  steal the session by    #
+>@# recovering cookies.                                                                                           #
+>@#                                                                                                               #
+>@# Types of XSS injections are: -Reflected                                                                       #
+>@#                              -Persistent                                                                      #                                       
+>@#                              -DOM (Document Object Model)                                                     #
+>@#                              -GET/POST                                                                        #
+>@#                              -Headers                                                                         #
+>@#                                                                                                               #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                              #
+>@# See: howto-1070-owasp-multillidae.txt                                                                         #
+>@# See: howto-1092-cross-site-scripting-reflected-xss.txt                                                        #
+>@# See: howto-1093-cross-site-scripting-persistent-xss.txt                                                       #
+>@# See: howto-1094-cross-site-scripting-dom-xss.txt                                                              #
+>@# See: howto-1095-cross-site-scripting-get-post-xss.txt                                                         #
+>@# See: howto-1096-cross-site-scripting-http-headers-xss.txt                                                     #
+>@# See: ressources/xss-prevention.php for an example.                                                            #
+>@#                                                                                                               #
+>@#---------------------------------------------------------------------------------------------------------------#
+>@
+>@-> How do that works
+>@
+>@   Attacker                     Web client                   Web Server
+>@      |                             |                            |
+>@      |---------------- infect with malicious code ------------->| 
+>@      |                             |                            |
+>@      |                             |---- Visit the Website ---->|
+>@      |                             |                            |
+>@      |                             |<---- Inject the script ----|
+>@      |                             |                            |
+>@      |-- Access with privileges -->|                            |
+>@      |                             |                            |
+>@
+>@-> How to prevent
+>@Here are some advice:
+>@  -Use PHP filters like stripslashed(), sys_real_escape_string(), htmlspecialchars() and/or htmlentities().
+>@    See: ressources/xss-prevention.php for an example.
+>@  -Play with DVWA, change the security level, click on "View Source" and "Compare".
+>@  -Do not trust client-side entries and data.
+>@  -Make additionnal test in PHP (server-side).
+>@  -Do not display client data.
+>@  -Do not display erros (in production).
+>@
+>@#################################################################################################################
+>@

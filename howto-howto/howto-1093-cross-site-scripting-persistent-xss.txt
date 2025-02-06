@@ -64,6 +64,7 @@ Here are some advice:
 >@# See: howto-1075-owasp-top-10.txt                                                                                               #
 >@# See: howto-1076-owasp-top-10-fr.tx                                                                                             #
 >@# See: howto-1092-cross-site-scripting-reflected-xss.txt                                                                         #
+>@# See: howto-1097-cross-site-scripting-http-xss-prevention.txt                                                                   #
 >@#                                                                                                                                #
 >@#--------------------------------------------------------------------------------------------------------------------------------#
 >@

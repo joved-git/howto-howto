@@ -70,6 +70,7 @@ Some advice:
 >@# See: howto-1075-owasp-top-10.txt                                                                                    #
 >@# See: howto-1076-owasp-top-10-fr.tx                                                                                  #
 >@# See: howto-1093-cross-site-scripting-persistent-xss.txt                                                             #
+>@# See: howto-1097-cross-site-scripting-http-xss-prevention.txt                                                        #
 >@#                                                                                                                     #
 >@#---------------------------------------------------------------------------------------------------------------------#
 >@
