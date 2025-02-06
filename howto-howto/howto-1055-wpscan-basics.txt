@@ -1,0 +1,87 @@
+WPScan
+
+WPScan is a free, for non-commercial use, black box WordPress security scanner written for 
+security professionals and blog maintainers to test the security of their sites.
+
+WPScan is written in the Ruby programming language. The first version of WPScan was 
+released on the 16th of June 2011.
+
+See: https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation
+
+/!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\
+
+-> Obtain help
+$ wpscan --help
+
+-> Simply scan a <host>
+$ wpscan --url <wordpress IP>
+>>> Scans the WordPress <wordpress IP>.
+>>> you will first have general information then a list of detected vulnerabilities.
+>>> Look at <to de done>
+
+$ wpscan --enumerate --url <wordpress IP>
+>>> give list of plugins, themes and users with eventual vulnerabilities.
+---
+<to be done>
+...
+---
+
+-> Analyze reports
+Search for lines that begin with [!] : potential vulnerabilities.
+
+-> Useful options (to be completed)
+--url <url>              : specify URL.
+--enumerate              : enumerate plugins, themes and users.
+--wp_content-dir <dir>   : specify a non-by-default directory for WordPress.
+--wp_plugins-dir <dir>   : specify a non-by-default directory for WordPress' plugins.
+--username <user>        : specify a username.
+--wordlist <file>        : give a list of word (brute force password searching).
+-...
+
+>@
+>@###############################################################################################
+>@#                                                                                             #
+>@#  [ WPScan ]                                                                                 #
+>@#                                                                                             #
+>@# WPScan is a free, for non-commercial use, black box WordPress security scanner written for  #
+>@# security professionals and blog maintainers to test the security of their sites.            #
+>@#                                                                                             #
+>@# WPScan is written in the Ruby programming language. The first version of WPScan was         #
+>@# released on the 16th of June 2011.                                                          #
+>@#                                                                                             #
+>@#  /!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\  #
+>@#                                                                                             #
+>@# See: https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation                    #
+>@# See: howto-1205-wordpress-security.txt                                                      #
+>@#                                                                                             #
+>@#---------------------------------------------------------------------------------------------#
+>@
+>@-> Obtain help
+>@$ wpscan --help
+>@
+>@-> Simply scan a <host>
+>@$ wpscan --url <wordpress IP>
+>@>>> Scans the WordPress <wordpress IP>.
+>@>>> you will first have general information then a list of detected vulnerabilities.
+>@
+>@$ wpscan --enumerate --url <wordpress IP>
+>@>>> give list of plugins, themes and users with eventual vulnerabilities.
+>@---
+>@<to be done>
+>@...
+>@---
+>@
+>@-> Analyze reports
+>@Search for lines that begin with [!] : potential vulnerabilities.
+>@
+>@-> Useful options (to be completed)
+>@--url <url>              : specify URL.
+>@--enumerate              : enumerate plugins, themes and users.
+>@--wp_content-dir <dir>   : specify a non-by-default directory for WordPress.
+>@--wp_plugins-dir <dir>   : specify a non-by-default directory for WordPress' plugins.
+>@--username <user>        : specify a username.
+>@--wordlist <file>        : give a list of word (brute force password searching).
+>@-...
+>@
+>@#############################################################################################
+>@

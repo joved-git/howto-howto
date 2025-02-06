@@ -11,7 +11,7 @@ $ nikto
 -> Simply scan a <host>
 $ nikto -h <host>
 >>> Scans the web server on <host>.
->>> you will first have general information then a list of detected vulnerabilities
+>>> you will first have general information then a list of detected vulnerabilities.
 >>> Look at howto-1051-nikto-example.txt for an example.
 
 -> Analyze reports
