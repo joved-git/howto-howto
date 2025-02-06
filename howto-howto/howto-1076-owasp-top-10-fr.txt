@@ -68,12 +68,13 @@ nous disent que c'est important, même si cela n'est pas illustré dans les donn
 
 >@#################################################################################################################################
 >@#                                                                                                                               #
->@# [ OWASP Top 10 ]                                                                                                              #
+>@# [ OWASP Top 10 | 2021 ]                                                                                                       #
 >@#                                                                                                                               #
 >@# OWASP Top 10 représente la liste officielle des 10 risks les plus importants dans le monde de la sécurité Web.                #
 >@# La liste est utilisée pour sécuriser les application.                                                                         #
 >@#                                                                                                                               #
 >@# Site officiel: https://owasp.org/Top10/                                                                                       #
+>@# See: howto-1075-owasp-top-10.txt                                                                                              #
 >@#                                                                                                                               #
 >@#-------------------------------------------------------------------------------------------------------------------------------#
 >@

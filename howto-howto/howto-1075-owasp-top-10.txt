@@ -52,12 +52,13 @@ in the data at this time.
 >@
 >@#################################################################################################################################
 >@#                                                                                                                               #
->@# [ OWASP Top 10 ]                                                                                                              #
+>@# [ OWASP Top 10 | 2021 ]                                                                                                       #
 >@#                                                                                                                               #
 >@# OWASP Top 10 is an official list that gives the 10 most important security web risks.                                         #
 >@# It is used to securise web applications.                                                                                      #
 >@#                                                                                                                               #
 >@# Official website: https://owasp.org/Top10/                                                                                    #
+>@# See: howto-1076-owasp-top-10-fr.txt                                                                                           #
 >@#                                                                                                                               #
 >@#-------------------------------------------------------------------------------------------------------------------------------#
 >@

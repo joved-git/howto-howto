@@ -1,0 +1,53 @@
+Vulnerable and Outdated Components | A06:2021
+
+This category was previously titled Using Components with Known Vulnerabilities and is #2 in 
+the Top 10 community survey, but also had enough data to make the Top 10 via data analysis. This category moves up from #9 
+in 2017 and is a known issue that we struggle to test and assess risk. It is the only category not to have any Common 
+Vulnerability and Exposures (CVEs) mapped to the included CWEs, so a default exploit and impact weights of 5.0 are factored 
+into their scores.
+
+See: http://www.base64decode.org
+See: https://themecheck.info/fr/
+See: howto-1075-owasp-top-10.txt
+See: howto-1076-owasp-top-10-fr.txt
+
+-> How to prevent:
+  -Pay special attention to component plugin.
+    Example: Ninja forms is exploitable by Metasploit (use exploit/multi/http/wp_ninja_forms_unauthentication_file_upload).
+  -Don't trust Wordpress thems. Pay attention to the date and time of files into zip file themes.
+    Examine that files and search for strange features like base-64 coding (base64_decode()), suspicious keywords 
+    (administrator, getdir, upload, SearchFile), error hidden (error_reporting() and display_error at 0), 
+    file_get_content() and suspicious website.
+  -Decode Base-64 code and examine it (just copy/paste Base-64 code to http://www.base64decode.org).
+  -Don't install code from unknown soruces.
+  -Use https://themecheck.info/fr/ to check Wordpress thems.
+
+>@##############################################################################################################################
+>@#                                                                                                                            #
+>@# [ Vulnerable and Outdated Components | A06:2021 ]                                                                          #
+>@#                                                                                                                            #
+>@# This category was previously titled Using Components with Known Vulnerabilities and is #2 in the Top 10 community survey,  #
+>@# but also had enough data to make the Top 10 via data analysis. This category moves up from #9 in 2017 and is a known issue #
+>@# that we struggle to test and assess risk. It is the only category not to have any Common Vulnerability and Exposures       #
+>@# (CVEs) mapped to the included CWEs, so a default exploit and impact weights of 5.0 are factored into their scores.         #
+>@#                                                                                                                            #
+>@# See: http://www.base64decode.org                                                                                           #
+>@# See: https://themecheck.info/fr/                                                                                           #
+>@# See: howto-1075-owasp-top-10.txt                                                                                           #
+>@# See: howto-1076-owasp-top-10-fr.txt                                                                                        #
+>@#                                                                                                                            #
+>@#----------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> How to prevent:
+>@  -Pay special attention to component plugin.
+>@    Example: Ninja forms is exploitable by Metasploit (use exploit/multi/http/wp_ninja_forms_unauthentication_file_upload).
+>@  -Don't trust Wordpress thems. Pay attention to the date and time of files into zip file themes.
+>@    Examine that files and search for strange features like base-64 coding (base64_decode()), suspicious keywords 
+>@    (administrator, getdir, upload, SearchFile), error hidden (error_reporting() and display_error at 0), 
+>@    file_get_content() and suspicious website.
+>@  -Decode Base-64 code and examine it (just copy/paste Base-64 code to http://www.base64decode.org).
+>@  -Don't install code from unknown soruces.
+>@  -Use https://themecheck.info/fr/ to check Wordpress thems.
+>@
+>@##############################################################################################################################
+>@
