@@ -1,0 +1,89 @@
+This is an easy to use integrated penetration testing tool for finding vulnerabilities in web application.
+!!! /!\ This is illegal, try it on metasploitable.
+
+-> How to install the tool:
+1. Go to https://github.com/zaproxy/zaproxy .
+2. Scroll down to find Donwload, click on it.
+3. Choose the right installer and download it.
+4. Go to Download and add + x to the install file.
+$ chmod a+x ZAP_<version>_unix.sh
+5. Launch the script and accept all.
+6. Go to /opt/zaproxy and create a link to zap.sh:
+$ cd /opt/zaproxy
+$ ln -s zap.sh zaproxy
+7. Add /opt/zaproxy to the PATH in ~/.zshrc .
+6. Start the application:
+$ zaproxy &
+
+-> Some explanation
+1. Choose the mode: secured (no risky action, discrete), protected (slightly risked) 
+   and standard (potentially risked, not really discrete). 
+2. Site to be tested.
+3. Context: used to regroup or exclude URL.
+4. The botom windows is used to display information on the scan.
+
+-> Start a scan
+1. Click on "Automated scan"
+2. Give the IP address or the site to test.
+3. Let all options to default but you can desactivate "Use traditional Spider" and put 
+   "Never" for AJAX if you want a quick result. /!\ You have to choose one Spider.
+4. Click on "Attack" or "Attaquer".
+5. Let the scan turns (it could be long if AJAX Spider is used).
+6. Finally, go to the "Alerts" folder and analyze all results with "Request" bow and
+   the result box that gives some advice.
+7. Click on "Report" then "Generate an HTML report" to generate a report. You will find
+   a summary then explanation by level just bellow.
+
+-> Example:
+Try this URL on metasploitable: http://<ms IP>/mutillidae/?page=%2Fetc%2Fpasswd
+
+>@
+>@#########################################################################################
+>@#                                                                                       #
+>@# [ Owasp Zed Attack Proxy | Owasp ZAP | Zaproxy ]                                      #
+>@#                                                                                       #
+>@# This is an easy to use integrated penetration testing tool for finding                #
+>@# vulnerabilities in web application.                                                   #
+>@#                                                                                       #
+>@# /!\ Scan a site without any authorization is illegal, try it on metasploitable /!\    #
+>@#                                                                                       #
+>@#---------------------------------------------------------------------------------------#
+>@
+>@-> How to install the tool:
+>@1. Go to https://github.com/zaproxy/zaproxy .
+>@2. Scroll down to find Donwload, click on it.
+>@3. Choose the right installer and download it.
+>@4. Go to Download and add + x to the install file.
+>@$ chmod a+x ZAP_<version>_unix.sh
+>@5. Launch the script and accept all.
+>@6. Go to /opt/zaproxy and create a link to zap.sh:
+>@$ cd /opt/zaproxy
+>@$ ln -s zap.sh zaproxy
+>@7. Add /opt/zaproxy to the PATH in ~/.zshrc .
+>@6. Start the application:
+>@$ zaproxy &
+>@
+>@-> Some explanation
+>@1. Choose the mode: secured (no risky action, discrete), protected (slightly risked) 
+>@   and standard (potentially risked, not really discrete). 
+>@2. Site to be tested.
+>@3. Context: used to regroup or exclude URL.
+>@4. The botom windows is used to display information on the scan.
+>@
+>@-> Start a scan
+>@1. Click on "Automated scan"
+>@2. Give the IP address or the site to test.
+>@3. Let all options to default but you can desactivate "Use traditional Spider" and put 
+>@   "Never" for AJAX if you want a quick result. /!\ You have to choose one Spider.
+>@4. Click on "Attack" or "Attaquer".
+>@5. Let the scan turns (it could be long if AJAX Spider is used).
+>@6. Finally, go to the "Alerts" folder and analyze all results with "Request" bow and
+>@   the result box that gives some advice.
+>@7. Click on "Report" then "Generate an HTML report" to generate a report. YOu will find
+>@   a summary then explanation by level just bellow.
+>@
+>@-> Example:
+>@Try this URL on metasploitable: http://<ms IP>/mutillidae/?page=%2Fetc%2Fpasswd
+>@
+>@#########################################################################################
+>@

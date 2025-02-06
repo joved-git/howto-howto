@@ -1,0 +1,49 @@
+Wordpress security
+
+WordPress is a free content management system (CMS). This software written in PHP is based on a MySQL and 
+MariaDB database, and is distributed by the WordPress.org foundation. WordPress features allow you to 
+create and manage different types of websites: showcase site, online sales site, application site, blog, 
+portfolio, institutional site, educational site, etc.
+
+See: howto-1200-vulnerable-and-outdated-components.txt
+
+-> How to securize
+Here are some advice
+  -Update extensions and Wordpress.
+  -Remove useless extentions (example Ninja Forms).
+  -Save regularly information using the plugins BackUpWordPress (database and complet).
+  -Use just one Security extensions: Wordfence Security, Sucuri (firewall, antivirus and malwares scan).
+  -Use Security options (example Wordfence): malicious scans, IP blocking, hostname blocking, 
+     WordPress automatic update, hide WordPress version, Brute force protection, strong passwords, 
+     rate limiting, country blocking, monitor disk space, detect malicious, ...
+  -Regularly, look at logs files.
+  -Switch you website to HTTPS.
+
+>@
+>@#############################################################################################################
+>@#                                                                                                           #
+>@# [ Wordpress security ]                                                                                    #
+>@#                                                                                                           #
+>@# WordPress is a free content management system (CMS). This software written in PHP is based on a MySQL and #
+>@# MariaDB database, and is distributed by the WordPress.org foundation. WordPress features allow you to     #
+>@# create and manage different types of websites: showcase site, online sales site, application site, blog,  #
+>@# portfolio, institutional site, educational site, etc.                                                     #
+>@#                                                                                                           #
+>@# See: howto-1200-vulnerable-and-outdated-components.txt                                                    #
+>@#                                                                                                           #
+>@#-----------------------------------------------------------------------------------------------------------#
+>@
+>@-> How to securize
+>@Here are some advice
+>@  -Update extensions and Wordpress.
+>@  -Remove useless extentions (example Ninja Forms).
+>@  -Save regularly information using the plugins BackUpWordPress (database and complet).
+>@  -Use just one Security extensions: Wordfence Security, Sucuri (firewall, antivirus and malwares scan).
+>@  -Use Security options (example Wordfence): malicious scans, IP blocking, hostname blocking, 
+>@     WordPress automatic update, hide WordPress version, Brute force protection, strong passwords, 
+>@     rate limiting, country blocking, monitor disk space, detect malicious, ...
+>@  -Regularly, look at logs files.
+>@  -Switch you website to HTTPS.
+>@
+>@#############################################################################################################
+>@

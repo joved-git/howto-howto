@@ -1,0 +1,82 @@
+Nikto is a freeware command-line vulnerability scanner that scans web servers for dangerous 
+files/CGI, outdated server software, and other issues. It performs generic and server type 
+specific checks. It also captures and prints all cookies received. The Nikto code itself is 
+free software, but the data files it uses to drive the program are not.
+
+/!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\
+
+-> Obtain help
+$ nikto
+
+-> Simply scan a <host>
+$ nikto -h <host>
+>>> Scans the web server on <host>.
+>>> you will first have general information then a list of detected vulnerabilities
+>>> Look at howto-1051-nikto-example.txt for an example.
+
+-> Analyze reports
+---
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          192.168.8.180
++ Target Hostname:    w10
++ Target Port:        80
++ Start Time:         2025-02-06 09:03:05 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.2 (Win32) OpenSSL/1.0.1c PHP/5.4.4
+...
+---
+
+-> Useful options (to be completed)
+-h <host>                : specify hostname.
+-p <port>                : specfy a port.
+-useproxy <proxy>:<port> : use a proxy. Example -useproxy http://127.0.0.1:3000.
+-...
+
+>@
+>@#############################################################################################
+>@#                                                                                           #
+>@#  [ Nikto ]                                                                                #
+>@#                                                                                           #
+>@# Nikto is a freeware command-line vulnerability scanner that scans web servers for         #
+>@# dangerous files/CGI, outdated server software, and other issues. It performs generic      #
+>@# and server type specific checks. It also captures and prints all cookies received.        #
+>@# The Nikto code itself is free software, but the data files it uses to drive the           #
+>@# program are not.                                                                          #
+>@#                                                                                           #
+>@# /!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\ #
+>@#                                                                                           #
+>@# See: howto-1051-nikto-example.txt                                                         #
+>@#                                                                                           #
+>@#-------------------------------------------------------------------------------------------#
+>@
+>@-> Obtain help
+>@$ nikto
+>@
+>@-> Simply scan a <host>
+>@$ nikto -h <host>
+>@>>> Scans the web server on <host>.
+>@>>> you will first have general information then a list of detected vulnerabilities
+>@>>> Look at howto-1051-nikto-example.txt for an example.
+>@
+>@-> Analyze reports
+>@---
+>@- Nikto v2.5.0
+>@---------------------------------------------------------------------------
+>@+ Target IP:          192.168.8.180
+>@+ Target Hostname:    w10
+>@+ Target Port:        80
+>@+ Start Time:         2025-02-06 09:03:05 (GMT-5)
+>@---------------------------------------------------------------------------
+>@+ Server: Apache/2.4.2 (Win32) OpenSSL/1.0.1c PHP/5.4.4
+>@...
+>@---
+>@
+>@-> Useful options (to be completed)
+>@-h <host>                : specify hostname.
+>@-p <port>                : specfy a port.
+>@-useproxy <proxy>:<port> : use a proxy. Example -useproxy http://127.0.0.1:3000.
+>@-...
+>@
+>@#############################################################################################
+>@

@@ -1,3 +1,17 @@
+[ Nikto ]                                                                                
+
+Nikto is a freeware command-line vulnerability scanner that scans web servers for         
+dangerous files/CGI, outdated server software, and other issues. It performs generic      
+and server type specific checks. It also captures and prints all cookies received.        
+The Nikto code itself is free software, but the data files it uses to drive the           
+program are not.                                                                          
+                                                                                         
+/!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\ 
+                                                                                          
+See: howto-1050-nikto-basics.txt                                                         
+                                                                                         
+
+
 - Nikto v2.5.0
 ---------------------------------------------------------------------------
 + Target IP:          192.168.8.225
@@ -50,7 +64,20 @@ How to process afterward:
 5. Search for the OSVDN given reference(s) (example OSVDB-12184).
 
 >@
->@######################################################################################################################################################################################
+>@###############################################################################################################################################################################
+>@#                                                                                                                                                                             # 
+>@# [ Nikto ]                                                                                                                                                                   #
+>@#                                                                                                                                                                             # 
+>@# Nikto is a freeware command-line vulnerability scanner that scans web servers for dangerous files/CGI, outdated server software, and other issues. It performs generic and  #
+>@# server type specific checks. It also captures and prints all cookies received. The Nikto code itself is free software, but the data files it uses to drive the program are  #
+>@# not.                                                                                                                                                                        #
+>@#                                                                                                                                                                             # 
+>@#                                          /!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\                                          #
+>@#                                                                                                                                                                             # 
+>@# See: howto-1050-nikto-basics.txt                                                                                                                                            #
+>@#                                                                                                                                                                             # 
+>@#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
 >@
 >@- Nikto v2.5.0
 >@---------------------------------------------------------------------------
@@ -104,5 +131,5 @@ How to process afterward:
 >@4. Search directly at https://www.cvedetails.com/cve/CVE-2010-0425/ for more informations.
 >@5. Search for the OSVDN given reference(s) (example OSVDB-12184).
 >@
->@######################################################################################################################################################################################
+>@###############################################################################################################################################################################
 >@
