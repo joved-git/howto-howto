@@ -32,7 +32,7 @@ $ zaproxy &
 6. Finally, go to the "Alerts" folder and analyze all results with "Request" bow and
    the result box that gives some advice.
 7. Click on "Report" then "Generate an HTML report" to generate a report. You will find
-   a summary then explanation by level just bellow.
+   a summary then explanation by level just below.
 
 -> Example:
 Try this URL on metasploitable: http://<ms IP>/mutillidae/?page=%2Fetc%2Fpasswd
@@ -80,7 +80,7 @@ Try this URL on metasploitable: http://<ms IP>/mutillidae/?page=%2Fetc%2Fpasswd
 >@6. Finally, go to the "Alerts" folder and analyze all results with "Request" bow and
 >@   the result box that gives some advice.
 >@7. Click on "Report" then "Generate an HTML report" to generate a report. YOu will find
->@   a summary then explanation by level just bellow.
+>@   a summary then explanation by level just below.
 >@
 >@-> Example:
 >@Try this URL on metasploitable: http://<ms IP>/mutillidae/?page=%2Fetc%2Fpasswd

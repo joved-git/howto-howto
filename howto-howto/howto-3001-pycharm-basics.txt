@@ -1,0 +1,113 @@
+PyCharm
+
+PyCharm is an integrated development environment (IDE) used for programming in Python. 
+It provides code analysis, a graphical debugger, an integrated unit tester, integration 
+with version control systems, and supports web development with Django. PyCharm is 
+developed by the Czech company JetBrains and built on their IntelliJ platform.
+
+See: https://www.jetbrains.com/fr-fr/pycharm/
+
+-> Install PyCharm
+Go to https://www.jetbrains.com/fr-fr/pycharm/
+Select the Community version (free) and donwload it.
+Extract the file in ~/Downloads (right-click then extract).
+Install the soft:
+$ sudo mkdir /opt/Pycharm
+$ suco mv <pycharm> /opt/Pycharm
+
+-> First launching
+$ cd /opt/Pycharm/bin
+$ ./pycharm.sh
+-Then select "Do not import", accept terms, "Don't send statistics", choose the black theme,
+  Click Next, ignore "Create Launcher Script" (Next), ignore plugins (Next) "Start using".
+-Create a new project. Note the place: /home/kali/PycharmProjects/
+-Name the project HelloWorld and click "Create".
+-Check that Python 3 is selected: go to File/Settings/Project:HelloWorld/Project Interpreter
+  Chech the correct version of Ptthon.
+
+-Create a Python hello file
+On the left, right-click on HelloWorld then "New/Python file" and named it "hello.py".
+Enter the code:
+---
+#!/usr/bin/env python3
+#
+
+print("Hello World !")
+---
+
+In the main menu, select and click "Run hello.py".
+>>> You should see the hello message below.
+
+-> Execute the file in command-line
+Go to ~/PycharmProjects/PythonProject/HelloWorld
+$ chmod +x hello.py
+$./hello.py
+>>> That works !
+
+-> Duplicate a line
+Click on a line then type "Ctrl-D" !!
+
+-> Close the project
+Go to "File/Close Project"
+
+-> Create shortcut
+Go to "File/Settings/Keymap" and define what you want.
+Example: in "Editor action", search "font", then right-click "Increase Font Size" to add the
+         "Mouse shortcut" "Ctrl+Wheel up" (execute it).
+
+>@
+>@#################################################################################################
+>@#                                                                                               #
+>@# [ PyCharm ]                                                                                   #
+>@#                                                                                               #
+>@# PyCharm is an integrated development environment (IDE) used for programming in Python.        #
+>@# It provides code analysis, a graphical debugger, an integrated unit tester, integration       #
+>@# with version control systems, and supports web development with Django. PyCharm is            #
+>@# developed by the Czech company JetBrains and built on their IntelliJ platform.                #
+>@#                                                                                               #
+>@# See: https://www.jetbrains.com/fr-fr/pycharm/                                                 #
+>@#                                                                                               #
+>@#-----------------------------------------------------------------------------------------------#
+>@
+>@-> First launching
+>@$ cd /opt/Pycharm/bin
+>@$ ./pycharm.sh
+>@-Then select "Do not import", accept terms, "Don't send statistics", choose the black theme,
+>@  Click Next, ignore "Create Launcher Script" (Next), ignore plugins (Next) "Start using".
+>@-Create a new project. Note the place: /home/kali/PycharmProjects/
+>@-Name the project HelloWorld and click "Create".
+>@-Check that Python 3 is selected: go to File/Settings/Project:HelloWorld/Project Interpreter
+>@  Chech the correct version of Ptthon.
+>@
+>@-Create a Python hello file
+>@On the left, right-click on HelloWorld then "New/Python file" and named it "hello.py".
+>@Enter the code:
+>@---
+>@#!/usr/bin/env python3
+>@#
+>@
+>@print("Hello World !")
+>@---
+>@
+>@In the main menu, select and click "Run hello.py".
+>@>>> You should see the hello message below.
+>@
+>@-> Execute the file in command-line
+>@Go to ~/PycharmProjects/PythonProject/HelloWorld
+>@$ chmod +x hello.py
+>@$./hello.py
+>@>>> That works !
+>@
+>@-> Duplicate a line
+>@Click on a line then type "Ctrl-D" !!
+>@
+>@-> Close the project
+>@Go to "File/Close Project"
+>@
+>@-> Create shortcut
+>@Go to "File/Settings/Keymap" and define what you want.
+>@  Example: in "Editor action", search "font", then right-click "Increase Font Size" to add the
+>@           "Mouse shortcut" "Ctrl+Wheel up" (execute it).
+>@
+>@#################################################################################################
+>@
