@@ -1,0 +1,136 @@
+PEP 8 | Python's PEP 8
+
+Programming style, also known as coding style, refers to the conventions 
+and patterns used in writing source code, resulting in a consistent and 
+readable codebase. These conventions often encompass aspects such as 
+indentation, naming conventions, capitalization, and comments. Consistent 
+programming style is generally considered beneficial for code readability 
+and maintainability, particularly in collaborative environments. 
+
+Python's PEP 8 is a widely recognized style guide that outlines best 
+practices for writing Python code. In contrast, languages like C or Java 
+may have industry standards that are either formally documented or adhered 
+to by convention. 
+
+See: https://www.pyhton.org/dev/peps/pep-0008/
+See: PDF/pep8.pdf
+
+Some general recommendations:
+
+-Use 4 spaces for indentation.
+-Prefere Space instead of tab. PyCharm converts Tab in 4 spaces.
+-Limit a line at 79 characters max.
+-By default, always use UTF-8.
+-Respect import synctax.
+  ---
+  # Correct
+  import os
+  import sys
+
+  # Wrong
+  import os, sys
+  ---
+-Avoid extraneous whitespaces.
+  ---
+  # Correct
+  spam(ham[1], {egg: 2])
+  foo = (0,)
+  dct['key'] = lst[index]
+  x = 1
+  long_var = 2
+  i = i +1
+  x = 2*x +1
+  c = (a+b) * (a-b)
+
+  # Wrong
+  spam( ham[ 1 ], { egg: 2] )
+  foo = (0, )
+  dct[ 'key' ] = lst[ index ]
+  x        = 1
+  long_var = 2
+  i=i+1
+  x = 2 * x + 1
+  c = (a + b) * (a - b)
+  ---
+-You can use comment blocks
+  ---
+  """ All that is commented
+  ALso that
+  And that
+  """
+-Respect class name: MyClass
+-Respect function name: a_special_function()
+-Constant is written in uppercase: CONSTANT
+
+>@
+>@###############################################################################
+>@#                                                                             #
+>@# [ PEP 8 | Python's PEP 8 ]                                                  #
+>@#                                                                             #
+>@# Programming style, also known as coding style, refers to the conventions    #
+>@# and patterns used in writing source code, resulting in a consistent and     #
+>@# readable codebase. These conventions often encompass aspects such as        #
+>@# indentation, naming conventions, capitalization, and comments. Consistent   #
+>@# programming style is generally considered beneficial for code readability   #
+>@# and maintainability, particularly in collaborative environments.            #
+>@#                                                                             #
+>@# Python's PEP 8 is a widely recognized style guide that outlines best        #
+>@# practices for writing Python code. In contrast, languages like C or Jav a   #
+>@# may have industry standards that are either formally documented or adhered  #
+>@# to by convention.                                                           #
+>@#                                                                             #
+>@# See: https://www.pyhton.org/dev/peps/pep-0008/                              #
+>@# See: PDF/pep8.pdf                                                           #
+>@#                                                                             #
+>@#-----------------------------------------------------------------------------#
+>@
+>@Some general recommendations:
+>@
+>@-Use 4 spaces for indentation.
+>@-Prefere Space instead of tab. PyCharm converts Tab in 4 spaces.
+>@-Limit a line at 79 characters max.
+>@-By default, always use UTF-8.
+>@-Respect import synctax.
+>@  ---
+>@  # Correct
+>@  import os
+>@  import sys
+>@
+>@  # Wrong
+>@  import os, sys
+>@  ---
+>@-Avoid extraneous whitespaces.
+>@  ---
+>@  # Correct
+>@  spam(ham[1], {egg: 2])
+>@  foo = (0,)
+>@  dct['key'] = lst[index]
+>@  x = 1
+>@  long_var = 2
+>@  i = i +1
+>@  x = 2*x +1
+>@  c = (a+b) * (a-b)
+>@
+>@  # Wrong
+>@  spam( ham[ 1 ], { egg: 2] )
+>@  foo = (0, )
+>@  dct[ 'key' ] = lst[ index ]
+>@  x        = 1
+>@  long_var = 2
+>@  i=i+1
+>@  x = 2 * x + 1
+>@  c = (a + b) * (a - b)
+>@  ---
+>@-You can use comment blocks
+>@  ---
+>@  """ All that is commented
+>@  ALso that
+>@  And that
+>@  """ 
+>@  ---
+>@-Respect class name: MyClass
+>@-Respect function name: a_special_function()
+>@-Constant is written in uppercase: CONSTANT
+>@
+>@###############################################################################
+>@
