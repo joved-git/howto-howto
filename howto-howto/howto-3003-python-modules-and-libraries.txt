@@ -1,0 +1,70 @@
+Pyhton's modules and libraries
+
+In the Python programming language, module is a simple file that contains collections 
+of global variables and functions with a. py extension file. It is an executable file 
+that can be imported into another Python program.
+
+In Python, a library therefore designates a software set of modules (constants, 
+functions, classes) adding extended possibilities to the language. This function allows 
+the developer to share reusable code in their community.
+
+The library brings together functionalities that can be reused several times to develop 
+a project in the Python language.
+
+See: https://docs.python.org/3/py-modindex.html
+
+-> Presentation of https://docs.python.org/3/py-modindex.html
+Search for a module and explore it.
+You will see packets with related modules:
+  Example: urllib	
+               urllib.error	Exception classes raised by urllib.request.
+               urllib.parse	Parse URLs into or assemble them from components.
+               urllib.request	Extensible library for opening URLs.
+               urllib.response	Response classes used by urllib.
+
+-> Use pip to install external modules
+Under the name of your Project, you should find "External libraries". Click to open
+  and find "Site-packages" then "pip". 
+
+Under Pycharm, open the Terminal then type these commands:
+$ pip install <module>
+$ pip uninstall <module>
+>>> the <module> could be import now in your Python code.
+Example:
+$ pip install python-pdf then return to "External libraries / Site-packages".
+>>> you should see the python-pdf lib as "pydf".
+
+>@
+>@############################################################################################
+>@#                                                                                          #
+>@# [ Pyhton's modules and libraries ]                                                       #
+>@#                                                                                          #
+>@# In the Python programming language, module is a simple file that contains collections    #
+>@# of global variables and functions with a. py extension file. It is an executable file    #
+>@# that can be imported into another Python program.                                        #
+>@#                                                                                          #
+>@# In Python, a library therefore designates a software set of modules (constants,          #
+>@# functions, classes) adding extended possibilities to the language. This function allows  #
+>@# the developer to share reusable code in their community.                                 #
+>@#                                                                                          #
+>@# The library brings together functionalities that can be reused several times to develop  #
+>@# a project in the Python language.                                                        #
+>@#                                                                                          #
+>@# See: https://docs.python.org/3/py-modindex.html                                          #
+>@#                                                                                          #
+>@#------------------------------------------------------------------------------------------#
+>@
+>@-> Use pip to install external modules
+>@Under the name of your Project, you should find "External libraries". Click to open
+>@  and find "Site-packages" then "pip". 
+>@
+>@Under Pycharm, open the Terminal then type these commands:
+>@$ pip install <module>
+>@$ pip uninstall <module>
+>@>>> the <module> could be import now in your Python code.
+>@Example:
+>@$ pip install python-pdf then return to "External libraries / Site-packages".
+>@>>> you should see the python-pdf lib as "pydf".
+>@
+>@############################################################################################
+>@
