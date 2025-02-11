@@ -1,0 +1,121 @@
+Regular expressions | Regex | RE
+
+In computing, a regular expression or rational expression1 or normal expressionnote 1 or pattern 
+is a character string which describes, according to a precise syntax, a set of possible character 
+strings. Regular expressions are also called regex (a portmanteau formed from the English regular 
+epression). Rational expressions come from the mathematical theories of formal languages of the 
+1940s. Their ability to concisely describe regular sets explains why they were found in several 
+scientific fields in the post-war years and justifies their adoption in computer science. Regular 
+expressions are used today to program software with functionalities for reading, controlling, 
+modifying, and analyzing texts as well as in the manipulation of formal languages such as computer 
+languages.
+
+See: https://docs.python.org/3/library/re.html
+See: https://docs.python.org/fr/3.6/library/re.html#re.regex.match
+See: https://regex101.com/
+
+-> Some characters:
+. (dot): any chatacter except a NEWLINE.
+^ (caret): start of string.
+* : from 0 to any of preceding RE. 'ab*' matches 'a', 'ab', 'abbbbbbbb' and so on.
++ : from 1 to any of preceding RE. 'ab+' matches 'ab', 'abb', 'abbbbbbbb' and so on.
+? : from 0 to 1 of preceding RE. 'ab?' matches 'a' and 'ab'only.
+*?, +?, ?? : same as *, + and ? but with minimal matching.
+    Example: RE <.*> confronted to '<a> b <c>' gives '<a> b <c>'.
+             RE <.*?> confronted to '<a> b <c>' gives '<a>'.
+*+, ++, ?+ : same as *, + and ? but with no backtrack.
+    Example: RE <a*+a> confronted to 'aaaa' gives nothing.
+             RE <a*+b>> confronted to 'bab' gives 'b' and 'ab'.
+{m} : the exact number of previous RE. Example: a{3} will match exactly 'aaa'.
+{m,n} : from m to n number of previous RE. 
+    Example: RE a{3,5} confronted to 'aaaaaa' gives: 'aaa', 'aaaa' and 'aaaaa'.
+{m,n}? : from m to n number of previous RE (but minimalist). 
+    Example: RE ab{3,5}? contronted to 'abbbaaabbb' matches 2 times 'abbb' then 'abbb' again.
+
+{m,n}+ : from m to n number of previous RE (with no backtrack). 
+\ : used to escape a special char like '*'.
+    Example: RE a\*b* confronted to 'aab*ba*bbb' gives only a*bbb (at the end).
+[] : used to give range of chars.
+    Example: RE [a,b,c] confronted to 'abc' gives 'a', 'b' or 'c'.
+             RE [a-z]{2} confronted to 'azerty' gives 'az', 'er' and 'ty' only.
+             RE ^[a-z]{2} confronted to 'azerty' gives 'az' only.
+             RE [0-5][0-9] gives digits from '00' to '59' (exactly 2 digits, '0' does not match.
+             RE [0-5][0-9]? gives digits from '0' to '59' (one or 2 digits, '0' matches.
+             RE [0-9A-Fa-f] gives a 1-digit hexadecimal number. '0' or 'F' matches but not '5F'.
+             RE [0-9A-Fa-f]{2} gives a 2-digit hexadecimal number. '0F' matches but not 'F'.
+| : use to make a or between 2 REs.
+(...) : used to add the notion of group.
+    Example: RE ab.ab confronted to 'abcab' gives 'abcab' only.
+    Example: RE (ab).(ab) confronted to 'abcab' gives 'abcab', 'ab' (first and 'ab' (second).
+\d : use to represent one digit.
+\S : Matches any character which is not a whitespace character.
+\s : Matches Unicode whitespace characters.
+\A : Matches only at the start of the string.
+\Z : Matches only at the end of the string.
+
+And so many more, see links above.
+
+>@
+>@#######################################################################################################
+>@#                                                                                                     #
+>@# [ Regular expressions | Regex | RE ]                                                                #
+>@#                                                                                                     #
+>@# In computing, a regular expression or rational expression1 or normal expressionnote 1 or pattern    #
+>@# is a character string which describes, according to a precise syntax, a set of possible character   #
+>@# strings. Regular expressions are also called regex (a portmanteau formed from the English regular   #
+>@# epression). Rational expressions come from the mathematical theories of formal languages of the     #
+>@# 1940s. Their ability to concisely describe regular sets explains why they were found in several     #
+>@# scientific fields in the post-war years and justifies their adoption in computer science. Regular   #
+>@# expressions are used today to program software with functionalities for reading, controlling,       #
+>@# modifying, and analyzing texts as well as in the manipulation of formal languages such as computer  # 
+>@# languages.                                                                                          #
+>@#                                                                                                     #
+>@# See: https://docs.python.org/3/library/re.html                                                      #
+>@# See: https://docs.python.org/fr/3.6/library/re.html#re.regex.match                                  #
+>@# See: https://regex101.com/                                                                          #
+>@#                                                                                                     #
+>@#-----------------------------------------------------------------------------------------------------#
+>@
+>@-> Some characters:
+>@. (dot): any chatacter except a NEWLINE.
+>@^ (caret): start of string.
+>@* : from 0 to any of preceding RE. 'ab*' matches 'a', 'ab', 'abbbbbbbb' and so on.
+>@+ : from 1 to any of preceding RE. 'ab+' matches 'ab', 'abb', 'abbbbbbbb' and so on.
+>@? : from 0 to 1 of preceding RE. 'ab?' matches 'a' and 'ab'only.
+>@*?, +?, ?? : same as *, + and ? but with minimal matching.
+>@    Example: RE <.*> confronted to '<a> b <c>' gives '<a> b <c>'.
+>@             RE <.*?> confronted to '<a> b <c>' gives '<a>'.
+>@*+, ++, ?+ : same as *, + and ? but with no backtrack.
+>@    Example: RE <a*+a> confronted to 'aaaa' gives nothing.
+>@             RE <a*+b>> confronted to 'bab' gives 'b' and 'ab'.
+>@{m} : the exact number of previous RE. Example: a{3} will match exactly 'aaa'.
+>@{m,n} : from m to n number of previous RE. 
+>@    Example: RE a{3,5} confronted to 'aaaaaa' gives: 'aaa', 'aaaa' and 'aaaaa'.
+>@{m,n}? : from m to n number of previous RE (but minimalist). 
+>@    Example: RE ab{3,5}? contronted to 'abbbaaabbb' matches 2 times 'abbb' then 'abbb' again.
+>@
+>@{m,n}+ : from m to n number of previous RE (with no backtrack). 
+>@\ : used to escape a special char like '*'.
+>@    Example: RE a\*b* confronted to 'aab*ba*bbb' gives only a*bbb (at the end).
+>@[] : used to give range of chars.
+>@    Example: RE [a,b,c] confronted to 'abc' gives 'a', 'b' or 'c'.
+>@             RE [a-z]{2} confronted to 'azerty' gives 'az', 'er' and 'ty' only.
+>@             RE ^[a-z]{2} confronted to 'azerty' gives 'az' only.
+>@             RE [0-5][0-9] gives digits from '00' to '59' (exactly 2 digits, '0' does not match.
+>@             RE [0-5][0-9]? gives digits from '0' to '59' (one or 2 digits, '0' matches.
+>@             RE [0-9A-Fa-f] gives a 1-digit hexadecimal number. '0' or 'F' matches but not '5F'.
+>@             RE [0-9A-Fa-f]{2} gives a 2-digit hexadecimal number. '0F' matches but not 'F'.
+>@| : use to make a or between 2 REs.
+>@(...) : used to add the notion of group.
+>@    Example: RE ab.ab confronted to 'abcab' gives 'abcab' only.
+>@    Example: RE (ab).(ab) confronted to 'abcab' gives 'abcab', 'ab' (first and 'ab' (second).
+>@\d : use to represent one digit.
+>@\S : Matches any character which is not a whitespace character.
+>@\s : Matches Unicode whitespace characters.
+>@\A : Matches only at the start of the string.
+>@\Z : Matches only at the end of the string.
+>@
+>@And so many more, see links above.
+>@
+>@#######################################################################################################
+>@
