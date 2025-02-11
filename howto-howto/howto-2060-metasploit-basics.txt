@@ -22,7 +22,7 @@ Interfaces:
   
 On the disk:
 -> Some directory and files:
-  Find Metasploit here: /usr/share/metasploit-framework/
+  Locate Metasploit here: /usr/share/metasploit-framework/
   ./config : Framework configuration.
   ./data: data used by exploits.
   ./data/eicar.com: standard file for testing antivirus.
@@ -57,21 +57,22 @@ msf6 exploit(<name without 'exploit'>)> show options
 -> Quit the software.
 $ msf6> quit
 
->@############################################################################################################################
->@#                                                                                                                          #
->@# [ Metasploit ]                                                                                                           #
->@#                                                                                                                          #
->@# Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.                   #
->@#                                                                                                                          #
->@# See official site: https://metaspoit.com / https://metasploit.help.rapid7.com/                                           #
->@# See documentation: https://docs.metasploit.com/                                                                          #
->@#                                                                                                                          #
->@----------------------------------------------------------------------------------------------------------------------------
+>@#############################################################################################################
+>@#                                                                                                           #
+>@# [ Metasploit ]                                                                                            #
+>@#                                                                                                           #
+>@# Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.    #
+>@#                                                                                                           #
+>@# See official site: https://metaspoit.com / https://metasploit.help.rapid7.com/                            #
+>@# See documentation: https://docs.metasploit.com/                                                           #
+>@#                                                                                                           #
+>@------------------------------------------------------------------------------------------------------------#
 >@
 >@Basics:
 >@-> Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.
 >@-> It is declined in many version, hence the famous free Metasploit Framework version.
->@-> It uses some exploits (pieces of code) use to gain access and payloads (pieces of code) launched after the intrusion.
+>@-> It uses some exploits (pieces of code) use to gain access and payloads (pieces of code) launched after 
+>@     the intrusion.
 >@To summarize:
 >@  exploits = codes used to gain access.
 >@  paylaods = codes used to perform some operations (example: create backdoor, clean footsteps, ...).
@@ -92,7 +93,7 @@ $ msf6> quit
 >@  
 >@On the disk:
 >@-> Some directory and files:
->@  Find Metasploit here: /usr/share/metasploit-framework/
+>@  Locate Metasploit here: /usr/share/metasploit-framework/
 >@  ./config : Framework configuration.
 >@  ./data: data used by exploits.
 >@  ./data/eicar.com: standard file for testing antivirus.
@@ -127,5 +128,5 @@ $ msf6> quit
 >@-> Quit the software.
 >@$ msf6> quit
 >@
->@############################################################################################################################
+>@#############################################################################################################
 >@

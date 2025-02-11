@@ -55,6 +55,21 @@ Go to "File/Settings/Keymap" and define what you want.
 Example: in "Editor action", search "font", then right-click "Increase Font Size" to add the
          "Mouse shortcut" "Ctrl+Wheel up" (execute it).
 
+-> How to debug code
+Click on the little green Bug to launche the debug manu.
+On the top-right, find the "Current file" menu. Open it and llocate you executable. Click on "..."
+   (More actions), then copy command-line arguments to "Parameters" (just under "Script").
+
+Place a Break point by clicking on the code, just in the right of a line.
+>>> a red dot should appear.
+Click on |> to launch the code.
+>>> the code should stop on the Break point.
+
+Continue with: "Step over": do not enter the code.
+               "Step into": enter into the code and/or fucntion.
+               "Step into my code": only go into my code.
+               "Steo out": go out a "Step into ...".
+
 >@
 >@#################################################################################################
 >@#                                                                                               #
@@ -108,6 +123,21 @@ Example: in "Editor action", search "font", then right-click "Increase Font Size
 >@Go to "File/Settings/Keymap" and define what you want.
 >@  Example: in "Editor action", search "font", then right-click "Increase Font Size" to add the
 >@           "Mouse shortcut" "Ctrl+Wheel up" (execute it).
+>@
+>@-> How to debug code
+>@Click on the little green Bug to launche the debug manu.
+>@On the top-right, find the "Current file" menu. Open it and llocate you executable. Click on "..."
+>@   (More actions), then copy command-line arguments to "Parameters" (just under "Script").
+>@
+>@Place a Break point by clicking on the code, just in the right of a line.
+>@>>> a red dot should appear.
+>@Click on |> to launch the code.
+>@>>> the code should stop on the Break point.
+>@
+>@Continue with: "Step over": do not enter the code.
+>@               "Step into": enter into the code and/or fucntion.
+>@               "Step into my code": only go into my code.
+>@               "Steo out": go out a "Step into ...".
 >@
 >@#################################################################################################
 >@
