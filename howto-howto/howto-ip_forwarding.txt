@@ -1,8 +1,0 @@
-
-# echo "1" > /proc/sys/net/ipv4/ip_forward
-# echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
->>> on active l'ip forwarding (ipv4 et ipv6).
-
-# echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
->>> on empèche certaines redirections icmp.
-
