@@ -36,7 +36,9 @@ If you want to find a specific subject, just ask to ***Kite***:
 After that, just ask to ***Kite*** to see the appropriate file:
 
 > $ kite 0020
+
 or
+
 >$ kite ufw
 
 You should see very intersting information, links and examples.
