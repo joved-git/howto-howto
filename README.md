@@ -20,7 +20,7 @@ $ git clone git@github.com:joved-git/howto-howto.git
 Add ...
 
 ```
-Add PATH=$PATH:'~/Documents/Script'
+PATH=$PATH:'~/Documents/Script'
 ```
 
 ... at the end of your ~/.cshrc or ~/.zshrc.
