@@ -1,11 +1,13 @@
 # Howto-Howto or Kite
 
-This repository contains many resources and mini-tutorial that could help you finding useless information during your work.
+This repository contains many resources and mini-tutorials that could help you finding useful information during your work.
+
+Anytime, anywhere and easly.
 
 
 # Installation
 
-Very simple. Just clone the repo, then place a PATH to the Script directory into your .cshrc or .zshrc.
+Very simple. Just clone the repo then add to your PATH the directory '<where you cloned>/Script' into your .cshrc or .zshrc.
 
 That's all !
 
@@ -14,17 +16,17 @@ That's all !
 
 If all is OK with your PATH, you can try to launch the 'list' command:
 
-$ kite list
+> $ kite list
 
-You should see the content of all txt files.
+You should see a list of all txt files.
 
-If you want to see if a subject exists, ask kite:
+If you want to find a specific subject, just ask to Kite:
 
-$ kite nmap
+> $ kite nmap
 
-After that, just type the apropriate file:
+After that, just ask Kite to see the appropriate file:
 
-$ nmap 0020
+> $ nmap 0020
 
 You should see very intersting information, links and examples.
 
