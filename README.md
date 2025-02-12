@@ -7,7 +7,7 @@ Anytime, anywhere and easily.
 
 # Installation
 
-Very simple. Just clone the repo then add to your PATH the Script directory (into .cshrc or .zshrc.).
+Very simple. Just clone the repo then add the _Script_ directory to your ***PATH*** (see below).
 
 ```
 $ cd
