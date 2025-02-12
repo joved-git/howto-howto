@@ -10,7 +10,9 @@ Anytime, anywhere and easily.
 Very simple. Just clone the repo then add to your PATH the Script directory (into .cshrc or .zshrc.).
 
 >$ cd
+
 >$ cd Documents
+
 >$ git clone git@github.com:joved-git/howto-howto.git
 
 Add ***PATH=$PATH:'~/Documents/Script'*** at the end of your ~/.cshrc or ~/.zshrc.
