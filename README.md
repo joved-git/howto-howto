@@ -1,34 +1,42 @@
 # Howto-Howto or Kite
 
-This repository contains many resources and mini-tutorials that could help you finding useful information during your work.
+This repository contains many resources and mini-tutorials that could help you finding useful information during your daily work.
 
-Anytime, anywhere and easly.
+Anytime, anywhere and easily.
 
 
 # Installation
 
-Very simple. Just clone the repo then add to your PATH the directory '<where you cloned>/Script' into your .cshrc or .zshrc.
+Very simple. Just clone the repo then add to your PATH the Script directory (into .cshrc or .zshrc.).
+
+>$ cd
+>$ cd Documents
+>$ git clone git@github.com:joved-git/howto-howto.git
+
+Add ***PATH=$PATH:'~/Documents/Script'*** at the end of your ~/.cshrc or ~/.zshrc.
 
 That's all !
 
 
 # How to use it
 
-If all is OK with your PATH, you can try to launch the 'list' command:
+If all is OK with your PATH, you can try to the 'list' command:
 
 > $ kite list
 
-You should see a list of all txt files.
+You should see a list of the content of Kite.
+
 
 If you want to find a specific subject, just ask to Kite:
 
 > $ kite nmap
 
-After that, just ask Kite to see the appropriate file:
+After that, just ask to Kite to see the appropriate file:
 
 > $ nmap 0020
 
 You should see very intersting information, links and examples.
+
 
 Try all, create you own, all is possible.
 
