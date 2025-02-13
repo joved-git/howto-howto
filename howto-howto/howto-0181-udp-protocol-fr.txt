@@ -1,0 +1,100 @@
+UDP | User Datagram Protocol
+
+Dans les réseaux informatiques, le protocole UDP (User Datagram Protocol) est l'un des principaux protocoles de communication de la 
+suite de protocoles Internet utilisée pour envoyer des messages (transportés sous forme de datagrammes en paquets) à d'autres hôtes 
+sur un réseau IP (Internet Protocol). Au sein d'un réseau IP, UDP ne nécessite pas de communication préalable pour établir des canaux 
+de communication ou des chemins de données.
+
+UDP est un protocole sans connexion, ce qui signifie que les messages sont envoyés sans négocier de connexion et qu'UDP ne garde 
+aucune trace de ce qu'il a envoyé. UDP fournit des sommes de contrôle pour l'intégrité des données et des numéros de port pour 
+adresser différentes fonctions à la source et à la destination du datagramme. Il n'a pas de dialogue d'établissement de liaison et 
+expose ainsi le programme de l'utilisateur à tout manque de fiabilité du réseau sous-jacent ; il n'y a aucune garantie de livraison, 
+de commande ou de protection contre les doubles. Si des fonctionnalités de correction d'erreurs sont nécessaires au niveau de 
+l'interface réseau, une application peut à la place utiliser le protocole de contrôle de transmission (TCP) ou le protocole de 
+transmission de contrôle de flux (SCTP) qui sont conçu à cet effet.
+
+* UDP fontionne en mode non-connecté.
+
+* UDP ne garantit pas l'acheminement et le bon ordre des datagrammes.
+
+* UDP n'utilise pas de handshake (poignée de mains) contrairement à TCP.
+   
+
+                         ________________________________________________________________________________________________________
+                        |                                                   |                                                    |
+ Couche 4 / Transport   |                   UDP Source Port                 |                UDP Destination port                |
+                        |                      16  bits                     |                      16 bits                       |
+                        |___________________________________________________|____________________________________________________|
+                        |                                                   |                                                    |
+                        |                   Message length                  |                      Checksum                      |
+                        |                      16  bits                     |                      16 bits                       |
+                        |___________________________________________________|____________________________________________________|
+                        |                                                                                                        |
+                        |                                                  Data                                                  |
+                        |                                                [ ... ]                                                 |
+                        |________________________________________________________________________________________________________|
+                        
+
+With:
+
+   Source port: le port source de la Source               |   Destination port: le port de la Destination
+                                                          |
+   Message length: longueur totale (entete + données)     |   Checksum: somme de contrôle
+                                                          |
+   Data: Données brutes                                   |
+
+>@
+>@##########################################################################################################################################
+>@#                                                                                                                                        # 
+>@# [ UDP | User Datagram Protocol ]                                                                                                       #
+>@#                                                                                                                                        # 
+>@# Dans les réseaux informatiques, le protocole UDP (User Datagram Protocol) est l'un des principaux protocoles de communication de la    #
+>@# suite de protocoles Internet utilisée pour envoyer des messages (transportés sous forme de datagrammes en paquets) à d'autres hôtes    #
+>@# sur un réseau IP (Internet Protocol). Au sein d'un réseau IP, UDP ne nécessite pas de communication préalable pour établir des canaux  #
+>@# de communication ou des chemins de données.                                                                                            #
+>@#                                                                                                                                        # 
+>@# UDP est un protocole sans connexion, ce qui signifie que les messages sont envoyés sans négocier de connexion et qu'UDP ne garde       #
+>@# aucune trace de ce qu'il a envoyé. UDP fournit des sommes de contrôle pour l'intégrité des données et des numéros de port pour         #
+>@# adresser différentes fonctions à la source et à la destination du datagramme. Il n'a pas de dialogue d'établissement de liaison et     #
+>@# expose ainsi le programme de l'utilisateur à tout manque de fiabilité du réseau sous-jacent ; il n'y a aucune garantie de livraison,   #
+>@# de commande ou de protection contre les doubles. Si des fonctionnalités de correction d'erreurs sont nécessaires au niveau de          #
+>@# l'interface réseau, une application peut à la place utiliser le protocole de contrôle de transmission (TCP) ou le protocole de         #
+>@# transmission de contrôle de flux (SCTP) qui sont conçu à cet effet.                                                                    #  
+>@#                                                                                                                                        # 
+>@# See: howto-0011-osi-model-fr.txt                                                                                                       #
+>@#                                                                                                                                        # 
+>@#----------------------------------------------------------------------------------------------------------------------------------------# 
+>@
+>@* UDP fonctionne en mode non-connecté.
+>@
+>@* UDP ne garantit pas l'acheminement et le bon ordre des datagrammes.
+>@
+>@* UDP n'utilise pas de handshake (poignée de mains) contrairement à TCP.
+>@   
+>@
+>@                         ________________________________________________________________________________________________________
+>@                        |                                                   |                                                    |
+>@ Couche 4 / Transport   |                   UDP Source Port                 |                UDP Destination port                |
+>@                        |                      16  bits                     |                      16 bits                       |
+>@                        |___________________________________________________|____________________________________________________|
+>@                        |                                                   |                                                    |
+>@                        |                   Message length                  |                      Checksum                      |
+>@                        |                      16  bits                     |                      16 bits                       |
+>@                        |___________________________________________________|____________________________________________________|
+>@                        |                                                                                                        |
+>@                        |                                                  Data                                                  |
+>@                        |                                                [ ... ]                                                 |
+>@                        |________________________________________________________________________________________________________|
+>@                        
+>@
+>@With:
+>@
+>@   Source port: le port source de la Source               |   Destination port: le port de la Destination
+>@                                                          |
+>@   Message length: longueur totale (entete + données)     |   Checksum: somme de contrôle
+>@                                                          |
+>@   Data: Données brutes                                   |
+>@
+>@
+>@##########################################################################################################################################
+>@

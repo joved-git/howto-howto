@@ -1,0 +1,95 @@
+UDP | User Datagram Protocol
+
+In computer networking, the User Datagram Protocol (UDP) is one of the core communication protocols of the Internet protocol suite used 
+to send messages (transported as datagrams in packets) to other hosts on an Internet Protocol (IP) network. Within an IP network, UDP 
+does not require prior communication to set up communication channels or data paths.
+
+UDP is a connectionless protocol meaning that messages are sent without negotiating a connection and that UDP does not keep track of what 
+it has sent. UDP provides checksums for data integrity, and port numbers for addressing different functions at the source and destination 
+of the datagram. It has no handshaking dialogues and thus exposes the user's program to any unreliability of the underlying network; 
+there is no guarantee of delivery, ordering, or duplicate protection. If error-correction facilities are needed at the network interface 
+level, an application may instead use Transmission Control Protocol (TCP) or Stream Control Transmission Protocol (SCTP) which are 
+designed for this purpose. 
+
+* UDP works in connectonless mode.
+
+* UDP does not guarantee the delivery and ordering of datagrams.
+
+* UDP does not use handshake like TCP.
+   
+
+                         ________________________________________________________________________________________________________
+                        |                                                   |                                                    |
+ Layer 4 / Transport    |                   UDP Source Port                 |                UDP Destination port                |
+                        |                      16  bits                     |                      16 bits                       |
+                        |___________________________________________________|____________________________________________________|
+                        |                                                   |                                                    |
+                        |                   Message length                  |                      Checksum                      |
+                        |                      16  bits                     |                      16 bits                       |
+                        |___________________________________________________|____________________________________________________|
+                        |                                                                                                        |
+                        |                                                  Data                                                  |
+                        |                                                [ ... ]                                                 |
+                        |________________________________________________________________________________________________________|
+                        
+
+With:
+
+   Source port: the port in the Source server             |   Destination port: the port in the Destination server
+                                                          |
+   Message length: total length (header + data)           |   Checksum: control checksum
+                                                          |
+   Data: raw data                                         |
+
+>@
+>@##########################################################################################################################################
+>@#                                                                                                                                        # 
+>@# [ UDP | User Datagram Protocol ]                                                                                                       #
+>@#                                                                                                                                        # 
+>@# In computer networking, the User Datagram Protocol (UDP) is one of the core communication protocols of the Internet protocol suite     #
+>@# used to send messages (transported as datagrams in packets) to other hosts on an Internet Protocol (IP) network. Within an IP network, #
+>@# UDP does not require prior communication to set up communication channels or data paths.                                               #
+>@#                                                                                                                                        # 
+>@# UDP is a connectionless protocol meaning that messages are sent without negotiating a connection and that UDP does not keep track of   #
+>@# what it has sent. UDP provides checksums for data integrity, and port numbers for addressing different functions at the source and     #
+>@# destination of the datagram. It has no handshaking dialogues and thus exposes the user's program to any unreliability of the           #
+>@# underlying network; there is no guarantee of delivery, ordering, or duplicate protection. If error-correction facilities are needed    #
+>@# at the network interface level, an application may instead use Transmission Control Protocol (TCP) or Stream Control Transmission      #
+>@# Protocol (SCTP) which are designed for this purpose.                                                                                   #
+>@#                                                                                                                                        # 
+>@# See: howto-0010-osi-model.txt                                                                                                          #
+>@#                                                                                                                                        # 
+>@#----------------------------------------------------------------------------------------------------------------------------------------# 
+>@
+>@* UDP works in connectonless mode.
+>@
+>@* UDP does not guarantee the delivery and ordering of datagrams.
+>@
+>@* UDP does not use handshake like TCP.
+>@   
+>@
+>@                         ________________________________________________________________________________________________________
+>@                        |                                                   |                                                    |
+>@ Layer 4 / Transport    |                   UDP Source Port                 |                UDP Destination port                |
+>@                        |                      16  bits                     |                      16 bits                       |
+>@                        |___________________________________________________|____________________________________________________|
+>@                        |                                                   |                                                    |
+>@                        |                   Message length                  |                      Checksum                      |
+>@                        |                      16  bits                     |                      16 bits                       |
+>@                        |___________________________________________________|____________________________________________________|
+>@                        |                                                                                                        |
+>@                        |                                                  Data                                                  |
+>@                        |                                                [ ... ]                                                 |
+>@                        |________________________________________________________________________________________________________|
+>@                        
+>@
+>@With:
+>@
+>@   Source port: the port in the Source server             |   Destination port: the port in the Destination server
+>@                                                          |
+>@   Message length: total length (header + data)           |   Checksum: control checksum
+>@                                                          |
+>@   Data: raw data                                         |
+>@
+>@##########################################################################################################################################
+>@

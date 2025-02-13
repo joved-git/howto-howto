@@ -1,3 +1,5 @@
+TCP | Transmission Control Protocol
+
 Transmission Control Protocol (littéralement, « protocole de contrôle de transmissions »), abrégé TCP, est un protocole de transport   
 fiable, en mode connecté, documenté dans la RFC 92932 de l’IETF.                                                                      
                                                                                                                                      
@@ -83,7 +85,7 @@ Avec:
 >@
 >@##########################################################################################################################################
 >@#                                                                                                                                        # 
->@# [ Le prococole TCP ]                                                                                                                   #
+>@# [ TCP | Transmission Control Protocol ]                                                                                                #
 >@#                                                                                                                                        #
 >@# Transmission Control Protocol (littéralement, « protocole de contrôle de transmissions »), abrégé TCP, est un protocole de transport   #
 >@# fiable, en mode connecté, documenté dans la RFC 92932 de l’IETF.                                                                       #
