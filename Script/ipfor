@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+
+# CMD
+# CONT:Used to get/set ip forwarding
+# OPT:kite ipfor [on|off|status]
+
+if [ a$1 = a -o a$1 = astatus ];
+then
+	echo
+	echo "IPv4: " `cat /proc/sys/net/ipv4/ip_forward`
+	echo "IPv6: " `cat /proc/sys/net/ipv6/conf/all/forwarding`
+fi
+
+if [ a$1 = aon ];
+then
+	sudo sh -c "echo '1' > /proc/sys/net/ipv4/ip_forward"
+	sudo sh -c "echo '1' > /proc/sys/net/ipv6/conf/all/forwarding"
+	echo
+	echo "IPv4: " `cat /proc/sys/net/ipv4/ip_forward`
+	echo "IPv6: " `cat /proc/sys/net/ipv6/conf/all/forwarding`
+fi
+
+if [ a$1 = aoff ];
+then
+	sudo sh -c "echo '0' > /proc/sys/net/ipv4/ip_forward"
+	sudo sh -c "echo '0' > /proc/sys/net/ipv6/conf/all/forwarding"
+	echo
+	echo "IPv4: " `cat /proc/sys/net/ipv4/ip_forward`
+	echo "IPv6: " `cat /proc/sys/net/ipv6/conf/all/forwarding`
+fi

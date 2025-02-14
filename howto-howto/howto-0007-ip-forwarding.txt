@@ -16,6 +16,7 @@ $ sudo -s
 >>> to disable ip forwarding on ipv4 or ipv6.
 
 -> Avoid ICMP redirection
+$ sudo -s
 # echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
 
 >@
@@ -41,6 +42,7 @@ $ sudo -s
 >@>>> to disable ip forwarding on ipv4 or ipv6.
 >@
 >@-> Avoid ICMP redirection
+>@$ sudo -s
 >@# echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
 >@
 >@##################################################################################

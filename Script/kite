@@ -18,7 +18,8 @@ if [ x$1 = x ];
 then
 	echo
 	echo "Please give me something to do !!"
-	echo "!!! kali list should be a good idea :)"
+	echo "$ kite list  -> gives list of files"
+	echo "$ kite cmd   -> gives list of commands"
 	echo
 	exit 0
 fi
@@ -29,6 +30,30 @@ if [ x$1 = xlist ]; then
 	echo
 	ls $SRC_DIR | grep 'howto-'
 	echo
+	echo '########################################################'
+	echo
+	exit 0
+fi
+
+if [ x$1 = xcmd ]; then
+	CMD=`ls -l $WHERE | grep -v kite | awk {' print $9 }'`
+
+	echo
+	echo '########################################################'
+	echo
+
+	for c in `echo $CMD`;
+	do
+		if [ `grep "CMD" $WHERE/$c | wc -l` -eq 1 ];
+		then
+			CONT=`grep CONT $WHERE/$c | awk -F':' '{ print $2 }'`
+			OPT=`grep OPT $WHERE/$c | awk -F':' '{ print $2 }'`
+			echo $c" : "$CONT
+			echo "$ "$OPT
+			echo
+		fi
+	done
+
 	echo '########################################################'
 	echo
 	exit 0

@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+
+# CMD
+# CONT:Used to get/set ICMP redirection
+# OPT:kite icredir [on|off|status]
+
+if [ a$1 = a -o a$1 = astatus ];
+then
+	echo
+	echo "ICMP redirection: "`cat /proc/sys/net/ipv4/conf/all/send_redirects`
+fi
+
+if [ a$1 = aon ];
+then
+	sudo sh -c "echo '1' > /proc/sys/net/ipv4/conf/all/send_redirects"
+	echo
+	echo "ICMP redirection: "`cat /proc/sys/net/ipv4/conf/all/send_redirects`
+fi
+
+if [ a$1 = aoff ];
+then
+	sudo sh -c "echo '0' > /proc/sys/net/ipv4/conf/all/send_redirects"
+	echo
+	echo "ICMP redirection: "`cat /proc/sys/net/ipv4/conf/all/send_redirects`
+fi

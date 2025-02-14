@@ -47,7 +47,7 @@ net.recon (not running): Read periodically the ARP cache in order to monitor for
   net.show.meta ADDRESS1, ADDRESS2 : Show meta information about a specific comma separated list of addresses (by IP or MAC).
 ---
 
-* Display APR table.
+* Display ARP table.
 10.0.2.0/24 > 10.0.2.5 » net.show
 ---
 
@@ -64,7 +64,10 @@ net.recon (not running): Read periodically the ARP cache in order to monitor for
 * Start the host discovery.
 10.0.2.0/24 > 10.0.2.5 » net.recon on
 
-* How to make a bidirectional APR spoofing.
+* Target a victim
+10.0.2.0/24 > 10.0.2.5 » set arp.spoof.targets <victim IP>
+
+* How to make a bidirectional ARP spoofing.
 10.0.2.0/24 > 10.0.2.5 » help arp.spoof
 10.0.2.0/24 > 10.0.2.5 » set arp.spoof.fullduplex true
 >>> To do a bidirectional spoofing.
@@ -134,7 +137,7 @@ net.recon (not running): Read periodically the ARP cache in order to monitor for
 >@  net.show.meta ADDRESS1, ADDRESS2 : Show meta information about a specific comma separated list of addresses (by IP or MAC).
 >@---
 >@
->@* Display APR table.
+>@* Display ARP table.
 >@10.0.2.0/24 > 10.0.2.5 » net.show
 >@---
 >@
@@ -151,7 +154,10 @@ net.recon (not running): Read periodically the ARP cache in order to monitor for
 >@* Start the host discovery.
 >@10.0.2.0/24 > 10.0.2.5 » net.recon on
 >@
->@* How to make a bidirectional APR spoofing.
+>@* Target a victim
+>@10.0.2.0/24 > 10.0.2.5 » set arp.spoof.targets <victim IP>
+>@
+>@* How to make a bidirectional ARP spoofing.
 >@10.0.2.0/24 > 10.0.2.5 » help arp.spoof
 >@10.0.2.0/24 > 10.0.2.5 » set arp.spoof.fullduplex true
 >@>>> To do a bidirectional spoofing.
