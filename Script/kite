@@ -2,7 +2,7 @@
 # Monkey - 2021 / 2025
 
 WHERE=`echo $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`
-SRC_DIR=$WHERE/../Docs
+SRC_DIR=$WHERE/../howto-howto
 
 if [ "x$1" = "x-v" -o "x$1" = "x--version" ];
 #if [ x$1 = x-v ];
@@ -59,6 +59,15 @@ if [ x$1 = xcmd ]; then
 	exit 0
 fi
 
+CMD=$(ls $WHERE | grep $1 | wc -l)
+
+if [ $CMD -eq 1 ]; then
+	if [ `grep "^# CMD" $WHERE/$1 | wc -l` -eq 1 ]; then
+		echo "this is the command" $1
+		exit 0
+	fi
+fi
+
 RESULT=$(ls $SRC_DIR | grep $1 | wc -l)
 
 if [ $RESULT -gt 1 ]; then
@@ -75,7 +84,7 @@ fi
 if [ $RESULT -eq 0 ];
 then
 	echo
-	echo "Sorry, nothing to display. Try kali list..."
+	echo 'Sorry, nothing to do or display. Try "kite list" or "kite cmd"...'
 	echo
 else
 	FILENAME=$(ls $SRC_DIR/*$1*)
