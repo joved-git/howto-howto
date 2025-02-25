@@ -1,0 +1,33 @@
+Spanning Tree Protocol
+
+Le Spanning Tree Protocol (aussi appelé STP) est un protocole réseau de niveau 2 permettant 
+de déterminer une topologie réseau sans boucle (appelée algorithme de l'arbre recouvrant) 
+dans les LAN avec ponts. Il est défini dans la norme IEEE 802.1D et est basé sur un 
+algorithme décrit par Radia Perlman en 1985. 
+
+See: https://fr.wikipedia.org/wiki/Neighbor_Discovery_Protocol
+See: howto-0185-stp-protocol.txt
+See: howto-0190-ndp-protocol.txt
+See: howto-0191-ndp-protocol-fr.txt
+See: howto-0195-dtp-protocol.txt
+See: howto-0196-dtp-protocol-fr.txt
+
+>@
+>@################################################################################################
+>@#                                                                                              #
+>@# [ Spanning Tree Protocol ]                                                                   #
+>@#                                                                                              # 
+>@# Le Spanning Tree Protocol (aussi appelé STP) est un protocole réseau de niveau 2 permettant  #
+>@# de déterminer une topologie réseau sans boucle (appelée algorithme de l'arbre recouvrant)    #
+>@# dans les LAN avec ponts. Il est défini dans la norme IEEE 802.1D et est basé sur un          #
+>@# algorithme décrit par Radia Perlman en 1985.                                                 #
+>@#                                                                                              # 
+>@# See: https://fr.wikipedia.org/wiki/Neighbor_Discovery_Protocol                               #
+>@# See: howto-0186-stp-protocol-fr.txt                                                          #
+>@# See: howto-0190-ndp-protocol.txt                                                             #
+>@# See: howto-0191-ndp-protocol-fr.txt                                                          #
+>@# See: howto-0195-dtp-protocol.txt                                                             #
+>@# See: howto-0196-dtp-protocol-fr.txt                                                          #
+>@#                                                                                              # 
+>@#----------------------------------------------------------------------------------------------#
+>@
