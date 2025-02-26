@@ -1,16 +1,33 @@
-# Spanning Tree Protocol
-Le Spanning Tree Protocol (aussi appelé STP) est un protocole réseau de niveau 2 permettant de déterminer une topologie réseau sans boucle (appelée algorithme de l'arbre recouvrant) dans les LAN avec ponts. Il est défini dans la norme IEEE 802.1D et est basé sur un algorithme décrit par Radia Perlman en 1985. 
+Neighbor Dynamic Protocol
 
-Spanning Tree Protocol (also called STP) is a Layer 2 network protocol for determining a loop-free network topology (called a spanning tree algorithm) in bridged LANs. It is defined in the IEEE 802.1D standard and is based on an algorithm described by Radia Perlman in 1985.
+Neighbor Discovery Protocol (NDP, en français : protocole de découverte d'hôtes 
+voisins) est un protocole utilisé par IPv6. Il opère en couche 3 et est 
+responsable de la découverte des autres hôtes sur le même lien, de la détermination 
+de leur adresse et de l'identification des routeurs présents. 
 
+See: https://fr.wikipedia.org/wiki/Neighbor_Discovery_Protocol 
+See: howto-0185-stp-protocol.txt
+See: howto-0186-stp-protocol-fr.txt
+See: howto-0190-ndp-protocol.txt
+See: howto-0195-dtp-protocol.txt
+See: howto-0196-dtp-protocol-fr.txt
 
-# Dynamic Trunk Protocol
-Internet protocol
-Le Dynamic Trunk Protocol ou DTP est un protocole réseau propriétaire de Cisco Systems, permettant de gérer dynamiquement l'activation/désactivation du mode trunk d'un port sur un commutateur réseau.
-
-The Dynamic Trunk Protocol or DTP is a proprietary network protocol from Cisco Systems, allowing you to dynamically manage the activation/deactivation of trunk mode for a port on a network switch.
-
-# Neighbor Dynamic Protocol
-Neighbor Discovery Protocol (NDP, en français : protocole de découverte d'hôtes voisins) est un protocole utilisé par IPv6. Il opère en couche 3 et est responsable de la découverte des autres hôtes sur le même lien, de la détermination de leur adresse et de l'identification des routeurs présents. 
-
-Neighbor Discovery Protocol (NDP) is a protocol used by IPv6. It operates in layer 3 and is responsible for discovering other hosts on the same link, determining their addresses and identifying the routers present.
+>@
+>@########################################################################################
+>@#                                                                                      #
+>@# [ Neighbor Dynamic Protocol ]                                                        #
+>@#                                                                                      #
+>@# Neighbor Discovery Protocol (NDP, en français : protocole de découverte d'hôtes      #
+>@# voisins) est un protocole utilisé par IPv6. Il opère en couche 3 et est              #
+>@# responsable de la découverte des autres hôtes sur le même lien, de la détermination  #
+>@# de leur adresse et de l'identification des routeurs présents.                        #
+>@#                                                                                      #
+>@# See: https://fr.wikipedia.org/wiki/Neighbor_Discovery_Protocol                       #
+>@# See: howto-0185-stp-protocol.txt                                                     #
+>@# See: howto-0186-stp-protocol-fr.txt                                                  #
+>@# See: howto-0190-ndp-protocol.txt                                                     #
+>@# See: howto-0195-dtp-protocol.txt                                                     #
+>@# See: howto-0196-dtp-protocol-fr.txt                                                  #
+>@#                                                                                      #
+>@#--------------------------------------------------------------------------------------#
+>@

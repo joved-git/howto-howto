@@ -5,7 +5,7 @@ a loop-free network topology (called a spanning tree algorithm) in bridged LANs.
 defined in the IEEE 802.1D standard and is based on an algorithm described by Radia 
 Perlman in 1985.
 
-See: https://fr.wikipedia.org/wiki/Neighbor_Discovery_Protocol 
+See: https://en.wikipedia.org/wiki/Spanning_Tree_Protocol
 See: howto-0185-stp-protocol.txt
 See: howto-0186-stp-protocol-fr.txt
 See: howto-0190-ndp-protocol.txt
@@ -24,7 +24,7 @@ See: howto-0196-dtp-protocol-fr.txt
 >@# defined in the IEEE 802.1D standard and is based on an algorithm described by Radia      #
 >@# Perlman in 1985.                                                                         #
 >@#                                                                                          # 
->@# See: https://fr.wikipedia.org/wiki/Neighbor_Discovery_Protocol                           #
+>@# See: https://en.wikipedia.org/wiki/Spanning_Tree_Protocol                                #
 >@# See: howto-0186-stp-protocol-fr.txt                                                      #
 >@# See: howto-0190-ndp-protocol.txt                                                         #
 >@# See: howto-0191-ndp-protocol-fr.txt                                                      #
