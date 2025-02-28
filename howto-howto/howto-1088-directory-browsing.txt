@@ -5,7 +5,7 @@ and display the content of a directory in “raw”. Usually, web servers displa
 PHP, etc.), it is rarer to find a directory displayed as is when visiting a website. However, 
 this can be useful if you want to display a tree of files to download, for example.
 
--> How to prevent
+-> How to prevent yourself
 Here are some advice:
   -Use index.html on every directories to tell the browser to load that default page instead of
    showing the arborescence.
@@ -49,7 +49,7 @@ Here are some advice:
 >@#                                                                                                  #
 >@#--------------------------------------------------------------------------------------------------#
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@Here are some advice:
 >@  -Use index.html on every directories to tell the browser to load that default page instead of
 >@   showing the arborescence.

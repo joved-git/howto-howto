@@ -127,7 +127,7 @@ Some interesting sites:
 >@
 >@  You will see the CPU grows to 35% (initally, it was at 5%) and the Ethernet grows to 100%.
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@Some ways:
 >@  -This is not easy but not impossible.
 >@  -Try to reduce the impact with design: filtering, priority managing, blocking.

@@ -13,7 +13,7 @@ Types of network scanning:
 -> network mapping: to cartograph the network.
 -> OS fingerprinting: to find OS and infos.
   
-How to prevent network scanning:
+How to prevent yourself from network scanning:
 -> use a firewall.
 -> desactive useless ports.
 -> use IDS (Intrusion Detection System).
@@ -39,7 +39,7 @@ How to prevent network scanning:
 >@-> network mapping: to cartograph the network.
 >@-> OS fingerprinting: to find OS and infos.
 >@  
->@How to prevent network scanning:
+>@How to prevent yourself from network scanning:
 >@-> use a firewall.
 >@-> desactive useless ports.
 >@-> use IDS (Intrusion Detection System).

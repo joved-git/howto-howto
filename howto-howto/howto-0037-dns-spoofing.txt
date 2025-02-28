@@ -49,7 +49,7 @@ Restart Apache:
 $ sudo service apache2 stop
 $ sudo service apache2 start
 
--> How to prevent DNS spoofing
+-> How to prevent yourself from DNS spoofing
   -Use HTTPS sites only.
   -Use Simple DNS Script.
 
@@ -108,7 +108,7 @@ $ sudo service apache2 start
 >@$ sudo service apache2 stop
 >@$ sudo service apache2 start
 >@
->@-> How to prevent DNS spoofing
+>@-> How to prevent yourself from DNS spoofing
 >@  -Use HTTPS sites only.
 >@  -Use Simple DNS Script.
 >@

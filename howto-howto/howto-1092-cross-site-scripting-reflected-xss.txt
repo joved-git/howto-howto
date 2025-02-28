@@ -52,7 +52,7 @@ Put Security level at 1 (Client-side Security).
    Click "View File".
    >>> you should be redirected to google.fr.
 
--> How to prevent
+-> How to prevent yourself
 Some advice:
   -nothing for now.
 
@@ -115,7 +115,7 @@ Some advice:
 >@   Click "View File".
 >@   >>> you should be redirected to google.fr.
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@Nothing for now (in progress).
 >@
 >@##################################################################################################################################

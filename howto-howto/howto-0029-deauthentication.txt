@@ -18,7 +18,7 @@ $ sudo aireplay-ng -0 <nb> -a <MAC access point> -c <MAC target> <interface>
 >>> <nb>:	nb of deauthentication, 0 means infinite.
 >>> -c:	/!\ no -c means all machines connected to <MAC access point>.
 
--> How to prevent
+-> How to prevent yourself
 -Not easy to prevent and detect DOS attack.
 -Use hash to verify the deautjetication request.
 -Find the author of this attack (IP, user) and ask him to stop that.
@@ -47,7 +47,7 @@ $ sudo aireplay-ng -0 <nb> -a <MAC access point> -c <MAC target> <interface>
 >@>>> <nb>:     nb of deauthentication, 0 means infinite.
 >@>>> -c:       /!\ no -c means all machines connected to <MAC access point>.
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@-Not easy to prevent and detect DOS attack.
 >@-Use hash to verify the deautjetication request.
 >@-Find the author of this attack (IP, user) and ask him to stop that.

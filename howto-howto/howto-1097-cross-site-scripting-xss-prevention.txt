@@ -31,7 +31,7 @@ See: howto-1096-cross-site-scripting-http-headers-xss.txt
       |-- Access with privileges -->|                            |
       |                             |                            |
 
--> How to prevent
+-> How to prevent yourself
 Here are some advice:
   -Use PHP filters like stripslashed(), sys_real_escape_string(), htmlspecialchars() and/or htmlentities().
     See: ressources/xss-prevention.php for an example.
@@ -83,7 +83,7 @@ Here are some advice:
 >@      |-- Access with privileges -->|                            |
 >@      |                             |                            |
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@Here are some advice:
 >@  -Use PHP filters like stripslashed(), sys_real_escape_string(), htmlspecialchars() and/or htmlentities().
 >@    See: ressources/xss-prevention.php for an example.

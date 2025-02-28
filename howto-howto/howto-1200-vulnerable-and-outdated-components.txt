@@ -11,7 +11,7 @@ See: https://themecheck.info/fr/
 See: howto-1075-owasp-top-10.txt
 See: howto-1076-owasp-top-10-fr.txt
 
--> How to prevent:
+-> How to prevent yourself
   -Pay special attention to component plugin.
     Example: Ninja forms is exploitable by Metasploit (use exploit/multi/http/wp_ninja_forms_unauthentication_file_upload).
   -Don't trust Wordpress thems. Pay attention to the date and time of files into zip file themes.
@@ -38,7 +38,7 @@ See: howto-1076-owasp-top-10-fr.txt
 >@#                                                                                                                            #
 >@#----------------------------------------------------------------------------------------------------------------------------#
 >@
->@-> How to prevent:
+>@-> How to prevent yourself
 >@  -Pay special attention to component plugin.
 >@    Example: Ninja forms is exploitable by Metasploit (use exploit/multi/http/wp_ninja_forms_unauthentication_file_upload).
 >@  -Don't trust Wordpress thems. Pay attention to the date and time of files into zip file themes.

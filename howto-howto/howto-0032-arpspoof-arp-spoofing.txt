@@ -82,7 +82,7 @@ $ sudo sh
 Ctrl-C in arpspoof to restore the initial ARP table.
 >>> Ouf, attack ended ;) !
 
--> How to prevent ARP spoofing
+-> How to prevent yourself from ARP spoofing
   -Use tools like ARP-Watch (Linux) or X-ARP (Win) to detect suspicious activity.
   -Use Wireshark to view ARP spoofing and determine the machine.
   -Use Cisco router that limits number of ARP packets per second (15 p/s).
@@ -180,7 +180,7 @@ Ctrl-C in arpspoof to restore the initial ARP table.
 >@Ctrl-C in arpspoof to restore the initial ARP table.
 >@>>> Ouf, attack ended ;) !
 >@
->@-> How to prevent ARP spoofing
+>@-> How to prevent yourself from ARP spoofing
 >@  -Use tools like ARP-Watch (Linux) or X-ARP (Win) to detect suspicious activity.
 >@  -Use Wireshark to view ARP spoofing and determine the machine.
 >@  -Use Cisco router that limits number of ARP packets per second (15 p/s).

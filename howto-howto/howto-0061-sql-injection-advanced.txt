@@ -68,7 +68,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
   That works !!!!
   It will the same result with an hexa encoding (just place 0x before the hexa codes, example 0x64767761 for dvwa).
 
--> How to prevent SQL injection
+-> How to prevent yourself from SQL injection
   -Use real_escape_string() function in PHP code.
      Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
   -Use stripslashes() function in PHP code.
@@ -161,8 +161,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
 >@  That works !!!!
 >@  It will the same result with an hexa encoding (just place 0x before the hexa codes, example 0x64767761 for dvwa).
 >@
->@-> How to prevent SQL injection
->@-> How to prevent SQL injection
+>@-> How to prevent yourself from SQL injection
 >@  -Use real_escape_string() function in PHP code.
 >@     Example if the password is "pwd' OR 1=1 #", it becomes "pwd \' OR 1=1 \#', a simple string.
 >@  -Use stripslashes() function in PHP code.

@@ -36,7 +36,7 @@ Try:
 
 The directory should be created on the Metasploitable machine under /home/msfadmin.
 
--> How to prevent
+-> How to prevent yourself
 1. Make cookies and session ID expire faster.
 2. Use HTTPS/SSL.
 3. Avoid multiple snd simultaneous sessions.
@@ -92,7 +92,7 @@ The directory should be created on the Metasploitable machine under /home/msfadm
 >@
 >@The directory should be created on the Metasploitable machine under /home/msfadmin.
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@1. Make cookies and session ID expire faster.
 >@2. Use HTTPS/SSL.
 >@3. Avoid multiple snd simultaneous sessions.

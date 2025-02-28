@@ -9,7 +9,7 @@ See: https://leblogduhacker.fr/sandbox/clickjack.php
 No matter where you click on the page, you will automatically click on a button or underlying link.
 Click-Jacking is difficult to spot because it is possible to make it completely invisible.
 
--> How to prevent
+-> How to prevent yourself
 Here are some advice:
   -Authorize the use of .htaccess files. Edit /etc/apache2/apache2.conf the modify that part:
   ---
@@ -50,7 +50,7 @@ Here are some advice:
 >@No matter where you click on the page, you will automatically click on a button or underlying link.
 >@Click-Jacking is difficult to spot because it is possible to make it completely invisible.
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@Here are some advice:
 >@  -Authorize the use of .htaccess files. Edit /etc/apache2/apache2.conf the modify that part:
 >@  ---

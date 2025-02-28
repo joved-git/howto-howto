@@ -30,7 +30,7 @@ Imagine you place 200 "& start notepad.exe " into that box, the Windows machine 
 In the "Hostname/IP" box, type [ & start notpad.exe & notepad.exe ... & notepad.exe ].
 >>> the Windows machine is going to be soon unusable.
 
--> How to prevent
+-> How to prevent yourself
 Some advice:
   -In this example, check that the box really contains an IP address or a domain name.
   -Always check the entries of user (type of file, syntax verification, ...).
@@ -75,7 +75,7 @@ Some advice:
 >@In the "Hostname/IP" box, type [ & start notpad.exe & notepad.exe ... & notepad.exe ].
 >@>>> the Windows machine is going to be soon unusable.
 >@
->@-> How to prevent
+>@-> How to prevent yourself
 >@Some advice:
 >@  -In this example, check that the box really contains an IP address or a domain name.
 >@  -Always check the entries of user (type of file, syntax verification, ...).
