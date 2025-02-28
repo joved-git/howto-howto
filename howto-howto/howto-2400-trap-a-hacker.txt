@@ -1,0 +1,57 @@
+How to trap a hacker
+
+It's easy to trap a hacker by using fake link in your website. Fake links
+are going to retrieve IP address and some other information belonging to
+hackers and send you a summary email. After that, you can try to find 
+location and other information concerning hackers.
+
+-> Create fake links
+Use https://whatstheirip.com:
+  -Give your email address and that's all. The site gives you fake link.
+   Those links send you an email each time somebody will click on it.
+
+-> Find location
+To find location, you can use https://iplocation.net to find the location
+of an IP address. 
+
+-> Use link shortener
+Here are some:
+  - http://goo.gl to create fake link (see above) and change the way they
+    appear.
+
+  - https://webcode.tools/open-graph-generator to create fake HTML code
+    by choosing a category like Article, Book, Music song, Restaurant, 
+    Profile, ...,  and so many more.
+   
+>@
+>@############################################################################## 
+>@#                                                                            #
+>@# [ How to trap a hacker ]                                                   #
+>@#                                                                            #
+>@# It's easy to trap a hacker by using fake link in your website. Fake links  #
+>@# are going to retrieve IP address and some other information belonging to   #
+>@# hackers and send you a summary email. After that, you can try to find      #
+>@# location and other information concerning hackers.                         #
+>@#                                                                            #
+>@#----------------------------------------------------------------------------# 
+>@
+>@-> Create fake links
+>@Use https://whatstheirip.com:
+>@  -Give your email address and that's all. The site gives you fake link.
+>@   Those links send you an email each time somebody will click on it.
+>@
+>@-> Find location
+>@To find location, you can use https://iplocation.net to find the location
+>@of an IP address. 
+>@
+>@-> Use link shortener
+>@Here are some:
+>@  - http://goo.gl to create fake link (see above) and change the way they
+>@    appear.
+>@
+>@  - https://webcode.tools/open-graph-generator to create fake HTML code
+>@    by choosing a category like Article, Book, Music song, Restaurant, 
+>@    Profile, ...,  and so many more.
+>@   
+>@############################################################################## 
+>@

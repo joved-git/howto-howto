@@ -90,6 +90,6 @@ else
 	FILENAME=$(ls $SRC_DIR/*$1*)
 	FN=`echo $FILENAME | awk -F'/' '{ print $NF }'`
 	
-	grep '>@' $FILENAME | awk -F'@' '{ print $2 }'
+	grep '>@' $FILENAME | awk -F'@' '{ print $2 }' | more
 	echo "[" $FN "]"
 fi
