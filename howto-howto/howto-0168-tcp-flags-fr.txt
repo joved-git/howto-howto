@@ -8,7 +8,7 @@ Chaque indicateur correspond à une information de 1 bit.
 
 Types de drapeaux : 
 
-SYN (Synchronisation) – Elle est utilisée dans la première étape de la phase d'établissement de la connexion 
+SYN (Synchronisation) – Il est utilisé dans la première étape de la phase d'établissement de la connexion 
 ou du processus de négociation à trois entre les deux hôtes. Seul le premier paquet de l'expéditeur et du 
 récepteur doit avoir cet indicateur défini. Ceci est utilisé pour synchroniser le numéro de séquence, c'est-à-dire 
 pour indiquer à l'autre extrémité quel numéro de séquence elle doit accepter.

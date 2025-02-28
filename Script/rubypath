@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+
+# CMD
+# CONT:Used to set Ruby 3.4.2 path for msf* tools.
+# OPT:kite rubypath
+
+source `pwd`/ruby_PATH

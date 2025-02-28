@@ -63,7 +63,8 @@ CMD=$(ls $WHERE | grep $1 | wc -l)
 
 if [ $CMD -eq 1 ]; then
 	if [ `grep "^# CMD" $WHERE/$1 | wc -l` -eq 1 ]; then
-		echo "this is the command" $1
+		$WHERE/$1
+		echo $1 "command was executed..."
 		exit 0
 	fi
 fi

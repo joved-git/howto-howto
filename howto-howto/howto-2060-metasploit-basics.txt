@@ -17,7 +17,7 @@ Architecture:
 
 Interfaces:
 -> Metasploit offers many interfaces.
-  MsfConsole: gives acces to the Framework using command lines.
+  msfconsole: gives acces to the Framework using command lines.
   Web interface: only on paid version.
   
 On the disk:

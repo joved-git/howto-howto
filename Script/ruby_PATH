@@ -1,0 +1,3 @@
+RUBY_PATH=/home/kali/.rubies/ruby-master/bin
+
+export PATH=${RUBY_PATH}:$PATH
