@@ -3,7 +3,7 @@
 
 # CMD
 # CONT:Used to get/set ip forwarding
-# OPT:kite ipfor [on|off|status]
+# OPT:kite ipfor [on | off | status]
 
 if [ a$1 = a -o a$1 = astatus ];
 then

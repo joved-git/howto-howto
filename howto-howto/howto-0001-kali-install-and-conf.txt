@@ -4,7 +4,7 @@ On the host, extract Kali into ~/VirtualBox VM then double-click on the .vbox fi
 Configure Kali:
    6144 MB RAM
    4 CPU
-   Network "Bridged Adapter" and name to "wl..."
+   Network "Bridged Adapter" and check the Name of the interface
    	Advanced /Promiscious Mode to "Allow all"
 
 -> Keyboard configuration
@@ -23,6 +23,11 @@ $ sudo apt update
 $ sudo apt upgrade (if you want, not necessary)
 $ sudo apt install linux-headers-$(uname -r)
 
+-> Add a sudoers file (sudo visudo /etc/sudoers.d/kali)
+---
+kali ALL=(ALL) NOPASSWD:/home/kali/Documents/howto-howto/Script/*
+---
+
 -> Install some softwares
 * nslookup, dig
  $ sudo apt install dnsutils
@@ -30,7 +35,7 @@ $ sudo apt install linux-headers-$(uname -r)
 * traceroute
 $ sudo apt install traceroute
 
-* atom
+* Atom
 Go to https://github.com/atom/atom/releases/tag/v1.60.0  
 Download and install it.
 
@@ -52,6 +57,9 @@ Change the password into the config.yaml file.
 
 * Weplab
   $ sudo apt install weplab
+
+* Metasploit
+  To install or reinstall Metasploit, see howto-2060-metasploit-basics.txt
 
 >@
 >@#############################################################################################
@@ -87,7 +95,7 @@ Change the password into the config.yaml file.
 >@* traceroute
 >@  $ sudo apt install traceroute
 >@
->@* atom
+>@* Atom
 >@  Go to https://github.com/atom/atom/releases/tag/v1.60.0  
 >@  Download and install it.
 >@
@@ -109,6 +117,9 @@ Change the password into the config.yaml file.
 >@
 >@* Weplab
 >@  $ sudo apt install weplab
+>@
+>@* Metasploit
+>@  To install or reinstall Metasploit, see howto-2060-metasploit-basics.txt
 >@
 >@#############################################################################################
 >@
