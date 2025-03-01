@@ -1,0 +1,113 @@
+DumpIt | Volatility
+
+DumpIt is used to oerform a memory image. These image could be 
+analyzed afterward. The image file is a .raw file
+
+Volatility is now used to analyze RAW files.
+
+This memory dump could be done just after an infection to search for
+origin of the malicious process.
+
+-> How to install DumpIt
+Go to: https://sourceforge.net/projects/jumpbag/
+
+-> Dump the memory
+Lanch DumpIt by clicking on "acquire_w".
+>>> you obtain a very big memory file.
+ 
+-> How to install Volatility
+Go to: https://www.volatilityfoundation.org/25/ then download
+Volatility.
+
+-> Use Volatility to extract data
+Use it on the RAW file.
+C:\> volatility-2.5.standalone.exe imageinfo -F <RAW file>
+>>> you obtain image information.
+
+C:\> volatility-2.5.standalone.exe pslist -F <RAW file>
+>>> you obtain the list pf processes.
+
+C:\> volatility-2.5.standalone.exe malfind -D <path> -P <PID> -F <RAW file>
+  -P: search for a particular <PID>. 
+  -D: means search for malicious DLL and put them on the <path>.
+>>> search for malicious DLL
+
+C:\> volatility-2.5.standalone.exe connections -F <RAW file>
+>>> you obtain the network connections.
+
+C:\> volatility-2.5.standalone.exe userassist -F <RAW file>
+>>> you obtain the list of the last executed files.
+
+C:\> volatility-2.5.standalone.exe shellbags -F <RAW file>
+>>> you obtain the list of the last files used (image, video, ...).
+
+C:\> volatility-2.5.standalone.exe notepad -F <RAW file>
+>>> you obtain the text typed into the notepad.
+
+C:\> volatility-2.5.standalone.exe clipboard -F <RAW file>
+>>> you obtain the text located into the clipboard (after a "Copy").
+
+-> Try your skills
+Go to https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples
+and you will find some challenges.
+
+>@
+>@################################################################################ 
+>@#                                                                              # 
+>@# [ DumpIt and Volatility ]                                                    #
+>@#                                                                              # 
+>@# DumpIt is used to oerform a memory image. These image could be analyzed      #
+>@# afterward. The image file is a .raw file.                                    #
+>@#                                                                              #     
+>@# Volatility is now used to analyze RAW files.                                 #
+>@#                                                                              # 
+>@# This memory dump could be done just after an infection to search for origin  #
+>@# of the malicious process.                                                    #
+>@#                                                                              # 
+>@#------------------------------------------------------------------------------#
+>@
+>@-> How to install DumpIt
+>@Go to: https://sourceforge.net/projects/jumpbag/
+>@
+>@-> Dump the memory
+>@Lanch DumpIt by clicking on "acquire_w".
+>@>>> you obtain a very big memory file.
+>@ 
+>@-> How to install Volatility
+>@Go to: https://www.volatilityfoundation.org/25/ then download
+>@Volatility.
+>@
+>@-> Use Volatility to extract data
+>@Use it on the RAW file.
+>@C:\> volatility-2.5.standalone.exe imageinfo -F <RAW file>
+>@>>> you obtain image information.
+>@
+>@C:\> volatility-2.5.standalone.exe pslist -F <RAW file>
+>@>>> you obtain the list pf processes.
+>@
+>@C:\> volatility-2.5.standalone.exe malfind -D <path> -P <PID> -F <RAW file>
+>@  -P: search for a particular <PID>. 
+>@  -D: means search for malicious DLL and put them on the <path>.
+>@>>> search for malicious DLL
+>@
+>@C:\> volatility-2.5.standalone.exe connections -F <RAW file>
+>@>>> you obtain the network connections.
+>@
+>@C:\> volatility-2.5.standalone.exe userassist -F <RAW file>
+>@>>> you obtain the list of the last executed files.
+>@
+>@C:\> volatility-2.5.standalone.exe shellbags -F <RAW file>
+>@>>> you obtain the list of the last files used (image, video, ...).
+>@
+>@C:\> volatility-2.5.standalone.exe notepad -F <RAW file>
+>@>>> you obtain the text typed into the notepad.
+>@
+>@C:\> volatility-2.5.standalone.exe clipboard -F <RAW file>
+>@>>> you obtain the text located into the clipboard (after a "Copy").
+>@
+>@-> Try your skills
+>@Go to https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples
+>@and you will find some challenges.
+>@
+>@################################################################################ 
+>@
