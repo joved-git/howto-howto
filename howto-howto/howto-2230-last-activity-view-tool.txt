@@ -1,0 +1,103 @@
+Last Activity View
+
+LastActivityView is a tool for Windows operating system that collects information 
+from various sources on a running system, and displays a log of actions made by 
+the user and events occurred on this computer. The activity displayed by 
+LastActivityView includes: Running .exe file, Opening open/save dialog-box, 
+Opening file/folder from Explorer or other software, software installation, system 
+shutdown/start, application or system crash, network connection/disconnection and 
+more...
+
+You can easily export this information into csv/tab-delimited/xml/html file or 
+copy it to the clipboard and then paste into Excel or other software. 
+
+-> Where to find that software
+Just go to https://www.nirsoft.net/utils/computer_activity_view.html and find the
+"Download LastActivityView" link.
+
+-> What LastActivityView does:
+The following actions and events are currently supported by LastActivityView:
+  -Run .EXE file: .EXE file run directly by the user, or by another software/service 
+   running in the background.
+  -Select file in open/save dialog-box: The user selected the specified filename 
+   from the standard Save/Open dialog-box of Windows.
+  -Open file or folder: The user opened the specified filename from Windows Explorer 
+   or from another software.
+  -View Folder in Explorer: The user viewed the specified folder in Windows Explorer.
+  -Software Installation: The specified software has been installed or updated.
+  -System Started: The computer has been started.
+  -System Shutdown: The system has been shut down, directly by the user, or by a 
+   software that initiated a reboot.
+  -Sleep: The computer has been placed into sleep mode.
+  -Resumed from sleep: The computer has been resumed from sleep mode.
+  -Network Connected: Network connected, after previously disconnected.
+  -Network Disconnected: Network has been disconnected
+  -Software Crash: The specified software has been crashed.
+  -Software stopped responding (hang): The specified software stopped responding.
+  -Blue Screen: Blue screen event has been occurred on the system.
+  -User Logon: The user logged on to the system.
+  -User Logoff: The user logged off from the system. This even might caused by a 
+   software that initiated a reboot.
+  -Restore Point Created: Restore point has been created by Windows operating system.
+  -Windows Installer Started
+  -Windows Installer Ended
+  -Wireless Network Connected: Windows connected to a wireless network, the 
+   connection information is displayed in the 'More Information' column.
+  -Wireless Network Disconnected: Windows disconnected from a wireless network, the 
+   connection information is displayed in the 'More Information' column. 
+
+>@
+>@######################################################################################### 
+>@#                                                                                       #
+>@# [ Last Activity View ]                                                                #
+>@#                                                                                       #
+>@# LastActivityView is a tool for Windows operating system that collects information     #
+>@# from various sources on a running system, and displays a log of actions made by       #
+>@# the user and events occurred on this computer. The activity displayed by              #
+>@# LastActivityView includes: Running .exe file, Opening open/save dialog-box,           #
+>@# Opening file/folder from Explorer or other software, software installation, system    #
+>@# shutdown/start, application or system crash, network connection/disconnection and     #
+>@# more...                                                                               #
+>@#                                                                                       #
+>@# You can easily export this information into csv/tab-delimited/xml/html file or copy   #
+>@# it to the clipboard and then paste into Excel or other software.                      #
+>@#                                                                                       #
+>@#---------------------------------------------------------------------------------------# 
+>@
+>@-> Where to find that software
+>@Just go to https://www.nirsoft.net/utils/computer_activity_view.html and find the
+>@Download LastActivityView link
+>@
+>@-> What LastActivityView does:
+>@The following actions and events are currently supported by LastActivityView:
+>@  -Run .EXE file: .EXE file run directly by the user, or by another software/service 
+>@   running in the background.
+>@  -Select file in open/save dialog-box: The user selected the specified filename 
+>@   from the standard Save/Open dialog-box of Windows.
+>@  -Open file or folder: The user opened the specified filename from Windows Explorer 
+>@   or from another software.
+>@  -View Folder in Explorer: The user viewed the specified folder in Windows Explorer.
+>@  -Software Installation: The specified software has been installed or updated.
+>@  -System Started: The computer has been started.
+>@  -System Shutdown: The system has been shut down, directly by the user, or by a 
+>@   software that initiated a reboot.
+>@  -Sleep: The computer has been placed into sleep mode.
+>@  -Resumed from sleep: The computer has been resumed from sleep mode.
+>@  -Network Connected: Network connected, after previously disconnected.
+>@  -Network Disconnected: Network has been disconnected
+>@  -Software Crash: The specified software has been crashed.
+>@  -Software stopped responding (hang): The specified software stopped responding.
+>@  -Blue Screen: Blue screen event has been occurred on the system.
+>@  -User Logon: The user logged on to the system.
+>@  -User Logoff: The user logged off from the system. This even might caused by a 
+>@   software that initiated a reboot.
+>@  -Restore Point Created: Restore point has been created by Windows operating system.
+>@  -Windows Installer Started
+>@  -Windows Installer Ended
+>@  -Wireless Network Connected: Windows connected to a wireless network, the 
+>@   connection information is displayed in the 'More Information' column.
+>@  -Wireless Network Disconnected: Windows disconnected from a wireless network, the 
+>@   connection information is displayed in the 'More Information' column. 
+>@
+>@######################################################################################### 
+>@

@@ -1,0 +1,46 @@
+ProcessMonitor
+
+Process Monitor is an advanced monitoring tool for Windows that shows file system, 
+registry, and process/thread activity in real time. It combines the features of 
+two legacy Sysinternals utilities, Filemon and Regmon, and adds a comprehensive 
+list of enhancements, including rich, non-destructive filtering, full event 
+properties like session IDs and user names, reliable process information, full 
+thread stacks with built-in symbol support for every operation, concurrent 
+logging to a file, and more. Its particularly powerful features make Process 
+Monitor a basic utility in your system troubleshooting and malware scanning 
+resource kit.
+
+-> Install ProcessMonitor
+Just go to: https://learn.microsoft.com/fr-fr/sysinternals/downloads/procmon
+
+-> Check a running process
+Click on "Include Process From Window" and stay clicked, then click on a window to
+see information about the process.
+
+
+>@
+>@####################################################################################### 
+>@#                                                                                     #
+>@# [ ProcessMonitor ]                                                                  # 
+>@#                                                                                     #
+>@# Process Monitor is an advanced monitoring tool for Windows that shows file system,  #
+>@# registry, and process/thread activity in real time. It combines the features of     #
+>@# two legacy Sysinternals utilities, Filemon and Regmon, and adds a comprehensive     #
+>@# list of enhancements, including rich, non-destructive filtering, full event         #
+>@# properties like session IDs and user names, reliable process information, full      # 
+>@# thread stacks with built-in symbol support for every operation, concurrent          #
+>@# logging to a file, and more. Its particularly powerful features make Process        #
+>@# Monitor a basic utility in your system troubleshooting and malware scanning         #
+>@# resource kit.                                                                       #
+>@# 
+>@#-------------------------------------------------------------------------------------#
+>@
+>@-> Install ProcessMonitor
+>@Just go to: https://learn.microsoft.com/fr-fr/sysinternals/downloads/procmon
+>@
+>@-> Check a running process
+>@Click on "Include Process From Window" and stay clicked, then click on a window to
+>@see information about the process.
+>@
+>@####################################################################################### 
+>@

@@ -1,0 +1,54 @@
+ProcessExplorer
+
+Process Explorer displays information about handles and processes opened or loaded 
+by DLLs.
+
+The Process Explorer view consists of two panes. The upper window always displays 
+a list of currently active processes, including the names of their owning accounts, 
+while the information shown in the lower window depends on the mode that Process 
+Explorer is in: if it is in handle mode, you will see the handles that the process 
+selected in the upper window has opened; If Process Explorer is in DLL mode, you 
+will see the DLLs and memory-mapped files that the process has loaded. Process 
+Explorer also has a powerful search functionality that will quickly tell you which 
+processes have particular handles open or DLLs loaded.
+
+-> Install ProcessExplorer
+Just go to https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer
+
+-> Check file with signature
+Click on FIle then "Verify Image Signatures".
+
+-> Select columns you want
+Select "View/Select Colums...".
+
+
+>@
+>@######################################################################################### 
+>@#                                                                                       #
+>@# [ ProcessExplorer ]                                                                   #
+>@#                                                                                       #
+>@# Process Explorer displays information about handles and processes opened or loaded    #
+>@# by DLLs.                                                                              #
+>@#                                                                                       #
+>@# The Process Explorer view consists of two panes. The upper window always displays     #
+>@# a list of currently active processes, including the names of their owning accounts,   #
+>@# while the information shown in the lower window depends on the mode that Process      #
+>@# Explorer is in: if it is in handle mode, you will see the handles that the process    #
+>@# selected in the upper window has opened; If Process Explorer is in DLL mode, you      #
+>@# will see the DLLs and memory-mapped files that the process has loaded. Process        #
+>@# Explorer also has a powerful search functionality that will quickly tell you which    #
+>@# processes have particular handles open or DLLs loaded.                                #
+>@#                                                                                       #
+>@#---------------------------------------------------------------------------------------# 
+>@
+>@-> Install ProcessExplorer
+>@Just go to https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer
+>@
+>@-> Check file with signature
+>@Click on FIle then "Verify Image Signatures".
+>@
+>@-> Select columns you want
+>@Select "View/Select Colums...".
+>@
+>@######################################################################################### 
+>@

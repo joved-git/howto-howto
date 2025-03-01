@@ -1,0 +1,61 @@
+Autoruns
+
+This utility, which has the most comprehensive knowledge of autostart locations 
+of any startup monitor, shows you which programs are configured to run during 
+system startup or login, and when you start various built-in Windows applications 
+like Internet Explorer, Explorer, and Media. players. These programs and drivers 
+include those in your Startup folder, Run, RunOnce, and other registry keys. 
+
+Autoruns reports Explorer shell extensions, toolbars, browser helper objects, 
+Winlogon notifications, autostart services, and much more. Autoruns goes far 
+beyond other autostart utilities.
+
+-> Install Autoruns
+Just go there: https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns
+
+-> Explore startup softwares
+Go to the "Logon" folder and observe.
+
+-> Check an entry by VirusTotal
+Right-click on a line and choose "Check VirusTotal".
+
+-> See softwares you can launch by a right-click on a file (example: Winrar).
+Go to the "Explorer" fodler.
+
+-> Check services
+Go to Services folder.
+
+>@
+>@####################################################################################### 
+>@#                                                                                     #
+>@# [ Autoruns ]                                                                        #
+>@#                                                                                     #
+>@# This utility, which has the most comprehensive knowledge of autostart locations     #
+>@# of any startup monitor, shows you which programs are configured to run during       #
+>@# system startup or login, and when you start various built-in Windows applications   #
+>@# like Internet Explorer, Explorer, and Media. players. These programs and drivers    #
+>@# include those in your Startup folder, Run, RunOnce, and other registry keys.        #
+>@#                                                                                     #
+>@# Autoruns reports Explorer shell extensions, toolbars, browser helper objects,       #
+>@# Winlogon notifications, autostart services, and much more. Autoruns goes far        #
+>@# beyond other autostart utilities.                                                   #
+>@#                                                                                     #
+>@#-------------------------------------------------------------------------------------# 
+>@
+>@-> Install Autoruns
+>@Just go there: https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns
+>@
+>@-> Explore startup softwares
+>@Go to the Logon folder and observe.
+>@
+>@-> Check an entry by VirusTotal
+>@Right-click on a line and choose "Check VirusTotal".
+>@
+>@-> See files you can launch by a richjt-click 
+>@Go to the explorer fodler.
+>@
+>@-> Check services
+>@Go to Services folder.
+>@
+>@####################################################################################### 
+>@

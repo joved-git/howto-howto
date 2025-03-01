@@ -1,0 +1,48 @@
+TCPView
+
+TCPView is a Windows program that displays detailed lists of all TCP and UDP 
+endpoints on your system, including local and remote addresses and TCP 
+connection status. TCPView also shows the name of the process that owns the 
+endpoint. TCPView provides a more informative and easily presented subset of 
+the Netstat program that ships with Windows. The TCPView download includes 
+TCPvcon, a command line version with the same functionality.
+
+-> Install TCPView
+Simply go to https://learn.microsoft.com/fr-fr/sysinternals/downloads/tcpview
+and download it.
+
+-> Use it
+The software is interactive and changes in real time.
+Look at some columns:
+  -The "Remote address" can give you very usefull information.
+  -Ports are on columns "Local Port" and "Remote port".
+  -The state of the connection on "State".
+
+>@
+>@################################################################################## 
+>@#                                                                                #
+>@# [ TCPView ]                                                                    #
+>@#                                                                                #
+>@# TCPView is a Windows program that displays detailed lists of all TCP and UDP   #
+>@# endpoints on your system, including local and remote addresses and TCP         #
+>@# connection status. TCPView also shows the name of the process that owns the    #
+>@# endpoint. TCPView provides a more informative and easily presented subset of   #
+>@# the Netstat program that ships with Windows. The TCPView download includes     #
+>@# TCPvcon, a command line version with the same functionality.                   #
+>@#                                                                                #
+>@#--------------------------------------------------------------------------------#
+>@
+>@
+>@-> Install TCPView
+>@Simply go to https://learn.microsoft.com/fr-fr/sysinternals/downloads/tcpview
+>@and download it.
+>@
+>@-> Use it
+>@The software is interactive and changes in real time.
+>@Look at some columns:
+>@  -The "Remote address" can give you very usefull information.
+>@  -Ports are on columns "Local Port" and "Remote port".
+>@  -The state of the connection on "State".
+>@  
+>@################################################################################## 
+>@

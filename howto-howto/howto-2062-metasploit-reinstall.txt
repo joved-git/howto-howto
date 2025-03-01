@@ -1,0 +1,7 @@
+[ Add here all the process to reinstall Metasploit]
+
+Ruby 3.4
+Install metasploit-framework
+Install gems
+Modify msfconsole script
+...

@@ -59,7 +59,7 @@ Change the password into the config.yaml file.
   $ sudo apt install weplab
 
 * Metasploit
-  To install or reinstall Metasploit, see howto-2060-metasploit-basics.txt
+  To install or reinstall Metasploit, see howto-2062-metasploit-reinstall.txt
 
 >@
 >@#############################################################################################
@@ -119,7 +119,7 @@ Change the password into the config.yaml file.
 >@  $ sudo apt install weplab
 >@
 >@* Metasploit
->@  To install or reinstall Metasploit, see howto-2060-metasploit-basics.txt
+>@  To install or reinstall Metasploit, see howto-2062-metasploit-reinstall.txt
 >@
 >@#############################################################################################
 >@
