@@ -3,6 +3,9 @@ PE | Portable Executable
 PE (Portable Executable) is a container format that is used by Windows to execute 
 a program.
 
+-> Extensions using PE format:
+List: .exe, .dll, .src, .cpl, .ocx, .sys, .drv, .efi, .fon. 
+
 -> Content of a PE file
 You will find:
   -A MS-DOS header (MZ). Used to recognize an executable file.
@@ -30,6 +33,9 @@ You can use 2 tools for that:
 >@#                                                                                    #
 >@#------------------------------------------------------------------------------------# 
 >@
+>@List: .exe, .dll, .src, .cpl, .ocx, .sys, .drv, .efi, .fon. 
+>@
+-> Content of a PE file
 >@-> Content of a PE file
 >@You will find:
 >@  -A MS-DOS header (MZ). Used to recognize an executable file.
