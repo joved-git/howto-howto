@@ -28,7 +28,7 @@ Go to Services folder.
 >@
 >@####################################################################################### 
 >@#                                                                                     #
->@# [ Autoruns ]                                                                        #
+>@# [ Autoruns tool ]                                                                   #
 >@#                                                                                     #
 >@# This utility, which has the most comprehensive knowledge of autostart locations     #
 >@# of any startup monitor, shows you which programs are configured to run during       #

@@ -49,7 +49,7 @@ The following actions and events are currently supported by LastActivityView:
 >@
 >@######################################################################################### 
 >@#                                                                                       #
->@# [ Last Activity View ]                                                                #
+>@# [ Last Activity View | LastActivityView tool ]                                        #
 >@#                                                                                       #
 >@# LastActivityView is a tool for Windows operating system that collects information     #
 >@# from various sources on a running system, and displays a log of actions made by       #

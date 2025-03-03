@@ -1,0 +1,51 @@
+PE | Portable Executable
+
+PE (Portable Executable) is a container format that is used by Windows to execute 
+a program.
+
+-> Content of a PE file
+You will find:
+  -A MS-DOS header (MZ). Used to recognize an executable file.
+  -A Segment DOS. Error message if the PE is not recognized.
+  -The PE header: information, target OS, ...
+  -The Sections table with:
+    .text section: the executable code.
+    .data section: initialized variables.
+    .rsrc section: resource (data) used by the soft: sound, icons, ...
+
+-> How to decode PE header.
+You can use 2 tools for that:
+  -PEStudio: (https://winitor.com/binaries.html). 
+     Drag and drop a file and wait for results.
+  -PEViewer: (http://www.adlice.com/fr/download/roguekillerpe/#download)). 
+     Open the file and wait for results.
+
+>@
+>@###################################################################################### 
+>@#                                                                                    #
+>@# [ PE | Portable Executable ]                                                       #
+>@#                                                                                    #
+>@# PE (Portable Executable) is a container format that is used by Windows to execute  #
+>@# a program.                                                                         #
+>@#                                                                                    #
+>@#------------------------------------------------------------------------------------# 
+>@
+>@-> Content of a PE file
+>@You will find:
+>@  -A MS-DOS header (MZ). Used to recognize an executable file.
+>@  -A Segment DOS. Error message if the PE is not recognized.
+>@  -The PE header: information, target OS, ...
+>@  -The Sections table with:
+>@    .text section: the executable code.
+>@    .data section: initialized variables.
+>@    .rsrc section: resource (data) used by the soft: sound, icons, ...
+>@
+>@-> How to decode PE header.
+>@You can use 2 tools for that:
+>@  -PEStudio: (https://winitor.com/binaries.html). 
+>@     Drag and drop a file and wait for results.
+>@  -PEViewer: (http://www.adlice.com/fr/download/roguekillerpe/#download)). 
+>@     Open the file and wait for results.
+>@
+>@###################################################################################### 
+>@

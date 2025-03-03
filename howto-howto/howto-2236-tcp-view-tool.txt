@@ -21,7 +21,7 @@ Look at some columns:
 >@
 >@################################################################################## 
 >@#                                                                                #
->@# [ TCPView ]                                                                    #
+>@# [ TCPView tool ]                                                               #
 >@#                                                                                #
 >@# TCPView is a Windows program that displays detailed lists of all TCP and UDP   #
 >@# endpoints on your system, including local and remote addresses and TCP         #

@@ -4,7 +4,7 @@ the original code using a tool that is named a Refector.
 Here are differents steps:
 
 1. Install a Reflector
-Into Win10, install Redgat Reflector (red-gate.com/products/reflector/).
+Into Win10, install Redgat Reflector (https://www.red-gate.com/products/reflector/).
 Install it and launch it.
 
 2. A little clening.
@@ -65,7 +65,7 @@ ESAB46 encoder/decoder:  http://qbarbe.free.fr/crypto/eng_esab46c.php
 >@Here are different steps:
 >@
 >@1. Install a Reflector
->@Into Win10, install Redgat Reflector (red-gate.com/products/reflector/).
+>@Into Win10, install Redgat Reflector (https://www.red-gate.com/products/reflector/).
 >@Install it and launch it.
 >@
 >@2. A little clening.

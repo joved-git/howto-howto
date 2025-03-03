@@ -20,7 +20,7 @@ $ sudo aireplay-ng -0 <nb> -a <MAC access point> -c <MAC target> <interface>
 
 -> How to prevent yourself
 -Not easy to prevent and detect DOS attack.
--Use hash to verify the deautjetication request.
+-Use hash to verify the deauthetication request.
 -Find the author of this attack (IP, user) and ask him to stop that.
 -Use wired connections.
 -Use 802.11w norm (Managing Frame Protection).
@@ -49,7 +49,7 @@ $ sudo aireplay-ng -0 <nb> -a <MAC access point> -c <MAC target> <interface>
 >@
 >@-> How to prevent yourself
 >@-Not easy to prevent and detect DOS attack.
->@-Use hash to verify the deautjetication request.
+>@-Use hash to verify the deauthetication request.
 >@-Find the author of this attack (IP, user) and ask him to stop that.
 >@-Use wired connections.
 >@-Use 802.11w norm (it uses Managing frames Protection).

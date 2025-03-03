@@ -1,0 +1,46 @@
+Strings | strings | strings.exe
+
+Working on NT and Win2K means that executables and object files will many times have embedded 
+UNICODE strings that you cannot easily see with a standard ASCII strings or grep programs. 
+So we decided to roll our own. Strings just scans the file you pass it for UNICODE (or ASCII) 
+strings of a default length of 3 or more UNICODE (or ASCII) characters. Note that it works 
+under Windows 95 as well.
+
+-> Install strings
+Strings can run under Windows or Linux.
+On Windows, just go there: https://learn.microsoft.com/en-us/sysinternals/downloads/strings
+On Linux: nothing to do, strings is probably already installed in your distribution.
+
+-> Use it
+$ strings <linux executable> [ > strings.txt ]
+C:> strings.exe <Windows executable> [ > strings.txt ]
+>>> you will see all strings (char strings) that are included into the excutable.
+
+-> Analyze results
+Open the strings.txt file with vi or notepad.ex
+>>> Try to find interesting things.
+
+>@
+>@################################################################################################### 
+>@#                                                                                                 #
+>@# [ Strings tool | strings | strings.exe ]                                                        #
+>@#                                                                                                 #
+>@# Working on NT and Win2K means that executables and object files will many times have embedded   #
+>@# UNICODE strings that you cannot easily see with a standard ASCII strings or grep programs.      #
+>@#                                                                                                 #
+>@# So we decided to roll our own. Strings just scans the file you pass it for UNICODE (or ASCII)   #
+>@# strings of a default length of 3 or more UNICODE (or ASCII) characters. Note that it works      #
+>@# under Windows 95 as well.                                                                       #
+>@#                                                                                                 #
+>@#-------------------------------------------------------------------------------------------------# 
+>@
+>@-> Install strings
+>@Strings can run under Windows or Linux.
+>@On Windows, just go there: https://learn.microsoft.com/en-us/sysinternals/downloads/strings
+>@On Linux: nothing to do, strings is probably already installed in your distribution.
+>@
+>@-> Use it
+>@$ strings <linux executable> [ > strings.txt ]
+>@C:> strings.exe <Windows executable> [ > strings.txt ]
+>@>>> you will see all strings (char strings) that are included into the excutable.
+>@

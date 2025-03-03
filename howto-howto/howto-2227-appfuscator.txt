@@ -1,0 +1,57 @@
+AppFuscator
+
+Appfuscator is smart protection of your .NET applications. Our .NET obfuscator 
+combines a complex approach to protection, easy adjustment and access according 
+to SaaS model which enables to decrease the expenses on your intellectual 
+property protection.
+
+-> Why using Appfuscator
+There  are more reason to use it:
+  -You want to hide your .NET codes to an eventual retro engineering process.
+  -Your codes won't be decompilable.
+  -Hackers want to hide their softwares into another "weird" code.
+
+-> Install the tool
+Go here: https://appfuscator.com/
+
+-> Use it
+Just click on Add files and choose options.
+>>> Your code won't be readable by Reflector.
+
+-> Could my soft be deoppfuscate ?
+Yes, it is possible by using de4dot (see: howto-2228(de4dot.txt)
+
+>@
+>@###################################################################################### 
+>@#                                                                                    #
+>@# [ AppFuscator ]                                                                    #
+>@#                                                                                    #
+>@# Appfuscator is smart protection of your .NET applications. Our .NET obfuscator     #
+>@# combines a complex approach to protection, easy adjustment and access according    #
+>@# to SaaS model which enables to decrease the expenses on your intellectual          #
+>@# property protection.                                                               #
+>@#                                                                                    #
+>@# See: https://appfuscator.com/                                                      #
+>@# See: https://github.com/de4dot/de4dot                                              #
+>@# See: howto-2228-de4dot.txt                                                         #
+>@#                                                                                    #
+>@#------------------------------------------------------------------------------------#
+>@
+>@-> Why using Appfuscator
+>@There  are more reason to use it:
+>@  -You want to hide your .NET codes to an eventual retro engineering process.
+>@  -Your codes won't be decompilable.
+>@  -Hackers want to hide their softwares into another "weird" code.
+>@
+>@-> Install the tool
+>@Go here: https://appfuscator.com/
+>@
+>@-> Use it
+>@Just click on Add files and choose options.
+>@>>> Your code won't be readable by Reflector.
+>@
+>@-> Could my soft be deoppfuscate ?
+>@Yes, it is possible by using de4dot (see: howto-2228(de4dot.txt)
+>@
+>@###################################################################################### 
+>@

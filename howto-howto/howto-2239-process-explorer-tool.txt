@@ -25,7 +25,7 @@ Select "View/Select Colums...".
 >@
 >@######################################################################################### 
 >@#                                                                                       #
->@# [ ProcessExplorer ]                                                                   #
+>@# [ ProcessExplorer tool ]                                                              #
 >@#                                                                                       #
 >@# Process Explorer displays information about handles and processes opened or loaded    #
 >@# by DLLs.                                                                              #

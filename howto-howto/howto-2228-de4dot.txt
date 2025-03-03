@@ -1,0 +1,69 @@
+de4dot
+
+de4dot is an open source (GPLv3) .NET deobfuscator and unpacker written in C#. 
+It will try its best to restore a packed and obfuscated assembly to almost the 
+original assembly. Most of the obfuscation can be completely restored (eg. string 
+encryption), but symbol renaming is impossible to restore since the original 
+names aren't (usually) part of the obfuscated assembly.
+
+It uses dnlib to read and write assemblies so make sure you get it or it won't 
+compile.
+
+See: https://github.com/de4dot/de4dot
+
+-> Install the tool
+Go there: https://github.com/de4dot/de4dot
+Clone the repository and compile the tool.
+>>> you should obtain a de4dot.exe file.
+
+-> Use it
+C:> de4dot.exe <file you want to debfuscate>
+>>> you should obtain a <file you want to deobfuscate>-cleaned.exe file.
+
+-> Does that work all time ?
+No, of course, this tool is not magical. Try it and look at the cleaned result.
+
+-> What do to if the automatic decoding does not work ?
+The solution is to try to find manually a way into the obfucaded code, copy 
+functions, try them, again and again.
+Be patient, there is always a solution.
+
+>@
+>@###################################################################################### 
+>@#                                                                                    #
+>@# [ de4dot ]                                                                         #
+>@#                                                                                    #
+>@# de4dot is an open source (GPLv3) .NET deobfuscator and unpacker written in C#.     #
+>@# It will try its best to restore a packed and obfuscated assembly to almost the     #
+>@# original assembly. Most of the obfuscation can be completely restored (eg. string  #
+>@# encryption), but symbol renaming is impossible to restore since the original       #
+>@# names aren't (usually) part of the obfuscated assembly.                            #
+>@#                                                                                    #
+>@# It uses dnlib to read and write assemblies so make sure you get it or it won't     #
+>@# compile.                                                                           #
+>@#                                                                                    #
+>@# See: https://github.com/de4dot/de4dot                                              #
+>@# See: https://appfuscator.com/                                                      #
+>@# See: howto-2227-appfuscator.txt                                                    #
+>@#                                                                                    #
+>@#------------------------------------------------------------------------------------#
+>@
+>@-> Install the tool
+>@Go there: https://github.com/de4dot/de4dot
+>@Clone the repository and compile the tool.
+>@>>> you should obtain a de4dot.exe file.
+>@
+>@-> Use it
+>@C:> de4dot.exe <file you want to debfuscate>
+>@>>> you should obtain a <file you want to deobfuscate>-cleaned.exe file.
+>@
+>@-> Does that work all time ?
+>@No, of course, this tool is not magical. Try it and look at the cleaned result.
+>@
+>@-> What do to if the automatic decoding does not work ?
+>@The solution is to try to find manually a way into the obfucaded code, copy 
+>@functions, try them, again and again.
+>@Be patient, there is always a solution.
+>@
+>@###################################################################################### 
+>@
