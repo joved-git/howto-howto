@@ -63,13 +63,13 @@ You should see very interesting information, links and examples.
 
 # How to use it (command mode)
 
-Kite allows to run some very useful command. 
+Kite allows to run some very useful commands. 
 
 ```
  $ kite cmd
 ```
 
-You should see a list of available commands. Here is an example.
+You should see a list of available commands. Here is an example:
 
 ```
 ipfor : Used to get/set ip forwarding
