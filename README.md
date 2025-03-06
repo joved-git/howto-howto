@@ -28,7 +28,7 @@ PATH=$PATH:'~/Documents/Script'
 That's all !
 
 
-# How to use it
+# How to use it (howto mode)
 
 If all is OK with your PATH, you can try to the 'list' command:
 
@@ -58,9 +58,27 @@ or
 $ kite ufw
 ```
 
-You should see very intersting information, links and examples.
+You should see very interesting information, links and examples.
 
 
-Try all, create you own, all is possible.
+# How to use it (command mode)
+
+Kite allows to run some very useful command. 
+
+```
+ $ kite cmd
+```
+
+You should see a list of available commands. Here is an example.
+
+```
+ipfor : Used to get/set ip forwarding
+$ kite ipfor [on | off | status]
+```
+
+You have a small manual. It's simple.
+
+
+Try howtos and commands, create you own, all is possible.
 
 Have fun !
