@@ -15,7 +15,7 @@ To take a metaphor, steganography would consist of hiding your money in a statue
 where cryptography would consist of locking it in a safe, and the combination of the two, hiding 
 the safe in a statue.
 
--> what is possible to do
+-> What is possible to do
 In steganography, you can hide what you want like: video, audio, image and document. 
 
 -> Some tools to do steganography
@@ -48,6 +48,12 @@ Some ways:
   -Look for visual artefacts and/or blur.
   -Use special tool like Stego-Suite (http://wetstonetech.com/product/stego-suite)
 
+-> Some online steganography sites
+https://stylesuxx.github.io/steganography/
+https://georgeom.net/StegOnline/image
+https://www.aperisolve.com/cheatsheet
+https://futureboy.us/stegano/decinput.html
+https://www.openstego.com/
 
 >@#####################################################################################################
 >@#                                                                                                   #
@@ -74,7 +80,7 @@ Some ways:
 >@#                                                                                                   #
 >@#---------------------------------------------------------------------------------------------------#
 >@
->@-> what it is possible to do ?
+>@-> What it is possible to do ?
 >@In steganography, you can hide what you want like: video, audio, image and document. 
 >@
 >@-> Some tools to do steganography
@@ -106,6 +112,13 @@ Some ways:
 >@  -Try to compare original image an those with hidden stuff.
 >@  -Look for visual artefacts and/or blur.
 >@  -Use special tool like Stego-Suite (http://wetstonetech.com/product/stego-suite)
+>@
+>@-> Some online steganography sites
+>@https://stylesuxx.github.io/steganography/
+>@https://georgeom.net/StegOnline/image
+>@https://www.aperisolve.com/cheatsheet
+>@https://futureboy.us/stegano/decinput.html
+>@https://www.openstego.com/
 >@
 >@#####################################################################################################
 >@

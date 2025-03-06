@@ -47,6 +47,7 @@ Burp Suite Interception is Off.
   -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
 
 4. Enumeration
+  -Here, the character "§" will replace the character "dollar".
   -On the same login page, retry the connection with admin/pass. 
   -On Burp, click "Forward" until you see the mutillidae POST request. You should see "admin" and "pass".
   -On Burp, choose the "HTTP History" folder then click on the last POST request (on the bottom).
@@ -123,6 +124,7 @@ Burp Suite Interception is Off.
 >@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
 >@
 >@4. Enumeration
+>@  -Here, the character "§" will replace the character "dollar".
 >@  -On the same login page, retry the connection with admin/pass. 
 >@  -On Burp, click "Forward" until you see the mutillidae POST request. You should see "admin" and "pass".
 >@  -On Burp, choose the "HTTP History" folder then click on the last POST request (on the bottom).

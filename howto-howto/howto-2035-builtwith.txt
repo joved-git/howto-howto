@@ -8,7 +8,7 @@ See: howto-0012-intrusion-test.txt
 -> Visit
 https://builtwith.com
 
-You will find 2 intersting folders: one concerning technologies used on 
+You will find 2 interesting folders: one concerning technologies used on 
 the site, the other shows relationships link, other web sites and emails
 linked to the site.
 
@@ -29,7 +29,7 @@ linked to the site.
 >@-> Visit
 >@https://builtwith.com
 >@
->@You will find 2 intersting folders: one concerning technologies used on 
+>@You will find 2 interesting folders: one concerning technologies used on 
 >@the site, the other shows relationships link, other web sites and emails
 >@linked to the site.
 >@

@@ -7,7 +7,11 @@ Here are differents steps:
 Into Win10, install Redgat Reflector (https://www.red-gate.com/products/reflector/).
 Install it and launch it.
 
-2. A little clening.
+1b. Install ILSpy
+ILSpy is a free alternative for Reflector.
+Go to https://github.com/icsharpcode/ILSpy/releases
+
+2. A little cleaning.
 In the left box, remove all entries with Del.
 
 3. Open the .exe file.
@@ -68,7 +72,11 @@ ESAB46 encoder/decoder:  http://qbarbe.free.fr/crypto/eng_esab46c.php
 >@Into Win10, install Redgat Reflector (https://www.red-gate.com/products/reflector/).
 >@Install it and launch it.
 >@
->@2. A little clening.
+>@1b. Install ILSpy
+>@ILSpy is a free alternative for Reflector.
+>@Go to https://github.com/icsharpcode/ILSpy/releases
+>@
+>@2. A little cleaning.
 >@In the left box, remove all entries with Del.
 >@
 >@3. Open the .exe file.

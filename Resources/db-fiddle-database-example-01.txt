@@ -1,0 +1,26 @@
+URL: https://www.db-fiddle.com/
+
+Copy:
+--- 
+CREATE TABLE users (
+  `id` int unsigned NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO users (id, name, firstname, email)
+VALUES (0, 'Patoche', 'Joel', 'jopat@fiddle.net');
+INSERT INTO users (id, name, firstname, email)
+VALUES (1, 'Riddle', 'Marc', 'marid@fiddle.net');
+INSERT INTO users (id, name, firstname, email)
+VALUES (2, 'Brick', 'Stan', 'stbrid@fiddle.net');
+---
+... to the "Schema SQL" box.
+
+Copy:
+---
+select * from users
+---
+... to the "Query SQL" box.

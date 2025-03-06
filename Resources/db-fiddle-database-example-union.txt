@@ -1,0 +1,54 @@
+* URL
+https://www.db-fiddle.com/
+
+
+* Schema
+
+CREATE TABLE users (
+  `id` int unsigned NOT NULL,
+  `pseudo` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO users (id, pseudo, name, firstname, email)
+VALUES (0, 'Monkey', 'Patoche', 'Joel', 'jopat@fiddle.net');
+INSERT INTO users (id, pseudo, name, firstname, email)
+VALUES (1, 'The God', 'Riddle', 'Marc', 'marid@fiddle.net');
+INSERT INTO users (id, pseudo, name, firstname, email)
+VALUES (2, 'Mastepiece', 'Brick', 'Stan', 'stbrid@fiddle.net');
+
+CREATE TABLE perms (
+  `id` int unsigned NOT NULL,
+  `pseudo` varchar(50) NOT NULL,
+  `perm` int unsigned NOT NULL,
+  `validity` int unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO perms (id, pseudo, perm, validity)
+VALUES (0, 'Monkey', 777, 9999);
+INSERT INTO perms (id, pseudo, perm, validity)
+VALUES (1, 'The God', 755, 1000);
+INSERT INTO perms (id, pseudo, perm, validity)
+VALUES (2, 'Mastepiece', 666, 1000);
+INSERT INTO perms (id, pseudo, perm, validity)
+VALUES (3, 'Hourra', 444, 500);
+
+
+* Query
+
+select id, pseudo from users
+union
+select id, pseudo from perms
+
+
+* Result
+
+id 	  pseudo
+0 	  Monkey
+1 	  The God
+2 	  Mastepiece
+3 	  Hourra
