@@ -89,15 +89,15 @@ Usual commands:
 >@
 >@###############################################################################################################################################################################################
 >@                                                                                    |
->@<no option>: scans the first 1000 ports with: ICMP ping | ARP ping (local)          |  <hostname> = 10.0.2.0/24 | 10.0.2.0-255 | 10.0.2.*: scans from 10.0.2.0 to 10.0.2.255
->@                                              TCP SYN on 443 (HTTPS)                |
->@                                              TCP ACK on 80 (web serveur)           |  --exclude: excludes some addresses or ranges
->@                                              ICMP timestamp                        |  
+>@<no option>: scans the first 1000 common ports with: ICMP ping | ARP ping (local)   |  <hostname> = 10.0.2.0/24 | 10.0.2.0-255 | 10.0.2.*: scans from 10.0.2.0 to 10.0.2.255
+>@                                                     TCP SYN on 443 (HTTPS)         |
+>@                                                     TCP ACK on 80 (web serveur)    |  --exclude: excludes some addresses or ranges
+>@                                                     ICMP timestamp                 |  
 >@                                                                                    |  -iL <file>: use a <file> containing IP addresses
 >@-p <port> | -p U:53,T:80 | -p T:http,https: specific port or range (-sU if UDP)     |  
 >@                                                                                    |  -sU: for UDP scan
 >@-PS80,443,1000: specify special ports (here, 80, 443 and 1000 for a TCP SYN (-PS)   |  
->@                                                                                    |  -PS: performs a TCP-SYN on specific ports
+>@                                                                                    |  -p-: performs a scan on all ports (1 to 65535)
 >@-PA: performs a TCK-ACK on specifics ports                                          |  
 >@                                                                                    |  -PU: performs an UDP scan on specific ports
 >@-PR: performs an ARP scan on specific ports                                         |  

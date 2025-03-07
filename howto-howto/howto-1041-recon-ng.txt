@@ -53,7 +53,7 @@ Some examples:
               > options set PROTOCOL https
               > options set SOURCE www.leblogduhacker.fr
               > run
--> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains li ked to an IP address).
+-> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains linked to an IP address).
     Go to https://www.virustotal.com/gui/
     Create account (Signed up) then go to your Account/API keys and copy the key.
     Try with: > keys add virustotal_api <the copied key>
@@ -123,7 +123,7 @@ Some examples:
 >@              > options set SOURCE www.leblogduhacker.fr
 >@              > run
 >@ 
->@-> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains li ked to an IP address).
+>@-> recon/hosts-hosts/virustotal: find info by asking the database Virustotal (domains linked to an IP address).
 >@    Go to https://www.virustotal.com/gui/
 >@    Create account (Signed up) then go to your Account/API keys and copy the key.
 >@    Try with: > keys add virustotal_api <the copied key>

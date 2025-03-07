@@ -5,6 +5,8 @@ hosted services, and obtain information about a remote computer's operating syst
 network administrators because the audit of Nmap results provides information on the security of a network. It is available 
 on Windows, Mac OS X, Linux, BSD and Solaris.
 
+See: https://svn.nmap.org/nmap/nmap-services
+
 Usual commands:
 
 $ nmap <hostname>
@@ -78,6 +80,8 @@ nmap will perform a scan with default scripts (non intrusive and discrete). List
 >@# hosted services, and obtain information about a remote computer's operating system. This software has become a reference for  #
 >@# network administrators because the audit of Nmap results provides information on the security of a network. It is available   #
 >@# on Windows, Mac OS X, Linux, BSD and Solaris.                                                                                 #
+>@#                                                                                                                               #
+>@# See: https://svn.nmap.org/nmap/nmap-services                                                                                  #
 >@#                                                                                                                               #
 >@#-------------------------------------------------------------------------------------------------------------------------------#
 >@
