@@ -1,0 +1,61 @@
+Null Byte Injection (Premature End of String)
+
+Null Byte Injection is a serious attack that consists of polluting the input of a website 
+(often via URL) with a misplaced end of string, to divert its operation.
+
+As with the arbitrary code injection attack, the vulnerability to Null Byte Injection 
+occurs when the inputs are not filtered. The hacker then abuses this trust and aspires 
+to have confidential information that he is not authorized to approach.
+
+The attack is forged based on the special character that represents an end of string. 
+When this character is URL encoded it becomes %00. Its presence in the string 
+immediately terminates it at the place of its declaration. 
+
+For example, if a string received via the URL has the value Hel%00lo, then the actual 
+string that will be processed at runtime is "Hel". The presence of %00 terminates the 
+string prematurely.
+
+-> What can we do whit Null Byte Injection
+
+Stop code everywhere.
+It is possible to stop the code exactly when we want. For example, if a site constructs
+an URL by adding .html to the ?p=index parameter, it is possible to look at another type
+of file by adding %00 at the end of the URL. 
+  ?p=index points to index.html file
+  ?p=admin.php points to admin.php.html
+  ?p=admin.php%00 points to admin.php
+
+>@
+>@############################################################################################### 
+>@#                                                                                             #
+>@# Null Byte Injection (Premature End of String)                                               #
+>@#                                                                                             #
+>@# Null Byte Injection is a serious attack that consists of polluting the input of a website   #
+>@# (often via URL) with a misplaced end of string, to divert its operation.                    #
+>@#                                                                                             #
+>@# As with the arbitrary code injection attack, the vulnerability to Null Byte Injection       #
+>@# occurs when the inputs are not filtered. The hacker then abuses this trust and aspires      #
+>@# to have confidential information that he is not authorized to approach.                     #
+>@#                                                                                             #
+>@# The attack is forged based on the special character that represents an end of string.       #
+>@# When this character is URL encoded it becomes %00. Its presence in the string               #
+>@# immediately terminates it at the place of its declaration.                                  #
+>@#                                                                                             #
+>@# For example, if a string received via the URL has the value Hel%00lo, then the actual       #
+>@# string that will be processed at runtime is "Hel". The presence of %00 terminates the       #
+>@# string prematurely.                                                                         #
+>@#                                                                                             #
+>@#---------------------------------------------------------------------------------------------#
+>@
+>@-> What can we do whit Null Byte Injection
+>@
+>@Stop code everywhere.
+>@It is possible to stop the code exactly when we want. For example, if a site constructs
+>@an URL by adding .html to the ?p=index parameter, it is possible to look at another type
+>@of file by adding %00 at the end of the URL. 
+>@  ?p=index points to index.html file
+>@  ?p=admin.php points to admin.php.html
+>@  ?p=admin.php%00 points to admin.php
+>@
+>@############################################################################################### 
+>@

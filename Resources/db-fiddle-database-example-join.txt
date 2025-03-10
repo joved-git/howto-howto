@@ -41,7 +41,7 @@ select users.id, users.name, perms.perm from users inner join perms where users.
 
 * Result
 
-id    name     perm
+id        name     perm
 0 	 Patoche   777
 1 	 Riddle    755
 2 	 Brick     666
