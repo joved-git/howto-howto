@@ -16,7 +16,6 @@ string that will be processed at runtime is "Hel". The presence of %00 terminate
 string prematurely.
 
 -> What can we do whit Null Byte Injection
-
 Stop code everywhere.
 It is possible to stop the code exactly when we want. For example, if a site constructs
 an URL by adding .html to the ?p=index parameter, it is possible to look at another type
@@ -24,6 +23,13 @@ of file by adding %00 at the end of the URL.
   ?p=index points to index.html file
   ?p=admin.php points to admin.php.html
   ?p=admin.php%00 points to admin.php
+
+-> How to prevent yourself from Null Byte Injection
+At the PHP code level
+  -Avoid to include all pages of the website in the home page at the user's request).
+  -If you still want to work this way, filter the entries and exclude special characters 
+   like %. 
+  -Define the list of names of all the pages that may be called.
 
 >@
 >@############################################################################################### 
@@ -48,7 +54,6 @@ of file by adding %00 at the end of the URL.
 >@#---------------------------------------------------------------------------------------------#
 >@
 >@-> What can we do whit Null Byte Injection
->@
 >@Stop code everywhere.
 >@It is possible to stop the code exactly when we want. For example, if a site constructs
 >@an URL by adding .html to the ?p=index parameter, it is possible to look at another type
@@ -56,6 +61,13 @@ of file by adding %00 at the end of the URL.
 >@  ?p=index points to index.html file
 >@  ?p=admin.php points to admin.php.html
 >@  ?p=admin.php%00 points to admin.php
+>@
+>@-> How to prevent yourself from Null Byte Injection
+>@At the PHP code level
+>@  -Avoid to include all pages of the website in the home page at the user's request).
+>@  -If you still want to work this way, filter the entries and exclude special characters 
+>@   like %. 
+>@  -Define the list of names of all the pages that may be called.
 >@
 >@############################################################################################### 
 >@

@@ -1,0 +1,85 @@
+XPath injection
+
+XPath injection vulnerabilities arise when user-controllable data is incorporated into XPath queries in an 
+unsafe manner. An attacker can supply crafted input to break out of the data context in which their input 
+appears and interfere with the structure of the surrounding query.
+
+Depending on the purpose for which the vulnerable query is being used, an attacker may be able to exploit 
+an XPath injection flaw to read sensitive application data or interfere with application logic.
+
+See: https://www.vaadata.com/blog/fr/injections-xpath-principes-exploitations-et-bonnes-pratiques-securite/
+
+-> How does that work ?
+XPath injection uses the way the query is done by XPath to extrcat data from an XML file.
+Suppose that the query is something like that:
+---
+$query = "//user[username/text()='$username' and password/text()='$password']";
+---
+
+If the result of the query is True, the access is done.
+
+So, suppose, the form asks you an Useranme and a password.
+Simply fill in the form like that:
+Username: [' or true() or ']
+Password: [WHAT_YOU_WANT]
+
+With these entries, the query becomes:
+---
+$query = "//user[username/text()='' or true or '' and password/text()='WHAT_YOU_WANT']";
+---
+
+Miraculously, this query is always True and the access is done.
+
+-> How to prevent yourself from XPath injection.
+Some ideas:
+  -User input should be strictly validated before being incorporated into XPath queries. 
+  -In most cases, it will be appropriate to accept input containing only short alphanumeric strings. 
+  -At the very least, input containing any XPath metacharacters such as " ' / @ = * [ ] ( and ) 
+   should be rejected.
+
+>@
+>@################################################################################################################ 
+>@#                                                                                                              # 
+>@# XPath injection                                                                                              #
+>@#                                                                                                              # 
+>@# XPath injection vulnerabilities arise when user-controllable data is incorporated into XPath queries in an   #
+>@# unsafe manner. An attacker can supply crafted input to break out of the data context in which their input    #
+>@# appears and interfere with the structure of the surrounding query.                                           #
+>@#                                                                                                              # 
+>@# Depending on the purpose for which the vulnerable query is being used, an attacker may be able to exploit    #
+>@# an XPath injection flaw to read sensitive application data or interfere with application logic.              #
+>@#                                                                                                              # 
+>@# See: https://www.vaadata.com/blog/fr/injections-xpath-principes-exploitations-et-bonnes-pratiques-securite/  #
+>@#                                                                                                              # 
+>@#--------------------------------------------------------------------------------------------------------------# 
+>@
+>@-> How does that work ?
+>@XPath injection uses the way the query is done by XPath to extrcat data from an XML file.
+>@Suppose that the query is something like that:
+>@---
+>@$query = "//user[username/text()='$username' and password/text()='$password']";
+>@---
+>@
+>@If the result of the query is True, the access is done.
+>@
+>@So, suppose, the form asks you an Useranme and a password.
+>@Simply fill in the form like that:
+>@Username: [' or true() or ']
+>@Password: [WHAT_YOU_WANT]
+>@
+>@With these entries, the query becomes:
+>@---
+>@$query = "//user[username/text()='' or true or '' and password/text()='WHAT_YOU_WANT']";
+>@---
+>@
+>@Miraculously, this query is always True and the access is done.
+>@
+>@-> How to prevent yourself from XPath injection.
+>@Some ideas:
+>@  -User input should be strictly validated before being incorporated into XPath queries. 
+>@  -In most cases, it will be appropriate to accept input containing only short alphanumeric strings. 
+>@  -At the very least, input containing any XPath metacharacters such as " ' / @ = * [ ] ( and ) 
+>@   should be rejected.
+>@
+>@################################################################################################################ 
+>@
