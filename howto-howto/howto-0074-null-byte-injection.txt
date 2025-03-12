@@ -25,7 +25,7 @@ of file by adding %00 at the end of the URL.
   ?p=admin.php%00 points to admin.php
 
 -> How to prevent yourself from Null Byte Injection
-At the PHP code level
+At the PHP code level:
   -Avoid to include all pages of the website in the home page at the user's request).
   -If you still want to work this way, filter the entries and exclude special characters 
    like %. 
@@ -63,7 +63,7 @@ At the PHP code level
 >@  ?p=admin.php%00 points to admin.php
 >@
 >@-> How to prevent yourself from Null Byte Injection
->@At the PHP code level
+>@At the PHP code level:
 >@  -Avoid to include all pages of the website in the home page at the user's request).
 >@  -If you still want to work this way, filter the entries and exclude special characters 
 >@   like %. 

@@ -19,7 +19,7 @@ See: howto-1076-owasp-top-10-fr.txt
     (administrator, getdir, upload, SearchFile), error hidden (error_reporting() and display_error at 0), 
     file_get_content() and suspicious website.
   -Decode Base-64 code and examine it (just copy/paste Base-64 code to http://www.base64decode.org).
-  -Don't install code from unknown soruces.
+  -Don't install code from unknown sources.
   -Use https://themecheck.info/fr/ to check Wordpress thems.
 
 >@##############################################################################################################################
@@ -46,7 +46,7 @@ See: howto-1076-owasp-top-10-fr.txt
 >@    (administrator, getdir, upload, SearchFile), error hidden (error_reporting() and display_error at 0), 
 >@    file_get_content() and suspicious website.
 >@  -Decode Base-64 code and examine it (just copy/paste Base-64 code to http://www.base64decode.org).
->@  -Don't install code from unknown soruces.
+>@  -Don't install code from unknown sources.
 >@  -Use https://themecheck.info/fr/ to check Wordpress thems.
 >@
 >@##############################################################################################################################

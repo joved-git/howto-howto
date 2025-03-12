@@ -19,7 +19,7 @@ an “asymmetric attack” because of the difference in resources between the pr
 -> Types of DoS
 There are 2 types of denies:
   -DoS: simple DoS: only one source for the attack.
-  -DDoS for Distributed DoS: attack made by several soruces.
+  -DDoS for Distributed DoS: attack made by several sources.
 
 -> Ways to execute a DoS
 There are 2 ways of denies:
@@ -96,7 +96,7 @@ Some interesting sites:
 >@-> Types of DoS
 >@There are 2 types of denies:
 >@  -DoS: simple DoS: only one source for the attack.
->@  -DDoS for Distributed DoS: attack made by several soruces.
+>@  -DDoS for Distributed DoS: attack made by several sources.
 >@
 >@-> Ways to execute a DoS
 >@There are 2 ways of denies:

@@ -1,0 +1,61 @@
+DTMF coding
+
+A DTMF (Dual-Tone Multi-Frequency) or VF (Vocal Frequency) code is a 
+combination of frequencies used for traditional landline telephony 
+(except for voice over IP). The frequencies used are specified by the 
+International Telecommunication Union (ITU) recommendation Q.23. These 
+codes are emitted when a key is pressed on the telephone keypad and are 
+used for dialing telephone numbers (as opposed to older "pulse" 
+telephones, which used a rotary dial) as well as for communicating with 
+interactive voice servers.
+
+-> How does that work ?
+Technically, each key on a telephone corresponds to a pair of two audible 
+frequencies that are emitted simultaneously. In this way, eight distinct 
+frequencies can be used to code sixteen keys. These frequencies can be 
+recognized by electronic devices and are used to create voice servers.
+
+            1 209 Hz   1 336 Hz   1 477 Hz   1 633 Hz
+  697 Hz       1          2          3          A 	
+  770 Hz       4          5          6          B 	
+  852 Hz       7          8          9          C 	
+  941 Hz       *          0          #          D 	
+
+-> Examples
+Thus, the frequency pair corresponding to 1 is (1209 Hz, 697 Hz), that of 
+2 is (1336 Hz, 697 Hz), and so on, up to that of D: (1633 Hz, 941 Hz).
+
+>@
+>@############################################################################## 
+>@#                                                                            #
+>@# [ DTMF coding ]                                                            #
+>@#                                                                            #
+>@# A DTMF (Dual-Tone Multi-Frequency) or VF (Vocal Frequency) code is a       #
+>@# combination of frequencies used for traditional landline telephony         #
+>@# (except for voice over IP). The frequencies used are specified by the      #
+>@# International Telecommunication Union (ITU) recommendation Q.23. These     #
+>@# codes are emitted when a key is pressed on the telephone keypad and are    #
+>@# used for dialing telephone numbers (as opposed to older "pulse"            #
+>@# telephones, which used a rotary dial) as well as for communicating with    #
+>@# interactive voice servers.                                                 #
+>@#                                                                            #
+>@#----------------------------------------------------------------------------# 
+>@
+>@-> How does that work ?
+>@Technically, each key on a telephone corresponds to a pair of two audible 
+>@frequencies that are emitted simultaneously. In this way, eight distinct 
+>@frequencies can be used to code sixteen keys. These frequencies can be 
+>@recognized by electronic devices and are used to create voice servers.
+>@
+>@            1 209 Hz   1 336 Hz   1 477 Hz   1 633 Hz
+>@  697 Hz       1          2          3          A 	
+>@  770 Hz       4          5          6          B 	
+>@  852 Hz       7          8          9          C 	
+>@  941 Hz       *          0          #          D 	
+>@
+>@-> Examples
+>@Thus, the frequency pair corresponding to 1 is (1209 Hz, 697 Hz), that of 
+>@2 is (1336 Hz, 697 Hz), and so on, up to that of D: (1633 Hz, 941 Hz).
+>@
+>@############################################################################## 
+>@
