@@ -58,7 +58,7 @@ http://www.gpg4win.org
 >@
 >@###########################################################################################################################
 >@#                                                                                                                         #
->@# [ PGP | Pretty Good Privacy ]	                                                                                    #
+>@# [ PGP | Pretty Good Privacy ]                                                                                           #
 >@#                                                                                                                         #
 >@# Pretty Good Privacy (which could be translated into French as “fairly good level of confidentiality”), better           #
 >@# known under the acronym PGP, is a hybrid cryptographic algorithm allowing, among other things, to encrypt and sign      #

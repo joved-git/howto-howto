@@ -9,6 +9,9 @@ used for dialing telephone numbers (as opposed to older "pulse"
 telephones, which used a rotary dial) as well as for communicating with 
 interactive voice servers.
 
+See: https://fr.wikipedia.org/wiki/Code_DTMF
+See: https://dtmf.netlify.app/
+
 -> How does that work ?
 Technically, each key on a telephone corresponds to a pair of two audible 
 frequencies that are emitted simultaneously. In this way, eight distinct 
@@ -25,6 +28,10 @@ recognized by electronic devices and are used to create voice servers.
 Thus, the frequency pair corresponding to 1 is (1209 Hz, 697 Hz), that of 
 2 is (1336 Hz, 697 Hz), and so on, up to that of D: (1633 Hz, 941 Hz).
 
+-> Try it
+Locate the file in Resources (dtmf_example.wav) and first listen to tit.
+Use the site https://dtmf.netlify.app/ to decode the .wav.
+
 >@
 >@############################################################################## 
 >@#                                                                            #
@@ -38,6 +45,9 @@ Thus, the frequency pair corresponding to 1 is (1209 Hz, 697 Hz), that of
 >@# used for dialing telephone numbers (as opposed to older "pulse"            #
 >@# telephones, which used a rotary dial) as well as for communicating with    #
 >@# interactive voice servers.                                                 #
+>@#                                                                            #
+>@# See: https://fr.wikipedia.org/wiki/Code_DTMF                               #
+>@# See: https://dtmf.netlify.app/                                             #
 >@#                                                                            #
 >@#----------------------------------------------------------------------------# 
 >@
@@ -56,6 +66,10 @@ Thus, the frequency pair corresponding to 1 is (1209 Hz, 697 Hz), that of
 >@-> Examples
 >@Thus, the frequency pair corresponding to 1 is (1209 Hz, 697 Hz), that of 
 >@2 is (1336 Hz, 697 Hz), and so on, up to that of D: (1633 Hz, 941 Hz).
+>@
+>@-> Try it
+>@Locate the file in Resources (dtmf_example.wav) and first listen to tit.
+>@Use the site https://dtmf.netlify.app/ to decode the .wav.
 >@
 >@############################################################################## 
 >@

@@ -1,0 +1,83 @@
+GPG | GnuPG
+
+GnuPG (or GPG, for GNU Privacy Guard) is the GNU implementation of the OpenPGP standard defined in RFC 48805, distributed under the terms of the 
+GNU General Public License.
+
+This software enables the transmission of signed and encrypted electronic messages, thus guaranteeing their authenticity, integrity, and 
+confidentiality.
+
+See: https://defendtheweb.net/article/how-to-use-gpg
+See: gpg-detailed.txt (Resources)
+
+
+$ gpg --gen-key                                  : Generate a pair of key     |  $ gpg --list-keys                : List your keys
+                                                                              |                     
+$ gpg --delete-secret-keys <ID>                  : Delete a secret key        |  $ gpg --delete--keys <ID>        : Delete a public key
+                                                                              |                   
+$ gpg --armor --output public.asc --export <ID>  : Export a public key        |  $ gpg --import public.asc        : Import a key
+                                                                              |                     
+$ gpg --send-keys <key id>                       : Upload key to a keyserver  |  $ gpg --keyserver keyserver.ubuntu.com --search-key <ID>
+                                                                              |                                   : Search for a key in a server
+                                                                              |                                   : Server is https://pgp.mit.edu
+                                                                         [ GUI mode ]
+                                                                              |                     
+$ gpg -c <file>                                  : Crypt file with passphrase |  $ gpg -d <file.gpg>              : Decrypt  file with passphrase
+                                                                             --- 
+                                                                              |                     
+                                                                       [ cmdline mode ]
+                                                                             --- 
+                                                                              |                     
+$ gpg -c --batch --pashphrase <phrase> <file>    : Crypt file with passphrase |  $ gpg -d --batch --passphrase <phrase> <file.gpg> 
+                                                                              |                                   : Decrypt a file with passphrase
+                                                                              |                     
+$ gpg -encrypt --sign --armor -r <ID> <file>     : Encrypt with a public key  |  $ gpg secret.txt.asc             : Decrypt a file with a key
+                                                 : <ID> is recipient key      |
+                                                                              |                     
+$ gpg --armor --output <file.asc> --sign <file>  : Sign a file                |  $ gpg --verify <file.asc>        : Verify a file  
+                                                                              |                     
+
+>@
+>@###################################################################################################################################################### 
+>@#                                                                                                                                                    #
+>@# [ GPG | GnuPG ]                                                                                                                                    #
+>@#                                                                                                                                                    #
+>@# GnuPG (or GPG, for GNU Privacy Guard) is the GNU implementation of the OpenPGP standard defined in RFC 48805, distributed under the terms of the   #
+>@# GNU General Public License.                                                                                                                        #
+>@#                                                                                                                                                    #
+>@# # This software enables the transmission of signed and encrypted electronic messages, thus guaranteeing their authenticity, integrity, and         #
+>@# confidentiality.                                                                                                                                   #
+>@#                                                                                                                                                    #
+>@# See: https://defendtheweb.net/article/how-to-use-gpg                                                                                               #
+>@# See: gpg-detailed.txt (Resources)                                                                                                                  #
+>@#                                                                                                                                                    #
+>@#----------------------------------------------------------------------------------------------------------------------------------------------------# 
+>@
+>@$ gpg --gen-key                                  : Generate a pair of key     |  $ gpg --list-keys                : List your keys
+>@                                                                              |                     
+>@$ gpg --delete-secret-keys <ID>                  : Delete a secret key        |  $ gpg --delete--keys <ID>        : Delete a public key
+>@                                                                              |                   
+>@$ gpg --armor --output public.asc --export <ID>  : Export a public key        |  $ gpg --import public.asc        : Import a key
+>@                                                                              |                     
+>@$ gpg --send-keys <key id>                       : Upload key to a keyserver  |  $ gpg --keyserver keyserver.ubuntu.com --search-key <ID>
+>@                                                                              |                                   : Search for a key in a server
+>@                                                                              |                                   : Server is https://pgp.mit.edu
+>@                                                                         [ GUI mode ]
+>@                                                                              |                     
+>@$ gpg -c <file>                                  : Crypt file with passphrase |  $ gpg -d <file.gpg>              : Decrypt  file with passphrase
+>@                                                                             --- 
+>@                                                                              |                     
+>@                                                                       [ cmdline mode ]
+>@                                                                             --- 
+>@                                                                              |                     
+>@$ gpg -c --batch --pashphrase <phrase> <file>    : Crypt file with passphrase |  $ gpg -d --batch --passphrase <phrase> <file.gpg> 
+>@                                                                              |                                   : Decrypt a file with passphrase
+>@                                                                              |                     
+>@$ gpg -encrypt --sign --armor -r <ID> <file>     : Encrypt with a public key  |  $ gpg secret.txt.asc             : Decrypt a file with a key
+>@                                                 : <ID> is recipient key      |
+>@                                                                              |                     
+>@$ gpg --armor --output <file.asc> --sign <file>  : Sign a file                |  $ gpg --verify <file.asc>        : Verify a file  
+>@                                                                              |                     
+>@                                                                              |                     
+>@
+>@###################################################################################################################################################### 
+>@

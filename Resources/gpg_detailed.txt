@@ -1,0 +1,151 @@
+# Ref:
+https://www.youtube.com/watch?v=DRt-SE9eZwk
+https://defendtheweb.net/article/how-to-use-gpg
+
+
+# Generate a pair of key:
+$ gpg --gen-key
+---
+gpg (GnuPG) 2.2.45; Copyright (C) 2024 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Remarque : Utilisez « gpg --full-generate-key » pour une fenêtre de dialogue de génération de clef complète.
+
+GnuPG doit construire une identité pour identifier la clef.
+
+Nom réel : Joel Vedrenne
+Adresse électronique : joel.vedrenne@gmail.com
+Vous avez sélectionné cette identité :
+    « Joel Vedrenne <joel.vedrenne@gmail.com> »
+
+Changer le (N)om, l'(A)dresse électronique ou (O)ui/(Q)uitter ? O
+De nombreux octets aléatoires doivent être générés. Vous devriez faire
+autre chose (taper au clavier, déplacer la souris, utiliser les disques)
+pendant la génération de nombres premiers ; cela donne au générateur de
+nombres aléatoires une meilleure chance d'obtenir suffisamment d'entropie.
+De nombreux octets aléatoires doivent être générés. Vous devriez faire
+autre chose (taper au clavier, déplacer la souris, utiliser les disques)
+pendant la génération de nombres premiers ; cela donne au générateur de
+nombres aléatoires une meilleure chance d'obtenir suffisamment d'entropie.
+gpg: répertoire « /home/kali/.gnupg/openpgp-revocs.d » créé
+gpg: revocation certificate stored as '/home/kali/.gnupg/openpgp-revocs.d/46D631B0CB89ABDEE17E99A040FF52A53073562A.rev'
+les clefs publique et secrète ont été créées et signées.
+
+pub   rsa3072 2025-03-12 [SC] [expire : 2028-03-11]
+      46D631B0CB89ABDEE17E99A040FF52A53073562A
+uid                      Joel Vedrenne <joel.vedrenne@gmail.com>
+sub   rsa3072 2025-03-12 [E] [expire : 2028-03-11]
+---
+
+
+# List your keys
+$ gpg --list-keys
+---
+/home/kali/.gnupg/pubring.kbx
+-----------------------------
+pub   rsa3072 2025-03-12 [SC] [expire : 2028-03-11]
+      46D631B0CB89ABDEE17E99A040FF52A53073562A
+uid          [  ultime ] Joel Vedrenne <joel.vedrenne@gmail.com>
+sub   rsa3072 2025-03-12 [E] [expire : 2028-03-11]
+---
+
+
+# Delete a key (private then public, respect this order)
+$ gpg --delete-secret-keys <ID, example 46D631B0CB89ABDEE17E99A040FF52A53073562A>
+
+>>> system asks for confirmation.
+
+$ gpg --delete--keys <ID, example 46D631B0CB89ABDEE17E99A040FF52A53073562A>
+
+>>> system asks for confirmation.
+
+
+# Export/Imoort  your keys
+
+1. Export your public key
+
+The simplest way to share your key is to export it as an ASCII armoured file and send it 
+to whomever you want to recieve messages from. This file can be emailed or shared online.
+
+$ gpg --armor --output public.asc --export <email>  
+
+2. Import and validate public key
+
+You can then import the public key into your keyring by:
+
+$ gpg --import public.asc
+
+
+# Submit your public key to a key server
+
+A more convenient way is to upload it to a public keyserver. Key servers are…
+MIT hosts a popular keyserver: https://pgp.mit.edu
+Ubuntu also: keyserver.ubuntu.com
+
+1. Find the key ID for the public key you want to upload
+
+$ gpg --list-keys <email>  
+
+You will see a long HEX value in the pub row, this is the ID for this public key.
+
+2. Upload your key to a keyserver:
+
+$ gpg --send-keys <key id>
+
+
+# Crypt/decrypt a file with a passphrase (GUI mode)
+$ gpg -c secret.txt
+
+>>> system asks for a passphrase.
+>>> system creates a secret.txt.gpg file.
+
+$ gpg -d secret.txt
+
+>>> system asks for a passphrase.
+>>> system creates a secret.txt.gpg file.
+
+# Crypt/decrypt a file with a passphrase (command line mode)
+$ gpg -c --batch --pashphrase <passphrase here without space> secret.txt
+
+>>> system creates a secret.txt.gpg file.
+
+$ gpg -d --batch --passphrase <passphrase here without space> secret.txt
+
+>>> system creates a secret.txt.gpg file.
+
+
+# Encrypt with a public key
+$ gpg -encrypt --sign --armor -r <email | name | ID> secret.txt
+
+with <email | name | id>: the email|name|id related to the key that will be used 
+to encrypt/decrypt.
+
+So, if you will send a message to Paul, you have to encrypt the message with the 
+Paul's public key.
+
+>>> system asks you the passphrase related to the key used to crypt (yours).
+>>> system creates a secret.txt.asc file.
+
+$ gpg secret.txt.asc
+
+>>> the system asks you the passphrase to decrypt the message (recipient's key).
+>>> the system extracts data and create secret.txt file.
+
+
+# Message verification
+
+GPG can digitally sign a document to verify its authenticity and integrity. 
+A recipient can inspect the signature and confirm that it does come from the 
+expected sender and that the content has been unmodified.
+
+$ gpg --armor --output signedfile.asc --sign <file>  
+
+Once the recipient has recieved the file they can verify the signature and extra 
+the content:
+
+$ gpg --verify signedfile.asc  
+
+If the signature is valid it will output details about the signature including 
+when and by whom it was signed.
+
