@@ -27,8 +27,8 @@ Select "IP traffic monitor" to begin a capture.
 -> Add filters
 From the main menu, click on "Filters ..." then choose the type (IP, ARP, ...).
 Choose "Define new filter ...", git it a name and click on "i" to insert filter data.
-  -Don't forget to place "255.255.255.255" if yo want to filter on an IP address.
-  -To select a protocol, place a "Y" in the case just after the protocol.
+  -Don't forget to place "255.255.255.255" if you want to filter on an IP address.
+  -To select a protocol, place a "Y" in the box just after the protocol.
 
 >@
 >@###############################################################################################################
@@ -65,8 +65,8 @@ Choose "Define new filter ...", git it a name and click on "i" to insert filter 
 >@-> Add filters
 >@From the main menu, click on "Filters ..." then choose the type (IP, ARP, ...).
 >@Choose "Define new filter ...", git it a name and click on "i" to insert filter data.
->@  -Don't forget to place "255.255.255.255" if yo want to filter on an IP address.
->@  -To select a protocol, place a "Y" in the case just after the protocol.
+>@  -Don't forget to place "255.255.255.255" if you want to filter on an IP address.
+>@  -To select a protocol, place a "Y" in the box just after the protocol.
 >@
 >@###############################################################################################################
 >@
