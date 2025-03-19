@@ -71,18 +71,18 @@ Continue with: "Step over": do not enter the code.
                "Steo out": go out a "Step into ...".
 
 >@
->@#################################################################################################
->@#                                                                                               #
->@# [ PyCharm ]                                                                                   #
->@#                                                                                               #
->@# PyCharm is an integrated development environment (IDE) used for programming in Python.        #
->@# It provides code analysis, a graphical debugger, an integrated unit tester, integration       #
->@# with version control systems, and supports web development with Django. PyCharm is            #
->@# developed by the Czech company JetBrains and built on their IntelliJ platform.                #
->@#                                                                                               #
->@# See: https://www.jetbrains.com/fr-fr/pycharm/                                                 #
->@#                                                                                               #
->@#-----------------------------------------------------------------------------------------------#
+>@#####################################################################################################
+>@#                                                                                                   #
+>@# [ PyCharm ]                                                                                       #
+>@#                                                                                                   #
+>@# PyCharm is an integrated development environment (IDE) used for programming in Python.            #
+>@# It provides code analysis, a graphical debugger, an integrated unit tester, integration with      #
+>@# version control systems, and supports web development with Django. PyCharm is developed by the    #
+>@# Czech company JetBrains and built on their IntelliJ platform.                                     #
+>@#                                                                                                   #
+>@# See: https://www.jetbrains.com/fr-fr/pycharm/                                                     #
+>@#                                                                                                   #
+>@#---------------------------------------------------------------------------------------------------#
 >@
 >@-> First launching
 >@$ cd /opt/Pycharm/bin
@@ -139,5 +139,5 @@ Continue with: "Step over": do not enter the code.
 >@               "Step into my code": only go into my code.
 >@               "Steo out": go out a "Step into ...".
 >@
->@#################################################################################################
+>@#####################################################################################################
 >@
