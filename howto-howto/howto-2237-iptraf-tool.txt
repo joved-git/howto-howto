@@ -1,0 +1,72 @@
+IPTraf | iptraf
+
+Iptraf is a network monitoring program that allows you to analyze network traffic 
+entering and leaving your server, as well as your local network traffic.
+See: https://www.informatiweb-pro.net/admin-systeme/linux/monitoring-reseau-en-temps-reel-avec-iptraf.html
+
+-> What iptraf will allow you
+Here are some examples:
+  -Detect DDOS attacks and determine the attacker's IP address (unless the hacker is using a botnet for 
+     their DDOS attack).
+  -Find out who is using the most bandwidth on your network or internet connection.
+  -Detect the use of file-sharing software (which consumes a lot of network traffic) such as eMule, 
+     BitTorrent, etc.*
+
+-> Install iptraf
+$ sudo apt install iptraf-ng
+
+-> Use it
+$ sudo iptraf
+
+Select "Configure" and set to ON (hit Enter) : Reverse DNS lookups
+                                               Force promiscuous mode
+Click "x" to return from anywhere.
+
+Select "IP traffic monitor" to begin a capture.
+
+-> Add filters
+From the main menu, click on "Filters ..." then choose the type (IP, ARP, ...).
+Choose "Define new filter ...", git it a name and click on "i" to insert filter data.
+  -Don't forget to place "255.255.255.255" if yo want to filter on an IP address.
+  -To select a protocol, place a "Y" in the case just after the protocol.
+
+>@
+>@###############################################################################################################
+>@#                                                                                                             #
+>@# [ IPTraf | iptraf | IP Traffic ]                                                                            #
+>@#                                                                                                             #
+>@# Iptraf is a network monitoring program that allows you to analyze network traffic entering and leaving your #
+>@# server, as well as your local network traffic.                                                              #
+>@#                                                                                                             #
+>@# See: https://www.informatiweb-pro.net/admin-systeme/linux/monitoring-reseau-en-temps-reel-avec-iptraf.html  #
+>@#                                                                                                             #
+>@#-------------------------------------------------------------------------------------------------------------# 
+>@
+>@-> What iptraf is going to do for you ?
+>@Here are some examples:
+>@  -Detect DDOS attacks and determine the attacker's IP address (unless the hacker is using a botnet for 
+>@     their DDOS attack).
+>@  -Find out who is using the most bandwidth on your network or internet connection.
+>@  -Detect the use of file-sharing software (which consumes a lot of network traffic) such as eMule, 
+>@     BitTorrent, etc.*
+>@
+>@-> Install iptraf
+>@$ sudo apt install iptraf-ng
+>@
+>@-> Use it
+>@$ sudo iptraf
+>@
+>@Select "Configure" and set to ON (hit Enter) : Reverse DNS lookups
+>@                                               Force promiscuous mode
+>@Click "x" to return from anywhere.
+>@
+>@Select "IP traffic monitor" to begin a capture.
+>@
+>@-> Add filters
+>@From the main menu, click on "Filters ..." then choose the type (IP, ARP, ...).
+>@Choose "Define new filter ...", git it a name and click on "i" to insert filter data.
+>@  -Don't forget to place "255.255.255.255" if yo want to filter on an IP address.
+>@  -To select a protocol, place a "Y" in the case just after the protocol.
+>@
+>@###############################################################################################################
+>@

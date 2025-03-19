@@ -1,0 +1,66 @@
+Reverse engeneering
+
+Reverse engineering (also known as backwards engineering or back engineering) is a process 
+or method through which one attempts to understand through deductive reasoning how a 
+previously made device, process, system, or piece of software accomplishes a task with very 
+little (if any) insight into exactly how it does so. Depending on the system under 
+consideration and the technologies employed, the knowledge gained during reverse engineering 
+can help with repurposing obsolete objects, doing security analysis, or learning how 
+something works.
+
+See: https://hex-rays.com/ida-free
+
+
+-> List of processes
+You can do all these process to understand and decode an executable:
+
+* xdd: the xdd command displays raw content of the file.
+
+* strings: use strings to display embedded strings.
+
+* Use a disassembler to see mnemonics:
+$ objdump -d -Mintel cracking2.exe
+This is a good beginning.
+
+* Use Ida to go deeper and deeper.
+Install it: https://my.hex-rays.com/
+Launch Ida, open an executable file and look at this incredible view of your files.
+
+/!\ Windows files could be opened with an IDA on Linux.
+
+>@
+>@#################################################################################################
+>@#                                                                                               #
+>@# [ Reverse engeneering ]                                                                       #
+>@#                                                                                               #
+>@# Reverse engineering (also known as backwards engineering or back engineering) is a process    #
+>@# or method through which one attempts to understand through deductive reasoning how a          #
+>@# previously made device, process, system, or piece of software accomplishes a task with very   #
+>@# little (if any) insight into exactly how it does so. Depending on the system under            #   
+>@# consideration and the technologies employed, the knowledge gained during reverse engineering  #
+>@# can help with repurposing obsolete objects, doing security analysis, or learning how          #
+>@# something works.                                                                              #
+>@#                                                                                               #
+>@# See: https://hex-rays.com/ida-free                                                            #
+>@#                                                                                               #
+>@#-----------------------------------------------------------------------------------------------# 
+>@
+>@-> List of processes
+>@You can do all these process to understand and decode an executable:
+>@
+>@* xdd: the xdd command displays raw content of the file.
+>@
+>@* strings: use strings to display embedded strings.
+>@
+>@* Use a disassembler to see mnemonics:
+>@$ objdump -d -Mintel cracking2.exe
+>@This is a good beginning.
+>@
+>@* Use Ida to go deeper and deeper.
+>@Install it: https://my.hex-rays.com/
+>@Launch IDA, open an executable file and look at this incredible view of your files.
+>@
+>@/!\ Windows files could be opened with an IDA on Linux.
+>@
+>@#################################################################################################
+>@

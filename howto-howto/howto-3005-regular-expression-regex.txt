@@ -27,6 +27,7 @@ See: https://regex101.com/
     Example: RE <a*+a> confronted to 'aaaa' gives nothing.
              RE <a*+b>> confronted to 'bab' gives 'b' and 'ab'.
 {m} : the exact number of previous RE. Example: a{3} will match exactly 'aaa'.
+{m,} : m times or mor of previous RE. 
 {m,n} : from m to n number of previous RE. 
     Example: RE a{3,5} confronted to 'aaaaaa' gives: 'aaa', 'aaaa' and 'aaaaa'.
 {m,n}? : from m to n number of previous RE (but minimalist). 
@@ -89,6 +90,7 @@ And so many more, see links above.
 >@    Example: RE <a*+a> confronted to 'aaaa' gives nothing.
 >@             RE <a*+b>> confronted to 'bab' gives 'b' and 'ab'.
 >@{m} : the exact number of previous RE. Example: a{3} will match exactly 'aaa'.
+>@{m,} : m times or mode of previous RE. 
 >@{m,n} : from m to n number of previous RE. 
 >@    Example: RE a{3,5} confronted to 'aaaaaa' gives: 'aaa', 'aaaa' and 'aaaaa'.
 >@{m,n}? : from m to n number of previous RE (but minimalist). 
