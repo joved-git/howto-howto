@@ -93,7 +93,7 @@ themselves and their data.
 >@  -Threats
 >@  -Need help.
 >@  -Use imposture and ignorance.
->@ -Make him uncomfortable.
+>@  -Make him uncomfortable.
 >@
 >@-> What abilities to have ?
 >@  -Be a liar.
@@ -111,7 +111,7 @@ themselves and their data.
 >@  -Verify identidies and information.
 >@
 >@-> How to avoid attacks
->@>@  -Limit global access or/and information.
+>@  -Limit global access or/and information.
 >@  -To record and check access.
 >@  -Be conscious of security policies.
 >@  -Be careful of equipments.
