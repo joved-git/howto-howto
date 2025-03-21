@@ -4,6 +4,7 @@ SIEM solution that helps businesses send and receive real-time information
 about malicious hosts on networks.
 
 See: howto-1065-threat-intelligence.txt
+See: https://otx.alienvault.com/preview
 
 -> What is SIEM ?
 Security Information and Event Management (SIEM) is a field of computer 
@@ -44,6 +45,7 @@ attack and who was behind it.
 >@# about malicious hosts on networks.                                                #
 >@#                                                                                   #
 >@# See: howto-1065-threat-intelligence.txt                                           #
+>@# See: https://otx.alienvault.com/preview                                           #
 >@#                                                                                   #
 >@#-----------------------------------------------------------------------------------#
 >@

@@ -9,7 +9,39 @@ detection at the beginning of a large-scale attack (APT).
 
 See: howto-1064-apt-advanced-persistent-threat.txt
 See: https://otx.alienvault.com/preview
+See: https://attack.mitre.org/
+See: howto-2510-alienvault-online-tool.txt
+See: howto-2515-mitre-attack-online-tool.txt
 
 -> Examples of tool
 Here are a list of tools:
-  -AlienVault. See: howto-2510-alienvault-online-tool.txt
+  -AlienVault.    howto-2510-alienvault-online-tool.txt
+  -Mitre Att&ck:  howto-2515-mitre-attack-online-tool.txt
+
+>@
+>@########################################################################################
+>@#                                                                                      #
+>@# Threat Intelligence (TI) | Cyber Threat Intelligence (CTI)                           #
+>@#                                                                                      #
+>@# Threat Intelligence, or Cyber Threat Intelligence (CTI), is a discipline based on    #
+>@# intelligence techniques, which aims to collect and organize all information related  #
+>@# to cyber threats (cyber attacks), in order to draw up a portrait of attackers or     #
+>@# highlight trends (affected sectors of activity, method used, etc.). This profiling   #
+>@# allows for better defense and to better anticipate different incidents by allowing   #
+>@# detection at the beginning of a large-scale attack (APT).                            #
+>@#                                                                                      #
+>@#--------------------------------------------------------------------------------------# 
+>@
+>@See: howto-1064-apt-advanced-persistent-threat.txt
+>@See: https://otx.alienvault.com/preview
+>@See: https://attack.mitre.org/
+>@See: howto-2510-alienvault-online-tool.txt
+>@See: howto-2515-mitre-attack-online-tool.txt
+>@
+>@-> Examples of tool
+>@Here are a list of tools:
+>@  -AlienVault.    howto-2510-alienvault-online-tool.txt
+>@  -Mitre Att&ck:  howto-2515-mitre-attack-online-tool.txt
+>@
+>@########################################################################################
+>@
