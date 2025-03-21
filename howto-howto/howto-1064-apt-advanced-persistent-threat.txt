@@ -1,0 +1,52 @@
+APT
+
+An Advanced Persistent Threat (often abbreviated as APT) initially refers to 
+a type of stealthy and continuous computer hacking targeting a specific entity.
+
+The term Advanced Persistent Threat is also commonly used metonymically to 
+refer to actors operating APTs (also known as "APT groups").
+
+-> What an APT is exactly ?
+There is some confusion over whether the term APT refers to an attack or a 
+group but the distinction is not necessarily a significant problem since an APT 
+attack is necessarily produced and controlled by a group, and a group takes on 
+the character of an APT only if it has produced such an attack.
+
+-> What an APT must be ?
+As its name suggests, an APT must be:
+  -Sophisticated: The attack is highly technical, allowing it to stealthily 
+     penetrate the information systems of sophisticated actors, particularly 
+     large companies or governments.
+  -Persistent: The attack is capable of remaining in these systems for long 
+     periods of time and acting within them or extracting information without 
+     being detected.
+
+>@
+>@##################################################################################### 
+>@# [ APT ]                                                                           #
+>@#                                                                                   #
+>@# An Advanced Persistent Threat (often abbreviated as APT) initially refers to      #
+>@# a type of stealthy and continuous computer hacking targeting a specific entity.   #
+>@#                                                                                   #
+>@# The term Advanced Persistent Threat is also commonly used metonymically to        #
+>@# refer to actors operating APTs (also known as "APT groups").                      #
+>@#                                                                                   #
+>@#-----------------------------------------------------------------------------------#
+>@
+>@-> What an APT is exactly ?
+>@There is some confusion over whether the term APT refers to an attack or a 
+>@group but the distinction is not necessarily a significant problem since an APT 
+>@attack is necessarily produced and controlled by a group, and a group takes on 
+>@the character of an APT only if it has produced such an attack.
+>@
+>@-> What an APT must be ?
+>@As its name suggests, an APT must be:
+>@  -Sophisticated: The attack is highly technical, allowing it to stealthily 
+>@     penetrate the information systems of sophisticated actors, particularly 
+>@     large companies or governments.
+>@  -Persistent: The attack is capable of remaining in these systems for long 
+>@     periods of time and acting within them or extracting information without 
+>@     being detected.
+>@
+>@##################################################################################### 
+>@

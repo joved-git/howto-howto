@@ -1,0 +1,81 @@
+AlienVault
+
+SIEM solution that helps businesses send and receive real-time information 
+about malicious hosts on networks.
+
+See: howto-1065-threat-intelligence.txt
+
+-> What is SIEM ?
+Security Information and Event Management (SIEM) is a field of computer 
+security in which software products and services combine security information 
+management and security event management.
+
+-> What is an IOC ?
+During a cybersecurity incident, indicators of compromise (IOCs) are clues 
+and evidence of a data breach. These digital fragments can reveal not only 
+that an attack has occurred, but also, most often, what tools were used in the 
+attack and who was behind it.
+
+-> How to use AlienVault
+1. Create an account.
+2. Once created, you will see the "Dashboard" with a graphical current
+   vulnerabilities (bubbles).
+3. You will see (on the rigth) a list of pulses. A pulse is a vulnerability 
+   summary with all available information. You will find, for example, IOCs aka
+   Indicator OF Compromition. Click on one Pulse to see details: title, creator,
+   description, IOC, reference, tag(s), target land(s), Attack IDS.
+   IOC (see above).
+4. The "Browse" folder gives you all available Pulses. You can see "Users", 
+   "Groups", "Indicators" (IOCs and you can filter on these IOCs), "Malware families",
+   " Industries" and "Adversaries" (black hacker groups). There are APTs.
+5. The fodler "Scan Endpoints": a new generation anti-malwares. You can make a scan
+   related to a Pulse. Install the Endpoint software on your machine an scan for
+   different Pulse(s).
+6. You can create your own Pulse with the folder "Create Pulse".
+7. "Submit sample" can be used to propose a file or an URL for analyse.
+8. The last folder is the API folder to use AlienVault in other softwares.
+   
+>@
+>@##################################################################################### 
+>@#                                                                                   #
+>@# [ AlienVault ]                                                                    #
+>@#                                                                                   #
+>@# SIEM solution that helps businesses send and receive real-time information        #
+>@# about malicious hosts on networks.                                                #
+>@#                                                                                   #
+>@# See: howto-1065-threat-intelligence.txt                                           #
+>@#                                                                                   #
+>@#-----------------------------------------------------------------------------------#
+>@
+>@-> What is SIEM ?
+>@Security Information and Event Management (SIEM) is a field of computer 
+>@security in which software products and services combine security information 
+>@management and security event management.
+>@
+>@-> What is an IOC ?
+>@During a cybersecurity incident, indicators of compromise (IOCs) are clues 
+>@and evidence of a data breach. These digital fragments can reveal not only 
+>@that an attack has occurred, but also, most often, what tools were used in the 
+>@attack and who was behind it.
+>@
+>@-> How to use AlienVault
+>@1. Create an account.
+>@2. Once created, you will see the "Dashboard" with a graphical current
+>@   vulnerabilities (bubbles).
+>@3. You will see (on the rigth) a list of pulses. A pulse is a vulnerability 
+>@   summary with all available information. You will find, for example, IOCs aka
+>@   Indicator OF Compromition. Click on one Pulse to see details: title, creator,
+>@   description, IOC, reference, tag(s), target land(s), Attack IDS.
+>@   IOC (see above).
+>@4. The "Browse" folder gives you all available Pulses. You can see "Users", 
+>@   "Groups", "Indicators" (IOCs and you can filter on these IOCs), "Malware families",
+>@   " Industries" and "Adversaries" (black hacker groups). There are APTs.
+>@5. The fodler "Scan Endpoints": a new generation anti-malwares. You can make a scan
+>@   related to a Pulse. Install the Endpoint software on your machine an scan for
+>@   different Pulse(s).
+>@6. You can create your own Pulse with the folder "Create Pulse".
+>@7. "Submit sample" can be used to propose a file or an URL for analyse.
+>@8. The last folder is the API folder to use AlienVault in other softwares.
+>@   
+>@##################################################################################### 
+>@
