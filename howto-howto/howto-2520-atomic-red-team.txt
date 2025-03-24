@@ -1,0 +1,102 @@
+Atomic Red Team
+
+Atomic Red Team is an open source library of tests designed to test your 
+organization's security controls, and this website is designed to help security 
+teams better understand Atomic Red Team and the related collection of free and 
+open source tools.
+This is an utilization of Att&ck for Pentesting and used to detect different 
+techniques.
+
+See: https://github.com/redcabaryco/atomic-red-team
+See: howto-1065-threat-intelligence.txt                                          
+See: https://attack.mitre.org/                                                   
+
+-> What can you find here ?
+Go to https://github.com/redcabaryco/atomic-red-team
+On the "atomic" folder, you will find all existing techniques.
+For a specific Technique, you will have:
+  -a README file that describes the Technique, gives the Att&ck
+   description and gives Atomic tests. A Atomic test is a concrete
+   test used to apply the Technique.
+
+In the Technique folder, you will find source code used for the
+Technique and the different Matrixes.
+     
+-> How do that work ?
+Here is an example:
+1. Click on Atomic/Indexes/Indexes-Markdown/linux-index.md then find
+   "discovery" as a pararaph descriptor.
+2. Click on "T1033 System Owner/User Discovery" to have different tests.
+3. To use all that, go to https://github.com/redcanaryco/invoke-atomicredteam
+   to install and use tool for automatic behaviours.
+   Scroll and click on "Installation and Usage instructions" then "Installation"
+   on the top-right. Note that you have to install "PowerShell Core on Linux".
+   Follow instruction "Installing PowerShell Core on Linux" and install the tool:
+     -Install Powershell Core (follow instructions).
+     -Install the Framework: 
+      PS> Install-Module -Name invoke-atomicredteam,powershell-yaml -Scope CurrentUser
+      Confirm A (Yes to all).
+     -Install Atomic folders:
+      PS> IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam\
+          /master/install-atomicredteam.ps1' -UseBasicParsing); \
+          Install-AtomicRedTeam -getAtomics
+
+4. Use AtomicRedTeam
+Suppose you want to execute the Technique T1059.004. Type:
+PS> Invoke-AtomicTest T1059.004
+>>> All tests are played.
+
+>@
+>@############################################################################################# 
+>@#                                                                                           #
+>@# [ Atomic Red Team ]                                                                       #
+>@#                                                                                           #
+>@# Atomic Red Team is an open source library of tests designed to test your organization's   #
+>@# security controls, and this website is designed to help security teams better understand  #
+>@# Atomic Red Team and the related collection of free and open source tools.                 #
+>@#                                                                                           #
+>@# This is an utilization of Att&ck for Pentesting and used to detect different techniques.  #
+>@#                                                                                           #
+>@# See: https://github.com/redcabaryco/atomic-red-team                                       #
+>@# See: howto-1065-threat-intelligence.txt                                                   #
+>@# See: https://attack.mitre.org/                                                            #
+>@#                                                                                           #
+>@#-------------------------------------------------------------------------------------------# 
+>@
+>@-> What can you find here ?
+>@Go to https://github.com/redcabaryco/atomic-red-team
+>@On the "atomic" folder, you will find all existing techniques.
+>@For a specific Technique, you will have:
+>@  -a README file that describes the Technique, gives the Att&ck
+>@   description and gives Atomic tests. A Atomic test is a concrete
+>@   test used to apply the Technique.
+>@
+>@In the Technique folder, you will find source code used for the
+>@Technique and the different Matrixes.
+>@     
+>@-> How do that work ?
+>@Here is an example:
+>@1. Click on Atomic/Indexes/Indexes-Markdown/linux-index.md then find
+>@   "discovery" as a pararaph descriptor.
+>@2. Click on "T1033 System Owner/User Discovery" to have different tests.
+>@3. To use all that, go to https://github.com/redcanaryco/invoke-atomicredteam
+>@   to install and use tool for automatic behaviours.
+>@   Scroll and click on "Installation and Usage instructions" then "Installation"
+>@   on the top-right. Note that you have to install "PowerShell Core on Linux".
+>@   Follow instruction "Installing PowerShell Core on Linux" and install the tool:
+>@     -Install Powershell Core (follow instructions).
+>@     -Install the Framework: 
+>@      PS> Install-Module -Name invoke-atomicredteam,powershell-yaml -Scope CurrentUser
+>@      Confirm A (Yes to all).
+>@     -Install Atomic folders:
+>@      PS> IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam\
+>@          /master/install-atomicredteam.ps1' -UseBasicParsing); \
+>@          Install-AtomicRedTeam -getAtomics
+>@
+>@4. Use AtomicRedTeam
+>@Suppose you want to execute the Technique T1059.004. Type:
+>@PS> Invoke-AtomicTest T1059.004
+>@>>> All tests are played.
+>@
+>@############################################################################################# 
+>@

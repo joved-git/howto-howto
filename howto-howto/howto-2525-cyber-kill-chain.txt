@@ -1,0 +1,99 @@
+Kill Chain | Cyber Kill Chain
+
+The kill chain principle refers in the field of information systems security to a method of 
+modeling intrusion processes on a computer network[1].
+
+                                             _____
+                                            /     \
+            Reconnaisance   ------------>  |   1   |
+                                            \_____/
+    Harvesting  email addresses            _____
+    conference informationn etc           /     \
+                                         |   2   |  <------------ Weaponization
+                                          \_____/ 
+                                             _____       Coupling exploit with backdoor
+                                            /     \          into delivery payload
+               Delivery   -------------->  |   3   |
+                                            \_____/
+    Delivering weaponized bundle to the    _____
+      victim via email, web, USB, etc     /     \
+                                         |   4   |  <------------ Exploitation
+                                          \_____/ 
+                                             _____      Exploiting a vulnerability to execute
+                                            /     \           code on victim's system
+             Installation   ------------>  |   5   |
+                                            \_____/
+    Installing malware on the asset        _____
+                                          /     \
+                                         |   6   |  <------------ Command & Control (C2)
+                                          \_____/ 
+                                             _____         Command channel for remote
+                                            /     \          manipulation of victim
+        Actions on objectives   -------->  |   7   |
+                                            \_____/
+  With "hands on keyboard" access 
+    intruders accomplish their 
+          original goals
+
+
+1. Find information about victim.
+2. Prepare weapons (Web page, malicious email, malicious software).
+3. Attacker delivers malicious content to the victim.
+4. Execute the malware, exploit vulnerability.
+5. Install durable access and/or new software.
+6. Attacker remotely manipulates the victim's machine.
+7. Attacker reaches his objectives. 
+
+>@
+>@#################################################################################################### 
+>@#                                                                                                  #
+>@# [ Kill Chain | Cyber Kill Chain ]                                                                #
+>@#                                                                                                  #
+>@# The kill chain principle refers in the field of information systems security to a method of      #
+>@# modeling intrusion processes on a computer network.                                              # 
+>@#                                                                                                  #
+>@#--------------------------------------------------------------------------------------------------# 
+>@
+>@                                             _____
+>@                                            /     \
+>@            Reconnaisance   ------------>  |   1   |
+>@                                            \_____/
+>@    Harvesting  email addresses            _____
+>@    conference informationn etc           /     \
+>@                                         |   2   |  <------------ Weaponization
+>@                                          \_____/ 
+>@                                             _____       Coupling exploit with backdoor
+>@                                            /     \          into delivery payload
+>@               Delivery   -------------->  |   3   |
+>@                                            \_____/
+>@    Delivering weaponized bundle to the    _____
+>@      victim via email, web, USB, etc     /     \
+>@                                         |   4   |  <------------ Exploitation
+>@                                          \_____/ 
+>@                                             _____      Exploiting a vulnerability to execute
+>@                                            /     \           code on victim's system
+>@             Installation   ------------>  |   5   |
+>@                                            \_____/
+>@    Installing malware on the asset        _____
+>@                                          /     \
+>@                                         |   6   |  <------------ Command & Control (C2)
+>@                                          \_____/ 
+>@                                             _____         Command channel for remote
+>@                                            /     \          manipulation of victim
+>@        Actions on objectives   -------->  |   7   |
+>@                                            \_____/
+>@  With "hands on keyboard" access 
+>@    intruders accomplish their 
+>@          original goals
+>@
+>@
+>@1. Find information about victim.
+>@2. Prepare weapons (Web page, malicious email, malicious software).
+>@3. Attacker delivers malicious content to the victim.
+>@4. Execute the malware, exploit vulnerability.
+>@5. Install durable access and/or new software.
+>@6. Attacker remotely manipulates the victim's machine.
+>@7. Attacker reaches his objectives. 
+>@
+>@#################################################################################################### 
+>@

@@ -35,13 +35,14 @@ The differents menus are:
   -Navigator: you can create and modify your own matrices.
 
 -> Att&ck summary
-                                 [ Blue Team ] ------------------.
-                                       |                          \
-                                       |                           \
-                               has detection for                    \
-                                       |                             \
-                                       |                              \
-                                       v                               v
+
+         [ intel team ]          [ Blue Team ] ------------------.
+               |                       |                          \
+               |                       |                           \
+            intels                has detection for              has available 
+               |                       |                             \
+               |                       |                              \
+               v                       v                               v
            [ Group ] ---uses---> [ Technique ] ---logged in---> [ Data Source ] 
                |                    ^  |  ^
                |                   /   |   \
@@ -55,3 +56,69 @@ The differents menus are:
                                        |
                                        v
                                    [ Tactic ]  
+
+>@
+>@####################################################################################
+>@#                                                                                  #
+>@# [ Mitre Att&ck ]                                                                 #
+>@#                                                                                  #
+>@# Mitre Att&ck® is a globally-accessible knowledge base of adversary tactics       #
+>@# and techniques based on real-world observations. The Att&ck knowledge base       #
+>@# is used as a foundation for the development of specific threat models and        #
+>@# methodologies in the private sector, in government, and in the cybersecurity     #
+>@# product and service community.                                                   #
+>@#                                                                                  #
+>@# See: howto-1065-threat-intelligence.txt                                          #
+>@# See: https://attack.mitre.org/                                                   #
+>@#                                                                                  #
+>@#----------------------------------------------------------------------------------#
+>@
+>@-> The Att&ck interface is based on "TTP"
+>@What TTP means:
+>@  -Tactics: the goals of attacker. The "why" ?
+>@  -Techniques: how the hacker do ?
+>@  -Procedures: steps to achieve Techniques.
+>@
+>@-> What Mitre Att&ck proposes ?
+>@The search box is used to retrieve information on any subject.
+>@TAnnnn is used for Tactics.
+>@Tmmmm  is used for Techniques.
+>@DSpppp is used for Data Sources.
+>@Mqqqq  is used for Mitigations.
+>@Grrrr  is used for Groups.
+>@
+>@The differents menus are:
+>@  -Matrices: by column, you will find different Tactics.
+>@  -Tactics: list different tactics. For each Tactic, you can find associated 
+>@     Techniques.
+>@  -Techniques
+>@  -Defenses: you can see Data sources (example Application logs).
+>@             you can see Mitigations.
+>@  -CTI: you can find criminal groups (APTnn)
+>@  -Navigator: you can create and modify your own matrices.
+>@
+>@-> Att&ck summary
+>@
+>@         [ intel team ]          [ Blue Team ] ------------------.
+>@               |                       |                          \
+>@               |                       |                           \
+>@            intels                has detection for              has available 
+>@               |                       |                             \
+>@               |                       |                              \
+>@               v                       v                               v
+>@           [ Group ] ---uses---> [ Technique ] ---logged in---> [ Data Source ] 
+>@               |                    ^  |  ^
+>@               |                   /   |   \
+>@              uses                /    |    \
+>@               |           implements  |  mitigates
+>@               |                /      |      \
+>@               v               /       |       \
+>@          [ Software ] -------.        |        .-----> [ Mitigation ]
+>@                                 accomplishes
+>@                                       |
+>@                                       |
+>@                                       v
+>@                                   [ Tactic ]  
+>@
+>@####################################################################################
+>@
