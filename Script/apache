@@ -9,6 +9,7 @@ if [ a$1 = a -o a$1 = astatus ];
 then
 	echo
 	sudo service apache2 status | grep Active
+	echo
 fi
 
 if [ a$1 = astart ];
@@ -16,6 +17,7 @@ then
 	sudo service apache2 start > /dev/null
 	echo
 	sudo service apache2 status | grep Active
+	echo
 fi
 
 if [ a$1 = astop ];
@@ -23,6 +25,7 @@ then
 	sudo service apache2 stop > /dev/null
 	echo
 	sudo service apache2 status | grep Active
+	echo
 fi
 
 if [ a$1 = arestart ];
@@ -30,4 +33,5 @@ then
 	sudo service apache2 restart > /dev/null
 	echo
 	sudo service apache2 status | grep Active
+	echo
 fi

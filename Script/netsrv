@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+
+# CMD
+# CONT:Used to stop and start network service
+# OPT:kite netsrv [stop| start | restart | status]
+
+if [ a$1 = astop ];
+then
+	sudo systemctl stop networking
+	echo
+	sudo systemctl status networking | grep Active
+	echo
+fi
+
+if [ a$1 = astart ];
+then
+	sudo systemctl start networking
+	echo
+	sudo systemctl status networking | grep Active
+	echo
+fi
+
+if [ a$1 = arestart ];
+then
+	sudo systemctl restart networking
+	echo
+	sudo systemctl status networking | grep Active
+	echo
+fi
+
+if [ a$1 = astatus ];
+then
+	echo
+	sudo systemctl status networking | grep Active
+	echo
+fi

@@ -24,6 +24,12 @@ Techniques and tools (pratically):
    indicators, ...
 -> viewdns.info (viwdns.info): used to find DNS, whois, ..., requests and reverse's ones.
 -> Censys (search.censys.io) and CRT (crt.sh): search for certificates.
+-> VirusTotal () could be used to retrieve information about DNS, whois and certificats.
+-> CRT (crt.sh) is a site specialized in the search of certifiats. Interesting to see links.
+-> WhatCMS (whatcms.org) and BuildWith (buildwith.com) could be used to retrieve technologies on
+   the given site. 
+-> The code source (given by Ctrl-U on every web page) could contain very interesting things that
+   is not public and could not be shared. /!\ Look at commentaries in the code.
 -> traceroute and ping tools: location and path to reach a machine.
 -> Use of https://www.iplocation.net: IP address location.
 -> Use of https://web.archive.org: archive all sites before very long time (go back).
@@ -63,6 +69,12 @@ Techniques and tools (pratically):
 >@   indicators, ...
 >@-> viewdns.info (viewdns.info): used to find DNS, whois, ..., requests and reverse's ones.
 >@-> Censys (search.censys.io) and CRT (crt.sh): search for certificates.
+>@-> VirusTotal () could be used to retrieve information about DNS, whois and certificats.
+>@-> CRT (crt.sh) is a site specialized in the search of certifiats. Interesting to see links.
+>@-> WhatCMS (whatcms.org) and BuildWith (buildwith.com) could be used to retrieve technologies on
+>@   the given site. 
+>@-> The code source (given by Ctrl-U on every web page) could contain very interesting things that
+>@   is not public and could not be shared. /!\ Look at commentaries in the code.
 >@-> traceroute and ping tools: location and path to reach a machine.
 >@-> Use of https://www.iplocation.net: IP address location.
 >@-> Use of https://web.archive.org: archive all sites before very long time (go back).
