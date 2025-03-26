@@ -23,6 +23,7 @@ Techniques and tools (pratically):
    addresses and details, domain names, HTTP scripts and source codes, images, behaviours, cookies,
    indicators, ...
 -> viewdns.info (viwdns.info): used to find DNS, whois, ..., requests and reverse's ones.
+-> Censys (search.censys.io) and CRT (crt.sh): search for certificates.
 -> traceroute and ping tools: location and path to reach a machine.
 -> Use of https://www.iplocation.net: IP address location.
 -> Use of https://web.archive.org: archive all sites before very long time (go back).
@@ -61,6 +62,7 @@ Techniques and tools (pratically):
 >@   addresses and details, domain names, HTTP scripts and source codes, images, behaviours, cookies,
 >@   indicators, ...
 >@-> viewdns.info (viewdns.info): used to find DNS, whois, ..., requests and reverse's ones.
+>@-> Censys (search.censys.io) and CRT (crt.sh): search for certificates.
 >@-> traceroute and ping tools: location and path to reach a machine.
 >@-> Use of https://www.iplocation.net: IP address location.
 >@-> Use of https://web.archive.org: archive all sites before very long time (go back).

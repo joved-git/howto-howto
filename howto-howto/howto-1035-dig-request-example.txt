@@ -1,5 +1,5 @@
 -> How to do some special researches with dig
-Here, we emulate classical DND request.
+Here, we emulate classical DNS request.
 
 * Retrieve authoritative information.
 $ dig @a.root-servers.net SOA FR
@@ -9,14 +9,14 @@ $ dig @a.root-servers.net SOA FR
 $ dig @d.nic.fr SOA google.fr
 >>> the server gives the 4 authoritative servers.
 
-* Retrive IP information
+* Retrieve IP information
 $ dig @ns1.google.com A google.fr
 
 >@
 >@########################################################
 >@
 >@-> How to do some special researches with dig
->@Here, we emulate classical DND request.
+>@Here, we emulate classical DNS request.
 >@
 >@* Retrieve authoritative information.
 >@$ dig @a.root-servers.net SOA FR
@@ -26,7 +26,7 @@ $ dig @ns1.google.com A google.fr
 >@$ dig @d.nic.fr SOA google.fr
 >@>>> the server gives the 4 authoritative servers.
 >@
->@* Retrive IP information
+>@* Retrieve IP information
 >@$ dig @ns1.google.com A google.fr
 >@
 >@########################################################

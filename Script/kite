@@ -1,15 +1,17 @@
 #!/bin/bash
 # Monkey - 2021 / 2025
+# Version = 1.4
 
 WHERE=`echo $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`
 SRC_DIR=$WHERE/../howto-howto
+VER=`grep '# Version' $0 | head -1 | awk -F'=' '{ print $2 }'`
 
 if [ "x$1" = "x-v" -o "x$1" = "x--version" ];
 #if [ x$1 = x-v ];
 then
-	echo $WHERE
 	echo
-	echo "kali [ "`cat $WHERE/../version`" ]"
+	echo "kite [$VER ]"
+	echo "data [ "`cat $WHERE/../version`" ]"
 	echo
 	exit 0
 fi
@@ -96,6 +98,7 @@ else
 	FILENAME=$(ls $SRC_DIR/*$1*)
 	FN=`echo $FILENAME | awk -F'/' '{ print $NF }'`
 	
-	grep '>@' $FILENAME | awk -F'@' '{ print $2 }' | more
+	#grep '>@' $FILENAME | awk -F'@' '{ print $2 }' | more
+	grep '>@' $FILENAME | cut -c3- | more
 	echo "[" $FN "]"
 fi

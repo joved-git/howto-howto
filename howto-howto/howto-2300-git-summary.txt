@@ -82,11 +82,11 @@ $ git tag <tag> <tag>^{} -f -a              -> change previous tag message
 >@$ git branch -f <branch> <sha>                                         |   # Move branch to specific tag
 >@                                                                       |   $ git branch -f <branch> <tag>
 >@# Annul the last 'git pull'                                            |   
->@$ git reset --keep HEAD&{1}                            /!\ & = arobase |   # Annul the last 'git merge'
+>@$ git reset --keep HEAD@{1}                                            |   # Annul the last 'git merge'
 >@                                                                       |   $ git merge - abort
 >@# Annul the last 'git rebase'                                          |
->@$ git reflog                     -> find commit you want (ie HEAD&{N}) |
->@$ git reset HEAD&{N}                                                   |
+>@$ git reflog                     -> find commit you want (ie HEAD@{N}) |
+>@$ git reset HEAD@{N}                                                   |
 >@                                                                       |
 >@# Play with tag                                                        |
 >@$ git tag -a <tag> -m "<message>"           -> create tag

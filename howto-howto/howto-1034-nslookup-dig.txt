@@ -3,27 +3,30 @@ response to client requests. Resolvers must be able to access at least
 one name server and use that name server’s information to answer a query 
 directly, or pursue the query using referrals to other name servers.
 
-Basic command
+Some usefull commands used to find IP address from hostname or domain name:
+
+$ nslookup <host>
+>>> Basic request.
 
 $ nslookup -type=mx <host>
-Gives mail server
+>>> Gives mail server.
 
 $ nslookup -type=soa <host>
-Gives the authoritative server for <host>
+>>> Gives the authoritative server for <host>.
 
 $ nslookup <host> <soa>
-Executes an authoritative request using <soa>
+>>> Executes an authoritative request using the DNS server <soa>.
 
              --------------
 
 $ dig <host>
-Basic command
+>>> Basic request.
 
-$ dig <host> soa
-Gives the authoritative server for <host>
+$ dig soa <host>
+>>> Gives the authoritative server for <host>.
  
-$ dig <host> <soa>
-Executes an authoritative request using <soa>
+$ dig @<soa> <host>
+>>> Executes an authoritative request using the DNS server <soa>.
 
              --------------
 
@@ -33,7 +36,7 @@ https://toolbox.googleapps.com
 >@
 >@#############################################################################
 >@#                                                                           #
->@# [ DNS resolver | lslookup | dig ]                                         #
+>@# [ DNS resolver | nslookup | dig ]                                         #
 >@#                                                                           #
 >@# Resolvers are programs that extract information from name servers in      #
 >@# response to client requests. Resolvers must be able to access at least    # 
@@ -44,28 +47,30 @@ https://toolbox.googleapps.com
 >@#                                                                           #
 >@#############################################################################
 >@
+>@Some usefull commands used to find IP address from hostname or domain name:
+>@
 >@$ nslookup <host>
->@Basic command
+>@>>> Basic request.
 >@
 >@$ nslookup -type=mx <host>
->@Gives mail server
+>@>>> Gives mail server.
 >@
 >@$ nslookup -type=soa <host>
->@Gives the authoritative server for <host>
+>@>>> Gives the authoritative server for <host>.
 >@
 >@$ nslookup <host> <soa>
->@Executes an authoritative request using <soa>
+>@>>> Executes an authoritative request using the DNS server <soa>.
 >@
 >@             --------------
 >@
 >@$ dig <host>
->@Basic command
+>@>>> Basic request.
 >@
->@$ dig <host> soa
->@Gives the authoritative server for <host>
+>@$ dig soa <host>
+>@>>> Gives the authoritative server for <host>.
 >@ 
->@$ dig <host> <soa>
->@Executes an authoritative request using <soa>
+>@$ dig @<soa> <host>
+>@>>> Executes an authoritative request using the DNS server <soa>.
 >@
 >@             --------------
 >@
