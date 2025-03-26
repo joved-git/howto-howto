@@ -42,6 +42,7 @@ https://viewdns.info
 >@#                                                                  #
 >@# See: https://viewdns.info                                        #
 >@# See: howto-0012-intrusion-test.txt                               #
+>@# See: howto-1012-intrusion-1-discovery.txt                        #
 >@# See: howto-1039-whois.txt                                        #
 >@#                                                                  #
 >@#------------------------------------------------------------------#

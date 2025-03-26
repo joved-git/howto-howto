@@ -22,10 +22,11 @@ Techniques and tools (pratically):
 -> urlscan (www.urlscan.io) is used to scan a domain name and extract information (linked IP 
    addresses and details, domain names, HTTP scripts and source codes, images, behaviours, cookies,
    indicators, ...
+-> viewdns.info (viwdns.info): used to find DNS, whois, ..., requests and reverse's ones.
 -> traceroute and ping tools: location and path to reach a machine.
 -> Use of https://www.iplocation.net: IP address location.
 -> Use of https://web.archive.org: archive all sites before very long time (go back).
--> Maltego: collect and analyse data and construct links between entities (graphical tool).
+-> Maltego: collects and analyse data and construct links between entities (graphical tool).
 -> recon-ng: command line tool used to automate identification tasks.
 
 >@
@@ -59,11 +60,12 @@ Techniques and tools (pratically):
 >@-> urlscan (www.urlscan.io) is used to scan a domain name and extract information (linked IP 
 >@   addresses and details, domain names, HTTP scripts and source codes, images, behaviours, cookies,
 >@   indicators, ...
+>@-> viewdns.info (viewdns.info): used to find DNS, whois, ..., requests and reverse's ones.
 >@-> traceroute and ping tools: location and path to reach a machine.
 >@-> Use of https://www.iplocation.net: IP address location.
 >@-> Use of https://web.archive.org: archive all sites before very long time (go back).
->@-> Maltego: collect and analyse data and construct links between entities (graphical tool).
->@-> recon-ng: command line used to automate identification tasks.
+>@-> Maltego: collects and analyse data and construct links between entities (graphical tool).
+>@-> recon-ng: command line tool used to automate identification tasks.
 >@
 >@###################################################################################################
 >@
