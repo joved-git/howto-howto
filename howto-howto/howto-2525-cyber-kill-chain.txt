@@ -25,15 +25,15 @@ modeling intrusion processes on a computer network[1].
                                             \_____/
     Installing malware on the asset        _____
                                           /     \
-                                         |   6   |  <------------ Command & Control (C2)
+                                         |   6   |  <------- Command & Control (C2)
                                           \_____/ 
                                              _____         Command channel for remote
                                             /     \          manipulation of victim
         Actions on objectives   -------->  |   7   |
                                             \_____/
-  With "hands on keyboard" access 
-    intruders accomplish their 
-          original goals
+   With "hands on keyboard" access 
+     intruders accomplish their 
+           original goals
 
 
 1. Find information about victim.
@@ -60,7 +60,7 @@ modeling intrusion processes on a computer network[1].
 >@                                            \_____/
 >@    Harvesting  email addresses            _____
 >@    conference informationn etc           /     \
->@                                         |   2   |  <------------ Weaponization
+>@                                         |   2   |  <----------- Weaponization
 >@                                          \_____/ 
 >@                                             _____       Coupling exploit with backdoor
 >@                                            /     \          into delivery payload
@@ -76,15 +76,15 @@ modeling intrusion processes on a computer network[1].
 >@                                            \_____/
 >@    Installing malware on the asset        _____
 >@                                          /     \
->@                                         |   6   |  <------------ Command & Control (C2)
+>@                                         |   6   |  <-------- Command & Control (C2)
 >@                                          \_____/ 
->@                                             _____         Command channel for remote
->@                                            /     \          manipulation of victim
+>@                                             _____          Command channel for remote
+>@                                            /     \           manipulation of victim
 >@        Actions on objectives   -------->  |   7   |
 >@                                            \_____/
->@  With "hands on keyboard" access 
->@    intruders accomplish their 
->@          original goals
+>@   With "hands on keyboard" access 
+>@     intruders accomplish their 
+>@           original goals
 >@
 >@
 >@1. Find information about victim.

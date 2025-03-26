@@ -32,7 +32,6 @@ There are domain name providers who guarantee a certain level of anonymity in th
 >@# coordination between network engineers to resolve a technical problem, or searching for the     #
 >@# holder of a domain name by a company that would like to obtain it.                              #
 >@#                                                                                                 #
->@#                                                                                                 #
 >@#-------------------------------------------------------------------------------------------------#
 >@
 >@-> Online tools

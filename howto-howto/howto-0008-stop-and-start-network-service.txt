@@ -1,0 +1,27 @@
+Commands to stop, start and restart network service.
+
+-> Stop network service
+$ sudo /etc/init.d/networking stop
+
+-> Start network service
+$ sudo /etc/init.d/networking start
+
+-> Restart network service
+$ sudo /etc/init.d/networking restart
+
+>@
+>@#######################################################
+>@
+>@Commands to stop, start and restart network service.
+>@
+>@-> Stop network service
+>@$ sudo /etc/init.d/networking stop
+>@
+>@-> Start network service
+>@$ sudo /etc/init.d/networking start
+>@
+>@-> Restart network service
+>@$ sudo /etc/init.d/networking restart
+>@
+>@#######################################################
+>@

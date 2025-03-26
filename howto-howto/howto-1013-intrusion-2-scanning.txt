@@ -1,6 +1,6 @@
 Basics:
 -> Based on the reconnaissance phase.
--> Try to establish precise technical informations.
+-> Try to establish precise technical information.
 -> Try to find opened ports, who can I scan ? Which service are present ?
 -> Try to study the OS.
 -> Used to find actuel defenses and vulnerabilities.
@@ -26,7 +26,7 @@ How to prevent yourself from network scanning:
 >@#------------------------------------------------------------------------#
 >@Basics:
 >@-> Based on the reconnaissance phase.
->@-> Try to establish precise technical informations.
+>@-> Try to establish precise technical information.
 >@-> Try to find opened ports, who can I scan ? Which service are present ?
 >@-> Try to study the OS.
 >@-> Used to find actuel defenses and vulnerabilities.

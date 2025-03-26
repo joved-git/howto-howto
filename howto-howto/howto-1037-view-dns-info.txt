@@ -1,64 +1,79 @@
-ViewDNS.info is a web site that allows so many type of searches.
+ViewDNS (https://viewdns.info) is a web site that allows so many 
+type of searches.
 
--> What it could do
+-> What could it do ?
 
-[ Domain / IP Whois ]
-  Whois request.
+[ Whois Lookup ]
+  >>> Used to make classical whois requests.
+
+[ Reverse Whois Lookup ]
+  >>> Reverse search from email or a name.
 
 [ DNS record lookup ]
-  DNS record request.
+  >>> Information about DNS records (A, AAAA, MX, SOA, NS...).
+
+[ DNS Report ]
+  >>> Precise DNS information.
 
 [ Is my site down ]
-  Check if a site is down.
+  >>> Check whether a site is down for everyone or not.
 
 [ Reverse MX Lookup ]
-  Search for domain that use a specific mail server.
+  >>> Find all sites that use a given mail server.
 
 [ IP History ]
-  -See the historic of IP address for a site.
+  >>> Show historical IP addresses for a domain.
 
 [ Reverse IP Lookup ]
-  Find domain for an IP address hosted by the same server.
+  >>> Find all sites hosted on a given server.
 
-It could be very useful to retrieve old information about 
-a site during the intrusion discovery process.
+It could be very useful to retrieve old information about a site 
+during the intrusion discovery process.
 
 -> Visit
 https://viewdns.info
 
 >@
 >@####################################################################
->@#                                      .                           #
->@# [ ViewDNS.info ]                                                 #
 >@#                                                                  #
->@# ViewDNS.info is a web site that allows so many type of searches. #
+>@# [ ViewDNS ]                                                      #
 >@#                                                                  #
+>@# ViewDNS is a web site that allows so many type of searches.      #
+>@#                                                                  #
+>@# See: https://viewdns.info                                        #
 >@# See: howto-0012-intrusion-test.txt                               #
+>@# See: howto-1039-whois.txt                                        #
 >@#                                                                  #
 >@#------------------------------------------------------------------#
 >@
->@-> What it could do
+>@-> What could it do ?
 >@
->@[ Domain / IP Whois ]
->@  Whois request.
+>@[ Whois Lookup ]
+>@  >>> Used to make classical whois requests.
+>@
+>@[ Reverse Whois Lookup ]
+>@  >>> Reverse search from email or a name.
 >@
 >@[ DNS record lookup ]
->@  DNS record request.
+>@  >>> Information about DNS records (A, AAAA, MX, SOA, NS...).
+>@
+>@[ DNS Report ]
+>@  >>> Precise DNS information.
 >@
 >@[ Is my site down ]
->@  Check if a site is down.
+>@  >>> Check whether a site is down for everyone or not.
 >@
 >@[ Reverse MX Lookup ]
->@  Search for domain that use a specific mail server.
+>@  >>> Find all sites that use a given mail server.
 >@
 >@[ IP History ]
->@  -See the historic of IP address for a site.
+>@  >>> Show historical IP addresses for a domain.
 >@
 >@[ Reverse IP Lookup ]
->@  Find domain for an IP address hosted by the same server.
+>@  >>> Find all sites hosted on a given server.
 >@
->@It could be very useful to retrieve old information about 
->@a site during the intrusion discovery process.
+>@It could be very useful to retrieve old information about a site 
+>@during the intrusion discovery process.
 >@
 >@-> Visit
 >@https://viewdns.info

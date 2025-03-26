@@ -1,7 +1,8 @@
 Basics:
 -> Use to learn everything about the target (who, what, where, when and how ?).
 -> To establish an ID of the target.
--> It uses active identification (onto the place) or passive one (via internet).
+-> It uses active identification (onto the place) or passive one (via internet or without 
+   interaction).
 
 About techniques (large sens):
 -> Internet (whois, legal mentions, ...)
@@ -10,17 +11,22 @@ About techniques (large sens):
 -> Off line but more direct (dumpster diving, trash and bin, shoulder surfing, eaves dropping, ...)
 
 Techniques and tools (pratically):
--> Google hacking: find informations very thinly.
--> Shodan: to finf connected equipenents.
+
+-> Google hacking: find information very thinly. !!! Use Advances search !!!
+-> Boardreader (www.boardreader.com): search into forum and discussion sites.
+-> Shodan (www.shodan.io) : to find connected equipements and easily metadata. !!! Use filters !!!
 -> TinEye: to find sites from images/photos..
--> nslookup/dig: to retrieve informations from a host name.
+-> nslookup/dig: to retrieve information from a host name.
 -> Use one email to find accesses to multiple sites.  
--> whois records: to retrieve public informations concerning a web site.
--> traceroute and ping tools: localisation and path to reach a machine.
--> Use of https://www.iplocation.net: IP address localisation.
+-> whois (www.whois.com/whois): used to retrieve public information concerning a web site.
+-> urlscan (www.urlscan.io) is used to scan a domain name and extract information (linked IP 
+   addresses and details, domain names, HTTP scripts and source codes, images, behaviours, cookies,
+   indicators, ...
+-> traceroute and ping tools: location and path to reach a machine.
+-> Use of https://www.iplocation.net: IP address location.
 -> Use of https://web.archive.org: archive all sites before very long time (go back).
 -> Maltego: collect and analyse data and construct links between entities (graphical tool).
--> recon-ng: outil (command prompt tool) used to automate identification tasks.
+-> recon-ng: command line tool used to automate identification tasks.
 
 >@
 >@###################################################################################################
@@ -32,7 +38,8 @@ Techniques and tools (pratically):
 >@Basics:
 >@-> Use to learn everything about the target (who, what, where, when and how ?).
 >@-> To establish an ID of the target.
->@-> It uses active identification (onto the place) or passive one (via internet).
+>@-> It uses active identification (onto the place) or passive one (via internet or without 
+>@   interaction).
 >@
 >@About techniques (large sens):
 >@-> Internet (whois, legal mentions, ...)
@@ -41,17 +48,22 @@ Techniques and tools (pratically):
 >@-> Off line but more direct (dumpster diving, trash and bin, shoulder surfing, eaves dropping, ...)
 >@
 >@Techniques and tools (pratically):
->@-> Google hacking: find informations very thinly.
->@-> Shodan: to finf connected equipenents.
+>@
+>@-> Google hacking: find information very thinly. !!! Use Advanced search !!!
+>@-> Boardreader (www.boardreader.com): search into forum and discussion sites.
+>@-> Shodan (www.shodan.io) : to find connected equipements and easily metadata. !!! Use filters !!!
 >@-> TinEye: to find sites from images/photos..
->@-> nslookup/dig: to retrieve informations from a host name.
+>@-> nslookup/dig: to retrieve information from a host name.
 >@-> Use one email to find accesses to multiple sites.  
->@-> whois records: to retrieve public informations concerning a web site.
->@-> traceroute and ping tools: localisation and path to reach a machine.
->@-> Use of https://www.iplocation.net: IP address localisation.
+>@-> whois (www.whois.com/whois): used to retrieve public information concerning a web site.
+>@-> urlscan (www.urlscan.io) is used to scan a domain name and extract information (linked IP 
+>@   addresses and details, domain names, HTTP scripts and source codes, images, behaviours, cookies,
+>@   indicators, ...
+>@-> traceroute and ping tools: location and path to reach a machine.
+>@-> Use of https://www.iplocation.net: IP address location.
 >@-> Use of https://web.archive.org: archive all sites before very long time (go back).
 >@-> Maltego: collect and analyse data and construct links between entities (graphical tool).
->@-> recon-ng: outil (command prompt tool) used to automate identification tasks.
+>@-> recon-ng: command line used to automate identification tasks.
 >@
 >@###################################################################################################
 >@

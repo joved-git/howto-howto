@@ -13,7 +13,7 @@ $ nmap <hostname>
 Scans the first 1000 ports of hostname with:
 	> ICMP ping | ARP ping (local)
 	> TCP SYN on 443 (HTTPS)
-	> TCP ACK on 80 (web serveur)
+	> TCP ACK on 80 (web server)
 	> ICMP timestamp
 
 $ nmap 10.0.2.0/24 | 10.0.2.0-255 | 10.0.2.*

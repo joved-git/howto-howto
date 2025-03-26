@@ -59,8 +59,8 @@ How to process afterward:
 
 1. Here copy and pste "Apache/2.2.8" onto Google to see vulnerabilities.
 2. Click on the first result: "Apache HTTP Server 2.2 vulnerabilities"
-3. Search for the CVE given reference(s) (example CVE-2010-045) on https://www.cvedetails.com/cve/CVE-2010-0425/ for more informations.
-4. Search directly at https://www.cvedetails.com/cve/CVE-2010-0425/ for more informations.
+3. Search for the CVE given reference(s) (example CVE-2010-045) on https://www.cvedetails.com/cve/CVE-2010-0425/ for more information.
+4. Search directly at https://www.cvedetails.com/cve/CVE-2010-0425/ for more information.
 5. Search for the OSVDN given reference(s) (example OSVDB-12184).
 
 >@
@@ -127,8 +127,8 @@ How to process afterward:
 >@
 >@1. Here copy and pste "Apache/2.2.8" onto Google to see vulnerabilities.
 >@2. Click on the first result: "Apache HTTP Server 2.2 vulnerabilities"
->@3. Search for the CVE given reference(s) (example CVE-2010-045) on https://www.cvedetails.com/cve/CVE-2010-0425/ for more informations.
->@4. Search directly at https://www.cvedetails.com/cve/CVE-2010-0425/ for more informations.
+>@3. Search for the CVE given reference(s) (example CVE-2010-045) on https://www.cvedetails.com/cve/CVE-2010-0425/ for more information.
+>@4. Search directly at https://www.cvedetails.com/cve/CVE-2010-0425/ for more information.
 >@5. Search for the OSVDN given reference(s) (example OSVDB-12184).
 >@
 >@###############################################################################################################################################################################

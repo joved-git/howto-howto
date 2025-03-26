@@ -6,14 +6,18 @@ that are not part of the website normally accessible to the public. Some website
 sensitive information such as username, password and other confidential data. A known case 
 of Google hacking is the case of passwords and usernames for access to the Wi-Fi network 
 which were exposed by malicious users on Google. This information was then used to access 
-wireless networks and steal confidential data.Some very useful "Dork" commands to use in 
+wireless networks and steal confidential data. Some very useful "Dork" commands to use in 
 the google search bar:
 
 "key": search for that exact key or string.
 
 -<word>: the "-" is used to remove a result with <word> inside.
 
-site:<site>: the search is only done on <site>.
++<word>: the "+" is used to absolutely search for that word and anothers (if given).
+         example: [ +error+1001 ] search for results with "error" AND "1001".
+
+site:<site>: the search is only done on the site <site>. Give complete name (ie: site.com).
+             example: [ site:site.org ] search only results concerning site.org.
 
 intitle:<key>: the search is done with key present onto the title. 
                example: [ site:site.fr intitle:index of ] could give interesting results
@@ -21,16 +25,14 @@ intitle:<key>: the search is done with key present onto the title.
 allinurl:<key>: gives result with key into the URL.
 
 <number #1>..<number #2> <unity>: search for number #1 and number #2 in the given <unity>.
-                                  example: [ 10..35 kilos ] [ 300.500 USD ]
+                                  example: [ 10..35 kilos ] [ 300..500 USD ]
 
 ext:<file type>: only gives result as a file of the <file type> extension.
                  example ext:log OR ext:txt
 
-!!! https://www.google.fr/advanced_search: gives access to advanced search.
-
-!!! https://images.google.fr is used to find images onto some web sites and links between them.
-
-!!! https://www.exploit-db.com/google-hacking-database gives all the Dorks.
+See: https://www.google.fr/advanced_search: gives access to advanced search.
+See: https://images.google.fr is used to find images into some web sites and links between them.
+See: https://www.exploit-db.com/google-hacking-database gives all the Dorks.
 
 >@
 >@################################################################################################
@@ -45,7 +47,7 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@# sensitive information such as username, password and other confidential data. A known case   #
 >@# of Google hacking is the case of passwords and usernames for access to the Wi-Fi network     #
 >@# which were exposed by malicious users on Google. This information was then used to access    #
->@# wireless networks and steal confidential data.Some very useful "Dork" commands to use in     #
+>@# wireless networks and steal confidential data. Some very useful "Dork" commands to use in    #
 >@# the google search bar.                                                                       #
 >@#                                                                                              #
 >@#----------------------------------------------------------------------------------------------#
@@ -56,7 +58,11 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@
 >@-<word>: the "-" is used to remove a result with <word> inside.
 >@
->@site:<site>: the search is only done on <site>.
+>@+<word>: the "+" is used to absolutely search for that word and anothers (if given).
+>@         example: [ +error+1001 ] search for results with "error" AND "1001".
+>@
+>@site:<site>: the search is only done on the site <site>. Give complete name (ie: site.org).
+>@             example: [ site:site.org ] search only results concerning site.org.
 >@
 >@intitle:<key>: the search is done with key present onto the title. 
 >@               example: [ site:site.fr intitle:index of ] could give interesting results
@@ -64,7 +70,7 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@allinurl:<key>: gives result with key into the URL.
 >@
 >@<number #1>..<number #2> <unity>: search for number #1 and number #2 in the given <unity>.
->@                                  example: [ 10..35 kilos ] [ 300.500 USD ]
+>@                                  example: [ 10..35 kilos ] [ 300..500 USD ]
 >@
 >@filetype:<file type>: only gives result as a file of the <file type> extension.
 >@                      example filetype:log OR ext:txt
@@ -76,8 +82,8 @@ ext:<file type>: only gives result as a file of the <file type> extension.
 >@-> Google images
 >@Go to https://images.google.fr to find images into some web sites and links between them.
 >@
->@ -> Use Dosks
->@Got to https://www.exploit-db.com/google-hacking-database gives all the Dorks.
+>@ -> Use Dorks
+>@Go to https://www.exploit-db.com/google-hacking-database gives all the Dorks.
 >@>>> use a dork, copy then past it in Google and find sites that are potentially vulnerable.
 >@
 >@################################################################################################

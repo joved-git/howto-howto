@@ -9,7 +9,7 @@ $ nslookup -type=mx <host>
 Gives mail server
 
 $ nslookup -type=soa <host>
-Gives the authoritative serveur for <host>
+Gives the authoritative server for <host>
 
 $ nslookup <host> <soa>
 Executes an authoritative request using <soa>
@@ -20,7 +20,7 @@ $ dig <host>
 Basic command
 
 $ dig <host> soa
-Gives the authoritative serveur for <host>
+Gives the authoritative server for <host>
  
 $ dig <host> <soa>
 Executes an authoritative request using <soa>
@@ -51,7 +51,7 @@ https://toolbox.googleapps.com
 >@Gives mail server
 >@
 >@$ nslookup -type=soa <host>
->@Gives the authoritative serveur for <host>
+>@Gives the authoritative server for <host>
 >@
 >@$ nslookup <host> <soa>
 >@Executes an authoritative request using <soa>
@@ -62,7 +62,7 @@ https://toolbox.googleapps.com
 >@Basic command
 >@
 >@$ dig <host> soa
->@Gives the authoritative serveur for <host>
+>@Gives the authoritative server for <host>
 >@ 
 >@$ dig <host> <soa>
 >@Executes an authoritative request using <soa>

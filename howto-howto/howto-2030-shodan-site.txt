@@ -1,14 +1,17 @@
-Shodan is a big site that collects and presents information about conencted objets.
+Shodan is a big site that collects and presents information about connected objets.
+
+See: https://www.shodan.io
 
 [ product:minecraft ] or Explore/Video Games gives information about popular video game servers.
         example: Minecraft
 
-[ ip webcam ] find connected webcam. !!! Shodan is able to detect honeypot and shows them [honeypot].
+[ ip webcam ] find connected webcam. 
+
+[ honeypot ] Shodan is able to detect honeypot and shows them.
 
 [ country:fr ] filter by country.
 
-!!! https://github.com/JavierOlmedo/shodan-filters gives all the possible filters.
-
+See https://github.com/JavierOlmedo/shodan-filters to have all existing filters.
 
 >@
 >@######################################################################################################
@@ -17,16 +20,20 @@ Shodan is a big site that collects and presents information about conencted obje
 >@#                                                                                                    #
 >@# Shodan is a big site that collects and presents information about conencted objets.                #
 >@#                                                                                                    #
+>@# See: https://www.shodan.io                                                                         #
+>@#                                                                                                    #
 >@-----------------------------------------------------------------------------------------------------#
 >@
 >@[ product:minecraft ] or Explore/Video Games gives information about popular video game servers.
 >@        example: Minecraft
 >@
->@[ ip webcam ] find connected webcam. !!! Shodan is able to detect honeypot and shows them [honeypot].
+>@[ ip webcam ] find connected webcam.
+>@
+>@[ honeypot ] Shodan is able to detect honeypot and shows them.
 >@
 >@[ country:fr ] filter by country.
 >@
->@!!! https://github.com/JavierOlmedo/shodan-filters gives all the possible filters.
+>@See https://github.com/JavierOlmedo/shodan-filters to have all existing filters.
 >@
 >@######################################################################################################
 >@
