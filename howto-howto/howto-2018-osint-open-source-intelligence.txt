@@ -1,0 +1,61 @@
+OSINT | Open Source Intelligence
+
+OSINT (for Open Source Intelligence) is the way to use internet to retrieve 
+public information. Concretely, we use internet and physical documents to 
+obtain thin public information about a target (in the cases of attack or 
+pentesting) and/or about ourself (in the case of protection).
+
+See: howto-1012-intrusion-1-discovery.txt
+
+-> What tools do we have ?
+-WebArchive (web.archive.org)
+  WebArchive stores all web pages (and different versions) of a huge number 
+  of sites along years.
+  It is possible to go back to 1996.
+
+-Awesome OSINT (https://github.com/jivoi/awesome-osint)
+  This is a huge collection of tools and sites useful to make your
+  reconnaissance step.
+  We find: search engines, local (by country) search engine, metadata search
+    engines, specialized search engines, Pastebins (sharing of copy/paste data),
+    code search engine, real-time social network search engine, forum and 
+    discussion search engine, check username search engine, genealogy tools,
+    email search (h8mail or Sherlock for example), image search, ...
+
+-Content of howto-1012-intrusion-1-discovery.txt
+  This file contains so many interesting links to make OSINT.
+
+>@
+>@################################################################################### 
+>@#                                                                                 #
+>@# [ OSINT | Open Source Intelligence ]                                            #
+>@#                                                                                 #
+>@# OSINT (for Open Source Intelligence) is the way to use internet to retrieve     #
+>@# public information. Concretely, we use internet and physical documents to       #
+>@# obtain thin public information about a target (in the cases of attack or        #
+>@# pentesting) and/or about ourself (in the case of protection).                   #
+>@#                                                                                 #
+>@# See: howto-1012-intrusion-1-discovery.txt                                       #
+>@#                                                                                 #
+>@#---------------------------------------------------------------------------------#
+>@
+>@-> What tools do we have ?
+>@-WebArchive (web.archive.org)
+>@  WebArchive stores all web pages (and different versions) of a huge number 
+>@  of sites along years.
+>@  It is possible to go back to 1996.
+>@
+>@-Awesome OSINT (https://github.com/jivoi/awesome-osint)
+>@  This is a huge collection of tools and sites useful to make your
+>@  reconnaissance step.
+>@  We find: search engines, local (by country) search engine, metadata search
+>@    engines, specialized search engines, Pastebins (sharing of copy/paste data),
+>@    code search engine, real-time social network search engine, forum and 
+>@    discussion search engine, check username search engine, genealogy tools,
+>@    email search (h8mail or Sherlock for example), image search, ...
+>@
+>@-Content of howto-1012-intrusion-1-discovery.txt
+>@  This file contains so many interesting links to make OSINT.
+>@
+>@################################################################################### 
+>@

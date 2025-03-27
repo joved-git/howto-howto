@@ -1,8 +1,18 @@
 Usefull tool to hide and retrieve text file into image.
 
-To include emb.txt into cvr.jpg : steghide embed -cf cvr.jpg -ef emb.txt
-To extract data contained into stg.jpg: steghide extract -sf stg.jpg
-To have info about embedded data: steghide info stg.jpg
+Here are some usefull commands:
+
+ -> Include file into an image
+$ steghide embed -cf cvr.jpg -ef emb.txt
+>>> text file emb.txt is included into cvr.jpg 
+
+ -> Extract data
+$ steghide extract -sf stg.jpg
+>>> data contained into stg.jpg are extracted
+
+ -> Retrieve information
+$ steghide info stg.jpg
+>>> embedded data are displayed
 
 >@
 >@##########################################################################
@@ -15,11 +25,19 @@ To have info about embedded data: steghide info stg.jpg
 >@#                                                                        #
 >@#------------------------------------------------------------------------#
 >@
->@To include emb.txt into cvr.jpg : steghide embed -cf cvr.jpg -ef emb.txt
+>@Here are some usefull commands:
 >@
->@To extract data contained into stg.jpg: steghide extract -sf stg.jpg
+>@ -> Include file into an image
+>@$ steghide embed -cf cvr.jpg -ef emb.txt
+>@>>> text file emb.txt is included into cvr.jpg 
 >@
->@To have info about embedded data: steghide info stg.jpg
+>@ -> Extract data
+>@$ steghide extract -sf stg.jpg
+>@>>> data contained into stg.jpg are extracted
+>@
+>@ -> Retrieve information
+>@$ steghide info stg.jpg
+>@>>> embedded data are displayed
 >@
 >@##########################################################################
 >@

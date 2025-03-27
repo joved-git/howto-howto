@@ -77,6 +77,8 @@ themselves and their data.
 >@# telephone numbers. As a result, many users don't know how to get the best protection for        #
 >@# themselves and their data.                                                                      #
 >@#                                                                                                 #
+>@# See: howto-1085-set-social-engineering-toolkit.txt                                              #
+>@#                                                                                                 #
 >@#-------------------------------------------------------------------------------------------------#
 >@
 >@-> How does that work ?
