@@ -24,6 +24,8 @@ social engineering attacks, because the hacker will not necessarily need to be a
 >@# SET is a tool for automating social engineering techniques. We will see how to use it.                                       #
 >@# First of all, you can launch it by going to Kali, in the “Applications -> Operations Tools -> Social Engineer Toolkit” menu. #
 >@#                                                                                                                              #
+>@# See: howto-2015-social-engineering.txt                                                                                       #
+>@#                                                                                                                              #
 >@#------------------------------------------------------------------------------------------------------------------------------#
 >@
 >@-> Basic use of the SET (Social Engineer Toolkit)
