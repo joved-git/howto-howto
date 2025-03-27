@@ -1,0 +1,76 @@
+Maltego | Maltego CE
+
+Maltego is a platform for open-source intelligence (OSINT) and cyber 
+investigations, developed by Maltego Technologies GmbH, a company 
+headquartered in Munich, Germany. 
+
+
+-> Install Maltego
+1. Go to www.maltego.com/download and download the softawre.
+2. Create an account. It will be your Maltego ID.
+3. Install and start Maltego. Choose the option "I have a Maltego ID" 
+and let the wizard guides you.
+4. You should be conencted with the Maltego CE (Community Edition) free
+   vesion.
+
+-> How to use it.
+First, you can load the Maltego example. Click on the Logo (top left),
+then choose Tools and "Open Example Graph".
+
+Here is an example how to use Maltego CE to create a graph.
+-Create a new blank page.
+-On the left search for "Website" then drag and drop the entity.
+-Double-click on the name and change it for "avg.com" (example).
+-Just click on the new entity (avg.com) then, on the right, select
+ configure the port. Here, 80 into "Properties/ports".
+-Right-click on the main entity to run a "Transforms". Click on 
+ "+ All Transforms" then choose "To DNS name" as an example.
+
+From now, all is possible to do. You can create your own graph and add 
+what you want.
+
+-Go to the menu "Transforms" then "Maltego Data Hub" to find new
+ transforms like AlienVault, Shodan, ...
+
+>@
+>@######################################################################### 
+>@#                                                                       #
+>@# [ Maltego | Maltego CE ]                                              #
+>@#                                                                       #
+>@# Maltego is a platform for open-source intelligence (OSINT) and cyber  #
+>@# investigations, developed by Maltego Technologies GmbH, a company     #
+>@# headquartered in Munich, Germany.                                     #
+>@#                                                                       #
+>@# See: https://www.maltego.com                                          #
+>@#                                                                       #
+>@#-----------------------------------------------------------------------# 
+>@
+>@-> Install Maltego
+>@1. Go to www.maltego.com/download and download the softawre.
+>@2. Create an account. It will be your Maltego ID.
+>@3. Install and start Maltego. Choose the option "I have an Maltego ID" 
+>@   and let the wizard guides you.
+>@4. You should be conencted with the Maltego CE (Community Edition) free
+>@   vesion.
+>@
+>@-> How to use it.
+>@First, you can load the Maltego example. Click on the Logo (top left),
+>@then choose Tools and "Open Example Graph".
+>@
+>@Here is an example how to use Maltego CE to create a graph.
+>@-Create a new blank page.
+>@-On the left search for "Website" then drag and drop the entity.
+>@-Double-click on the name and change it for "avg.com" (example).
+>@-Just click on the new entity (avg.com) then, on the right, select
+>@ configure the port. Here, 80 into "Properties/ports".
+>@-Right-click on the main entity to run a "Transforms". Click on 
+>@ "+ All Transforms" then choose "To DNS name" as an example.
+>@
+>@From now, all is possible to do. You can create your own graph and add 
+>@what you want.
+>@
+>@-Go to the menu "Transforms" then "Maltego Data Hub" to find new
+>@ transforms like AlienVault, Shodan, ...
+>@
+>@######################################################################### 
+>@
