@@ -78,17 +78,23 @@ Automatic scripts and tools (/!\ careful, this is not magic)
    files being publicly hosted on a web site and optionally downloads them to your local box. 
    This is useful for Open Source Intelligence gathering, penetration tests, or determining 
    what files your organization is leaking to search indexers like Google. 
+   Installation:
    Clone from https://github.com/opsdisk/metagoofil
    Then:
    $ python3 metagoofil.py --help
-   $ python3 metagoofil.py -d <domain> -t pdf
+   $ python3 metagoofil.py -d <domain> -t <file type, ie: pdf>
    
+-> TheHarvester (https://github.com/laramies/theHarvester) is a simple to use, yet powerful 
+   tool designed to be used during the reconnaissance stage of a Red team assessment or 
+   penetration test. It performs open source intelligence (OSINT) gathering to help determine
+   a domain's external threat landscape. The tool gathers names, emails, IPs, subdomains, and 
+   URLs by using multiple public resources.
+   Installation:
+   Clone from https://github.com/laramies/theHarvester
+   Then:
+   $ python3 theharvester.py --help
+   $ python3 theharvester.py -d <domain, ie: avg.com> -b <source, ie: urlscan>
    
-
-   
-
-
-
 >@
 >@###################################################################################################
 >@#                                                                                                 #
@@ -110,7 +116,7 @@ Automatic scripts and tools (/!\ careful, this is not magic)
 >@
 >@Techniques and tools (pratically):
 >@
->@-> Google hacking: find information very thinly. !!! Use Advanced search !!!
+>@-> Google hacking: find information very thinly. !!! Use Advances search !!!
 >@-> Boardreader (www.boardreader.com): search into forum and discussion sites.
 >@-> Shodan (www.shodan.io) : to find connected equipements and easily metadata. !!! Use filters !!!
 >@-> TinEye: to find sites from images/photos..
@@ -120,7 +126,7 @@ Automatic scripts and tools (/!\ careful, this is not magic)
 >@-> urlscan (www.urlscan.io) is used to scan a domain name and extract information (linked IP 
 >@   addresses and details, domain names, HTTP scripts and source codes, images, behaviours, cookies,
 >@   indicators, ...
->@-> viewdns.info (viewdns.info): used to find DNS, whois, ..., requests and reverse's ones.
+>@-> viewdns.info (viwdns.info): used to find DNS, whois, ..., requests and reverse's ones.
 >@-> Censys (search.censys.io) and CRT (crt.sh): search for certificates.
 >@-> VirusTotal () could be used to retrieve information about DNS, whois and certificats.
 >@-> CRT (crt.sh) is a site specialized in the search of certifiats. Interesting to see links.
@@ -134,6 +140,64 @@ Automatic scripts and tools (/!\ careful, this is not magic)
 >@-> Use of https://web.archive.org: archive all sites before very long time (go back).
 >@-> Maltego: collects and analyse data and construct links between entities (graphical tool).
 >@-> recon-ng: command line tool used to automate identification tasks.
+>@
+>@Automatic scripts and tools (/!\ careful, this is not magic)
+>@
+>@-> WebArchive proposes a python script that could send resquest to an API.
+>@   $ python3 waybackurls.py <url>
+>@   >>> the result is a JSON file
+>@
+>@-> FinalRecon (https://github.com/thewhiteh4t/FinalRecon) allows you to retrieve an overview of 
+>@   the target in a short amount of time while maintaining the accuracy of results.
+>@   We find: whois informations, CSS and Javascript links, DNS enumération, information about 
+>@   sub-domains, port scanning, Wayback machine, ...
+>@   $ finalrecon.py --help to see all options.
+>@   $ finalrecon.py --whois <url with http or https>
+>@     >>> gives whois info
+>@   $ finalrecon.py --ps <url with http or https>
+>@     >>> executes a port scan (1000 firts)
+>@   $ finalrecon.py --dns <url with http or https>
+>@     >>> to obtain DNS records
+>@
+>@-> Sublist3r (https://www.securiteinfo.com/attaques/hacking/outils/sublist3r.shtml) is a Python 
+>@   tool designed to enumerate website subdomains using OSINT, and execute some operations on 
+>@   these subdomains: ports scanning, ...
+>@   Installation:
+>@   $ git clone https://github.com/aboul3la/Sublist3r.git
+>@   Then:
+>@   $ python3 sublist3r.py --help
+>@   $ python3 sublist3r.py <url>
+>@
+>@-> BlackBird (https://github.com/p1ngul1n0/blackbird) is a robust OSINT tool that facilitates 
+>@   rapid searches for user accounts by username or email across a wide array of platforms, 
+>@   enhancing digital investigations. It features WhatsMyName integration, export options in 
+>@   PDF, CSV, and HTTP response formats, and customizable search filters.
+>@   Installation:
+>@   Clone from https://github.com/p1ngul1n0/blackbird
+>@   Then:
+>@   $ python3 blackbird.py --help
+>@   $ python3 blackbird.py -u <username | email>
+>@
+>@-> MetaGoofil (https://github.com/opsdisk/metagoofil) searches Google for specific types of 
+>@   files being publicly hosted on a web site and optionally downloads them to your local box. 
+>@   This is useful for Open Source Intelligence gathering, penetration tests, or determining 
+>@   what files your organization is leaking to search indexers like Google. 
+>@   Installation:
+>@   Clone from https://github.com/opsdisk/metagoofil
+>@   Then:
+>@   $ python3 metagoofil.py --help
+>@   $ python3 metagoofil.py -d <domain> -t <file type, ie: pdf>
+>@   
+>@-> TheHarvester (https://github.com/laramies/theHarvester) is a simple to use, yet powerful 
+>@   tool designed to be used during the reconnaissance stage of a Red team assessment or 
+>@   penetration test. It performs open source intelligence (OSINT) gathering to help determine
+>@   a domain's external threat landscape. The tool gathers names, emails, IPs, subdomains, and 
+>@   URLs by using multiple public resources.
+>@   Installation:
+>@   Clone from https://github.com/laramies/theHarvester
+>@   Then:
+>@   $ python3 theharvester.py --help
+>@   $ python3 theharvester.py -d <domain, ie: avg.com> -b <source, ie: urlscan>
 >@
 >@###################################################################################################
 >@
