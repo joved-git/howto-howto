@@ -58,11 +58,11 @@ Usual commands:
 
 --top-ratio <n>: scans ports with ratio greater than <n>. See /usr/share/nmap/nmap-services file.
 
---version-intensity <n, def 7>: used to modify probe(s) intensity.
+--version-intensity <n, def 7>: used to modify probe(s) intensity for version detection.
 
 -O: performs an OS detection in verbose mode.
 
--sC: performs a scan with default scripts (non intrusive and discrete ohes). List of script is here: https://nmap.org/nsedoc/scripts
+-sC: performs a scan with default scripts (non intrusive and discrete ohes). List of scripts is here: https://nmap.org/nsedoc/scripts
 
 --script default,dos: tries two specific scripts (here default and dos).
 
@@ -87,7 +87,7 @@ Usual commands:
 -6: performs an IP v6 scan.
 
 >@
->@###############################################################################################################################################################################################
+>@##############################################################################################################################################################################################
 >@                                                                                    |
 >@<no option>: scans the first 1000 common ports with: ICMP ping | ARP ping (local)   |  <hostname> = 10.0.2.0/24 | 10.0.2.0-255 | 10.0.2.*: scans from 10.0.2.0 to 10.0.2.255
 >@                                                     TCP SYN on 443 (HTTPS)         |
@@ -107,7 +107,7 @@ Usual commands:
 >@-Pn: treats all hosts as online -- skip host discovery (no ping session)            |  
 >@                                                                                    |  -sV: performs a TCP SYN scan and display services' version (see --version-intensity, --version-light)
 >@-sL: tries to discover hostnames                                                    |  
->@                                                                                    |  -sN: performs a TCP null. All TCP options are set to 0. Normally, impossible. This is a disruption try
+>@                                                                                    |  -sN: performs a TCP null. All TCP options are set to 0 (impossible !). This is a disruption try
 >@-sF: puts only FIN at 1. nmap asks for a closing session. This is a disruption try  |
 >@                                                                                    |  -sX: puts URG, PUSH and FIN at 1. This is a disruption try
 >@--traceroute -sn -Pn: performs a traceroute                                         |  
@@ -118,11 +118,11 @@ Usual commands:
 >@                                                                                    |  --top-ratio <n>: scans ports with ratio greater than <n>. See /usr/share/nmap/nmap-services file
 >@--version-intensity <n, def 7>: used to modify probe(s) intensity                   |  
 >@                                                                                    |  -O: performs an OS detection in verbose mode (see --osscan-limit, --osscanguess = more agressive)
->@-sC: use default scripts (non intrusive and discrete). See https://nmap.org/nsedoc  |  
->@                                                                                    |  --script default,dos: tries two specific scripts (here default and dos)
->@--script default,dos: tries two specific scripts (here default and dos)             |  
->@                                                                                    |  --script "http-*": uses more than one scripts
->@--script-update: executes an update of the local scripts database                   |  
+>@-sC: use default scripts (non intrusive and discrete).                        |     |         
+>@                                                                              |------> The list of scripts can be found here: https://nmap.org/nsedoc/scripts
+>@--script default,dos: tries two specific scripts (here default and dos)       |     |        
+>@                                                                              |     |  --script "http-*": uses more than one scripts
+>@--script-update: executes an update of the local scripts database             |     |  
 >@                                                                                    |  -T<0..5>: configures nmap aggressivity. 0: discrete and slow. 5: aggressive (default is 3)
 >@-A: the toolbox (OS & version detection, script scan, traceroute. More aggressive   |  
 >@                                                                                    |  -f -mtu <value>: becomes more discrete using packet fragmentation
@@ -134,5 +134,5 @@ Usual commands:
 >@                                                                                    |  -6: performs an IP v6 scan.
 >@-PO: use a specific protocol (field "Protocol" into IP packets (6 = TCP)            |  
 >@                                                                                    |  -sO: Performs an IP protocol scan (see -PO).
->@###############################################################################################################################################################################################
+>@##############################################################################################################################################################################################
 >@
