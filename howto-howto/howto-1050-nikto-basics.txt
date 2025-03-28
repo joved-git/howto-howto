@@ -1,12 +1,12 @@
 Nikto is a freeware command-line vulnerability scanner that scans web servers for dangerous 
 files/CGI, outdated server software, and other issues. It performs generic and server type 
 specific checks. It also captures and prints all cookies received. The Nikto code itself is 
-free software, but the data files it uses to drive the program are not.
+a free software, but the data files it uses to drive the program are not.
 
 /!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\
 
 -> Obtain help
-$ nikto
+$ nikto --help
 
 -> Simply scan a <host>
 $ nikto -h <host>
@@ -41,7 +41,7 @@ $ nikto -h <host>
 >@# Nikto is a freeware command-line vulnerability scanner that scans web servers for         #
 >@# dangerous files/CGI, outdated server software, and other issues. It performs generic      #
 >@# and server type specific checks. It also captures and prints all cookies received.        #
->@# The Nikto code itself is free software, but the data files it uses to drive the           #
+>@# The Nikto code itself is a free software, but the data files it uses to drive the         #
 >@# program are not.                                                                          #
 >@#                                                                                           #
 >@# /!\ Scanning a website without any authorization is illegal, try it on metasploitable /!\ #
@@ -51,7 +51,7 @@ $ nikto -h <host>
 >@#-------------------------------------------------------------------------------------------#
 >@
 >@-> Obtain help
->@$ nikto
+>@$ nikto --help
 >@
 >@-> Simply scan a <host>
 >@$ nikto -h <host>
