@@ -2,11 +2,17 @@ Basics:
 -> Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.
 -> It is declined in many version, hence the famous free Metasploit Framework version.
 -> It uses some exploits (pieces of code) use to gain access and payloads (pieces of code) launched after the intrusion.
-To summarize:
-  exploits = codes used to gain access.
-  paylaods = codes used to perform some operations (example: create backdoor, clean footsteps, ...).
 
--> Metasploit is used to test the vulnerability of systemq.
+Some definitions:
+  exploit = code used to gain access.
+  payload = data used to perform some operations (example: create backdoor, clean footsteps, ...).
+  shellcode = code (often written in assembly) used to spawn a shell.
+    /!\ All shellcode is payload but not all payload is shellcode.
+  module = a part of a another software that could be used by the framework. Example: a scan tool.
+  listener = a part of Metasploit that listen to incoming connection.
+
+Sensibilisation:
+/!\ Metasploit is used to test the vulnerability of systemq.
 /!\ Do not use as a tool to obtain access. This is NOT LEGAL !!
 
 Architecture:
@@ -71,11 +77,19 @@ $ msf6> quit
 >@Basics:
 >@-> Metasploit is a complete environment used to test intrusion. This environment is maintained by Rapid7.
 >@-> It is declined in many version, hence the famous free Metasploit Framework version.
->@-> It uses some exploits (pieces of code) use to gain access and payloads (pieces of code) launched after 
->@     the intrusion.
->@To summarize:
->@  exploits = codes used to gain access.
->@  paylaods = codes used to perform some operations (example: create backdoor, clean footsteps, ...).
+>@-> It uses some exploits (pieces of code) use to gain access and payloads (pieces of code) launched after the intrusion.
+>@
+>@Some definitions:
+>@  exploit = code used to gain access.
+>@  payload = data used to perform some operations (example: create backdoor, clean footsteps, ...).
+>@  shellcode = code (often written in assembly) used to spawn a shell.
+>@    /!\ All shellcode is payload but not all payload is shellcode.
+>@  module = a part of a another software that could be used by the framework. Example: a scan tool.
+>@  listener = a part of Metasploit that listen to incoming connection.
+>@
+>@Sensibilisation:
+>@/!\ Metasploit is used to test the vulnerability of systemq.
+>@/!\ Do not use as a tool to obtain access. This is NOT LEGAL !!
 >@
 >@-> Metasploit is used to test the vulnerability of systemq.
 >@/!\ Do not use as a tool to obtain access. This is NOT LEGAL !!

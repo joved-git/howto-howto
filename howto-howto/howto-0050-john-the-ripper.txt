@@ -1,5 +1,6 @@
 John is a powerful tool that is used to crack passwords.
 
+See: howto-1054-cewl-worldlist-tool.txt
 -> Used directory
 John is installed here: /usr/share/john 
 By default, John creates a working directory into <home>/.john
@@ -28,9 +29,13 @@ John can decode so many type of data.
 1. Ask John to give all formats he knows.
 $ john --list=formats
 $ john --list=formats | grep -i <what you want>
+
 Example:
   $ cat <a MD5 hash> > hash.txt
   $ john --format=raw-md5 hash.txt
+
+-> Create your own worldlists
+Use CeWL. Seehowto-1054-cewl-worldlist-tool.txt     
 
 >@
 >@####################################################################################
@@ -40,6 +45,8 @@ Example:
 >@# John is a powerful tool that is used to crack passwords.                         #
 >@#                                                                                  #
 >@# Worldlist rockyou could be find with google: [ rockyou filetype:txt ]            #
+>@#                                                                                  #
+>@# See: howto-1054-cewl-worldlist-tool.txt                                          #
 >@#                                                                                  #
 >@#----------------------------------------------------------------------------------#
 >@
@@ -73,9 +80,13 @@ Example:
 >@1. Ask John to give all formats he knows.
 >@$ john --list=formats
 >@$ john --list=formats | grep -i <what you want>
+>@
 >@Example:
 >@  $ cat <a MD5 hash> > hash.txt
 >@  $ john --format=raw-md5 hash.txt
+>@
+>@-> Create your own worldlists
+>@Use CeWL. Seehowto-1054-cewl-worldlist-tool.txt     
 >@
 >@####################################################################################
 >@
