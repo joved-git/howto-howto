@@ -41,7 +41,7 @@ There is no many useful options:
   -a : Define user-agent. 
   -c : Gives a cookie.
   -l : Display directory location when file is found.
-  -i : use case-sensitive serach.
+  -i : use case-sensitive search.
   -p : utilise un proxy
   -S : Silent mode
   -w : Don't sto pon warnings.
@@ -101,7 +101,7 @@ See: howto-1054-cewl-worldlist-tool.txt
 >@  -a : Define user-agent. 
 >@  -c : Gives a cookie.
 >@  -l : Display directory location when file is found.
->@  -i : use case-sensitive serach.
+>@  -i : use case-sensitive search.
 >@  -p : utilise un proxy
 >@  -S : Silent mode
 >@  -w : Don't sto pon warnings.
