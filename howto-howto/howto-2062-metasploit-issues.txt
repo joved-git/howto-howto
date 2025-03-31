@@ -1,0 +1,144 @@
+Metasploit Issues
+
+Find here some issues and solutions for Metasploit.
+
+Issue #1: Ruby version problem using Metasploit
+
+Issue #1
+-> You have problem launching "msfconsole"
+It is probably a Ruby version problem.
+
+Here ar steps to reinstall Metasploit
+
+1. Desinstall the metasploit-framework.
+$ sudo apt remove metasploit-framework.
+
+2. Reinstall the metasploit-framework.
+$ sudo apt update
+$ sudo apt install metasploit-framework
+
+3. Install of Ruby >= 3.2
+Retrieve Ruby (last version, example 3.4.2) on https://www.ruby-lang.org/en/.
+Follow the README.md. 
+>>> binaries 3.4.2 are here: ~/.rubies/ruby-master/bin
+
+4. Install Gems with this new Ruby version.
+Change PATH and add ~/.rubies/ruby-master/bin
+Check Ruby by:
+$ ruby --version 
+>>> That gives "3.4.2"
+
+4. Update Gems.
+With this new PATH, I can launch the Gems update.
+$ cd /usr/share
+$ chmod -R kali:kali ./metasplit-framework
+$ bundle install --gemfile /usr/share/metasploit-framework/Gemfile
+>>> all should be good
+
+5. Try msfconsole.
+$ export PATH=/home/kali/.rubies/ruby-master/bin:$PATH
+$ msfconsole
+>>> That's work now !!!
+
+6. Create a starting script for msfconsole.
+In /usr/share/metasploit-framework, rename msfconsole to msfconsole.rb
+$ cd /usr/share/metasploit-framework
+$ mv msfconsole msfconsole.rb
+
+Create a new launch script (between --- below) in /usr/share/metasploit-framework:
+---
+#!/bin/sh
+#
+PATH=/home/<user>/.rubies/ruby-master/bin:$PATH
+
+/usr/share/metasploit-framework/msfconsole.rb
+---
+
+$ chmod +x msfconsole.
+
+7. Check that all is ok for msfconsole.
+$ msfconsole
+>>> That should give "msf6>" prompt...
+
+# End of Issue #1
+
+>@
+>@##################################################################################### 
+>@#                                                                                   # 
+>@# [ Metasploit Issues ]                                                             #
+>@#                                                                                   # 
+>@# Find here some issues and solutions for Metasploit.                               #
+>@#                                         ---                                       # 
+>@# Issue #1: Ruby version problem using Metasploit                                   #
+>@#                                                                                   # 
+>@#-----------------------------------------------------------------------------------#
+>@
+>@Issue #1
+>@-> If you have problem launching "msfconsole"
+>@It is probably a Ruby version problem.
+>@
+>@Here ar steps to reinstall Metasploit
+>@
+>@[ Add here all the process to reinstall Metasploit]
+>@
+>@Ruby 3.4
+>@Install metasploit-framework
+>@Install gems
+>@Modify msfconsole script
+>@...
+>@
+>@
+>@1. Desinstall the metasploit-framework.
+>@$ sudo apt remove metasploit-framework.
+>@
+>@2. Reinstall the metasploit-framework.
+>@$ sudo apt update
+>@$ sudo apt install metasploit-framework
+>@
+>@3. Install of Ruby >= 3.2 
+>@Retrieve Ruby (last version, example 3.4.2) on https://www.ruby-lang.org/en/.
+>@Follow the README.md. 
+>@>>> binaries 3.4.2 are here: ~/.rubies/ruby-master/bin
+>@
+>@4. Install Gems with this new Ruby version.
+>@Change PATH and add ~/.rubies/ruby-master/bin
+>@Check Ruby by:
+>@$ ruby --version 
+>@>>> That gives "3.4.2"
+>@
+>@4. Update Gems.
+>@With this new PATH, I can launch the Gems update.
+>@$ cd /usr/share
+>@$ chmod -R kali:kali ./metasplit-framework
+>@$ bundle install --gemfile /usr/share/metasploit-framework/Gemfile
+>@>>> all should be good
+>@
+>@5. Try msfconsole.
+>@$ export PATH=/home/kali/.rubies/ruby-master/bin:$PATH
+>@$ msfconsole
+>@>>> That's work now !!!
+>@
+>@6. Create a starting script for msfconsole.
+>@In /usr/share/metasploit-framework, rename msfconsole to msfconsole.rb
+>@$ cd /usr/share/metasploit-framework
+>@$ mv msfconsole msfconsole.rb
+>@
+>@Create a new launch script (between --- below) in /usr/share/metasploit-framework:
+>@---
+>@#!/bin/sh
+>@#
+>@PATH=/home/<user>/.rubies/ruby-master/bin:$PATH
+>@
+>@/usr/share/metasploit-framework/msfconsole.rb
+>@---
+>@
+>@$ chmod +x msfconsole.
+>@
+>@7. Check that all is ok for msfconsole.
+>@$ msfconsole
+>@>>> That should give "msf6>" prompt...
+>@
+>@# End of Issue #1
+>@
+>@##################################################################################### 
+>@
