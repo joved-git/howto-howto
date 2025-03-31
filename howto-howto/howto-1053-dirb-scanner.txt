@@ -53,6 +53,9 @@ There is no many useful options:
 You can use CeWL (prononce "cool") that is here: https://github.com/digininja/CeWL
 See: howto-1054-cewl-worldlist-tool.txt
  
+-> Use predefined cool lists
+Look at here: https://github.com/trickest/wordlists
+
 >@
 >@######################################################################################### 
 >@#                                                                                       # 
@@ -113,5 +116,8 @@ See: howto-1054-cewl-worldlist-tool.txt
 >@You can use CeWL (prononce "cool") that is here: https://github.com/digininja/CeWL
 >@See: howto-1054-cewl-worldlist-tool.txt
 >@ 
+>@-> Use predefined cool lists
+>@Look at here: https://github.com/trickest/wordlists
+>@
 >@######################################################################################### 
 >@
