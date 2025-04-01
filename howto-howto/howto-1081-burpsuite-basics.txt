@@ -20,7 +20,8 @@ Proxy/Proxy settings: configure proxy (ie: 127.0.0.0:8080).
 
 Intruder: used to execute attacks.
 
-Repeater: used to modify and send request.
+Repeater: used to modify and send request. 
+          used to prepare pre-formatted HTTP request.
 
 Sequencer: used to compare requests, information ans answers.
 
