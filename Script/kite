@@ -1,6 +1,30 @@
 #!/bin/bash
 # Monkey - 2021 / 2025
-# Version = 1.4
+# Version = 1.4.1
+
+# For "whatis" command. Example: "kite whatis iptraf" should give the iptraf box only.
+# Command that extract the only #BASICS file for a <name>:
+# grep "#BASICS" `ls -al | grep burp | grep -v "^l" | awk -F' ' '{ print $9 }'` | awk -F':' '{ print $1 }'
+# Command that extract the box and the number of line:
+# number=`cat <file> | grep "^>@#" | wc -l`
+# number=$(($number-1))
+# Command that give the box only (remove the last line:
+# cat <file> | grep "^>@#" | head -$number
+
+usage()
+{
+	echo
+	echo "Please give me something to do !!"
+	echo
+	echo "Usage:"
+	echo "$ kite list               -> gives list of files"
+	echo "$ kite cmd                -> gives list of commands"
+	echo "$ kite <keyword>          -> gives complete information about <keyword>"
+	echo "$ kite whatis <keyword>   -> gives summary information about <keyword>"
+	echo
+
+	exit 0
+}
 
 WHERE=`echo $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`
 SRC_DIR=$WHERE/../howto-howto
@@ -16,27 +40,47 @@ then
 	exit 0
 fi
 
-if [ x$1 = x ]; 
+if [ x$1 = x -o x$1 = "x-h" -o x$1 = "x--help" ]; 
 then
-	echo
-	echo "Please give me something to do !!"
-	echo "$ kite list  -> gives list of files"
-	echo "$ kite cmd   -> gives list of commands"
-	echo
-	exit 0
+	usage
 fi
 
 if [ x$1 = xlist ]; then
 	echo
 	echo '########################################################'
 	echo
-	ls $SRC_DIR | grep 'howto-'
+	ls $SRC_DIR | grep 'howto-' | more
 	echo
 	echo '########################################################'
 	echo
 	exit 0
 fi
 
+# Handle "whatis" command
+if [ x$1 = xwhatis ]; then
+	if [ -z $2 ]; then
+		usage
+    fi
+
+	COMMAND=$2
+	FILE=`ls -al | grep $COMMAND | grep -v "^l" | awk -F' ' '{ print $9 }'`
+	FILE=`grep "#BASICS" echo $FILE | awk -F':' '{ print $1 }'`
+	#FILE=`grep "#BASICS" `ls -al | grep $COMMAND | grep -v "^l" | awk -F' ' '{ print $9 }'` | awk -F':' '{ print $1 }'`
+	
+	echo "FILE=[$FILE]"
+
+	if [ $FILE ="" ]; then
+		echo 
+		echo "Sorry, no information box for $COMMAND"
+		echo
+	
+		exit 1
+	fi
+
+	exit 0
+fi
+
+# Handle "cmd" command
 if [ x$1 = xcmd ]; then
 	CMD=`ls -l $WHERE | grep -v kite | awk {' print $9 }'`
 

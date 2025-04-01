@@ -1,0 +1,102 @@
+Burp Suite
+#BASICS
+
+Burp Suite is a Java application, developed by PortSwigger Ltd, which can be used for securing or performing penetration 
+testing on web2,3 applications. The suite is made up of different tools such as a proxy server (Burp Proxy), web crawler 
+(Burp Spider), an intrusion tool (Burp Intruder), a vulnerability scanner (Burp Scanner) and an HTTP repeater 
+(Burp Repeater).
+
+-> Burpsuite presentation
+
+Dashboard: make a scan and/or task.
+
+Target/Site map: retrieve the sitemap.
+Target/Scope: add target.
+Target/Issue definitions: information about vulnerabilities. 
+
+Proxy/Intercept: used to intercept requests.
+Proxy/Intercept/Open browser: open a pre-configured browser.
+Proxy/Proxy settings: configure proxy (ie: 127.0.0.0:8080).
+
+Intruder: used to execute attacks.
+
+Repeater: used to modify and send request.
+
+Sequencer: used to compare requests, information ans answers.
+
+Decoder: used to decode data.
+
+Comparer: compare 2 elements.
+
+Logger: gives all requests (and many information).
+
+Learn: acecs to tutorials and vulnerable site.
+
+
+-> Using Burp Suite (very basic)
+1. Launch the software and make update if asked.
+2. Create a temporary project (Next), keep default then "Start Burp".
+
+3. Prepare Burp Suite.
+  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+   or
+  -Use the embeded pre-configured browser (Open Browser in proxy folder).
+  -Put Intercept to On and observe all what you see !!!
+
+>@
+>@#################################################################################################################################
+>@#                                                                                                                               #
+>@# [ Burp Suite ]                                                                                                                #
+>@#                                                                                                                               #
+>@# Burp Suite is a Java application, developed by PortSwigger Ltd, which can be used for securing or performing penetration      #
+>@# testing on web2,3 applications. The suite is made up of different tools such as a proxy server (Burp Proxy), web crawler      #
+>@# (Burp Spider), an intrusion tool (Burp Intruder), a vulnerability scanner (Burp Scanner) and an HTTP repeater                 #
+>@# (Burp Repeater).                                                                                                              #
+>@#                                                                                                                               #
+>@# See: howto-0100-prevention-web-vulnerability.txt                                                                              #
+>@# See: howto-1070-owasp-multillidae.txt                                                                                         #
+>@# See: howto-1074-burpsuite-sql-injection.txt                                                                                   #
+>@#                                                                                                                               #
+>@#-------------------------------------------------------------------------------------------------------------------------------#
+>@
+>@-> Burpsuite presentation
+>@
+>@Dashboard: make a scan and/or task.
+>@
+>@Target/Site map: retrieve the sitemap.
+>@Target/Scope: add target.
+>@Target/Issue definitions: information about vulnerabilities. 
+>@
+>@Proxy/Intercept: used to intercept requests.
+>@Proxy/Intercept/Open browser: open a pre-configured browser.
+>@Proxy/Proxy settings: configure proxy (ie: 127.0.0.0:8080).
+>@
+>@Intruder: used to execute attacks.
+>@
+>@Repeater: used to modify and send request.
+>@
+>@Sequencer: used to compare requests, information ans answers.
+>@
+>@Decoder: used to decode data.
+>@
+>@Comparer: compare 2 elements.
+>@
+>@Logger: gives all requests (and many information).
+>@
+>@Learn: acecs to tutorials and vulnerable site.
+>@
+>@
+>@-> Using Burp Suite (very basic)
+>@1. Launch the software and make update if asked.
+>@2. Create a temporary project (Next), keep default then "Start Burp".
+>@
+>@3. Prepare Burp Suite.
+>@  -Click on "Dashboard" then click on "Proxy" folder then "Proxy settings".
+>@  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
+>@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
+>@   or
+>@
+>@#################################################################################################################################
+>@
