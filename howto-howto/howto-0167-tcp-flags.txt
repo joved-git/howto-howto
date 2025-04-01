@@ -1,4 +1,5 @@
-Drapeaux TCP
+TCP Flags
+#BASICS
 
 In a TCP connection, flags are used to indicate a particular state of the connection or to provide 
 additional useful information, for example for troubleshooting purposes or to manage control of a 

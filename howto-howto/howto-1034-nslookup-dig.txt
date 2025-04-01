@@ -1,3 +1,6 @@
+DNS resolver | nslookup | dig
+#BASICS
+
 Resolvers are programs that extract information from name servers in 
 response to client requests. Resolvers must be able to access at least 
 one name server and use that name server’s information to answer a query 

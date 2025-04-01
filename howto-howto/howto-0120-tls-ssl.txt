@@ -1,3 +1,6 @@
+Transport Layer Security
+#BASICS
+
 Transport Layer Security (TLS) or “Transport Layer Security”, and its 
 predecessor the Secure Sockets Layer (SSL), are 
 protocols for securing exchanges via computer network, in particular by 
@@ -43,7 +46,7 @@ Public keys are exchanged then symetrical message exchange after.
 >@
 >@##########################################################################################
 >@#                                                                                        #
->@# [ TLS et SSL ]                                                                         #
+>@# [ TLS and SSL ]                                                                        #
 >@#                                                                                        #
 >@# Transport Layer Security (TLS) or “Transport Layer Security”, and its predecessor the  #
 >@# Secure Sockets Layer (SSL), are protocols for securing exchanges via computer network, #

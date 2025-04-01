@@ -1,4 +1,5 @@
 Neighbor Dynamic Protocol
+#BASICS
 
 Neighbor Discovery Protocol (NDP) is a protocol used by IPv6. It operates in layer 3 
 and is responsible for discovering other hosts on the same link, determining their 

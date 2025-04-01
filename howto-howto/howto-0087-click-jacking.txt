@@ -1,4 +1,5 @@
 Clickjacking
+#BASICS
 
 Clickjacking is a malicious technique aimed at tricking an Internet user into providing confidential 
 information or taking control of their computer by forcing them to click on apparently safe pages.

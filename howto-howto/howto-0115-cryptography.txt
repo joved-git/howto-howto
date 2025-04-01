@@ -1,3 +1,6 @@
+Cryptography
+#BASICS
+
 Cryptography is one of the disciplines of cryptology focused on protecting messages (ensuring 
 confidentiality, authenticity and integrity) often using secrets or keys. It is distinguished from 
 steganography which causes a message to pass unnoticed within another message while cryptography 
@@ -58,7 +61,7 @@ http://www.dcode.fr
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ Cryptographie ]                                                                                                 #
+>@# [ Cryptography ]                                                                                                  #
 >@#                                                                                                                   #
 >@# Cryptography is one of the disciplines of cryptology focused on protecting messages (ensuring  confidentiality,   #
 >@# authenticity and integrity) often using secrets or keys. It is distinguished from steganography which causes a    #

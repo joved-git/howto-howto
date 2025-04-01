@@ -1,4 +1,5 @@
 Dynamic Trunk Protocol
+#BASICS
 
 The Dynamic Trunk Protocol or DTP is a proprietary network protocol from Cisco 
 Systems, allowing you to dynamically manage the activation/deactivation of trunk 

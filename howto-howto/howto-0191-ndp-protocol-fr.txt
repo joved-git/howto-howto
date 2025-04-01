@@ -1,4 +1,5 @@
 Neighbor Dynamic Protocol
+#BASICS
 
 Neighbor Discovery Protocol (NDP, en français : protocole de découverte d'hôtes 
 voisins) est un protocole utilisé par IPv6. Il opère en couche 3 et est 

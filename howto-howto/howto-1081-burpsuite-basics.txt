@@ -11,7 +11,7 @@ testing on web2,3 applications. The suite is made up of different tools such as 
 Dashboard: make a scan and/or task.
 
 Target/Site map: retrieve the sitemap.
-Target/Scope: add target.
+Target/Scope: add target and/or exclude site(s).
 Target/Issue definitions: information about vulnerabilities. 
 
 Proxy/Intercept: used to intercept requests.
@@ -66,7 +66,7 @@ Learn: acecs to tutorials and vulnerable site.
 >@Dashboard: make a scan and/or task.
 >@
 >@Target/Site map: retrieve the sitemap.
->@Target/Scope: add target.
+>@Target/Scope: add target and/or exclude site(s).
 >@Target/Issue definitions: information about vulnerabilities. 
 >@
 >@Proxy/Intercept: used to intercept requests.

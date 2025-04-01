@@ -1,3 +1,6 @@
+Pretty Good Privacy
+#BASICS
+
 Pretty Good Privacy (which could be translated into French as “fairly good level of confidentiality”), better 
 known under the acronym PGP, is a hybrid cryptographic algorithm allowing, among other things, to encrypt and sign 
 data. It was developed and released in the United States by Philip Zimmermann in 1991.

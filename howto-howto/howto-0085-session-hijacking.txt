@@ -1,3 +1,6 @@
+Session hijacking
+#BASICS
+
 Session hijacking (sometimes called cookie hijacking, TCP session hijacking, or packet sniffing) 
 occurs when a hacker takes control of your Internet session. Such a situation can happen when you 
 are shopping online, paying a bill or checking your bank balance. Session hijackers usually target 

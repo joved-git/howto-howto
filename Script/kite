@@ -101,7 +101,7 @@ if [ x$1 = xwhatis ]; then
  		number=$(($number-1))
 
 		echo
-		cat $FILE | grep "^>@#" | head -$number
+		cat $FILE | grep "^>@#" | head -$number | tr '^>' ' ' | tr '@' ' '
 		echo
 	else
 		echo 

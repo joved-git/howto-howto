@@ -1,3 +1,6 @@
+The Three-way Handshake
+#BASICS
+
 As its name suggests, the three-way handshake takes place in three steps:
 
 1. SYN: The client who wishes to establish a connection with a server will send a first SYN 
