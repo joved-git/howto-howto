@@ -1,4 +1,5 @@
 JoeSandbox
+#BASICS
 
 Joe Sandbox detects and analyzes potential malicious files and URLs on 
 Windows, Mac OS, and Linux for suspicious activities. It performs deep 

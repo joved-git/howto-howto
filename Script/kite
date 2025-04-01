@@ -1,15 +1,6 @@
 #!/bin/bash
 # Monkey - 2021 / 2025
-# Version = 1.4.1
-
-# For "whatis" command. Example: "kite whatis iptraf" should give the iptraf box only.
-# Command that extract the only #BASICS file for a <name>:
-# grep "#BASICS" `ls -al | grep burp | grep -v "^l" | awk -F' ' '{ print $9 }'` | awk -F':' '{ print $1 }'
-# Command that extract the box and the number of line:
-# number=`cat <file> | grep "^>@#" | wc -l`
-# number=$(($number-1))
-# Command that give the box only (remove the last line:
-# cat <file> | grep "^>@#" | head -$number
+# Version = 1.5
 
 usage()
 {
@@ -63,20 +54,65 @@ if [ x$1 = xwhatis ]; then
     fi
 
 	COMMAND=$2
-	FILE=`ls -al | grep $COMMAND | grep -v "^l" | awk -F' ' '{ print $9 }'`
-	FILE=`grep "#BASICS" echo $FILE | awk -F':' '{ print $1 }'`
-	#FILE=`grep "#BASICS" `ls -al | grep $COMMAND | grep -v "^l" | awk -F' ' '{ print $9 }'` | awk -F':' '{ print $1 }'`
-	
-	echo "FILE=[$FILE]"
+	DIR=`pwd`
+	cd $SRC_DIR
+	FILE=`ls -al howto*.txt | grep $COMMAND | grep -v "^l" | awk -F' ' '{ print $9 }'`
+	NB_FILE=`ls -al howto*.txt | grep $COMMAND | grep -v "^l" | wc -l`
+	#echo "333 FILE=[$FILE] NB=$NB_FILE"
 
-	if [ $FILE ="" ]; then
+	if [ $NB_FILE -eq 0 ]; then
 		echo 
-		echo "Sorry, no information box for $COMMAND"
+		echo 'Sorry, no information box for ['$COMMAND']. Try "kyte list".'
 		echo
 	
+		cd $DIR
 		exit 1
 	fi
 
+	if [ $NB_FILE -ne 1 ]; then
+		FILE=`grep "#BASICS" $FILE | awk -F':' '{ print $1 }'`
+	fi
+
+	if [ `grep "#BASICS" $FILE | wc -l` -eq 0 ]; then
+		FILE=""
+	fi
+
+	if [ "$FILE" = "" ]; then
+		NB_FILE=0
+	else
+		NB_FILE=`grep "#BASICS" $FILE | wc -l`
+	fi
+
+	#echo "444 FILE=[$FILE] NB=$NB_FILE"
+
+	if [ $NB_FILE -eq 0 ]; then
+		echo 
+		echo 'Sorry, no information box for ['$COMMAND']. Try "kyte list".'
+		echo
+	
+		cd $DIR
+		exit 1
+	fi
+
+	NB_FILE=`grep "#BASICS" $FILE | wc -l`
+
+	if [ $NB_FILE -eq 1 ]; then
+		number=`cat $FILE | grep "^>@#" | wc -l`
+ 		number=$(($number-1))
+
+		echo
+		cat $FILE | grep "^>@#" | head -$number
+		echo
+	else
+		echo 
+		echo 'Sorry, keyword ['$COMMAND'] is not enough precise. Try "kyte list".'
+		echo
+		echo '['$COMMAND'] means:'
+		echo $FILE | tr ' ' '\n' 
+		echo
+	fi
+	
+	cd $DIR
 	exit 0
 fi
 
