@@ -1,4 +1,5 @@
 Trickest Wordlists
+#BASICS
 
 Trickest Wordlists is a repository where you can find real-world infosec wordlists.
 It is updated regularly.

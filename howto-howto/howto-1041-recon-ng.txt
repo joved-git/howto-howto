@@ -1,3 +1,6 @@
+Recon-ng
+#BASICS
+
 Among the tools designed to facilitate passive recognition, Recon-ng stands out as a powerful and flexible platform. 
 Developed in Python, Recon-ng provides a framework similar to that of Metasploit, offering an easy-to-use interface 
 for launching specific recognition modules.

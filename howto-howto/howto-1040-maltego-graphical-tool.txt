@@ -1,4 +1,5 @@
 Maltego | Maltego CE
+#BASICS
 
 Maltego is a platform for open-source intelligence (OSINT) and cyber 
 investigations, developed by Maltego Technologies GmbH, a company 

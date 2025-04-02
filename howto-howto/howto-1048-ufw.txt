@@ -1,3 +1,6 @@
+ufw
+#BASICS
+
 -- This tool is used to manage the Linux firewall NetFilter 	--
 -- by editing and changing content with iptables command.	--
 
