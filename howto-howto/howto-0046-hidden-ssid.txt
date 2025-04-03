@@ -21,6 +21,7 @@ $ sudo aireplay-ng -0 5 -a <BSSID> wlan0
 
 >@
 >@###############################################################################
+>@#                                                                             #
 >@# [ Discover hidden SSID ]                                                    #
 >@#                                                                             #
 >@# In this little tutorial, we will learn how to find the SSID of a hidden     #
@@ -45,4 +46,3 @@ $ sudo aireplay-ng -0 5 -a <BSSID> wlan0
 >@
 >@###############################################################################
 >@
-

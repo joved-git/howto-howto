@@ -1,3 +1,6 @@
+Web Archive
+#BASICS
+
 Web Archive (aka Wayback Machine) is a web site that has 
 recorded all web site since 1996.
 
@@ -10,7 +13,7 @@ https://web.archive.org
 >@
 >@##############################################################
 >@#                                                            #
->@# [ Web.archine | Wayback Machine ]                          #
+>@# [ Web Archine | Wayback Machine ]                          #
 >@#                                                            #
 >@# Web Archive (aka Wayback Machine) is a web site that has   #
 >@# recorded all web site since 1996.                          #

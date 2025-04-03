@@ -1,3 +1,6 @@
+Nikto
+#BASICS
+
 Nikto is a freeware command-line vulnerability scanner that scans web servers for dangerous 
 files/CGI, outdated server software, and other issues. It performs generic and server type 
 specific checks. It also captures and prints all cookies received. The Nikto code itself is 

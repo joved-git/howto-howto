@@ -1,3 +1,6 @@
+HyperText Transfer Protocol
+#BASICS
+
 HyperText Transfer Protocol Secure (HTTPS) is the combination of HTTP with a TLS3 encryption layer.
 
 HTTPS allows the visitor to verify the identity of the website they are accessing, thanks to an 
@@ -69,6 +72,7 @@ SERVER HELLO: the server gives its certificatts public key and the choosen algor
 >@#                                                                                                        #
 >@# See: howto-0165-http-protocol.txt                                                                      #
 >@# See: howto-0166-http-protocol-fr.txt                                                                   #
+>@#                                                                                                        #
 >@#--------------------------------------------------------------------------------------------------------#
 >@
 >@* HTTPS is the secured version of HTTP.              

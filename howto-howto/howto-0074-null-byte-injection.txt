@@ -1,4 +1,5 @@
 Null Byte Injection (Premature End of String)
+#BASICS
 
 Null Byte Injection is a serious attack that consists of polluting the input of a website 
 (often via URL) with a misplaced end of string, to divert its operation.

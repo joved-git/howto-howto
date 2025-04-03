@@ -1,4 +1,5 @@
 IP forwarding
+#BASICS
 
 IP forwarding should be enabled when you want the system to act as a router, 
 that is transfer IP packets from one network to another.
@@ -30,20 +31,20 @@ $ sudo -s
 >@#--------------------------------------------------------------------------------#
 >@
 >@-> Enable IP forwarding on ipv4 or ipv6
->@$ sudo -s
->@# echo "1" > /proc/sys/net/ipv4/ip_forward
->@# echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
->@>>> to enable ip forwarding on ipv4 or ipv6.
+>@ $ sudo -s
+>@ # echo "1" > /proc/sys/net/ipv4/ip_forward
+>@ # echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
+>@ >>> to enable ip forwarding on ipv4 or ipv6.
 >@
 >@-> Disable IP forwarding on ipv4 or ipv6
->@$ sudo -s
->@# echo "0" > /proc/sys/net/ipv4/ip_forward
->@# echo "0" > /proc/sys/net/ipv6/conf/all/forwarding
->@>>> to disable ip forwarding on ipv4 or ipv6.
+>@ $ sudo -s
+>@ # echo "0" > /proc/sys/net/ipv4/ip_forward
+>@ # echo "0" > /proc/sys/net/ipv6/conf/all/forwarding
+>@ >>> to disable ip forwarding on ipv4 or ipv6.
 >@
 >@-> Avoid ICMP redirection
->@$ sudo -s
->@# echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
+>@ $ sudo -s
+>@ # echo "0" > /proc/sys/net/ipv4/conf/all/send_redirects
 >@
 >@##################################################################################
 >@

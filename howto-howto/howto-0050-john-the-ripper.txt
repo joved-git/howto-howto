@@ -1,4 +1,5 @@
 John is a powerful tool that is used to crack passwords.
+#BASICS
 
 See: howto-1054-cewl-worldlist-tool.txt
 -> Used directory

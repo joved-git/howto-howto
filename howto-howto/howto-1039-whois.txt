@@ -1,3 +1,6 @@
+Whois
+#BASICS
+
 Whois (contraction of English who is ?, meaning "Qui est ? ") is a protocol and the name of 
 search services, based on this protocol, provided by Internet registries, for example Regional 
 Internet Registries (RIR) or well the domain name registers allowing information on an IP 

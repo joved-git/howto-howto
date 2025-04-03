@@ -1,4 +1,5 @@
 DirB
+#BASICS
 
 DirB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects. 
 It basically works by launching a dictionary based attack against a web server and 
@@ -15,6 +16,7 @@ scanners can’t look for. It doesn’t search vulnerabilities nor does it look 
 contents that can be vulnerable.
 
 See: howto-1054-cewl-worldlist-tool.txt
+See: howto-1056-trickest-wordlists.txt
 
 -> How to pronounce DirB
 Just say "dir-bee".
@@ -53,6 +55,9 @@ There is no many useful options:
 You can use CeWL (prononce "cool") that is here: https://github.com/digininja/CeWL
 See: howto-1054-cewl-worldlist-tool.txt
  
+-> Use predefined cool lists
+Look at here: https://github.com/trickest/wordlists
+
 >@
 >@######################################################################################### 
 >@#                                                                                       # 
@@ -73,6 +78,7 @@ See: howto-1054-cewl-worldlist-tool.txt
 >@# contents that can be vulnerable.                                                      #
 >@#                                                                                       # 
 >@# See: howto-1054-cewl-worldlist-tool.txt                                               #
+>@# See: howto-1056-trickest-wordlists.txt                                                #
 >@#                                                                                       # 
 >@#---------------------------------------------------------------------------------------# 
 >@
@@ -113,5 +119,8 @@ See: howto-1054-cewl-worldlist-tool.txt
 >@You can use CeWL (prononce "cool") that is here: https://github.com/digininja/CeWL
 >@See: howto-1054-cewl-worldlist-tool.txt
 >@ 
+>@-> Use predefined cool lists
+>@Look at here: https://github.com/trickest/wordlists
+>@
 >@######################################################################################### 
 >@

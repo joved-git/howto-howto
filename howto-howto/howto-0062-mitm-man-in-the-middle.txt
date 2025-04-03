@@ -1,3 +1,6 @@
+Man-in-the-middle attack
+#BASICS
+
 Man-in-the-middle attack (MITM), sometimes called monster-in-the-middle attack1,2 or man-in-the-middle attack, 
 Intermediary attack is an attack aimed at intercepting communications between two parties, without either 
 party being able to suspect that the communication channel between them has been hijacked.

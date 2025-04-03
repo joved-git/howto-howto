@@ -1,3 +1,6 @@
+DNSRecon
+#BASICS
+
 DNSRecon is a Python script that provides the ability to perform:
 
     Check all NS Records for Zone Transfers.

@@ -1,3 +1,4 @@
+#BASICS
 The Alfa Network adaptor could be used in kali to have a Wi-Fi antenna that is able to work    
 in Monitor mode. In Monitor mode, the adaptor will be able to listent to all the traffic and    
 not only those for him.

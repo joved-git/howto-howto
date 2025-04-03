@@ -1,4 +1,5 @@
 DNS spoofind | DNS poisoning
+#BASICS
 
 DNS cache poisoning, DNS spoofing, or DNS cache pollution (DNS cache poisoning, DNS spoofing, or DNS cache  
 pollution in English) is a technique allowing DNS servers to be deceived into believing that they receive    

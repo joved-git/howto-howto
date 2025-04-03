@@ -1,3 +1,6 @@
+Weplab
+#BASICS
+
 Weplab is a tool designed to teach how WEP works, what different vulnerabilities it has and how 
 they can be used in practice to break a WEP protected wireless network. 
 
@@ -50,6 +53,7 @@ $ weplab -b <.pcap file>
 >@# point of view. The author has tried to leave the source code as clear as possible, running away from    #
 >@# optimizations that would obfuscate it.                                                                  # 
 >@#                                                                                                         #
+>@#---------------------------------------------------------------------------------------------------------#
 >@
 >@-> All options 
 >@--debug     <debuglevel>    prints debug information

@@ -1,6 +1,21 @@
 #!/bin/bash
 # Monkey - 2021 / 2025
-# Version = 1.4
+# Version = 1.5
+
+usage()
+{
+	echo
+	echo "Please give me something to do !!"
+	echo
+	echo "Usage:"
+	echo "$ kite list               -> gives list of files"
+	echo "$ kite cmd                -> gives list of commands"
+	echo "$ kite <keyword>          -> gives complete information about <keyword>"
+	echo "$ kite whatis <keyword>   -> gives summary information about <keyword>"
+	echo
+
+	exit 0
+}
 
 WHERE=`echo $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`
 SRC_DIR=$WHERE/../howto-howto
@@ -16,27 +31,92 @@ then
 	exit 0
 fi
 
-if [ x$1 = x ]; 
+if [ x$1 = x -o x$1 = "x-h" -o x$1 = "x--help" ]; 
 then
-	echo
-	echo "Please give me something to do !!"
-	echo "$ kite list  -> gives list of files"
-	echo "$ kite cmd   -> gives list of commands"
-	echo
-	exit 0
+	usage
 fi
 
 if [ x$1 = xlist ]; then
 	echo
 	echo '########################################################'
 	echo
-	ls $SRC_DIR | grep 'howto-'
+	ls $SRC_DIR | grep 'howto-' | more
 	echo
 	echo '########################################################'
 	echo
 	exit 0
 fi
 
+# Handle "whatis" command
+if [ x$1 = xwhatis ]; then
+	if [ -z $2 ]; then
+		usage
+    fi
+
+	COMMAND=$2
+	DIR=`pwd`
+	cd $SRC_DIR
+	FILE=`ls -al howto*.txt | grep $COMMAND | grep -v "^l" | awk -F' ' '{ print $9 }'`
+	NB_FILE=`ls -al howto*.txt | grep $COMMAND | grep -v "^l" | wc -l`
+	#echo "333 FILE=[$FILE] NB=$NB_FILE"
+
+	if [ $NB_FILE -eq 0 ]; then
+		echo 
+		echo 'Sorry, no information box for ['$COMMAND']. Try "kyte list".'
+		echo
+	
+		cd $DIR
+		exit 1
+	fi
+
+	if [ $NB_FILE -ne 1 ]; then
+		FILE=`grep "#BASICS" $FILE | awk -F':' '{ print $1 }'`
+	fi
+
+	if [ `grep "#BASICS" $FILE | wc -l` -eq 0 ]; then
+		FILE=""
+	fi
+
+	if [ "$FILE" = "" ]; then
+		NB_FILE=0
+	else
+		NB_FILE=`grep "#BASICS" $FILE | wc -l`
+	fi
+
+	#echo "444 FILE=[$FILE] NB=$NB_FILE"
+
+	if [ $NB_FILE -eq 0 ]; then
+		echo 
+		echo 'Sorry, no information box for ['$COMMAND']. Try "kyte list".'
+		echo
+	
+		cd $DIR
+		exit 1
+	fi
+
+	NB_FILE=`grep "#BASICS" $FILE | wc -l`
+
+	if [ $NB_FILE -eq 1 ]; then
+		number=`cat $FILE | grep "^>@#" | wc -l`
+ 		number=$(($number-1))
+
+		echo
+		cat $FILE | grep "^>@#" | head -$number | tr '^>' ' ' | tr '@' ' '
+		echo
+	else
+		echo 
+		echo 'Sorry, keyword ['$COMMAND'] is not enough precise. Try "kyte list".'
+		echo
+		echo '['$COMMAND'] means:'
+		echo $FILE | tr ' ' '\n' 
+		echo
+	fi
+	
+	cd $DIR
+	exit 0
+fi
+
+# Handle "cmd" command
 if [ x$1 = xcmd ]; then
 	CMD=`ls -l $WHERE | grep -v kite | awk {' print $9 }'`
 

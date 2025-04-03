@@ -1,4 +1,5 @@
 APT
+#BASICS
 
 An Advanced Persistent Threat (often abbreviated as APT) initially refers to 
 a type of stealthy and continuous computer hacking targeting a specific entity.
@@ -23,7 +24,8 @@ As its name suggests, an APT must be:
 
 >@
 >@##################################################################################### 
->@# [ APT ]                                                                           #
+>@#                                                                                   #
+>@# [ APT | Advanced Persistent Threat ]                                              #
 >@#                                                                                   #
 >@# An Advanced Persistent Threat (often abbreviated as APT) initially refers to      #
 >@# a type of stealthy and continuous computer hacking targeting a specific entity.   #

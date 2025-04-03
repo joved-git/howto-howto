@@ -1,0 +1,62 @@
+Trickest Wordlists
+#BASICS
+
+Trickest Wordlists is a repository where you can find real-world infosec wordlists.
+It is updated regularly.
+
+-> Technologies
+These wordlists are based on the source code of the CMSes/servers/frameworks listed 
+here : https://github.com/trickest/wordlists/blob/main/technology-repositories.json
+
+The current wordlists include:
+    Wordpress
+    Joomla
+    Drupal
+    Magento
+    Ghost
+    Tomcat
+
+-> The different thems are:
+    cloud
+    images
+    inventory
+    robots
+    technologies 
+
+-> Retrieve file for use:
+$ wget <url of the file>
+
+>@
+>@########################################################################################
+>@#                                                                                      #
+>@# [ Trickest Wordlists ]                                                               #
+>@#                                                                                      #
+>@# Trickest Wordlists is a repository where you can find real-world infosec wordlists.  #
+>@# It is updated regularly.                                                             #
+>@#                                                                                      #
+>@#--------------------------------------------------------------------------------------# 
+>@
+>@-> Technologies
+>@These wordlists are based on the source code of the CMSes/servers/frameworks listed 
+>@here : https://github.com/trickest/wordlists/blob/main/technology-repositories.json
+>@
+>@The current wordlists include:
+>@    Wordpress
+>@    Joomla
+>@    Drupal
+>@    Magento
+>@    Ghost
+>@    Tomcat
+>@
+>@-> The different thems are:
+>@    cloud
+>@    images
+>@    inventory
+>@    robots
+>@    technologies 
+>@
+>@-> Retrieve file for use:
+>@$ wget <url of the file>
+>@
+>@########################################################################################
+>@

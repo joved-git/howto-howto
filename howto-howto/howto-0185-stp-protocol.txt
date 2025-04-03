@@ -1,4 +1,5 @@
 Spanning Tree Protocol
+#BASICS
 
 Spanning Tree Protocol (also called STP) is a Layer 2 network protocol for determining 
 a loop-free network topology (called a spanning tree algorithm) in bridged LANs. It is 

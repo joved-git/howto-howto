@@ -1,4 +1,5 @@
 CeWL | Custom Word List generator
+#BASICS
 
 CeWL, the Custom Word List generator. CeWL is a ruby app which spiders a given 
 URL to a specified depth, optionally following external links, and returns a 

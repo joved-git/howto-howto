@@ -1,3 +1,5 @@
+#BASICS
+
 A denial of service attack (abbreviated as DoS attack) is a computer attack aimed at making a service 
 unavailable and preventing legitimate users of a service from using it. Currently the vast majority of 
 these attacks are carried out from several sources, we then speak of a distributed denial of service 
