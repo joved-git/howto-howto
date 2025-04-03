@@ -10,7 +10,7 @@ program are not.
                                                                                           
 See: howto-1050-nikto-basics.txt                                                         
                                                                                          
-
+$ nikto -h <host>
 
 - Nikto v2.5.0
 ---------------------------------------------------------------------------
