@@ -1,0 +1,90 @@
+Samba | SMB
+#BASICS
+
+Samba is an interoperability software that implements the Microsoft Windows proprietary 
+SMB/CIFS protocol (more commonly known as SMB) on computers running the Unix operating 
+system and its derivatives to share printers and files over a computer network. 
+
+Samba facilitates interoperability between heterogeneous Windows-Unix systems. It allows 
+computers on a network to access printers and files on Unix computers. It also allows 
+Unix servers to act as a substitute for Windows servers.
+
+Which port does Samba use ?
+By default, Samba uses the port number 445.
+
+-> Which tools can I use ?
+There are 2 common tools in the Samba world:
+
+-smbmap:    used to displays shares and associated permissions.
+$ smbmap -H <server>
+>>> displays information about available shares on the <server>.
+
+-smbclient: used to communicate with the Samba server.
+$ smbclient --no-pass //<server>/<share>
+smb: \> 
+>>> if all is OK, we obtain a new SMB prompt.
+
+Here are some useful command:
+smb: \> help         obtains the help.
+smb: \> ls           lists the content of the directory.
+smb: \> get <file>   downloads <file>.
+smb: \> put <file>   upload a local <file>.
+smb: \> cd <dir>     changes directory to <dir>
+smb: \> quit         quits the Samba prompt.
+
+$ smbclient -user=[DOMAIN]USERNAME[%PASSWORD] --password=PASSWORD //<server>/<share>
+>>> used to give a username, a domain and a password.
+
+-> How to go deeper
+We can use nmap to try to enumerate shares on a server.
+$ nmap --script smb-enum-shares -p 445 <serer>
+>>> this script gives more information (server directory paths, user, ...).
+
+>@
+>@############################################################################################ 
+>@#                                                                                          #
+>@# [ Samba | SMB ]                                                                          #
+>@#                                                                                          #
+>@# Samba is an interoperability software that implements the Microsoft Windows proprietary  #
+>@# SMB/CIFS protocol (more commonly known as SMB) on computers running the Unix operating   #
+>@# system and its derivatives to share printers and files over a computer network.          #
+>@#                                                                                          #
+>@# Samba facilitates interoperability between heterogeneous Windows-Unix systems. It allows #
+>@# computers on a network to access printers and files on Unix computers. It also allows    #
+>@# Unix servers to act as a substitute for Windows servers.                                 #
+>@#                                                                                          #
+>@#------------------------------------------------------------------------------------------# 
+>@
+>@Which port does Samba use ?
+>@By default, Samba uses the port number 445.
+>@
+>@-> Which tools can I use ?
+>@There are 2 common tools in the Samba world:
+>@
+>@-smbmap:    used to displays shares and associated permissions.
+>@$ smbmap -H <server>
+>@>>> displays information about available shares on the <server>.
+>@
+>@-smbclient: used to communicate with the Samba server.
+>@$ smbclient --no-pass //<server>/<share>
+>@smb: \> 
+>@>>> if all is OK, we obtain a new SMB prompt.
+>@
+>@Here are some useful command:
+>@smb: \> help         obtains the help.
+>@smb: \> ls           lists the content of the directory.
+>@smb: \> get <file>   downloads <file>.
+>@smb: \> put <file>   upload a local <file>.
+>@smb: \> cd <dir>     changes directory to <dir>
+>@smb: \> quit         quits the Samba prompt.
+>@
+>@$ smbclient -user=[DOMAIN]USERNAME[%PASSWORD] --password=PASSWORD //<server>/<share>
+>@>>> used to give a username, a domain and a password.
+>@
+>@-> How to go deeper
+>@We can use nmap to try to enumerate shares on a server.
+>@$ nmap --script smb-enum-shares -p 445 <serer>
+>@>>> this script gives more information (server directory paths, user, ...).
+>@
+>@############################################################################################ 
+>@

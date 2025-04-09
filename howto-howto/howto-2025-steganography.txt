@@ -1,3 +1,6 @@
+Steganography
+#BASICS
+
 Steganography is the technique of hiding sensitive information in seemingly innocuous covering 
 media (typically a signal such as text, sound, image, video, etc.), which will not arouse 
 suspicion even if it is in plain sight: only a legitimate recipient will know that there is 

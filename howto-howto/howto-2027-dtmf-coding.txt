@@ -1,4 +1,5 @@
 DTMF coding
+#BASICS
 
 A DTMF (Dual-Tone Multi-Frequency) or VF (Vocal Frequency) code is a 
 combination of frequencies used for traditional landline telephony 

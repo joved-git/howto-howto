@@ -1,4 +1,5 @@
 Last Activity View
+#BASICS
 
 LastActivityView is a tool for Windows operating system that collects information 
 from various sources on a running system, and displays a log of actions made by 

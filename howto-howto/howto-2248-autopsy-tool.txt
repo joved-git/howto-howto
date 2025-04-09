@@ -1,4 +1,5 @@
 Autopsy
+#BASICS
 
 Autopsy is the premier end-to-end open source digital forensics platform. 
 Built by Sleuth Kit Labs with the core features you expect in commercial 

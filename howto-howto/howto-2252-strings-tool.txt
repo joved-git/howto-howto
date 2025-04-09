@@ -1,4 +1,5 @@
 Strings | strings | strings.exe
+#BASICS
 
 Working on NT and Win2K means that executables and object files will many times have embedded 
 UNICODE strings that you cannot easily see with a standard ASCII strings or grep programs. 

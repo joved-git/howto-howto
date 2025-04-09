@@ -1,4 +1,7 @@
-The Domain Name System13, or DNS, is a distributed computing service that associates Internet 
+Domain Name System | DNS
+#BASICS
+
+The Domain Name System, or DNS, is a distributed computing service that associates Internet 
 domain names with their IP addresses or other record types. By providing a distributed name 
 resolution service in the early years of the Internet, around 1985, DNS is an essential 
 component in the development of the computer network.DNS stands for Domain Name System

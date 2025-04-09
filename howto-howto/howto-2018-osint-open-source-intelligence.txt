@@ -1,4 +1,5 @@
 OSINT | Open Source Intelligence
+#BASICS
 
 OSINT (for Open Source Intelligence) is the way to use internet to retrieve 
 public information. Concretely, we use internet and physical documents to 

@@ -1,4 +1,5 @@
 DumpIt | Volatility
+#BASICS
 
 DumpIt is used to oerform a memory image. These image could be 
 analyzed afterward. The image file is a .raw file

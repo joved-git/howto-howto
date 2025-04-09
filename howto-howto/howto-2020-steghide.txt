@@ -1,3 +1,6 @@
+Steghide
+#BASICS
+
 Usefull tool to hide and retrieve text file into image.
 
 Here are some usefull commands:

@@ -1,4 +1,5 @@
 Wordpress security
+#BASICS
 
 WordPress is a free content management system (CMS). This software written in PHP is based on a MySQL and 
 MariaDB database, and is distributed by the WordPress.org foundation. WordPress features allow you to 

@@ -1,7 +1,8 @@
 Kill Chain | Cyber Kill Chain
+#BASICS
 
 The kill chain principle refers in the field of information systems security to a method of 
-modeling intrusion processes on a computer network[1].
+modeling intrusion processes on a computer network or on a machine.
 
                                              _____
                                             /     \
@@ -50,7 +51,7 @@ modeling intrusion processes on a computer network[1].
 >@# [ Kill Chain | Cyber Kill Chain ]                                                                #
 >@#                                                                                                  #
 >@# The kill chain principle refers in the field of information systems security to a method of      #
->@# modeling intrusion processes on a computer network.                                              # 
+>@# modeling intrusion processes on a computer network or on a machine.                              # 
 >@#                                                                                                  #
 >@#--------------------------------------------------------------------------------------------------# 
 >@

@@ -1,4 +1,5 @@
 Vulnerable and Outdated Components | A06:2021
+#BASICS
 
 This category was previously titled Using Components with Known Vulnerabilities and is #2 in 
 the Top 10 community survey, but also had enough data to make the Top 10 via data analysis. This category moves up from #9 

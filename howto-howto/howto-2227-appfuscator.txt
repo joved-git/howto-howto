@@ -1,4 +1,5 @@
 AppFuscator
+#BASICS
 
 Appfuscator is smart protection of your .NET applications. Our .NET obfuscator 
 combines a complex approach to protection, easy adjustment and access according 

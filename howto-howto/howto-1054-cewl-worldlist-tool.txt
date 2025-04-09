@@ -6,7 +6,7 @@ URL to a specified depth, optionally following external links, and returns a
 list of words which can then be used for password crackers such as John the Ripper
 
 See: https://github.com/digininja/CeWL
-See: howto-0050-john-the-ripper.txt
+See: howto-0050-john-the-ripper-password-tool.txt
 See: howto-1053-dirb-scanner.txt
 
 Look at here: https://github.com/digininja/CeWL and look at the README.md file
@@ -21,7 +21,7 @@ Look at here: https://github.com/digininja/CeWL and look at the README.md file
 >@# list of words which can then be used for password crackers such as John the Ripper #
 >@#                                                                                    #
 >@# See: https://github.com/digininja/CeWL                                             #
->@# See: howto-0050-john-the-ripper.txt                                                #
+>@# See: howto-0050-john-the-ripper-password-tool.txt                                  #
 >@# See: howto-1053-dirb-scanner.txt                                                   #
 >@#                                                                                    #
 >@#------------------------------------------------------------------------------------#

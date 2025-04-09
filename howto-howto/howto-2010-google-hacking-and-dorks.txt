@@ -1,3 +1,6 @@
+Google hacking
+#BASICS
+
 Google hacking is a technique consisting of using a search engine, usually Google, to look 
 for vulnerabilities or recover sensitive data. This technique is based on the results of 
 the exploration and indexing of websites by the Googlebot robot. It is generally used by 

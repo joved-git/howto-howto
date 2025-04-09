@@ -1,3 +1,6 @@
+Social engineering
+#BASICS
+
 Social engineering is a manipulation technique that exploits human error in order to obtain 
 confidential information, access or valuable assets. In the realm of cybercrime, these 
 “human hacking” scams tend to trick unsuspecting users into leaking data, spreading malware, 
