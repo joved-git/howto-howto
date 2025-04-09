@@ -1,4 +1,5 @@
 Remote File Inclusion | RFI
+#BASICS
 
 Remote file inclusion (RFI) occurs when the web application downloads and executes a remote file. These remote files are 
 usually obtained in the form of an HTTP or FTP URI as a user-supplied parameter to the web application. 

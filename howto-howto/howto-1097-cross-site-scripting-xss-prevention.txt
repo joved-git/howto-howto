@@ -1,4 +1,5 @@
 XSS injection prevention
+#BASICS
 
 Cross-site scripting (abbreviated XSS) is a type of website security vulnerability that allows content to be injected into a 
 page, thereby causing actions on web browsers visiting the page. The possibilities of XSS are very wide since the attacker 

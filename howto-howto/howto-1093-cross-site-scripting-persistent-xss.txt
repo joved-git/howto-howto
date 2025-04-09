@@ -1,4 +1,5 @@
 Persistent XSS injection
+#BASICS
 
 A Persistent XSS attack is possible when a website or web application stores user input and later serves it to other users. 
 An application is vulnerable if it does not validate user input before storing content and embedding it into HTML response 

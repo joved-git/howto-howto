@@ -1,4 +1,5 @@
 DOM XSS injection
+#BASICS
 
 DOM XSS attack is a specific case of the Reflected XSS injection where the Javascript code is passed via URL 
 and dynamically displayed from the URL into the Web page using Javascript.

@@ -1,4 +1,5 @@
 GET/POST XSS injection
+#BASICS
 
 GET/POST XSS injection is a method that use the GET and POST place to inject script into an URL (GET) or into the POST
 request using Burp (only for the POST).

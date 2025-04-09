@@ -16,6 +16,11 @@ For example, if a string received via the URL has the value Hel%00lo, then the a
 string that will be processed at runtime is "Hel". The presence of %00 terminates the 
 string prematurely.
 
+-> Handle double "%00" parsing
+If you have an URL that firstly parses the "%00" then the server again, you have to use a 
+trick concerning that "%00": hide the first "%" with its code, that is "%25". So the code
+you have to inject into the URL should be "%2500".
+
 -> What can we do whit Null Byte Injection
 Stop code everywhere.
 It is possible to stop the code exactly when we want. For example, if a site constructs
@@ -27,10 +32,10 @@ of file by adding %00 at the end of the URL.
 
 -> How to prevent yourself from Null Byte Injection
 At the PHP code level:
-  -Avoid to include all pages of the website in the home page at the user's request).
+  -Avoid to include all pages of the website in the home page at the user's request.
   -If you still want to work this way, filter the entries and exclude special characters 
-   like %. 
-  -Define the list of names of all the pages that may be called.
+   like "%". 
+  -Define the list of all page names that may be called.
 
 >@
 >@############################################################################################### 
@@ -63,12 +68,17 @@ At the PHP code level:
 >@  ?p=admin.php points to admin.php.html
 >@  ?p=admin.php%00 points to admin.php
 >@
+>@-> Handle double "%00" parsing
+>@If you have an URL that firstly parses the "%00" then the server again, you have to use a 
+>@trick concerning that "%00": hide the first "%" with its code, that is "%25". So the code
+>@you have to inject into the URL should be "%2500".
+>@
 >@-> How to prevent yourself from Null Byte Injection
 >@At the PHP code level:
->@  -Avoid to include all pages of the website in the home page at the user's request).
+>@  -Avoid to include all pages of the website in the home page at the user's request.
 >@  -If you still want to work this way, filter the entries and exclude special characters 
->@   like %. 
->@  -Define the list of names of all the pages that may be called.
+>@   like "%". 
+>@  -Define the list of all page names that may be called.
 >@
 >@############################################################################################### 
 >@

@@ -20,7 +20,7 @@ For a specific Technique, you will have:
    test used to apply the Technique.
 
 In the Technique folder, you will find source code used for the
-Technique and the different Matrixes.
+Technique and the different Matrices.
      
 -> How do that work ?
 Here is an example:
@@ -72,7 +72,7 @@ PS> Invoke-AtomicTest T1059.004
 >@   test used to apply the Technique.
 >@
 >@In the Technique folder, you will find source code used for the
->@Technique and the different Matrixes.
+>@Technique and the different Matrices.
 >@     
 >@-> How do that work ?
 >@Here is an example:

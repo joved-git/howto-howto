@@ -1,6 +1,7 @@
 SQL (acronym for Structured Query Language) is a standardized computer language used to operate 
 relational databases. The data manipulation language part of SQL allows you to search, add, 
 modify, or delete data in relational databases.
+#BASICS
 
 In addition to the data manipulation language:
   -the data definition language allows you to create and modify the organization of data in the 

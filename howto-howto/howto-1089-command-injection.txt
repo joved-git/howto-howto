@@ -1,4 +1,5 @@
 Code injection | Command injection
+#BASICS
 
 Code injection is a computer security exploit where a program fails to correctly process external data, such as user input, 
 causing it to interpret the data as executable commands. An attacker using this method "injects" code into the program while 

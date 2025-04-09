@@ -1,4 +1,5 @@
 OWASP Mutillidae II
+#BASICS
 
 OWASP Mutillidae II is a free, open-source, deliberately vulnerable web application designed for web-security enthusiasts. 
 It serves as a target for learning and practicing web security skills. Mutillidae can be easily installed on Linux and 

@@ -1,4 +1,5 @@
 XML External Entity | XXE
+#BASICS
 
 XML External Entity attack, or simply XXE attack, is a type of attack against an application that parses XML input. 
 This attack occurs when XML input containing a reference to an external entity is processed by a weakly configured 

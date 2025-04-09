@@ -1,4 +1,5 @@
 HTTP headers XSS injection
+#BASICS
 
 HTTP XSS injection is a method that use the HTTP headers to place some script and code using Burp.
 

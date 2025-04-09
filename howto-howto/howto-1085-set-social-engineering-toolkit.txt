@@ -1,4 +1,5 @@
 Basic use of the SET (Social Engineer Toolkit)
+#BASICS
 
 SET is a tool for automating social engineering techniques. We will see how to use it.
 First of all, you can launch it by going to Kali, in the “Applications -> Operations Tools -> Social Engineer Toolkit” menu.

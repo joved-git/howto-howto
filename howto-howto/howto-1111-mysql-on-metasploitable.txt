@@ -26,6 +26,7 @@ mysql> exit;
 >@################################################################################
 >@#                                                                              #
 >@# [ mysql on Metasploitable ]                                                  #
+>@#                                                                              #
 >@# It is possible to use and test SQL directly on the metasploitable machine.   #
 >@#                                                                              #
 >@#See: howto-1110-sql-summary.txt                                               #

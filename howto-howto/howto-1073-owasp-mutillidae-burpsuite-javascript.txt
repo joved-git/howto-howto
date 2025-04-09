@@ -1,4 +1,5 @@
 Burp Suite
+#BASICS
 
 Burp Suite is a Java application, developed by PortSwigger Ltd, which can be used for securing or performing penetration 
 testing on web2,3 applications. The suite is made up of different tools such as a proxy server (Burp Proxy), web crawler 

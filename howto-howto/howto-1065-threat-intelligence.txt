@@ -1,4 +1,5 @@
 Threat Intelligence (TI) | Cyber Threat Intelligence (CTI) 
+#BASICS
 
 Threat Intelligence, or Cyber Threat Intelligence (CTI), is a discipline based on 
 intelligence techniques, which aims to collect and organize all information related 

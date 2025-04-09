@@ -1,4 +1,5 @@
 Directory browsing
+#BASICS
 
 Directory Browsing or Listing is the act of giving visitors to a website the opportunity to see 
 and display the content of a directory in “raw”. Usually, web servers display web pages (HTML, 

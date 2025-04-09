@@ -1,4 +1,5 @@
 Fail2ban
+#BASICS
 
 Fail2Ban scans log files like /var/log/auth.log and bans IP addresses conducting too many failed 
 login attempts. It does this by updating system firewall rules to reject new connections from 

@@ -1,4 +1,5 @@
 Local File Inclusion | LFI
+#BASICS
 
 A Local File Include (LFI) vulnerability consists of including a local file from user input. In certain cases this 
 allows access to files not located in the webroot or even to execute code.

@@ -1,5 +1,6 @@
 OWASP Top 10 is an official list that gives the 10 most important security web risks. It is use to securise web applications.
 Official website: https://owasp.org/Top10/
+#BASICS
 
 A01:2021-Broken Access Control moves up from the fifth position to the category with the most serious web application 
 security risk; the contributed data indicates that on average, 3.81% of applications tested had one or more Common Weaknes
