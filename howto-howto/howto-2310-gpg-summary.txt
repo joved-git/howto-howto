@@ -1,4 +1,5 @@
 GPG | GnuPG
+#BASICS
 
 GnuPG (or GPG, for GNU Privacy Guard) is the GNU implementation of the OpenPGP standard defined in RFC 48805, distributed under the terms of the 
 GNU General Public License.

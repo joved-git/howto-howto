@@ -1,4 +1,5 @@
 Regular expressions | Regex | RE
+#BASICS
 
 In computing, a regular expression or rational expression1 or normal expressionnote 1 or pattern 
 is a character string which describes, according to a precise syntax, a set of possible character 

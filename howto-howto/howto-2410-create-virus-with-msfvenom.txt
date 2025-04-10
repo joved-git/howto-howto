@@ -1,4 +1,5 @@
 MSFvenom
+#BASICS
 
 MSFvenom is a combination of MSFpayload and MSFencode, putting both of these tools 
 into a single Framework instance. msfvenom replaced both msfpayload and msfencode 
