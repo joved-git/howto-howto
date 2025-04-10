@@ -34,7 +34,7 @@ nmap only does a ping scan (does not try to scan ports).
 $ nmap -sS <hostname>
 nmap is going to try a TCP SYN connection on <hostname>.
 
-$ nmap -Pn S<hostname>
+$ nmap -Pn <hostname>
 nmap treats all hosts as online -- skip host discovery (no ping session).
 
 $ nmap -sV ...
@@ -107,7 +107,7 @@ nmap will perform a scan with default scripts (non intrusive and discrete). List
 >@$ nmap -sS <hostname>
 >@nmap is going to try a TCP SYN connection on <hostname>.
 >@
->@$ nmap -Pn S<hostname>
+>@$ nmap -Pn <hostname>
 >@nmap treats all hosts as online -- skip host discovery (no ping session).
 >@
 >@$ nmap -sV ...

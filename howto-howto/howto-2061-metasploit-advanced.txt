@@ -34,6 +34,9 @@ Example:
 -> Look for module information.
 msf6> exploit(<name without 'exploit'>)> info
 
+-> Set an option.
+msf6> exploit(<name without 'exploit'>)> set RHOSTS <ip of the target>
+
 -> Launch the exploit.
 msf6> exploit(<name without 'exploit'>)> exploit
 Example of output (between '---'. Here, you are connected to the machine as root):
@@ -121,7 +124,7 @@ $ msf6> quit
 >@msf6> exploit(<name without 'exploit'>)> info
 >@
 >@-> Set an option.
->@msf6> exploit(<name without 'exploit'>)> set RHSOTS <ip of the target>
+>@msf6> exploit(<name without 'exploit'>)> set RHOSTS <ip of the target>
 >@
 >@-> Launch the exploit.
 >@msf6> exploit(<name without 'exploit'>)> exploit

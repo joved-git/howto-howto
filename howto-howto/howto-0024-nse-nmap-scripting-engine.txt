@@ -39,10 +39,10 @@ $ sudo nmap --script "http-*"  -p 80 <host>                    -> a list of scri
 $ sudo nmap --script "not dos" <host>                          -> all script except those with dos
 
                                                                -> add args to the script
-$ sudo nmap --script http-virustotal --script-args='http-virustoatl.apikey="KEY", http-virustotal.filename="file"'
+$ sudo nmap --script http-virustotal --script-args='http-virustotal.apikey="KEY", http-virustotal.filename="file"'
 
 # Update the script database
-$ sudo nmap --scrpt-updatedb
+$ sudo nmap --script-updatedb
 
 # Example - Find vulnerabilities on Metasploitable
 See: howto-0022-nmap-backdoor-example.txt
@@ -95,10 +95,10 @@ See: howto-0022-nmap-backdoor-example.txt
 >@$ sudo nmap --script "not dos" <host>                          -> all script except those with dos
 >@
 >@                                                               -> add args to the script
->@$ sudo nmap --script http-virustotal --script-args='http-virustoatl.apikey="KEY", http-virustotal.filename="file"'
+>@$ sudo nmap --script http-virustotal --script-args='http-virustotal.apikey="KEY", http-virustotal.filename="file"'
 >@
 >@# Update the script database
->@$ sudo nmap --scrpt-updatedb
+>@$ sudo nmap --script-updatedb
 >@
 >@# Example - Find vulnerabilities on Metasploitable
 >@See: howto-0022-nmap-backdoor-example.txt
