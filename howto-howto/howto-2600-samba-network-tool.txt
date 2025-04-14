@@ -10,14 +10,23 @@ computers on a network to access printers and files on Unix computers. It also a
 Unix servers to act as a substitute for Windows servers.
 
 Which port does Samba use ?
-By default, Samba uses the port number 445.
+By default, Samba uses the port number 445 (or 139).
 
 -> Which tools can I use ?
 There are 2 common tools in the Samba world:
 
--smbmap:    used to displays shares and associated permissions.
+-smbmap: used to displays shares and associated permissions.
 $ smbmap -H <server>
 >>> displays information about available shares on the <server>.
+
+$ smbmap -u <user> -p <password> -H <server>
+>>> connection as <user>
+
+$ smbmap -u <user> -p <password> -R <share> -H <server>
+>>> specifies a specific <share>
+
+$ smbmap -u <user> -p <password> -R <share> --download <share>/<file> -H <server>
+>>> downloads <share>/<file>
 
 -smbclient: used to communicate with the Samba server.
 $ smbclient --no-pass //<server>/<share>
@@ -33,11 +42,14 @@ smb: \> cd <dir>     changes directory to <dir>
 smb: \> quit         quits the Samba prompt.
 
 $ smbclient -user=[DOMAIN]USERNAME[%PASSWORD] --password=PASSWORD //<server>/<share>
->>> used to give a username, a domain and a password.
+>>> used to give a username, a domain and/or a password.
+
+$ smbclient --no-pass //<server>/<share> -c "prompt off; recurse on; mget *"
+>>> download all the content of the share without "yes/no" prompt.
 
 -> How to go deeper
 We can use nmap to try to enumerate shares on a server.
-$ nmap --script smb-enum-shares -p 445 <serer>
+$ nmap --script smb-enum-shares -p 445 <server>
 >>> this script gives more information (server directory paths, user, ...).
 
 >@
@@ -56,7 +68,7 @@ $ nmap --script smb-enum-shares -p 445 <serer>
 >@#------------------------------------------------------------------------------------------# 
 >@
 >@Which port does Samba use ?
->@By default, Samba uses the port number 445.
+>@By default, Samba uses the port number 445 (or 139).
 >@
 >@-> Which tools can I use ?
 >@There are 2 common tools in the Samba world:
@@ -65,10 +77,15 @@ $ nmap --script smb-enum-shares -p 445 <serer>
 >@$ smbmap -H <server>
 >@>>> displays information about available shares on the <server>.
 >@
->@-smbclient: used to communicate with the Samba server.
->@$ smbclient --no-pass //<server>/<share>
->@smb: \> 
->@>>> if all is OK, we obtain a new SMB prompt.
+>@
+>@$ smbmap -u <user> -p <password> -H <server>
+>@>>> connection as <user>
+>@
+>@$ smbmap -u <user> -p <password> -R <share> -H <server>
+>@>>> specifies a specific <share>
+>@
+>@$ smbmap -u <user> -p <password> -R <share> --download <share>/<file> -H <server>
+>@>>> downloads <share>/<file>
 >@
 >@Here are some useful command:
 >@smb: \> help         obtains the help.
@@ -81,9 +98,12 @@ $ nmap --script smb-enum-shares -p 445 <serer>
 >@$ smbclient -user=[DOMAIN]USERNAME[%PASSWORD] --password=PASSWORD //<server>/<share>
 >@>>> used to give a username, a domain and a password.
 >@
+>@$ smbclient --no-pass //<server>/<share> -c "prompt off; recurse on; mget *"
+>@>>> download all the content of the share without "yes/no" prompt.
+>@
 >@-> How to go deeper
 >@We can use nmap to try to enumerate shares on a server.
->@$ nmap --script smb-enum-shares -p 445 <serer>
+>@$ nmap --script smb-enum-shares -p 445 <server>
 >@>>> this script gives more information (server directory paths, user, ...).
 >@
 >@############################################################################################ 

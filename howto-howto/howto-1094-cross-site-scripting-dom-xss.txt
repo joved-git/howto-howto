@@ -1,4 +1,4 @@
-DOM XSS injection
+DOM XSS injection or XSS Type 0 injection
 #BASICS
 
 DOM XSS attack is a specific case of the Reflected XSS injection where the Javascript code is passed via URL 
@@ -34,7 +34,7 @@ $ sudo rm ../domxss.zip
 >@
 >@#####################################################################################################################
 >@#                                                                                                                   #
->@# [ DOM XSS injection | Document Object Model XSS injection ]                                                       #
+>@# [ DOM XSS injection | Document Object Model XSS injection | XSS Type 0 injection ]                                # 
 >@#                                                                                                                   #
 >@# DOM XSS attack is a specific case of the Reflected XSS injection where the Javascript code is passed via URL      #
 >@# and dynamically displayed from the URL into the Web page using Javascript.                                        #

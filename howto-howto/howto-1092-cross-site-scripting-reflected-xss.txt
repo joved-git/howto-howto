@@ -1,4 +1,4 @@
-Reflected XSS injection
+Reflected XSS injection or XSS Type 2 injection
 #BASICS
 
 Cross-site scripting (XSS)[a] is a type of security vulnerability that can be found in some web applications. 
@@ -60,7 +60,7 @@ Some advice:
 >@
 >@#######################################################################################################################
 >@#                                                                                                                     #
->@# [ Reflected XSS injection ]                                                                                         #
+>@# [ Reflected XSS injection | XSS Type 2 injection ]                                                                  #
 >@#                                                                                                                     #
 >@# Cross-site scripting (XSS)[a] is a type of security vulnerability that can be found in some web applications.       #
 >@# XSS attacks enable attackers to inject client-side scripts into web pages viewed by other users. A cross-site       #

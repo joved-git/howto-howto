@@ -15,6 +15,8 @@ listed here are not vulnerable theirselves.
 GTFOBins is rather a compendium about how to live off the land when you only 
 have certain binaries available.
 
+See: https://gtfobins.github.io/
+
 -> How use that content
 When you list commands you can do as root, find here what you can exactly do.
 
@@ -42,6 +44,8 @@ $ sudo -l
 >@#                                                                                #
 >@# GTFOBins is rather a compendium about how to live off the land when you only   #
 >@# have certain binaries available.                                               #
+>@#                                                                                #
+>@# See: https://gtfobins.github.io/                                               #
 >@#                                                                                #
 >@#--------------------------------------------------------------------------------#
 >@

@@ -5,6 +5,11 @@ If nedded:
 $ cd /usr/share/metasploit-framework
 $ sudo gem install bundler
 
+Search for exploit
+You can use the searchsploit command
+$ searchsploit <keyword #1> <keyword #2> ...
+$ searchsploit webmin linux
+
 Time to use it.
 -> Start Metasploit
 $ msfconsole
@@ -71,7 +76,10 @@ Example:
 Metasploit can use payload once the exploit is launched.
 Example:
   msf6> show payloads
-  msf6> use payload/...
+  msf6> set payload/...
+  msf6> set payload/cmd/unix/python/meterpreter/reverse_tcp
+meterpreter > help
+>>> see howto-2100-meterpreter.txt
 
 -> Quit the software.
 $ msf6> quit
@@ -93,6 +101,11 @@ $ msf6> quit
 >@If nedded:
 >@$ cd /usr/share/metasploit-framework
 >@$ sudo gem install bundler
+>@
+>@Search for exploit
+>@You can use the searchsploit command
+>@$ searchsploit <keyword #1> <keyword #2> ...
+>@$ searchsploit webmin linux
 >@
 >@Time to use it.
 >@-> Start Metasploit
@@ -161,7 +174,10 @@ $ msf6> quit
 >@Metasploit can use payload once the exploit is launched.
 >@Example:
 >@  msf6> show payloads
->@  msf6> use payload/...
+>@  msf6> set payload/...
+>@  msf6> set payload/cmd/unix/python/meterpreter/reverse_tcp
+>@meterpreter > help
+>@>>> see howto-2100-meterpreter.txt
 >@
 >@-> Quit the software.
 >@$ msf6> quit
