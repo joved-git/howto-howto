@@ -79,6 +79,17 @@ $ kite ipfor [on | off | status]
 You have a small manual. It's simple.
 
 
+# How to use it (whatis mode)
+
+Kite allows to give you a brief summary of each keyword (same as for 'kite <keyword> above). 
+
+```
+ $ kite whatis <keyword | id>
+```
+
+You should see a summary of the given entry.
+
+
 Try howtos and commands, create you own, all is possible.
 
 Have fun !
