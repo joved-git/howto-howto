@@ -13,7 +13,7 @@ See: https://exegol.readthedocs.io/en/latest/
 See: howto-3010-exegol-framework.txt
 
 -> Install Exegol
-See: exegol-tool-install.txt
+See: howto-3015-exegol-framework-install.txt
 
 -> Use Exegol
 Info about content:
@@ -33,7 +33,89 @@ Go to the main website (https://exegol.readthedocs.io/en/latest/) and click on
 $ exegol start <container name> <image name>
 $ exegol info
 
+-> Create and run a container with Desktop (graphical interface)
+$ exegol start <container name> <image name> --desktop
+>>> you will obtain http://localhost:<port>
+
 -> Stop a container
 $ exegol stop <container name>
 
+-> Use asciinema
+Record commands
+  $ asciinema rec <file>
+  >>> Ctrl-D or exit to quit
 
+Replay a file
+  $ asciinema play <file>
+
+-> Use logs
+$ exegol start <container name> <image> --logs
+>>> the container writes logs and it is possible to retreive them with the 
+    shared directory (workspace).
+>>> See 'Location of the exegol workspace on the host: <dir>' given when 
+    starting.
+
+>@
+>@######################################################################################
+>@#                                                                                    #
+>@# [ Exegol ]                                                                         #
+>@#                                                                                    #
+>@# Exegol is a community-driven hacking environment, powerful and yet simple enough   #
+>@# to be used by anyone in day to day engagements. Exegol is the best solution to     #
+>@# deploy powerful hacking environments securely, easily, professionally. No more     #
+>@# unstable, not-so-security-focused systems lacking major offensive tools.           #
+>@#                                                                                    #
+>@# Kali Linux (and similar alternatives) are great toolboxes for learners, students   #
+>@# and junior pentesters. But professionals have different needs, and their context   #
+>@# require a whole new design.                                                        #
+>@#                                                                                    #
+>@# See: https://exegol.readthedocs.io/en/latest/                                      #
+>@# See: howto-3010-exegol-framework.txt                                               #
+>@#                                                                                    #
+>@#------------------------------------------------------------------------------------# 
+>@
+>@-> Install Exegol
+>@See: howto-3015-exegol-framework-install.txt
+>@
+>@-> Use Exegol
+>@Info about content:
+>@  $ exegol info
+>@  >>> You will have names of the images to be used (light, web, osint, ...).
+>@
+>@-> Install images
+>@Just use 'install' command:
+>@$ exegol install light
+>@
+>@-> Content of images
+>@Go to the main website (https://exegol.readthedocs.io/en/latest/) and click on
+>@"Tools list".
+>@>>> you will have access to CVS file that describe all images.
+>@
+>@-> Create and run a container
+>@$ exegol start <container name> <image name>
+>@$ exegol info
+>@
+>@-> Create and run a container with Desktop (graphical interface)
+>@$ exegol start <container name> <image name> --desktop
+>@>>> you will obtain http://localhost:<port>
+>@
+>@-> Stop a container
+>@$ exegol stop <container name>
+>@
+>@-> Use asciinema
+>@Record commands
+>@  $ asciinema rec <file>
+>@  >>> Ctrl-D or exit to quit
+>@
+>@Replay a file
+>@  $ asciinema play <file>
+>@
+>@-> Use logs
+>@$ exegol start <container name> <image> --logs
+>@>>> the container writes logs and it is possible to retreive them with the 
+>@    shared directory (workspace).
+>@>>> See 'Location of the exegol workspace on the host: <dir>' given when 
+>@    starting.
+>@
+>@######################################################################################
+>@
