@@ -1,0 +1,113 @@
+Exegol
+#BASICS
+
+Exegol is a community-driven hacking environment, powerful and yet simple enough 
+to be used by anyone in day to day engagements. Exegol is the best solution to 
+deploy powerful hacking environments securely, easily, professionally. No more 
+unstable, not-so-security-focused systems lacking major offensive tools. 
+
+Kali Linux (and similar alternatives) are great toolboxes for learners, students 
+and junior pentesters. But professionals have different needs, and their context 
+require a whole new design.
+
+See: https://exegol.readthedocs.io/en/latest/
+See: howto-3015-exegol-framework-install.txt
+
+-> Install Exegol
+1. Update all the system
+  $ sudo apt-get update
+
+2. Install Git
+  $ sudo apt-get install git-all
+  $ git version
+
+3. Install Python3 
+  $ sudo apt install python3
+  $ python3 --version
+
+4. Install PIP
+  $ sudo apt install python3-pip
+  $ pip --version
+
+5. Install argcomplete for auto completion (optional)
+  $ pip install argcomplete
+
+6. Install Docker Engine
+  $ curl -fsSL "https://get.docker.com/" -o get-docker.sh
+  $ sudo sh get-docker.sh
+    or see: https://docs.docker.com/engine/install/debian/
+  $ sudo docker -h
+
+7. Install Exegol
+  $ sudo python3 -m pip install exegol
+
+7b. Active auto completion (optional)
+  $ sudo apt install bash-completion
+  $ register-python-argcomplete --no-defaults exegol | sudo tee /etc/bash_completion.d/exegol > /dev/null
+
+8. Add exegol in the PATH
+  $ export PATH="$HOME/.local/bin:$PATH
+
+9. Check installation
+  $ exegol -h
+
+>@
+>@####################################################################################### 
+>@#                                                                                     #
+>@# [ Exegol ]                                                                          # 
+>@#                                                                                     #
+>@# Exegol is a community-driven hacking environment, powerful and yet simple enough    #
+>@# to be used by anyone in day to day engagements. Exegol is the best solution to      #
+>@# deploy powerful hacking environments securely, easily, professionally. No more      #
+>@# unstable, not-so-security-focused systems lacking major offensive tools.            #
+>@#                                                                                     #
+>@# Kali Linux (and similar alternatives) are great toolboxes for learners, students    #
+>@# and junior pentesters. But professionals have different needs, and their context    #
+>@# require a whole new design.                                                         #
+>@#                                                                                     #
+>@# See: https://exegol.readthedocs.io/en/latest/                                       # 
+>@# See: howto-3015-exegol-framework-install.txt                                        #
+>@#                                                                                     #
+>@#-------------------------------------------------------------------------------------# 
+>@
+>@-> Install Exegol
+>@
+>@1. Update all the system
+>@  $ sudo apt-get update
+>@
+>@2. Install Git
+>@  $ sudo apt-get install git-all
+>@  $ git version
+>@
+>@3. Install Python3 
+>@  $ sudo apt install python3
+>@  $ python3 --version
+>@
+>@4. Install PIP
+>@  $ sudo apt install python3-pip
+>@  $ pip --version
+>@
+>@5. Install argcomplete for auto completion (optional)
+>@  $ pip install argcomplete
+>@
+>@6. Install Docker Engine
+>@  $ curl -fsSL "https://get.docker.com/" -o get-docker.sh
+>@  $ sudo sh get-docker.sh
+>@    or see: https://docs.docker.com/engine/install/debian/
+>@  $ sudo docker -h
+>@
+>@7. Install Exegol
+>@  $ sudo python3 -m pip install exegol
+>@
+>@7b. Active auto completion (optional)
+>@  $ sudo apt install bash-completion
+>@  $ register-python-argcomplete --no-defaults exegol | sudo tee /etc/bash_completion.d/exegol > /dev/null
+>@
+>@8. Add exegol in the PATH
+>@  $ export PATH="$HOME/.local/bin:$PATH
+>@
+>@9. Check installation
+>@  $ exegol -h
+>@
+>@####################################################################################### 
+>@

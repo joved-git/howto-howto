@@ -1,28 +1,110 @@
 Docker | Docker Engine
 #BASICS
 
-Docker is a set of platform as a service (PaaS) products that use OS-level virtualization 
-to deliver software in packages called containers. The service has both free and premium 
-tiers. The software that hosts the containers is called Docker Engine. It was first 
-released in 2013 and is developed by Docker, Inc.
+Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages 
+called containers. The service has both free and premium tiers. The software that hosts the containers is called Docker 
+Engine. It was first released in 2013 and is developed by Docker, Inc.
 
-Docker is a tool that is used to automate the deployment of applications in lightweight 
-containers so that applications can work efficiently in different environments in isolation. 
+Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can 
+work efficiently in different environments in isolation. 
+
+----------------------------------------------   Create or retrieve an image ----------------------------------------------
+
+Go there (https://hub.docker.com/), search and pull                    Retrieve an image from official site
+$ docker pull amd64/alpine 
+
+$ docker build -t <image> -f <dockerfile> .                            Create an image from a dockerfile
+
+--------------------------------------------------   Create a container   -------------------------------------------------
+
+$ docker create -it --name <cont> <image>                              Create a container (do not run it)
+$ docker run -it --name <cont> <image>                                 Create a container and give shell
+$ docker create -it -p <host port>:<cont port> --name <cont> <image>   Create a container and map ports
+
+$ cd <host dir>
+$ docker create -it -v "$PWD:<cont dir>" --name <cont> <image>         Create a container and share directories.   
+
+--------------------------------------------------   Handle  containers   -------------------------------------------------
+
+$ docker ps -a                                                         See all containers (running or not)
+$ docker ps                                                            See all running containers
+$ docker start <cont>                                                  Start an existing container
+$ docker stop <cont>                                                   Stop a container
+
+$ docker exec -ti <cont> /bin/bash                                     Connect to a running container (shell)
+$ docker exec -ti <cont> /bin/sh
+$ docker rm <cont>                                                     Remove a single container
+$ docker stop $(docker ps -q)                                          Stop all running containers
+$ docker rm $(docker ps -aq)                                           Delete all containers
+
+----------------------------------------------------   Handle  images   ---------------------------------------------------
+
+$ docker images                                                        List all images
+$ docker image rm [--force, -f] <image>                                Remove an image
+
+--------------------------------------------------   Logs and  inspection   -----------------------------------------------
+
+$ docker logs <cont>                                                   Display logs of a container
+$ docker inspect <cont>                                                Inspect a container
+$ docker inspect <cont> | grep IPAddress                               Find the ip address of a container
+
+---------------------------------------------------------------------------------------------------------------------------
 
 >@
->@################################################################################################# 
->@#                                                                                               #
->@# [ Docker | Docker Engine ]                                                                    #
->@#                                                                                               #
->@# Docker is a set of platform as a service (PaaS) products that use OS-level virtualization     #
->@# to deliver software in packages called containers. The service has both free and premium      #
->@# tiers. The software that hosts the containers is called Docker Engine. It was first           #
->@# released in 2013 and is developed by Docker, Inc.                                             #
->@#                                                                                               #
->@# Docker is a tool that is used to automate the deployment of applications in lightweight       #
->@# containers so that applications can work efficiently in different environments in isolation.  #
->@#                                                                                               #
->@# See: https://hub.docker.com                                                                   #
->@#                                                                                               #
->@#-----------------------------------------------------------------------------------------------#
+>@############################################################################################################################### 
+>@#                                                                                                                             #
+>@# [ Docker | Docker Engine ]                                                                                                  #
+>@#                                                                                                                             #
+>@# Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages   #
+>@# called containers. The service has both free and premium tiers. The software that hosts the containers is called Docker     #
+>@# Engine. It was first released in 2013 and is developed by Docker, Inc.                                                      #
+>@#                                                                                                                             #
+>@# Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can #
+>@# work efficiently in different environments in isolation.                                                                    #
+>@# See: https://hub.docker.com                                                                                                 #
+>@#                                                                                                                             #
+>@#-----------------------------------------------------------------------------------------------------------------------------#
+>@
+>@
+>@----------------------------------------------   Create or retrieve an image ----------------------------------------------
+>@
+>@Go there (https://hub.docker.com/), search and pull                    Retrieve an image from official site
+>@$ docker pull amd64/alpine 
+>@
+>@$ docker build -t <image> -f <dockerfile> .                            Create an image from a dockerfile
+>@
+>@--------------------------------------------------   Create a container   -------------------------------------------------
+>@
+>@$ docker create -it --name <cont> <image>                              Create a container (do not run it)
+>@$ docker run -it --name <cont> <image>                                 Create a container and give shell
+>@$ docker create -it -p <host port>:<cont port> --name <cont> <image>   Create a container and map ports
+>@
+>@$ cd <host dir>
+>@$ docker create -it -v "$PWD:<cont dir>" --name <cont> <image>         Create a container and share directories.   
+>@
+>@--------------------------------------------------   Handle  containers   -------------------------------------------------
+>@
+>@$ docker ps -a                                                         See all containers (running or not)
+>@$ docker ps                                                            See all running containers
+>@$ docker start <cont>                                                  Start an existing container
+>@$ docker stop <cont>                                                   Stop a container
+>@
+>@$ docker exec -ti <cont> /bin/bash                                     Connect to a running container (shell)
+>@$ docker exec -ti <cont> /bin/sh
+>@$ docker rm <cont>                                                     Remove a single container
+>@$ docker stop $(docker ps -q)                                          Stop all running containers
+>@$ docker rm $(docker ps -aq)                                           Delete all containers
+>@
+>@----------------------------------------------------   Handle  images   ---------------------------------------------------
+>@
+>@$ docker images                                                        List all images
+>@$ docker image rm [--force, -f] <image>                                Remove an image
+>@
+>@--------------------------------------------------   Logs and  inspection   -----------------------------------------------
+>@
+>@$ docker logs <cont>                                                   Display logs of a container
+>@$ docker inspect <cont>                                                Inspect a container
+>@$ docker inspect <cont> | grep IPAddress                               Find the ip address of a container
+>@
+>@############################################################################################################################### 
 >@

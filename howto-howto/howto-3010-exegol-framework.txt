@@ -1,0 +1,39 @@
+Exegol
+
+Exegol is a community-driven hacking environment, powerful and yet simple enough 
+to be used by anyone in day to day engagements. Exegol is the best solution to 
+deploy powerful hacking environments securely, easily, professionally. No more 
+unstable, not-so-security-focused systems lacking major offensive tools. 
+
+Kali Linux (and similar alternatives) are great toolboxes for learners, students 
+and junior pentesters. But professionals have different needs, and their context 
+require a whole new design.
+
+See: https://exegol.readthedocs.io/en/latest/
+See: howto-3010-exegol-framework.txt
+
+-> Install Exegol
+See: exegol-tool-install.txt
+
+-> Use Exegol
+Info about content:
+  $ exegol info
+  >>> You will have names of the images to be used (light, web, osint, ...).
+
+-> Install images
+Just use 'install' command:
+$ exegol install light
+
+-> Content of images
+Go to the main website (https://exegol.readthedocs.io/en/latest/) and click on
+"Tools list".
+>>> you will have access to CVS file that describe all images.
+
+-> Create and run a container
+$ exegol start <container name> <image name>
+$ exegol info
+
+-> Stop a container
+$ exegol stop <container name>
+
+
