@@ -13,7 +13,8 @@ work efficiently in different environments in isolation.
 Go there (https://hub.docker.com/), search and pull                    Retrieve an image from official site
 $ docker pull amd64/alpine 
 
-$ docker build -t <image> -f <dockerfile> .                            Create an image from a dockerfile
+$ docker build -t <image name> -f <dockerfile> .                       Create an image (image name) from a dockerfile
+                                                                       Example: docker build -t myname/pentest -f dockfile
 
 --------------------------------------------------   Create a container   -------------------------------------------------
 
@@ -22,7 +23,7 @@ $ docker run -it --name <cont> <image>                                 Create a
 $ docker create -it -p <host port>:<cont port> --name <cont> <image>   Create a container and map ports
 
 $ cd <host dir>
-$ docker create -it -v "$PWD:<cont dir>" --name <cont> <image>         Create a container and share directories.   
+$ docker create -it -v "$PWD:<cont dir>" --name <cont> <image>         Create a container and share directories
 
 --------------------------------------------------   Handle  containers   -------------------------------------------------
 
@@ -71,7 +72,8 @@ $ docker inspect <cont> | grep IPAddress                               Find the 
 >@Go there (https://hub.docker.com/), search and pull                    Retrieve an image from official site
 >@$ docker pull amd64/alpine 
 >@
->@$ docker build -t <image> -f <dockerfile> .                            Create an image from a dockerfile
+>@$ docker build -t <image name> -f <dockerfile> .                       Create an image (image name) from a dockerfile
+>@                                                                       Example: docker build -t myname/pentest -f dockfile
 >@
 >@--------------------------------------------------   Create a container   -------------------------------------------------
 >@

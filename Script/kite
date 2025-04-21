@@ -1,6 +1,6 @@
 #!/bin/bash
 # Monkey - 2021 / 2025
-# Version = 1.5
+# Version = 1.6
 
 usage()
 {
@@ -21,7 +21,7 @@ WHERE=`echo $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`
 SRC_DIR=$WHERE/../howto-howto
 VER=`grep '# Version' $0 | head -1 | awk -F'=' '{ print $2 }'`
 
-if [ "x$1" = "x-v" -o "x$1" = "x--version" ];
+if [ "x$1" = "x-v" -o "x$1" = "x--version" -o "x$1" = "xversion" ];
 #if [ x$1 = x-v ];
 then
 	echo
@@ -118,7 +118,8 @@ fi
 
 # Handle "cmd" command
 if [ x$1 = xcmd ]; then
-	CMD=`ls -l $WHERE | grep -v kite | awk {' print $9 }'`
+	#CMD=`ls -l $WHERE | grep -v kite | awk {' print $9 }'`
+	CMD=`ls -l $WHERE | awk {' print $9 }'`
 
 	echo
 	echo '########################################################'
