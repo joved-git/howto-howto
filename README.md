@@ -65,10 +65,12 @@ You should see a list of the content of ***Kite***.
 If you want to find a specific subject, just ask to ***Kite***:
 
 ```
-$ kite nmap
+$ kite [keyword | id]
 ```
 
-After that, just ask to ***Kite*** to see the appropriate file:
+You can use a keyword or the id of the file to see the appropriate content:
+
+Example:
 
  
 ```
