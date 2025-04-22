@@ -5,9 +5,10 @@ This repository contains many resources and mini-tutorials that could help you f
 Anytime, anywhere and easily.
 
 
-# Installation
+# Installation (on your system)
 
-Very simple. Just clone the repo then add the _Script_ directory to your ***PATH*** (see below).
+Here, you will install Kite on your system and use it with the script.
+Just clone the repo then add the _Script_ directory to your ***PATH*** (see below).
 
 ```
 $ cd
@@ -26,6 +27,24 @@ PATH=$PATH:'~/Documents/howto-howto/Script'
 ... at the end of your ~/.cshrc or ~/.zshrc.
 
 That's all !
+
+
+# Installation (with Dockerfile)
+
+Here, you will create a container with Kite.
+Just clone the repo then follow instructions of the ./howto-howto/Resources/Docker/README.txt file.
+
+```
+$ cd
+
+$ cd Documents
+
+$ git clone git@github.com:joved-git/howto-howto.git
+```
+
+See Documents/howto-howto/Resources/Docker/README.txt file.
+
+After the instalaltion, you can delete the cloned directory.
 
 
 # How to use it (howto mode)
