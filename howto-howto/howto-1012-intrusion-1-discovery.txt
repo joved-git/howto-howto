@@ -32,7 +32,7 @@ Techniques and tools (pratically):
 -> WhatCMS (whatcms.org) and BuildWith (buildwith.com) could be used to retrieve technologies on
    the given site. 
 -> WebArchive (web.archive.org) is a site that gives you old versions of all sites (day by day).
--> Maltego: collects and analyse data and construct links between entities (graphical tool).
+-> Maltego: collects and analyze data and construct links between entities (graphical tool).
 -> recon-ng: command line tool used to automate identification tasks.
 -> Nikto: used to scan for vulnerabilities and sensible files (robots, ...).
 -> DirB: used to search for specil file types (.html, .cfg, ...). It uses wordlists.
@@ -142,7 +142,7 @@ Automatic scripts and tools (/!\ careful, this is not magic)
 >@-> WhatCMS (whatcms.org) and BuildWith (buildwith.com): could be used to retrieve technologies on
 >@   the given site. 
 >@-> WebArchive (web.archive.org): site that gives you old versions of all sites (day by day).
->@-> Maltego: collects and analyse data and construct links between entities (graphical tool).
+>@-> Maltego: collects and analyze data and construct links between entities (graphical tool).
 >@-> recon-ng: command line tool used to automate identification tasks.
 >@-> Nikto: used to scan for vulnerabilities and sensible files (robots, ...).
 >@-> DirB: used to search for specil file types (.html, .cfg, ...). It uses wordlists.

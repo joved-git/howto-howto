@@ -6,8 +6,8 @@ Windows, Mac OS, and Linux for suspicious activities. It performs deep
 malware analysis and generates comprehensive and detailed analysis 
 reports. 
 This website gives you access to the Community Edition of Joe Sandbox 
-Cloud. It allows you to run a maximum of 15 analyses / month, 
-5 analyses / day on Windows, Mac OS, and Linux with limited analysis 
+Cloud. It allows you to run a maximum of 15 analyzes / month, 
+5 analyzes / day on Windows, Mac OS, and Linux with limited analysis 
 output.
 
 See: https://joesandbox.com
@@ -32,8 +32,8 @@ Upload a malware and test it.
 >@# reports.                                                                #
 >@#                                                                         #
 >@# This website gives you access to the Community Edition of Joe Sandbox   #
->@# Cloud. It allows you to run a maximum of 15 analyses / month,           #
->@# 5 analyses / day on Windows, Mac OS, and Linux with limited analysis    #
+>@# Cloud. It allows you to run a maximum of 15 analyzes / month,           #
+>@# 5 analyzes / day on Windows, Mac OS, and Linux with limited analysis    #
 >@# output.                                                                 #
 >@#                                                                         #
 >@# See: https://joesandbox.com                                             #
