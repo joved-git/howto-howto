@@ -1,0 +1,90 @@
+Ethical Mental Card
+#BASICS
+
+This is the mental card that define all the different worlds you will find when you will work in 
+the domain of ethical hacking.
+
+See: https://www.mindmeister.com/app/map/2662827488?t=NFUqa6mvz8
+
+There are 4 bigs parts in that schema
+
+  Operating system -----------                                ------- Network
+         |                     \                             /           |
+         |--- Virtual machine   \                           /            |--- OSI Model
+         |                       \                         /             |
+         |--- Linux               \                       /              |--- TCP Model
+         |                         \                     /               |
+         |--- Windows               \                   /                |--- Detection and prevention
+         |                           \                 /                 | 
+         |--- Mobile                  \               /                  |--- Access point
+         |                             \             /                   |
+         |--- IOT                       \           /                    |--- Anonimization
+         |                               \         /                     |
+          --- Container                   \       /                      |--- Networking basics
+                                           \     /                       |
+                                                                         |--- Deny of service 
+                                       Ethical hacking                   |
+                                            /    \                       |--- Addressing
+          --- Ethic                        /      \                      |
+         |                                /        \                      --- Cloud
+         |--- English                    /          \
+         |                              /            \
+         |--- Social engineering       /              \                   --- Compiled langages
+         |                            /                \                 |
+         |--- Intrustion tests       /                  \                |--- Non compiled langages
+         |                          /                    \               |
+         |--- Cyber formation      /                      \              |--- Web langages
+         |                        /                        \             |
+         |--- Cryptography       /                          \            |--- Dev environment
+         |                      /                            \           |
+         |--- Norms and refs   /                              \          |--- General
+         |                    /                                \         |
+  Annex skills --------------                                   ------- Programming
+
+>@
+>@##################################################################################################### 
+>@#                                                                                                   # 
+>@# [ Ethical Mental Card ]                                                                           #
+>@#                                                                                                   # 
+>@# This is the mental card that define all the different worlds you will find when you will work in  #
+>@# the domain of ethical hacking.                                                                    #
+>@#                                                                                                   # 
+>@# See: https://www.mindmeister.com/app/map/2662827488?t=NFUqa6mvz8                                  #
+>@#                                                                                                   # 
+>@#---------------------------------------------------------------------------------------------------#
+>@
+>@  Operating system -----------                                ------- Network
+>@         |                     \                             /           |
+>@         |--- Virtual machine   \                           /            |--- OSI Model
+>@         |                       \                         /             |
+>@         |--- Linux               \                       /              |--- TCP Model
+>@         |                         \                     /               |
+>@         |--- Windows               \                   /                |--- Detection and prevention
+>@         |                           \                 /                 | 
+>@         |--- Mobile                  \               /                  |--- Access point
+>@         |                             \             /                   |
+>@         |--- IOT                       \           /                    |--- Anonimization
+>@         |                               \         /                     |
+>@          --- Container                   \       /                      |--- Networking basics
+>@                                           \     /                       |
+>@                                                                         |--- Deny of service 
+>@                                       Ethical hacking                   |
+>@                                            /    \                       |--- Addressing
+>@          --- Ethic                        /      \                      |
+>@         |                                /        \                      --- Cloud
+>@         |--- English                    /          \
+>@         |                              /            \
+>@         |--- Social engineering       /              \                  |--- Compiled langages
+>@         |                            /                \                 |
+>@         |--- Intrustion tests       /                  \                |--- Non compiled langages
+>@         |                          /                    \               |
+>@         |--- Cyber formation      /                      \              |--- Web langages
+>@         |                        /                        \             |
+>@         |--- Cryptography       /                          \            |--- Dev environment
+>@         |                      /                            \           |
+>@         |--- Norms and refs   /                              \          |--- General
+>@         |                    /                                \         |
+>@  Annex skills --------------                                   ------- Programming
+>@
+>@##################################################################################################### 
+>@
