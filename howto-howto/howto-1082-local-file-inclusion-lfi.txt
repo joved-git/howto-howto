@@ -4,7 +4,6 @@ Local File Inclusion | LFI
 A Local File Include (LFI) vulnerability consists of including a local file from user input. In certain cases this 
 allows access to files not located in the webroot or even to execute code.
 
-
 -> Open the vulnerable Mutillidae site
 Mutillidae should be installed in the Win10 machine.
 On Kali, open http://<Win10 IP>/mutillidae.
@@ -32,7 +31,14 @@ Put Security level at 0 (Hosed).
   >>> the complete request: http://<win10 IP>/mutillidae/index.php?page=text-file-viewer.php
   Try http://<win10 IP>/mutillidae/index.php?page=robots.txt
   >>> That works again !! 
-  /!\ By that way, it is possible to recover /etc/password !!!
+  /!\ By that way, it is possible to recover /etc/passwd !!!
+
+6. Try some tricks to change the "../" string
+  You can encode the "/" char by "%2F".
+  You can encode the "%2f" string by "%25%32%66".
+  You can try to double the "../" into the complete string:
+    "../../../../" becomes "..././..././..././..././"
+  >>> the system remove every "../" string into the original string to finaly have "../../../../".
 
 -> Prevent include vulnerabilities
 Here are some advice:
@@ -84,7 +90,14 @@ Here are some advice:
 >@  >>> the complete request: http://<win10 IP>/mutillidae/index.php?page=text-file-viewer.php
 >@  Try http://<win10 IP>/mutillidae/index.php?page=robots.txt
 >@  >>> That works again !! 
->@  /!\ By that way, it is possible to recover /etc/password !!!
+>@  /!\ By that way, it is possible to recover /etc/passwd !!!
+>@
+>@6. Try some tricks to change the "../" string
+>@  You can encode the "/" char by "%2F".
+>@  You can encode the "%2f" string by "%25%32%66".
+>@  You can try to double the "../" into the complete string:
+>@    "../../../../" becomes "..././..././..././..././"
+>@  >>> the system remove every "../" string into the original string to finaly have "../../../../".
 >@
 >@-> Prevent include vulnerabilities
 >@Here are some advice:

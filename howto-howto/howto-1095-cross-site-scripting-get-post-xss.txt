@@ -24,6 +24,7 @@ Burp Suite Interception is Off.
   Change the URL and add Javascript into it:
   URL:  http://<win10 IP>/mutillidae/index.php?page=user-info.php&username=<script>alert("xss");</script>&password=pass
                                                           &user-info-php-submit-button=View+Account+Details  
+  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
   >>> you should see the alert box.
   >>> the script is inside the GET request. That's why we call that injection like that. 
 
@@ -78,6 +79,7 @@ Burp Suite Interception is Off.
 >@  Change the URL and add Javascript into it:
 >@  URL:  http://<win10 IP>/mutillidae/index.php?page=user-info.php&username=<script>alert("xss");</script>&password=pass
 >@                                                          &user-info-php-submit-button=View+Account+Details  
+>@  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
 >@  >>> you should see the alert box.
 >@  >>> the script is inside the GET request. That's why we call that injection like that. 
 >@

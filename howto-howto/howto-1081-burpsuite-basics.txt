@@ -33,7 +33,6 @@ Logger: gives all requests (and many information).
 
 Learn: acecs to tutorials and vulnerable site.
 
-
 -> Using Burp Suite (very basic)
 1. Launch the software and make update if asked.
 2. Create a temporary project (Next), keep default then "Start Burp".
@@ -45,6 +44,11 @@ Learn: acecs to tutorials and vulnerable site.
    or
   -Use the embeded pre-configured browser (Open Browser in proxy folder).
   -Put Intercept to On and observe all what you see !!!
+
+4. Clear the history.
+  -Go to proxy the HTTP History.
+  -Right click on a line.
+  -Choose "Clear history".
 
 >@
 >@#################################################################################################################################
@@ -88,7 +92,6 @@ Learn: acecs to tutorials and vulnerable site.
 >@
 >@Learn: acecs to tutorials and vulnerable site.
 >@
->@
 >@-> Using Burp Suite (very basic)
 >@1. Launch the software and make update if asked.
 >@2. Create a temporary project (Next), keep default then "Start Burp".
@@ -98,6 +101,15 @@ Learn: acecs to tutorials and vulnerable site.
 >@  -Check the listener: Running / 127.0.0.1:8080, close the window and Click on "Intercept Off" to toggle interception to On.
 >@  -Configure Firefox with a HTTP proxy: 127.0.0.1:8080.
 >@   or
+>@
+>@  -Use the embeded pre-configured browser (Open Browser in proxy folder).
+>@  -Put Intercept to On and observe all what you see !!!
+>@
+>@
+>@4. Clear the history.
+>@  -Go to proxy the HTTP History.
+>@  -Right click on a line.
+>@  -Choose "Clear history".
 >@
 >@#################################################################################################################################
 >@
