@@ -7,7 +7,6 @@ testing on web2,3 applications. The suite is made up of different tools such as 
 (Burp Repeater).
 
 -> Burpsuite presentation
-
 Dashboard: make a scan and/or task.
 
 Target/Site map: retrieve the sitemap.
@@ -67,7 +66,6 @@ Learn: acecs to tutorials and vulnerable site.
 >@#-------------------------------------------------------------------------------------------------------------------------------#
 >@
 >@-> Burpsuite presentation
->@
 >@Dashboard: make a scan and/or task.
 >@
 >@Target/Site map: retrieve the sitemap.
@@ -104,7 +102,6 @@ Learn: acecs to tutorials and vulnerable site.
 >@
 >@  -Use the embeded pre-configured browser (Open Browser in proxy folder).
 >@  -Put Intercept to On and observe all what you see !!!
->@
 >@
 >@4. Clear the history.
 >@  -Go to proxy the HTTP History.
