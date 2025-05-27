@@ -13,7 +13,8 @@ Which port does Samba use ?
 By default, Samba uses the port number 445 (or 139).
 
 -> Which tools can I use ?
-There are 2 common tools in the Samba world:
+There are 2 common tools in the Samba world (smbmap and smbclient):
+Let's see them:
 
 -smbmap: used to displays shares and associated permissions.
 $ smbmap -H <server>
@@ -71,12 +72,12 @@ $ nmap --script smb-enum-shares -p 445 <server>
 >@By default, Samba uses the port number 445 (or 139).
 >@
 >@-> Which tools can I use ?
->@There are 2 common tools in the Samba world:
+>@There are 2 common tools in the Samba world (smbmap and smbclient):
+>@Let's see them:
 >@
 >@-smbmap:    used to displays shares and associated permissions.
 >@$ smbmap -H <server>
 >@>>> displays information about available shares on the <server>.
->@
 >@
 >@$ smbmap -u <user> -p <password> -H <server>
 >@>>> connection as <user>
@@ -98,6 +99,7 @@ $ nmap --script smb-enum-shares -p 445 <server>
 >@$ smbclient -user=[DOMAIN]USERNAME[%PASSWORD] --password=PASSWORD //<server>/<share>
 >@>>> used to give a username, a domain and a password.
 >@
+>@-smbclient: used to communicate with the Samba server.
 >@$ smbclient --no-pass //<server>/<share> -c "prompt off; recurse on; mget *"
 >@>>> download all the content of the share without "yes/no" prompt.
 >@
