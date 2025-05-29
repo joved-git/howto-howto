@@ -12,6 +12,10 @@ Unix servers to act as a substitute for Windows servers.
 Which port does Samba use ?
 By default, Samba uses the port number 445 (or 139).
 
+Config file
+/etc/samba/smb.conf
+-> Look closely at "read_only", "guest_ok", "valid_users", "* mask" parameters.
+
 -> Which tools can I use ?
 There are 2 common tools in the Samba world (smbmap and smbclient):
 Let's see them:
@@ -70,6 +74,10 @@ $ nmap --script smb-enum-shares -p 445 <server>
 >@
 >@Which port does Samba use ?
 >@By default, Samba uses the port number 445 (or 139).
+>@
+>@Config file
+>@/etc/samba/smb.conf
+>@-> Look closely at "read_only", "guest_ok", "valid_users", "* mask" parameters.
 >@
 >@-> Which tools can I use ?
 >@There are 2 common tools in the Samba world (smbmap and smbclient):
