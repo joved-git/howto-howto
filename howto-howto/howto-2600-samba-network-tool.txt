@@ -52,8 +52,9 @@ $ smbclient -user=[DOMAIN]USERNAME[%PASSWORD] --password=PASSWORD //<server>/<sh
 $ smbclient --no-pass //<server>/<share> -c "prompt off; recurse on; mget *"
 >>> download all the content of the share without "yes/no" prompt.
 
--> How to go deeper
-We can use nmap to try to enumerate shares on a server.
+How to go deeper
+-Check the config file
+-We can use nmap to try to enumerate shares on a server.
 $ nmap --script smb-enum-shares -p 445 <server>
 >>> this script gives more information (server directory paths, user, ...).
 
@@ -112,7 +113,8 @@ $ nmap --script smb-enum-shares -p 445 <server>
 >@>>> download all the content of the share without "yes/no" prompt.
 >@
 >@-> How to go deeper
->@We can use nmap to try to enumerate shares on a server.
+>@-Check the config file
+>@-We can use nmap to try to enumerate shares on a server.
 >@$ nmap --script smb-enum-shares -p 445 <server>
 >@>>> this script gives more information (server directory paths, user, ...).
 >@
