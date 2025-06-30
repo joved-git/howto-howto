@@ -65,7 +65,7 @@ $ sudo iptables-save ...
 >@#                                                                                              #
 >@# iptables is a free Linux userspace software through which the administrator system can       #
 >@# configure chains and rules in the kernel space firewall (and which is composed by Netfilter  #
->@# modules).	                                                                                 #
+>@# modules).                                                                                    #
 >@#                                                                                              #
 >@# Different programs are used depending on the protocol used: iptables is used to the IPv4     #
 >@# protocol, Ip6tables for IPv6, Arptables for ARP (Address Resolution Protocol) or even        #
