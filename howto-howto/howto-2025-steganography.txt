@@ -89,7 +89,7 @@ https://www.openstego.com/
 >@-> Some tools to do steganography
 >@* MP3stego: hide into audio.
 >@* S-Tools: hide images into .wav or .bmp.
->@* Openpuff: hide evrything into everything.
+>@* Openpuff: hide everything into everything.
 >@
 >@-> An example with COPY
 >@You can use the COPY command of Windows to embed texte into BMP.
