@@ -8,15 +8,15 @@ This is an easy to use integrated penetration testing tool for finding vulnerabi
 1. Go to https://github.com/zaproxy/zaproxy .
 2. Scroll down to find Donwload, click on it.
 3. Choose the right installer and download it.
-4. Go to Download and add + x to the install file.
-$ chmod a+x ZAP_<version>_unix.sh
+4. Go to the Download directory and add '+x' to the install file.
+  $ chmod a+x ZAP_<version>_unix.sh
 5. Launch the script and accept all.
 6. Go to /opt/zaproxy and create a link to zap.sh:
-$ cd /opt/zaproxy
-$ ln -s zap.sh zaproxy
+  $ cd /opt/zaproxy
+  $ ln -s zap.sh zaproxy
 7. Add /opt/zaproxy to the PATH in ~/.zshrc .
 6. Start the application:
-$ zaproxy &
+  $ zaproxy &
 
 -> Some explanation
 1. Choose the mode: secured (no risky action, discrete), protected (slightly risked) 
@@ -45,7 +45,7 @@ Try this URL on metasploitable: http://<ms IP>/mutillidae/?page=%2Fetc%2Fpasswd
 >@#                                                                                       #
 >@# [ Owasp Zed Attack Proxy | Owasp ZAP | Zaproxy ]                                      #
 >@#                                                                                       #
->@# This is an easy to use integrated penetration testing tool for finding                #
+>@# Zaproxy is an easy to use integrated penetration testing tool for finding             #
 >@# vulnerabilities in web application.                                                   #
 >@#                                                                                       #
 >@# /!\ Scan a site without any authorization is illegal, try it on metasploitable /!\    #
@@ -56,15 +56,15 @@ Try this URL on metasploitable: http://<ms IP>/mutillidae/?page=%2Fetc%2Fpasswd
 >@1. Go to https://github.com/zaproxy/zaproxy .
 >@2. Scroll down to find Donwload, click on it.
 >@3. Choose the right installer and download it.
->@4. Go to Download and add + x to the install file.
->@$ chmod a+x ZAP_<version>_unix.sh
+>@4. Go to the Download directory and add '+x' to the install file.
+>@  $ chmod a+x ZAP_<version>_unix.sh
 >@5. Launch the script and accept all.
 >@6. Go to /opt/zaproxy and create a link to zap.sh:
->@$ cd /opt/zaproxy
->@$ ln -s zap.sh zaproxy
+>@  $ cd /opt/zaproxy
+>@  $ ln -s zap.sh zaproxy
 >@7. Add /opt/zaproxy to the PATH in ~/.zshrc .
 >@6. Start the application:
->@$ zaproxy &
+>@  $ zaproxy &
 >@
 >@-> Some explanation
 >@1. Choose the mode: secured (no risky action, discrete), protected (slightly risked) 

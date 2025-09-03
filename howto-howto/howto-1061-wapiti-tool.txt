@@ -1,0 +1,80 @@
+Wapiti
+#BASICS
+
+Wapiti allows you to audit the security of your websites or web applications.
+
+It performs "black-box" scans (it does not study the source code) of the web 
+application by crawling the webpages of the deployed webapp, looking for 
+scripts and forms where it can inject data.
+
+Once it gets the list of URLs, forms and their inputs, Wapiti acts like a 
+fuzzer, injecting payloads to see if a script is vulnerable.
+
+-> Install Wapiti
+Clone the project and install the tool
+  $ git clone https://github.com/wapiti-scanner/wapiti.git
+  $ cd wapiti
+  $ pip install .
+
+-> Use Wapiti
+Go to bin and launch the help
+  $ cd bin
+  $ wapiti -h
+
+Some options:
+  -u <url> : gives URL to scan
+  --scope <type of scope>: defines the way you want to scan. See help.
+  --list-modules : gives the list of the available modules.
+
+An example ( /!\ You can scan that site. it is authorized !! ):
+  $ wapiti -u https://pentest-ground.com:81/
+  >>> works, gives details then generates report.
+
+-> Use the report
+Go to /home/<user>/.wapiti/generated_reports then copy/past the HTML content
+to a file (.html).
+Open that file to see the result of the scan.
+
+>@
+>@#################################################################################### 
+>@#                                                                                  # 
+>@# [ Wapiti ]                                                                       #
+>@#                                                                                  # 
+>@# Wapiti allows you to audit the security of your websites or web applications.    #
+>@#                                                                                  # 
+>@# It performs "black-box" scans (it does not study the source code) of the web     #
+>@# application by crawling the webpages of the deployed webapp, looking for         #
+>@# scripts and forms where it can inject data.                                      #
+>@#                                                                                  # 
+>@# Once it gets the list of URLs, forms and their inputs, Wapiti acts like a        #
+>@# fuzzer, injecting payloads to see if a script is vulnerable.                     #
+>@#                                                                                  # 
+>@#----------------------------------------------------------------------------------# 
+>@
+>@ -> Install Wapiti
+>@Clone the project and install the tool
+>@  $ git clone https://github.com/wapiti-scanner/wapiti.git
+>@  $ cd wapiti
+>@  $ pip install .
+>@
+>@-> Use Wapiti
+>@Go to bin and launch the help
+>@  $ cd bin
+>@  $ wapiti -h
+>@
+>@Some options:
+>@  -u <url> : gives URL to scan
+>@  --scope <type of scope>: defines the way you want to scan. See help.
+>@  --list-modules : gives the list of the available modules.
+>@
+>@An example ( /!\ You can scan that site. it is authorized !! ):
+>@  $ wapiti -u https://pentest-ground.com:81/
+>@  >>> works, gives details then generates report.
+>@
+>@-> Use the report
+>@Go to /home/<user>/.wapiti/generated_reports then copy/past the HTML content
+>@to a file (.html).
+>@Open that file to see the result of the scan.
+>@
+>@#################################################################################### 
+>@

@@ -15,7 +15,7 @@ RUN mkdir /home/kite/howto-howto
 WORKDIR /home/kite
 
 # Copy Kite content
-COPY ./howto-howto /home/kite/howto-howto
+COPY ./tmp /home/kite/howto-howto
 
 # Update .bashrc
 RUN echo "" >> /home/kite/.bashrc

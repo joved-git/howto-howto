@@ -1,0 +1,117 @@
+Gophish
+#BASICS
+
+Gophish is a powerful, easy-to-use, open-source phishing toolkit meant to 
+help pentesters and businesses conduct real-world phishing simulations.
+
+See: https://docs.getgophish.com/user-guide
+See: https://github.com/FreeZeroDays/GoPhish-Templates/tree/master 
+See: https://www.social-engineer.org/
+
+-> Install the tool
+1. Go to https://github.com/gophish/gophish
+2. Retrieve the zip file for your OS.
+3. Start the script.
+>>> you obtain an URL: http://127.0.0.1:3333
+
+4. Open the URL and accept the risk.
+
+-> Use the tool
+1. Open the URL and accept the risk.
+2. Log in in admin (the password was given just before).
+3. Reinit the password.
+>>> you will obtain the dashboard.
+
+4. Click on "Sending profile" and give:
+  SMTP from: a Gmail email, example: joshmartin@gmail.com
+  Host: smtp.gmlail.com:587
+  Username: joshmartin
+  Password: <application password, see below to create it>
+
+Here, you have to create a password for application in your Gmail account.
+Active the 2-way facor and search for [Password for applications]
+Enter a Name and the system will give you a password for future applications.
+Copy it and paste it in the profile.
+
+5. Test to send an email.
+6. Save the profile.
+
+7. Click on "Users and Groups" then create a new group. Give users and emails.
+8. Click on "Email template" then create a template.
+  Go to https://github.com/FreeZeroDays/GoPhish-Templates/tree/master 
+  then retreive email example.
+  Copy it to the HTML folder.
+
+9. Click on "Landing pages" then click on "New page".
+  Go to https://github.com/FreeZeroDays/GoPhish-Templates/tree/master 
+  Then retreive example.
+  Click on "Capture Submitted data" and "Capture passwords".
+  Fill in the "Redirect to" box (example: google.fr).
+
+10. Click on "Campains" then create a campain.
+  Fill in all boxes.
+  In URL (location of Gophish listener), you can fill in [http://127.0.0.1:80].
+  Launch the campain.
+  
+>@
+>@################################################################################ 
+>@#                                                                              #
+>@# [ Gophish ]                                                                  #
+>@#                                                                              #
+>@# Gophish is a powerful, easy-to-use, open-source phishing toolkit meant to    #
+>@# help pentesters and businesses conduct real-world phishing simulations.      #
+>@#                                                                              #
+>@# See: https://docs.getgophish.com/user-guide                                  #
+>@# See: https://github.com/FreeZeroDays/GoPhish-Templates/tree/master           #
+>@# See: https://www.social-engineer.org/                                        #
+>@#                                                                              #
+>@#------------------------------------------------------------------------------# 
+>@
+>@-> Install the tool
+>@1. Go to https://github.com/gophish/gophish
+>@2. Retrieve the zip file for your OS.
+>@3. Start the script.
+>@>>> you obtain an URL: http://127.0.0.1:3333
+>@
+>@4. Open the URL and accept the risk.
+>@
+>@-> Use the tool
+>@1. Open the URL and accept the risk.
+>@2. Log in in admin (the password was given just before).
+>@3. Reinit the password.
+>@>>> you will obtain the dashboard.
+>@
+>@4. Click on "Sending profile" and give:
+>@  SMTP from: a Gmail email, example: joshmartin@gmail.com
+>@  Host: smtp.gmlail.com:587
+>@  Username: joshmartin
+>@  Password: <application password, see below to create it>
+>@
+>@Here, you have to create a password for application in your Gmail account.
+>@Active the 2-way facor and search for [Password for applications]
+>@Enter a Name and the system will give you a password for future applications.
+>@Copy it and paste it in the profile.
+>@
+>@5. Test to send an email.
+>@6. Save the profile.
+>@
+>@7. Click on "Users and Groups" then create a new group. Give users and emails.
+>@8. Click on "Email template" then create a template.
+>@  Go to https://github.com/FreeZeroDays/GoPhish-Templates/tree/master 
+>@  then retreive email example.
+>@  Copy it to the HTML folder.
+>@
+>@9. Click on "Landing pages" then click on "New page".
+>@  Go to https://github.com/FreeZeroDays/GoPhish-Templates/tree/master 
+>@  Then retreive example.
+>@  Click on "Capture Submitted data" and "Capture passwords".
+>@  Fill in the "Redirect to" box (example: google.fr).
+>@
+>@10. Click on "Campains" then create a campain.
+>@  Fill in all boxes.
+>@  In URL (location of Gophish listener), you can fill in [http://127.0.0.1:80].
+>@  Launch the campain.
+>@
+>@################################################################################ 
+>@
+

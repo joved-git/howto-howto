@@ -58,3 +58,5 @@ full-duplex est maintenant établie entre le client et le serveur.
 >@
 >@      client   ------- ACK (Seq : A+1, Ack : B+1) ------>   serveur
 >@
+>@################################################################################################################
+>@

@@ -26,6 +26,7 @@ Burp Suite Interception is Off.
 
 4. Refresh the page.
   In Burp, locate the headers then for example, into User-Agent put the script: <script>alert("xss");</script>
+  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
   >>> the box is displayed.
 
 >@
@@ -65,6 +66,7 @@ Burp Suite Interception is Off.
 >@
 >@4. Refresh the page.
 >@  In Burp, locate the headers then for example, into User-Agent put the script: <script>alert("xss");</script>
+>@  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
 >@  >>> the box is displayed.
 >@
 >@#################################################################################################################################

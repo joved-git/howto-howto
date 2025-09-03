@@ -24,6 +24,7 @@ Put Security level at 1 (Client-side Security).
 
 4. Return to Security Level 0
   In the box, enter Javascript data: [ <script>alert("xss");</script> ].
+  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
   >>> the alert box is displayed.
 
 5. Return to Security Level 1
@@ -87,6 +88,7 @@ Some advice:
 >@
 >@4. Return to Security Level 0
 >@  In the box, enter Javascript data: [ <script>alert("xss");</script> ].
+>@  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
 >@  >>> the alert box is displayed.
 >@
 >@5. Return to Security Level 1

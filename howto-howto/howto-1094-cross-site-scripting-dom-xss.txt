@@ -24,6 +24,7 @@ $ sudo rm ../domxss.zip
 
 3. Change the URL
   Replace by: http://127.0.0.1/domxss/?defaut=<script>alert("xss");</script>
+  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
   >>> the box is displayed
 
 -> Try the intrusion without using <script> tag
@@ -66,6 +67,7 @@ $ sudo rm ../domxss.zip
 >@
 >@3. Change the URL
 >@  Replace by: http://127.0.0.1/domxss/?defaut=<script>alert("xss");</script>
+>@  /!\ you can use <scrscriptipt></scrscriptipt> instead of simple <script> to pass through string check.
 >@  >>> the box is displayed
 >@
 >@-> Try the intrusion without using <script> tag
