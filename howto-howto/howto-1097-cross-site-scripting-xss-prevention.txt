@@ -19,7 +19,7 @@ See: howto-1094-cross-site-scripting-dom-xss.txt
 See: howto-1095-cross-site-scripting-get-post-xss.txt
 See: howto-1096-cross-site-scripting-http-headers-xss.txt
 
--> How do that works
+-> How does that works
 
    Attacker                     Web client                   Web Server
       |                             |                            |
@@ -71,7 +71,7 @@ Here are some advice:
 >@#                                                                                                               #
 >@#---------------------------------------------------------------------------------------------------------------#
 >@
->@-> How do that works
+>@-> How does that works
 >@
 >@   Attacker                     Web client                   Web Server
 >@      |                             |                            |

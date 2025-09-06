@@ -23,7 +23,7 @@ For a specific Technique, you will have:
 In the Technique folder, you will find source code used for the
 Technique and the different Matrices.
      
--> How do that work ?
+-> How does that work ?
 Here is an example:
 1. Click on Atomic/Indexes/Indexes-Markdown/linux-index.md then find
    "discovery" as a pararaph descriptor.
@@ -75,7 +75,7 @@ PS> Invoke-AtomicTest T1059.004
 >@In the Technique folder, you will find source code used for the
 >@Technique and the different Matrices.
 >@     
->@-> How do that work ?
+>@-> How does that work ?
 >@Here is an example:
 >@1. Click on Atomic/Indexes/Indexes-Markdown/linux-index.md then find
 >@   "discovery" as a pararaph descriptor.
