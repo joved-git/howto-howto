@@ -1,0 +1,61 @@
+The file to protect is password.txt 
+
+# Manage keys
+$ gpg --full-generate-key
+
+$ gpg --list-secret-keys
+$ gpg --list-keys
+
+# Encode and decode
+$ gpg -c password.txt              
+>>> encodes with a passphrase (create locally here).
+>>> gives password.txt.gpg file.
+
+$ gpg -e -r <key ID>  password.txt
+>>> encodes with a public key and could be decoded with the appropriate private key.
+>>> gives password.txt.gpg file
+
+$ gpg -c -a password.txt
+>>> encodes in ascii (-a means --armor).
+>>> gives password.txt.asc file.
+>>> --armor or -a works with passphrase or keys.
+
+$ gpg -d -o password.txt password.txt.asc
+>>> gives the output file (here password.txt).
+>>> you can use -o or --output.
+
+# Play with agent
+$ gpgconf --list-dir agent-socket                
+$ gpgconf --kill gpg-agent   
+
+>@
+>@The file to protect is password.txt
+>@
+>@# Manage keys
+>@$ gpg --full-generate-key
+>@
+>@$ gpg --list-secret-keys
+>@$ gpg --list-keys
+>@
+>@# Encode and decode
+>@$ gpg -c password.txt              
+>@>>> encodes with a passphrase (create locally here).
+>@>>> gives password.txt.gpg file.
+>@
+>@$ gpg -e -r <key ID>  password.txt
+>@>>> encodes with a public key and could be decoded with the appropriate private key.
+>@>>> gives password.txt.gpg file
+>@
+>@$ gpg -c -a password.txt
+>@>>> encodes in ascii (-a means --armor).
+>@>>> gives password.txt.asc file.
+>@>>> --armor or -a works with passphrase or keys.
+>@
+>@$ gpg -d -o password.txt password.txt.asc
+>@>>> gives the output file (here password.txt).
+>@>>> you can use -o or --output.
+>@
+>@# Play with agent
+>@$ gpgconf --list-dir agent-socket                
+>@$ gpgconf --kill gpg-agent   
+>@
