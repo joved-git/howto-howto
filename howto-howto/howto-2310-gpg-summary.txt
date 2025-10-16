@@ -44,7 +44,7 @@ $ gpg --encrypt --sign --armor -r <ID> <file>    : Encrypt with a public key  | 
                                                                               |                     
 $ gpg --armor --output <file.asc> --sign <file>  : Sign a file                |  $ gpg --verify <file.asc>        : Verify a file  
         armor means ascii mode                                                |
-		                                                              |
+                                                                              |
                                                                         [ The Agent ] --- 
 $ gpgconf --list-dir agent-socket                : Check the agent            |  $ gpgconf --kill gpg-agent       : Clear the agent cache.
                                                                               | 
@@ -99,7 +99,7 @@ $ gpgconf --list-dir agent-socket                : Check the agent            | 
 >@                                                                              |                     
 >@$ gpg --armor --output <file.asc> --sign <file>  : Sign a file                |  $ gpg --verify <file.asc>        : Verify a file  
 >@        armor means ascii mode                                                |
->@		                                                                |
+>@                                                                              |
 >@                                                                        [ The Agent ]
 >@                                                                             --- 
 >@$ gpgconf --list-dir agent-socket                : Check the agent            |  $ gpgconf --kill gpg-agent       : Clear the agent cache.
