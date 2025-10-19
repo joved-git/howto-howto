@@ -11,7 +11,7 @@ an XPath injection flaw to read sensitive application data or interfere with app
 See: https://www.vaadata.com/blog/fr/injections-xpath-principes-exploitations-et-bonnes-pratiques-securite/
 
 -> How does that work ?
-XPath injection uses the way the query is done by XPath to extrcat data from an XML file.
+XPath injection uses the way the query is done by XPath to extrat data from an XML file.
 Suppose that the query is something like that:
 ---
 $query = "//user[username/text()='$username' and password/text()='$password']";
@@ -55,7 +55,7 @@ Some ideas:
 >@#--------------------------------------------------------------------------------------------------------------# 
 >@
 >@-> How does that work ?
->@XPath injection uses the way the query is done by XPath to extrcat data from an XML file.
+>@XPath injection uses the way the query is done by XPath to extrat data from an XML file.
 >@Suppose that the query is something like that:
 >@---
 >@$query = "//user[username/text()='$username' and password/text()='$password']";

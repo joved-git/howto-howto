@@ -45,7 +45,8 @@ $ gpg --encrypt --sign --armor -r <ID> <file>    : Encrypt with a public key  | 
 $ gpg --armor --output <file.asc> --sign <file>  : Sign a file                |  $ gpg --verify <file.asc>        : Verify a file  
         armor means ascii mode                                                |
                                                                               |
-                                                                        [ The Agent ] --- 
+                                                                        [ The Agent ] 
+                                                                             --- 
 $ gpgconf --list-dir agent-socket                : Check the agent            |  $ gpgconf --kill gpg-agent       : Clear the agent cache.
                                                                               | 
 >@
@@ -60,7 +61,7 @@ $ gpgconf --list-dir agent-socket                : Check the agent            | 
 >@# See: howto-2312-gpg-example.txt                                                                                                                   # 
 >@# See: gpg-detailed.txt (Resources)                                                                                                                 #
 >@#                                                                                                                                                   #
->@#####################################################################################################################################################
+>@#---------------------------------------------------------------------------------------------------------------------------------------------------#
 >@
 >@
 >@This software enables the transmission of signed and encrypted electronic messages, thus guaranteeing their authenticity, integrity, and 
