@@ -1,6 +1,6 @@
 # Config file                                                          
 $ git config --global user.name <username>                             | $ git config --global user.email <email>
-$ git config --global --unset <entry>                                  | $ git config --global -- list
+$ git config --global --unset <entry>                                  | $ git config --global --list
 
 # Alias
 $ git config --global alias.logp "log --pretty=oneline"
@@ -59,7 +59,7 @@ $ git tag <tag> <tag>^{} -f -a              -> change previous tag message
 >@
 >@# Config file                                                          |
 >@$ git config --global user.name <username>                             |   $ git config --global user.email <email>
->@$ git config --global --unset <entry>                                  |   $ git config --global -- list
+>@$ git config --global --unset <entry>                                  |   $ git config --global --list
 >@                                                                       |
 >@# Alias                                                                |
 >@$ git config --global alias.logp "log --pretty=oneline"
