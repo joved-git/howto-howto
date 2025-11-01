@@ -4,7 +4,7 @@ Regular expressions | Regex | RE
 In computing, a regular expression or rational expression1 or normal expressionnote 1 or pattern 
 is a character string which describes, according to a precise syntax, a set of possible character 
 strings. Regular expressions are also called regex (a portmanteau formed from the English regular 
-epression). Rational expressions come from the mathematical theories of formal languages of the 
+expression). Rational expressions come from the mathematical theories of formal languages of the 
 1940s. Their ability to concisely describe regular sets explains why they were found in several 
 scientific fields in the post-war years and justifies their adoption in computer science. Regular 
 expressions are used today to program software with functionalities for reading, controlling, 
@@ -28,7 +28,7 @@ See: https://regex101.com/
     Example: RE <a*+a> confronted to 'aaaa' gives nothing.
              RE <a*+b>> confronted to 'bab' gives 'b' and 'ab'.
 {m} : the exact number of previous RE. Example: a{3} will match exactly 'aaa'.
-{m,} : m times or mor of previous RE. 
+{m,} : m times or more of previous RE. 
 {m,n} : from m to n number of previous RE. 
     Example: RE a{3,5} confronted to 'aaaaaa' gives: 'aaa', 'aaaa' and 'aaaaa'.
 {m,n}? : from m to n number of previous RE (but minimalist). 
@@ -65,8 +65,8 @@ And so many more, see links above.
 >@# In computing, a regular expression or rational expression1 or normal expressionnote 1 or pattern    #
 >@# is a character string which describes, according to a precise syntax, a set of possible character   #
 >@# strings. Regular expressions are also called regex (a portmanteau formed from the English regular   #
->@# epression). Rational expressions come from the mathematical theories of formal languages of the     #
->@# 1940s. Their ability to concisely describe regular sets explains why they were found in several     #
+>@# expression). Rational expressions come from the mathematical theories of formal languages of the    #
+>@# 1940s. Their ability to concisely describe regular sets explains why they were found in several    # 
 >@# scientific fields in the post-war years and justifies their adoption in computer science. Regular   #
 >@# expressions are used today to program software with functionalities for reading, controlling,       #
 >@# modifying, and analyzing texts as well as in the manipulation of formal languages such as computer  # 

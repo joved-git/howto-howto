@@ -1,0 +1,103 @@
+Rockyou
+#BASICS
+
+The RockYou file
+In the realm of cybersecurity, the RockYou.txt wordlist has become a household name. 
+It’s a tool used by security professionals to test the strength of network security. 
+However, like many tools in the digital world, it can also be misused by malicious 
+actors. 
+
+-> The history
+The RockYou.txt wordlist originated from a significant data breach that occurred in 2009. 
+RockYou, a social app and advertising network, suffered a devastating cyber attack that 
+led to the exposure of over 32 million user passwords. The passwords were stored in 
+plaintext, a cardinal sin in cybersecurity, making them easy pickings 
+for the attackers.
+
+The leaked passwords were compiled into a wordlist, now known as the RockYou.txt file. 
+This list has since become a standard tool in password cracking and network testing due to 
+its real-world representation of user password selection habits.
+
+-> How RockYou.txt is used by Security professionals
+Security engineers, penetration testers and IT administrators use the RockYou.txt wordlist 
+to test the strength of network and system security. By attempting to crack hashed 
+passwords or breach network defenses using the wordlist, these professionals can identify 
+weak passwords and vulnerabilities within their systems.
+
+The RockYou.txt wordlist is often used with tools like John the Ripper or Hashcat for 
+password-cracking exercises. It serves as a dictionary for them, providing a list of 
+potential passwords to try.
+
+-> You can download the RockYou.txt wordlist from resources like GitHub or Kaggle.
+>>> you can use the famous RockYou list here:
+    https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
+>>> you can retrieve the list with a wget command: wget <Rockyou URL> (see above).
+
+>>> you can retrieve the list with a wget command: wget <Rockyou URL> (see above).
+
+-> The Dark Side: How Cybercriminals Use RockYou.txt
+While the RockYou.txt wordlist is valuable for security professionals, it’s also a 
+weapon in the hands of hackers. Cybercriminals use this list and even more sophisticated 
+or customized lists in password-spraying attacks, where they attempt to gain unauthorized 
+access to accounts by trying commonly used passwords against a large number of usernames.
+
+-> You can download the RockYou.txt wordlist from resources like GitHub or Kaggle.
+>>> you can use the famous RockYou list here:
+    https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
+>@
+>@############################################################################################# 
+>@#                                                                                           # 
+>@# [ The RockYou file ]                                                                      #
+>@#                                                                                           # 
+>@# In the realm of cybersecurity, the RockYou.txt wordlist has become a household name.      #
+>@# It’s a tool used by security professionals to test the strength of network security.      #
+>@# However, like many tools in the digital world, it can also be misused by malicious        #
+>@# actors.                                                                                   #
+>@#                                                                                           # 
+>@# See: https://hashcat.net/hashcat/                                                         #
+>@# See: howto-0050-john-the-ripper-password-tool.txt                                         #
+>@#                                                                                           # 
+>@#-------------------------------------------------------------------------------------------# 
+>@-> The history
+>@The RockYou.txt wordlist originated from a significant data breach that occurred in 2009. 
+>@RockYou, a social app and advertising network, suffered a devastating cyber attack that 
+>@led to the exposure of over 32 million user passwords. The passwords were stored in 
+>@plaintext, a cardinal sin in cybersecurity, making them easy pickings 
+>@for the attackers.
+>@
+>@The leaked passwords were compiled into a wordlist, now known as the RockYou.txt file. 
+>@This list has since become a standard tool in password cracking and network testing due to 
+>@its real-world representation of user password selection habits.
+>@
+>@-> How RockYou.txt is used by Security professionals
+>@Security engineers, penetration testers and IT administrators use the RockYou.txt wordlist 
+>@to test the strength of network and system security. By attempting to crack hashed 
+>@passwords or breach network defenses using the wordlist, these professionals can identify 
+>@weak passwords and vulnerabilities within their systems.
+>@
+>@The RockYou.txt wordlist is often used with tools like John the Ripper or Hashcat for 
+>@password-cracking exercises. It serves as a dictionary for them, providing a list of 
+>@potential passwords to try.
+>@
+>@-> You can download the RockYou.txt wordlist from resources like GitHub or Kaggle.
+>@>>> you can use the famous RockYou list here:
+>@    https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+>@
+>@>>> you can retrieve the list with a wget command: wget <Rockyou URL> (see above).
+>@
+>@>>> you can retrieve the list with a wget command: wget <Rockyou URL> (see above).
+>@
+>@-> The Dark Side: How Cybercriminals Use RockYou.txt
+>@While the RockYou.txt wordlist is valuable for security professionals, it’s also a 
+>@weapon in the hands of hackers. Cybercriminals use this list and even more sophisticated 
+>@or customized lists in password-spraying attacks, where they attempt to gain unauthorized 
+>@access to accounts by trying commonly used passwords against a large number of usernames.
+>@
+>@-> You can download the RockYou.txt wordlist from resources like GitHub or Kaggle.
+>@>>> you can use the famous RockYou list here:
+>@    https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+>@
+>@############################################################################################# 
+>@
