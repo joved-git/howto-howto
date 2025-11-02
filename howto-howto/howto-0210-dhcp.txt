@@ -1,0 +1,83 @@
+DHCP - Dynamic Host Configuration Protocol
+#BASICS
+
+Dynamic Host Configuration Protocol (DHCP) is a network protocol that automatically configures 
+the IP settings of a workstation or machine, including automatically assigning it an IP address 
+and subnet mask. 
+DHCP can also configure the default gateway address and configure name servers such as DNS.
+
+The DHCP request is cut into 4 parts
+Part #1 - Discover
+The client sends a DHCP Discover in UDP.
+  source IP: 0.0.0.0, dest IP: 255.255.255.255
+  source port: 68, dest port: 67
+>>> Is there a DHCP server here ?
+  
+Part #2 - Offer
+The DHCP server proposes an IP and a mask (via a DHCP Offer).
+  source IP: the IP of the DHCP server
+  destination: 255.255.255.255
+>>> Server proposes to the client the IP 192.168.10.23 (example, here).
+>>> Server proposes DNS and Gateway too.
+
+Part #3 - Request
+The client chooses an offer (the first one) and sends a DHCP Request.
+  source IP: 0.0.0.0, dest IP: 255.255.255.255 
+>>> The client says: I choose this IP (192.168.10.23).
+>>> Other servers could remove their proposition.
+
+Part #4 - Ack
+The server send a DHCP Ack to the client.
+>>> The client accepts the IP.
+>>> The client configures its network card.
+
+sudo tcpdump -i eth0 port 67 or port 68 -vv 
+
+When the client is restarting, it asks directly to the server the authorization to keep the last IP.
+The server answers DHCP Ack or DHCP Nak. If Nak, the client returns to the Discovery states.
+
+>@
+>@####################################################################################################
+>@#                                                                                                  #
+>@# [ DHCP - Dynamic Host Configuration Protocol ]                                                   #
+>@#                                                                                                  #
+>@# Dynamic Host Configuration Protocol (DHCP) is a network protocol that automatically configures   #
+>@# the IP settings of a workstation or machine, including automatically assigning it an IP address  #
+>@# and subnet mask.                                                                                 #
+>@# DHCP can also configure the default gateway address and configure name servers such as DNS.      #
+>@#                                                                                                  #
+>@#--------------------------------------------------------------------------------------------------#
+>@
+>@The DHCP request is cut into 4 parts
+>@Part #1 - Discover
+>@The client sends a DHCP Discover in UDP.
+>@  source IP: 0.0.0.0, dest IP: 255.255.255.255 
+>@  source port: 68, dest port: 67
+>@>>> Is there a DHCP server here ?
+>@  
+>@Part #2 - Offer
+>@The DHCP server proposes an IP and a mask (via a DHCP Offer).
+>@  source IP: the IP of the DHCP server
+>@  destination: 255.255.255.255
+>@>>> Server proposes to the client the IP 192.168.10.23 (example, here).
+>@>>> Server proposes DNS and Gateway too.
+>@
+>@Part #3 - Request
+>@The client chooses an offer (the first one) and sends a DHCP Request.
+>@  source IP: 0.0.0.0, dest IP: 255.255.255.255 
+>@>>> The client says: I choose this IP (192.168.10.23).
+>@>>> Other servers could remove their proposition.
+>@
+>@Part #4 - Ack
+>@The server send a DHCP Ack to the client.
+>@>>> The client accepts the IP.
+>@>>> The client configures its network card.
+>@
+>@sudo tcpdump -i eth0 port 67 or port 68 -vv 
+>@
+>@When the client is restarting, it asks directly to the server the authorization to keep the 
+>@previous IP.
+>@The server answers DHCP Ack or DHCP Nak. If Nak, the client returns to the Discovery states.
+>@
+>@####################################################################################################
+>@
