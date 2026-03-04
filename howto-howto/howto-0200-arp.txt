@@ -1,0 +1,58 @@
+ARP | Address Resolution Protocol
+#BASICS
+
+The Address Resolution Protocol (ARP) is a protocol used to associate the network layer protocol address 
+(typically an IPv4 address) of a remote host with its link layer protocol address (typically a MAC address). 
+It sits at the interface between the network layer (Layer 3 of the OSI model) and the link layer (Layer 2 
+of the OSI model).
+
+ARP allows a machine to know the MAC address corresponding to an IP address on a local network (Ethernet).
+
+The typical request/response is constituted in 2 parts:
+Part #1 - Request
+A machine <IP> sends a ARP Request:
+Source MAC = machine MAC
+Sestination MAC = ff:ff:ff:ff:ff:ff (broadcast)
+>>> Message: “Who has <Unknown IP> ? Tell <IP>”
+
+Part #2 - Answer
+The material that has this IP gives its MAC address.
+>>> Message "<Unknown IP> is at <MAC address>
+
+You can ask locally (on a machine) what is his MAC address table.
+$ arp -a
+
+/!\ ARP is not routable. It works only on a LAN.
+
+>@
+>@#################################################################################################################
+>@#                                                                                                               #
+>@# [ ARP | Address Resolution Protocol ]                                                                         #
+>@#                                                                                                               #
+>@# The Address Resolution Protocol (ARP) is a protocol used to associate the network layer protocol address      #
+>@# (typically an IPv4 address) of a remote host with its link layer protocol address (typically a MAC address).  #
+>@# It sits at the interface between the network layer (Layer 3 of the OSI model) and the link layer (Layer 2     #
+>@# of the OSI model).                                                                                            #
+>@#                                                                                                               #
+>@#---------------------------------------------------------------------------------------------------------------#
+>@
+>@ARP allows a machine to know the MAC address corresponding to an IP address on a local network (Ethernet).
+>@
+>@The typical request/response is constituted in 2 parts:
+>@Part #1 - Request
+>@A machine <IP> sends a ARP Request:
+>@Source MAC = machine MAC
+>@Sestination MAC = ff:ff:ff:ff:ff:ff (broadcast)
+>@>>> Message: “Who has <Unknown IP> ? Tell <IP>”
+>@
+>@Part #2 - Answer
+>@The material that has this IP gives its MAC address.
+>@>>> Message "<Unknown IP> is at <MAC address>
+>@
+>@You can ask locally (on a machine) what is his MAC address table.
+>@$ arp -a
+>@
+>@ /!\ ARP is not routable. It works only on a LAN.
+>@
+>@#################################################################################################################
+>@
