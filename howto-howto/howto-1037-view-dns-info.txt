@@ -1,6 +1,7 @@
-ViewDNS (https://viewdns.info) is a web site that allows so many 
+ViewDNS
 #BASICS
 
+ViewDNS (https://viewdns.info) is a web site that allows so many 
 type of searches.
 
 -> What could it do ?

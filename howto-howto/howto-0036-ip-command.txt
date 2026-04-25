@@ -1,0 +1,91 @@
+#BASICS
+The ip command in Linux is a powerful tool used to manage network interfaces, 
+IP addresses, routing, and tunnels. It is part of the iproute2 suite and replaces 
+older tools like ifconfig and route. With ip, administrators can configure network 
+settings, view interface status, and troubleshoot connectivity directly from the 
+command line.
+
+-> Define an IP address
+$ sudo ip addr add <IP/mask> dev <interface>
+
+-> Check the config
+$ ip a
+
+-> Delete an IP address
+$ sudo ip addr del <IP/mask> dev <interface>
+
+-> Up/down an interface
+$ sudo ip link set <interface> <up | down>
+
+-> Add a default gateway
+$ sudo ip route add default via <IP>
+
+-> Check the interface
+$ ip link show <interface>
+
+# Delete an IP address allocated via DHCP
+1. Clear the current IP address
+  $ sudo ip addr flush dev <interface>
+
+2. Renew the IP address
+  $ sudo dhclient -v <interface>
+
+-> Modify system file - Interface method
+$ sudo nano /etc/network/interfaces
+---
+auto eth0
+iface eth0 inet static
+address 192.168.1.100
+netmask 255.255.255.0
+gateway 192.168.1.1
+---
+
+>@#######################################################################################
+>@#                                                                                     #
+>@# [ ip command ]                                                                      #
+>@#                                                                                     #
+>@# The ip command in Linux is a powerful tool used to manage network interfaces,       #
+>@# IP addresses, routing, and tunnels. It is part of the iproute2 suite and replaces   #
+>@# older tools like ifconfig and route. With ip, administrators can configure network  #
+>@# settings, view interface status, and troubleshoot connectivity directly from the    #
+>@# command line.                                                                       #
+>@#                                                                                     #
+>@#-------------------------------------------------------------------------------------#
+>@
+>@-> Define an IP address
+>@$ sudo ip addr add <IP/mask> dev <interface>
+>@
+>@-> Check the config
+>@$ ip a
+>@
+>@-> Delete an IP address
+>@$ sudo ip addr del <IP/mask> dev <interface>
+>@
+>@-> Up/down an interface
+>@$ sudo ip link set <interface> <up | down>
+>@
+>@-> Add a default gateway
+>@$ sudo ip route add default via <IP>
+>@
+>@-> Check the interface
+>@$ ip link show <interface>
+>@
+>@# Delete an IP address allocated via DHCP
+>@1. Clear the current IP address
+>@  $ sudo ip addr flush dev <interface>
+>@
+>@2. Renew the IP address
+>@  $ sudo dhclient -v <interface>
+>@
+>@-> Modify system file - Interface method
+>@$ sudo nano /etc/network/interfaces
+>@---
+>@auto eth0
+>@iface eth0 inet static
+>@address 192.168.1.100
+>@netmask 255.255.255.0
+>@gateway 192.168.1.1
+>@---
+>@
+>@#######################################################################################
+>@
