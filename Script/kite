@@ -1,6 +1,6 @@
 #!/bin/bash
-# Monkey - 2021 / 2025
-# Version = 1.6
+# Monkey - 2021 / 2026
+# Version = 1.7
 
 usage()
 {
@@ -12,6 +12,8 @@ usage()
 	echo "$ kite cmd                -> gives list of commands"
 	echo "$ kite <keyword>          -> gives complete information about <keyword>"
 	echo "$ kite whatis <keyword>   -> gives summary information about <keyword>"
+	echo "$ kite version            -> gives kite and data versions"
+	echo "$ kite <go | cd>          -> go to the kite directory"
 	echo
 
 	exit 0
@@ -31,7 +33,7 @@ then
 	exit 0
 fi
 
-if [ x$1 = x -o x$1 = "x-h" -o x$1 = "x--help" ]; 
+if [ x$1 = x -o x$1 = "x-h" -o x$1 = "x--help" -o x$1 = "x--h" ]; 
 then
 	usage
 fi
@@ -44,6 +46,12 @@ if [ x$1 = xlist ]; then
 	echo
 	echo '########################################################'
 	echo
+	exit 0
+fi
+
+if [ x$1 = xcd -o x$1 = go ]; then
+	echo "Go..."
+	cd `which kite | awk -F'/' '{ for (i=1; i<NF; i++) { printf("%s/", $i) }}'`/..
 	exit 0
 fi
 
@@ -173,7 +181,7 @@ fi
 if [ $RESULT -eq 0 ];
 then
 	echo
-	echo 'Sorry, nothing to do or display. Try "kite list" or "kite cmd"...'
+	echo 'Sorry, nothing to do or display. Try "kite list" or "kite cmd" or "kite help"...'
 	echo
 else
 	FILENAME=$(ls $SRC_DIR/*$1*)
