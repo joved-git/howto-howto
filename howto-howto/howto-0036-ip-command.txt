@@ -1,4 +1,7 @@
 #BASICS
+
+The ip command
+
 The ip command in Linux is a powerful tool used to manage network interfaces, 
 IP addresses, routing, and tunnels. It is part of the iproute2 suite and replaces 
 older tools like ifconfig and route. With ip, administrators can configure network 

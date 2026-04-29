@@ -1,0 +1,78 @@
+#BASICS
+Python venv
+
+Python venv is a virtual environment uses to isolate a project. The environment
+will be fully isolated into a directory and will contain its own Python executable, 
+its own pip program and libraries and its own configuration.
+Each project could have different dependencies, version and/or configuration.
+
+-> Install the venv environment
+$ sudo apt install python3-venv
+
+-> Check the venv
+$ python3 -m venv --help
+
+-> Create a venv environment
+$ cd <Python dev directory>
+$ mkdir My-Project
+$ cd My-Project
+$ python -m venv .venv
+
+-> Activate th environment
+$ cd <Python dev directory>
+$ cd My-Project
+$ source .venv/bin/activate
+(.venv)$
+
+-> Quit the environment
+(.venv)$ deactivate
+$ 
+
+-> Save dependencies
+(.venv)$ pip freeze > requirement.txt
+and reuse elsewhere:
+(.venv)$ pip install -r requirement.txt
+
+/!\ Do not version the .venv with git, add ".venv/" into .gitignore /!\
+
+>@#####################################################################################
+>@#                                                                                   #
+>@# [ Python venv ]                                                                   #
+>@#                                                                                   #
+>@Python venv is a virtual environment uses to isolate a project. The environment     #
+>@will be fully isolated into a directory and will contain its own Python executable, #
+>@its own pip program and libraries and its own configuration.                        #
+>@Each project could have different dependencies, version and/or configuration.       #
+>@#                                                                                   #
+>@#-----------------------------------------------------------------------------------#
+>@
+>@-> Install the venv environment
+>@$ sudo apt install python3-venv
+>@
+>@-> Check the venv
+>@$ python3 -m venv --help
+>@
+>@-> Create a venv environment
+>@$ cd <Python dev directory>
+>@$ mkdir My-Project
+>@$ cd My-Project
+>@$ python -m venv .venv
+>@
+>@-> Activate th environment
+>@$ cd <Python dev directory>
+>@$ cd My-Project
+>@$ source .venv/bin/activate
+>@(.venv)$
+>@
+>@-> Quit the environment
+>@(.venv)$ deactivate
+>@$
+>@
+>@-> Save dependencies
+>@(.venv)$ pip freeze > requirement.txt
+>@and reuse elsewhere:
+>@(.venv)$ pip install -r requirement.txt
+>@
+>@/!\ Do not add the .venv into git. Add ".venv/" into .gitignore /!\ 
+>@
+>@#####################################################################################
