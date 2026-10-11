@@ -6,6 +6,9 @@ will be fully isolated into a directory and will contain its own Python executab
 its own pip program and libraries and its own configuration.
 Each project could have different dependencies, version and/or configuration.
 
+-> Install Python correctly
+$ sudo apt install python3 python3-full
+
 -> Install the venv environment
 $ sudo apt install python3-venv
 
@@ -24,6 +27,9 @@ $ cd My-Project
 $ source .venv/bin/activate
 (.venv)$
 
+-> Install dependencies/libraries
+$ pip install <library>
+
 -> Quit the environment
 (.venv)$ deactivate
 $ 
@@ -35,16 +41,19 @@ and reuse elsewhere:
 
 /!\ Do not version the .venv with git, add ".venv/" into .gitignore /!\
 
->@#####################################################################################
->@#                                                                                   #
->@# [ Python venv ]                                                                   #
->@#                                                                                   #
->@Python venv is a virtual environment uses to isolate a project. The environment     #
->@will be fully isolated into a directory and will contain its own Python executable, #
->@its own pip program and libraries and its own configuration.                        #
->@Each project could have different dependencies, version and/or configuration.       #
->@#                                                                                   #
->@#-----------------------------------------------------------------------------------#
+>@#######################################################################################
+>@#                                                                                     #
+>@# [ Python venv ]                                                                     #
+>@#                                                                                     #
+>@# Python venv is a virtual environment uses to isolate a project. The environment     #
+>@# will be fully isolated into a directory and will contain its own Python executable, #
+>@# its own pip program and libraries and its own configuration.                        #
+>@# Each project could have different dependencies, version and/or configuration.       #
+>@#                                                                                     #
+>@#-------------------------------------------------------------------------------------#
+>@
+>@-> Install Python correctly
+>@$ sudo apt install python3 python3-full
 >@
 >@-> Install the venv environment
 >@$ sudo apt install python3-venv
@@ -59,10 +68,12 @@ and reuse elsewhere:
 >@$ python -m venv .venv
 >@
 >@-> Activate th environment
->@$ cd <Python dev directory>
->@$ cd My-Project
+>@$ cd <Python dev directory>/My-Project
 >@$ source .venv/bin/activate
 >@(.venv)$
+>@
+>@-> Install dependencies/libraries
+>@$ pip install <library>
 >@
 >@-> Quit the environment
 >@(.venv)$ deactivate
@@ -75,4 +86,4 @@ and reuse elsewhere:
 >@
 >@/!\ Do not add the .venv into git. Add ".venv/" into .gitignore /!\ 
 >@
->@#####################################################################################
+>@#######################################################################################
